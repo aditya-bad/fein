@@ -17,5 +17,10 @@ Last updated: 2026-11-19
 4. Change-detection alerts each results season.
 5. Decision journal template + quarterly kill-criteria review of `watchlist.md`.
 
+## Memory system TODO
+- Add semantic (embedding) search when an API key or local model is available.
+- Plan migration of memdb store to external DB/object storage before ~50k records.
+- Ask user whether to open a PR to merge the memory branch into main.
+
 ## Dated reminders
 - Feb 2027: Q3 FY27 results — re-check all watchlist kill criteria.
