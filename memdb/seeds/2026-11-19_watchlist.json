@@ -1,0 +1,861 @@
+[
+ {
+  "type": "company",
+  "id": "company:UNIPARTS",
+  "title": "Uniparts India",
+  "tickers": [
+   "UNIPARTS"
+  ],
+  "tags": [
+   "india",
+   "nse",
+   "rupee-exports"
+  ],
+  "data": {
+   "exchange": "NSE",
+   "ticker": "UNIPARTS",
+   "theme": "rupee-exports"
+  }
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:UNIPARTS:2026-11-19",
+  "title": "Uniparts India — idea pipeline screen (Nov 2026)",
+  "tickers": [
+   "UNIPARTS"
+  ],
+  "tags": [
+   "idea-pipeline-nov-2026",
+   "rupee-exports",
+   "public-screen"
+  ],
+  "date": "2026-11-19",
+  "status": "BUY-ZONE",
+  "confidence": "verified",
+  "body": "Construction-equipment sales +49% on North American data-centre/power builds; construction 45.8% of FG sales; net cash ₹172 cr; FII 1.8%→4.4%. Deep cyclical (PAT −57% FY24–25); inventory ~409 days.\nKill criteria: OPM <18% 2 qtrs; inventory >450d with CFO <60% PAT; any pledge; FY27 revenue growth <15%\nCaveat: sourced from public screens — no proprietary edge (lesson L1). Pledges not confirmed from NSE SAST.",
+  "data": {
+   "price": 725,
+   "mcap_cr": 3270,
+   "pe_recomputed": 16.7,
+   "roce_pct": 22,
+   "score": 72,
+   "verdict": "BUY-ZONE",
+   "kill_criteria": "OPM <18% 2 qtrs; inventory >450d with CFO <60% PAT; any pledge; FY27 revenue growth <15%",
+   "recheck": "2027-02 (Q3 FY27 results)"
+  },
+  "sources": [
+   "reports/Multibagger idea pipeline.html",
+   "https://claude.ai/artifact/VbL4pGdvUHLEnS4oKskvX3"
+  ],
+  "links": [
+   {
+    "to": "company:UNIPARTS",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "company",
+  "id": "company:SANDUMA",
+  "title": "Sandur Manganese & Iron Ores",
+  "tickers": [
+   "SANDUMA"
+  ],
+  "tags": [
+   "india",
+   "nse",
+   "quant"
+  ],
+  "data": {
+   "exchange": "NSE",
+   "ticker": "SANDUMA",
+   "theme": "quant"
+  }
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:SANDUMA:2026-11-19",
+  "title": "Sandur Manganese & Iron Ores — idea pipeline screen (Nov 2026)",
+  "tickers": [
+   "SANDUMA"
+  ],
+  "tags": [
+   "idea-pipeline-nov-2026",
+   "quant",
+   "public-screen"
+  ],
+  "date": "2026-11-19",
+  "status": "BUY-ZONE",
+  "confidence": "verified",
+  "body": "Arjas Steel acquisition → integrated ore-to-steel; FY26 FCF ₹988 cr cut debt 1,890→904; quarterly PAT ~140→~240 cr for 3 qtrs; bonus not dilution. Commodity cyclical.\nKill criteria: Qtr PAT <₹180 cr for 2 qtrs; net debt rising for new acquisition; FII <1.5%; adverse Karnataka mining levy\nCaveat: sourced from public screens — no proprietary edge (lesson L1). Pledges not confirmed from NSE SAST.",
+  "data": {
+   "price": 167.61,
+   "mcap_cr": 8150,
+   "pe_recomputed": 9.7,
+   "roce_pct": 24,
+   "score": 68,
+   "verdict": "BUY-ZONE",
+   "kill_criteria": "Qtr PAT <₹180 cr for 2 qtrs; net debt rising for new acquisition; FII <1.5%; adverse Karnataka mining levy",
+   "recheck": "2027-02 (Q3 FY27 results)"
+  },
+  "sources": [
+   "reports/Multibagger idea pipeline.html",
+   "https://claude.ai/artifact/VbL4pGdvUHLEnS4oKskvX3"
+  ],
+  "links": [
+   {
+    "to": "company:SANDUMA",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "company",
+  "id": "company:BAJAJCON",
+  "title": "Bajaj Consumer Care",
+  "tickers": [
+   "BAJAJCON"
+  ],
+  "tags": [
+   "india",
+   "nse",
+   "consumption"
+  ],
+  "data": {
+   "exchange": "NSE",
+   "ticker": "BAJAJCON",
+   "theme": "consumption"
+  }
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:BAJAJCON:2026-11-19",
+  "title": "Bajaj Consumer Care — idea pipeline screen (Nov 2026)",
+  "tickers": [
+   "BAJAJCON"
+  ],
+  "tags": [
+   "idea-pipeline-nov-2026",
+   "consumption",
+   "public-screen"
+  ],
+  "date": "2026-11-19",
+  "status": "BUY-ZONE",
+  "confidence": "verified",
+  "body": "OPM 13%→25% over 7 qtrs on Almond Drops volume, price-point packs, coconut deflation (input relief, not premiumisation). Debt-free; −41% from high. Bull ~1.8x, bear −36%.\nKill criteria: OPM <19% 2 qtrs; Almond Drops volume <5%; any pledge; debtor days >40\nCaveat: sourced from public screens — no proprietary edge (lesson L1). Pledges not confirmed from NSE SAST.",
+  "data": {
+   "price": 410,
+   "mcap_cr": 5355,
+   "pe_recomputed": 21.3,
+   "roce_pct": 30,
+   "score": 66,
+   "verdict": "BUY-ZONE",
+   "kill_criteria": "OPM <19% 2 qtrs; Almond Drops volume <5%; any pledge; debtor days >40",
+   "recheck": "2027-02 (Q3 FY27 results)"
+  },
+  "sources": [
+   "reports/Multibagger idea pipeline.html",
+   "https://claude.ai/artifact/VbL4pGdvUHLEnS4oKskvX3"
+  ],
+  "links": [
+   {
+    "to": "company:BAJAJCON",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "company",
+  "id": "company:SKIPPER",
+  "title": "Skipper Ltd",
+  "tickers": [
+   "SKIPPER"
+  ],
+  "tags": [
+   "india",
+   "nse",
+   "power-td"
+  ],
+  "data": {
+   "exchange": "NSE",
+   "ticker": "SKIPPER",
+   "theme": "power-td"
+  }
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:SKIPPER:2026-11-19",
+  "title": "Skipper Ltd — idea pipeline screen (Nov 2026)",
+  "tickers": [
+   "SKIPPER"
+  ],
+  "tags": [
+   "idea-pipeline-nov-2026",
+   "power-td",
+   "public-screen"
+  ],
+  "date": "2026-11-19",
+  "status": "BUY-ZONE (staggered, ~₹470 anchor)",
+  "confidence": "single-source",
+  "body": "Record order book ₹10,066 cr; preferential at ₹470 to institutions cut debt 931→757; FII 4.4%→10.3%; OPM stuck ~10%; debtor days 55→98. Price single-sourced 19 Nov.\nKill criteria: 2 qtrs YoY PAT decline; order book <₹8,000 cr; debtor days >120; borrowings >₹1,000 cr; any pledge\nCaveat: sourced from public screens — no proprietary edge (lesson L1). Pledges not confirmed from NSE SAST.",
+  "data": {
+   "price": 487.75,
+   "mcap_cr": 5955,
+   "pe_recomputed": 24.2,
+   "roce_pct": 24,
+   "score": 66,
+   "verdict": "BUY-ZONE (staggered, ~₹470 anchor)",
+   "kill_criteria": "2 qtrs YoY PAT decline; order book <₹8,000 cr; debtor days >120; borrowings >₹1,000 cr; any pledge",
+   "recheck": "2027-02 (Q3 FY27 results)"
+  },
+  "sources": [
+   "reports/Multibagger idea pipeline.html",
+   "https://claude.ai/artifact/VbL4pGdvUHLEnS4oKskvX3"
+  ],
+  "links": [
+   {
+    "to": "company:SKIPPER",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "company",
+  "id": "company:MPSLTD",
+  "title": "MPS Ltd",
+  "tickers": [
+   "MPSLTD"
+  ],
+  "tags": [
+   "india",
+   "nse",
+   "rupee-services"
+  ],
+  "data": {
+   "exchange": "NSE",
+   "ticker": "MPSLTD",
+   "theme": "rupee-services"
+  }
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:MPSLTD:2026-11-19",
+  "title": "MPS Ltd — idea pipeline screen (Nov 2026)",
+  "tickers": [
+   "MPSLTD"
+  ],
+  "tags": [
+   "idea-pipeline-nov-2026",
+   "rupee-services",
+   "public-screen"
+  ],
+  "date": "2026-11-19",
+  "status": "WATCHLIST (add < ₹2,000)",
+  "confidence": "verified",
+  "body": "Record 34% OPM; FY27 EBITDA floor ₹310 cr; promoter 68%, institutions <4%. GenAI substitution risk is real.\nKill criteria: Organic revenue decline 2 qtrs; OPM <28%; debt-funded deal >1x EBITDA; client churn\nCaveat: sourced from public screens — no proprietary edge (lesson L1). Pledges not confirmed from NSE SAST.",
+  "data": {
+   "price": 2182,
+   "mcap_cr": 3730,
+   "pe_recomputed": 20.2,
+   "roce_pct": 39,
+   "score": 66,
+   "verdict": "WATCHLIST (add < ₹2,000)",
+   "kill_criteria": "Organic revenue decline 2 qtrs; OPM <28%; debt-funded deal >1x EBITDA; client churn",
+   "recheck": "2027-02 (Q3 FY27 results)"
+  },
+  "sources": [
+   "reports/Multibagger idea pipeline.html",
+   "https://claude.ai/artifact/VbL4pGdvUHLEnS4oKskvX3"
+  ],
+  "links": [
+   {
+    "to": "company:MPSLTD",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "company",
+  "id": "company:IOLCP",
+  "title": "IOL Chemicals & Pharmaceuticals",
+  "tickers": [
+   "IOLCP"
+  ],
+  "tags": [
+   "india",
+   "nse",
+   "quant"
+  ],
+  "data": {
+   "exchange": "NSE",
+   "ticker": "IOLCP",
+   "theme": "quant"
+  }
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:IOLCP:2026-11-19",
+  "title": "IOL Chemicals & Pharmaceuticals — idea pipeline screen (Nov 2026)",
+  "tickers": [
+   "IOLCP"
+  ],
+  "tags": [
+   "idea-pipeline-nov-2026",
+   "quant",
+   "public-screen"
+  ],
+  "date": "2026-11-19",
+  "status": "WATCHLIST (wait Q3 or ≤22x)",
+  "confidence": "verified",
+  "body": "Non-ibuprofen APIs 38%→45% of pharma revenue; promoters bought ~9.7 pp on open market; FII 1.7%→7.3%. ROCE only 11%; already ran ₹67→224.\nKill criteria: OPM <12% 2 qtrs; non-ibuprofen share <40%; promoter sells; debtor days >110\nCaveat: sourced from public screens — no proprietary edge (lesson L1). Pledges not confirmed from NSE SAST.",
+  "data": {
+   "price": 192,
+   "mcap_cr": 5634,
+   "pe_recomputed": 27.7,
+   "roce_pct": 11,
+   "score": 64,
+   "verdict": "WATCHLIST (wait Q3 or ≤22x)",
+   "kill_criteria": "OPM <12% 2 qtrs; non-ibuprofen share <40%; promoter sells; debtor days >110",
+   "recheck": "2027-02 (Q3 FY27 results)"
+  },
+  "sources": [
+   "reports/Multibagger idea pipeline.html",
+   "https://claude.ai/artifact/VbL4pGdvUHLEnS4oKskvX3"
+  ],
+  "links": [
+   {
+    "to": "company:IOLCP",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "company",
+  "id": "company:PRUDENT",
+  "title": "Prudent Corporate Advisory",
+  "tickers": [
+   "PRUDENT"
+  ],
+  "tags": [
+   "india",
+   "nse",
+   "financialisation"
+  ],
+  "data": {
+   "exchange": "NSE",
+   "ticker": "PRUDENT",
+   "theme": "financialisation"
+  }
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:PRUDENT:2026-11-19",
+  "title": "Prudent Corporate Advisory — idea pipeline screen (Nov 2026)",
+  "tickers": [
+   "PRUDENT"
+  ],
+  "tags": [
+   "idea-pipeline-nov-2026",
+   "financialisation",
+   "public-screen"
+  ],
+  "date": "2026-11-19",
+  "status": "WATCHLIST (accumulate < ₹2,500)",
+  "confidence": "verified",
+  "body": "AUM ₹1.43 lakh cr (+21%), SIP book +17%, OPM 23→26%, no dilution. Priced for excellence: ~2x in 5 yrs, not 5x.\nKill criteria: SIP book growth <10%; OPM <23%; net equity sales falling 2 qtrs; adverse SEBI trail action\nCaveat: sourced from public screens — no proprietary edge (lesson L1). Pledges not confirmed from NSE SAST.",
+  "data": {
+   "price": 2920,
+   "mcap_cr": 12098,
+   "pe_recomputed": 46.0,
+   "roce_pct": 37.5,
+   "score": 63,
+   "verdict": "WATCHLIST (accumulate < ₹2,500)",
+   "kill_criteria": "SIP book growth <10%; OPM <23%; net equity sales falling 2 qtrs; adverse SEBI trail action",
+   "recheck": "2027-02 (Q3 FY27 results)"
+  },
+  "sources": [
+   "reports/Multibagger idea pipeline.html",
+   "https://claude.ai/artifact/VbL4pGdvUHLEnS4oKskvX3"
+  ],
+  "links": [
+   {
+    "to": "company:PRUDENT",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "company",
+  "id": "company:TRANSRAILL",
+  "title": "Transrail Lighting",
+  "tickers": [
+   "TRANSRAILL"
+  ],
+  "tags": [
+   "india",
+   "nse",
+   "power-td"
+  ],
+  "data": {
+   "exchange": "NSE",
+   "ticker": "TRANSRAILL",
+   "theme": "power-td"
+  }
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:TRANSRAILL:2026-11-19",
+  "title": "Transrail Lighting — idea pipeline screen (Nov 2026)",
+  "tickers": [
+   "TRANSRAILL"
+  ],
+  "tags": [
+   "idea-pipeline-nov-2026",
+   "power-td",
+   "public-screen"
+  ],
+  "date": "2026-11-19",
+  "status": "BUY-ZONE conditional on H2 FY27 inflow",
+  "confidence": "single-source",
+  "body": "Vertical integration → ROCE 34%; FY26 CFO 1.6x PAT; but H1 inflow ₹1,638 cr vs ~₹3,800 cr executed, order book shrinking 16.4k→14.2k; DII 15.2%→6.0%.\nKill criteria: FY27 inflow <₹7,000 cr; order book <₹12,000 cr at Mar-27; OPM <11% 2 qtrs; FY27 CFO < PAT\nCaveat: sourced from public screens — no proprietary edge (lesson L1). Pledges not confirmed from NSE SAST.",
+  "data": {
+   "price": 432.25,
+   "mcap_cr": 5802,
+   "pe_recomputed": 13.9,
+   "roce_pct": 34,
+   "score": 62,
+   "verdict": "BUY-ZONE conditional on H2 FY27 inflow",
+   "kill_criteria": "FY27 inflow <₹7,000 cr; order book <₹12,000 cr at Mar-27; OPM <11% 2 qtrs; FY27 CFO < PAT",
+   "recheck": "2027-02 (Q3 FY27 results)"
+  },
+  "sources": [
+   "reports/Multibagger idea pipeline.html",
+   "https://claude.ai/artifact/VbL4pGdvUHLEnS4oKskvX3"
+  ],
+  "links": [
+   {
+    "to": "company:TRANSRAILL",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "company",
+  "id": "company:ROLEXRINGS",
+  "title": "Rolex Rings",
+  "tickers": [
+   "ROLEXRINGS"
+  ],
+  "tags": [
+   "india",
+   "nse",
+   "rupee-auto"
+  ],
+  "data": {
+   "exchange": "NSE",
+   "ticker": "ROLEXRINGS",
+   "theme": "rupee-auto"
+  }
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:ROLEXRINGS:2026-11-19",
+  "title": "Rolex Rings — idea pipeline screen (Nov 2026)",
+  "tickers": [
+   "ROLEXRINGS"
+  ],
+  "tags": [
+   "idea-pipeline-nov-2026",
+   "rupee-auto",
+   "public-screen"
+  ],
+  "date": "2026-11-19",
+  "status": "WATCHLIST (~₹170 or two clean qtrs)",
+  "confidence": "verified",
+  "body": "Q2 +43% on US tariff relief but incl ~₹18 cr customs refund (underlying OPM ~21%); Mar-26 loss qtr after ₹49 cr settlement; sales flat 8 qtrs before; DII selling.\nKill criteria: Underlying OPM <20%; revenue growth <15% after refund fades; FY27 auto components <₹500 cr; DII <22%\nCaveat: sourced from public screens — no proprietary edge (lesson L1). Pledges not confirmed from NSE SAST.",
+  "data": {
+   "price": 200.5,
+   "mcap_cr": 5250,
+   "pe_recomputed": 28.9,
+   "roce_pct": 21,
+   "score": 61,
+   "verdict": "WATCHLIST (~₹170 or two clean qtrs)",
+   "kill_criteria": "Underlying OPM <20%; revenue growth <15% after refund fades; FY27 auto components <₹500 cr; DII <22%",
+   "recheck": "2027-02 (Q3 FY27 results)"
+  },
+  "sources": [
+   "reports/Multibagger idea pipeline.html",
+   "https://claude.ai/artifact/VbL4pGdvUHLEnS4oKskvX3"
+  ],
+  "links": [
+   {
+    "to": "company:ROLEXRINGS",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "company",
+  "id": "company:GULPOLY",
+  "title": "Gulshan Polyols",
+  "tickers": [
+   "GULPOLY"
+  ],
+  "tags": [
+   "india",
+   "nse",
+   "quant"
+  ],
+  "data": {
+   "exchange": "NSE",
+   "ticker": "GULPOLY",
+   "theme": "quant"
+  }
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:GULPOLY:2026-11-19",
+  "title": "Gulshan Polyols — idea pipeline screen (Nov 2026)",
+  "tickers": [
+   "GULPOLY"
+  ],
+  "tags": [
+   "idea-pipeline-nov-2026",
+   "quant",
+   "public-screen"
+  ],
+  "date": "2026-11-19",
+  "status": "WATCHLIST (no position)",
+  "confidence": "verified",
+  "body": "Grain-ethanol at 82% utilisation; OPM 4–6%→11–14%; debt 397→234. Maize ₹30–32/kg vs ₹26–27 viability → spread under pressure. Standalone data.\nKill criteria: OPM <8% Q3/Q4; debt >₹300 cr; ethanol price not revised while grain high\nCaveat: sourced from public screens — no proprietary edge (lesson L1). Pledges not confirmed from NSE SAST.",
+  "data": {
+   "price": 161.7,
+   "mcap_cr": 1008,
+   "pe_recomputed": 5.9,
+   "roce_pct": 19,
+   "score": 58,
+   "verdict": "WATCHLIST (no position)",
+   "kill_criteria": "OPM <8% Q3/Q4; debt >₹300 cr; ethanol price not revised while grain high",
+   "recheck": "2027-02 (Q3 FY27 results)"
+  },
+  "sources": [
+   "reports/Multibagger idea pipeline.html",
+   "https://claude.ai/artifact/VbL4pGdvUHLEnS4oKskvX3"
+  ],
+  "links": [
+   {
+    "to": "company:GULPOLY",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "company",
+  "id": "company:HONASA",
+  "title": "Honasa Consumer",
+  "tickers": [
+   "HONASA"
+  ],
+  "tags": [
+   "india",
+   "nse",
+   "consumption"
+  ],
+  "data": {
+   "exchange": "NSE",
+   "ticker": "HONASA",
+   "theme": "consumption"
+  }
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:HONASA:2026-11-19",
+  "title": "Honasa Consumer — idea pipeline screen (Nov 2026)",
+  "tickers": [
+   "HONASA"
+  ],
+  "tags": [
+   "idea-pipeline-nov-2026",
+   "consumption",
+   "public-screen"
+  ],
+  "date": "2026-11-19",
+  "status": "WATCHLIST (wait −20–25%)",
+  "confidence": "single-source",
+  "body": "Project Neev distribution overhaul; OPM 5%→13–15%; younger brands +45%. 61x at 52-wk high; other income 25–30% of PAT; mgmt target only 15% margin. Price single-sourced.\nKill criteria: Revenue growth <20%; OPM <10%; receivable days >35 or GT secondaries falling\nCaveat: sourced from public screens — no proprietary edge (lesson L1). Pledges not confirmed from NSE SAST.",
+  "data": {
+   "price": 529,
+   "mcap_cr": 17257,
+   "pe_recomputed": 61,
+   "roce_pct": 19,
+   "score": 55,
+   "verdict": "WATCHLIST (wait −20–25%)",
+   "kill_criteria": "Revenue growth <20%; OPM <10%; receivable days >35 or GT secondaries falling",
+   "recheck": "2027-02 (Q3 FY27 results)"
+  },
+  "sources": [
+   "reports/Multibagger idea pipeline.html",
+   "https://claude.ai/artifact/VbL4pGdvUHLEnS4oKskvX3"
+  ],
+  "links": [
+   {
+    "to": "company:HONASA",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "company",
+  "id": "company:TECHNOE",
+  "title": "Techno Electric & Engineering",
+  "tickers": [
+   "TECHNOE"
+  ],
+  "tags": [
+   "india",
+   "nse",
+   "power-dc"
+  ],
+  "data": {
+   "exchange": "NSE",
+   "ticker": "TECHNOE",
+   "theme": "power-dc"
+  }
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:TECHNOE:2026-11-19",
+  "title": "Techno Electric & Engineering — idea pipeline screen (Nov 2026)",
+  "tickers": [
+   "TECHNOE"
+  ],
+  "tags": [
+   "idea-pipeline-nov-2026",
+   "power-dc",
+   "public-screen"
+  ],
+  "date": "2026-11-19",
+  "status": "WATCHLIST (DC unproven)",
+  "confidence": "single-source",
+  "body": "Only small/mid with DC angle but DC barely in P&L; FY26 CFO −₹590 cr; ROCE 15%; QIP dilution.\nKill criteria: FY27 CFO negative; no Chennai hyperscale contract by FY27 end; debtor days >180. Upgrade: signed 20+ MW lease + positive CFO\nCaveat: sourced from public screens — no proprietary edge (lesson L1). Pledges not confirmed from NSE SAST.",
+  "data": {
+   "price": 929,
+   "mcap_cr": 10817,
+   "pe_recomputed": 22.3,
+   "roce_pct": 15,
+   "score": 50,
+   "verdict": "WATCHLIST (DC unproven)",
+   "kill_criteria": "FY27 CFO negative; no Chennai hyperscale contract by FY27 end; debtor days >180. Upgrade: signed 20+ MW lease + positive CFO",
+   "recheck": "2027-02 (Q3 FY27 results)"
+  },
+  "sources": [
+   "reports/Multibagger idea pipeline.html",
+   "https://claude.ai/artifact/VbL4pGdvUHLEnS4oKskvX3"
+  ],
+  "links": [
+   {
+    "to": "company:TECHNOE",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "company",
+  "id": "company:BIRLACABLE",
+  "title": "Birla Cable",
+  "tickers": [
+   "BIRLACABLE"
+  ],
+  "tags": [
+   "india",
+   "nse",
+   "quant"
+  ],
+  "data": {
+   "exchange": "NSE",
+   "ticker": "BIRLACABLE",
+   "theme": "quant"
+  }
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:BIRLACABLE:2026-11-19",
+  "title": "Birla Cable — idea pipeline screen (Nov 2026)",
+  "tickers": [
+   "BIRLACABLE"
+  ],
+  "tags": [
+   "idea-pipeline-nov-2026",
+   "quant",
+   "public-screen"
+  ],
+  "date": "2026-11-19",
+  "status": "WATCHLIST (don't chase)",
+  "confidence": "verified",
+  "body": "Optical-fibre price spike on AI/DC demand; same pattern FY19 then bust; CFO −₹21 cr; up ~153% YTD.\nKill criteria: OPM <10%; fibre prices roll over; CFO negative H1 FY27\nCaveat: sourced from public screens — no proprietary edge (lesson L1). Pledges not confirmed from NSE SAST.",
+  "data": {
+   "price": 301.2,
+   "mcap_cr": 904,
+   "pe_recomputed": 10.8,
+   "roce_pct": null,
+   "score": 45,
+   "verdict": "WATCHLIST (don't chase)",
+   "kill_criteria": "OPM <10%; fibre prices roll over; CFO negative H1 FY27",
+   "recheck": "2027-02 (Q3 FY27 results)"
+  },
+  "sources": [
+   "reports/Multibagger idea pipeline.html",
+   "https://claude.ai/artifact/VbL4pGdvUHLEnS4oKskvX3"
+  ],
+  "links": [
+   {
+    "to": "company:BIRLACABLE",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "company",
+  "id": "company:INDOTECH",
+  "title": "Indo Tech Transformers",
+  "tickers": [
+   "INDOTECH"
+  ],
+  "tags": [
+   "india",
+   "avoid"
+  ]
+ },
+ {
+  "type": "event",
+  "id": "event:INDOTECH:avoid-2026-11-19",
+  "title": "Indo Tech Transformers: AVOID — Promoter pledged 57.93% of equity on 12 Nov 2026 after June–",
+  "tickers": [
+   "INDOTECH"
+  ],
+  "tags": [
+   "redflag",
+   "avoid"
+  ],
+  "date": "2026-11-19",
+  "body": "Promoter pledged 57.93% of equity on 12 Nov 2026 after June–July selling.",
+  "links": [
+   {
+    "to": "company:INDOTECH",
+    "rel": "about"
+   },
+   {
+    "to": "insight:disqualifiers",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "company",
+  "id": "company:GENUSPOWER",
+  "title": "Genus Power",
+  "tickers": [
+   "GENUSPOWER"
+  ],
+  "tags": [
+   "india",
+   "avoid"
+  ]
+ },
+ {
+  "type": "event",
+  "id": "event:GENUSPOWER:avoid-2026-11-19",
+  "title": "Genus Power: AVOID — CFO negative 3 years; borrowings ₹2,482 cr; FII 18.7%→7.4%.",
+  "tickers": [
+   "GENUSPOWER"
+  ],
+  "tags": [
+   "redflag",
+   "avoid"
+  ],
+  "date": "2026-11-19",
+  "body": "CFO negative 3 years; borrowings ₹2,482 cr; FII 18.7%→7.4%.",
+  "links": [
+   {
+    "to": "company:GENUSPOWER",
+    "rel": "about"
+   },
+   {
+    "to": "insight:disqualifiers",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "company",
+  "id": "company:JAYNECOIND",
+  "title": "Jayaswal Neco",
+  "tickers": [
+   "JAYNECOIND"
+  ],
+  "tags": [
+   "india",
+   "avoid"
+  ]
+ },
+ {
+  "type": "event",
+  "id": "event:JAYNECOIND:avoid-2026-11-19",
+  "title": "Jayaswal Neco: AVOID — Promoter pledge 99.9% despite deleveraging.",
+  "tickers": [
+   "JAYNECOIND"
+  ],
+  "tags": [
+   "redflag",
+   "avoid"
+  ],
+  "date": "2026-11-19",
+  "body": "Promoter pledge 99.9% despite deleveraging.",
+  "links": [
+   {
+    "to": "company:JAYNECOIND",
+    "rel": "about"
+   },
+   {
+    "to": "insight:disqualifiers",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "company",
+  "id": "company:SYNCOMF",
+  "title": "Syncom Formulations",
+  "tickers": [
+   "SYNCOMF"
+  ],
+  "tags": [
+   "india",
+   "avoid"
+  ]
+ },
+ {
+  "type": "event",
+  "id": "event:SYNCOMF:avoid-2026-11-19",
+  "title": "Syncom Formulations: AVOID — OPM 12→22% with no identifiable cause; other income 27% of P",
+  "tickers": [
+   "SYNCOMF"
+  ],
+  "tags": [
+   "redflag",
+   "avoid"
+  ],
+  "date": "2026-11-19",
+  "body": "OPM 12→22% with no identifiable cause; other income 27% of PBT; ₹57 cr commercial property buy.",
+  "links": [
+   {
+    "to": "company:SYNCOMF",
+    "rel": "about"
+   },
+   {
+    "to": "insight:disqualifiers",
+    "rel": "illustrates"
+   }
+  ]
+ }
+]

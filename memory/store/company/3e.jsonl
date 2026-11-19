@@ -1,0 +1,2 @@
+{"created": "2026-11-19T16:42:31Z", "data": {"exchange": "NSE", "theme": "power-td", "ticker": "SKIPPER"}, "id": "company:SKIPPER", "tags": ["india", "nse", "power-td"], "tickers": ["SKIPPER"], "title": "Skipper Ltd", "type": "company", "updated": "2026-11-19T16:42:31Z", "version": 1}
+{"created": "2026-11-19T16:42:31Z", "id": "company:INDOTECH", "tags": ["india", "avoid"], "tickers": ["INDOTECH"], "title": "Indo Tech Transformers", "type": "company", "updated": "2026-11-19T16:42:31Z", "version": 1}

@@ -1,0 +1,1 @@
+{"body": "Base rates (SEBI) make it negative expected value for individuals.", "created": "2026-11-19T16:42:31Z", "date": "2026-11-19", "id": "decision:no-fo", "links": [{"rel": "because", "to": "insight:sebi-fo-losses"}], "tags": ["rule"], "title": "We do not trade F&O or day-trade", "type": "decision", "updated": "2026-11-19T16:42:31Z", "version": 1}
