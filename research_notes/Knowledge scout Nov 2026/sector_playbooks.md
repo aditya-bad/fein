@@ -1,0 +1,1006 @@
+# Indian sector playbooks (Knowledge scout, Nov 2026)
+
+Research date: 2026-11-19. This is a knowledge base, not investment advice. Seed file: `memdb/seeds/2026-11-19_sector_playbooks.json` (19 `theme:sector-*` records + 8 cross-sector `insight` records).
+
+**Verification status:** the "Current state (Nov 2026)" lines come from Q2 FY27 results and Oct 2026 data found via web search. Most rest on one secondary source (company press coverage, broker notes), so records are marked `single-source`. Historical valuation ranges and peak/trough dates come from general market history and were **not** re-verified against index factsheets (marked unverified in each record's `valuation_note`). Check filings before using any number.
+
+## Contents
+- [Sector playbook: Indian private banks](#themesectorprivatebanks)
+- [Sector playbook: NBFCs and housing finance companies](#themesectornbfchfc)
+- [Sector playbook: Indian life and general insurance](#themesectorinsurance)
+- [Sector playbook: AMCs and capital-market infrastructure](#themesectoramccapitalmarkets)
+- [Sector playbook: Indian IT services](#themesectoritservices)
+- [Sector playbook: Indian pharma, API and CDMO](#themesectorpharmacdmo)
+- [Sector playbook: Indian specialty chemicals and agrochemicals](#themesectorspecialtychemicals)
+- [Sector playbook: Indian auto OEMs](#themesectorautooems)
+- [Sector playbook: Indian auto components](#themesectorautocomponents)
+- [Sector playbook: capital goods, EPC and power T&D](#themesectorcapitalgoodsepctd)
+- [Sector playbook: power utilities and renewables](#themesectorpowerutilitiesrenewables)
+- [Sector playbook: Indian cement](#themesectorcement)
+- [Sector playbook: metals and mining](#themesectormetalsmining)
+- [Sector playbook: FMCG and consumer staples](#themesectorfmcgconsumer)
+- [Sector playbook: organised retail and QSR](#themesectorretailqsr)
+- [Sector playbook: Indian real estate developers](#themesectorrealestate)
+- [Sector playbook: EMS and electronics manufacturing](#themesectoremselectronics)
+- [Sector playbook: Indian defence](#themesectordefence)
+- [Sector playbook: Indian alcoholic beverages](#themesectoralcobev)
+- [Valuation method by sector: match the metric to the economics](#insightvaluationmethodbysector)
+- [Cyclicals: buy when P/E looks high, sell when P/E looks low](#insightcyclicalpeinversion)
+- [India sector lead-indicator dashboard: public data sources](#insightindialeadindicatordashboard)
+- [Sector re-ratings end when multiples double while earnings only grow](#insightreratingphasesend)
+- [Margins created by policy can be taken away by policy](#insightsubsidyandregulationmargins)
+- [Across Indian sectors, the downcycle balance sheet decides the long-term winner](#insightbalancesheetsurvivescycle)
+- [Indian sector cycle clock as of Nov 2026](#insightsectorcycleclocknov2026)
+- [Order books, DAC approvals and lifetime-value wins are not cash](#insightorderbooknotcash)
+
+<a id="themesectorprivatebanks"></a>
+## Sector playbook: Indian private banks
+`theme:sector-private-banks` · confidence: single-source · tickers: HDFCBANK, ICICIBANK, KOTAKBANK, AXISBANK, INDUSINDBK
+
+**How it makes money:** Spread lending + fee income; liability (CASA) franchise is the moat.
+
+**Metrics that matter:**
+- NIM
+- CASA ratio / cost of funds
+- credit cost
+- GNPA/NNPA, slippage ratio
+- PCR
+- RoA
+- CD ratio
+- CET1
+
+**Value chain and where margins sit:** Deposits (cheap retail CASA = margin) -> underwriting -> collections. Margins are highest in unsecured retail, cards and MSME, and lowest in corporate. Fee pools come from distribution (insurance, MF) and payments.
+
+**Cycle drivers:** Repo/EBLR repricing, system liquidity, credit/deposit growth gap, unsecured retail and MSME stress, RBI risk weights (Nov 2023 hike on unsecured).
+
+**Lead indicators (public India data):**
+- RBI sectoral deployment of bank credit (monthly)
+- RBI fortnightly scheduled bank statement (credit/deposit growth)
+- CRIF/TransUnion CIBIL delinquency reports
+- RBI Financial Stability Report (Jun/Dec)
+- SMA book disclosures in results
+
+**What separated winners from losers:** Winners: deposit-led growth, low CD ratio, steady RoA through cycles, conservative provisioning, management continuity. Losers: loan growth well above deposit growth, concentrated corporate or group exposures, evergreening, governance and accounting surprises (Yes Bank 2018–20; IndusInd 2025).
+
+**Valuation ranges and peaks/troughs:** P/B vs sustainable RoE (justified P/B = (RoE-g)/(CoE-g)). Quality private banks ~3–5x P/B in the 2014–21 peak era, de-rated to ~2–2.5x by 2024–26. Troughs: 2008–09, 2013 taper tantrum, Mar 2020. Nifty Bank 1.63x P/B / 12.1x P/E on 27 Oct 2026; Bank P/E 14.4 vs 7-yr median 17.4 (Jun 2026).
+
+**Current state (Nov 2026):** System credit ~18.1% vs deposits ~17.3% YoY (mid-Sep 2026); non-food credit +18.8% (31 Aug 2026, RBI). HDFC Bank Q2 FY27 NIM 3.16% (Q1 3.26%), credit cost 0.44%, standalone PAT +4.7%. Private-bank NIMs are down ~8–20 bps as costlier term and FCNR deposits fund growth, and PSBs lead on profit growth.
+
+**Classic traps:**
+- Low P/B is not cheap if RoA is structurally falling
+- Loan growth funded by bulk or term deposits
+- Stage-2 or restructured books hidden in 'other'
+- Assuming merger synergies (HDFC–HDFC Bank margin dilution lasted 2023–26)
+- Ignoring the CEO-succession and RBI-tenure overhang
+
+**Summary:** Earn the spread: NII = loan yield minus cost of funds, plus fees, minus opex and credit cost. A bank is a liability franchise first, so cheap sticky CASA decides who survives a rate or liquidity cycle. Key metrics: NIM, CASA %, cost of funds, credit cost, GNPA/NNPA and slippage, PCR, RoA (the 1.7–2%+ franchises win), RoE, CD ratio, CET1. The cycle runs on credit growth versus deposit growth, the rate cycle (NIM compresses 1–2 quarters after repo cuts on EBLR books) and corporate/unsecured retail stress. Lead indicators: RBI sectoral deployment (monthly), RBI fortnightly credit and deposit data, SMA-1/2 trends, CIBIL/CRIF delinquency reports. Winners (HDFC Bank, Kotak through 2010–20; ICICI after its 2016–19 clean-up) grew deposits ahead of loans, priced risk conservatively and avoided concentrated corporate books. Losers (Yes Bank 2020, Lakshmi Vilas, IndusInd's 2025 derivative-accounting hit) grew loans faster than the franchise, ran a high CD ratio and had governance gaps. Valuation: P/B against sustainable RoE. Quality private banks traded at roughly 3–5x book in 2014–21 and now trade at about 2–2.5x. Nifty Bank was at 1.63x P/B and 12.1x P/E on 27 Oct 2026 (tapetide). Nov 2026: system credit growth is strong at ~18–19% YoY, but private-bank NIMs are compressing. HDFC Bank's NIM fell to 3.16% in Q2 FY27 from 3.26% in Q1, with credit cost at 0.44%, and PSBs are out-growing private banks on profit. Traps: buying RoE that leverage produced, ignoring the CD ratio, and treating an accounting restatement as a one-off.
+
+Sources: [1](https://rbi.org.in/SCRIPTs/BS_PressReleaseDisplay.aspx?prid=63891) · [2](https://ticker.finology.in/discover/market-update/hdfc-bank-q2-fy27-results-analysis) · [3](https://india.entrepreneur.com/finance/the-great-banking-flip-why-public-lenders-just-outsmarted-private-giants) · [4](https://tapetide.com/insight/market-valuation) · [5](https://www.indexpe.in/blog/nifty-sector-valuations-june-2026)
+
+<a id="themesectornbfchfc"></a>
+## Sector playbook: NBFCs and housing finance companies
+`theme:sector-nbfc-hfc` · confidence: single-source · tickers: BAJFINANCE, CHOLAFIN, SHRIRAMFIN, MUTHOOTFIN, BAJAJHFL, AAVAS, CREDITACC
+
+**How it makes money:** Wholesale-funded specialist lending; RoA = spread - opex - credit cost; RoE via 4–7x leverage.
+
+**Metrics that matter:**
+- AUM growth (disbursement mix)
+- NIM / spread
+- cost of borrowing & ALM buckets
+- credit cost
+- GS3/NS3 + Stage-2
+- opex/AUM
+- RoA/RoE
+- CRAR & borrowing mix (bank vs bond vs CP)
+
+**Value chain and where margins sit:** Funding (banks, bond markets, securitisation) -> origination (branches, DSAs, digital partners) -> collections. Margins are highest in unsecured and MFI (with high credit cost), steady in gold, vehicles and affordable housing, and thinnest in prime home loans, where banks compete.
+
+**Cycle drivers:** Liquidity and spreads, repo cycle (NBFCs benefit with a lag as liabilities reprice), RBI regulation (scale-based regulation, risk weights, gold LTV), rural income for MFI and vehicle books.
+
+**Lead indicators (public India data):**
+- RBI sectoral deployment: bank credit to NBFCs
+- RBI NBFC credit release (monthly)
+- MFIN Micrometer (quarterly)
+- CRIF High Mark / CIBIL delinquency
+- CP/NCD spreads over G-sec
+- Monthly disbursement updates (Bajaj Fin quarterly AUM update)
+
+**What separated winners from losers:** Winners: granular retail books, cross-cycle credit cost discipline, a diversified liability franchise, group or parent backing. Losers: ALM mismatch (short CP funding long loans), related-party or real-estate developer exposure, single-product concentration (MFI), aggressive gross-to-net provisioning games.
+
+**Valuation ranges and peaks/troughs:** P/B vs RoE x growth. Bajaj Finance peak ~10x P/B (2021), compressed to ~5x. Vehicle/gold NBFC 1.5–3.5x; affordable HFCs 2–4x at peak (2021–24). Crisis troughs: post-IL&FS 2018–19 and Mar 2020 (many <1x).
+
+**Current state (Nov 2026):** NBFC credit +15.4% YoY Sep 2026 vs 13.3% a year ago (RBI); housing, gold and vehicle loans accelerating. Bajaj Finance AUM ₹5,84,750 cr (+26.5%) at 30 Sep 2026. ICRA moved NBFC-MFI outlook to Stable (FY27 AUM growth 20–25%). HFCs recovered from FY26 stress, with 4QFY26 disbursements up 19.5% across 10 listed HFCs.
+
+**Classic traps:**
+- Growth with falling yield = taking more risk for less
+- Low credit cost early in a seasoning book
+- Write-offs that keep GNPA flat (look at gross credit cost)
+- Off-balance-sheet co-lending/DLG
+- Treating a promoter group's halo as capital
+
+**Summary:** NBFCs borrow wholesale (bank loans, NCDs, CP) and lend to niches banks under-serve: consumer durables, vehicle, gold, MSME, affordable housing and microfinance. Spread minus opex minus credit cost gives RoA, typically 2–4% for the best players and ~1.5–2.5% for HFCs, levered 4–7x. Key metrics: AUM growth, NIM/spread, cost of funds and ALM gaps, credit cost, GS3/NS3 plus Stage-2, opex/AUM, RoA, capital adequacy, borrowing mix. Cycle drivers are wholesale funding cost and availability (IL&FS Sep 2018, DHFL 2019), RBI risk-weight changes (Nov 2023), and segment stress such as microfinance over-indebtedness in FY25–26. Lead indicators: RBI NBFC credit data, CP and CD spreads, MFIN Micrometer, CRIF reports, NHB and rating-agency sector notes. Winners (Bajaj Finance, Cholamandalam, Muthoot) had a granular book, a diversified funding base, data-led underwriting and parentage or access to cheap capital. Losers (DHFL, IL&FS, Reliance Capital, several MFIs) borrowed short to lend long, had related-party exposures, or chased growth in one hot segment. Valuation: P/B against RoE and growth runway. Bajaj Finance traded at about 6–10x book at its 2019–21 peak; vehicle and gold lenders trade at 1.5–3.5x. Nov 2026: NBFC credit grew 15.4% YoY in Sep 2026 (RBI), Bajaj Finance AUM reached ₹5.85 lakh cr (+26.5%), and ICRA moved its MFI outlook to Stable. Traps: ignoring ALM, and treating low credit costs in an upcycle as permanent.
+
+Sources: [1](https://rbi.org.in/SCRIPTs/BS_PressReleaseDisplay.aspx?prid=63940) · [2](https://www.venturasecurities.com/?p=65123) · [3](https://www.icra.in/Research/ViewResearchReport/7150) · [4](https://www.multibagg.ai/market-pulse/articles/aditya-birla-capital-nbfc-growth-ppt-cmvuuacpw002x2klzlxzxpkk6) · [5](https://www.newkerala.com/news/a/hfcs-emerge-stronger-after-fy26-stress-asset-quality-215.htm)
+
+<a id="themesectorinsurance"></a>
+## Sector playbook: Indian life and general insurance
+`theme:sector-insurance` · confidence: single-source · tickers: HDFCLIFE, SBILIFE, ICICIPRULI, LICI, ICICIGI, STARHEALTH
+
+**How it makes money:** Life: present value of future profits per policy (VNB) + EV unwind. General: underwriting + float income.
+
+**Metrics that matter:**
+- APE growth
+- VNB margin & VNB growth
+- persistency 13M/61M
+- product mix (protection/non-par/ULIP/par)
+- Operating RoEV / EV growth
+- solvency ratio
+- GI: combined ratio, loss ratio
+
+**Value chain and where margins sit:** Manufacturer -> distribution (banca ~50–65% for bank-owned insurers, agency, brokers, online) -> reinsurance. Distribution captures large commissions; protection margins are highest; reinsurers set term-pricing terms.
+
+**Cycle drivers:** Equity market (ULIP), rate cycle (non-par guarantees), tax policy on maturity proceeds, IRDAI product and commission rules, GST changes.
+
+**Lead indicators (public India data):**
+- Life Insurance Council / IRDAI monthly new business premium
+- GI Council monthly gross direct premium
+- Bank partner branch additions
+- 10-yr G-sec yield (non-par pricing)
+
+**What separated winners from losers:** Winners: multi-channel distribution, protection-heavy mix, top-quartile persistency, conservative assumptions (low EV variance). Losers: single banca dependency, ULIP-heavy in a falling market, frequent negative EV assumption changes.
+
+**Valuation ranges and peaks/troughs:** P/EV (and implied value of new business multiple). Private life 3–5x EV at the 2017–21 peak, ~2–3x after the Feb 2023 tax change. LIC listed May 2022 at ~1.1x EV and fell well below it. GIs ~25–40x P/E.
+
+**Current state (Nov 2026):** H1 FY27: ICICI Pru Life VNB +22.3% to ₹12.83 bn; HDFC Life VNB +12% with Q1 margin 25% (~60 bps residual GST hit); Bajaj Life H1 margin 19.2% (21.6% pre-₹95 cr GST impact). The GST exemption on individual policies (Sep 2025) helps volumes but removes ITC.
+
+**Classic traps:**
+- Valuing on APE growth alone
+- EV boosted by assumption changes
+- Bank parent cross-sell that reverses (mis-selling crackdowns)
+- Ignoring surrender-value and commission regulation
+- Health insurers' claim ratio inflation
+
+**Summary:** Life insurers earn the margin embedded in each policy sold, measured as VNB, plus the unwind of their embedded value. Protection and non-par savings carry the highest margins, ULIPs the lowest. General insurers earn underwriting result plus investment float. Key metrics for life: APE growth, VNB margin, VNB growth, persistency (13th/61st month), product mix, EV growth and operating RoEV, banca concentration. For general: combined ratio, loss ratio, solvency and market share. Cycle drivers: equity markets (ULIP demand), interest rates (non-par pricing), tax changes (Feb 2023 Budget taxed policies above ₹5 lakh premium), IRDAI rules (surrender-value norms from Oct 2024, commission caps) and GST (individual life and health exempted from Sep 2025, losing input tax credit). Lead indicators: monthly IRDAI/Life Council new business premium, GI Council monthly premium data, bancassurance partner growth. Winners built proprietary distribution plus a diversified bank partner, balanced their product mix and kept persistency high. Losers depended on one bank partner, chased ULIP volumes in bull markets, or were LIC losing share. Valuation: P/EV. Private life insurers listed in 2016–17 at roughly 3–5x EV, de-rated to about 2–3x after the 2023 tax change. GIs trade on P/E or P/B. Nov 2026: H1 FY27 VNB is growing (ICICI Pru +22.3%, HDFC Life +12%, Bajaj Life margin 19.2%), but the GST ITC loss costs ~60–100 bps of margin. Traps: APE growth without VNB, and the GST and surrender-rule effects on reported margins.
+
+Sources: [1](https://www.kotakneo.com/news/stocks/hdfc-life-insurance-share-price-in-focus-as-company-announces-q2-fy27-results/) · [2](https://www.kotakneo.com/news/stocks/hdfc-life-q1-fy-27-results-net-profit-vnb-july-2026/) · [3](https://www.investywise.com/icici-life-insurance-limited-announces-earnings-call-transcript-for-h1-fy2027/) · [4](https://www.multibagg.ai/market-pulse/articles/bajaj-life-margin-retail-lag-ppt-cmw1lsh1700co31qlernq6z3p)
+
+<a id="themesectoramccapitalmarkets"></a>
+## Sector playbook: AMCs and capital-market infrastructure
+`theme:sector-amc-capital-markets` · confidence: single-source · tickers: HDFCAMC, NAM-INDIA, UTIAMC, BSE, CDSL, MCX, CAMS, KFINTECH, ANGELONE
+
+**How it makes money:** AUM x yield (AMC); volume x fee (exchanges); accounts/transactions (depositories); AUM serviced (RTA).
+
+**Metrics that matter:**
+- Equity QAAUM market share
+- SIP flows & SIP book
+- blended yield (bps) / TER
+- net flows
+- operating margin
+- Exchanges: ADTV, options premium share
+- Depository: new demat accounts, active accounts
+
+**Value chain and where margins sit:** Investor -> distributor/broker/platform -> AMC -> RTA -> custodian -> exchange/clearing -> depository. Margins are highest at monopoly infrastructure (depository, exchange); distributors are squeezed by direct plans and discount brokers.
+
+**Cycle drivers:** Market levels and retail sentiment, SEBI fee/TER and F&O rules, STT changes (futures 0.05%, options 0.15% from Apr 2026), IPO/QIP cycle.
+
+**Lead indicators (public India data):**
+- AMFI monthly note (AUM, SIP, folios)
+- NSE/BSE monthly business growth (F&O premium turnover)
+- CDSL/NSDL monthly accounts
+- SEBI board meeting agendas & consultation papers
+- Primary market pipeline (SEBI DRHP filings)
+
+**What separated winners from losers:** Winners: monopoly/duopoly rails, diversified revenue (not just F&O), strong fund performance and brand, low-cost digital distribution. Losers: discount brokers when retail F&O was curbed (2024–25), AMCs with a long underperformance streak, single-product exchanges.
+
+**Valuation ranges and peaks/troughs:** AMC 25–45x P/E (peaks ~2017–18, 2021, 2024). Exchanges/depositories 40–80x at peaks (CDSL/BSE 2021, 2024). Troughs after SEBI TER cuts (2018) and F&O curbs (late 2024).
+
+**Current state (Nov 2026):** Oct 2026 MF AUM ~₹83.39 lakh cr (+0.9% MoM); equity net inflows ₹32,994 cr (−14% MoM); SIP ₹32,160 cr (third month >₹32k cr); folios 28.78 cr. Total net inflows ~₹1.74 lakh cr, debt-led (AMFI).
+
+**Classic traps:**
+- Annualising peak-month volumes
+- One SEBI circular can cut a revenue line 30–50%
+- Mark-to-market AUM gains in a bull market seen as 'flows'
+- Brokers' float income reverses with rate cuts
+
+**Summary:** AMCs earn a fee (TER) on AUM, so revenue tracks AUM times yield, and equity AUM yields several times what debt does. Exchanges (BSE, MCX) earn transaction fees on volumes, especially options premium turnover. Depositories (CDSL) earn on accounts, transactions and e-KYC. RTAs (CAMS, KFin) earn on AUM serviced, and brokers earn on F&O activity plus float. Key metrics: equity AUM share and market share, SIP book, yield (bps), net flows, operating margin; for exchanges, ADTV and options premium market share; for depositories, demat additions. Cycle drivers are equity market levels (AUM marks), retail flows, SEBI regulation (TER cuts, F&O curbs from Nov 2024, the Jane Street order of Jul 2025, STT hikes) and the IPO pipeline. Lead indicators: AMFI monthly data, NSE/BSE monthly turnover, CDSL/NSDL account data, SEBI bulletins. Winners pair an asset-light, high-RoE platform with a distribution moat. Many are duopolies or monopolies (CDSL, CAMS, MCX, BSE options) with operating leverage. Losers are brokers and exchanges over-dependent on retail F&O, and AMCs in lagging performance cycles. Valuation: AMCs ~25–45x P/E or 4–8% of AUM; infrastructure plays 40–80x at peaks (2021, 2024). Nov 2026: MF AUM ₹83.4 lakh cr in Oct 2026, SIP ₹32,160 cr/month, equity inflows −14% MoM to ₹32,994 cr. Traps: capitalising peak-volume earnings, and regulatory fee cuts.
+
+Sources: [1](https://www.amfiindia.com/uploads/AMFI_Monthly_Note_October2026_cd03bc1103.pdf) · [2](https://www.5paisa.com/blog/equity-mutual-fund-inflows-fall-14-percent-to-32-994-crore-in-october-2026)
+
+Links: about `insight:sebi-fo-losses`, about `case_study:jane-street-sebi-2025`
+
+<a id="themesectoritservices"></a>
+## Sector playbook: Indian IT services
+`theme:sector-it-services` · confidence: single-source · tickers: TCS, INFY, HCLTECH, WIPRO, TECHM, LTIM, PERSISTENT, COFORGE
+
+**How it makes money:** Time-and-materials + fixed-price/managed services; arbitrage of offshore cost vs onshore billing.
+
+**Metrics that matter:**
+- Constant-currency revenue growth (QoQ, YoY)
+- Deal TCV & net-new share; book-to-bill
+- EBIT margin
+- LTM attrition
+- Utilisation (ex-trainees)
+- Net headcount adds
+- Top-5/10 client concentration
+- Vertical exposure (BFSI)
+
+**Value chain and where margins sit:** Global enterprise IT budget -> hyperscalers/SaaS vendors capture platform value -> SIs (Accenture) -> Indian IT (implementation, run, BPO) -> mid-tier/ER&D specialists. Highest margins in proprietary platforms/products and niche ER&D; lowest in commoditised app maintenance (most exposed to GenAI deflation).
+
+**Cycle drivers:** US GDP/BFSI spend, tech-shift cycles, USD/INR, wage inflation and supply, visa policy, GenAI productivity pass-through to clients.
+
+**Lead indicators (public India data):**
+- Accenture quarterly results/bookings (reports ~3 weeks ahead)
+- Gartner IT spending forecast
+- US BLS computer systems design employment
+- Naukri JobSpeak IT hiring index
+- Mid-tier peers' commentary
+- USD/INR
+
+**What separated winners from losers:** Winners: early in each wave, high client mining (count of $100m clients rising), focused verticals, low attrition, disciplined pricing. Losers: legacy infra/app maintenance mix, management churn, expensive acquisitions to buy growth.
+
+**Valuation ranges and peaks/troughs:** P/E 15–20x (2013–19), ~30–35x peak (Dec 2021), ~10–12x trough (2008–09). Nifty IT ~18.3x vs 7-yr median 27.1x (Jun 2026).
+
+**Current state (Nov 2026):** Infosys Q2 FY27: $5.145 bn, +1.5% YoY CC (+1.2% QoQ), FY27 guidance cut to 1–2% (from 1.5–3%), op margin 21.0%, large-deal TCV $5.2 bn (62% net new), AI revenue +29% QoQ. TCS Q2 preview ~0.5–0.6% QoQ CC. Rupee growth (+10.7%) flatters reported numbers.
+
+**Classic traps:**
+- Mega-deal TCV that is mostly renewals or back-ended
+- Rupee depreciation masquerading as growth
+- Cheap vs history when terminal growth has structurally fallen (GenAI deflation)
+- Margin 'beats' from lower subcontracting/hiring freezes that precede growth problems
+
+**Summary:** IT services firms sell people-hours and managed outcomes to global enterprises, with ~55–60% of revenue from the US. They make money on a labour arbitrage: offshore billing rates against Indian salaries, plus pyramid management. Key metrics: constant-currency revenue growth, deal TCV and book-to-bill, attrition, utilisation, EBIT margin, headcount additions, revenue per employee, top-client concentration and vertical mix (BFSI, retail, manufacturing). Cycle drivers: US/EU IT budgets and discretionary spend, BFSI health, the USD/INR rate (a weaker rupee adds ~30–40 bps of margin per 1% depreciation), technology shifts (cloud in 2020–22; GenAI deflating application services in 2025–26) and H-1B and visa policy. Lead indicators: Accenture quarterly bookings, Gartner IT spending forecasts, US non-farm IT employment, Naukri JobSpeak, hyperscaler capex, deal announcements. Winners rode each new wave early (TCS and Infosys with Y2K and offshoring; Persistent and Coforge with digital in 2020–24), kept strong client mining and protected margins. Losers clung to a legacy mix (Wipro's 2015–23 stagnation, Mphasis's HP-channel decline) or made acquisition-led pivots that diluted margins. Valuation: P/E roughly 15–20x in 2013–19 and ~30–35x at the Dec 2021 peak. Nifty IT was ~18x in Jun 2026 against a 27x 7-year median. Nov 2026: Infosys grew only +1.5% CC YoY in Q2 FY27 and cut FY27 guidance to 1–2%, even though large-deal TCV was $5.2 bn and AI revenue grew 29% QoQ. Traps: TCV that does not convert, and rupee-led growth.
+
+Sources: [1](https://www.staffingindustry.com/news/global-daily-news/infosys-q2-revenue-edges-up-but-trims-full-year-revenue-outlook) · [2](https://ticker.finology.in/discover/market-update/infosys-q2-fy27-results-analysis) · [3](https://www.bajajbroking.in/share-market-news/it-q2-fy27-preview-tcs-infosys-growth-seen-as-muted) · [4](https://www.indexpe.in/blog/nifty-sector-valuations-june-2026)
+
+Links: about `insight:twin-engine`
+
+<a id="themesectorpharmacdmo"></a>
+## Sector playbook: Indian pharma, API and CDMO
+`theme:sector-pharma-cdmo` · confidence: single-source · tickers: SUNPHARMA, DRREDDY, CIPLA, LUPIN, ZYDUSLIFE, TORNTPHARM, DIVISLAB, SYNGENE
+
+**How it makes money:** US generics (limited-competition launches), India branded (doctor franchise), API (cost/chemistry), CDMO (innovator contracts).
+
+**Metrics that matter:**
+- US sales $ and QoQ price erosion
+- ANDA filings/approvals, complex pipeline
+- USFDA status of key sites (OAI/WL/import alert)
+- India growth vs IPM
+- R&D % of sales
+- EBITDA margin ex-one-offs
+- CDMO: order book, molecules in Phase III/commercial
+
+**Value chain and where margins sit:** KSM/intermediates (China-dominated) -> API -> formulation -> US distributors (3 buyer consortia hold most purchasing) -> pharmacy. India: company -> stockist -> chemist, with doctor prescription the moat. Margins: innovator/specialty > complex generics > India brands > oral solids US > API.
+
+**Cycle drivers:** US generic price erosion, FDA compliance cycles, blockbuster LOE waves, China API pricing, US trade policy (Section 232, Biosecure), India price control (NLEM/DPCO).
+
+**Lead indicators (public India data):**
+- USFDA warning letters / Form 483 / import alerts (FDA data dashboard)
+- AIOCD-AWACS monthly IPM growth
+- IQVIA US generic pricing
+- China API price trackers
+- US Commerce Section 232 reviews (generics review due by ~Apr 2027)
+
+**What separated winners from losers:** Winners: specialty/complex portfolio, India brand strength, clean FDA record, disciplined capital allocation. Losers: FDA import alerts, overpaying for US generics assets (2015–17), one-product (gRevlimid) earnings capitalised at full multiple.
+
+**Valuation ranges and peaks/troughs:** P/E 20–35x; CDMO 40–70x. Peaks: 2015 (US boom) and Aug 2020 (COVID). Trough: 2018–19 (erosion + FDA). Pharma was the only large-cap sector above its FY26 average valuation in 2026 (5paisa).
+
+**Current state (Nov 2026):** Q2 FY27 preview: US segment for some large caps seen −15% YoY on gRevlimid fade and erosion; Sun US sales $427m Q1 FY27 vs $473m. Section 232 (2 Apr 2026): 100% tariff on patented drugs, generics exempt for now, with a review within a year; a phased generic tariff was floated in Jul 2026 (status unverified).
+
+**Classic traps:**
+- Capitalising one-off exclusivity profits
+- Ignoring FDA site concentration
+- CDMO 'pipeline' that never commercialises
+- Generic tariff tail risk at the Section 232 review
+
+**Summary:** Indian pharma has four engines. US generics are a volume game with structural price erosion, where profit comes from limited-competition launches (first-to-file, complex injectables, inhalers, peptides). India branded formulations are a distribution and doctor-franchise business compounding at ~8–11%. APIs are cost and chemistry plays. CDMO/CRDMO runs multi-year molecule contracts with innovators. Key metrics: US sales ($) and price erosion, ANDA pipeline and approvals, USFDA inspection status (OAI, warning letters), India business growth against IPM (AIOCD/IQVIA), R&D % of sales, EBITDA margin, specialty share; for CDMO, order book, commercial molecules and capacity utilisation. Cycle drivers: US pricing cycles (consolidation of US buyers 2015–18 caused heavy erosion), FDA compliance waves (2014–19), one-off blockbuster generics (gRevlimid FY23–26), China API pricing, US policy (Section 232: 100% tariff on patented drugs from Apr 2026, generics exempt 'at this time') and the Biosecure Act shift away from Chinese CDMOs. Lead indicators: USFDA warning letters and 483s, the FDA Orange Book and drug-shortage list, AIOCD monthly IPM growth, IQVIA, China API prices. Winners (Sun after specialty, Torrent in India branded, Divi's in custom synthesis) built moats beyond plain generics and kept a clean compliance record. Losers were buried by FDA import alerts (Ranbaxy 2008–13, Wockhardt 2013) or debt-funded US acquisitions (Lupin's Gavis). Valuation: P/E ~20–35x, peaking in 2015 and Aug 2020 and troughing in 2018–19. Nov 2026: pharma is the only large-cap sector above its FY26 average valuation. Traps: one-product earnings and FDA risk.
+
+Sources: [1](https://upstox.com/news/market-news/stocks/dr-reddy-s-torrent-pharma-zydus-life-pharma-stocks-to-post-resilient-growth-in-q2-earnings-despite-pricing-headwinds/article-201775/) · [2](https://www.sahi.com/news/sun-pharma-anticipates-pricing-challenges-in-upcoming-quarters-1685-PE1_COR) · [3](https://www.india-briefing.com/news/us-patented-pharma-tariff-2026-india-generic-drug-exports-exempted-43899.html) · [4](https://www.crowell.com/en/insights/client-alerts/trump-administration-imposes-section-232-tariffs-on-patented-pharmaceutical-imports-tiered-rate-structure-takes-effect-beginning-july-31-2026) · [5](https://www.pharmexec.com/view/president-trump-phased-drug-tariff)
+
+<a id="themesectorspecialtychemicals"></a>
+## Sector playbook: Indian specialty chemicals and agrochemicals
+`theme:sector-specialty-chemicals` · confidence: single-source · tickers: SRF, PIIND, NAVINFLUOR, AARTIIND, DEEPAKNTR, CLEAN, VINATIORGA, UPL
+
+**How it makes money:** Custom synthesis/CSM contracts + specialty intermediates + import substitution; know-how and process cost are the moats.
+
+**Metrics that matter:**
+- Volume vs realisation growth
+- Gross margin / EBITDA per kg
+- EBITDA margin
+- Asset turns on new capex
+- CWIP and capex commissioning timelines
+- CSM order book / # innovator customers
+- Working-capital days
+- Top-product share
+
+**Value chain and where margins sit:** Crude/feedstock (benzene, toluene, fluorspar) -> basic chemicals -> intermediates -> specialty/AI -> formulator (global agchem/pharma). Margins rise with complexity and regulatory lock-in (CSM, fluoro specialties); commodity intermediates face China pricing.
+
+**Cycle drivers:** China capacity/dumping, global inventory cycles, feedstock prices, trade remedies, monsoon (domestic agchem), innovator patent cliffs.
+
+**Lead indicators (public India data):**
+- China chemical price indices / PPI
+- DGTR anti-dumping initiations and final findings
+- Global agchem majors' channel inventory commentary
+- Commerce Ministry export data (organic chemicals HS 29)
+- IMD monsoon & kharif sowing data
+
+**What separated winners from losers:** Winners: rising complexity, IP-like processes, customer stickiness, conservative balance sheets through downcycles. Losers: commodity intermediates, single-molecule concentration, debt-funded capex before contracts, aggressive inventory build.
+
+**Valuation ranges and peaks/troughs:** P/E 50–80x at the 2021–early 2022 peak; 25–45x in 2023–25 after destocking. EV/EBITDA 15–35x. Troughs coincide with peak China dumping, which is when P/Es look high on depressed earnings.
+
+**Current state (Nov 2026):** ICRA (31 Aug 2026): domestic-led volume recovery, global overcapacity caps prices. CRISIL: FY27 revenue growth ~6%, margins pressured. Anti-dumping duties on 14 more Chinese chemical categories confirmed in Q1 FY27 (single source). US tariff on Indian agchem 18% vs 35% on China. Mixed Q2 FY27: India Pesticides revenue −21.6%, Sharda Cropchem PAT +23%.
+
+**Classic traps:**
+- China+1 extrapolation
+- New-capacity revenue never reaching asset-turn guidance
+- Inventory gains in rising price markets reported as margin
+- Paying peak multiples on peak margins
+
+**Summary:** Specialty chemical companies sell chemistry know-how (fluorination, nitration, process efficiency) to global agrochemical, pharma, polymer and refrigerant makers, plus import substitutes into India. Profit comes from complex-chemistry custom synthesis (CSM) contracts, where margins and stickiness are highest, while plain intermediates are priced against China. Key metrics: volume growth, gross margin per kg, EBITDA margin, asset turns (1.0–1.5x for new plants, which is why capex is lumpy), capex in progress, CSM order book and customer count, working capital days, and product concentration. Cycle drivers: China supply (capacity overbuild and dumping in 2023–26), global destocking (2023–24), agrochemical channel inventory, crude and feedstock prices, anti-dumping duties, the US tariff gap against China, and the monsoon for domestic agrochemicals. Lead indicators: China PPI and chemical prices, DGTR anti-dumping notifications, US agrochemical channel commentary (Corteva, FMC), Indian chemical export data from the Commerce Ministry, IMD monsoon. Winners (SRF, PI Industries, Navin, Clean Science) climbed the complexity ladder, held proprietary processes and built multi-year innovator relationships. Losers were commodity-like intermediates priced off China, or one-molecule firms. Valuation: P/E 50–80x at the 2021 China+1 peak, de-rated to 25–45x in 2023–25. Nov 2026: ICRA (31 Aug 2026) sees domestic-led volume recovery, but global overcapacity caps prices. CRISIL expects only ~6% revenue growth in FY27. Traps: extrapolating China+1, and capex before contracts.
+
+Sources: [1](https://www.icra.in/Research/ViewResearchReport/domestic-led-volume-recovery-supports-growth-global-overcapacity-caps-prices/7086) · [2](https://upstox.com/news/business-news/latest-updates/specialty-chemical-makers-to-see-6-revenue-growth-this-fiscal-margins-under-pressure-crisil/article-196278/) · [3](https://easternherald.com/2026/08/27/india-chemicals-upl-pidilite-srf-q1-fy27-august-2026/) · [4](https://www.indianchemicalnews.com/general/india-pesticides-q2-profit-falls-44-to-rs-18-crore-as-revenue-declines-216-32562)
+
+<a id="themesectorautooems"></a>
+## Sector playbook: Indian auto OEMs
+`theme:sector-auto-oems` · confidence: single-source · tickers: MARUTI, M&M, TATAMOTORS, BAJAJ-AUTO, HEROMOTOCO, TVSMOTOR, EICHERMOT, ASHOKLEY
+
+**How it makes money:** Design, assemble and distribute vehicles; margin = mix x pricing - commodities, high operating leverage.
+
+**Metrics that matter:**
+- Retail (Vahan/FADA) vs wholesale (SIAM) growth
+- Market share by segment
+- EBITDA margin
+- Realisation/vehicle & mix (SUV, premium 2W)
+- Dealer inventory days
+- Exports share
+- EV penetration & PLI eligibility
+
+**Value chain and where margins sit:** Commodities -> component suppliers (~60–70% of cost) -> OEM (design, brand, assembly) -> dealers (thin margins) -> financiers. OEMs with brand pricing power capture most of the profit; dealers and many suppliers are squeezed.
+
+**Cycle drivers:** Rates & financing, rural income/monsoon, fuel prices, regulatory cost-push, GST, infra/freight for CVs, product cycles.
+
+**Lead indicators (public India data):**
+- Vahan dashboard (daily registrations)
+- FADA monthly retail + inventory days
+- SIAM monthly wholesales
+- Tractor sales (TMA)
+- PPAC diesel consumption
+- GSTN e-way bills
+- Auto loan growth (RBI sectoral deployment)
+
+**What separated winners from losers:** Winners: right product cycle (SUVs, premium bikes, scooters), share gains, pricing power. Losers: missed segment shifts, EV capex without demand, overseas acquisitions (JLR debt for Tata Motors 2018–20).
+
+**Valuation ranges and peaks/troughs:** P/E 18–30x; 2W leaders up to 35x in upcycles. CVs: buy at peak P/E on trough earnings (FY21), sell at low P/E on peak earnings. Auto sector ~24x vs 23x LTA (Oct 2026).
+
+**Current state (Nov 2026):** SIAM Oct 2026: PV 5,19,060 (+12.4%), 2W 25,77,810 (+16.1%) wholesale. FADA Oct 2026 retail: PV 5,07,768 (−14.2%), 2W 23.2 lakh (−28.4%) on Diwali shifting to November and a high GST-cut base (Oct 2025).
+
+**Classic traps:**
+- Wholesale channel-stuffing ahead of festivals
+- A GST-cut demand pull-forward read as a trend
+- EV-transition winners priced before profits
+- Cyclical CVs valued on peak earnings
+
+**Summary:** Auto OEMs assemble and sell vehicles through dealer networks. Profit is volume times realisation minus commodity cost (steel, aluminium, precious metals), with operating leverage on high fixed costs. Key metrics: volume growth (wholesale against retail), market share, EBITDA margin, realisation per vehicle and mix (SUV and premium share), dealer inventory days, export share, EV share, and R&D/capex intensity. Cycle drivers: rural income and monsoon (2W, tractors), interest rates and financing availability, fuel prices, regulation cost-push (BS-VI 2020, OBD-II, safety norms), GST rates (the Sep 2025 cut to 18% on small cars and 2Ws under 350cc), the CV cycle tied to infrastructure and freight, and commodity prices. Lead indicators: Vahan daily registrations, FADA monthly retail, SIAM monthly wholesales, dealer inventory commentary, tractor sales, diesel consumption (PPAC), e-way bills, freight rates. Winners (Maruti 2003–17, Eicher 2010–17, TVS 2020–26, M&M SUVs 2021–26) hit a product cycle, gained share and expanded margins through premiumisation. Losers missed segment shifts (Hero in premium and scooters, Tata PV pre-2020) or overpaid for global assets. Valuation: P/E ~18–30x. The auto sector was ~24x in Oct 2026 against a 23x long-term average. CV makers should be valued on mid-cycle earnings. Nov 2026: Oct 2026 SIAM wholesales were PV 5.19 lakh (+12.4%) and 2W 25.8 lakh (+16.1%), but FADA retail fell (PV −14%, 2W −28%) because Diwali moved into November. Traps: confusing wholesale with retail, and a one-time GST pull-forward.
+
+Sources: [1](https://www.businesstoday.in/auto/story/auto-industry-posts-record-october-sales-as-passenger-vehicles-cross-5-lakh-mark-2-wheelers-grow-16-567320-2026-11-13) · [2](https://www.autocarpro.in/analysis-sales/passenger-vehicle-retail-sales-fall-1423-percent-to-508-lakh-in-october-fada-135776) · [3](https://plindia.com/ResReport/Quant-3-11-26-PL.pdf)
+
+Links: about `case_study:eicher-motors`
+
+<a id="themesectorautocomponents"></a>
+## Sector playbook: Indian auto components
+`theme:sector-auto-components` · confidence: single-source · tickers: MOTHERSON, BOSCHLTD, SONACOMS, BHARATFORG, UNOMINDA, ENDURANCE, SUNDRMFAST, BALKRISIND
+
+**How it makes money:** Content-per-vehicle x OEM volume; aftermarket replacement; exports to global OEMs/Tier-1s.
+
+**Metrics that matter:**
+- Revenue growth vs OEM production (outperformance)
+- Order wins (lifetime revenue) & conversion
+- EBITDA margin & RoCE
+- Export share & US/EU mix
+- EV/powertrain-agnostic % of revenue
+- Top-customer concentration
+- Working-capital days
+
+**Value chain and where margins sit:** Raw materials -> Tier-2/3 -> Tier-1 (system integrators) -> OEM; plus aftermarket distribution. Margins are best in proprietary systems, aftermarket and replacement tyres/batteries, and worst in build-to-print castings.
+
+**Cycle drivers:** OEM production cycles (domestic + global), commodity prices, FX, US/EU tariffs, EV transition, China+1.
+
+**Lead indicators (public India data):**
+- SIAM/Vahan
+- ACMA half-yearly industry data
+- US Class 8 truck orders (ACT/FTR)
+- EU ACEA registrations
+- S&P Global light-vehicle production outlook
+
+**What separated winners from losers:** Winners: rising content-per-vehicle, customer and geography diversification, powertrain-agnostic or EV products, disciplined M&A. Losers: single-OEM dependence, ICE-only parts, debt-heavy acquisitions, low-RoCE capex.
+
+**Valuation ranges and peaks/troughs:** P/E 12–20x (cyclical forgings/castings), 25–50x (EV, electronics, aftermarket franchises). Peaks: 2017–18, 2021, 2024. Troughs: FY20 (BS-VI + slowdown), Mar 2020.
+
+**Current state (Nov 2026):** Sona Comstar Q2 FY27 PAT ₹223 cr (+29%), revenue +35%, EV >50% of sales. Sundram Fasteners Q2 FY27 PAT ~₹160–173 cr (+13–14%; sources differ). Indian auto-part exports to the US have faced a 25% tariff since 2025, and ACMA said new US supply contracts were in limbo.
+
+**Classic traps:**
+- Lifetime order-win figures with unclear conversion
+- Exporters' FX gains read as operating improvement
+- EV-supplier valuations ahead of volumes
+- Tariff-driven pre-buying
+
+**Summary:** Auto component makers supply OEMs (domestic and global) and the aftermarket. Profit depends on content per vehicle times OEM volumes, with commodity pass-through lagging by about a quarter. The aftermarket and replacement segment (tyres, batteries, filters) carries better margins and is less cyclical. Key metrics: revenue growth against underlying OEM production (outperformance shows content gains), order book and lifetime-value wins, EBITDA margin, RoCE, export share and geography, EV/powertrain-agnostic share, customer concentration, and working capital. Cycle drivers: domestic OEM cycles, global auto production (Europe and US trucks matter for forgings), tariffs (25% US tariff on Indian auto parts from 2025, Section 232), the EV transition shrinking ICE content, and the China+1 sourcing shift. Lead indicators: SIAM and Vahan, S&P Global Light Vehicle Production forecasts, US Class 8 truck orders (ACT Research), ACMA half-yearly data, EU registrations. Winners (Motherson via acquisitions-plus-integration, Uno Minda and Endurance via content-per-vehicle gains, Sona via EV-agnostic driveline) grew faster than OEM volumes, diversified customers and kept RoCE above 15%. Losers were single-customer suppliers, ICE-only powertrain parts, and debt-funded overseas acquisitions (Amtek Auto). Valuation: P/E 20–40x for growth and EV names, 12–20x for cyclical exporters. Nov 2026: Q2 FY27 results were Sona revenue +35% (EV >50% of sales) with PAT +29%, and Sundram PAT +13%. New US contracts were in limbo due to tariffs (ACMA). Traps: order-book 'lifetime value', and EV hype multiples.
+
+Sources: [1](https://www.autocarpro.in/news/sona-comstar-net-profit-rises-29-percent-to-rs-223-crore-in-q2-fy27-135474) · [2](https://www.autocarpro.in/news/sundram-fasteners-q2-net-profit-rises-14-percent-to-rs-160-crore-as-revenue-expands-135542) · [3](https://www.autocarpro.in/news/new-supply-contracts-to-us-in-limbo-amid-tariff-woes-acma-130598) · [4](https://www.businesstoday.in/auto/story/auto-industry-posts-record-october-sales-as-passenger-vehicles-cross-5-lakh-mark-2-wheelers-grow-16-567320-2026-11-13)
+
+<a id="themesectorcapitalgoodsepctd"></a>
+## Sector playbook: capital goods, EPC and power T&D
+`theme:sector-capital-goods-epc-td` · confidence: single-source · tickers: LT, SIEMENS, ABB, HITACHIENERGY, CGPOWER, KEC, KPIL, BHEL, TDPOWERSYS
+
+**How it makes money:** Project EPC (percentage completion) + engineered products; margin = bid discipline + execution + pass-through clauses.
+
+**Metrics that matter:**
+- Order inflow growth
+- Order book / TTM revenue
+- Book-to-bill
+- EBITDA margin (and fixed-price share)
+- Net working capital days & receivables >1yr
+- OCF/EBITDA
+- International & private mix
+
+**Value chain and where margins sit:** Capex owner (govt/PSU/private/Middle East) -> EPC contractor -> equipment OEMs (transformers, switchgear, cables) -> sub-contractors -> commodities. Product OEMs in shortages (transformers 2023–25) capture the most margin, EPC captures less, and civil sub-contractors the least.
+
+**Cycle drivers:** Govt capex budgets, private capex utilisation threshold, power T&D/renewable interconnection, data centres, Middle East oil capex, rates, commodity prices.
+
+**Lead indicators (public India data):**
+- CGA monthly central capex spend
+- CMIE CapEx project announcements
+- RBI OBICUS capacity utilisation (quarterly)
+- CEA/NCT transmission bid pipeline
+- PGCIL & state utility capex
+- IIP capital goods index (MoSPI monthly)
+
+**What separated winners from losers:** Winners: selective bidding, negative/low working capital, product-heavy mix, strong parent technology (MNC listcos), conservative leverage. Losers: debt-funded EPC with aggressive bids (2007–12 infrastructure blow-ups), BOT/asset ownership taken on by EPCs, receivable build-up from state utilities.
+
+**Valuation ranges and peaks/troughs:** Product OEMs 40–80x P/E at peaks (Jan 2008, mid-2024), ~15–25x at troughs (2013, 2020). Pure EPC 12–25x P/E. BSE Capital Goods peak Jan 2008 regained only ~2021–22.
+
+**Current state (Nov 2026):** L&T Q2 FY27: record order inflow ₹1,477 bn (+28%), H1 ₹2,557 bn (+22%), order book ₹8,53,514 cr (+15% vs Mar 2026), PAT +33%, op margins under pressure; FY27 guidance 10–12% revenue and order book growth. Transformer OEMs show peak-margin behaviour (see insight:transformer-peak-2026).
+
+**Classic traps:**
+- Order book quality: slow-moving govt orders and fixed-price contracts
+- Rising receivables masked by strong P&L
+- Capitalising shortage margins
+- Assuming 'capex cycle' at 60x lasts long enough
+
+**Summary:** Capital goods and EPC companies earn by executing projects from an order book. Revenue is recognised on percentage completion, and margin depends on bidding discipline, commodity pass-through clauses and execution speed. Product makers (transformers, switchgear, motors) earn a better margin than pure EPC and need less working capital. Key metrics: order inflow growth, order book/revenue (cover of 2–4x), book-to-bill, EBITDA margin, net working capital days, operating cash flow conversion, mix of fixed-price against variable-price contracts, and client mix (government, private, international). Cycle drivers: government capex (central capex rose from ~₹6 to ~₹11 lakh cr over FY21–26), private capex (utilisation above ~75% triggers it), power T&D (the ₹9 trn plan to 2032), Middle East hydrocarbon capex, and interest rates. Lead indicators: CMIE CapEx new project announcements, RBI capacity utilisation (OBICUS), Union/state budget capex spend (CGA monthly), CEA transmission bid pipeline, Tariff-Based Competitive Bidding awards, PGCIL capex. Winners (L&T, ABB, Siemens in 2003–07; KEC and Kalpataru in 2021–26) bid selectively, kept their balance sheets light and moved toward products. Losers were the 2007-era infrastructure EPCs (Lanco, GVK, Punj Lloyd, Gammon) that bought orders with low bids and debt and then died on working capital. Valuation: P/E 40–80x for product companies at the 2007 and 2024 peaks; pure EPC 15–25x. The 2007 peak took ~14 years to regain. Nov 2026: L&T Q2 FY27 order inflow was a record ₹1.48 lakh cr and its order book ₹8.54 lakh cr (+15% vs Mar 2026), but operating margins are under pressure. Traps: order book over cash flow, and peak-capacity product margins.
+
+Sources: [1](https://www.investywise.com/larsen-toubro-q2-h1-fy27-earnings-presentation/) · [2](https://www.deccanchronicle.com/amp/business/companies/lt-q2-net-profit-rises-33-to-rs-5202-cr-order-inflows-rise-28-per-cent-1999332) · [3](https://www.downtoearth.org.in/amp/story/energy/power-demand-tracker-india-meets-all-time-high-power-demand-of-2708-gw-renewable-energy-share-34)
+
+Links: about `case_study:capital-goods-2007`, about `insight:transformer-peak-2026`
+
+<a id="themesectorpowerutilitiesrenewables"></a>
+## Sector playbook: power utilities and renewables
+`theme:sector-power-utilities-renewables` · confidence: single-source · tickers: NTPC, POWERGRID, TATAPOWER, ADANIGREEN, JSWENERGY, NHPC, IEX, NTPCGREEN
+
+**How it makes money:** Regulated RoE on asset base (utilities, transmission); contracted PPA returns (renewables); spot-price exposure (merchant/IEX).
+
+**Metrics that matter:**
+- Regulated equity / capitalisation
+- Commissioned vs pipeline MW
+- PLF (thermal) / CUF (RE)
+- PPA tariff vs capex (equity IRR)
+- Net debt/EBITDA
+- Discom receivable days
+- Merchant share & realisation
+
+**Value chain and where margins sit:** Fuel (coal/gas) or equipment (modules, turbines, BESS) -> generation -> transmission (ISTS/STU) -> discoms (financially weakest link) -> consumers. Regulated transmission is the steadiest; generation with merchant upside is the most volatile; discoms destroy value.
+
+**Cycle drivers:** Demand growth, weather, coal supply, rates, equipment prices, policy (ALMM, BCD, ISTS waiver phase-out), discom payment discipline.
+
+**Lead indicators (public India data):**
+- CEA monthly generation & installed capacity reports
+- Grid-India daily PSP report (peak demand)
+- IEX daily DAM/RTM prices & volumes
+- MNRE monthly RE capacity
+- CEA daily coal stock report
+- PFC annual discom integrated ratings
+
+**What separated winners from losers:** Winners: contracted or regulated returns, low-cost financing, execution track record, timely merchant positioning. Losers: untied capacity with imported fuel (2010–13), aggressive tariff bids, related-party EPC/fund diversion (Gensol 2025), high receivables.
+
+**Valuation ranges and peaks/troughs:** Regulated: 1.0–1.3x P/B at troughs (2019–20), ~2–2.5x at peaks (2024). RE IPPs 15–25x EV/EBITDA; peak RE multiples in 2021–22 and 2024. IEX P/E 30–60x.
+
+**Current state (Nov 2026):** Record peak 270.8 GW (21 May 2026); Q2 FY27 peak ~270 GW (16 Jul 2026, +18% YoY). Q2 FY27: coal PLF 68% (62% a year ago), ~7 GW RE vs 0.8 GW thermal added; ICRA FY27 gross additions ~50 GW vs 61.6 GW FY26. Early Oct 2026 demand +23% YoY, IEX ~₹7.7/unit; 85 plants with critical coal stocks (1 Oct).
+
+**Classic traps:**
+- Pipeline GW announcements vs commissioned MW
+- Transmission/curtailment risk on RE
+- Low module prices cutting tariffs (and returns) for everyone
+- Promoter-pledged RE platforms
+
+**Summary:** Regulated utilities (NTPC thermal, Power Grid transmission) earn a CERC-set ~15.5% post-tax RoE on regulated equity, so earnings grow with capitalised assets. Renewable IPPs sign 25-year PPAs at fixed tariffs, so returns depend on capex per MW, capacity utilisation factor (CUF), financing cost and the counterparty (SECI or a state discom). Merchant power and exchanges (IEX) depend on spot prices and volumes. Key metrics: regulated equity growth, capacity commissioned against target, PLF/CUF, PPA tariff against capex (equity IRR), net debt/EBITDA, receivables days from discoms, and merchant exposure. Cycle drivers: power demand growth (peak 270.8 GW in May 2026), coal supply and imported coal prices, interest rates, module and battery prices (the China price collapse 2023–25), ALMM and duty policy, discom finances (LPS rules 2022), and transmission and curtailment bottlenecks. Lead indicators: CEA daily and monthly generation reports, Grid-India peak demand, IEX daily prices, MNRE capacity additions, PFC discom ratings, Coal India offtake. Winners kept a regulated or contracted balance sheet with cheap financing, or picked merchant exposure at the right time (JSW Energy, Tata Power 2022–24). Losers were the 2010–13 thermal IPPs with merchant or untied PPAs and imported coal (Lanco, GVK, RPower) and governance blow-ups (Gensol 2025). Valuation: regulated utilities at 1.2–2.5x P/B (re-rated in 2023–24), renewables at 15–25x EV/EBITDA. Nov 2026: Q2 FY27 coal PLF was 68%, ~7 GW of RE was added in the quarter, and ICRA expects FY27 additions of ~50 GW. Traps: capacity announcements over commissioning, and discom receivables.
+
+Sources: [1](https://energyandcleanair.org/quarterly-energy-snapshot-for-india-q2-2026-27/) · [2](https://www.icra.in/Research/ViewResearchReport/power-sector/7091) · [3](https://www.downtoearth.org.in/amp/story/energy/power-demand-tracker-india-meets-all-time-high-power-demand-of-2708-gw-renewable-energy-share-34)
+
+Links: about `case_study:gensol-2025`
+
+<a id="themesectorcement"></a>
+## Sector playbook: Indian cement
+`theme:sector-cement` · confidence: single-source · tickers: ULTRACEMCO, AMBUJACEM, SHREECEM, ACC, DALBHARAT, JKCEMENT, RAMCOCEM
+
+**How it makes money:** Regional bulk commodity; EBITDA/tonne x volume; pricing power from regional consolidation.
+
+**Metrics that matter:**
+- EBITDA/tonne
+- Capacity utilisation
+- Realisation/tonne
+- Cost/tonne: power & fuel, freight, lead distance
+- Volume growth vs industry
+- Trade & premium share
+- Net debt/EBITDA
+- EV per tonne & capex per tonne
+
+**Value chain and where margins sit:** Limestone (captive mines) -> clinker (energy intensive) -> grinding -> dealers/trade (~70%) and non-trade/institutional. Margins sit with low-cost producers that have captive limestone, WHRS/green power and short lead distance; dealers hold thin margins.
+
+**Cycle drivers:** Housing/infra demand, regional supply additions, fuel prices, monsoon seasonality, consolidation (M&A pricing discipline), elections.
+
+**Lead indicators (public India data):**
+- Eight core industries – cement (monthly, Office of Economic Adviser)
+- Broker dealer channel checks (monthly price per bag)
+- Pet coke & imported coal prices
+- Central and state capex (CGA)
+- Housing launches (ANAROCK/PropEquity)
+
+**What separated winners from losers:** Winners: cost leadership (fuel, freight, green power), regional dominance, disciplined M&A, low leverage. Losers: high-cost single-region players, debt-funded expansion into oversupply, acquisitions paid at peak EV/t.
+
+**Valuation ranges and peaks/troughs:** EV/EBITDA 12–20x through cycle; EV/t $100–200 (consolidation M&A ~$130–170/t in 2022–25). Peaks: 2007, 2017, 2021. Troughs: 2012–14, 2019.
+
+**Current state (Nov 2026):** UltraTech Q2 FY27: EBITDA/t ₹974 (−~20% QoQ, +₹60 YoY), domestic volume +13.8%, utilisation 71% (66%), PAT +21.3%. Ambuja total cost ₹4,410/t (₹4,182 ex-geopolitical fuel impact). Prices +7–10%/bag in late September, October ~5% above Q2 average. CRISIL saw FY27 EBITDA/t at ₹925–950 vs ~₹1,000 FY26.
+
+**Classic traps:**
+- Price hikes announced vs realised
+- Capacity race after consolidation
+- Paying peak EV/t in M&A
+- Ignoring fuel-cost lag (inventory)
+
+**Summary:** Cement is a regional, heavy, low-value product that can travel only ~300–500 km by road. Profit is EBITDA per tonne: realisation minus energy (pet coke, coal and power, ~25–30% of cost), freight (~25–30%) and raw materials, times volumes. Pricing depends on regional supply discipline. Key metrics: EBITDA/tonne (~₹900–1,300 normal, ₹1,400+ peak), capacity utilisation (~65–75% industry), realisation per tonne, cost per tonne (power and fuel, freight, lead distance), volume growth against the industry, trade/premium share, net debt/EBITDA, capex per tonne (~$80–120/t greenfield) and market share. Cycle drivers: housing, infrastructure and rural demand; supply additions (consolidation: UltraTech plus Adani now hold ~50%+ capacity), fuel prices, the monsoon (Jul–Sep weakest quarter) and pre-election construction. Lead indicators: the cement index in the eight-core-industries data (monthly), dealer price checks (brokers' monthly channel checks), pet coke prices, state capex, and the Ministry of Commerce/DPIIT production index. Winners (Shree Cement on cost leadership, UltraTech on scale and acquisitions, Dalmia in the East) had the lowest-quartile cost and lead distance, captive power and green energy, and disciplined capacity addition in their regions. Losers were high-cost single-plant players and over-leveraged acquirers (Jaiprakash Associates). Valuation: EV/EBITDA 12–20x or EV per tonne of capacity ($100–200/t; replacement cost ~$80–120/t). Nov 2026: UltraTech's Q2 FY27 EBITDA/tonne was ₹974, down ~20% QoQ on fuel cost but up ₹60 YoY, with volumes +13.8% and utilisation 71%. Prices rose 7–10%/bag in late September and ~5% further in October. Traps: capacity wars and paying replacement-cost multiples at peak margins.
+
+Sources: [1](https://www.adityabirla.com/media/press-releases/ultratech-delivers-strong-q2-fy27-performance-net-sales-up-189-pat-up-213-domestic-volumes-up-138/) · [2](https://www.spglobal.com/energy/en/news-research/latest-news/metals/102126-indias-ultratech-cements-domestic-volumes-rise-138-in-q2-despite-monsoon-disruptions) · [3](https://upstox.com/news/market-news/stocks/ultra-tech-acc-ambuja-risks-and-tailwinds-shaping-cement-stocks-after-q1-fy-27/article-198794/) · [4](https://news24online.com/business/ambuja-strengthens-trade-and-premium-mix-in-q2-amid-seasonal-external-headwinds/948149/)
+
+<a id="themesectormetalsmining"></a>
+## Sector playbook: metals and mining
+`theme:sector-metals-mining` · confidence: single-source · tickers: TATASTEEL, JSWSTEEL, JINDALSTEL, SAIL, HINDALCO, VEDL, NMDC, COALINDIA, HINDZINC, NATIONALUM
+
+**How it makes money:** Commodity spread x volume; cost-curve position decides through-cycle returns; miners earn price minus cost with royalty/policy risk.
+
+**Metrics that matter:**
+- EBITDA/tonne
+- Volume & capacity growth
+- Spread over raw materials
+- Captive raw material share / cost-curve quartile
+- Net debt/EBITDA
+- FCF after capex
+- Overseas subsidiary losses (Tata Europe)
+
+**Value chain and where margins sit:** Mining (ore, coal, bauxite) -> primary metal (blast furnace/EAF, smelter) -> downstream (coated, rolled, Novelis-type) -> end markets (construction ~60% for steel, auto, capital goods, packaging). Captive mines and downstream value-added products earn the most; non-integrated converters the least.
+
+**Cycle drivers:** China supply/exports, global PMI, domestic infra capex, trade remedies, input coal/ore prices, energy, USD.
+
+**Lead indicators (public India data):**
+- China NBS steel output & exports (monthly)
+- SGX iron ore / coking coal futures
+- JPC India steel consumption (monthly)
+- Indian HRC price trackers (BigMint)
+- LME prices & inventories
+- DGTR safeguard/anti-dumping notices
+- Global manufacturing PMI
+
+**What separated winners from losers:** Winners: lowest-cost quartile, captive raw materials, countercyclical capex, deleveraging in upcycles. Losers: overseas acquisitions at peak (2007), leverage into oversupply (2011–16), non-integrated converters.
+
+**Valuation ranges and peaks/troughs:** EV/EBITDA 4–8x mid-cycle; P/B 0.7x (2015–16, Mar 2020 troughs) to 2–2.5x (2008, 2021 peaks). Low P/E at peak spreads (2021–22) is the classic sell signal.
+
+**Current state (Nov 2026):** Q2 FY27: Tata Steel India PAT ₹5,055 cr, India crude steel 6.21 mt (+10%); JSW Steel consolidated PAT ₹5,359 cr, record 7.27 mt crude steel, EBITDA margin ~18.6% vs 15.8%. 12% safeguard duty in place since 2025 (status should be rechecked); CLSA expects stronger H2 FY27.
+
+**Classic traps:**
+- Low P/E at peak margin
+- Trade-protection-driven pricing that can be withdrawn
+- Capacity announcements funded by debt late in cycle
+- Miner dividend yield cut by royalty/policy changes
+
+**Summary:** Metals companies are price-takers. Profit equals spread (steel price minus iron ore and coking coal; aluminium LME minus alumina and power) times volume, so returns are set by global supply (above all China) and cost-curve position. Miners (Coal India, NMDC, Hindustan Zinc) earn price minus mining cost and are high-dividend, cash-generative and policy-exposed. Key metrics: EBITDA/tonne, volume and capacity growth, spread over raw material, cost-curve position (captive ore and coal), net debt/EBITDA, capex intensity, free cash flow, and for Tata Steel, Europe losses. Cycle drivers: China production and exports (2015 and 2023–25 export floods), global PMI, Indian infrastructure demand, trade defence (12% safeguard duty on flat steel from 2025), coking coal prices, LME aluminium and energy costs, and the USD. Lead indicators: China steel exports and property starts (NBS), SGX iron ore and coking coal futures, JPC (Joint Plant Committee) Indian steel consumption, the LME, Indian HRC prices (SteelMint/BigMint), DGTR trade remedy notices, the global manufacturing PMI. Winners (JSW on low-cost growth, Hindalco via Novelis downstream, Hindustan Zinc on cost leadership) had captive raw materials, the lowest cost quartile, and countercyclical balance sheets. Losers bought abroad at peak (Tata Corus 2007) or leveraged up into the downcycle (Essar, Bhushan, Monnet in 2015–17 IBC). Valuation: EV/EBITDA 4–8x on mid-cycle and P/B 0.7–2.5x. Buy when P/E is high or negative at the trough; sell when P/E is low at peak margins. Nov 2026: Q2 FY27 was strong (Tata Steel India PAT ₹5,055 cr, crude steel 6.21 mt +10%; JSW PAT ₹5,359 cr, EBITDA margin ~18.6%), and CLSA sees H2 FY27 momentum. Traps: low P/E at peak spreads.
+
+Sources: [1](https://www.devdiscourse.com/article/business/4003265-tata-steel-reports-rs-5055-crore-net-profit-in-india-business-for-q2fy27) · [2](https://www.psuconnect.in/financial/jsw-steel-q2-results-record-production-sales-consolidated-pat-at-5-359-cr) · [3](https://www.constructionworld.in/amp/steel-news/indian-steel-industry-poised-for-volume-led-recovery-in-h2fy27/96585) · [4](https://www.icra.in/Research/ViewResearchReport/ferrous-metals-sector/7091)
+
+<a id="themesectorfmcgconsumer"></a>
+## Sector playbook: FMCG and consumer staples
+`theme:sector-fmcg-consumer` · confidence: single-source · tickers: HINDUNILVR, NESTLEIND, BRITANNIA, ITC, DABUR, MARICO, COLPAL, TATACONSUM, GODREJCP
+
+**How it makes money:** Brand + distribution moat; pricing power over commodities; negative working capital, very high RoCE.
+
+**Metrics that matter:**
+- Underlying volume growth
+- Price/mix contribution
+- Gross margin
+- EBITDA margin
+- A&P % of sales
+- Rural vs urban growth
+- Direct reach / distribution
+- Market share (NielsenIQ)
+
+**Value chain and where margins sit:** Agri/commodity inputs -> manufacturing (often outsourced) -> brand & marketing -> distributors/super-stockists -> kirana (~70–80%), modern trade, e-com/quick commerce. The brand owner captures most of the margin; distributors and kiranas hold thin margins; quick commerce shifts bargaining power.
+
+**Cycle drivers:** Rural income & monsoon, food inflation, commodity prices, GST/tax, competitive intensity (D2C, regional), channel shifts.
+
+**Lead indicators (public India data):**
+- NielsenIQ FMCG quarterly snapshot (volume, rural/urban)
+- IMD monsoon & reservoir levels
+- Labour Bureau rural wages
+- CPI food inflation (MoSPI)
+- Tractor/2W sales as rural proxy
+- GST collections (monthly)
+
+**What separated winners from losers:** Winners: volume-led growth, category creation, premiumisation, cost leadership, early digital/quick-commerce adoption. Losers: price-led growth, share loss to D2C and regional brands, diversification bets.
+
+**Valuation ranges and peaks/troughs:** P/E 40–60x leaders (peak 2019–21, 55–75x for HUL/Nestle), compressing to ~45–55x by 2024–26. FMCG index ~33.8x vs 41.8x 7-yr median (Jun 2026). Troughs: 2008 (relative), 2013.
+
+**Current state (Nov 2026):** Q2 FY27 FMCG value growth 8.6% (six-quarter high; Q1 6.8%), rural 10.6% vs urban 5.8%. HUL Q2 FY27 USG ~15% and UVG ~7% per one source (verify; looks high), with management citing a step-up in rural markets.
+
+**Classic traps:**
+- Paying peak multiples for slowing volume
+- Pricing-led growth reverses with deflation
+- Quick-commerce margin dilution
+- Mistaking defensive for cheap
+
+**Summary:** FMCG companies sell branded, frequently purchased goods through a distribution network that reaches ~8–10 million outlets. Profit comes from brand-led pricing power, gross margin over commodities (palm oil, crude derivatives, milk, wheat, cocoa) and scale in advertising and distribution. Negative working capital and asset-light models drive RoCE of 50–100%+. Key metrics: underlying volume growth (UVG), price/mix growth, gross margin, EBITDA margin, A&P % of sales, rural against urban growth, distribution reach (direct outlets), market share (NielsenIQ), and channel mix (modern trade, e-commerce, quick commerce). Cycle drivers: rural income (monsoon, MSP, rural wages), food inflation (which squeezes discretionary spend), commodity cycles, GST changes (Sep 2025 rate rationalisation), competition from D2C and regional brands, and quick commerce. Lead indicators: NielsenIQ quarterly FMCG volume tracker, rural wage data (Labour Bureau), MGNREGA demand, IMD monsoon, CPI food, tractor and 2W sales as rural proxies. Winners (HUL, Nestle, Britannia over 2000–2020) kept volume-led growth, category creation, premiumisation and distribution depth. Losers were companies that relied on price-led growth, failed to adapt to new channels or made diversification bets. Valuation: P/E 40–60x for leaders. The peak came in 2019–21, and multiples have since compressed as growth slowed. FMCG P/E was 33.8 in Jun 2026 against a 7-year median of 41.8. Nov 2026: Q2 FY27 FMCG value growth was a six-quarter high of 8.6%, with rural at 10.6% against urban at 5.8%, and HUL UVG ~7%. Traps: paying 60x for 4% volume growth, and pricing-led quarters.
+
+Sources: [1](https://www.sahi.com/news/india-fmcg-value-growth-hits-six-quarter-high-of-8-6-in-q2fy27-on-rural-surge) · [2](https://ticker.finology.in/discover/market-update/hul-q2-fy27-results-analysis) · [3](https://www.indexpe.in/blog/nifty-sector-valuations-june-2026)
+
+Links: about `insight:myth-titan-3`
+
+<a id="themesectorretailqsr"></a>
+## Sector playbook: organised retail and QSR
+`theme:sector-retail-qsr` · confidence: single-source · tickers: DMART, TRENT, JUBLFOOD, DEVYANI, SAPPHIRE, WESTLIFE, VMART, ABFRL
+
+**How it makes money:** Store-level economics (sales density x gross margin - rent/staff) scaled via rollout; QSR franchisees pay royalty to brand owners.
+
+**Metrics that matter:**
+- SSSG / LFL
+- Sales per sq ft / ADS
+- Net store adds
+- Store-level & pre-Ind AS EBITDA margin
+- Gross margin & inventory turns
+- Store payback period
+- RoCE
+
+**Value chain and where margins sit:** Brands/suppliers -> retailer (format, private label, location) -> consumer; QSR: global brand (royalty ~3–6%) -> franchisee -> delivery aggregators (commission 18–25%). Private-label retailers and owners of real estate capture more margin; aggregators take a large slice from QSR.
+
+**Cycle drivers:** Urban discretionary spend, inflation, competition from quick commerce/value formats, rents, aggregator commissions.
+
+**Lead indicators (public India data):**
+- Retailers Association of India monthly retail growth
+- RBI monthly credit card spends
+- Swiggy/Zomato quarterly GOV
+- RBI Consumer Confidence Survey (bi-monthly)
+- Company quarterly updates (DMart, Trent, Titan)
+
+**What separated winners from losers:** Winners: superior unit economics, private label/value model, owned or low-rent stores, cluster expansion. Losers: debt-funded rollout (Future Group 2019–20), falling SSSG hidden by store growth, governance (CCD).
+
+**Valuation ranges and peaks/troughs:** DMart/Trent P/E 70–150x at peaks (2020–21, 2024); QSR EV/EBITDA (pre-Ind AS) 35–60x. Troughs: Mar 2020; QSR de-rated 2023–25 on SSSG declines.
+
+**Current state (Nov 2026):** Q2 FY27: Jubilant consolidated revenue ₹2,608.7 cr (+11.9%), Domino's India LFL 4.1% (Q1 2.5%). Devyani revenue ₹1,519 cr (+10.4%), SSSG 4–9% across brands ex-Pizza Hut, 70 net new stores. Trent/DMart Q2 FY27 data not checked this session.
+
+**Classic traps:**
+- Store growth masking negative SSSG
+- Ind AS 116 EBITDA flattering rent-heavy models
+- Paying for scale in format that quick commerce disrupts
+- Franchisee royalty step-ups
+
+**Summary:** Retailers make money on gross margin times sales density (sales per sq ft) minus rent and staff. Returns depend on store-level economics: payback period, sales per sq ft and same-store sales growth, scaled through cluster expansion. QSR franchisees (Jubilant, Devyani, Sapphire, Westlife) pay royalties to the brand owner (Domino's, Yum, McDonald's) and earn on unit economics: ADS, SSSG, gross margin on food and delivery mix. Key metrics: SSSG/LFL, revenue per sq ft or ADS, store additions and store-level EBITDA, gross margin, inventory turns (retail), payback period, pre-Ind AS EBITDA (rent-adjusted), and RoCE. Cycle drivers: urban discretionary spend, food inflation, competition (quick commerce, aggregators, value formats), rental costs, and consumer down-trading. Lead indicators: Retailers Association of India monthly growth, mall footfall trackers, credit card spends (RBI monthly), Swiggy/Zomato GOV, company quarterly business updates, urban consumer confidence (RBI CCS). Winners (DMart on everyday low cost with owned stores, Trent on private-label fashion, Westside/Zudio, Jubilant through its 2010–15 expansion) kept store economics superior, a private-label or cost model and disciplined rollout. Losers (Future Group on debt and over-expansion, Shoppers Stop, Café Coffee Day on governance) expanded faster than the economics allowed. Valuation: EV/EBITDA 30–60x and P/E 70–120x for DMart and Trent at peaks. QSR is valued at EV/sales or pre-Ind AS EV/EBITDA. Nov 2026: QSR LFL is recovering slowly (Domino's India LFL 4.1% in Q2 FY27 against 2.5% in Q1; Devyani SSSG 4–9% ex-Pizza Hut, revenue +10.4%). Traps: store-count growth with falling SSSG, and Ind AS 116 flattering EBITDA.
+
+Sources: [1](https://www.kotakneo.com/news/stocks/jubilant-foodworks-q2-fy27-revenue-rises-11-9-percent/) · [2](https://www.multibagg.ai/market-pulse/articles/devyani-q2-fy27-revenue-growth-cmw3eq4cz009s2mph8cf1rlji)
+
+Links: about `person:radhakishan-damani`
+
+<a id="themesectorrealestate"></a>
+## Sector playbook: Indian real estate developers
+`theme:sector-real-estate` · confidence: single-source · tickers: DLF, GODREJPROP, OBEROIRLTY, PRESTIGE, LODHA, PHOENIXLTD, BRIGADE, SOBHA
+
+**How it makes money:** Land -> approvals -> presale -> construction cash cycle; annuity rentals for commercial/malls.
+
+**Metrics that matter:**
+- Presales value/volume
+- Collections & OCF
+- Net debt / equity
+- Launches & GDV pipeline
+- Realisation per sq ft
+- Embedded EBITDA margin
+- Inventory overhang (months)
+- Annuity: occupancy, rent growth
+
+**Value chain and where margins sit:** Landowner (JD/JV) -> developer (approvals, brand, execution) -> contractors -> buyer (home loan via banks/HFCs). Land holders and branded developers capture most value in upcycles; contractors earn thin margins; channel partners take 2–4%.
+
+**Cycle drivers:** Rates, affordability, regulation, funding liquidity, office hiring, wealth effect, unsold inventory.
+
+**Lead indicators (public India data):**
+- ANAROCK / PropEquity quarterly sales & launches
+- Knight Frank Mumbai monthly property registrations
+- RBI housing credit growth
+- RERA project registrations
+- Office absorption (JLL/CBRE quarterly)
+
+**What separated winners from losers:** Winners: deleveraged balance sheets, delivery record, brand, asset-light JD/JV land, cash-flow focus. Losers: land-banking on debt, customer-advance diversion, construction delays.
+
+**Valuation ranges and peaks/troughs:** P/NAV (0.5x troughs 2013–19 → 1.5–2x 2021–24 peaks) or P/B. 2007 peak: realty index fell ~80–90% into 2009 and stayed depressed until ~2020.
+
+**Current state (Nov 2026):** ANAROCK Q3 CY26 (Jul–Sep 2026): top-7 city sales ~1,00,220 units (+3% YoY) after Q2 CY26 ~90,700 (−6% YoY, West Asia conflict); PropEquity reported −6% to 103,000 for the September quarter. Realty led the sector rally on 17 Nov 2026 (HDFC Sky snapshot).
+
+**Classic traps:**
+- Presales inflated by subvention/discount schemes
+- NAV built on land bank that never launches
+- P&L-based P/E (meaningless due to completion accounting)
+- Buying at peak launch activity
+
+**Summary:** Residential developers make money by buying land, getting approvals, pre-selling homes and collecting cash over 3–5 years of construction. P&L recognition (on completion, Ind AS 115) lags presales by years, so cash and presales are the real metrics. Annuity players (Phoenix malls, DLF Cyber City, REITs) earn rent. Key metrics: presales value and volume, collections, net debt and net debt/equity, launches and the GDV pipeline, realisation per sq ft, embedded EBITDA margin on presales, land bank and business development additions, and inventory overhang in months. For annuity players: occupancy, rental growth and same-mall trading density. Cycle drivers: home loan rates, affordability (price/income), regulation (RERA 2016 and demonetisation consolidated the industry), NBFC funding availability (the 2018–19 crunch), IT/GCC hiring (Bengaluru, Hyderabad, Pune) and a wealth effect from equities. Lead indicators: ANAROCK and PropEquity quarterly sales and launches by city, inventory months, RBI housing loan growth, MahaRERA registrations, Mumbai stamp-duty registration data (Knight Frank monthly). Winners (DLF post-deleveraging, Lodha, Godrej's asset-light JD model, Prestige, Oberoi) had a strong balance sheet, delivery track record and brand, and were capital-light in land. Losers (Unitech, Jaypee, Amrapali) had debt plus diverted customer advances plus delays. Valuation: P/NAV or P/B. The peak was 2007 (DLF ~₹1,200, never regained by 2020), with troughs over 2011–19 and Mar 2020. The 2021–24 upcycle re-rated stocks to 1.5–2x NAV. Nov 2026: ANAROCK top-7-city sales were +3% YoY in Q3 CY26 at ~1,00,220 units after −6% in Q2 (PropEquity showed −6%). Traps: presales booked via subvention, and land-bank NAV.
+
+Sources: [1](https://www.businesstoday.in/real-estate/story/housing-sales-in-top-seven-cities-rise-3-percent-on-year-in-q3-mumbai-records-highest-sales-558274-2026-09-29) · [2](https://therealtytoday.com/news/market-insights/housing-sales-drop-6-in-q2-2026-amid-west-asia-conflict-new-launches-rise-7-says-anarock)
+
+<a id="themesectoremselectronics"></a>
+## Sector playbook: EMS and electronics manufacturing
+`theme:sector-ems-electronics` · confidence: single-source · tickers: DIXON, KAYNES, SYRMA, AMBER, AVALON, PGEL, CYIENTDLM
+
+**How it makes money:** Contract manufacturing; thin conversion margin on pass-through revenue; PLI/ECMS subsidies; component backward integration.
+
+**Metrics that matter:**
+- Revenue growth by segment (mobile, consumer, IT hardware, industrial)
+- EBITDA margin & absolute EBITDA
+- RoCE / asset turns
+- Net working capital days
+- Top-client share
+- PLI income as % of EBITDA
+- Domestic value addition %
+- Component capex & ECMS approvals
+
+**Value chain and where margins sit:** Global brand (design, IP, demand) -> EMS assembler -> component suppliers (chips, displays, camera modules; mostly imported, highest margins) -> distribution. Brand owners and component makers take most of the profit; assembly is low-margin but scalable.
+
+**Cycle drivers:** Smartphone/consumer electronics demand, brand sourcing shifts, PLI/ECMS policy, tariffs/China+1, component import duties.
+
+**Lead indicators (public India data):**
+- MeitY/ICEA electronics production & export data
+- Commerce Ministry HS 8517 (telephones) monthly exports
+- ECMS approval lists
+- Counterpoint/IDC India smartphone shipments
+- Client capacity announcements
+
+**What separated winners from losers:** Winners: early policy positioning, capital-light, multi-client, credible component integration, conservative accounting. Losers: one-client dependence, receivables (incl. PLI dues) build-up, RPT/disclosure issues, margin collapse after subsidy roll-off.
+
+**Valuation ranges and peaks/troughs:** P/E 60–120x at 2024–25 peaks for Dixon/Kaynes; EV/EBITDA 40–70x. Pre-PLI (2017–19) Dixon ~30–40x. Value usually sits in EBITDA growth and RoCE, not revenue.
+
+**Current state (Nov 2026):** Dixon Q2 FY27: revenue up strongly (sources give +35% to ₹37,341 cr or +47% to ₹21,794 cr; unreconciled), PBT +9%, PAT ₹411 cr (−45% on lower other income), op margin 2.7% vs 3.8% after mobile PLI ended; ₹1,110 cr PLI receivables outstanding; FY27 ex-Vivo guidance ~₹56,000 cr; display JV commercial production targeted Q4 FY27.
+
+**Classic traps:**
+- Capitalising PLI subsidies as permanent margin
+- Revenue growth with falling RoCE
+- PLI receivables/other income quality
+- Single anchor client
+- Disclosure/RPT red flags at high multiples
+
+**Summary:** EMS companies assemble electronics for brand owners: mobiles, TVs, IT hardware and wearables, plus industrial, auto and defence boards. Profit is a thin conversion margin (2–4% EBITDA for mobile assembly, 8–15% for industrial/auto boards) on huge pass-through revenue, so RoCE comes from asset turns and working-capital speed. PLI incentives have been a material share of profit. Backward integration (displays, camera modules, PCBs under ECMS) offers higher margins. Key metrics: revenue growth by segment, EBITDA margin and absolute EBITDA, RoCE, net working capital days, customer concentration, PLI income as a share of EBITDA, export share, value addition %, and capex for component plants. Cycle drivers: smartphone demand and brand outsourcing decisions (Apple, Samsung, Chinese brands seeking JV partners), PLI scheme tenure (mobile PLI ended FY26), ECMS component incentives, US tariffs and China+1, and GST and tariff duty structure. Lead indicators: MeitY production and export data, ICEA mobile export data, Commerce Ministry HS 8517 exports, ECMS approval notifications, client announcements. Winners (Dixon over 2018–25) made early bets on mobile PLI, ran a capital-light, high asset-turn model and moved up into components. Losers suffered customer loss (single-client concentration) or working-capital blow-outs. Kaynes in 2025 showed how accounting-disclosure concerns can hit a high-multiple stock. Valuation: P/E 60–120x at the 2024–25 peak. Nov 2026: Dixon's Q2 FY27 revenue rose sharply (+35% to +47%; sources differ), but operating margin fell to 2.7% from 3.8% as mobile PLI ended, PAT fell 45% on lower other income, and ₹1,110 cr of PLI receivables are outstanding. Traps: PLI-inflated margins, and revenue growth with falling RoCE.
+
+Sources: [1](https://www.freepressjournal.in/business/dixon-technologies-q2-fy27-profit-falls-45-to-411-crore-revenue-jumps-47-to-21794-crore) · [2](https://www.multibagg.ai/market-pulse/articles/dixon-q2-income-margin-drop-announcement-cmvv7szk200el2klzhj02h442)
+
+Links: about `case_study:kaynes-2025`
+
+<a id="themesectordefence"></a>
+## Sector playbook: Indian defence
+`theme:sector-defence` · confidence: single-source · tickers: HAL, BEL, BDL, MAZDOCK, COCHINSHIP, GRSE, DATAPATTNS, SOLARINDS, ASTRAMICRO, ZENTEC
+
+**How it makes money:** Long-cycle contracts with MoD (monopoly PSUs) + spares/MRO + exports; private niche suppliers.
+
+**Metrics that matter:**
+- Order book / revenue
+- Order inflow vs guidance
+- Revenue growth (execution)
+- EBITDA margin
+- Customer advances & cash
+- Working-capital days
+- Export share
+- Indigenisation %
+
+**Value chain and where margins sit:** MoD budget -> DAC AoN -> CCS -> contract to DPSU/private prime -> Tier-1/2 private suppliers (electronics, forgings, explosives) -> imported critical components (engines, chips). Primes with nominated orders capture scale; niche suppliers with IP capture higher margins.
+
+**Cycle drivers:** Capital budget, approval-to-contract conversion speed, geopolitics, indigenisation policy, export deals, supply bottlenecks.
+
+**Lead indicators (public India data):**
+- PIB DAC AoN releases
+- Union Budget MoD capital outlay
+- CCS approvals / MoD contract signing
+- Defence exports (MoD annual/quarterly)
+- Company order inflow announcements
+
+**What separated winners from losers:** Winners: monopoly/nominated orders, technology partnerships, cash-rich, steady execution. Losers: private entrants with debt and execution gaps (Reliance Naval, ABG 2013–19), small caps priced on order announcements alone.
+
+**Valuation ranges and peaks/troughs:** Historical P/E ~14–21x (pre-2020); re-rated to ~2x historical by 2024–25 (HAL ~28x vs 14x; BEL ~41x vs 21x per BS Apr 2025). Sep 2026 MOFSL: BEL 42x/36x FY27/28e; HAL 32x/27x; BDL 68x/47x.
+
+**Current state (Nov 2026):** DAC approvals FY27 so far ₹1.62 lakh cr (Sep 2026). Q2 FY27: revenue up at HAL, BEL, BDL; BDL revenue +45% but PAT −15%; BEL awaiting QRSAM order; BEL Q1 FY27 inflows ~₹3,750 cr vs revenue ₹5,533 cr (book-to-bill <1). HAL growth capped at 10–12% by engine supply.
+
+**Classic traps:**
+- Treating DAC AoN as orders
+- Monopoly customer can squeeze margins
+- Paying 40–60x for 15% growth
+- Event-driven rallies after geopolitical incidents
+
+**Summary:** Indian defence companies sell to effectively one customer, the Ministry of Defence, under long-cycle contracts. Profit comes from execution of an order backlog (HAL aircraft and helicopters, BEL radars and electronics, BDL missiles, shipyards), plus spares, MRO and growing exports. Margins are cost-plus or negotiated, and indigenisation content is rising. Private players such as Solar (explosives), Data Patterns and Astra grow on niche technology and exports. Key metrics: order book/revenue (HAL ~8x, BEL ~3x), order inflow against guidance, execution (revenue growth), EBITDA margin, advances from customers (strong cash), working capital, export share and indigenisation %. Cycle drivers: the defence capital budget (~₹1.8–2.2 lakh cr capital outlay), DAC Acceptance of Necessity approvals, then Cabinet Committee on Security sanction, then contract signing, plus positive indigenisation lists, geopolitical events (Operation Sindoor, May 2025) and supply-chain bottlenecks (GE F404 engines for Tejas). Lead indicators: DAC AoN announcements (PIB), the Union Budget capital outlay, CCS approvals, MoD contract signing releases, SIPRI data, defence export figures. Winners (BEL, HAL over 2020–25) had a monopoly position, nominated orders, technology transfer and a cash-rich balance sheet. Losers among pre-2014 private entrants (Reliance Naval, ABG Shipyard) took big contracts with weak execution and debt. Valuation: historical P/E 14–21x; re-rated to 30–60x+ by 2024–25 (HAL 28x against 14x historical; BEL 41x against 21x). Nov 2026: DAC approvals in FY27 total ₹1.62 lakh cr. BEL Q1 FY27 inflows were weak (book-to-bill below 1). As of Sep 2026, HAL traded at ~32x FY27e and BEL at ~42x. Traps: DAC approvals are not orders, and multiples priced for perfection.
+
+Sources: [1](https://upstox.com/news/market-news/stocks/hindustan-aeronautics-bharat-electronics-and-bdl-q2-revenue-rises-across-defence-ps-us-but-profit-growth-varies/article-203496/) · [2](https://www.businesstoday.in/markets/stocks/story/bel-hal-bdl-shares-targets-for-defence-stocks-after-rs-1-1-lakh-crore-dac-approvals-553813-2026-09-08) · [3](https://www.angelone.in/news/stocks/hal-and-bel-understanding-order-books-execution-and-revenue)
+
+Links: about `case_study:defence-psu-rerating`
+
+<a id="themesectoralcobev"></a>
+## Sector playbook: Indian alcoholic beverages
+`theme:sector-alcobev` · confidence: single-source · tickers: UNITDSPR, RADICO, UBL, ABDL, SULA, TI
+
+**How it makes money:** Branded spirits/beer; premiumisation-led margin; state-by-state regulated pricing and route to market.
+
+**Metrics that matter:**
+- P&A vs regular volume growth
+- Premium share of revenue
+- Gross margin
+- EBITDA margin
+- A&P % of sales
+- State price increases
+- ENA/grain & glass cost
+- Top-state concentration
+
+**Value chain and where margins sit:** Grain/molasses -> ENA (distillation; backward integration helps) -> blending/bottling (glass a big cost) -> brand -> state corporation or licensed retail -> consumer. States capture the largest share via excise; premium brand owners capture most of the private margin.
+
+**Cycle drivers:** State excise/pricing, grain/ENA prices (ethanol diversion), premiumisation, FTAs (UK Scotch), prohibition risk, weather (beer).
+
+**Lead indicators (public India data):**
+- State excise revenue (state budgets/CAG)
+- ISWAI / CIABC industry statements
+- Maize/rice prices, FCI ethanol allocation
+- Glass price commentary
+- Company P&A volume disclosures
+
+**What separated winners from losers:** Winners: premium portfolio, backward integration in ENA, balance-sheet discipline, state-relationship management. Losers: regular-brand heavy, state concentration, governance (UB group/Mallya era), beer firms during raw-material spikes.
+
+**Valuation ranges and peaks/troughs:** Spirits leaders 50–90x P/E (Radico 18x→~90x 2016–26; USL 60–70x). Beer ~60–100x on depressed margins. Troughs: 2016 (Bihar ban, highway ban 2017).
+
+**Current state (Nov 2026):** Q2 FY27: Radico P&A volume +36% to record 5.28 mn cases, FY27 P&A growth target raised to 30%, total IMFL +7%. United Spirits NSV +2.8% to ₹3,258 cr, PAT −2.1%, popular segment volumes falling, Maharashtra/Karnataka headwinds; litigation against Maharashtra MML policy. Industry shows a premium–popular divide.
+
+**Classic traps:**
+- Single-state policy shock (Maharashtra was 20–22% of USL sales)
+- Premium growth already capitalised at 80x+
+- Grain-cost spikes
+- Beer seasonality read as trend
+
+**Summary:** Alcobev companies make and brand spirits, beer and wine. Price is regulated state by state, and excise duties are often 60–80% of the consumer price. Profit comes from premiumisation (Prestige and Above spirits carry far higher margins than regular brands), gross margin over ENA/grain and glass, and A&P efficiency. Each state is effectively its own market with its own route to market (government corporations or private retail), price approvals and duty changes. Key metrics: volume by segment (P&A against regular), premium share of revenue, gross margin, EBITDA margin, A&P %, price increases secured from states, ENA/grain and glass costs, state concentration, and net debt (Radico's deleveraging). Cycle drivers: state excise policy (the Maharashtra 50–60% duty hike of June 2025 and MML policy; Karnataka; Andhra and Telangana route-to-market changes), grain and ENA prices (FCI rice for ethanol diverts supply), glass prices, consumer premiumisation, the India–UK FTA cutting Scotch duty, and weather for beer. Lead indicators: state excise revenue data, ISWAI commentary, maize/grain prices, CIABC releases, company P&A volume disclosures. Winners (Radico 2016–26 on premium mix and deleveraging; United Spirits after its Diageo clean-up, shedding popular brands) leaned into premiumisation, got state pricing approvals and avoided governance issues. Losers took state bans (Bihar 2016) or were stuck in regular-brand price wars and beer cost spikes. Valuation: P/E 50–90x for spirits leaders. Radico re-rated from ~18x to ~90x. Nov 2026: Radico Q2 FY27 P&A volume grew 36% to 5.28 mn cases (FY27 target raised to 30%) while total IMFL rose only 7%. United Spirits NSV grew only +2.8% on Maharashtra/Karnataka headwinds. Traps: a state policy shock, and paying 80x for premium growth.
+
+Sources: [1](https://www.multibagg.ai/market-pulse/articles/radico-fy27-premium-growth-target-concall-cmw1fmdww009u31qltk2uc0ay) · [2](https://www.investywise.com/?p=124785) · [3](https://www.exchange4media.com/marketing-news/premium-pours-popular-spirits-falter-is-indias-alcobev-market-looking-at-a-divide-160107.html) · [4](https://www.zeebiz.com/india/news-maharashtra-cabinet-approves-up-to-60-liquor-duty-hike-united-spirits-radico-allied-blenders-stocks-under-pressure-368784)
+
+Links: about `case_study:radico-khaitan`
+
+<a id="insightvaluationmethodbysector"></a>
+## Valuation method by sector: match the metric to the economics
+`insight:valuation-method-by-sector` · confidence: unverified
+
+Use the metric that tracks how each sector creates value. A P/E applied to the wrong sector misleads. Lenders (banks, NBFCs, HFCs): P/B against sustainable RoE, where justified P/B = (RoE−g)/(CoE−g). A 2x-book bank with 17% RoE is cheaper than a 1x bank whose RoA is falling. Life insurers: P/EV and implied VNB multiple; ignore P/E, because new business strain depresses reported profit. AMCs and exchanges: P/E plus % of AUM, adjusting for peak volumes. Cyclicals (metals, cement, CVs, chemicals): EV/EBITDA on mid-cycle margins, or EV per tonne against replacement cost (cement $80–120/t). Never use spot P/E, because P/E is lowest at peak earnings. Capital goods and EPC: P/E plus order-book cover and OCF conversion. Utilities: P/B against regulated RoE (~15.5% CERC); renewables on EV/EBITDA and equity IRR against cost of equity. Real estate: P/NAV and presales/OCF; reported P/E is meaningless under completion accounting. Consumer franchises (FMCG, alcobev, retail): P/E or reverse DCF. Ask what volume growth the price implies (a 60x P/E needs ~15%+ earnings growth for 10+ years). Retail and QSR: pre-Ind AS 116 EV/EBITDA, because the lease standard flatters EBITDA. Pharma: P/E excluding one-off exclusivity profits, with a sum of parts for India branded, US and CDMO. EMS: EV/EBITDA and RoCE, not P/sales, since the margin is thin and the revenue pass-through. Defence: P/E against order-book-driven earnings growth (PEG), because order books lift visibility but not margin.
+
+**rule_table:**
+- banks/NBFC: P/B vs RoE
+- life insurance: P/EV
+- AMC/exchanges: P/E, %AUM
+- metals/cement/chemicals/CV: EV/EBITDA mid-cycle, EV/t
+- cap goods/EPC: P/E + order cover + OCF
+- utilities: P/B vs regulated RoE
+- renewables: EV/EBITDA, equity IRR
+- real estate: P/NAV, presales/OCF
+- FMCG/alcobev: P/E + reverse DCF
+- retail/QSR: pre-Ind AS EV/EBITDA
+- pharma: P/E ex one-offs, SOTP
+- EMS: EV/EBITDA + RoCE
+- defence: P/E vs order-led growth
+**lesson:** Pick the metric that tracks how the sector creates value; P/E is wrong for lenders, insurers, developers and cyclicals at extremes.
+
+Sources: [1](https://www.indexpe.in/blog/nifty-sector-valuations-june-2026) · [2](https://tapetide.com/insight/market-valuation) · [3](https://plindia.com/ResReport/Quant-3-11-26-PL.pdf)
+
+Links: about `theme:sector-private-banks`, about `theme:sector-nbfc-hfc`, about `theme:sector-insurance`, about `theme:sector-amc-capital-markets`, about `theme:sector-it-services`, about `theme:sector-pharma-cdmo`, about `theme:sector-specialty-chemicals`, about `theme:sector-auto-oems`
+
+<a id="insightcyclicalpeinversion"></a>
+## Cyclicals: buy when P/E looks high, sell when P/E looks low
+`insight:cyclical-pe-inversion` · confidence: unverified
+
+For metals, cement, commercial vehicles, specialty chemicals and capital goods, earnings swing far more than the business's value, so trailing P/E inverts the signal. At the bottom (FY16 steel, FY21 CVs, the 2015–16 metals bust), earnings are depressed or negative and P/E looks very high or meaningless. That was the time to buy, when the balance sheet could survive. At the top (steel in 2021–22, Tata Steel and JSW at 4–6x P/E on record spreads; capital goods in Jan 2008), P/E looks cheap because peak margins are in the denominator. Better tools: EV/EBITDA on mid-cycle (5–10 year average) margins; P/B for metals (0.7x trough against 2–2.5x peak); EV per tonne against replacement cost for cement; and watching the supply response, because capacity additions end shortage margins (transformers in 2025–26, specialty chemicals in 2022–24, Indian cement after each consolidation wave). Early signals of a top: margins well above the 10-year average, everyone announcing capex, inventory build in the channel, trade protection doing the work. Signs of a bottom: capacity closures, industry losses, balance-sheet repair, policy relief (safeguard duty) not yet in prices.
+
+**lesson:** Normalise earnings; the supply response is the cycle killer; low P/E at peak margin is a sell signal.
+**examples:** Steel 2021–22 (low P/E peak), CVs FY21 (high P/E trough), capital goods Jan 2008 peak took ~14 years to regain, specialty chemicals 2021 peak.
+
+Sources: [1](https://www.devdiscourse.com/article/business/4003265-tata-steel-reports-rs-5055-crore-net-profit-in-india-business-for-q2fy27) · [2](https://www.psuconnect.in/financial/jsw-steel-q2-results-record-production-sales-consolidated-pat-at-5-359-cr) · [3](https://www.icra.in/Research/ViewResearchReport/domestic-led-volume-recovery-supports-growth-global-overcapacity-caps-prices/7086)
+
+Links: about `theme:sector-metals-mining`, about `theme:sector-cement`, about `theme:sector-capital-goods-epc-td`, illustrates `insight:transformer-peak-2026`, illustrates `case_study:capital-goods-2007`
+
+<a id="insightindialeadindicatordashboard"></a>
+## India sector lead-indicator dashboard: public data sources
+`insight:india-lead-indicator-dashboard` · confidence: single-source
+
+These free public series lead quarterly results, usually by 1–3 months. Autos: Vahan dashboard (daily registrations), FADA monthly retail and dealer inventory, SIAM monthly wholesales, tractor sales. Banks and NBFCs: RBI fortnightly credit and deposit data, RBI monthly sectoral deployment and NBFC credit release, CRIF/CIBIL delinquency, MFIN Micrometer, CP/NCD spreads. Capital markets: AMFI monthly note (AUM, SIP, folios), NSE/BSE monthly turnover, CDSL/NSDL accounts. Power: Grid-India daily PSP report (peak demand), CEA monthly generation and daily coal stock, IEX daily prices, MNRE capacity. Cement and steel: eight core industries index (monthly), JPC steel consumption, dealer price checks, China NBS exports, SGX iron ore. Capex: CGA monthly central capex, RBI OBICUS utilisation, IIP capital goods, CMIE project announcements. Consumption: GST collections (monthly, 1st of the month), NielsenIQ quarterly FMCG, CPI food, RBI consumer confidence, credit card spends, e-way bills. Real estate: ANAROCK/PropEquity quarterly, Knight Frank Mumbai registrations. Pharma: USFDA warning letters, 483s and import alerts, AIOCD monthly IPM growth. Defence: PIB DAC AoN releases and MoD contract signings. IT: Accenture results, which come about 3 weeks earlier, plus Naukri JobSpeak. Trap: mixing wholesale and retail, and failing to adjust for festival-calendar shifts. Oct 2026 FADA retail fell 14–28% only because Diwali moved into November, while SIAM wholesale rose 12–16%.
+
+**lesson:** Track one leading series per sector you own; always compare retail vs wholesale and adjust for calendar shifts.
+**example_nov_2026:** Oct 2026: SIAM PV +12.4%, 2W +16.1% vs FADA PV −14.2%, 2W −28.4% (Diwali shift).
+
+Sources: [1](https://www.businesstoday.in/auto/story/auto-industry-posts-record-october-sales-as-passenger-vehicles-cross-5-lakh-mark-2-wheelers-grow-16-567320-2026-11-13) · [2](https://www.autocarpro.in/analysis-sales/passenger-vehicle-retail-sales-fall-1423-percent-to-508-lakh-in-october-fada-135776) · [3](https://www.amfiindia.com/uploads/AMFI_Monthly_Note_October2026_cd03bc1103.pdf) · [4](https://rbi.org.in/SCRIPTs/BS_PressReleaseDisplay.aspx?prid=63891) · [5](https://energyandcleanair.org/quarterly-energy-snapshot-for-india-q2-2026-27/)
+
+Links: about `theme:sector-private-banks`, about `theme:sector-nbfc-hfc`, about `theme:sector-insurance`, about `theme:sector-amc-capital-markets`, about `theme:sector-it-services`, about `theme:sector-pharma-cdmo`, about `theme:sector-specialty-chemicals`, about `theme:sector-auto-oems`
+
+<a id="insightreratingphasesend"></a>
+## Sector re-ratings end when multiples double while earnings only grow
+`insight:rerating-phases-end` · confidence: unverified
+
+Indian sector bull runs often get most of their return from multiple expansion, not earnings. When that happens, the next decade's return is borrowed. Examples: capital goods (2003–Jan 2008 at P/E 40–80x, then about 14 years to regain the index peak); real estate in 2007 (DLF and the realty index fell 80–90% and stayed down to ~2020); FMCG/consumer in 2019–21 (55–75x for HUL and Nestle, followed by roughly five years of flat-to-weak relative returns as multiples compressed); specialty chemicals at the 2021 China+1 peak (50–80x, then a 40–60% drawdown in many names through 2023–25 destocking); defence PSUs in 2023–25 (forward P/E ~2x historical); EMS in 2024–25 (60–120x). Common early signals at the top: the sector's P/E at more than 1.5–2x its own 10-year median, IPO and QIP supply surging in the theme, new entrants announcing capacity, and earnings upgrades slowing while prices still rise. Then a disclosure or accounting scare (Kaynes 2025) or a margin miss triggers the de-rating. Lesson: split past returns into earnings growth and multiple change, and assume the multiple mean-reverts over 5–10 years unless RoCE or growth has structurally changed.
+
+**lesson:** Decompose returns into EPS growth vs P/E change; a doubled multiple is a loan from future returns.
+**examples:** capital goods 2008; realty 2007; FMCG 2019–21; specialty chemicals 2021; defence 2024–25; EMS 2024–25
+
+Sources: [1](https://www.businesstoday.in/markets/stocks/story/bel-hal-bdl-shares-targets-for-defence-stocks-after-rs-1-1-lakh-crore-dac-approvals-553813-2026-09-08) · [2](https://www.indexpe.in/blog/nifty-sector-valuations-june-2026) · [3](https://www.multibagg.ai/market-pulse/articles/dixon-q2-income-margin-drop-announcement-cmvv7szk200el2klzhj02h442)
+
+Links: illustrates `case_study:defence-psu-rerating`, illustrates `case_study:capital-goods-2007`, illustrates `case_study:kaynes-2025`, similar_to `insight:winners-drawdowns`
+
+<a id="insightsubsidyandregulationmargins"></a>
+## Margins created by policy can be taken away by policy
+`insight:subsidy-and-regulation-margins` · confidence: single-source
+
+Several Indian sectors' margins depend on a policy instrument, and the market often capitalises those margins as if they were permanent. EMS: mobile PLI ended in FY26, and Dixon's Q2 FY27 operating margin fell to 2.7% from 3.8%, with ₹1,110 cr of PLI receivables outstanding. Steel: the 12% safeguard duty since 2025 supports domestic spreads. Insurance: the Feb 2023 tax change on high-premium policies cut growth and de-rated insurers, and the Sep 2025 GST exemption removed input tax credit (~60–100 bps of VNB margin). Capital markets: SEBI's F&O curbs (Nov 2024), STT hikes and TER cuts can wipe out 30–50% of a revenue line. Alcobev: one state's excise hike (Maharashtra, 50–60%, June 2025) hits EPS 6–8% for a leader. Pharma: US Section 232 exempted generics only 'at this time' (Apr 2026), with a review due within a year. Renewables: ALMM, customs duty and ISTS-waiver phase-outs change project IRRs. Microfinance: RBI and state lending caps. Checklist: what share of EBITDA comes from incentives, duties or regulated pricing? When does the policy sunset? Who can change it? Has the stock been valued as if the benefit lasts forever? Early signal: management guidance that excludes or quietly normalises incentives, and rising incentive receivables.
+
+**lesson:** Haircut policy-dependent margins and value them separately with a sunset date.
+**examples:** Dixon Q2 FY27 margin drop post-PLI; Maharashtra excise 2025; insurance tax 2023; SEBI F&O 2024; Section 232 review.
+
+Sources: [1](https://www.multibagg.ai/market-pulse/articles/dixon-q2-income-margin-drop-announcement-cmvv7szk200el2klzhj02h442) · [2](https://www.zeebiz.com/india/news-maharashtra-cabinet-approves-up-to-60-liquor-duty-hike-united-spirits-radico-allied-blenders-stocks-under-pressure-368784) · [3](https://www.india-briefing.com/news/us-patented-pharma-tariff-2026-india-generic-drug-exports-exempted-43899.html) · [4](https://www.kotakneo.com/news/stocks/hdfc-life-q1-fy-27-results-net-profit-vnb-july-2026/)
+
+Links: about `theme:sector-ems-electronics`, about `theme:sector-alcobev`, about `theme:sector-insurance`, about `theme:sector-amc-capital-markets`, about `insight:sebi-fo-losses`
+
+<a id="insightbalancesheetsurvivescycle"></a>
+## Across Indian sectors, the downcycle balance sheet decides the long-term winner
+`insight:balance-sheet-survives-cycle` · confidence: unverified
+
+Leverage taken on in an upcycle was the common thread in every big Indian sector wipeout. Infrastructure and EPC in 2007–12 (Lanco, GVK, Punj Lloyd, Gammon) used debt plus aggressive bids. Thermal IPPs in 2010–13 had untied PPAs and imported coal. Steel in 2011–16 (Bhushan, Essar, Monnet) ended in IBC. Real estate in 2008–19 (Unitech, Jaypee) diverted customer advances. NBFCs in 2018–19 (IL&FS, DHFL) borrowed short to lend long. Private banks in 2018–20 (Yes Bank) grew loans ahead of deposits. Retail in 2019–20 (Future Group) expanded on debt. The survivors and compounders entered the downturn with net cash or low leverage and gained share when weak players exited: UltraTech and Shree in cement, JSW after its 2016 recovery, HDFC Bank and Kotak in 2008 and 2018, Bajaj Finance after 2008, Radico through FY17–21 deleveraging (D/E 0.77 to 0.15). Sector-specific balance-sheet tests: lenders on deposit/CASA franchise and ALM; cyclicals on net debt/EBITDA under 2x at mid-cycle margins; EPC on working capital and receivables over a year; developers on net debt against annual collections; utilities on discom receivables. Lesson: in cyclical and financial sectors, screen out stretched balance sheets first, then pick on growth.
+
+**lesson:** Survive first: screen leverage and funding structure before growth; downturn share gains build the next decade's winners.
+**examples:** Lanco/GVK 2012; Bhushan/Essar IBC; Unitech/Jaypee; IL&FS/DHFL 2018–19; Yes Bank 2020; Future Group 2020
+
+Sources: [1](https://ticker.finology.in/discover/market-update/hdfc-bank-q2-fy27-results-analysis) · [2](https://www.newkerala.com/news/a/hfcs-emerge-stronger-after-fy26-stress-asset-quality-215.htm)
+
+Links: similar_to `insight:avoid-ruin`, illustrates `case_study:radico-khaitan`, about `insight:disqualifiers`
+
+<a id="insightsectorcycleclocknov2026"></a>
+## Indian sector cycle clock as of Nov 2026
+`insight:sector-cycle-clock-nov-2026` · confidence: single-source
+
+This is a snapshot of where each sector stands, built from Q2 FY27 results and Oct 2026 data. It is not a recommendation. Credit is in an upcycle (bank credit ~18–19% YoY, NBFC credit 15.4%), but private-bank NIMs are compressing (HDFC Bank 3.16%), PSBs lead on profit growth, and Nifty Bank traded at 1.63x P/B in Oct 2026, below its median. IT is at a growth trough (Infosys +1.5% CC YoY, guidance cut to 1–2%) with P/E ~18x against a 27x 7-year median (Jun 2026), and the debate is cyclical against structural (GenAI deflation). Pharma is the only large-cap sector above its FY26 average valuation, with the Section 232 generics review a tail risk. Specialty chemicals are past the trough in volumes but have no pricing power (CRISIL ~6% growth). Autos had a strong wholesale October (+12–16%), and the auto P/E of ~24x is near its long-term average. In capital goods, order inflows are at records (L&T ₹1.48 lakh cr) but transformer margins have peaked. In power, demand is at records (270.8 GW) and renewable additions have slowed to ~50 GW in FY27. Cement prices are recovering after a weak Q2 (UltraTech ₹974/t). Steel is in a margin upswing behind the safeguard duty. FMCG value growth is at a six-quarter high, led by rural, with the P/E below its median. QSR LFL is recovering slowly. Housing sales are flat to +3%. EMS margins are compressing after PLI. In defence, approvals are high but conversion is slow, at ~32–42x forward. Alcobev shows a premium–popular divide.
+
+**snapshot:**
+- banks: credit upcycle, NIM compression, P/B below median
+- it: growth trough, P/E below median
+- pharma: above-average valuation, tariff tail risk
+- chemicals: volume recovery, price cap
+- autos: strong wholesale, near-average P/E
+- capgoods: record orders, product-margin peak
+- power: record demand
+- cement: price recovery H2
+- steel: margin upswing (protection)
+- fmcg: rural-led recovery
+- qsr: slow LFL recovery
+- realty: flat sales
+- ems: post-PLI margin squeeze
+- defence: approvals > orders, rich multiples
+- alcobev: premium-popular divide
+**as_of:** 2026-11-19
+
+Sources: [1](https://ticker.finology.in/discover/market-update/hdfc-bank-q2-fy27-results-analysis) · [2](https://www.staffingindustry.com/news/global-daily-news/infosys-q2-revenue-edges-up-but-trims-full-year-revenue-outlook) · [3](https://www.investywise.com/larsen-toubro-q2-h1-fy27-earnings-presentation/) · [4](https://www.adityabirla.com/media/press-releases/ultratech-delivers-strong-q2-fy27-performance-net-sales-up-189-pat-up-213-domestic-volumes-up-138/) · [5](https://www.sahi.com/news/india-fmcg-value-growth-hits-six-quarter-high-of-8-6-in-q2fy27-on-rural-surge) · [6](https://www.multibagg.ai/market-pulse/articles/dixon-q2-income-margin-drop-announcement-cmvv7szk200el2klzhj02h442) · [7](https://www.businesstoday.in/markets/stocks/story/bel-hal-bdl-shares-targets-for-defence-stocks-after-rs-1-1-lakh-crore-dac-approvals-553813-2026-09-08) · [8](https://tapetide.com/insight/market-valuation) · [9](https://www.indexpe.in/blog/nifty-sector-valuations-june-2026) · [10](https://www.businesstoday.in/auto/story/auto-industry-posts-record-october-sales-as-passenger-vehicles-cross-5-lakh-mark-2-wheelers-grow-16-567320-2026-11-13)
+
+Links: about `theme:sector-private-banks`, about `theme:sector-nbfc-hfc`, about `theme:sector-insurance`, about `theme:sector-amc-capital-markets`, about `theme:sector-it-services`, about `theme:sector-pharma-cdmo`, about `theme:sector-specialty-chemicals`, about `theme:sector-auto-oems`
+
+<a id="insightorderbooknotcash"></a>
+## Order books, DAC approvals and lifetime-value wins are not cash
+`insight:order-book-not-cash` · confidence: single-source
+
+Capital goods, defence, EMS and auto components all advertise forward visibility: an order book of 2–8x revenue, DAC Acceptance of Necessity approvals, or 'lifetime revenue' order wins. The market tends to price the headline number. Conversion is what matters. In defence, an AoN still needs Cabinet Committee on Security sanction and then contract signing, and BEL's Q1 FY27 book-to-bill was below 1 despite ₹1.62 lakh cr of FY27 DAC approvals. HAL's growth is capped at 10–12% by engine supply despite an order book of about ₹2.5 lakh cr. In EPC, slow-moving government and fixed-price orders hurt margins (the 2007–12 infrastructure companies had large order books and collapsed on working capital). In auto components, lifetime-value wins depend on OEM program volumes. Checks: order book/revenue rising while revenue growth stalls is a warning. Look at execution rate (revenue ÷ opening order book), OCF/EBITDA over 3 years, receivables over a year, unbilled revenue and contract assets, the share of orders from financially weak clients (state discoms, PSUs facing payment delays), and the fixed-price share in a commodity upswing.
+
+**lesson:** Value execution and cash conversion, not announced backlog.
+**examples:** BEL Q1 FY27 book-to-bill <1; HAL supply-capped growth; 2007–12 EPC blow-ups.
+
+Sources: [1](https://www.businesstoday.in/markets/stocks/story/bel-hal-bdl-shares-targets-for-defence-stocks-after-rs-1-1-lakh-crore-dac-approvals-553813-2026-09-08) · [2](https://www.angelone.in/news/stocks/hal-and-bel-understanding-order-books-execution-and-revenue) · [3](https://www.investywise.com/larsen-toubro-q2-h1-fy27-earnings-presentation/)
+
+Links: about `theme:sector-defence`, about `theme:sector-capital-goods-epc-td`, about `theme:sector-auto-components`

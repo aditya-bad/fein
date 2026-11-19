@@ -1,0 +1,479 @@
+[
+ {
+  "type": "case_study",
+  "id": "case_study:bajaj-finance-2009-2021",
+  "title": "Bajaj Finance 2009–2021: new CEO, consumer-lending engine, ~1,570x",
+  "body": "Split/bonus-adjusted (2016 split+bonus, 2025 4:1 bonus + 1:2 split, ~100x factor) price ₹0.50 (Mar 2009) → ₹786 (Oct 2021) ≈1,570x; ₹1,093 on 19 Nov 2026 (ATH ₹1,141, Jul 2026). Twin engine: trailing P/E 9 → 121 (13x) × implied EPS ~117x. Max drawdown inside the run −61% (Feb–May 2020, COVID moratorium); before the run it had fallen −90% (2006–09). Early signal: Aug 2007 Rajeev Jain hired from AIG; the business was ~90% auto finance; 2008–10 it cut risky segments and pivoted to consumer durables, SME and later 34 products (by 2015); renamed 2010. In FY10–13 profits rose fast while the stock sat at P/E ~7–12 (2011 year-end 6.8). FY15–20: revenue +30–45%/yr with ROE 19–22%. Investors who caught it held through −32% (2013), −31% (2018) and −61% (2020). Ended/stalled: P/E peaked at 121 in Oct 2021; from Oct 2021 to Nov 2026 EPS rose ~4.8x but P/E fell to ~36, so the stock gained only ~39% in 5 years. Lesson: a lender multibagger needs underwriting proven through a credit cycle and a cheap starting multiple; at 100x+ even 5x EPS growth gives flat returns. NPA 2%→12% in 2009 claim is blog-sourced (unverified).",
+  "tickers": [
+   "BAJFINANCE"
+  ],
+  "tags": [
+   "india",
+   "multibagger",
+   "sector-nbfc",
+   "twin-engine",
+   "rerating",
+   "management-change"
+  ],
+  "date": "2009-03-06",
+  "data": {
+   "start_year": 2009,
+   "end_year": 2021,
+   "start_price": 0.5,
+   "end_price": 786,
+   "price_nov2026": 1093,
+   "multiple": "~1,570x (to 2021 peak); ~2,190x to Nov 2026",
+   "pe_start": 9.0,
+   "pe_end": 120.8,
+   "pe_multiple": "13x",
+   "eps_multiple_implied": "~117x",
+   "max_drawdown": "-61% (2020)",
+   "early_signals": "2007 CEO hire; pivot from auto to consumer durables/SME; profits compounding at P/E <12 in 2010-13",
+   "ended": "P/E 121 in 2021, de-rated to ~36 while EPS grew",
+   "lesson": "Starting multiple and credit-cycle survival matter more than growth narrative",
+   "note": "Prices: screener.in weekly closes, split/bonus-adjusted. P/E = trailing (TTM) from screener chart; 'implied EPS x' = price multiple / P/E multiple."
+  },
+  "sources": [
+   "https://www.screener.in/company/BAJFINANCE/",
+   "https://www.businesstoday.in/magazine/cover-story/story/indias-best-ceos-2015-rajeev-jain-bajaj-finance-into-fastest-growing-nbfcs-54964-2015-12-29",
+   "https://www.outlookbusiness.com/lead-story/creating-a-legacy-of-his-own-3716",
+   "https://ajuniorvc.com/?p=8480"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:twin-engine",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:winners-drawdowns",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:india-mb-pe70-exit",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:page-industries-2007-2022",
+  "title": "Page Industries 2007–2022: Jockey licence compounder, ~197x, then de-rating",
+  "body": "No splits. First listed week Mar 2007 ₹272 → ATH ₹53,453 (Oct 2022) ≈197x; ₹31,065 on 19 Nov 2026 (−42% from ATH). Twin engine: P/E 26.6 → 81.4 (3.1x) × implied EPS ~64x (TTM EPS ₹14.9 → ₹657); the business did most of the work. Drawdowns: −41% (2008), −38% (2015–16), −52% (Aug 2018–Apr 2020). Early signal: exclusive Jockey licensee for India since 1994 (renewed to 2030); revenue CAGR ~35% FY04–15 with a new product line almost every year; ROCE 50–70% with negligible debt; P/E fell to ~13 at end-2008, so a fast grower was briefly priced like a commodity company. Investors who caught it (2008–2010) mostly just held. Ended/stalled: after the 2022 peak, FY23 trade destocking and weak demand cut TTM EPS from ₹658 to ₹458; EPS recovered to ₹708 by 2026 (above 2022), but P/E fell from ~81 to ~44, so 4 years of EPS growth were erased by de-rating. Sales CAGR slowed to ~11% (FY15–26). Lesson: brand-licence compounders bought at 13–30x make money; at 80x+ the next four years depend entirely on growth not slowing. Licence concentration (Jockey International) is a permanent tail risk.",
+  "tickers": [
+   "PAGEIND"
+  ],
+  "tags": [
+   "india",
+   "multibagger",
+   "premiumisation",
+   "sector-apparel",
+   "twin-engine",
+   "rerating"
+  ],
+  "date": "2007-03-16",
+  "data": {
+   "start_year": 2007,
+   "end_year": 2022,
+   "start_price": 272,
+   "end_price": 53453,
+   "price_nov2026": 31065,
+   "multiple": "~197x",
+   "pe_start": 26.6,
+   "pe_end": 81.4,
+   "eps_multiple_implied": "~64x",
+   "max_drawdown": "-52% (2018-20)",
+   "early_signals": "exclusive licence, 60%+ ROCE, P/E ~13 in 2008, new categories yearly",
+   "ended": "growth slowdown FY23 + P/E 81→44",
+   "lesson": "de-rating can erase years of EPS growth",
+   "note": "Prices: screener.in weekly closes, split/bonus-adjusted. P/E = trailing (TTM) from screener chart; 'implied EPS x' = price multiple / P/E multiple."
+  },
+  "sources": [
+   "https://www.screener.in/company/PAGEIND/",
+   "https://www.elearnmarkets.com/school/units/the-unusual-billionaires/page-industries",
+   "https://en.wikipedia.org/wiki/Page_Industries"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:twin-engine",
+    "rel": "illustrates"
+   },
+   {
+    "to": "strategy:marcellus-cc",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:india-mb-pe70-exit",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:astral-2009-2024",
+  "title": "Astral 2009–2024: CPVC pipes, ~1,590x, then flat earnings and −48%",
+  "body": "Split/bonus-adjusted ₹1.51 (Mar 2009) → ₹2,406 (Jul 2024) ≈1,590x; ₹1,254 on 19 Nov 2026 (−48%). Twin engine: P/E 7.9 → 118 (15x) × implied EPS ~106x. Drawdowns: −85% in 2008 (before the run), then −35%/−36% (2010–11), −34% (2015–16), −49% (Jul 2024–Mar 2025). Early signal (unverified narrative, general knowledge): early Indian CPVC plumbing-pipe player (Lubrizol technology tie-up) as plumbing shifted from galvanised iron to plastic; brand + distributor pull; FY09–11 the stock traded at P/E 9–15 while EPS doubled. Screener shows ROCE 21–29% and low debt through FY15–26. Investors who held from 2009–2013 rode a near-continuous rerating to 60–100x by 2014–2020. Ended/stalled: FY22–FY26 EPS was roughly flat (₹18 → ₹22 TTM) because of PVC price swings, slower adhesives/paints diversification and more competition, yet P/E was still 85–118 in 2023–24; P/E has since compressed to ~57. Lesson: about half the log-return was rerating; when revenue growth fell to ~10% and EPS stalled, a 100x+ multiple halved. Building-material leaders deserve a premium, but not one that assumes 25% growth forever.",
+  "tickers": [
+   "ASTRAL"
+  ],
+  "tags": [
+   "india",
+   "multibagger",
+   "sector-building-materials",
+   "twin-engine",
+   "rerating"
+  ],
+  "date": "2009-03-06",
+  "data": {
+   "start_year": 2009,
+   "end_year": 2024,
+   "start_price": 1.51,
+   "end_price": 2406,
+   "price_nov2026": 1254,
+   "multiple": "~1,590x",
+   "pe_start": 7.9,
+   "pe_end": 118.4,
+   "eps_multiple_implied": "~106x",
+   "max_drawdown": "-49% (2024-25); -36% inside run",
+   "early_signals": "category shift GI→CPVC; P/E <15 with EPS doubling (2009-11)",
+   "ended": "EPS flat FY22-26 at 85-118x P/E",
+   "lesson": "PE share ~37%; flat EPS at 100x = halving",
+   "note": "Prices: screener.in weekly closes, split/bonus-adjusted. P/E = trailing (TTM) from screener chart; 'implied EPS x' = price multiple / P/E multiple."
+  },
+  "sources": [
+   "https://www.screener.in/company/ASTRAL/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:twin-engine",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:india-mb-pe70-exit",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:pidilite-2008-2026",
+  "title": "Pidilite 2008–2026: Fevicol moat, ~80x with shallow drawdowns",
+  "body": "Split/bonus-adjusted ₹19.8 (Oct 2008) → ₹1,231 (Dec 2021) ≈62x; ₹1,580 on 19 Nov 2026 (≈80x; ATH ₹1,693 Aug 2026). 2008–21 twin engine: P/E 15.7 → 93 (5.9x) × implied EPS ~10.5x, so about 43% of the log-return was rerating. Max drawdown after 2008 only −26%/−27% (2020, 2022), the shallowest in this library; 2008 itself was −61%. Early signal (general knowledge, unverified narrative): near-monopoly consumer adhesives (Fevicol, M-Seal, Fevikwik) with pricing power; when VAM input prices collapsed in late 2008 margins jumped (screener OPM 16% FY15 → 22% FY16) while the stock was at ~15x. Promoter holding ~69–70% steady. Investors were 'coffee-can' holders. Stall: Dec 2021 → Nov 2026 EPS doubled (₹13.2 → ₹26.4) but P/E fell 93 → 60, so the price rose only ~28% in ~5 years. Lesson: a true moat gives shallow drawdowns and steady EPS, but even the best franchise had a P/E ceiling near 90–100 in India; returns after that point track EPS minus de-rating.",
+  "tickers": [
+   "PIDILITIND"
+  ],
+  "tags": [
+   "india",
+   "multibagger",
+   "sector-chemicals",
+   "consumer",
+   "twin-engine",
+   "rerating"
+  ],
+  "date": "2008-10-24",
+  "data": {
+   "start_year": 2008,
+   "end_year": 2026,
+   "start_price": 19.8,
+   "end_price": 1580,
+   "multiple": "~80x (62x to 2021)",
+   "pe_start": 15.7,
+   "pe_end_2021": 93.0,
+   "pe_nov2026": 60.0,
+   "eps_multiple_implied": "~10.5x (2008-21)",
+   "max_drawdown": "-27% after 2008",
+   "early_signals": "input-cost collapse 2008-09 + pricing power, at 15x",
+   "ended": "not ended; returns slowed after P/E 93 in 2021",
+   "lesson": "moats reduce drawdowns, not valuation risk",
+   "note": "Prices: screener.in weekly closes, split/bonus-adjusted. P/E = trailing (TTM) from screener chart; 'implied EPS x' = price multiple / P/E multiple."
+  },
+  "sources": [
+   "https://www.screener.in/company/PIDILITIND/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "strategy:marcellus-cc",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:twin-engine",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:india-mb-pe70-exit",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:titan-2009-2026",
+  "title": "Titan 2009–2026: formalising jewellery, ~130x, still compounding",
+  "body": "Split-adjusted ₹36 (Mar 2009) → ₹4,700 on 19 Nov 2026 ≈130x (ATH ₹5,169, Aug 2026). Twin engine: P/E 20.8 → 58.7 (2.8x) × implied EPS ~46x; about 21% of the log-return was rerating, among the most earnings-driven cases here. Drawdowns: −57% (2007–09), then ≤−38% (2019–20 COVID), with several −30% dips (2011, 2012–13, 2015–16). Sales ₹11.9k cr (FY15) → ₹87.6k cr (FY26). Early signal (general knowledge, unverified narrative): Tanishq taking share from unorganised jewellers on trust and purity (karat-meter, exchange programmes), later helped by mandatory hallmarking (2021); Tata parentage; store additions disclosed quarterly. The 2009 entry at ~21x was the cheap window. Rakesh Jhunjhunwala's large holding is the famous example (see existing records; the '₹3' entry is a separate myth record). Not ended: EPS jumped FY26 (₹57 → ₹79 TTM) while P/E compressed from 90–190 (2020–24) to ~59. Lesson: formalisation of a huge unorganised category is a multi-decade earnings engine; buying at 60–100x worked only because EPS kept compounding at 20%+.",
+  "tickers": [
+   "TITAN"
+  ],
+  "tags": [
+   "india",
+   "multibagger",
+   "premiumisation",
+   "formalisation",
+   "sector-consumer",
+   "twin-engine"
+  ],
+  "date": "2009-03-13",
+  "data": {
+   "start_year": 2009,
+   "end_year": 2026,
+   "start_price": 36,
+   "end_price": 4700,
+   "multiple": "~130x",
+   "pe_start": 20.8,
+   "pe_end": 58.7,
+   "eps_multiple_implied": "~46x",
+   "max_drawdown": "-38% (2019-20)",
+   "early_signals": "unorganised→organised share gain; trust brand",
+   "ended": "still running",
+   "lesson": "formalisation themes = long EPS runways",
+   "note": "Prices: screener.in weekly closes, split/bonus-adjusted. P/E = trailing (TTM) from screener chart; 'implied EPS x' = price multiple / P/E multiple."
+  },
+  "sources": [
+   "https://www.screener.in/company/TITAN/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:twin-engine",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:myth-titan-3",
+    "rel": "about"
+   },
+   {
+    "to": "person:rakesh-jhunjhunwala",
+    "rel": "about"
+   },
+   {
+    "to": "strategy:marcellus-cc",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:eicher-motors",
+  "title": "Eicher Motors / Royal Enfield 2008–2017 (~196x), 61% crash, slow recovery",
+  "body": "Split-adjusted (2020 1:10 split) ₹16.65 (Oct 2008) → ₹3,262 (Sep 2017) ≈196x. Twin engine: P/E 12.8 → 50.7 (4x) × implied EPS ~49x. Max drawdown inside the run only −26% (2010–11); −69% in 2008 before it. Early signals: in 2004–05 Siddhartha Lal (CEO) sold 13 of 15 group businesses to focus on Royal Enfield and trucks (Volvo JV 2008), a focus move most investors ignored. Classic 350 launched 2009; RE volumes grew ~22% CAGR 2010–18; waiting periods and dealer feedback were visible scuttlebutt. A small, fast segment (RE) sat inside a 'truck company' (hidden-segment pattern). From FY15, after Volvo-JV accounting changed, OPM was 27–31% and ROCE ~50%. Ended: volumes peaked FY19 and EPS fell from ~₹77 to ~₹40 (2020); the stock fell −61% to ₹1,268 (Apr 2020). Recovery: ₹8,058 on 19 Nov 2026 (ATH), EPS 3.4x since 2017 while P/E fell 51 → 37, so a 2017-peak buyer made 2.5x in 9 years. Lesson: focus plus a cult product plus operating leverage gives a twin-engine; when unit growth stops, even a great franchise halves. Correction to earlier record: the '86x from ₹32 (2005)' figure understates the 2008–17 run.",
+  "tickers": [
+   "EICHERMOT"
+  ],
+  "tags": [
+   "india",
+   "multibagger",
+   "turnaround",
+   "focus",
+   "sector-auto",
+   "twin-engine",
+   "hidden-segment"
+  ],
+  "date": "2008-10-24",
+  "data": {
+   "start_year": 2008,
+   "end_year": 2017,
+   "start_price": 16.65,
+   "end_price": 3262,
+   "price_nov2026": 8058,
+   "multiple": "~196x (2008-17); ~484x to Nov 2026",
+   "pe_start": 12.8,
+   "pe_end": 50.7,
+   "eps_multiple_implied": "~49x",
+   "max_drawdown": "-26% in run; -61% 2017-20",
+   "early_signals": "2004-05 divest 13 of 15 businesses; Classic 350 (2009); waiting lists; RE segment inside truck company",
+   "ended": "volume peak FY19",
+   "lesson": "focus + operating leverage; volume stall halves even great franchises",
+   "note": "Prices: screener.in weekly closes, split/bonus-adjusted. P/E = trailing (TTM) from screener chart; 'implied EPS x' = price multiple / P/E multiple."
+  },
+  "sources": [
+   "https://www.screener.in/company/EICHERMOT/consolidated/",
+   "https://www.outlookbusiness.com/the-big-story/lead-story/siddhartha-lal-an-indian-powerhouse-on-two-wheels-6676",
+   "https://en.wikipedia.org/wiki/Siddhartha_Lal",
+   "https://gulfnews.com/amp/story/world%2Fasia%2Findia%2Flook-who-is-bringing-royal-enfield-back-to-uk-1.2130021"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:hidden-segment",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:twin-engine",
+    "rel": "illustrates"
+   },
+   {
+    "to": "strategy:fisher-scuttlebutt",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:india-mb-how-they-end",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:balkrishna-industries-2009-2024",
+  "title": "Balkrishna Industries 2009–2024: off-highway tyre niche, rerating from P/E 2",
+  "body": "Split-adjusted ₹12.4 (Mar 2009) → ₹3,292 (Aug 2024) ≈266x; ₹2,327 on 19 Nov 2026 (−29%). Twin engine: trailing P/E ~2.2 at the Mar 2009 trough (TTM EPS ₹5.7) → 48.6, about 22x rerating × implied EPS ~12x. About 55% of the log-return was the multiple, the highest share among the long-duration cases here. Drawdowns: −89% (2006–09, before), −34% (2013), −32% (2014–16), −48% (2018–19), −39% (2024–26). Early signal: a niche global off-highway (agri, OTR) replacement-tyre exporter (~85–90% exports, Europe the largest market) priced like a commodity truck-tyre maker; P/E 6–13 through 2010–2015 while EPS compounded; Bhuj greenfield plant (first tyre 2012, completed ~2015) roughly doubling capacity to ~300k t. Investors who saw 'global niche, Indian cost base' held a 9-year rerating to 24–36x by 2017–2021. Stalled: EPS flat FY22–26 (~₹74), ROCE down from ~24% to ~11% after heavy capex (carbon black, Bhuj expansions), weak European agri demand and freight. Lesson: the biggest rerating wins come from a market's mis-classification (commodity → niche franchise); when returns on capital fall, the rerating stops.",
+  "tickers": [
+   "BALKRISIND"
+  ],
+  "tags": [
+   "india",
+   "multibagger",
+   "rerating",
+   "exports",
+   "sector-auto-ancillary",
+   "twin-engine"
+  ],
+  "date": "2009-03-13",
+  "data": {
+   "start_year": 2009,
+   "end_year": 2024,
+   "start_price": 12.4,
+   "end_price": 3292,
+   "price_nov2026": 2327,
+   "multiple": "~266x",
+   "pe_start": 2.2,
+   "pe_end": 48.6,
+   "eps_multiple_implied": "~12x",
+   "max_drawdown": "-48% (2018-19)",
+   "early_signals": "niche global OHT exporter at P/E 2-6; capacity doubling at Bhuj",
+   "ended": "ROCE 24%→11%, EPS flat FY22-26",
+   "lesson": "mis-classification rerating; watch ROCE after big capex",
+   "note": "Prices: screener.in weekly closes, split/bonus-adjusted. P/E = trailing (TTM) from screener chart; 'implied EPS x' = price multiple / P/E multiple."
+  },
+  "sources": [
+   "https://www.screener.in/company/BALKRISIND/consolidated/",
+   "https://www.business-standard.com/article/companies/off-highway-business-keeps-balkrishna-in-fast-lane-116112901460_1.html",
+   "https://www.outlookbusiness.com/feature/all-set-for-the-big-leap-786",
+   "https://www.farmersjournal.ie/machinery/farm-machinery/bkt-the-tyre-manufacturer-producing-1-3m-tyres-annually-853899"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:twin-engine",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:india-mb-twin-engine-base-rate",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:apl-apollo-2009-2026",
+  "title": "APL Apollo 2009–2026: low-margin steel tubes, ~670x via share gains",
+  "body": "Split-adjusted ₹3.22 (Mar 2009) → ₹2,148 on 19 Nov 2026 ≈670x (ATH ₹2,270, Sep 2026). Twin engine: P/E 5.0 → 45.5 (9x) × implied EPS ~73x. Drawdowns: −84% (2008–09, before), −40% (2013), −57% (Jan 2018–Feb 2019). Early signal: a 'commodity' steel-tube maker with only 5–8% operating margin but ROCE 20–32%, high asset turns and branded distribution. In 2016–17 it installed India's first Direct Forming Technology (DFT) lines (Hosur, Raipur), making new hollow sections that replace angles and channels in construction. Reported structural-tube share ~40% by FY20. Working capital financed by dealers ('growth doesn't cost a rupee', smallcase). In 2013 the stock was at P/E ~4–5. Investors who tracked volumes and new-product share each quarter caught the 2014–2021 rerating. Not ended: FY26 PAT ₹1,203 cr (+59%), sales ₹23k cr, P/E ~45. 2018–19 −57% came from a steel-price slump and channel destocking, not a broken thesis. Lesson: low margins aren't the problem when asset turns are high and share is rising; screen on ROCE and volume growth, not OPM.",
+  "tickers": [
+   "APLAPOLLO"
+  ],
+  "tags": [
+   "india",
+   "multibagger",
+   "sector-steel",
+   "capex",
+   "twin-engine",
+   "rerating"
+  ],
+  "date": "2009-03-20",
+  "data": {
+   "start_year": 2009,
+   "end_year": 2026,
+   "start_price": 3.22,
+   "end_price": 2148,
+   "multiple": "~670x",
+   "pe_start": 5.0,
+   "pe_end": 45.5,
+   "eps_multiple_implied": "~73x",
+   "max_drawdown": "-57% (2018-19)",
+   "early_signals": "ROCE >20% at 5% margin; DFT tech 2016-17; ~40% share",
+   "ended": "still running",
+   "lesson": "ROCE + volume share > margin",
+   "note": "Prices: screener.in weekly closes, split/bonus-adjusted. P/E = trailing (TTM) from screener chart; 'implied EPS x' = price multiple / P/E multiple."
+  },
+  "sources": [
+   "https://www.screener.in/company/APLAPOLLO/consolidated/",
+   "https://aplapollo.com/resource-center/blogs/apl-apollo-a-journey-through-time",
+   "https://www.smallcase.com/blog/why-apl-apollos-growth-doesnt-cost-it-a-rupee/",
+   "https://www.jmfinancialservices.in/company-information/apl-apollo-tubes-ltd"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:twin-engine",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:multibagger-patterns",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:deepak-nitrite-2009-2021",
+  "title": "Deepak Nitrite 2009–2021: phenol plant commissioning into an upcycle",
+  "body": "Split-adjusted ₹7.64 (Feb 2009) → ₹2,898 (Oct 2021) ≈379x; P/E ~8.5 → 93 (11x) × implied EPS ~35x. The decisive leg: ₹236 (Jun 2018) → ₹2,898 (Oct 2021) = 12x in 3.4 years, with consolidated TTM EPS ~20x (₹3.6 → ₹71.8) while P/E fell from ~69 to ~40, so it was earnings-driven. Early signal visible in filings: subsidiary Deepak Phenolics' ₹1,400 cr debt-funded Dahej phenol-acetone plant (≈200k t phenol) started commercial production on 1 Nov 2018, ran at >80% utilisation and was EBITDA/PBT positive in its first quarter; by the Dec 2020 quarter it was ~60% of revenue. This is a new segment that soon dwarfed the parent (hidden-segment pattern), an import-substitution story, plus favourable phenol spreads. Consolidated OPM 12% (FY18) → 24–29% (FY21–22). Ended: spreads normalised from 2022; consolidated EPS ~₹78 (FY22) → ~₹40 (FY26) before a Q1 FY27 rebound; the stock fell −57% (Aug 2024–Mar 2026) and is ₹1,552 (−50% from ATH ₹3,096). Lesson: capex commissioning into a spread upcycle creates explosive EPS. Price spread-driven earnings at cyclical multiples, not 90x.",
+  "tickers": [
+   "DEEPAKNTR"
+  ],
+  "tags": [
+   "india",
+   "multibagger",
+   "cyclical",
+   "capex",
+   "sector-chemicals",
+   "twin-engine",
+   "hidden-segment"
+  ],
+  "date": "2018-11-01",
+  "data": {
+   "start_year": 2009,
+   "end_year": 2021,
+   "start_price": 7.64,
+   "end_price": 2898,
+   "price_nov2026": 1552,
+   "multiple": "~379x (12x in 2018-21)",
+   "pe_start": 8.5,
+   "pe_end": 92.8,
+   "eps_multiple_implied": "~35x (2009-21); ~20x consolidated 2018-21",
+   "max_drawdown": "-41% in run; -57% 2024-26",
+   "early_signals": "phenol plant COD 1 Nov 2018, >80% utilisation, EBITDA+ in first quarter",
+   "ended": "spread normalisation 2022+",
+   "lesson": "spread-driven EPS deserves cyclical P/E",
+   "note": "Prices: screener.in weekly closes, split/bonus-adjusted. P/E = trailing (TTM) from screener chart; 'implied EPS x' = price multiple / P/E multiple."
+  },
+  "sources": [
+   "https://www.screener.in/company/DEEPAKNTR/consolidated/",
+   "https://www.screener.in/company/DEEPAKNTR/",
+   "https://www.devdiscourse.com/article/business/367473-deepak-nitrite-profit-surges-55-pct-during-q3-2018-19",
+   "https://www.bloombergquint.com/business/why-deepak-nitrates-stock-is-outperforming-its-peers"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:hidden-segment",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:india-mb-how-they-end",
+    "rel": "illustrates"
+   }
+  ]
+ }
+]
