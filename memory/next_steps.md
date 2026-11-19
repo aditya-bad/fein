@@ -20,7 +20,7 @@ Last updated: 2026-11-19
 ## Memory system TODO
 - Add semantic (embedding) search when an API key or local model is available.
 - Plan migration of memdb store to external DB/object storage before ~50k records.
-- Ask user whether to open a PR to merge the memory branch into main.
+- ~~Ask user whether to open a PR~~ User keeps this branch as home; asked them to set it as GitHub default branch (19-Nov-2026). Close PR #1 after.
 
 ## Ready to build next (no user input needed)
 - Promise tracker v1: schema in research_notes/Knowledge scout Nov 2026/edge_methods_data_access.md;
