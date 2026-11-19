@@ -1,0 +1,1464 @@
+<title>Multibagger Idea Pipeline</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f7f4ef; --paper2: #efe9df; --paper3: #e5ddd0;
+  --ink: #1c1a17; --ink2: #3a3630; --ink3: #625d55; --ink4: #9c9488;
+  --rule: rgba(28,26,23,.12); --rule2: rgba(28,26,23,.22);
+  --blood: #c0392b; --blood2: #e74c3c;
+  --pine: #1a5c3a; --pine2: #27ae60;
+  --slate: #1a3a5c; --slate2: #2980b9;
+  --amber: #7a4800; --amber2: #e67e22;
+  --gold: #b8860b;
+  --card: #fdfcfa;
+  --header-bg: rgba(247,244,239,.96);
+  --r: 8px; --r2: 14px;
+  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+  color-scheme: light;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; background: var(--paper); }
+body { background: var(--paper); color: var(--ink); font-family: 'Geist', sans-serif; font-size: 15px; line-height: 1.65; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+body::after {
+  content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image: repeating-linear-gradient(transparent, transparent 27px, rgba(28,26,23,.06) 27px, rgba(28,26,23,.06) 28px);
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 300; background: var(--paper); }
+::-webkit-scrollbar { width: 5px; height: 5px; } ::-webkit-scrollbar-track { background: var(--paper2); } ::-webkit-scrollbar-thumb { background: var(--paper3); border-radius: 3px; }
+a { color: var(--slate); }
+button { font: inherit; color: inherit; }
+.mono, .num { font-family: 'Geist Mono', monospace; }
+:focus-visible { outline: 2px solid var(--slate2); outline-offset: 2px; }
+
+/* header */
+.site-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 200; background: var(--header-bg); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 2px solid var(--ink); padding-left: var(--gutter-l); padding-right: var(--gutter-r); display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 52px; }
+.header-title { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 900; letter-spacing: -.01em; white-space: nowrap; flex-shrink: 0; }
+.header-title em { color: var(--blood); font-style: italic; font-weight: 400; }
+.header-nav { display: flex; gap: 2px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.header-nav::-webkit-scrollbar { display: none; }
+.header-nav a { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; padding: 5px 10px; border-radius: var(--r); color: var(--ink4); text-decoration: none; transition: all .13s; border: 1px solid transparent; white-space: nowrap; }
+.header-nav a:hover { color: var(--ink); background: var(--paper2); border-color: var(--rule2); }
+.header-right { font-size: 11px; color: var(--ink4); font-family: 'Geist Mono', monospace; letter-spacing: .04em; white-space: nowrap; flex-shrink: 0; }
+
+/* wrappers */
+.wrap { position: relative; z-index: 1; }
+.section { padding-block: 3.5rem; padding-left: var(--gutter-l); padding-right: var(--gutter-r); position: relative; z-index: 1; }
+.section.alt { background: var(--paper2); border-top: 1px solid var(--rule2); border-bottom: 1px solid var(--rule2); }
+.section-inner { max-width: 1200px; margin: 0 auto; min-width: 0; }
+.sec-eyebrow { font-family: 'Geist Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--blood); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.sec-eyebrow::before { content: ''; display: block; width: 16px; height: 2px; background: var(--blood); flex-shrink: 0; }
+.section h2 { font-family: 'Fraunces', serif; font-weight: 900; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.1; margin-bottom: 8px; letter-spacing: -.02em; }
+.section h2 em { font-style: italic; font-weight: 300; color: var(--ink3); }
+.sec-sub { font-size: 14px; color: var(--ink3); margin-bottom: 2rem; line-height: 1.7; max-width: 720px; }
+.phase-divider { display: flex; align-items: center; gap: 1rem; max-width: 1200px; margin: 0 auto; padding-top: 2.5rem; }
+.phase-divider::before, .phase-divider::after { content: ''; flex: 1; height: 2px; background: var(--ink); min-width: 12px; }
+.phase-label { font-family: 'Fraunces', serif; font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 4px 16px; border: 2px solid var(--ink); border-radius: 2px; text-align: center; background: var(--paper); }
+
+/* hero */
+.hero { padding-block: 4rem 3rem; padding-left: var(--gutter-l); padding-right: var(--gutter-r); border-bottom: 2px solid var(--ink); position: relative; z-index: 1; }
+.hero-inner { max-width: 1200px; margin: 0 auto; }
+.hero h1 { font-family: 'Fraunces', serif; font-weight: 900; letter-spacing: -.03em; font-size: clamp(38px, 6vw, 72px); line-height: 1.02; margin-bottom: 1rem; }
+.hero h1 em { font-style: italic; font-weight: 300; color: var(--blood); }
+.hero-lede { font-size: 17px; color: var(--ink2); max-width: 760px; margin-bottom: 2rem; }
+.hero-lede strong { color: var(--ink); }
+.framework-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1px; background: var(--rule2); border: 1px solid var(--rule2); border-radius: var(--r2); overflow: hidden; margin-bottom: 2rem; }
+.fw-cell { background: var(--card); padding: 1.25rem; min-width: 0; }
+.fw-big { font-family: 'Fraunces', serif; font-size: 44px; font-weight: 900; line-height: 1; letter-spacing: -.02em; }
+.fw-big.red { color: var(--blood); } .fw-big.green { color: var(--pine); }
+.fw-lab { font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink4); margin-top: 8px; }
+.fw-note { font-size: 12px; color: var(--ink3); margin-top: 4px; line-height: 1.5; }
+.track-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; }
+.track { background: var(--card); border: 1px solid var(--rule2); border-radius: var(--r2); padding: 1.1rem 1.2rem; border-top: 3px solid var(--gold); min-width: 0; transition: box-shadow .15s, transform .15s; }
+.track:hover { box-shadow: 0 4px 20px rgba(26,26,24,.08); transform: translateY(-1px); }
+.track .fw-num { font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--ink4); letter-spacing: .1em; }
+.track h3 { font-size: 15px; font-weight: 700; margin: 4px 0 6px; line-height: 1.3; }
+.track p { font-size: 12.5px; color: var(--ink3); line-height: 1.55; }
+.track.t-rupee { border-top-color: var(--gold); } .track.t-power { border-top-color: var(--slate); }
+.track.t-cons { border-top-color: var(--pine); } .track.t-quant { border-top-color: var(--blood); }
+.hero-meta { font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--ink4); margin-top: 1.5rem; letter-spacing: .03em; }
+
+/* signal cards for macro */
+.signal-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+.signal-card { background: var(--card); border: 1px solid var(--rule2); border-radius: var(--r2); padding: 1.4rem 1.5rem; border-left: 4px solid var(--gold); min-width: 0; transition: box-shadow .15s, transform .15s; }
+.signal-card:hover { box-shadow: 0 4px 20px rgba(26,26,24,.08); transform: translateY(-1px); }
+.signal-card.type-2 { border-left-color: var(--slate); } .signal-card.type-3 { border-left-color: var(--pine); } .signal-card.type-4 { border-left-color: var(--blood); }
+.signal-card h3 { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 700; margin-bottom: 8px; line-height: 1.2; }
+.signal-card .sig-eb { font-family: 'Geist Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink4); margin-bottom: 4px; }
+.signal-card p { font-size: 13.5px; color: var(--ink2); margin-bottom: 10px; }
+.correction { background: rgba(122,72,0,.07); border: 1px solid rgba(122,72,0,.18); border-radius: 6px; padding: 8px 10px; font-size: 12.5px; color: var(--ink2); line-height: 1.55; }
+.correction b { color: var(--amber); font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; display: block; margin-bottom: 2px; }
+
+/* tabs */
+.band-tabs { display: flex; border-bottom: 2px solid var(--ink); margin-bottom: 1.5rem; overflow-x: auto; scrollbar-width: none; }
+.band-tabs::-webkit-scrollbar { display: none; }
+.band-tab { padding: 10px 1.25rem; font-size: 13px; font-weight: 700; cursor: pointer; border: none; border-bottom: 3px solid transparent; margin-bottom: -2px; color: var(--ink4); transition: all .13s; background: transparent; font-family: 'Geist', sans-serif; white-space: nowrap; }
+.band-tab.active { color: var(--ink); border-bottom-color: var(--ink); }
+.band-tab:hover:not(.active) { color: var(--ink2); }
+.band-tab .cnt { font-family: 'Geist Mono', monospace; font-size: 10px; color: var(--ink4); margin-left: 4px; }
+.filter-note { font-size: 12px; color: var(--ink4); margin-bottom: 1rem; font-family: 'Geist Mono', monospace; }
+
+/* tables */
+.tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--rule2); border-radius: var(--r); background: var(--card); max-width: 100%; }
+.plain-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.plain-table th { text-align: left; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--ink4); padding: 8px 10px; border-bottom: 2px solid var(--ink); white-space: nowrap; background: var(--card); }
+.plain-table td { padding: 8px 10px; border-bottom: 1px solid var(--rule); color: var(--ink2); font-family: 'Geist Mono', monospace; font-size: 11.5px; white-space: nowrap; }
+.plain-table td:first-child { color: var(--ink); font-weight: 600; font-family: 'Geist', sans-serif; font-size: 12px; }
+.plain-table tr:last-child td { border-bottom: none; }
+.plain-table tbody tr:hover td { background: var(--paper); }
+.sortable th button { background: none; border: none; cursor: pointer; font: inherit; color: inherit; letter-spacing: inherit; text-transform: inherit; padding: 0; display: inline-flex; align-items: center; gap: 4px; }
+.sortable th button::after { content: '↕'; color: var(--paper3); font-size: 11px; }
+.sortable th button.sorted-asc::after { content: '↑'; color: var(--blood); }
+.sortable th button.sorted-desc::after { content: '↓'; color: var(--blood); }
+.sortable th button:hover { color: var(--ink); }
+#cmpTable td { white-space: nowrap; vertical-align: middle; }
+#cmpTable td:first-child { min-width: 170px; }
+.row-link { color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--ink4); }
+.row-link:hover { color: var(--blood); border-color: var(--blood); }
+.tk { display: block; font-family: 'Geist Mono', monospace; font-size: 10px; color: var(--gold); font-weight: 500; }
+.th-pill { font-family: 'Geist', sans-serif; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; letter-spacing: .03em; }
+.th-rupee { background: rgba(184,134,11,.12); color: var(--gold); }
+.th-power { background: rgba(26,58,92,.1); color: var(--slate); }
+.th-cons { background: rgba(26,92,58,.1); color: var(--pine); }
+.th-quant { background: rgba(192,57,43,.1); color: var(--blood); }
+.score { display: inline-flex; align-items: center; gap: 6px; }
+.score-n { font-weight: 600; color: var(--ink); min-width: 18px; }
+.score-track { width: 54px; height: 5px; background: var(--paper3); border-radius: 3px; overflow: hidden; display: inline-block; }
+.score-fill { display: block; height: 100%; background: var(--ink); }
+.vpill { font-family: 'Geist', sans-serif; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 4px; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; display: inline-block; }
+.v-buy { background: rgba(26,92,58,.12); color: var(--pine); }
+.v-cond { background: rgba(184,134,11,.14); color: var(--amber); }
+.v-watch { background: rgba(28,26,23,.07); color: var(--ink3); }
+.v-avoid { background: rgba(192,57,43,.1); color: var(--blood); }
+.vsub { display: block; font-family: 'Geist', sans-serif; font-size: 10.5px; color: var(--ink4); margin-top: 2px; }
+.tbl-caption { font-size: 12px; color: var(--ink4); margin-top: .75rem; line-height: 1.6; }
+
+/* deep-dive accordion */
+.dd-tools { display: flex; gap: 8px; margin-bottom: 1rem; flex-wrap: wrap; }
+.btn-ghost { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; padding: 6px 12px; border-radius: var(--r); border: 1px solid var(--rule2); background: var(--card); color: var(--ink3); cursor: pointer; }
+.btn-ghost:hover { color: var(--ink); background: var(--paper2); }
+.step { background: var(--card); border: 1px solid var(--rule2); border-radius: 12px; margin-bottom: 14px; overflow: hidden; transition: box-shadow .15s, transform .15s; scroll-margin-top: calc(64px + env(safe-area-inset-top, 0px)); }
+.step:hover { box-shadow: 0 4px 24px rgba(28,26,23,.08); transform: translateY(-1px); }
+.step.open:hover { transform: none; }
+.step-header { display: grid; grid-template-columns: 64px minmax(0,1fr) auto; align-items: center; padding: 1.1rem 1.4rem; cursor: pointer; user-select: none; gap: 1rem; border: none; border-bottom: 1px solid transparent; background: transparent; width: 100%; text-align: left; transition: border-color .15s; }
+.step.open .step-header { border-bottom-color: var(--rule); }
+.step-num { font-family: 'Fraunces', serif; font-size: 42px; font-weight: 900; line-height: 1; color: var(--paper3); transition: color .2s; }
+.step.open .step-num, .step-header:hover .step-num { color: var(--blood); }
+.step-meta { display: block; min-width: 0; }
+.step-eyebrow { display: block; font-family: 'Geist Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blood); margin-bottom: 3px; }
+.step-title { display: block; font-size: 18px; font-weight: 700; letter-spacing: -.01em; line-height: 1.25; }
+.step-subtitle { display: block; font-size: 12.5px; color: var(--ink3); margin-top: 2px; line-height: 1.45; }
+.step-side { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.step-score { font-size: 20px; font-weight: 600; color: var(--ink); line-height: 1; }
+.step-score small { font-size: 10px; color: var(--ink4); }
+.step-chevron { width: 20px; height: 20px; flex-shrink: 0; color: var(--ink4); transition: transform .2s; }
+.step.open .step-chevron { transform: rotate(180deg); }
+.substep { padding: 1.4rem; border-bottom: 1px solid var(--rule); min-width: 0; }
+.substep:last-child { border-bottom: none; }
+.ss-label { font-family: 'Geist Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink4); margin-bottom: 8px; }
+.sc-metrics { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 6px; margin-bottom: 1rem; }
+.sc-metric { background: var(--paper); border-radius: 6px; padding: 7px 9px; min-width: 0; }
+.sc-metric-val { font-family: 'Geist Mono', monospace; font-size: 12.5px; font-weight: 500; overflow-wrap: anywhere; }
+.sc-metric-lab { font-size: 10px; color: var(--ink4); margin-top: 1px; }
+.sc-bull { background: var(--paper2); border-radius: 6px; padding: 10px 12px; font-size: 12.5px; color: var(--ink2); line-height: 1.55; }
+.sc-bull strong { color: var(--ink); display: block; margin-bottom: 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+.sc-risk-item { font-size: 12.5px; color: var(--ink3); position: relative; padding-left: 16px; margin-top: 4px; line-height: 1.5; }
+.sc-risk-item::before { content: '▲'; color: var(--blood); font-size: 9px; position: absolute; left: 0; top: 4px; }
+.where-box { background: var(--paper); border: 1px solid var(--rule2); border-radius: var(--r); padding: 1rem 1.25rem; border-left: 3px solid var(--slate); }
+.where-box .wb-label { font-family: 'Geist Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: .14em; color: var(--slate); text-transform: uppercase; margin-bottom: 6px; }
+.what-box { background: rgba(26,92,58,.05); border: 1px solid rgba(26,92,58,.2); border-radius: var(--r); padding: 1rem 1.25rem; margin-bottom: 1rem; }
+.what-box .wb-label { font-family: 'Geist Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: .14em; color: var(--pine); text-transform: uppercase; margin-bottom: 6px; }
+.how-box { background: rgba(192,57,43,.04); border: 1px solid rgba(192,57,43,.15); border-radius: var(--r); padding: 1rem 1.25rem; margin-bottom: 1rem; }
+.how-box .wb-label { font-family: 'Geist Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: .14em; color: var(--blood); text-transform: uppercase; margin-bottom: 6px; }
+.verdict-box { background: var(--ink); color: var(--paper); border-radius: var(--r); padding: 1rem 1.25rem; }
+.verdict-box .vb-label { font-family: 'Geist Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: .14em; color: var(--amber2); text-transform: uppercase; margin-bottom: 6px; }
+.verdict-box p { font-size: 13.5px; line-height: 1.65; color: rgba(247,244,239,.86); }
+.b-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.b-list li { font-size: 13px; color: var(--ink2); line-height: 1.6; position: relative; padding-left: 20px; min-width: 0; overflow-wrap: anywhere; }
+.b-list li::before { content: '→'; color: var(--blood); font-weight: 700; position: absolute; left: 0; top: 0; }
+.b-list.small li { font-size: 12.5px; }
+.b-list b, .b-list strong { color: var(--ink); }
+
+/* verdict bar */
+.verdict-bar { background: var(--ink); color: var(--paper); border-radius: var(--r2); padding: 1.25rem 1.75rem; margin: 1.5rem 0; font-size: 14.5px; line-height: 1.65; }
+.verdict-bar strong { color: var(--gold); font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; display: block; margin-bottom: 4px; }
+.verdict-bar em { color: var(--paper); font-style: normal; font-weight: 600; }
+
+/* alerts */
+.alert { border-radius: var(--r); padding: .875rem 1.1rem; margin-bottom: 1rem; display: flex; gap: 10px; align-items: flex-start; }
+.alert.warn { background: rgba(122,72,0,.08); border: 1px solid rgba(122,72,0,.2); }
+.alert.win { background: rgba(26,92,58,.08); border: 1px solid rgba(26,92,58,.2); }
+.alert.crit { background: rgba(192,57,43,.08); border: 1px solid rgba(192,57,43,.2); }
+.alert-icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; font-family: 'Geist Mono', monospace; font-weight: 600; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; }
+.alert.warn .alert-icon { background: var(--amber); color: var(--paper); }
+.alert.win .alert-icon { background: var(--pine); color: var(--paper); }
+.alert.crit .alert-icon { background: var(--blood); color: var(--paper); }
+.alert-text { font-size: 13px; color: var(--ink2); line-height: 1.6; min-width: 0; }
+.alert-text strong { color: var(--ink); font-weight: 700; }
+
+/* avoid grid */
+.avoid-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; margin-bottom: 1.5rem; }
+.avoid-card { background: var(--card); border: 1px solid var(--rule2); border-left: 4px solid var(--blood); border-radius: var(--r2); padding: 1rem 1.2rem; min-width: 0; transition: box-shadow .15s, transform .15s; }
+.avoid-card:hover { box-shadow: 0 4px 20px rgba(26,26,24,.08); transform: translateY(-1px); }
+.avoid-card .ac-top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; flex-wrap: wrap; margin-bottom: 4px; }
+.avoid-card h4 { font-size: 14.5px; font-weight: 700; }
+.avoid-card .ac-flag { font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--blood); font-weight: 600; }
+.avoid-card p { font-size: 12.5px; color: var(--ink3); line-height: 1.55; }
+.collapse { background: var(--card); border: 1px solid var(--rule2); border-radius: var(--r2); margin-bottom: 10px; overflow: hidden; }
+.collapse-head { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: transparent; border: none; cursor: pointer; text-align: left; }
+.collapse-head:hover { background: var(--paper); }
+.collapse-head .ch-title { font-size: 14px; font-weight: 700; }
+.collapse-head .ch-sub { font-family: 'Geist Mono', monospace; font-size: 10.5px; color: var(--ink4); display: block; margin-top: 2px; font-weight: 400; }
+.collapse-head svg { width: 18px; height: 18px; color: var(--ink4); transition: transform .2s; flex-shrink: 0; }
+.collapse.open .collapse-head svg { transform: rotate(180deg); }
+.collapse-body { padding: 0 1.25rem 1.1rem; }
+.rej-list { list-style: none; }
+.rej-list li { display: grid; grid-template-columns: minmax(120px, 210px) minmax(0,1fr); gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--rule); font-size: 12.5px; color: var(--ink3); line-height: 1.5; }
+.rej-list li:last-child { border-bottom: none; }
+.rej-list li b { color: var(--ink); font-weight: 600; }
+
+/* portfolio */
+.pf-step { display: grid; grid-template-columns: 64px minmax(0,1fr); background: var(--card); border: 1px solid var(--rule2); margin-bottom: -1px; }
+.pf-step:first-child { border-radius: var(--r2) var(--r2) 0 0; }
+.pf-step:last-child { border-radius: 0 0 var(--r2) var(--r2); margin-bottom: 0; }
+.pf-num { background: var(--ink); color: var(--paper); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 26px; }
+.pf-step.active-step .pf-num { background: var(--gold); }
+.pf-body { padding: 1.1rem 1.4rem; min-width: 0; }
+.pf-title { font-size: 14.5px; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.pf-badge { font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; font-family: 'Geist Mono', monospace; }
+.pf-desc { font-size: 13px; color: var(--ink3); line-height: 1.65; }
+.pf-desc b { color: var(--ink); }
+.two-col { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 1.5rem; margin-top: 1.5rem; }
+.dodont { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 14px; margin-top: 1.5rem; }
+.dd-col { background: var(--card); border: 1px solid var(--rule2); border-radius: var(--r2); padding: 1.4rem; min-width: 0; }
+.dd-col h4 { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 2px solid; }
+.dd-col.do h4 { color: var(--pine); border-color: var(--pine); }
+.dd-col.dont h4 { color: var(--blood); border-color: var(--blood); }
+.dd-item { font-size: 12.5px; color: var(--ink2); padding: 6px 0; border-bottom: 1px solid var(--rule); display: flex; gap: 7px; line-height: 1.5; }
+.dd-item:last-child { border-bottom: none; }
+.dd-col.do .dd-item::before { content: '✔'; color: var(--pine); font-weight: 700; flex-shrink: 0; }
+.dd-col.dont .dd-item::before { content: '✖'; color: var(--blood); font-weight: 700; flex-shrink: 0; }
+.chart-box { background: var(--card); border: 1px solid var(--rule2); border-radius: var(--r2); padding: 1.4rem; min-width: 0; }
+.cb-title { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+.cb-sub { font-size: 12px; color: var(--ink4); margin-bottom: 1rem; }
+.alloc-row { display: grid; grid-template-columns: minmax(0, 150px) minmax(0,1fr) 46px; gap: 10px; align-items: center; font-size: 12px; padding: 5px 0; }
+.alloc-row .al-name { color: var(--ink2); font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.alloc-track { height: 10px; background: var(--paper2); border-radius: 3px; overflow: hidden; }
+.alloc-fill { height: 100%; display: block; border-radius: 3px; }
+.alloc-row .al-val { font-family: 'Geist Mono', monospace; text-align: right; color: var(--ink); }
+.fill-core { background: var(--ink3); } .fill-buy { background: var(--pine); } .fill-cond { background: var(--gold); } .fill-cash { background: var(--paper3); }
+.basket-math { font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--ink2); line-height: 1.9; }
+.basket-math .tot { border-top: 2px solid var(--ink); margin-top: 6px; padding-top: 6px; font-weight: 600; color: var(--ink); }
+
+/* verification */
+.ver-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+
+footer.site-foot { padding-block: 2rem 3rem; padding-left: var(--gutter-l); padding-right: var(--gutter-r); border-top: 2px solid var(--ink); position: relative; z-index: 1; }
+footer.site-foot .section-inner { font-size: 12px; color: var(--ink4); line-height: 1.7; }
+footer.site-foot .mono { font-size: 11px; }
+
+@media (max-width: 960px) {
+  .framework-grid, .track-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .signal-grid, .avoid-grid, .ver-grid, .two-col, .dodont { grid-template-columns: minmax(0,1fr); }
+  .sc-metrics { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .header-right { display: none; }
+}
+@media (max-width: 600px) {
+  .hero { padding-block: 2.5rem 2rem; }
+  .section { padding-block: 2.5rem; }
+  .step-header { grid-template-columns: 40px minmax(0,1fr) auto; padding: 1rem; gap: .6rem; }
+  .step-num { font-size: 28px; }
+  .step-title { font-size: 16px; }
+  .step-subtitle { display: none; }
+  .substep { padding: 1rem; }
+  .sc-metrics { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .fw-big { font-size: 34px; }
+  .header-title { font-size: 16px; }
+  .rej-list li { grid-template-columns: minmax(0,1fr); gap: 2px; }
+  .pf-step { grid-template-columns: 44px minmax(0,1fr); }
+  .pf-num { font-size: 20px; }
+  .verdict-bar { padding: 1rem 1.1rem; }
+  .alloc-row { grid-template-columns: minmax(0, 110px) minmax(0,1fr) 40px; }
+  .phase-label { font-size: 11px; padding: 4px 10px; }
+}
+@media (max-width: 420px) {
+  .framework-grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+  .fw-cell { padding: 1rem; }
+  .track-grid { grid-template-columns: minmax(0,1fr); }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } html { scroll-behavior: auto; } }
+</style>
+
+<header class="site-header">
+  <div class="header-title">Idea <em>Pipeline</em></div>
+  <nav class="header-nav" aria-label="Sections">
+    <a href="#macro">Macro</a>
+    <a href="#compare">Compare</a>
+    <a href="#deep">Deep-dives</a>
+    <a href="#avoid">Avoid</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#honesty">Honesty</a>
+  </nav>
+  <div class="header-right">NSE/BSE · 19 NOV 2026</div>
+</header>
+
+<div class="wrap">
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="sec-eyebrow">Research pipeline · Indian small &amp; mid caps · Nov 2026</div>
+    <h1>Thirteen finalists, <em>five worth buying,</em> none guaranteed.</h1>
+    <p class="hero-lede">Four independent hunts, one filter: find companies where earnings are stepping up for a <strong>named, checkable reason</strong>, and where the price does not already assume that step-up continues for a decade. Most of what we screened failed that test. Of what passed, only five sit in a buy zone today, and one of those is conditional.</p>
+
+    <div class="framework-grid">
+      <div class="fw-cell"><div class="fw-big">133</div><div class="fw-lab">Company pages pulled</div><div class="fw-note">34 rupee + 31 power + 26 consumption + 42 quant, out of ~4,000 overlapping screen hits across 9 screener.in screens.</div></div>
+      <div class="fw-cell"><div class="fw-big">13</div><div class="fw-lab">Finalists</div><div class="fw-note">3 rupee · 3 power · 3 consumption · 4 quant. Each with a recomputed P/E and a reverse DCF.</div></div>
+      <div class="fw-cell"><div class="fw-big green">5</div><div class="fw-lab">In BUY-ZONE</div><div class="fw-note">Uniparts, Sandur, Bajaj Consumer, Skipper (staggered), Transrail (conditional).</div></div>
+      <div class="fw-cell"><div class="fw-big red">72</div><div class="fw-lab">Top conviction score</div><div class="fw-note">Uniparts. Nothing scored above 72/100. The median finalist is 63.</div></div>
+    </div>
+
+    <div class="track-grid">
+      <div class="track t-rupee"><div class="fw-num">TRACK 01</div><h3>Weak rupee + China+1 exporters</h3><p>Rupee-cost, dollar-revenue businesses with high value-to-weight, so freight does not eat the currency gain.</p></div>
+      <div class="track t-power"><div class="fw-num">TRACK 02</div><h3>AI data-centre &amp; power picks-and-shovels</h3><p>Grid and DC build-out suppliers. The crowded trade (transformers) is peaking; towers and T&amp;D EPC are not.</p></div>
+      <div class="track t-cons"><div class="fw-num">TRACK 03</div><h3>Consumption + financialisation</h3><p>Margin step-changes in consumer brands, and businesses that earn on the stock of SIP savings, not trading turnover.</p></div>
+      <div class="track t-quant"><div class="fw-num">TRACK 04</div><h3>Quant pattern hunt</h3><p>Theme-agnostic search for the Radico 2016–17 fingerprint: OPM/ROCE step-up, falling debt, no dilution, institutions creeping in.</p></div>
+    </div>
+    <p class="hero-meta">Data as of 19 Nov 2026 close. Financials from screener.in (consolidated unless flagged). Research, not advice.</p>
+  </div>
+</section>
+
+<div class="phase-divider" style="padding-left:var(--gutter-l);padding-right:var(--gutter-r)"><div class="phase-label">Part 1 · The setup</div></div>
+
+<section class="section" id="macro">
+  <div class="section-inner">
+    <div class="sec-eyebrow">Macro thesis · checked against dated sources</div>
+    <h2>Each thesis held up, <em>but every one needed a correction.</em></h2>
+    <p class="sec-sub">The brief going in had stale or overstated premises in all four tracks. Below is what is actually true as of mid-November 2026, and what changed in the picking because of it.</p>
+    <div class="signal-grid">
+      <div class="signal-card">
+        <div class="sig-eb">Track 01 · Rupee</div>
+        <h3>The rupee is weak, not collapsing.</h3>
+        <p>Still ~6–7% weaker YoY (₹88–89 in late 2025). US tariff on India cut from 50% to 18% (Feb 2026); IEEPA tariffs struck down 20 Feb 2026, refunds flowing. India's MSCI EM weight is ~11–12%, down from ~21%, so exporters are under-owned.</p>
+        <div class="correction"><b>Correction</b>The "₹96–97" premise is stale. Record low ~₹96.5–97.2 was in May 2026; by 13 Nov it had recovered to ~₹94.2. Freight is 2.5–3x normal and mostly not passed through, so bulky low-margin exporters (textiles, shrimp) lose the gain.</div>
+      </div>
+      <div class="signal-card type-2">
+        <div class="sig-eb">Track 02 · Power &amp; DC</div>
+        <h3>Demand is real. The shortage trade is ending.</h3>
+        <p>~1.8 GW of DC capacity in H1 2026, forecasts of 6–8 GW by 2030. Record peak demand 270.8 GW (21 May 2026). ICRA sees ₹5.6 trn transmission capex FY27–32. BESS tenders 100+ GWh, but only ~9 GWh operational.</p>
+        <div class="correction"><b>Correction</b>Transformer makers are showing peak margins: Shilchar, Voltamp, Indo Tech and Vilas have printed 3–4 quarters of falling OPM while everyone adds capacity. Value moved to towers and T&amp;D EPC at 14–24x with 1.8–1.9x order cover.</div>
+      </div>
+      <div class="signal-card type-3">
+        <div class="sig-eb">Track 03 · Consumption &amp; savings</div>
+        <h3>Flows are high but flat; volumes came late.</h3>
+        <p>SIP record ₹32,490 cr in Sep 2026; Oct ₹32,160 cr (−1% MoM), equity MF inflows −14% MoM. GST 2.0 volumes showed up with a lag, in FY27 prints. RBI cut 125 bp in 2025, then held at 5.25% all of 2026.</p>
+        <div class="correction"><b>Correction</b>SIP flows are flattening, so own AUM-stock earners, not flow momentum. The "F&amp;O losers" short is stale: Angel One and CDSL Sep-26 quarter profits already recovered after the STT hike. No further RBI easing; inflation risk points up.</div>
+      </div>
+      <div class="signal-card type-4">
+        <div class="sig-eb">Track 04 · Quant fingerprint</div>
+        <h3>The pattern is rare, and often a mirage.</h3>
+        <p>Nine screens (debt reduction, growth without dilution, capacity expansion, FII buying, quarterly growers, Piotroski, magic formula and others) gave ~165 overlap candidates in the ₹300–10,000 cr band. Only 4 survived.</p>
+        <div class="correction"><b>Correction</b>Several perfect-looking fingerprints died on a single check: Syncom has the numbers but no identifiable cause; Jayaswal Neco deleveraged beautifully with 99.9% promoter pledge. Two survivors (Gulshan, Birla Cable) are commodity spreads, not franchises.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="phase-divider" style="padding-left:var(--gutter-l);padding-right:var(--gutter-r)"><div class="phase-label">Part 2 · The finalists</div></div>
+
+<section class="section" id="compare">
+  <div class="section-inner">
+    <div class="sec-eyebrow">Summary · all 13 finalists</div>
+    <h2>The comparison table</h2>
+    <p class="sec-sub">Sort by any column. Filter by theme with the tabs (the filter also applies to the deep-dives below). Click a company name to jump to its deep-dive. "Implied g" is the 10-year EPS CAGR the current price needs, from a reverse DCF at 12% cost of equity.</p>
+
+    <div class="band-tabs" role="tablist" aria-label="Filter by theme">
+      <button class="band-tab active" data-filter="all" role="tab" aria-selected="true">All<span class="cnt">13</span></button>
+      <button class="band-tab" data-filter="rupee" role="tab" aria-selected="false">Weak rupee<span class="cnt">3</span></button>
+      <button class="band-tab" data-filter="power" role="tab" aria-selected="false">Power &amp; DC<span class="cnt">3</span></button>
+      <button class="band-tab" data-filter="cons" role="tab" aria-selected="false">Consumption<span class="cnt">3</span></button>
+      <button class="band-tab" data-filter="quant" role="tab" aria-selected="false">Quant<span class="cnt">4</span></button>
+    </div>
+    <div class="filter-note" id="filterNote">Showing 13 of 13 finalists</div>
+
+    <div class="tbl-wrap"><table class="plain-table sortable" id="cmpTable"><thead><tr><th><button data-sort="name" data-type="str">Company</button></th><th><button data-sort="themek" data-type="str">Theme</button></th><th><button data-sort="price">Price 19 Nov</button></th><th><button data-sort="mcap">Mcap</button></th><th><button data-sort="pe">P/E (recomp.)</button></th><th><button data-sort="roce">ROCE</button></th><th><button data-sort="ig">Implied g</button></th><th><button data-sort="score" class="sorted-desc">Score</button></th><th><button data-sort="verdict">Verdict</button></th></tr></thead><tbody><tr data-theme="rupee" data-name="Uniparts India" data-themek="rupee" data-price="725" data-mcap="3270" data-pe="16.7" data-roce="22" data-ig="9" data-score="72" data-verdict="1"><td><a class="row-link" href="#dd-uniparts" data-open="uniparts">Uniparts India</a><span class="tk">NSE: UNIPARTS</span></td><td><span class="th-pill th-rupee">Rupee</span></td><td class="num">~₹725</td><td class="num">~₹3,270 cr</td><td class="num">16.7</td><td class="num">22%</td><td class="num">~9%</td><td class="num"><div class="score"><span class="score-n">72</span><span class="score-track"><span class="score-fill" style="width:72%"></span></span></div></td><td><span class="vpill v-buy">BUY-ZONE</span><span class="vsub">build gradually</span></td></tr><tr data-theme="quant" data-name="Sandur Manganese & Iron Ores" data-themek="quant" data-price="167.61" data-mcap="8150" data-pe="9.7" data-roce="24" data-ig="7" data-score="68" data-verdict="1"><td><a class="row-link" href="#dd-sandur" data-open="sandur">Sandur Manganese &amp; Iron Ores</a><span class="tk">NSE: SANDUMA</span></td><td><span class="th-pill th-quant">Quant</span></td><td class="num">₹167.61</td><td class="num">~₹8,150 cr</td><td class="num">9.7</td><td class="num">24%</td><td class="num">~7%</td><td class="num"><div class="score"><span class="score-n">68</span><span class="score-track"><span class="score-fill" style="width:68%"></span></span></div></td><td><span class="vpill v-buy">BUY-ZONE</span><span class="vsub">research view</span></td></tr><tr data-theme="cons" data-name="Bajaj Consumer Care" data-themek="cons" data-price="410" data-mcap="5355" data-pe="21.3" data-roce="30" data-ig="9" data-score="66" data-verdict="1"><td><a class="row-link" href="#dd-bajajcon" data-open="bajajcon">Bajaj Consumer Care</a><span class="tk">NSE: BAJAJCON</span></td><td><span class="th-pill th-cons">Consumption</span></td><td class="num">~₹410</td><td class="num">₹5,355 cr</td><td class="num">21.3</td><td class="num">30%</td><td class="num">~8–10%</td><td class="num"><div class="score"><span class="score-n">66</span><span class="score-track"><span class="score-fill" style="width:66%"></span></span></div></td><td><span class="vpill v-buy">BUY-ZONE</span><span class="vsub">research view</span></td></tr><tr data-theme="power" data-name="Skipper Ltd" data-themek="power" data-price="487.75" data-mcap="5955" data-pe="24.2" data-roce="24" data-ig="13" data-score="66" data-verdict="1"><td><a class="row-link" href="#dd-skipper" data-open="skipper">Skipper Ltd</a><span class="tk">NSE: SKIPPER</span></td><td><span class="th-pill th-power">Power/DC</span></td><td class="num">₹487.75</td><td class="num">~₹5,955 cr</td><td class="num">24.2</td><td class="num">24%</td><td class="num">13%</td><td class="num"><div class="score"><span class="score-n">66</span><span class="score-track"><span class="score-fill" style="width:66%"></span></span></div></td><td><span class="vpill v-buy">BUY-ZONE</span><span class="vsub">staggered; strongest near ₹470</span></td></tr><tr data-theme="rupee" data-name="MPS Ltd" data-themek="rupee" data-price="2182" data-mcap="3730" data-pe="20.2" data-roce="39" data-ig="11.5" data-score="66" data-verdict="3"><td><a class="row-link" href="#dd-mps" data-open="mps">MPS Ltd</a><span class="tk">NSE: MPSLTD</span></td><td><span class="th-pill th-rupee">Rupee</span></td><td class="num">~₹2,182</td><td class="num">~₹3,730 cr</td><td class="num">20.2</td><td class="num">39%</td><td class="num">~11.5%</td><td class="num"><div class="score"><span class="score-n">66</span><span class="score-track"><span class="score-fill" style="width:66%"></span></span></div></td><td><span class="vpill v-watch">WATCHLIST</span><span class="vsub">add below ~₹2,000</span></td></tr><tr data-theme="quant" data-name="IOL Chemicals & Pharmaceuticals" data-themek="quant" data-price="192" data-mcap="5634" data-pe="27.7" data-roce="11" data-ig="19" data-score="64" data-verdict="3"><td><a class="row-link" href="#dd-iol" data-open="iol">IOL Chemicals &amp; Pharmaceuticals</a><span class="tk">NSE: IOLCP</span></td><td><span class="th-pill th-quant">Quant</span></td><td class="num">₹192.00</td><td class="num">~₹5,634 cr</td><td class="num">27.7</td><td class="num">11%</td><td class="num">~19% (16% run-rate)</td><td class="num"><div class="score"><span class="score-n">64</span><span class="score-track"><span class="score-fill" style="width:64%"></span></span></div></td><td><span class="vpill v-watch">WATCHLIST</span><span class="vsub">near buy-zone</span></td></tr><tr data-theme="cons" data-name="Prudent Corporate Advisory" data-themek="cons" data-price="2920" data-mcap="12098" data-pe="46.0" data-roce="37.5" data-ig="18.5" data-score="63" data-verdict="3"><td><a class="row-link" href="#dd-prudent" data-open="prudent">Prudent Corporate Advisory</a><span class="tk">NSE: PRUDENT</span></td><td><span class="th-pill th-cons">Consumption</span></td><td class="num">~₹2,920</td><td class="num">₹12,098 cr</td><td class="num">46.0</td><td class="num">37.5%</td><td class="num">17–20%</td><td class="num"><div class="score"><span class="score-n">63</span><span class="score-track"><span class="score-fill" style="width:63%"></span></span></div></td><td><span class="vpill v-watch">WATCHLIST</span><span class="vsub">accumulate below ~₹2,500</span></td></tr><tr data-theme="power" data-name="Transrail Lighting" data-themek="power" data-price="432.25" data-mcap="5802" data-pe="13.9" data-roce="34" data-ig="6" data-score="62" data-verdict="2"><td><a class="row-link" href="#dd-transrail" data-open="transrail">Transrail Lighting</a><span class="tk">NSE: TRANSRAILL</span></td><td><span class="th-pill th-power">Power/DC</span></td><td class="num">₹432.25</td><td class="num">~₹5,802 cr</td><td class="num">13.9</td><td class="num">34%</td><td class="num">6%</td><td class="num"><div class="score"><span class="score-n">62</span><span class="score-track"><span class="score-fill" style="width:62%"></span></span></div></td><td><span class="vpill v-cond">BUY-ZONE (cond.)</span><span class="vsub">on value; conditional on H2 FY27 inflow</span></td></tr><tr data-theme="rupee" data-name="Rolex Rings" data-themek="rupee" data-price="200.5" data-mcap="5250" data-pe="28.9" data-roce="21" data-ig="19.6" data-score="61" data-verdict="3"><td><a class="row-link" href="#dd-rolex" data-open="rolex">Rolex Rings</a><span class="tk">NSE: ROLEXRINGS</span></td><td><span class="th-pill th-rupee">Rupee</span></td><td class="num">₹200.50</td><td class="num">~₹5,250 cr</td><td class="num">28.9 rep / ~24 adj</td><td class="num">21%</td><td class="num">~19.6% / ~17.4% adj</td><td class="num"><div class="score"><span class="score-n">61</span><span class="score-track"><span class="score-fill" style="width:61%"></span></span></div></td><td><span class="vpill v-watch">WATCHLIST</span><span class="vsub">wait for ~₹170 or two clean quarters</span></td></tr><tr data-theme="quant" data-name="Gulshan Polyols" data-themek="quant" data-price="161.7" data-mcap="1008" data-pe="5.9" data-roce="19" data-ig="2" data-score="58" data-verdict="3"><td><a class="row-link" href="#dd-gulshan" data-open="gulshan">Gulshan Polyols</a><span class="tk">NSE: GULPOLY</span></td><td><span class="th-pill th-quant">Quant</span></td><td class="num">₹161.70</td><td class="num">~₹1,008 cr</td><td class="num">5.9</td><td class="num">19%</td><td class="num">~2%</td><td class="num"><div class="score"><span class="score-n">58</span><span class="score-track"><span class="score-fill" style="width:58%"></span></span></div></td><td><span class="vpill v-watch">WATCHLIST</span><span class="vsub">feedstock spread, not a franchise</span></td></tr><tr data-theme="cons" data-name="Honasa Consumer" data-themek="cons" data-price="529" data-mcap="17257" data-pe="61" data-roce="19" data-ig="22" data-score="55" data-verdict="3"><td><a class="row-link" href="#dd-honasa" data-open="honasa">Honasa Consumer</a><span class="tk">NSE: HONASA</span></td><td><span class="th-pill th-cons">Consumption</span></td><td class="num">₹529</td><td class="num">₹17,257 cr</td><td class="num">61.0</td><td class="num">19%</td><td class="num">~21–23%</td><td class="num"><div class="score"><span class="score-n">55</span><span class="score-track"><span class="score-fill" style="width:55%"></span></span></div></td><td><span class="vpill v-watch">WATCHLIST</span><span class="vsub">wait for 20–25% pullback</span></td></tr><tr data-theme="power" data-name="Techno Electric & Engineering" data-themek="power" data-price="929" data-mcap="10817" data-pe="22.3" data-roce="15" data-ig="12" data-score="50" data-verdict="3"><td><a class="row-link" href="#dd-techno" data-open="techno">Techno Electric &amp; Engineering</a><span class="tk">NSE: TECHNOE</span></td><td><span class="th-pill th-power">Power/DC</span></td><td class="num">₹929.00</td><td class="num">~₹10,817 cr</td><td class="num">22.3 (~27 ex-OI)</td><td class="num">15%</td><td class="num">12%</td><td class="num"><div class="score"><span class="score-n">50</span><span class="score-track"><span class="score-fill" style="width:50%"></span></span></div></td><td><span class="vpill v-watch">WATCHLIST</span><span class="vsub">DC angle unproven</span></td></tr><tr data-theme="quant" data-name="Birla Cable" data-themek="quant" data-price="301.2" data-mcap="904" data-pe="10.8" data-roce="-1" data-ig="8" data-score="45" data-verdict="3"><td><a class="row-link" href="#dd-birla" data-open="birla">Birla Cable</a><span class="tk">NSE: BIRLACABLE</span></td><td><span class="th-pill th-quant">Quant</span></td><td class="num">₹301.20</td><td class="num">~₹904 cr</td><td class="num">10.8 (6.5 run-rate)</td><td class="num">n/a</td><td class="num">~8% (3% run-rate)</td><td class="num"><div class="score"><span class="score-n">45</span><span class="score-track"><span class="score-fill" style="width:45%"></span></span></div></td><td><span class="vpill v-watch">WATCHLIST</span><span class="vsub">do not chase</span></td></tr></tbody></table></div>
+    <p class="tbl-caption">Prices are the 19 Nov 2026 close, or the reconciled figure where sources disagreed (see each deep-dive). P/E is recomputed as price ÷ sum of last four quarters' EPS; screener's precomputed ratios were not used. Reverse-DCF assumptions differ slightly between tracks (exit P/E 15x for three tracks, 20–25x for consumption), so compare implied growth loosely across themes. Birla Cable's ROCE was not captured.</p>
+
+    <div class="verdict-bar"><strong>Read of the table</strong>The cheapest names on implied growth (Gulshan ~2%, Transrail 6%, Sandur ~7%, Bajaj Consumer ~8–10%, Uniparts ~9%) are where the margin of safety is. <em>Gulshan is cheap because its margin is a maize-ethanol spread under pressure.</em> The expensive end (Honasa 21–23%, IOL ~19%, Rolex ~17–20%, Prudent 17–20%) is good businesses priced for continued excellence.</div>
+  </div>
+</section>
+
+<section class="section alt" id="deep">
+  <div class="section-inner">
+    <div class="sec-eyebrow">Deep-dives · one card per finalist, ranked by score</div>
+    <h2>Thirteen cards, <em>one standard.</em></h2>
+    <p class="sec-sub">Each card holds the verified price with sources and timestamps, five-year and recent-quarter numbers, the named cause behind the step-change, the bull case in numbers, risks, the kill criteria that would make us sell or downgrade, and the verdict.</p>
+    <div class="dd-tools">
+      <button class="btn-ghost" type="button" id="expandAll">Expand all</button>
+      <button class="btn-ghost" type="button" id="collapseAll">Collapse all</button>
+    </div>
+    <div id="cards">
+      
+<article class="step" id="dd-uniparts" data-theme="rupee">
+  <button class="step-header" type="button" aria-expanded="false" aria-controls="body-uniparts">
+    <span class="step-num">01</span>
+    <span class="step-meta">
+      <span class="step-eyebrow">Weak rupee / China+1 · NSE: UNIPARTS</span>
+      <span class="step-title">Uniparts India</span>
+      <span class="step-subtitle">Off-highway precision parts; construction-equipment demand from US data-centre and power builds</span>
+    </span>
+    <span class="step-side">
+      <span class="vpill v-buy">BUY-ZONE</span>
+      <span class="step-score mono">72<small>/100</small></span>
+      <svg class="step-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </span>
+  </button>
+  <div class="step-body" id="body-uniparts" hidden>
+    <div class="substep">
+      <div class="sc-metrics m5">
+        <div class="sc-metric"><div class="sc-metric-val">~₹725</div><div class="sc-metric-lab">Price 19 Nov</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~₹3,270 cr</div><div class="sc-metric-lab">Market cap</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">16.7</div><div class="sc-metric-lab">P/E recomputed</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">22%</div><div class="sc-metric-lab">ROCE</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~9%</div><div class="sc-metric-lab">Implied 10-yr g</div></div>
+      </div>
+      <div class="where-box">
+        <div class="wb-label">Verified price · sources &amp; timestamps</div>
+        <ul class="b-list small"><li>Google Finance: ₹726.25 at 19 Nov 2026, 3:30 pm IST (+0.28%).</li><li>Screener price chart: ₹723.70 close, 19 Nov.</li><li><b>Discrepancy:</b> Screener headline box showed ₹736 (₹735.60 in screen table), ~1.3% above the other two. Used ~₹725.</li><li>Earlier: Upstox ₹749 (4 Nov); Kotak ₹673 (23 Oct). 52-wk range ~₹400–916.</li><li>Recomputed: TTM EPS ₹43.30 → P/E 16.7. ~4.51 cr shares → mcap ~₹3,270 cr. Net cash ₹172 cr (company-reported).</li></ul>
+      </div>
+    </div>
+    <div class="substep">
+      <div class="ss-label">Five-year view (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>FY</th><th>Sales</th><th>OPM</th><th>PAT</th><th>ROCE</th><th>Borrowings</th><th>CFO</th></tr></thead><tbody><tr><td>FY22</td><td>1,227</td><td>22%</td><td>169</td><td>30%</td><td>158</td><td>85</td></tr><tr><td>FY23</td><td>1,366</td><td>22%</td><td>205</td><td>32%</td><td>61</td><td>253</td></tr><tr><td>FY24</td><td>1,140</td><td>18%</td><td>125</td><td>18%</td><td>103</td><td>200</td></tr><tr><td>FY25</td><td>964</td><td>15%</td><td>88</td><td>12%</td><td>120</td><td>182</td></tr><tr><td>FY26</td><td>1,170</td><td>21%</td><td>158</td><td>22%</td><td>155</td><td>174</td></tr><tr><td>TTM</td><td>1,346</td><td>22%</td><td>196</td><td>–</td><td>162</td><td>–</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Recent quarters (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>Qtr</th><th>Dec-24</th><th>Mar-25</th><th>Jun-25</th><th>Sep-25</th><th>Dec-25</th><th>Mar-26</th><th>Jun-26</th><th>Sep-26</th></tr></thead><tbody><tr><td>Sales</td><td>208</td><td>253</td><td>274</td><td>277</td><td>281</td><td>339</td><td>347</td><td>379</td></tr><tr><td>YoY</td><td>−20%</td><td>−13%</td><td>+5%</td><td>+15%</td><td>+35%</td><td>+34%</td><td>+27%</td><td>+37%</td></tr><tr><td>OPM</td><td>15%</td><td>14%</td><td>19%</td><td>21%</td><td>20%</td><td>24%</td><td>24%</td><td>22%</td></tr><tr><td>PAT</td><td>19</td><td>23</td><td>34</td><td>39</td><td>33</td><td>51</td><td>57</td><td>54</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Holders, balance sheet, cash</div>
+      <ul class="b-list"><li>Promoter 65.66% → 65.85% (flat). FII 1.81% → 4.43%, rising every quarter since Jun-25. DII 7.84% → 4.09%, falling.</li><li>Shareholders 84.7k → 63.5k: retail leaving, FIIs accumulating.</li><li>Pledge nil per FY26 no-encumbrance declaration and aggregator data, not the BSE filing itself.</li><li>5-yr CFO ₹894 cr vs PAT ₹745 cr (~1.2x).</li></ul>
+    </div>
+    <div class="substep">
+      <div class="what-box">
+        <div class="wb-label">Structural story · named cause</div>
+        <ul class="b-list"><li>Cyclical recovery plus a real mix shift, not a brand-new step-change. OPM peaked at 22% (FY22–23), fell to 15% in FY25, and is back at 22–24% <i>while farm is still weak</i>.</li><li><b>Named cause:</b> construction-equipment sales +49% YoY in Q2 FY27, driven by North American data-centre, power and AI-infra builds. Construction is now 45.8% of finished goods (36.9% in FY25).</li><li>India aftermarket 16.5% of revenue; ₹225 cr of new awards ramping; FY27 revenue guide ~+24%.</li><li>Revenue overwhelmingly USD/EUR via US/EU warehousing subsidiaries; costs in India. China+1 sourcing shift.</li></ul>
+      </div>
+      <div class="sc-bull"><strong>Bull case, in numbers</strong><ul class="b-list"><li>FY27: ~₹1,450 cr revenue at 21–22% OPM → PAT ~₹205–215 cr.</li><li>FY28 with an ag upcycle: ~₹1,750 cr at 22% → PAT ~₹260 cr, EPS ~₹58.</li><li>Re-rating to 20x → ~₹1,150, roughly 1.6x in ~2 years, plus dividends (FY26 payout &gt;100%).</li><li>Multibagger path: ag recovery while construction holds → back to FY23's 32% ROCE, EPS &gt;₹70.</li></ul></div>
+      <div class="sc-risks"><div class="ss-label" style="margin:1rem 0 4px">Risks</div><div class="sc-risk-item">Deep cyclical: FY24–25 drawdown cut PAT 57%.</div><div class="sc-risk-item">Inventory ~409 days, CCC 326. Warehousing model is working-capital heavy.</div><div class="sc-risk-item">Farm demand still in a slump; freight costs high.</div><div class="sc-risk-item">US tariff reset, or rupee rebound toward ₹88.</div><div class="sc-risk-item">Customer concentration among large off-highway OEMs.</div></div>
+    </div>
+    <div class="substep">
+      <div class="how-box">
+        <div class="wb-label">Kill criteria · exit or downgrade if</div>
+        <ul class="b-list"><li>OPM below 18% for two consecutive quarters.</li><li>Inventory days &gt;450 together with CFO &lt;60% of PAT.</li><li>Promoter selling below 60%, or any pledge appearing.</li><li>FY27 revenue growth below 15%.</li></ul>
+      </div>
+      <div class="verdict-box">
+        <div class="vb-label">Verdict · BUY-ZONE · 72/100 · build gradually</div>
+        <p>Cheapest quality exporter in the set: 16.7x, net cash, implied growth only ~9%. It is a cyclical, so build in tranches rather than all at once.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="step" id="dd-sandur" data-theme="quant">
+  <button class="step-header" type="button" aria-expanded="false" aria-controls="body-sandur">
+    <span class="step-num">02</span>
+    <span class="step-meta">
+      <span class="step-eyebrow">Quant pattern hunt · NSE: SANDUMA</span>
+      <span class="step-title">Sandur Manganese &amp; Iron Ores</span>
+      <span class="step-subtitle">Mining turned integrated ore-to-steel after Arjas acquisition; deleveraging fast</span>
+    </span>
+    <span class="step-side">
+      <span class="vpill v-buy">BUY-ZONE</span>
+      <span class="step-score mono">68<small>/100</small></span>
+      <svg class="step-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </span>
+  </button>
+  <div class="step-body" id="body-sandur" hidden>
+    <div class="substep">
+      <div class="sc-metrics m5">
+        <div class="sc-metric"><div class="sc-metric-val">₹167.61</div><div class="sc-metric-lab">Price 19 Nov</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~₹8,150 cr</div><div class="sc-metric-lab">Market cap</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">9.7</div><div class="sc-metric-lab">P/E recomputed</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">24%</div><div class="sc-metric-lab">ROCE</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~7%</div><div class="sc-metric-lab">Implied 10-yr g</div></div>
+      </div>
+      <div class="where-box">
+        <div class="wb-label">Verified price · sources &amp; timestamps</div>
+        <ul class="b-list small"><li>Screener: ₹168, 19 Nov 2026, 3:32–3:50 pm.</li><li>Google Finance NSE close: ₹167.61, 19 Nov 2026, 3:30 pm IST.</li><li>Earlier: ₹164 (3 Nov, Upstox). Within ±15%, no contradiction.</li><li>Recomputed: TTM PAT ₹841 cr (116+236+228+261) → P/E 9.7x (Screener 9.5). Mcap ~₹8,150 cr.</li></ul>
+      </div>
+    </div>
+    <div class="substep">
+      <div class="ss-label">Five-year view (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>FY</th><th>Sales</th><th>OPM</th><th>PAT</th><th>ROCE</th><th>Borrowings</th><th>CFO</th></tr></thead><tbody><tr><td>FY22</td><td>2,249</td><td>43%</td><td>675</td><td>–</td><td>206</td><td>873</td></tr><tr><td>FY23</td><td>2,126</td><td>18%</td><td>271</td><td>–</td><td>133</td><td>142</td></tr><tr><td>FY24</td><td>1,252</td><td>26%</td><td>239</td><td>15%</td><td>–</td><td>153</td></tr><tr><td>FY25</td><td>3,135</td><td>25%</td><td>471</td><td>21%</td><td>1,890</td><td>841</td></tr><tr><td>FY26</td><td>5,088</td><td>24%</td><td>658</td><td>24%</td><td>999</td><td>1,143</td></tr><tr><td>TTM</td><td>5,602</td><td>24%</td><td>841</td><td>–</td><td>904</td><td>–</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Recent quarters (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>Qtr</th><th>Dec-24</th><th>Mar-25</th><th>Jun-25</th><th>Sep-25</th><th>Dec-25</th><th>Mar-26</th><th>Jun-26</th><th>Sep-26</th></tr></thead><tbody><tr><td>Sales</td><td>952</td><td>1,321</td><td>1,135</td><td>1,232</td><td>1,209</td><td>1,511</td><td>1,375</td><td>1,506</td></tr><tr><td>OPM</td><td>25%</td><td>24%</td><td>26%</td><td>22%</td><td>21%</td><td>26%</td><td>25%</td><td>25%</td></tr><tr><td>Interest</td><td>41</td><td>67</td><td>54</td><td>57</td><td>46</td><td>55</td><td>26</td><td>26</td></tr><tr><td>PAT</td><td>137</td><td>156</td><td>167</td><td>139</td><td>116</td><td>236</td><td>228</td><td>261</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Holders, balance sheet, cash</div>
+      <ul class="b-list"><li>Promoter 74.22% flat. FII 1.00% → 1.98%, up six straight quarters. DII ~0.6%.</li><li>No pledge flag on Screener (auto-flag only; re-check NSE SAST).</li><li>Equity ₹162 → ₹486 cr in FY26 is a bonus issue (no cash raised), not dilution.</li><li>FY22 borrowings reported at a different year-end; FY23 figure is Mar-2023.</li></ul>
+    </div>
+    <div class="substep">
+      <div class="what-box">
+        <div class="wb-label">Structural story · named cause</div>
+        <ul class="b-list"><li><b>Named cause:</b> Arjas Steel acquisition (FY25, debt-funded, now Royal Sandur Metals) turned a miner into an integrated ore-to-steel business. Revenue 1,252 → 5,602.</li><li>FY26 FCF of ₹988 cr cut debt 1,890 → 904. Quarterly interest halved 55 → 26.</li><li>Q2 FY27: iron ore sales ~+59%, value-add steel projects running; PAT ₹260 cr, +87–88% YoY.</li><li>Closest to the Radico-type deleveraging fingerprint: PAT stepped from ~₹140 cr/qtr to ~₹240 cr/qtr for three quarters while OPM stayed flat. The jump is lower interest plus volume.</li></ul>
+      </div>
+      <div class="sc-bull"><strong>Bull case, in numbers</strong><ul class="b-list"><li>Run-rate PAT ~₹1,000 cr (H1 FY27 annualised ≈ 978).</li><li>Debt near zero by FY28 from free cash flow.</li><li>12–14x on ₹1,100–1,200 cr PAT → mcap ₹13–17k cr, 1.6–2.1x in 2–3 years. Needs commodity prices to hold.</li></ul></div>
+      <div class="sc-risks"><div class="ss-label" style="margin:1rem 0 4px">Risks</div><div class="sc-risk-item">Iron ore, manganese and steel cycles. Manganese, ferroalloy and coke sales fell in Q2.</div><div class="sc-risk-item">Karnataka mining levies and lease/mining-cap rules.</div><div class="sc-risk-item">Promoter at the 75% cap limits free float; mcap near top of the band.</div><div class="sc-risk-item">Inventory days volatile (794 in FY24, 149 in FY26).</div></div>
+    </div>
+    <div class="substep">
+      <div class="how-box">
+        <div class="wb-label">Kill criteria · exit or downgrade if</div>
+        <ul class="b-list"><li>Quarterly PAT below ₹180 cr for two quarters.</li><li>Net debt rising again for a new debt-funded acquisition.</li><li>FII trend reverses below 1.5%.</li><li>Adverse change in Karnataka mining tax or caps.</li></ul>
+      </div>
+      <div class="verdict-box">
+        <div class="vb-label">Verdict · BUY-ZONE · 68/100 · research view</div>
+        <p>9.7x for a business deleveraging on its own cash flow. The multiple is low because it is a commodity cyclical; that is the risk you are paid for.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="step" id="dd-bajajcon" data-theme="cons">
+  <button class="step-header" type="button" aria-expanded="false" aria-controls="body-bajajcon">
+    <span class="step-num">03</span>
+    <span class="step-meta">
+      <span class="step-eyebrow">Consumption &amp; financialisation · NSE: BAJAJCON</span>
+      <span class="step-title">Bajaj Consumer Care</span>
+      <span class="step-subtitle">Almond Drops revival; OPM 13% → 25% over seven quarters, debt-free</span>
+    </span>
+    <span class="step-side">
+      <span class="vpill v-buy">BUY-ZONE</span>
+      <span class="step-score mono">66<small>/100</small></span>
+      <svg class="step-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </span>
+  </button>
+  <div class="step-body" id="body-bajajcon" hidden>
+    <div class="substep">
+      <div class="sc-metrics m5">
+        <div class="sc-metric"><div class="sc-metric-val">~₹410</div><div class="sc-metric-lab">Price 19 Nov</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">₹5,355 cr</div><div class="sc-metric-lab">Market cap</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">21.3</div><div class="sc-metric-lab">P/E recomputed</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">30%</div><div class="sc-metric-lab">ROCE</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~8–10%</div><div class="sc-metric-lab">Implied 10-yr g</div></div>
+      </div>
+      <div class="where-box">
+        <div class="wb-label">Verified price · sources &amp; timestamps</div>
+        <ul class="b-list small"><li>Screener.in: ₹410, stamped 19 Nov 2026 3:32 pm. Mcap ₹5,355 cr.</li><li>Bajaj Finserv ₹414.65 (16 Nov, 3:30 pm). Ventura NSE ₹415.00 / BSE ₹412.80 (16 Nov).</li><li>ICICI Direct ₹423.90 (17 Nov, 9:18 am, labelled a close; timing makes that doubtful).</li><li>Sources within 3%. Re-derived P/E ₹5,355 / TTM PAT ₹251 cr = 21.3x (Screener 21.4x).</li><li>52-wk ~₹243–692. Rallied ~150% in H1 2026, then −41% from high; fell 11% on Q1 and 8–10% on Q2 despite PAT +66–80%.</li></ul>
+      </div>
+    </div>
+    <div class="substep">
+      <div class="ss-label">Five-year view (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>FY</th><th>Sales</th><th>OPM</th><th>PAT</th><th>ROCE</th></tr></thead><tbody><tr><td>FY22</td><td>880</td><td>20%</td><td>170</td><td>38%</td></tr><tr><td>FY23</td><td>961</td><td>15%</td><td>139</td><td>26%</td></tr><tr><td>FY24</td><td>984</td><td>16%</td><td>155</td><td>21%</td></tr><tr><td>FY25</td><td>965</td><td>13%</td><td>125</td><td>23%</td></tr><tr><td>FY26</td><td>1,165</td><td>19%</td><td>190</td><td>19%</td></tr><tr><td>TTM</td><td>1,307</td><td>23%</td><td>251</td><td>30%</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Recent quarters (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>Qtr</th><th>Mar-25</th><th>Jun-25</th><th>Sep-25</th><th>Dec-25</th><th>Mar-26</th><th>Jun-26</th><th>Sep-26</th></tr></thead><tbody><tr><td>Sales</td><td>250</td><td>273</td><td>265</td><td>306</td><td>327</td><td>342</td><td>333</td></tr><tr><td>OPM</td><td>13%</td><td>15%</td><td>18%</td><td>18%</td><td>23%</td><td>24%</td><td>25%</td></tr><tr><td>PAT</td><td>31</td><td>38</td><td>42</td><td>46</td><td>64</td><td>71</td><td>70</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Holders, balance sheet, cash</div>
+      <ul class="b-list"><li>Promoter 40.95% → 42.97% (Sep-2025 buyback at ₹290, promoters did not tender). FII 10.5% → 16.4%, rising. DII 20.2% → 14.9%, falling.</li><li>Borrowings ₹4–16 cr (debt-free). Debtor days 8 (FY22) → 24–27 (FY25–26): watch, still low.</li><li>Pledge: none flagged; not confirmed from an NSE filing. Family cleared a pledge in 2019 by selling ~22%; group Bajaj Hindusthan links are a governance memory.</li><li>Other income steady ₹5–9 cr/qtr, tax 17–19%: the PAT jump is operating.</li></ul>
+    </div>
+    <div class="substep">
+      <div class="what-box">
+        <div class="wb-label">Structural story · named cause</div>
+        <ul class="b-list"><li>Q2 FY27: sales +25%, EBITDA +71% to ₹83.3 cr, margin 25.0% vs 18.6% (JM Financial).</li><li><b>Named causes:</b> double-digit unit volume in Almond Drops (domestic revenue +30% in H1); coconut volumes ahead of value as coconut prices deflated; price-point packs and distribution expansion.</li><li>Bluntly: operating leverage plus input-cost relief on a revived core brand, not a premiumisation mix shift. Natyv Soul is small.</li><li>Management guides 'low-to-mid 20s' EBITDA margin and declines to forecast the path. LLP input is crude-linked.</li></ul>
+      </div>
+      <div class="sc-bull"><strong>Bull case, in numbers</strong><ul class="b-list"><li>FY29: sales ₹1,730 cr (12% CAGR), OPM 24% → EBITDA ~₹415 cr + ₹30 cr other income.</li><li>PAT ~₹350 cr at 28x → ~₹9,800 cr, about 1.8x in ~2.5 years.</li><li>Bear: OPM back to 17%, PAT ~₹190 cr at 18x → ~₹3,400 cr, −36%.</li></ul></div>
+      <div class="sc-risks"><div class="ss-label" style="margin:1rem 0 4px">Risks</div><div class="sc-risk-item">Margin partly input-driven (coconut, LLP, crude). An oil spike could take 300–500 bp off.</div><div class="sc-risk-item">Almond Drops concentration in a slow category: 5-yr sales CAGR only 4.8%.</div><div class="sc-risk-item">Post-results selling history; a broker downgrade to Reduce after Q1. Market treats margin as peak.</div><div class="sc-risk-item">Promoter-group financial history. No dividend; buybacks only.</div></div>
+    </div>
+    <div class="substep">
+      <div class="how-box">
+        <div class="wb-label">Kill criteria · exit or downgrade if</div>
+        <ul class="b-list"><li>OPM below 19% for two consecutive quarters.</li><li>Almond Drops volume growth below 5%.</li><li>Any promoter pledge reappearing.</li><li>Debtor days above 40.</li></ul>
+      </div>
+      <div class="verdict-box">
+        <div class="vb-label">Verdict · BUY-ZONE · 66/100 · research view</div>
+        <p>The only consumption name not priced for perfection (21x vs FMCG peers at 40–50x). A re-rating-plus-recovery bet, not a long compounder. It must hold low-20s margins through an oil shock.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="step" id="dd-skipper" data-theme="power">
+  <button class="step-header" type="button" aria-expanded="false" aria-controls="body-skipper">
+    <span class="step-num">04</span>
+    <span class="step-meta">
+      <span class="step-eyebrow">Power &amp; data centre · NSE: SKIPPER</span>
+      <span class="step-title">Skipper Ltd</span>
+      <span class="step-subtitle">Transmission towers / T&amp;D EPC; record ₹10,066 cr order book</span>
+    </span>
+    <span class="step-side">
+      <span class="vpill v-buy">BUY-ZONE</span>
+      <span class="step-score mono">66<small>/100</small></span>
+      <svg class="step-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </span>
+  </button>
+  <div class="step-body" id="body-skipper" hidden>
+    <div class="substep">
+      <div class="sc-metrics m5">
+        <div class="sc-metric"><div class="sc-metric-val">₹487.75</div><div class="sc-metric-lab">Price 19 Nov</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~₹5,955 cr</div><div class="sc-metric-lab">Market cap</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">24.2</div><div class="sc-metric-lab">P/E recomputed</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">24%</div><div class="sc-metric-lab">ROCE</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">13%</div><div class="sc-metric-lab">Implied 10-yr g</div></div>
+      </div>
+      <div class="where-box">
+        <div class="wb-label">Verified price · sources &amp; timestamps</div>
+        <ul class="b-list small"><li>₹487.75 close, 19 Nov 2026 (Screener chart). <b>Single-sourced for 19 Nov</b>; no independent quote dated that day was found.</li><li>Series validated: ₹473.90 on 23 Oct (Kotak Neo ₹473.9), ₹507.90 on 27 Oct (Investing.com 507.90), ₹526.55 on 5 Nov (Upstox ₹525.40 intraday).</li><li>Jul 2026: 92.23 lakh shares issued preferentially at ₹470 to Bandhan Small Cap, Emerge PO Trust, Cohesion MK. ~12.2 cr shares post-issue.</li><li>Diluted mcap ≈ ₹5,955 cr. P/E 22.8x on reported TTM EPS (21.37), 24.2x on post-issue count. 24x used.</li></ul>
+      </div>
+    </div>
+    <div class="substep">
+      <div class="ss-label">Five-year view (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>FY</th><th>Sales</th><th>OPM</th><th>PAT</th><th>ROCE</th><th>Borrowings</th><th>CFO</th><th>Debtor days</th></tr></thead><tbody><tr><td>FY22</td><td>1,707</td><td>10%</td><td>25</td><td>10%</td><td>575</td><td>17</td><td>93</td></tr><tr><td>FY23</td><td>1,980</td><td>10%</td><td>36</td><td>12%</td><td>494</td><td>284</td><td>66</td></tr><tr><td>FY24</td><td>3,282</td><td>10%</td><td>82</td><td>21%</td><td>592</td><td>199</td><td>85</td></tr><tr><td>FY25</td><td>4,624</td><td>10%</td><td>149</td><td>24%</td><td>711</td><td>153</td><td>55</td></tr><tr><td>FY26</td><td>5,553</td><td>10%</td><td>213</td><td>24%</td><td>931</td><td>277</td><td>98</td></tr><tr><td>TTM</td><td>5,731</td><td>10%</td><td>246</td><td>–</td><td>757</td><td>–</td><td>–</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Recent quarters (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>Qtr</th><th>Sep-25</th><th>Dec-25</th><th>Mar-26</th><th>Jun-26</th><th>Sep-26</th></tr></thead><tbody><tr><td>Sales</td><td>1,262</td><td>1,371</td><td>1,667</td><td>1,310</td><td>1,384</td></tr><tr><td>OPM</td><td>10%</td><td>10%</td><td>10%</td><td>11%</td><td>10%</td></tr><tr><td>PAT</td><td>37</td><td>53</td><td>78</td><td>57</td><td>58</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Holders, balance sheet, cash</div>
+      <ul class="b-list"><li>Promoter 66.48% → 61.48% (Sep-24 → Sep-26), fully explained by the preferential allotment; no promoter selling.</li><li>FII 4.39% → 10.31%. DII 0.24% → 2.41%. Institutions rising.</li><li>No pledge found (no-encumbrance declaration as of Mar-26).</li><li>PAT grew YoY in each of the last 8 quarters; Q2 FY27 PAT +57%.</li></ul>
+    </div>
+    <div class="substep">
+      <div class="what-box">
+        <div class="wb-label">Structural story · named cause</div>
+        <ul class="b-list"><li>OPM is flat at 10%, so this is <b>not</b> a margin step-change. The step-change is ROCE (9–12% → 21–24%) and PAT (₹25 cr → ₹246 cr).</li><li><b>Named cause:</b> operating leverage on the tower/monopole plant as PGCIL/ISTS EPC orders filled utilisation.</li><li>Order book ₹10,066 cr (1.76x TTM revenue). Record Q2 inflow ₹2,111 cr (+70%), incl. ₹1,054 cr exports. 75,000 MTPA expansion underway.</li><li>₹433.5 cr equity raise paid down debt (₹931 → ₹757 cr).</li></ul>
+      </div>
+      <div class="sc-bull"><strong>Bull case, in numbers</strong><ul class="b-list"><li>FY27–29 PAT CAGR 25% (below ~30% FY27 guide) → PAT ~₹420 cr by FY29.</li><li>At 20x → ~₹8,400 cr mcap, ~1.4x in ~2.5 yrs. At 25x with 30% CAGR → ~2x.</li><li>Multibagger only if exports and new EPC arm (Evergrid India, inc. 4 Nov 2026) lift OPM above 11%.</li></ul></div>
+      <div class="sc-risks"><div class="ss-label" style="margin:1rem 0 4px">Risks</div><div class="sc-risk-item">10% margin ceiling (steel pass-through); EPC margins thin.</div><div class="sc-risk-item">Debtor days 55 → 98 in FY26.</div><div class="sc-risk-item">History of single-digit ROCE (FY20–22). Cyclical, not a franchise.</div><div class="sc-risk-item">Polymer-pipes segment is a distraction.</div></div>
+    </div>
+    <div class="substep">
+      <div class="how-box">
+        <div class="wb-label">Kill criteria · exit or downgrade if</div>
+        <ul class="b-list"><li>Two consecutive quarters of YoY PAT decline.</li><li>Order book below ₹8,000 cr.</li><li>Debtor days above 120.</li><li>Borrowings back above ₹1,000 cr without matching order-book rise.</li><li>Any promoter pledge.</li></ul>
+      </div>
+      <div class="verdict-box">
+        <div class="vb-label">Verdict · BUY-ZONE · 66/100 · staggered; strongest near ₹470</div>
+        <p>Institutions paid ₹470 in July; that is the anchor. Stagger entries and lean in near or below it. Execution business at 10% margins, so do not pay up.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="step" id="dd-mps" data-theme="rupee">
+  <button class="step-header" type="button" aria-expanded="false" aria-controls="body-mps">
+    <span class="step-num">05</span>
+    <span class="step-meta">
+      <span class="step-eyebrow">Weak rupee / China+1 · NSE: MPSLTD</span>
+      <span class="step-title">MPS Ltd</span>
+      <span class="step-subtitle">Content, learning and platform services for US/UK/EU publishers; pure rupee play, no freight</span>
+    </span>
+    <span class="step-side">
+      <span class="vpill v-watch">WATCHLIST</span>
+      <span class="step-score mono">66<small>/100</small></span>
+      <svg class="step-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </span>
+  </button>
+  <div class="step-body" id="body-mps" hidden>
+    <div class="substep">
+      <div class="sc-metrics m5">
+        <div class="sc-metric"><div class="sc-metric-val">~₹2,182</div><div class="sc-metric-lab">Price 19 Nov</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~₹3,730 cr</div><div class="sc-metric-lab">Market cap</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">20.2</div><div class="sc-metric-lab">P/E recomputed</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">39%</div><div class="sc-metric-lab">ROCE</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~11.5%</div><div class="sc-metric-lab">Implied 10-yr g</div></div>
+      </div>
+      <div class="where-box">
+        <div class="wb-label">Verified price · sources &amp; timestamps</div>
+        <ul class="b-list small"><li>Google Finance: ₹2,183.00, 19 Nov 2026, 3:30 pm IST (+1.39%).</li><li>Screener: ₹2,181.00 close (headline ₹2,180). Sources agree.</li><li>Earlier: blinkx ₹2,263 (11 Nov); MarketScreener ₹2,247 (9 Nov). 52-wk ₹1,336–2,979 (high 10 Aug 2026), ~27% off high.</li><li>Recomputed: TTM EPS ₹108.17 → P/E 20.2. Mcap ~₹3,730 cr; debt ~₹18 cr; EV/EBITDA ~12x on FY27 floor of ₹310 cr.</li></ul>
+      </div>
+    </div>
+    <div class="substep">
+      <div class="ss-label">Five-year view (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>FY</th><th>Sales</th><th>OPM</th><th>PAT</th><th>ROCE</th><th>Borrowings</th><th>CFO</th></tr></thead><tbody><tr><td>FY22</td><td>449</td><td>28%</td><td>87</td><td>31%</td><td>12</td><td>115</td></tr><tr><td>FY23</td><td>501</td><td>31%</td><td>109</td><td>36%</td><td>8</td><td>113</td></tr><tr><td>FY24</td><td>545</td><td>31%</td><td>119</td><td>36%</td><td>5</td><td>118</td></tr><tr><td>FY25</td><td>727</td><td>29%</td><td>149</td><td>41%</td><td>4</td><td>101</td></tr><tr><td>FY26</td><td>768</td><td>31%</td><td>173</td><td>39%</td><td>61</td><td>197</td></tr><tr><td>TTM</td><td>836</td><td>33%</td><td>185</td><td>–</td><td>18</td><td>–</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Recent quarters (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>Qtr</th><th>Dec-24</th><th>Mar-25</th><th>Jun-25</th><th>Sep-25</th><th>Dec-25</th><th>Mar-26</th><th>Jun-26</th><th>Sep-26</th></tr></thead><tbody><tr><td>Sales</td><td>186</td><td>182</td><td>186</td><td>194</td><td>182</td><td>205</td><td>224</td><td>224</td></tr><tr><td>YoY</td><td>+39%</td><td>+22%</td><td>+3%</td><td>+9%</td><td>−2%</td><td>+13%</td><td>+20%</td><td>+15%</td></tr><tr><td>OPM</td><td>32%</td><td>31%</td><td>27%</td><td>31%</td><td>32%</td><td>33%</td><td>34%</td><td>34%</td></tr><tr><td>PAT</td><td>41</td><td>47</td><td>35</td><td>55</td><td>36</td><td>47</td><td>50</td><td>52</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Holders, balance sheet, cash</div>
+      <ul class="b-list"><li>Promoter (ADI BPO) 68.34% flat. FII 2.02% → 1.49%. DII 0.43% → 2.11%. Very under-owned.</li><li>Shareholders 18.3k → 26.3k.</li><li>Pledge <b>not independently verified</b>; none flagged in aggregator data.</li><li>Sep-26 PAT −6% YoY only because Sep-25 had ₹12.8 cr one-off income; operating EBITDA +27%.</li></ul>
+    </div>
+    <div class="substep">
+      <div class="what-box">
+        <div class="wb-label">Structural story · named cause</div>
+        <ul class="b-list"><li>Sustained margin reset: OPM 24% (FY20) → 31% (FY23–26) → 34% now (record 34.34%). ROCE 36–41%.</li><li><b>Named causes:</b> operating leverage in edtech/content platforms; Corporate Learning EBITDA +98% YoY in Q2; Unbound Medicine subscription revenue (₹41.6 cr in H1); billed clients up ~90% to 933.</li><li>FY27 EBITDA floor raised from ₹300 cr to ≥₹310 cr.</li></ul>
+      </div>
+      <div class="sc-bull"><strong>Bull case, in numbers</strong><ul class="b-list"><li>FY27 EBITDA ₹315 cr → PAT ~₹205 cr (EPS ~₹120).</li><li>FY28 ₹1,500 cr revenue target <b>requires M&amp;A</b>. Organic ~₹950 cr at 33% OPM → EPS ~₹140.</li><li>At 22x → ~₹3,080, ~1.4x. Accretive acquisition is upside.</li></ul></div>
+      <div class="sc-risks"><div class="ss-label" style="margin:1rem 0 4px">Risks</div><div class="sc-risk-item">Generative AI directly attacks content-production and publishing services. This is why it de-rated, and it is real.</div><div class="sc-risk-item">Acquisition integration risk.</div><div class="sc-risk-item">High promoter holding, thin liquidity.</div><div class="sc-risk-item">Organic growth only low-to-mid teens; publishing-industry exposure.</div></div>
+    </div>
+    <div class="substep">
+      <div class="how-box">
+        <div class="wb-label">Kill criteria · exit or downgrade if</div>
+        <ul class="b-list"><li>Organic revenue declines YoY for two quarters.</li><li>OPM below 28%.</li><li>Large acquisition funded with debt above 1x EBITDA.</li><li>Client count or top-client churn reverses.</li></ul>
+      </div>
+      <div class="verdict-box">
+        <div class="vb-label">Verdict · WATCHLIST · 66/100 · add below ~₹2,000</div>
+        <p>Excellent numbers, but AI substitution risk caps conviction. Below ~₹2,000 the risk is better paid.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="step" id="dd-iol" data-theme="quant">
+  <button class="step-header" type="button" aria-expanded="false" aria-controls="body-iol">
+    <span class="step-num">06</span>
+    <span class="step-meta">
+      <span class="step-eyebrow">Quant pattern hunt · NSE: IOLCP</span>
+      <span class="step-title">IOL Chemicals &amp; Pharmaceuticals</span>
+      <span class="step-subtitle">Mix shift away from ibuprofen plus heavy promoter open-market buying</span>
+    </span>
+    <span class="step-side">
+      <span class="vpill v-watch">WATCHLIST</span>
+      <span class="step-score mono">64<small>/100</small></span>
+      <svg class="step-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </span>
+  </button>
+  <div class="step-body" id="body-iol" hidden>
+    <div class="substep">
+      <div class="sc-metrics m5">
+        <div class="sc-metric"><div class="sc-metric-val">₹192.00</div><div class="sc-metric-lab">Price 19 Nov</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~₹5,634 cr</div><div class="sc-metric-lab">Market cap</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">27.7</div><div class="sc-metric-lab">P/E recomputed</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">11%</div><div class="sc-metric-lab">ROCE</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~19% (16% run-rate)</div><div class="sc-metric-lab">Implied 10-yr g</div></div>
+      </div>
+      <div class="where-box">
+        <div class="wb-label">Verified price · sources &amp; timestamps</div>
+        <ul class="b-list small"><li>Screener ₹192, 19 Nov 2026. Google Finance NSE close ₹192.00, 3:30 pm IST.</li><li>Earlier: ₹180 (2 Nov, Upstox), ₹210 intraday (9 Nov, Bajaj).</li><li>Recomputed: TTM PAT ₹203 cr (21+53+64+65) → P/E 27.7x (H1 annualised 21.8x). Screener 26.6.</li></ul>
+      </div>
+    </div>
+    <div class="substep">
+      <div class="ss-label">Five-year view (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>FY</th><th>Sales</th><th>OPM</th><th>PAT</th><th>ROCE</th><th>Borrowings</th><th>CFO</th></tr></thead><tbody><tr><td>FY22</td><td>2,184</td><td>12%</td><td>168</td><td>–</td><td>44</td><td>93</td></tr><tr><td>FY23</td><td>2,217</td><td>10%</td><td>139</td><td>14%</td><td>80</td><td>122</td></tr><tr><td>FY24</td><td>2,133</td><td>11%</td><td>134</td><td>12%</td><td>33</td><td>290</td></tr><tr><td>FY25</td><td>2,079</td><td>10%</td><td>101</td><td>9%</td><td>117</td><td>179</td></tr><tr><td>FY26</td><td>2,319</td><td>12%</td><td>138</td><td>11%</td><td>135</td><td>214</td></tr><tr><td>TTM</td><td>2,751</td><td>13%</td><td>203</td><td>–</td><td>201</td><td>–</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Recent quarters (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>Qtr</th><th>Dec-24</th><th>Mar-25</th><th>Jun-25</th><th>Sep-25</th><th>Dec-25</th><th>Mar-26</th><th>Jun-26</th><th>Sep-26</th></tr></thead><tbody><tr><td>Sales</td><td>523</td><td>528</td><td>552</td><td>568</td><td>580</td><td>619</td><td>756</td><td>795</td></tr><tr><td>OPM</td><td>9%</td><td>12%</td><td>11%</td><td>10%</td><td>10%</td><td>15%</td><td>14%</td><td>14%</td></tr><tr><td>PAT</td><td>21</td><td>31</td><td>34</td><td>30</td><td>21</td><td>53</td><td>64</td><td>65</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Holders, balance sheet, cash</div>
+      <ul class="b-list"><li>Promoter 52.62% → 62.28%: ~9.7 pp via open-market buying (NCVI Enterprises, Mayadevi Polycot, Mar 2026). No new shares; equity ₹59 cr.</li><li>FII 2.59% → 7.26%, tripled in two quarters. DII 0.30%.</li><li>Promoter disclosed no encumbrance for FY26.</li><li>Debtor days 79 → 95. CFO/EBITDA 93% in FY26. Capex self-funded (CWIP ₹189 cr).</li></ul>
+    </div>
+    <div class="substep">
+      <div class="what-box">
+        <div class="wb-label">Structural story · named cause</div>
+        <ul class="b-list"><li><b>Named cause:</b> non-ibuprofen APIs reached 45% of pharma revenue in Q2 FY27 (38% a year ago), growing ~70% YoY.</li><li>Pharma segment EBIT nearly doubled (35.5 → 68.1).</li><li>Q2 FY27: revenue ₹795 cr (+40%), EBITDA ₹115 cr (+80%), PAT ₹65 cr (2.2x). Guide 14–15% EBITDA margin.</li><li>Radico-style mix shift plus the strongest insider signal in the whole pipeline.</li></ul>
+      </div>
+      <div class="sc-bull"><strong>Bull case, in numbers</strong><ul class="b-list"><li>FY28 sales ₹3,600 cr at 15% OPM → PAT ~₹330 cr. At 22–25x → ₹7.3–8.3k cr, 1.3–1.5x.</li><li>Real multibagger needs ROCE toward 18–20%; FY20–21 (30% OPM) shows what leverage can do.</li></ul></div>
+      <div class="sc-risks"><div class="ss-label" style="margin:1rem 0 4px">Risks</div><div class="sc-risk-item">27.7x TTM is already at the top of the allowed range.</div><div class="sc-risk-item">ROCE 11% is low.</div><div class="sc-risk-item">Already re-rated from ~₹67 low to ~₹224 high.</div><div class="sc-risk-item">Ibuprofen pricing cyclical, exposed to Chinese supply.</div><div class="sc-risk-item">Promoter at 62%; further buying limited by takeover rules.</div></div>
+    </div>
+    <div class="substep">
+      <div class="how-box">
+        <div class="wb-label">Kill criteria · exit or downgrade if</div>
+        <ul class="b-list"><li>OPM below 12% for two quarters.</li><li>Non-ibuprofen share stalls below 40%.</li><li>Promoter sells.</li><li>Debtor days above 110.</li><li><b>Entry discipline:</b> wait for Q3 FY27 confirmation or P/E ≤22x TTM.</li></ul>
+      </div>
+      <div class="verdict-box">
+        <div class="vb-label">Verdict · WATCHLIST · 64/100 · near buy-zone</div>
+        <p>Best insider signal in the set, but low ROCE and an already-rerated price. Wait for Q3 or a lower multiple.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="step" id="dd-prudent" data-theme="cons">
+  <button class="step-header" type="button" aria-expanded="false" aria-controls="body-prudent">
+    <span class="step-num">07</span>
+    <span class="step-meta">
+      <span class="step-eyebrow">Consumption &amp; financialisation · NSE: PRUDENT</span>
+      <span class="step-title">Prudent Corporate Advisory</span>
+      <span class="step-subtitle">B2B2C mutual-fund distribution for ~30k sub-brokers; owns the SIP stock, not trading turnover</span>
+    </span>
+    <span class="step-side">
+      <span class="vpill v-watch">WATCHLIST</span>
+      <span class="step-score mono">63<small>/100</small></span>
+      <svg class="step-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </span>
+  </button>
+  <div class="step-body" id="body-prudent" hidden>
+    <div class="substep">
+      <div class="sc-metrics m5">
+        <div class="sc-metric"><div class="sc-metric-val">~₹2,920</div><div class="sc-metric-lab">Price 19 Nov</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">₹12,098 cr</div><div class="sc-metric-lab">Market cap</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">46.0</div><div class="sc-metric-lab">P/E recomputed</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">37.5%</div><div class="sc-metric-lab">ROCE</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">17–20%</div><div class="sc-metric-lab">Implied 10-yr g</div></div>
+      </div>
+      <div class="where-box">
+        <div class="wb-label">Verified price · sources &amp; timestamps</div>
+        <ul class="b-list small"><li>Screener.in: ₹2,922, 19 Nov 2026 3:32 pm. Mcap ₹12,098 cr.</li><li>5paisa ~₹2,908 (16 Nov, 2:16 pm; mcap ₹12,042 cr, P/E 45.8). Investing.com ₹2,904.30 (16 Nov). Agree within 1%.</li><li>Re-derived P/E ₹12,098 / ₹263 cr = 46.0x; ~11.9x book.</li><li>52-wk ₹1,955–4,106 (5paisa shows ₹2,121 low). 29% below high. Citi Buy ₹3,300 (May-26); ICICI Sec Hold ₹2,800 (Jun-26).</li></ul>
+      </div>
+    </div>
+    <div class="substep">
+      <div class="ss-label">Five-year view (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>FY</th><th>Revenue</th><th>OPM</th><th>PAT</th><th>ROCE</th></tr></thead><tbody><tr><td>FY22</td><td>458</td><td>27%</td><td>80</td><td>52%</td></tr><tr><td>FY23</td><td>617</td><td>29%</td><td>117</td><td>51%</td></tr><tr><td>FY24</td><td>823</td><td>26%</td><td>139</td><td>43%</td></tr><tr><td>FY25</td><td>1,133</td><td>26%</td><td>196</td><td>44%</td></tr><tr><td>FY26</td><td>1,341</td><td>25%</td><td>222</td><td>37%</td></tr><tr><td>TTM</td><td>1,440</td><td>25%</td><td>263</td><td>37.5%</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Recent quarters (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>Qtr</th><th>Mar-25</th><th>Jun-25</th><th>Sep-25</th><th>Dec-25</th><th>Mar-26</th><th>Jun-26</th><th>Sep-26</th></tr></thead><tbody><tr><td>Revenue</td><td>283</td><td>294</td><td>320</td><td>343</td><td>361</td><td>348</td><td>389</td></tr><tr><td>OPM</td><td>24%</td><td>23%</td><td>23%</td><td>23%</td><td>26%</td><td>26%</td><td>26%</td></tr><tr><td>PAT</td><td>52</td><td>52</td><td>54</td><td>58</td><td>59</td><td>75</td><td>72</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Holders, balance sheet, cash</div>
+      <ul class="b-list"><li>Promoter flat at 55.31%. FII 14.8% → 14.6%. DII 23.6% → 22.9%. No pledge found.</li><li>Retail shareholders 30.8k → 44.8k in Sep-26: retail chasing the dip.</li><li>Debt ~₹40 cr (leases). CFO/PAT 0.98 in FY26. Debtor days 45–49. Equity undiluted since FY22.</li><li>Sep-26 PAT −4% QoQ on treasury MTM (other income ₹4 cr vs ₹21 cr); core operating profit ₹102.8 cr, +42% YoY.</li></ul>
+    </div>
+    <div class="substep">
+      <div class="what-box">
+        <div class="wb-label">Structural story · named cause</div>
+        <ul class="b-list"><li>Q2 FY27: average AUM ₹1.43 lakh cr (+21% YoY); SIP book ₹1,272 cr/month (+17%); market share 3.7% vs 3.5%.</li><li>OPM 26.4% vs 22.6% YoY; management talks of '30%+ over time'.</li><li><b>Named cause:</b> operating leverage and lower payout leakage, not mix. The 300 bp step is real but modest.</li><li>SEBI MF Regulations 2026 (TER restructuring, from 1 Apr 2026): ~2–3 bp trail impact (Finology). Margins still expanded, so it was absorbed.</li></ul>
+      </div>
+      <div class="sc-bull"><strong>Bull case, in numbers</strong><ul class="b-list"><li>PAT 22% CAGR → ~₹710 cr in FY31. At 35x → ~₹25,000 cr, about 2x in 5 years (~15% IRR).</li><li>Multibagger only with a bull market lifting AUM plus margins at 30%.</li><li>Bear: correction, 2 flat years, 30x → ~₹7,900 cr, −35%.</li></ul></div>
+      <div class="sc-risks"><div class="ss-label" style="margin:1rem 0 4px">Risks</div><div class="sc-risk-item">Beta to equity markets: AUM MTM hits revenue directly.</div><div class="sc-risk-item">Further SEBI commission caps.</div><div class="sc-risk-item">Shift to direct plans and fintech platforms.</div><div class="sc-risk-item">Retail crowding. Insurance-broking diversification diluting returns.</div></div>
+    </div>
+    <div class="substep">
+      <div class="how-box">
+        <div class="wb-label">Kill criteria · exit or downgrade if</div>
+        <ul class="b-list"><li>SIP book growth below 10% YoY.</li><li>OPM back below 23%.</li><li>Net equity sales falling YoY for two quarters.</li><li>Adverse SEBI action on distributor trail.</li></ul>
+      </div>
+      <div class="verdict-box">
+        <div class="vb-label">Verdict · WATCHLIST · 63/100 · accumulate below ~₹2,500</div>
+        <p>Cleanest financialisation compounder, priced for continued excellence. A 2x in 5 years, not a 5x. Buy on dips below ~₹2,500 (~39x).</p>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="step" id="dd-transrail" data-theme="power">
+  <button class="step-header" type="button" aria-expanded="false" aria-controls="body-transrail">
+    <span class="step-num">08</span>
+    <span class="step-meta">
+      <span class="step-eyebrow">Power &amp; data centre · NSE: TRANSRAILL</span>
+      <span class="step-title">Transrail Lighting</span>
+      <span class="step-subtitle">Vertically integrated T&amp;D EPC (own towers, conductors, poles); de-rated from ₹632</span>
+    </span>
+    <span class="step-side">
+      <span class="vpill v-cond">BUY-ZONE (cond.)</span>
+      <span class="step-score mono">62<small>/100</small></span>
+      <svg class="step-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </span>
+  </button>
+  <div class="step-body" id="body-transrail" hidden>
+    <div class="substep">
+      <div class="sc-metrics m5">
+        <div class="sc-metric"><div class="sc-metric-val">₹432.25</div><div class="sc-metric-lab">Price 19 Nov</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~₹5,802 cr</div><div class="sc-metric-lab">Market cap</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">13.9</div><div class="sc-metric-lab">P/E recomputed</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">34%</div><div class="sc-metric-lab">ROCE</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">6%</div><div class="sc-metric-lab">Implied 10-yr g</div></div>
+      </div>
+      <div class="where-box">
+        <div class="wb-label">Verified price · sources &amp; timestamps</div>
+        <ul class="b-list small"><li>₹432.25 close, 19 Nov 2026 (Screener chart).</li><li>Value Research ₹439.60 NSE on 16 Nov = Screener 16 Nov close exactly. Upstox ₹431.40 on 2 Nov vs Screener ₹434.65: consistent.</li><li><b>Discrepancy:</b> Kotak Neo ₹450.8 on 21 Oct vs Screener ₹468.80 (−4%); likely stale/intraday. Screener close used.</li><li>Shares ≈ 13.42 cr (TTM PAT 418 / EPS 31.14). Mcap ≈ ₹5,802 cr. P/E 13.9x.</li></ul>
+      </div>
+    </div>
+    <div class="substep">
+      <div class="ss-label">Five-year view (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>FY</th><th>Sales</th><th>OPM</th><th>PAT</th><th>ROCE</th><th>Borrowings</th><th>CFO</th><th>Debtor days</th></tr></thead><tbody><tr><td>FY22</td><td>2,338</td><td>11%</td><td>65</td><td>22%</td><td>469</td><td>46</td><td>100</td></tr><tr><td>FY23</td><td>3,152</td><td>12%</td><td>108</td><td>27%</td><td>621</td><td>143</td><td>75</td></tr><tr><td>FY24</td><td>4,077</td><td>14%</td><td>233</td><td>35%</td><td>667</td><td>35</td><td>92</td></tr><tr><td>FY25</td><td>5,308</td><td>15%</td><td>329</td><td>35%</td><td>661</td><td>287</td><td>91</td></tr><tr><td>FY26</td><td>6,880</td><td>14%</td><td>404</td><td>34%</td><td>678</td><td>643</td><td>92</td></tr><tr><td>TTM</td><td>7,452</td><td>12%</td><td>418</td><td>–</td><td>766</td><td>–</td><td>–</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Recent quarters (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>Qtr</th><th>Sep-25</th><th>Dec-25</th><th>Mar-26</th><th>Jun-26</th><th>Sep-26</th></tr></thead><tbody><tr><td>Sales</td><td>1,561</td><td>1,796</td><td>1,863</td><td>1,736</td><td>2,056</td></tr><tr><td>OPM</td><td>12%</td><td>13%</td><td>11%</td><td>12%</td><td>12%</td></tr><tr><td>PAT</td><td>92</td><td>110</td><td>96</td><td>108</td><td>104</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Holders, balance sheet, cash</div>
+      <ul class="b-list"><li>Promoter flat at 71.12%; zero pledge (Ajanma Holdings no-encumbrance declaration, Apr-26).</li><li>DII 15.15% → 5.95%: IPO anchors exiting, persistent overhang. FII 1.0% → 1.85%. Institutional direction is <b>down</b>.</li><li><b>The annual figure hides a stall:</b> TTM PAT ₹418 cr is only +3.5% over FY26. Mar-26 PAT −24% YoY. Q2 hit by one-time tax and higher interest. OPM 15% → 12%.</li></ul>
+    </div>
+    <div class="substep">
+      <div class="what-box">
+        <div class="wb-label">Structural story · named cause</div>
+        <ul class="b-list"><li><b>Named cause:</b> vertical integration (own towers, conductors, poles) is why ROCE (34%) is about double peers like KPIL (18%).</li><li>Customer advances give a negative CCC (~−147 days). FY26 CFO ₹643 cr = 1.6x PAT.</li><li>Order book ₹14,218 cr (1.9x TTM revenue), 93% T&amp;D.</li></ul>
+      </div>
+      <div class="sc-bull"><strong>Bull case, in numbers</strong><ul class="b-list"><li>Price implies only ~6% 10-yr EPS growth for a business growing revenue 30%.</li><li>OPM holds 12%, revenue +20% for 3 yrs → PAT ~₹700 cr. At 16x → ~₹11,200 cr, ~1.9x.</li><li>FY27 inflow guide &gt;₹10,000 cr; October-26 inflow ₹1,747 cr.</li></ul></div>
+      <div class="sc-risks"><div class="ss-label" style="margin:1rem 0 4px">Risks</div><div class="sc-risk-item">H1 FY27 inflow only ₹1,638 cr vs ~₹3,800 cr executed. <b>Order book is shrinking</b> (~₹16.4k → ₹14.2k cr).</div><div class="sc-risk-item">Interest cost rising, OPM compressing.</div><div class="sc-risk-item">DII exit ongoing.</div><div class="sc-risk-item">Related-party buy from promoter (Gactel, ₹10 cr; small) and a Deputy MD resignation.</div></div>
+    </div>
+    <div class="substep">
+      <div class="how-box">
+        <div class="wb-label">Kill criteria · exit or downgrade if</div>
+        <ul class="b-list"><li>FY27 order inflow below ₹7,000 cr.</li><li>Order book below ₹12,000 cr at Mar-27.</li><li>OPM below 11% for 2 quarters.</li><li>FY27 CFO below PAT.</li></ul>
+      </div>
+      <div class="verdict-box">
+        <div class="vb-label">Verdict · BUY-ZONE (cond.) · 62/100 · on value; conditional on H2 FY27 inflow</div>
+        <p>Statistically the cheapest quality name in the theme. But the order book is shrinking; if H2 inflows don't come, the low multiple is correct. Size small until inflows show.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="step" id="dd-rolex" data-theme="rupee">
+  <button class="step-header" type="button" aria-expanded="false" aria-controls="body-rolex">
+    <span class="step-num">09</span>
+    <span class="step-meta">
+      <span class="step-eyebrow">Weak rupee / China+1 · NSE: ROLEXRINGS</span>
+      <span class="step-title">Rolex Rings</span>
+      <span class="step-subtitle">Bearing rings and auto components; US tariff relief unlocked held-back demand</span>
+    </span>
+    <span class="step-side">
+      <span class="vpill v-watch">WATCHLIST</span>
+      <span class="step-score mono">61<small>/100</small></span>
+      <svg class="step-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </span>
+  </button>
+  <div class="step-body" id="body-rolex" hidden>
+    <div class="substep">
+      <div class="sc-metrics m5">
+        <div class="sc-metric"><div class="sc-metric-val">₹200.50</div><div class="sc-metric-lab">Price 19 Nov</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~₹5,250 cr</div><div class="sc-metric-lab">Market cap</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">28.9 rep / ~24 adj</div><div class="sc-metric-lab">P/E recomputed</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">21%</div><div class="sc-metric-lab">ROCE</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~19.6% / ~17.4% adj</div><div class="sc-metric-lab">Implied 10-yr g</div></div>
+      </div>
+      <div class="where-box">
+        <div class="wb-label">Verified price · sources &amp; timestamps</div>
+        <ul class="b-list small"><li>Google Finance ₹200.50, 19 Nov 2026, 3:30 pm IST (−1.27%). Screener ₹200.55 close. Agree.</li><li>Upstox ₹166 (2 Nov), Kotak ₹162.5 (30 Oct). Re-rated ~30% after Q2; peaked ~₹218 on 12 Nov. 52-wk ₹99–220.</li><li>Reported: TTM PAT ₹182 cr / ~26.2 cr shares (FV ₹1 after 1:10 split) → EPS ~₹6.95, P/E 28.9. Google shows 29.8; Screener's 23.5 does not reconcile.</li><li>Adjusted: add back ₹49 cr Q4 FY26 exceptional, remove ~₹13 cr post-tax US customs refund → TTM PAT ~₹218 cr, P/E ~24. Zero debt; ran a buyback.</li></ul>
+      </div>
+    </div>
+    <div class="substep">
+      <div class="ss-label">Five-year view (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>FY (standalone)</th><th>Sales</th><th>OPM</th><th>PAT</th><th>ROCE</th><th>Borrowings</th><th>CFO</th></tr></thead><tbody><tr><td>FY22</td><td>1,010</td><td>23%</td><td>132</td><td>31%</td><td>223</td><td>59</td></tr><tr><td>FY23</td><td>1,179</td><td>22%</td><td>198</td><td>32%</td><td>82</td><td>213</td></tr><tr><td>FY24</td><td>1,222</td><td>21%</td><td>156</td><td>28%</td><td>18</td><td>221</td></tr><tr><td>FY25</td><td>1,155</td><td>21%</td><td>174</td><td>23%</td><td>14</td><td>227</td></tr><tr><td>FY26</td><td>1,144</td><td>20%</td><td>141*</td><td>21%</td><td>0</td><td>190</td></tr><tr><td>TTM</td><td>1,274</td><td>22%</td><td>182*</td><td>–</td><td>0</td><td>–</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Recent quarters (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>Qtr</th><th>Dec-24</th><th>Mar-25</th><th>Jun-25</th><th>Sep-25</th><th>Dec-25</th><th>Mar-26</th><th>Jun-26</th><th>Sep-26</th></tr></thead><tbody><tr><td>Sales</td><td>260</td><td>284</td><td>292</td><td>271</td><td>275</td><td>306</td><td>304</td><td>389</td></tr><tr><td>YoY</td><td>−5%</td><td>−10%</td><td>−6%</td><td>−10%</td><td>+6%</td><td>+8%</td><td>+4%</td><td>+43%</td></tr><tr><td>OPM</td><td>20%</td><td>18%</td><td>21%</td><td>20%</td><td>21%</td><td>18%</td><td>23%</td><td>24%†</td></tr><tr><td>PAT</td><td>20</td><td>55</td><td>49</td><td>44</td><td>48</td><td>−0</td><td>60</td><td>74†</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Holders, balance sheet, cash</div>
+      <ul class="b-list"><li>* Reported after ₹49 cr exceptional. † Includes ~₹18 cr US customs refund; underlying Q2 OPM ~21%.</li><li>Mar-26 quarter was a ₹0.15 cr net loss after the exceptional.</li><li>Promoter 53.35% → 54.24% (buyback effect). FII 8.09% → 6.44% (bounced from 5.40%). <b>DII 31.62% → 25.74%, steady selling.</b></li><li>Pledge not independently verified.</li></ul>
+    </div>
+    <div class="substep">
+      <div class="what-box">
+        <div class="wb-label">Structural story · named cause</div>
+        <ul class="b-list"><li><b>Named cause:</b> US tariff relief (50% → 18% or less). US component revenue more than doubled; auto-component exports +89% YoY. FY27 auto-component guide ₹550–575 cr.</li><li>Exports 51% of component sales; China+1 shift by bearing and auto Tier-1s. Core bearing rings grew only 6%.</li><li>Sales flat for eight quarters, then one jump. <b>A single explosive quarter, not yet a sustained step-change.</b></li><li>Freight ~3x normal, not passed through. FY27 OPM guide 21–22%.</li></ul>
+      </div>
+      <div class="sc-bull"><strong>Bull case, in numbers</strong><ul class="b-list"><li>FY28 revenue ~₹1,600 cr at 23% OPM → PAT ~₹270 cr (EPS ~₹10.3). At 25x → ~₹258, ~+29%.</li><li>Multibagger needs auto components ≥₹1,000 cr, ~2 years away at best.</li></ul></div>
+      <div class="sc-risks"><div class="ss-label" style="margin:1rem 0 4px">Risks</div><div class="sc-risk-item">Q2 flattered by one-offs.</div><div class="sc-risk-item">Tariff regime legally fluid (Section 122 / 232 replacements).</div><div class="sc-risk-item">Freight; DII distribution; concentration in a few global bearing majors.</div><div class="sc-risk-item">Valuation already implies ~17–20% CAGR.</div></div>
+    </div>
+    <div class="substep">
+      <div class="how-box">
+        <div class="wb-label">Kill criteria · exit or downgrade if</div>
+        <ul class="b-list"><li>Q3/Q4 FY27 underlying OPM below 20%.</li><li>Revenue growth below 15% YoY once refund and pent-up demand fade.</li><li>FY27 auto-component revenue below ₹500 cr.</li><li>DII below 22% without FIIs replacing it.</li></ul>
+      </div>
+      <div class="verdict-box">
+        <div class="vb-label">Verdict · WATCHLIST · 61/100 · wait for ~₹170 or two clean quarters</div>
+        <p>The price already discounts the recovery, and the reported numbers include one-offs. Upgrade on two more &gt;25% growth quarters at ≥21% underlying OPM, or a pullback to ~₹165–170 (~20x adjusted).</p>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="step" id="dd-gulshan" data-theme="quant">
+  <button class="step-header" type="button" aria-expanded="false" aria-controls="body-gulshan">
+    <span class="step-num">10</span>
+    <span class="step-meta">
+      <span class="step-eyebrow">Quant pattern hunt · NSE: GULPOLY</span>
+      <span class="step-title">Gulshan Polyols</span>
+      <span class="step-subtitle">Grain-ethanol distilleries at ~82% utilisation (standalone data; consolidated stale)</span>
+    </span>
+    <span class="step-side">
+      <span class="vpill v-watch">WATCHLIST</span>
+      <span class="step-score mono">58<small>/100</small></span>
+      <svg class="step-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </span>
+  </button>
+  <div class="step-body" id="body-gulshan" hidden>
+    <div class="substep">
+      <div class="sc-metrics m5">
+        <div class="sc-metric"><div class="sc-metric-val">₹161.70</div><div class="sc-metric-lab">Price 19 Nov</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~₹1,008 cr</div><div class="sc-metric-lab">Market cap</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">5.9</div><div class="sc-metric-lab">P/E recomputed</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">19%</div><div class="sc-metric-lab">ROCE</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~2%</div><div class="sc-metric-lab">Implied 10-yr g</div></div>
+      </div>
+      <div class="where-box">
+        <div class="wb-label">Verified price · sources &amp; timestamps</div>
+        <ul class="b-list small"><li>Screener ₹161, 19 Nov 2026. Google Finance NSE close ₹161.70, 3:30 pm IST.</li><li>Earlier: ₹171 (13 Nov).</li><li>Recomputed: TTM PAT ₹172 cr (41+38+54+39) → P/E 5.9x. Mcap ~₹1,008 cr. <b>Standalone</b> figures (consolidated view stale).</li></ul>
+      </div>
+    </div>
+    <div class="substep">
+      <div class="ss-label">Five-year view (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>FY</th><th>Sales</th><th>OPM</th><th>PAT</th><th>ROCE</th><th>Borrowings</th><th>CFO</th></tr></thead><tbody><tr><td>FY22</td><td>1,101</td><td>14%</td><td>85</td><td>23%</td><td>112</td><td>61</td></tr><tr><td>FY23</td><td>1,180</td><td>7%</td><td>45</td><td>9%</td><td>248</td><td>16</td></tr><tr><td>FY24</td><td>1,378</td><td>4.2%</td><td>18</td><td>3%</td><td>349</td><td>66</td></tr><tr><td>FY25</td><td>2,020</td><td>4.8%</td><td>25</td><td>6%</td><td>397</td><td>42</td></tr><tr><td>FY26</td><td>2,312</td><td>10%</td><td>107</td><td>19%</td><td>318</td><td>207</td></tr><tr><td>TTM</td><td>2,432</td><td>13%</td><td>171</td><td>–</td><td>234</td><td>–</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Recent quarters (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>Qtr</th><th>Dec-24</th><th>Mar-25</th><th>Jun-25</th><th>Sep-25</th><th>Dec-25</th><th>Mar-26</th><th>Jun-26</th><th>Sep-26</th></tr></thead><tbody><tr><td>Sales</td><td>610</td><td>515</td><td>593</td><td>542</td><td>627</td><td>551</td><td>640</td><td>615</td></tr><tr><td>OPM</td><td>4.4%</td><td>6%</td><td>6%</td><td>8%</td><td>14%</td><td>12%</td><td>13%</td><td>11%</td></tr><tr><td>PAT</td><td>7</td><td>7</td><td>13</td><td>16</td><td>41</td><td>38</td><td>54</td><td>39</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Holders, balance sheet, cash</div>
+      <ul class="b-list"><li>Promoter 66.71% → 66.80%. FII ~0.26%. DII went to zero. Institutions absent.</li><li>No pledge flag (Screener auto-flag only). Equity flat at ₹6 cr; no dilution.</li><li>Debtor days 32. FY26 CFO 1.9x PAT.</li></ul>
+    </div>
+    <div class="substep">
+      <div class="what-box">
+        <div class="wb-label">Structural story · named cause</div>
+        <ul class="b-list"><li><b>Named cause:</b> grain-ethanol distilleries built with debt in FY22–24 now at ~82% utilisation.</li><li>Ethanol EBITDA margin 16% in H1 FY27 vs 8% a year earlier. 2026–27 allocation 1.97 lakh KL (~₹1,305 cr).</li><li>Q2 FY27 PAT ₹39 cr, +151%.</li><li>Deleveraging 397 → 234; HSBC loan exit targeted by February.</li></ul>
+      </div>
+      <div class="sc-bull"><strong>Bull case, in numbers</strong><ul class="b-list"><li>FY27 sales ₹2,600 cr at 10–11% EBITDA (guide) → PAT ₹140–160 cr. At 9–10x → ₹1,400–1,600 cr, 1.4–1.6x.</li><li>Grain normalisation plus ₹100–120 cr sorbitol/maltodextrin capex could add a less cyclical leg.</li></ul></div>
+      <div class="sc-risks"><div class="ss-label" style="margin:1rem 0 4px">Risks</div><div class="sc-risk-item">Ethanol unviable with maize above ₹26–27/kg (management). Maize is ₹30–32/kg now; H2 margins guided 1–2 pp lower.</div><div class="sc-risk-item">Full-year ethanol EBITDA guide 11–12%; Q2 OPM already dipped to 11%.</div><div class="sc-risk-item">No institutional ownership.</div></div>
+    </div>
+    <div class="substep">
+      <div class="how-box">
+        <div class="wb-label">Kill criteria · exit or downgrade if</div>
+        <ul class="b-list"><li>OPM below 8% in Q3/Q4 FY27.</li><li>Debt rising above ₹300 cr.</li><li>Ethanol procurement price not revised up while grain stays high.</li></ul>
+      </div>
+      <div class="verdict-box">
+        <div class="vb-label">Verdict · WATCHLIST · 58/100 · feedstock spread, not a franchise</div>
+        <p>5.9x and ~2% implied growth looks absurdly cheap, but the margin is a maize-ethanol spread that management says is already squeezed. Cheap for a reason.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="step" id="dd-honasa" data-theme="cons">
+  <button class="step-header" type="button" aria-expanded="false" aria-controls="body-honasa">
+    <span class="step-num">11</span>
+    <span class="step-meta">
+      <span class="step-eyebrow">Consumption &amp; financialisation · NSE: HONASA</span>
+      <span class="step-title">Honasa Consumer</span>
+      <span class="step-subtitle">Mamaearth parent; Project Neev distribution overhaul, younger brands driving mix</span>
+    </span>
+    <span class="step-side">
+      <span class="vpill v-watch">WATCHLIST</span>
+      <span class="step-score mono">55<small>/100</small></span>
+      <svg class="step-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </span>
+  </button>
+  <div class="step-body" id="body-honasa" hidden>
+    <div class="substep">
+      <div class="sc-metrics m5">
+        <div class="sc-metric"><div class="sc-metric-val">₹529</div><div class="sc-metric-lab">Price 19 Nov</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">₹17,257 cr</div><div class="sc-metric-lab">Market cap</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">61.0</div><div class="sc-metric-lab">P/E recomputed</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">19%</div><div class="sc-metric-lab">ROCE</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~21–23%</div><div class="sc-metric-lab">Implied 10-yr g</div></div>
+      </div>
+      <div class="where-box">
+        <div class="wb-label">Verified price · sources &amp; timestamps</div>
+        <ul class="b-list small"><li>Screener.in ₹529, 19 Nov 2026 3:32 pm. 52-wk high ₹535; trading at the high. Mcap ₹17,257 cr.</li><li>Upstox ₹481.65 (5 Nov). Kotak Neo 52-wk high ₹509.8 (21 Oct).</li><li><b>Single-source for today.</b> No second quote for 18–19 Nov. The ~10% gap vs 5 Nov fits the post-Q2 rally (Inc42: 'jumps over 8%').</li><li>Re-derived P/E ₹17,257 / ₹283 cr = 61x.</li></ul>
+      </div>
+    </div>
+    <div class="substep">
+      <div class="ss-label">Five-year view (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>FY</th><th>Sales</th><th>OPM</th><th>PAT</th></tr></thead><tbody><tr><td>FY23</td><td>1,493</td><td>1.5%</td><td>−151</td></tr><tr><td>FY24</td><td>1,920</td><td>7%</td><td>111</td></tr><tr><td>FY25</td><td>2,067</td><td>3.4%</td><td>73</td></tr><tr><td>FY26</td><td>2,392</td><td>10%</td><td>200</td></tr><tr><td>TTM</td><td>2,746</td><td>13%</td><td>283</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Recent quarters (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>Qtr</th><th>Sep-24</th><th>Dec-24</th><th>Mar-25</th><th>Jun-25</th><th>Sep-25</th><th>Dec-25</th><th>Mar-26</th><th>Jun-26</th><th>Sep-26</th></tr></thead><tbody><tr><td>Sales</td><td>462</td><td>518</td><td>534</td><td>595</td><td>538</td><td>602</td><td>657</td><td>756</td><td>731</td></tr><tr><td>OPM</td><td>−7%</td><td>5%</td><td>5%</td><td>8%</td><td>9%</td><td>11%</td><td>12%</td><td>15%</td><td>13%</td></tr><tr><td>PAT</td><td>−19</td><td>26</td><td>25</td><td>41</td><td>39</td><td>50</td><td>69</td><td>90</td><td>73</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Holders, balance sheet, cash</div>
+      <ul class="b-list"><li>Promoter steady 35.5%. DII 18.5% → 23.4%, rising. FII 15.4% → 14.9%. No pledge found.</li><li>ROCE 8% (FY25) → 19% (FY26). CFO/PAT 0.70 in FY26 (1.4 in FY25): mediocre. Debt is leases only.</li><li>Other income ₹16–24 cr/qtr = ~25–30% of PAT: core is weaker than headline. Tax rate swings 12–27%.</li><li>Loss quarter Sep-24 (distributor inventory clean-up).</li></ul>
+    </div>
+    <div class="substep">
+      <div class="what-box">
+        <div class="wb-label">Structural story · named cause</div>
+        <ul class="b-list"><li><b>Named cause:</b> Project Neev (late 2024) moved general trade off super-stockists to direct distribution. GT secondaries +30%, MT offtake +40%, ~3.2 lakh GT outlets.</li><li>Younger brands (Derma Co, Aqualogica, Dr Sheth's) grew &gt;45% at better margins: the mix-shift element. Gross margin ~70%.</li><li>Q2 FY27: revenue +36%, EBITDA +93%, margin 12.7%.</li><li>Management's target is only a '15% EBITDA margin profile' within four years; Q1 already printed 15%.</li></ul>
+      </div>
+      <div class="sc-bull"><strong>Bull case, in numbers</strong><ul class="b-list"><li>FY29 sales ~₹4,600 cr (25% CAGR), 15% EBITDA + other income → PAT ~₹570 cr. At 50x → ~₹28,500 cr, +65%.</li><li>Bear: growth 15%, margin 11% → PAT ~₹350 cr at 35x → ~₹12,250 cr, −29%.</li></ul></div>
+      <div class="sc-risks"><div class="ss-label" style="margin:1rem 0 4px">Risks</div><div class="sc-risk-item">History of channel inventory stuffing (2024).</div><div class="sc-risk-item">Intense D2C/beauty competition (HUL/Minimalist, Nykaa private labels, Reliance).</div><div class="sc-risk-item">Other-income dependence.</div><div class="sc-risk-item">Q2 sequential decline in revenue and PAT.</div></div>
+    </div>
+    <div class="substep">
+      <div class="how-box">
+        <div class="wb-label">Kill criteria · exit or downgrade if</div>
+        <ul class="b-list"><li>Revenue growth below 20%.</li><li>OPM below 10%.</li><li>Channel build-up signs: receivable days above 35, or GT secondaries falling.</li></ul>
+      </div>
+      <div class="verdict-box">
+        <div class="vb-label">Verdict · WATCHLIST · 55/100 · wait for 20–25% pullback</div>
+        <p>Real, named turnaround, but at a 52-week high and 61x with management's own margin ceiling already reached. Priced for perfection.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="step" id="dd-techno" data-theme="power">
+  <button class="step-header" type="button" aria-expanded="false" aria-controls="body-techno">
+    <span class="step-num">12</span>
+    <span class="step-meta">
+      <span class="step-eyebrow">Power &amp; data centre · NSE: TECHNOE</span>
+      <span class="step-title">Techno Electric &amp; Engineering</span>
+      <span class="step-subtitle">T&amp;D EPC plus data-centre developer; the only small/mid-cap with DCs in the thesis</span>
+    </span>
+    <span class="step-side">
+      <span class="vpill v-watch">WATCHLIST</span>
+      <span class="step-score mono">50<small>/100</small></span>
+      <svg class="step-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </span>
+  </button>
+  <div class="step-body" id="body-techno" hidden>
+    <div class="substep">
+      <div class="sc-metrics m5">
+        <div class="sc-metric"><div class="sc-metric-val">₹929.00</div><div class="sc-metric-lab">Price 19 Nov</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~₹10,817 cr</div><div class="sc-metric-lab">Market cap</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">22.3 (~27 ex-OI)</div><div class="sc-metric-lab">P/E recomputed</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">15%</div><div class="sc-metric-lab">ROCE</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">12%</div><div class="sc-metric-lab">Implied 10-yr g</div></div>
+      </div>
+      <div class="where-box">
+        <div class="wb-label">Verified price · sources &amp; timestamps</div>
+        <ul class="b-list small"><li>₹929.00 close, 19 Nov 2026 (Screener chart). Upstox ₹850.10 (3 Nov) and 5paisa ₹928.50 (6 Nov) match the series exactly.</li><li><b>Discrepancy:</b> 5paisa (~13 Nov) shows mcap ₹11,817 cr, P/E 24.3. Recompute uses 11.64 cr shares and TTM EPS 41.74 → mcap ₹10,817 cr, P/E 22.3x.</li><li>Ex-other income (TTM ₹121 cr of ~₹600 cr PBT), P/E ~27x.</li></ul>
+      </div>
+    </div>
+    <div class="substep">
+      <div class="ss-label">Five-year view (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>FY</th><th>Sales</th><th>OPM</th><th>Other inc.</th><th>PAT</th><th>ROCE</th><th>CFO</th><th>Debtor days</th></tr></thead><tbody><tr><td>FY22</td><td>999</td><td>16%</td><td>175</td><td>264</td><td>18%</td><td>259</td><td>213</td></tr><tr><td>FY23</td><td>830</td><td>11%</td><td>165</td><td>187</td><td>8%</td><td>93</td><td>282</td></tr><tr><td>FY24</td><td>1,502</td><td>14%</td><td>134</td><td>268</td><td>17%</td><td>−198</td><td>180</td></tr><tr><td>FY25</td><td>2,269</td><td>15%</td><td>205</td><td>423</td><td>17%</td><td>453</td><td>108</td></tr><tr><td>FY26</td><td>3,252</td><td>14%</td><td>175</td><td>474</td><td>15%</td><td>−590</td><td>137</td></tr><tr><td>TTM</td><td>3,620</td><td>15%</td><td>121</td><td>486</td><td>–</td><td>–</td><td>–</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Recent quarters (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>Qtr</th><th>Sep-25</th><th>Dec-25</th><th>Mar-26</th><th>Jun-26</th><th>Sep-26</th></tr></thead><tbody><tr><td>Sales</td><td>843</td><td>872</td><td>1,010</td><td>630</td><td>1,108</td></tr><tr><td>OPM</td><td>13%</td><td>14%</td><td>13%</td><td>16%</td><td>16%</td></tr><tr><td>PAT</td><td>104</td><td>119</td><td>115</td><td>93</td><td>158</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Holders, balance sheet, cash</div>
+      <ul class="b-list"><li>Promoter 61.52% → 56.93%: QIP dilution (₹1,250 cr, Sep-24), not selling.</li><li>FII 3.85% → 9.8% → 8.09%, drifting down. DII 23.76% → 21.33%, drifting down.</li><li>Pledge <b>not verified</b> (no data found).</li><li>Q2 FY27 core EBITDA +63%: real operating improvement.</li></ul>
+    </div>
+    <div class="substep">
+      <div class="what-box">
+        <div class="wb-label">Structural story · named cause</div>
+        <ul class="b-list"><li>Data centres are <b>barely visible in earnings</b>: Gurgaon edge DC live (RailTel ~50%); Chennai 35–40 MW (sources conflict), contracted cited as low as 0.5 MW; 2 MW Andhra DC due H1 FY28.</li><li>QIP cash going into DCs and TBCB transmission assets (regulated return, low ROCE). Pulled ROCE to 15% and FY26 CFO to −₹590 cr.</li><li>Order book ~₹10–11k cr, ~3x revenue (sources conflict). Stock −34% in 6 months.</li></ul>
+      </div>
+      <div class="sc-bull"><strong>Bull case, in numbers</strong><ul class="b-list"><li>FY27 revenue guide ₹4,000 cr; EPC OPM 15–16%.</li><li>Chennai lease-up to 35+ MW at ~₹8–10 cr/MW/yr → ₹300 cr+ annuity revenue by FY29 → re-rate to ~30x core, ~1.6–1.8x.</li></ul></div>
+      <div class="sc-risks"><div class="ss-label" style="margin:1rem 0 4px">Risks</div><div class="sc-risk-item">ROCE below the 15% hurdle.</div><div class="sc-risk-item">Negative CFO in two of the last three years.</div><div class="sc-risk-item">Other income propping PAT.</div><div class="sc-risk-item">DC monetisation unproven; order-book and MW figures inconsistent across sources.</div></div>
+    </div>
+    <div class="substep">
+      <div class="how-box">
+        <div class="wb-label">Kill criteria · exit or downgrade if</div>
+        <ul class="b-list"><li>FY27 CFO negative again.</li><li>No Chennai hyperscaler contract by FY27 end.</li><li>Debtor days above 180.</li><li><b>Upgrade trigger:</b> signed 20+ MW hyperscale lease plus positive CFO.</li></ul>
+      </div>
+      <div class="verdict-box">
+        <div class="vb-label">Verdict · WATCHLIST · 50/100 · DC angle unproven</div>
+        <p>The data-centre story is in the slide deck, not yet in the P&amp;L. Wait for a signed hyperscale lease and positive cash flow.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="step" id="dd-birla" data-theme="quant">
+  <button class="step-header" type="button" aria-expanded="false" aria-controls="body-birla">
+    <span class="step-num">13</span>
+    <span class="step-meta">
+      <span class="step-eyebrow">Quant pattern hunt · NSE: BIRLACABLE</span>
+      <span class="step-title">Birla Cable</span>
+      <span class="step-subtitle">Optical fibre cable; price spike on AI/data-centre demand</span>
+    </span>
+    <span class="step-side">
+      <span class="vpill v-watch">WATCHLIST</span>
+      <span class="step-score mono">45<small>/100</small></span>
+      <svg class="step-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </span>
+  </button>
+  <div class="step-body" id="body-birla" hidden>
+    <div class="substep">
+      <div class="sc-metrics m5">
+        <div class="sc-metric"><div class="sc-metric-val">₹301.20</div><div class="sc-metric-lab">Price 19 Nov</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~₹904 cr</div><div class="sc-metric-lab">Market cap</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">10.8 (6.5 run-rate)</div><div class="sc-metric-lab">P/E recomputed</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">n/a</div><div class="sc-metric-lab">ROCE</div></div>
+        <div class="sc-metric"><div class="sc-metric-val">~8% (3% run-rate)</div><div class="sc-metric-lab">Implied 10-yr g</div></div>
+      </div>
+      <div class="where-box">
+        <div class="wb-label">Verified price · sources &amp; timestamps</div>
+        <ul class="b-list small"><li>Screener ₹301, 19 Nov 2026. Google Finance NSE close ₹301.20, 3:30 pm IST.</li><li>Earlier: ₹316 (3 Nov, Upstox).</li><li>Recomputed: TTM PAT ₹84 cr (4+11+31+38) → P/E 10.8x (H1 annualised 6.5x). Mcap ~₹904 cr.</li><li>ROCE not reported in the notes; shown as n/a.</li></ul>
+      </div>
+    </div>
+    <div class="substep">
+      <div class="ss-label">Five-year view (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>FY</th><th>Sales</th><th>OPM</th><th>PAT</th><th>Borrowings</th><th>CFO</th></tr></thead><tbody><tr><td>FY22</td><td>535</td><td>8%</td><td>22</td><td>82</td><td>3</td></tr><tr><td>FY23</td><td>792</td><td>8%</td><td>33</td><td>129</td><td>−8</td></tr><tr><td>FY24</td><td>686</td><td>6%</td><td>22</td><td>165</td><td>16</td></tr><tr><td>FY25</td><td>662</td><td>4.9%</td><td>5</td><td>111</td><td>112</td></tr><tr><td>FY26</td><td>771</td><td>6%</td><td>17</td><td>133</td><td>−21</td></tr><tr><td>TTM</td><td>1,040</td><td>13%</td><td>83</td><td>106</td><td>–</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Recent quarters (₹ cr)</div>
+      <div class="tbl-wrap"><table class="plain-table"><thead><tr><th>Qtr</th><th>Dec-24</th><th>Mar-25</th><th>Jun-25</th><th>Sep-25</th><th>Dec-25</th><th>Mar-26</th><th>Jun-26</th><th>Sep-26</th></tr></thead><tbody><tr><td>Sales</td><td>158</td><td>156</td><td>176</td><td>176</td><td>205</td><td>214</td><td>267</td><td>355</td></tr><tr><td>OPM</td><td>6%</td><td>5%</td><td>4.4%</td><td>4.1%</td><td>5%</td><td>9%</td><td>17%</td><td>15%</td></tr><tr><td>PAT</td><td>1</td><td>1</td><td>1</td><td>1</td><td>4</td><td>11</td><td>31</td><td>38</td></tr></tbody></table></div>
+      <div class="ss-label" style="margin-top:1.25rem">Holders, balance sheet, cash</div>
+      <ul class="b-list"><li>Promoter steady 66.35%. FII 0.02% → 0.87% in Sep-26: one quarter, not a trend.</li><li>FY26 CFO −₹21 cr. Debtor days ~96; CCC 124 days.</li><li>Stock up ~153% YTD. Sector peers fell 31% after the October 2026 AI-stock rout.</li></ul>
+    </div>
+    <div class="substep">
+      <div class="what-box">
+        <div class="wb-label">Structural story · named cause</div>
+        <ul class="b-list"><li><b>Named cause:</b> optical-fibre prices spiked on AI/DC demand (~3x in 18 months per forum and industry reports); Q2 revenue doubled YoY.</li><li>The 10-year OPM history shows the same spike in FY19 (16%) in the last fibre boom, then a bust to 8%.</li><li>This is a cyclical price spike, not a structural shift.</li></ul>
+      </div>
+      <div class="sc-bull"><strong>Bull case, in numbers</strong><ul class="b-list"><li>If the H1 run-rate holds, PAT ~₹140 cr. At 10x → ₹1,400 cr, 1.5x.</li></ul></div>
+      <div class="sc-risks"><div class="ss-label" style="margin:1rem 0 4px">Risks</div><div class="sc-risk-item">Fibre price cycle has busted before (FY19 → FY20s).</div><div class="sc-risk-item">Negative CFO; working capital stretched.</div><div class="sc-risk-item">Already up ~153% YTD; momentum crowd.</div></div>
+    </div>
+    <div class="substep">
+      <div class="how-box">
+        <div class="wb-label">Kill criteria · exit or downgrade if</div>
+        <ul class="b-list"><li>OPM below 10%.</li><li>Fibre spot prices roll over.</li><li>CFO stays negative in H1 FY27.</li></ul>
+      </div>
+      <div class="verdict-box">
+        <div class="vb-label">Verdict · WATCHLIST · 45/100 · do not chase</div>
+        <p>We have seen this movie in FY19. Price spike, not a franchise. Do not chase.</p>
+      </div>
+    </div>
+  </div>
+</article>
+    </div>
+  </div>
+</section>
+
+<div class="phase-divider" style="padding-left:var(--gutter-l);padding-right:var(--gutter-r)"><div class="phase-label">Part 3 · What not to own</div></div>
+
+<section class="section" id="avoid">
+  <div class="section-inner">
+    <div class="sec-eyebrow">Red flags · avoid list</div>
+    <h2>Names that look good <em>until you check one thing.</em></h2>
+    <p class="sec-sub">Each of these passed some screen. Each fails on governance, cash flow, or the absence of a real cause. Low P/E did not save any of them.</p>
+
+    <div class="avoid-grid">
+      <div class="avoid-card"><div class="ac-top"><h4>Indo Tech Transformers</h4><span class="ac-flag">PLEDGE 57.93%</span></div><p>ROCE 40% at 26x looks fine. On 12 Nov 2026 the promoter (SSEL) pledged 57.93% of total equity for a USD 66m loan, after selling shares in June–July 2026. Q2 PAT only +5%, OPM down to 13%. Fails governance. <b>AVOID.</b></p></div>
+      <div class="avoid-card"><div class="ac-top"><h4>Genus Power</h4><span class="ac-flag">CFO NEGATIVE 3 YRS</span></div><p>12x P/E looks cheap. CFO −152 / −443 / −219 cr three years running, borrowings ₹2,482 cr, FIIs 18.7% → 7.4% in the Sep-26 quarter. <b>AVOID.</b></p></div>
+      <div class="avoid-card"><div class="ac-top"><h4>Jayaswal Neco</h4><span class="ac-flag">PLEDGE 99.9%</span></div><p>Textbook deleveraging (debt ₹3,845 cr → ₹1,496 cr), but promoters have pledged 99.9%. Disqualified, regardless of the numbers.</p></div>
+      <div class="avoid-card"><div class="ac-top"><h4>Syncom Formulations</h4><span class="ac-flag">NO CAUSE · 40/100</span></div><p>Six-quarter OPM climb 12% → 22%, debt to ~0, FIIs up, 21.7x. But no operational cause found: no new plant; the only 2026 spend is ₹57 cr of Andheri commercial property. Other income ~27% of PBT, 4.2 lakh retail holders on a ₹22 stock, CFO changed Aug 2026. <b>AVOID for now.</b></p></div>
+      <div class="avoid-card"><div class="ac-top"><h4>Gold jewellers</h4><span class="ac-flag">INVENTORY GAINS</span></div><p>Senco (8.75x), PN Gadgil, Thangamayil, Sky Gold. Gold-price inventory gains inflate margins and make P/Es look cheap. CFO deeply negative (Senco −₹789 cr, PNG −₹717 cr), borrowings ballooning. Reverses if gold corrects.</p></div>
+      <div class="avoid-card"><div class="ac-top"><h4>Angel One</h4><span class="ac-flag">BALANCE SHEET</span></div><p>The STT-hike short is stale (Sep-26 PAT ₹335 cr vs ₹212 cr). Still avoided: borrowings ₹7,632 cr and FY26 CFO −₹4,142 cr.</p></div>
+      <div class="avoid-card"><div class="ac-top"><h4>Modern Insulators</h4><span class="ac-flag">QUALIFIED AUDIT</span></div><p>Genuine OPM step-up (5–8% → 16–22%) at 20x, but FY26 and Q2 FY27 audits are qualified (tax unprovided pending Modern Denim amalgamation). ₹23 cr other income in Q2, inventory ~290 days, up 3.2x in 12 months. Watch until NCLT approves.</p></div>
+      <div class="avoid-card"><div class="ac-top"><h4>Importers with unhedged USD costs</h4><span class="ac-flag">SECTOR VIEW</span></div><p>OMCs (HPCL/BPCL/IOC), airlines (InterGlobe, SpiceJet), paints (Asian, Berger, Indigo, Kansai), edible-oil importers (AWL Agri), durables assemblers without pass-through, and anyone with unhedged USD debt and rupee revenue. Not deep-dived individually.</p></div>
+    </div>
+
+    <div class="alert crit"><div class="alert-icon">!</div><div class="alert-text"><strong>Hard rule:</strong> any promoter pledge, a qualified audit, or a margin jump with no identifiable operating cause is disqualifying, however cheap the stock looks.</div></div>
+
+    <div class="sec-eyebrow" style="margin-top:2rem">Rejected names · one line each</div>
+    <div class="collapse">
+      <button class="collapse-head" type="button" aria-expanded="false"><span><span class="ch-title">Weak rupee track</span><span class="ch-sub">25 rejected / watchlist</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="collapse-body" hidden><ul class="rej-list">
+        <li><b>Acutaas Chemicals</b><span>₹32k cr at 73.5x; implies ~31% EPS CAGR for 10 years.</span></li>
+        <li><b>Neuland Labs</b><span>60x; OPM swings 12–40%, not sustained.</span></li>
+        <li><b>Sansera Engineering</b><span>72x with ROCE ~15%.</span></li>
+        <li><b>Happy Forgings</b><span>31% OPM already priced at 49x; DIIs trimming.</span></li>
+        <li><b>Shivalik Bimetal</b><span>Best growth (Q2 +45%) but 47x implies ~25%; DIIs 21.1% → 10.9%; debtor days 99. Watchlist.</span></li>
+        <li><b>Caplin Point</b><span>Debtor days up every year, 12 → 138; LatAm-heavy receivables.</span></li>
+        <li><b>Marksans Pharma</b><span>CCC 261 days; borrowings 30 → 465; FII swings.</span></li>
+        <li><b>eClerx</b><span>ROCE 34% at 19x, but debtor days 62 → 90, FIIs trimming, AI de-rating risk.</span></li>
+        <li><b>Banco Products</b><span>Closest alternate (19.4x, ROCE 31%, ~₹705), but standalone India profit falling, borrowings ₹516 cr, CCC 232. Watchlist, not fully verified.</span></li>
+        <li><b>Avanti Feeds / Apex Frozen</b><span>Shrimp margin shock (OPM 13% → 4.5%) / ROCE ~10%, Q2 OPM 4.9%.</span></li>
+        <li><b>Supriya Lifescience</b><span>OPM 36% → 22%; debtor days 70 → 97.</span></li>
+        <li><b>Aarti Pharmalabs</b><span>ROCE ~11%; borrowings 338 → 897; promoter 44.65% → 39.66%.</span></li>
+        <li><b>Hikal</b><span>Loss in 4 of 6 quarters; ROCE 3.5%.</span></li>
+        <li><b>Vishnu Chemicals</b><span>Debt-funded growth (342 → 718); ROCE 30% → 16%.</span></li>
+        <li><b>Fineotex</b><span>FY26 CFO −24 vs PAT 125; debtor days 137.</span></li>
+        <li><b>Privi Speciality</b><span>~₹1,000 cr debt; promoter 74% → 60.6%; 37x.</span></li>
+        <li><b>Indo Count / Pearl Global / Gokaldas</b><span>Textiles: low ROCE, rising debt, FIIs exiting.</span></li>
+        <li><b>GNA Axles</b><span>Promoter 68.4% → 58.5% in two quarters; debtor days 151.</span></li>
+        <li><b>Sharda Motor / Frontier Springs</b><span>Domestic businesses, outside the theme.</span></li>
+        <li><b>Mastek / R Systems</b><span>Cheap (10–13x) but FII/DII exits, UK public-sector and Blackstone overhangs. Contrarian watch.</span></li>
+        <li><b>Saksoft / Nucleus / Sasken</b><span>Flat revenue / OPM 4–7% / negative CFO.</span></li>
+      </ul></div>
+    </div>
+    <div class="collapse">
+      <button class="collapse-head" type="button" aria-expanded="false"><span><span class="ch-title">Power &amp; data-centre track</span><span class="ch-sub">28 rejected / watchlist</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="collapse-body" hidden><ul class="rej-list">
+        <li><b>Shilchar</b><span>ROCE 51–75% history, but OPM 31% → 21% → 16% → 21%, Q2 PAT −28%, ~30x TTM. Peak-margin signal. Watchlist.</span></li>
+        <li><b>Voltamp</b><span>OPM 20% → 15%, FY26 PAT −6%, promoter 38% → 30%, 30x.</span></li>
+        <li><b>TARIL</b><span>30x; FY26 CFO −₹105 cr vs PAT ₹272 cr; DII 7.7% → 1.2%.</span></li>
+        <li><b>Atlanta Electricals</b><span>~50x (implies 23%); 87% promoter, thin float.</span></li>
+        <li><b>Quality Power / Marine Electricals / KRN</b><span>83x / 75x (debtor days 178) / 55x with negative CFO. Priced.</span></li>
+        <li><b>Kirloskar Oil Engines</b><span>Mcap ₹24.7k cr above band; 49x; ₹5.6k cr NBFC borrowings.</span></li>
+        <li><b>Oriana Power (SME)</b><span>7.4x after −64% fall; receivables ₹935 cr vs H1 revenue ₹1,000 cr; unexplained −26% move 16–18 Nov. Contrarian watch.</span></li>
+        <li><b>Danish Power (SME)</b><span>Runner-up: 24x, ROCE 22%, but order book ~1x revenue, DII 9.6% → 4.3%, half-yearly reporting.</span></li>
+        <li><b>Vilas Transcore (SME)</b><span>Only CRGO-adjacent name; OPM 14% → 10%, FY26 CFO −₹42 cr.</span></li>
+        <li><b>Precision Wires</b><span>~38x on 5% OPM; borrowings ₹293 → ₹1,475 cr (cause unverified).</span></li>
+        <li><b>Ram Ratna / Universal Cables / Salzer / HPL</b><span>Low OPM or ROCE, rising debt, stretched receivables.</span></li>
+        <li><b>Diamond Power / Hind Rectifiers / Bajel</b><span>73x / ~89x / 75x on weak ROCE or margins.</span></li>
+        <li><b>Prostarm</b><span>OPM 17% → 8%, debtor days 241, CFO negative.</span></li>
+        <li><b>Bharat Bijlee / Jyoti Structures</b><span>ROCE 8% / ROCE 2% with ₹2,175 cr debt.</span></li>
+        <li><b>Apar, GE Vernova T&amp;D</b><span>First-order beneficiaries, priced (42x, n.m.).</span></li>
+        <li><b>KPIL</b><span>Fine at 19x, but ₹22.5k cr mcap is above the band.</span></li>
+      </ul></div>
+    </div>
+    <div class="collapse">
+      <button class="collapse-head" type="button" aria-expanded="false"><span><span class="ch-title">Consumption &amp; financialisation track</span><span class="ch-sub">20 rejected / watchlist</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="collapse-body" hidden><ul class="rej-list">
+        <li><b>KFin Tech</b><span>OPM falling 45% → 34–40%; General Atlantic sold 32.9% → 14.1%; implies ~17%.</span></li>
+        <li><b>CAMS</b><span>Best-in-class (ROCE 47%) but ~10–15% growth, FIIs 57.6% → 45.6%. Fairly priced.</span></li>
+        <li><b>Anand Rathi Wealth / Nuvama</b><span>Above band; 86x with Q2 OPM drop / ₹13.2k cr borrowings, negative CFO.</span></li>
+        <li><b>UTI AMC</b><span>Loss quarter Mar-26; MTM-heavy; ROE 10%.</span></li>
+        <li><b>CDSL</b><span>F&amp;O damage already in numbers; 59x.</span></li>
+        <li><b>Radico Khaitan</b><span>The template (OPM 13% → 21%), but ₹62k cr at 78x implies ~24%.</span></li>
+        <li><b>Tilaknagar</b><span>Imperial Blue buy took borrowings ₹44 cr → ₹2,301 cr; loss quarters; debtor days 198.</span></li>
+        <li><b>Sula Vineyards</b><span>OPM 31% → 18%; ROCE 8%; FIIs 9.6% → 0.35%.</span></li>
+        <li><b>Piccadily Agro (Indri)</b><span>Margin peaked (26–28% → 17–21%); debt ₹154 → ₹550 cr. Watchlist.</span></li>
+        <li><b>Associated Alcohols</b><span>14.5x but Sep-26 OPM collapsed to 6.5% with no explained cause. Watchlist.</span></li>
+        <li><b>Globus Spirits</b><span>ROCE 11%, erratic margins.</span></li>
+        <li><b>Metro Brands / Campus / Mrs Bectors</b><span>No step-change at 42–54x; FIIs falling.</span></li>
+        <li><b>V2 Retail</b><span>Debt ₹525 → ₹1,379 cr; FY26 CFO −₹103 cr.</span></li>
+        <li><b>Jyothy Labs</b><span>Screener consolidated data stops at Mar-25; unverifiable. Excluded.</span></li>
+        <li><b>Devyani</b><span>1,304x, ROCE 4.75%.</span></li>
+      </ul></div>
+    </div>
+    <div class="collapse">
+      <button class="collapse-head" type="button" aria-expanded="false"><span><span class="ch-title">Quant pattern track</span><span class="ch-sub">30+ rejected or excluded</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="collapse-body" hidden><ul class="rej-list">
+        <li><b>KRBL</b><span>Debt 545 → 33, OPM 19–21%, but governance concerns (2024 ID resignation, promoter enforcement case); ₹9.6k cr at the ceiling.</span></li>
+        <li><b>Manaksia Steels</b><span>OPM step with no cause; ₹800 cr capex vs ₹760 cr mcap.</span></li>
+        <li><b>Emami Paper</b><span>5.2x and OPM 7% → 16%, but ₹933 cr debt not falling; cyclical.</span></li>
+        <li><b>Sportking / Chamanlal Setia / Apcotex</b><span>One or two strong quarters on a commodity spread.</span></li>
+        <li><b>Vardhman Special Steels</b><span>Promoter 60% → 51%; equity 82 → 97 (dilution). Watch.</span></li>
+        <li><b>Antelopus Selan</b><span>Reverse-merger dilution (15 → 35); FIIs 3.9% → 0.45%.</span></li>
+        <li><b>Websol Energy</b><span>Margins falling 47% → 35% on solar-cell oversupply.</span></li>
+        <li><b>Kernex Microsystems</b><span>Negative CFO, debtor days 268, promoter only 28.7%.</span></li>
+        <li><b>Welspun Enterprises / Rashi / EFC</b><span>Lumpy quarter and ₹2,100 cr debt / negative CFO / dilution 10 → 30.</span></li>
+        <li><b>Hariom Pipe, Lumax, Greenply, SSWL</b><span>Debt rising.</span></li>
+        <li><b>InfoBeans / Amrutanjan / Taal Tech</b><span>Margin reversion, promoter trimming / no growth, DII exit / debtor days 63 → 96.</span></li>
+        <li><b>Madras Fertilizers / Gokul Agro / IMFA</b><span>PSU at 5% OPM / 3% trader / ferrochrome cyclical.</span></li>
+        <li><b>No inflection or well covered</b><span>Fiem, Swaraj Engines, MPS (picked in rupee track), VRL, J Kumar, Vimta, Dynamic Cables, Bharat Seats, Pudumjee, Haldyn Glass, Jindal Drilling, R Systems, TIIL.</span></li>
+        <li><b>Excluded by type</b><span>SME / micro listings, holding cos, NBFCs, InvITs: Kalind, Shera, APS, SJ Logistics, Resonance, SIL Investments, Kama Holdings, Indus InvIT, Dolat Algotech and others.</span></li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<div class="phase-divider" style="padding-left:var(--gutter-l);padding-right:var(--gutter-r)"><div class="phase-label">Part 4 · Turning ideas into a portfolio</div></div>
+
+<section class="section" id="portfolio">
+  <div class="section-inner">
+    <div class="sec-eyebrow">Portfolio construction · illustrative only</div>
+    <h2>Size by conviction, <em>expect most to disappoint.</em></h2>
+    <p class="sec-sub">This is an illustrative framework, not a recommendation for anyone's money. Figures are % of total equity portfolio. The point is the structure: a core that does not depend on being right, and a satellite sized so that being wrong is survivable.</p>
+
+    <div class="process-flow">
+      <div class="pf-step"><div class="pf-num">1</div><div class="pf-body"><div class="pf-title">Core: broad index <span class="pf-badge" style="background:rgba(28,26,23,.08);color:var(--ink)">~70%</span></div><div class="pf-desc">Low-cost Nifty 50 / broad-market index. This is the return you get for doing nothing, and the bar every satellite pick must beat after costs.</div></div></div>
+      <div class="pf-step active-step"><div class="pf-num">2</div><div class="pf-body"><div class="pf-title">Tier A: BUY-ZONE, score ≥66 <span class="pf-badge" style="background:rgba(26,92,58,.12);color:var(--pine)">3.5–4% each</span></div><div class="pf-desc"><b>Uniparts (72), Sandur (68), Bajaj Consumer (66), Skipper (66).</b> Target ~4% for 68+, ~3.5% for 66. <b>Max single position 5% at cost</b>; trim if it grows past 8% of the portfolio.</div></div></div>
+      <div class="pf-step"><div class="pf-num">3</div><div class="pf-body"><div class="pf-title">Tier B: conditional BUY-ZONE <span class="pf-badge" style="background:rgba(184,134,11,.14);color:var(--amber)">~2%</span></div><div class="pf-desc"><b>Transrail (62).</b> Half-size until H2 FY27 order inflow shows the book has stopped shrinking. Top up to ~3.5% only if FY27 inflow tracks above ₹7,000 cr.</div></div></div>
+      <div class="pf-step"><div class="pf-num">4</div><div class="pf-body"><div class="pf-title">Tier C: WATCHLIST with triggers <span class="pf-badge" style="background:rgba(28,26,23,.07);color:var(--ink3)">0% now · ≤1.5% on trigger</span></div><div class="pf-desc">MPS below ~₹2,000 · Prudent below ~₹2,500 · Rolex near ₹165–170 or two clean quarters · IOL after Q3 FY27 or ≤22x TTM · Honasa after a 20–25% pullback · Techno on a signed 20+ MW lease and positive CFO. Gulshan and Birla Cable: no position; cyclical spreads.</div></div></div>
+      <div class="pf-step"><div class="pf-num">5</div><div class="pf-body"><div class="pf-title">Staggered entry and caps <span class="pf-badge" style="background:rgba(192,57,43,.1);color:var(--blood)">rules</span></div><div class="pf-desc">Enter in <b>three tranches</b>: one-third now, one-third after Q3 FY27 results (Feb 2027), one-third after Q4 (May 2027) or on a 10%+ pullback. Skipper: lean in near the ₹470 preferential price. <b>Total satellite ≤25%</b> (~17% deployed now, ~8% reserved for triggers). <b>Theme cap ~7%</b> (Skipper + Transrail are both T&amp;D). <b>Cyclicals cap ~10%</b> (Uniparts + Sandur). Re-check every kill criterion each quarter.</div></div></div>
+    </div>
+
+    <div class="two-col">
+      <div class="chart-box">
+        <div class="cb-title">Illustrative allocation today</div>
+        <div class="cb-sub">% of total equity portfolio. Satellite bars scaled to a 5% maximum position.</div>
+        <div class="alloc-row"><span class="al-name">Index core</span><span class="alloc-track"><span class="alloc-fill fill-core" style="width:100%"></span></span><span class="al-val">70%</span></div>
+        <div class="alloc-row"><span class="al-name">Reserve for triggers</span><span class="alloc-track"><span class="alloc-fill fill-cash" style="width:100%"></span></span><span class="al-val">8%</span></div>
+        <div class="alloc-row"><span class="al-name">Cash / buffer</span><span class="alloc-track"><span class="alloc-fill fill-cash" style="width:100%"></span></span><span class="al-val">5%</span></div>
+        <div class="ss-label" style="margin:12px 0 4px">Satellite, deployed (~17%)</div>
+        <div class="alloc-row"><span class="al-name">Uniparts</span><span class="alloc-track"><span class="alloc-fill fill-buy" style="width:80%"></span></span><span class="al-val">4.0%</span></div>
+        <div class="alloc-row"><span class="al-name">Sandur Manganese</span><span class="alloc-track"><span class="alloc-fill fill-buy" style="width:80%"></span></span><span class="al-val">4.0%</span></div>
+        <div class="alloc-row"><span class="al-name">Bajaj Consumer</span><span class="alloc-track"><span class="alloc-fill fill-buy" style="width:70%"></span></span><span class="al-val">3.5%</span></div>
+        <div class="alloc-row"><span class="al-name">Skipper</span><span class="alloc-track"><span class="alloc-fill fill-buy" style="width:70%"></span></span><span class="al-val">3.5%</span></div>
+        <div class="alloc-row"><span class="al-name">Transrail</span><span class="alloc-track"><span class="alloc-fill fill-cond" style="width:40%"></span></span><span class="al-val">2.0%</span></div>
+        <p class="tbl-caption">Targets are full positions, reached over three tranches, not day-one buys.</p>
+      </div>
+      <div class="chart-box">
+        <div class="cb-title">Why a basket: the honest arithmetic</div>
+        <div class="cb-sub">Five equal positions, one plausible 3–5 year outcome.</div>
+        <div class="basket-math">
+          1 name triples ............ 3.00x<br>
+          1 name does well .......... 1.50x<br>
+          1 name goes nowhere ....... 1.00x<br>
+          2 names hit bear case ..... 0.65x each<br>
+          <div class="tot">Basket ≈ 1.36x in 4 yrs ≈ 8% a year</div>
+        </div>
+        <p class="tbl-caption">Even with a genuine winner, that is roughly index-like. Most picks will not be multibaggers; several bear cases in the deep-dives are −29% to −36%. The satellite is a bet on skew, sized so a bad outcome costs a few percent of the portfolio, not the plan.</p>
+      </div>
+    </div>
+
+    <div class="dodont">
+      <div class="dd-col do"><h4>✔ Do</h4>
+        <div class="dd-item">Hold for 3–5 years; most of these theses need 2–3 years of results to play out.</div>
+        <div class="dd-item">Write the kill criteria down before buying and act on them.</div>
+        <div class="dd-item">Add on evidence (another clean quarter), not on price momentum.</div>
+        <div class="dd-item">Re-verify price, pledge and shareholding before every tranche.</div>
+      </div>
+      <div class="dd-col dont"><h4>✖ Don't</h4>
+        <div class="dd-item">Expect 13 multibaggers. Expect one or two, and several losers.</div>
+        <div class="dd-item">Average down on a name that has hit a kill criterion.</div>
+        <div class="dd-item">Let two names from the same theme exceed the theme cap.</div>
+        <div class="dd-item">Chase Birla Cable or Honasa because they are going up.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="honesty">
+  <div class="section-inner">
+    <div class="sec-eyebrow">Verification &amp; honesty notes</div>
+    <h2>What we know, <em>and what we only think we know.</em></h2>
+    <p class="sec-sub">Every number above came through a verification gate, but not every gate was equally strong. Here is where the evidence is thin.</p>
+
+    <div class="ver-grid">
+      <div class="signal-card type-4">
+        <div class="sig-eb">Single-sourced prices</div>
+        <h3>Four prices rest on one source for 19 Nov</h3>
+        <ul class="b-list small">
+          <li><b>Skipper, Transrail, Techno:</b> screener chart close only. The series matched independent quotes exactly on 4–6 other dates, so it is validated, but no second 19 Nov quote was found.</li>
+          <li><b>Honasa:</b> no second source for 18–19 Nov; ~10% above the 5 Nov Upstox quote.</li>
+          <li><b>Discrepancies resolved:</b> Uniparts headline ₹736 vs ~₹725; Transrail Kotak −4% on 21 Oct; Techno 5paisa mcap ₹11,817 cr vs recomputed ₹10,817 cr; Bajaj Consumer ICICI "close" timestamped 9:18 am; Rolex Screener P/E 23.5 does not reconcile.</li>
+          <li>All rejected-name figures in the consumption track are single-source (screener, 19 Nov).</li>
+        </ul>
+      </div>
+      <div class="signal-card type-2">
+        <div class="sig-eb">Secondary summaries vs filings</div>
+        <h3>Causes and guidance are second-hand</h3>
+        <ul class="b-list small">
+          <li>Financials and shareholding: screener.in, an aggregator of exchange filings. Filings were not re-read directly.</li>
+          <li>Segment splits, Q2 FY27 commentary and guidance came from secondary summaries (Multibagg, Sovrenn, Univest, Arthneeti, FPJ, SteelOrbis, JM Financial notes). Cross-read against NSE/BSE filings before acting.</li>
+          <li>Order books (Skipper, Transrail, Techno) are from aggregators; Techno's order book and Chennai MW figures conflict across sources.</li>
+          <li>Standalone used where consolidated was stale: Gulshan, Rolex Rings (and Campus, Thangamayil, Precision Wires among rejects).</li>
+        </ul>
+      </div>
+      <div class="signal-card">
+        <div class="sig-eb">Pledge checks to redo on NSE SAST</div>
+        <h3>No pledge was confirmed from a primary filing</h3>
+        <ul class="b-list small">
+          <li><b>Not verified at all:</b> MPS, Rolex Rings, Techno Electric.</li>
+          <li><b>Screener auto-flag only:</b> Sandur, Gulshan, Birla Cable, Prudent, Honasa.</li>
+          <li><b>Company no-encumbrance declarations:</b> Uniparts (FY26), IOL (FY26), Skipper (Mar-26), Transrail (Apr-26). Point-in-time; Indo Tech shows how fast that changes.</li>
+          <li><b>Bajaj Consumer:</b> none flagged, not confirmed from an NSE filing; 2019 pledge history.</li>
+        </ul>
+      </div>
+      <div class="signal-card type-3">
+        <div class="sig-eb">Macro and method gaps</div>
+        <h3>Assumptions we did not re-verify</h3>
+        <ul class="b-list small">
+          <li>RBI's Oct 2026 decision could not be confirmed. The FY26 income-tax relief was taken from prior knowledge.</li>
+          <li>No clean post-April F&amp;O volume data after the STT hike.</li>
+          <li>Section-122 tariff status in November is unclear.</li>
+          <li>Reverse-DCF inputs differ by track (exit P/E 15x vs 20–25x; payout assumptions), so implied growth is comparable only within a track.</li>
+          <li>Conviction scores are judgement, not a model. Treat 66 vs 63 as a tie.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="alert warn" style="margin-top:1.5rem"><div class="alert-icon">!</div><div class="alert-text"><strong>Before any trade:</strong> re-pull the live price, check NSE SAST for pledges and encumbrances, read the latest quarterly filing and investor presentation directly, and confirm nothing has broken a kill criterion since 19 Nov 2026.</div></div>
+    <div class="alert crit"><div class="alert-icon">!</div><div class="alert-text"><strong>Not SEBI-registered investment advice.</strong> This is personal research for discussion. The author is not a SEBI-registered investment adviser or research analyst. Small and mid caps can fall 30–60% and stay down for years. Size accordingly.</div></div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="section-inner">
+    <p><span class="mono">MULTIBAGGER IDEA PIPELINE · NOV 2026</span><br>Synthesised from four research notes: weak-rupee exporters, power &amp; data centre, consumption &amp; financialisation, and the quant pattern hunt. Prices and financials as of 19 Nov 2026, 3:30–3:50 pm IST. Sources: screener.in, Google Finance, Upstox, Kotak Neo, 5paisa, Value Research, Investing.com, blinkx, MarketScreener, Bajaj Finserv, Ventura, ICICI Direct, AMFI via Kotak Neo/5paisa, HDFC Sky, Deccan Herald, SSGA, Savills, ICRA, Mercom, IESA, and company-results summaries as listed above.</p>
+  </div>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  // Accordions (deep-dives)
+  function setOpen(card, open) {
+    var btn = card.querySelector('.step-header');
+    var body = card.querySelector('.step-body');
+    body.hidden = !open;
+    card.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#cards .step'));
+  cards.forEach(function (card) {
+    card.querySelector('.step-header').addEventListener('click', function () {
+      setOpen(card, !card.classList.contains('open'));
+    });
+  });
+  document.getElementById('expandAll').addEventListener('click', function () {
+    cards.forEach(function (c) { if (!c.hidden) setOpen(c, true); });
+  });
+  document.getElementById('collapseAll').addEventListener('click', function () {
+    cards.forEach(function (c) { setOpen(c, false); });
+  });
+  if (cards.length) setOpen(cards[0], true);
+
+  // Row links open the matching card
+  document.querySelectorAll('.row-link').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var c = document.getElementById('dd-' + a.getAttribute('data-open'));
+      if (c) { c.hidden = false; setOpen(c, true); }
+    });
+  });
+
+  // Collapsibles (rejected lists)
+  document.querySelectorAll('.collapse').forEach(function (col) {
+    var head = col.querySelector('.collapse-head');
+    var body = col.querySelector('.collapse-body');
+    head.addEventListener('click', function () {
+      var open = body.hidden;
+      body.hidden = !open;
+      col.classList.toggle('open', open);
+      head.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+
+  // Theme filter tabs
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#cmpTable tbody tr'));
+  var note = document.getElementById('filterNote');
+  var names = { all: 'all themes', rupee: 'Weak rupee', power: 'Power & DC', cons: 'Consumption', quant: 'Quant' };
+  document.querySelectorAll('.band-tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var f = tab.getAttribute('data-filter');
+      document.querySelectorAll('.band-tab').forEach(function (t) {
+        var on = t === tab;
+        t.classList.toggle('active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      var shown = 0;
+      rows.forEach(function (r) { var v = f === 'all' || r.getAttribute('data-theme') === f; r.hidden = !v; if (v) shown++; });
+      cards.forEach(function (c) { c.hidden = !(f === 'all' || c.getAttribute('data-theme') === f); });
+      note.textContent = 'Showing ' + shown + ' of ' + rows.length + ' finalists' + (f === 'all' ? '' : ' · ' + names[f]);
+    });
+  });
+
+  // Sortable table
+  var tbody = document.querySelector('#cmpTable tbody');
+  var sortBtns = document.querySelectorAll('#cmpTable th button');
+  sortBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var key = btn.getAttribute('data-sort');
+      var isStr = btn.getAttribute('data-type') === 'str';
+      var asc;
+      if (btn.classList.contains('sorted-asc')) asc = false;
+      else if (btn.classList.contains('sorted-desc')) asc = true;
+      else asc = isStr || key === 'pe' || key === 'ig' || key === 'verdict';
+      sortBtns.forEach(function (b) { b.classList.remove('sorted-asc', 'sorted-desc'); b.parentNode.removeAttribute('aria-sort'); });
+      btn.classList.add(asc ? 'sorted-asc' : 'sorted-desc');
+      btn.parentNode.setAttribute('aria-sort', asc ? 'ascending' : 'descending');
+      var list = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+      list.sort(function (a, b) {
+        var x = a.getAttribute('data-' + key), y = b.getAttribute('data-' + key);
+        var c;
+        if (isStr) c = x.localeCompare(y);
+        else {
+          x = parseFloat(x); y = parseFloat(y);
+          if (x < 0 && y >= 0) return 1; if (y < 0 && x >= 0) return -1; // n/a last
+          c = x - y;
+        }
+        if (c === 0) return parseFloat(b.getAttribute('data-score')) - parseFloat(a.getAttribute('data-score'));
+        return asc ? c : -c;
+      });
+      list.forEach(function (r) { tbody.appendChild(r); });
+    });
+  });
+})();
+</script>
