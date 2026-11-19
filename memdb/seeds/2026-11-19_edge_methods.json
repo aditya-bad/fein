@@ -93,5 +93,71 @@
    "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/TegaIndustriesLimited_March%2018_%202026_RR_391442.html"
   ],
   "confidence": "verified"
+ },
+ {
+  "type": "source",
+  "id": "source:india-alt-data-access-2026",
+  "title": "Indian public alternative data - what is reachable (tested Nov 2026)",
+  "body": "Tested 2026-11-19 from a non-Indian cloud IP. Reachable: Vahan analytics public dashboard (analytics.parivahan.gov.in; maker-wise tables need JSF AJAX/ViewState replay; the older vahan4dashboard resets, probably a geo-block), FADA monthly retail PDFs (fada.in/press-release-list.php), SIAM, National Power Portal npp.gov.in (daily generation by source and daily coal stocks), CEA, PPAC fuel consumption (product- and state-wise; diesel/bitumen/ATF as activity proxies), tradestat.commerce.gov.in (HS-code trade), Google Play pages (install buckets such as 100M+ plus rating counts), Google Trends daily RSS. Blocked from a foreign IP or throttled: Grid-India/POSOCO, e-way bill portal, IPA ports, JPC steel, data.gov.in API, NPCI (403), www.gst.gov.in root, Google Trends explore API (429). eaindustry.nic.in (core sector incl. cement/steel) has a broken TLS chain. Conclusion: exchange filings give most of the value and are fully scriptable. Sector alt-data is worth it mainly for autos (Vahan/FADA retail vs SIAM wholesale shows channel stuffing), power, fuel and exporters. Run government-portal fetches from an Indian residential IP.",
+  "tags": [
+   "india",
+   "alt-data",
+   "process"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://analytics.parivahan.gov.in/analytics/publicdashboard/vahan",
+   "https://www.fada.in/press-release-list.php",
+   "https://npp.gov.in/",
+   "https://ppac.gov.in/",
+   "https://trends.google.com/trending/rss?geo=IN"
+  ],
+  "confidence": "verified",
+  "data": {
+   "works": [
+    "vahan-analytics(shell)",
+    "fada",
+    "siam",
+    "npp",
+    "cea",
+    "ppac",
+    "tradestat",
+    "play-store",
+    "trends-rss"
+   ],
+   "blocked": [
+    "grid-india",
+    "ewaybill",
+    "ipa",
+    "jpc",
+    "data.gov.in",
+    "npci",
+    "trends-explore-api"
+   ]
+  }
+ },
+ {
+  "type": "insight",
+  "id": "insight:vahan-vs-siam-channel-check",
+  "title": "Retail (Vahan/FADA) vs wholesale (SIAM/company despatch) gap as an early warning",
+  "body": "For auto OEMs and suppliers, company-reported monthly 'sales' are factory despatches to dealers (wholesale). Vahan registrations, aggregated by FADA, are retail to end customers. When wholesale runs ahead of retail for several months, dealer inventory builds up. Dealer inventory days are quoted in FADA's monthly releases. That has historically come before production cuts and discounting, which hit margins and the suppliers' order flow. Retail running ahead of wholesale points to inventory depletion and restocking upside. Method: track a 3-month rolling sum of each OEM's Vahan registrations against its reported despatches, and alert when the gap passes 10–15% or when FADA's inventory days exceed roughly 45–50 for PVs. Small-cap ancillaries get their volume signal from their top OEM customers' retail data before their own results appear. The threshold is a working heuristic, not back-tested here.",
+  "tags": [
+   "india",
+   "alt-data",
+   "sector-auto",
+   "process"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://www.fada.in/press-release-list.php",
+   "https://analytics.parivahan.gov.in/analytics/publicdashboard/vahan"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "strategy:fisher-scuttlebutt",
+    "rel": "about"
+   }
+  ]
  }
 ]

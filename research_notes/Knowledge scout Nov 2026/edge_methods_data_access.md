@@ -59,3 +59,29 @@ Rate limits: neither exchange publishes limits and no `X-RateLimit` headers were
 - CRISIL: **works**. Plain HTML at `crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/...html`; discover the URLs via web search or the company's exchange "Credit Rating" filing.
 - CARE: site loads, JS-heavy, no clean endpoint found. India Ratings: JS SPA, **not curl-able**.
 - Best universal route: the Reg 30 "Credit Rating" exchange announcements plus the links on the screener company page.
+
+### Alternative data (tested 2026-11-19 from a non-Indian cloud IP)
+Several Indian government hosts **reset connections from foreign IPs**, so they are probably geo-blocked. They should be retested from an Indian residential connection before being written off.
+
+| Data | Endpoint tested | Result | Use |
+|---|---|---|---|
+| Vahan vehicle registrations (maker, fuel, state) | `analytics.parivahan.gov.in/analytics/publicdashboard/vahan` | **Page loads** (222 KB; total registration counter visible). Maker-wise tables come through JSF/PrimeFaces AJAX postbacks with ViewState, so scripting means replaying the form. The older `vahan.parivahan.gov.in/vahan4dashboard/...reportview.xhtml` gives **connection reset** (geo-block). | Monthly or even daily 2W/PV/CV/tractor/EV share by OEM, for auto, auto-ancillary and EV small caps. The best free real-time India alt-data. |
+| FADA monthly retail auto sales | `www.fada.in/press-release-list.php`, with PDFs at `images/press-release/*.pdf` | **WORKS** (Oct-26 PDF linked) | Vahan-based retail by OEM, released monthly about the 5th–7th. |
+| SIAM wholesale despatches | `www.siam.in` | **WORKS** (HTML) | Compare wholesale with retail (FADA) to catch channel stuffing. |
+| Power generation / coal stocks | `npp.gov.in` (National Power Portal) | **WORKS**: "Daily Generation on 17-Nov-2026", daily coal status | Power demand proxy for industrial activity, plus coal-stock stress. |
+| CEA | `cea.nic.in` | **WORKS** (home); report links are `/public/link-report/view?mappingId=...` | Monthly generation and installed capacity. |
+| Grid-India (ex-POSOCO) daily PSP report | `grid-india.in`, `report.grid-india.in`, `posoco.in` | **BLOCKED** (reset / CONNECT 502) | Daily peak demand; use NPP instead. |
+| Petroleum product consumption | `ppac.gov.in/consumption/products-wise` | **WORKS** (links present) | Diesel, ATF and bitumen are road-construction and freight proxies. |
+| GST collections | `www.gst.gov.in/download/gststatistics` | **Partial**: page loads (3.7 KB shell); `www.gst.gov.in` root resets. Monthly figures come out in a press release (PIB/news) on the 1st. | Macro only; little company-level value. |
+| e-way bills | `ewaybillgst.gov.in`, `docs.ewaybillgst.gov.in` | **BLOCKED** (reset/403) | Monthly totals get reported in the news. |
+| Port traffic | `ipa.nic.in` reset; `shipmin.gov.in` works | **Partial** | Major-port cargo by commodity (monthly); company port data via Adani/JSW disclosures. |
+| Core-sector index (cement, steel, coal, power...) | `eaindustry.nic.in` | **TLS chain broken** (server misconfig; not bypassed). Cement/steel monthly YoY also appear via PIB press release. | Cement and steel volumes by month. |
+| Steel (JPC) | `jpcindia.nic.in` reset; `steel.gov.in` works | **Partial** | Steel production/consumption. |
+| Google Trends | Explore API `trends.google.com/trends/api/explore` returns **429** (cloud IPs throttled); `trends.google.com/trending/rss?geo=IN` **works** (daily trending RSS) | Partial | Brand/product search interest needs a residential IP or manual browser use. |
+| App downloads | Google Play detail page (`play.google.com/store/apps/details?id=...&gl=IN`) | **WORKS**: install bucket, e.g. "100M+ Downloads" | Only coarse buckets plus rating counts; precise downloads (Sensor Tower, Appfigures) are paid. Track rating-count growth as a proxy. |
+| Job postings | `naukri.com` home 200 (JobSpeak index is published monthly as a press release); `indeed.com` 401 | Partial | Hiring by company: scrape the company careers page or LinkedIn by hand (scuttlebutt). JobSpeak gives sector hiring trends. |
+| UPI / NPCI stats | `npci.org.in` **403** | Blocked | Monthly totals reported in news. |
+| data.gov.in API | `api.data.gov.in` reset, `data.gov.in` 503/reset | **BLOCKED** from here | Needs a free API key and probably an Indian IP. |
+| Trade (exports/imports by HS code) | `tradestat.commerce.gov.in` | **WORKS** (shell) | HS-code export trends for chemicals, pharma and engineering exporters. |
+
+Practical takeaway: for a small-cap memory system, **exchange filings (NSE/BSE) carry roughly 90% of the value** and are fully scriptable. Sector alt-data that is reachable and useful: Vahan/FADA (autos), NPP/CEA (power), PPAC (fuel), Play-store buckets (consumer apps), tradestat (exporters). Most other government portals need an Indian IP; run those fetches from the user's own machine.

@@ -1413,5 +1413,387 @@
     "rel": "illustrates"
    }
   ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-mb-twin-engine-base-rate",
+  "title": "India multibaggers: ~2/3 of return is EPS, ~1/3 rerating (long runs); ~1/2 rerating (short runs)",
+  "body": "Decomposition of 27 Indian winner windows (25 case records plus BEL and both shipyards; screener TTM P/E, split-adjusted prices): log(price multiple) = log(EPS multiple) + log(P/E multiple). Median share of the log-return from rerating = 37%. Long runs (9+ years: Bajaj Finance, Page, Astral, Pidilite, Titan, Eicher, Balkrishna, APL Apollo, Deepak, Tata Elxsi, Garware, Alkyl) had a median rerating share of ~36%; EPS compounding did most of the work. Short runs (≤5.5 years: KPIT 62%, Cochin 88%, HAL 66%, Mazagon 53%, CDSL 50%, Dixon 42%, Kaynes 29%, Trent 14%) had a median of ~51%. Rerating-heavy cases (>50% from P/E: Cochin, HAL, KPIT, Symphony, Balkrishna, Tata Elxsi, Mazagon, CDSL) are a median ~54% below their ATH on 19 Nov 2026. HAL (−14%), whose EPS kept rising, is the exception. Earnings-heavy cases (≤30%: Trent, Page, Titan, Avanti, Eicher, Caplin, La Opala, Polycab, Kaynes) had mixed outcomes: Titan and Eicher are near highs, while La Opala and Kaynes are down 60%+. Where they fell, it was because growth slowed, not because a pure multiple was undone. Rule: when more than half of a gain is multiple, the gain is fragile; check whether EPS can carry the price if P/E returns to its median. Caveat: windows start at lows, which inflates P/E expansion.",
+  "tags": [
+   "india",
+   "multibagger",
+   "base-rate",
+   "valuation",
+   "twin-engine"
+  ],
+  "date": "2026-11-19",
+  "data": {
+   "n": 27,
+   "median_pe_share": "37%",
+   "long_run_median": "~36%",
+   "short_run_median": "~51%",
+   "method": "log decomposition, TTM P/E"
+  },
+  "sources": [
+   "https://www.screener.in/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:twin-engine",
+    "rel": "part_of"
+   },
+   {
+    "to": "case_study:indian-shipyards-2020-2025",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:kpit-technologies-2020-2024",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:hal-2020-2024",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:tata-elxsi-2009-2022",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:balkrishna-industries-2009-2024",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:titan-2009-2026",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:trent-2020-2024",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-mb-starting-pe",
+  "title": "Starting P/E ≤15 → median ~266x; starting P/E ≥35 → median ~19x",
+  "body": "Across 27 Indian winner windows, 17 began at trailing P/E ≤15 (Bajaj Finance 9, Astral 8, Eicher 13, Balkrishna ~2, APL Apollo 5, Deepak 8.5, Tata Elxsi 5, KPIT 8.5, Cochin 5.5, Mazagon 7, HAL 6, Avanti 13, Caplin 12.5, BSE 14, Garware 5, Alkyl 8, BEL 13); their median price multiple was ~266x. Three began at ≥35x (Dixon 40, Kaynes 104, Trent 155, where Trent's EPS was COVID-depressed); their median was ~19x. Two boom-time IPOs at 84x and 214x (Waaree, Premier) tripled EPS and still trade below their first close. Most low-P/E starts were not obscure: they were well-known companies in a panic (Mar 2009, Mar 2020) or companies misclassified as commodity businesses (Balkrishna, APL Apollo, Garware, Avanti). Practical rule for screening: the twin engine needs a low starting multiple. A great business bought at 100x+ has spent the multiple engine, and its return is capped at EPS growth minus de-rating. Caveat: survivorship bias. These are winners picked with hindsight, and many low-P/E stocks stayed cheap or failed (see case_study:suzlon, case_study:capital-goods-2007).",
+  "tags": [
+   "india",
+   "multibagger",
+   "base-rate",
+   "valuation",
+   "process"
+  ],
+  "date": "2026-11-19",
+  "data": {
+   "low_pe_n": 17,
+   "low_pe_median_multiple": "~266x",
+   "high_pe_n": 3,
+   "high_pe_median_multiple": "~19x",
+   "boom_ipos": "Waaree, Premier <1x from first close"
+  },
+  "sources": [
+   "https://www.screener.in/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:twin-engine",
+    "rel": "part_of"
+   },
+   {
+    "to": "case_study:waaree-premier-energies-2024-2026",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:kaynes-technology-2022-2026",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:balkrishna-industries-2009-2024",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:capital-goods-2007",
+    "rel": "contradicts"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-mb-crisis-start",
+  "title": "~23 of 28 Indian multibagger windows start within months of the Mar 2009 or Mar 2020 lows",
+  "body": "Of 28 windows in this library, 14 have their best starting point within about nine months of the Mar 2009 low (Bajaj Finance, Astral, Pidilite, Titan, Eicher, Balkrishna, APL Apollo, Deepak, Tata Elxsi, Avanti, Caplin, La Opala, Alkyl, Symphony). Another nine start within about six months of the Mar 2020 COVID low (KPIT, Trent, Cochin, Mazagon, HAL, BEL, BSE, Suzlon, and CDSL near it). Only Page (2007 IPO), Garware (2013), Polycab/Dixon (2019 IPO/low) and Kaynes (2022 IPO) start elsewhere. Two implications. (1) The headline multiples (100–2,000x) are partly a start-point artefact; buying the same names a year before or after the crash gives 2–5x less. (2) The real edge was owning or buying quality growers when they were at 5–15x during a panic; in 2008–09 and 2020 many of these traded at single-digit P/E. Process: keep a ready list of high-ROCE, low-debt compounders with pre-set 'crash prices' so a crash is an execution step, not a decision. Survival (no leverage, cash reserve) is what makes this possible. Link: insight:avoid-ruin.",
+  "tags": [
+   "india",
+   "multibagger",
+   "base-rate",
+   "temperament",
+   "cycle"
+  ],
+  "date": "2026-11-19",
+  "data": {
+   "near_2009_low": 14,
+   "near_2020_low": 9,
+   "other": 5,
+   "n": 28
+  },
+  "sources": [
+   "https://www.screener.in/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:avoid-ruin",
+    "rel": "about"
+   },
+   {
+    "to": "insight:behavior-gap",
+    "rel": "about"
+   },
+   {
+    "to": "strategy:position-sizing",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-mb-drawdowns-base-rate",
+  "title": "Median in-run drawdown of Indian multibaggers −41%; 22 of 27 fell ≥30% on the way up",
+  "body": "Maximum peak-to-trough fall inside each winner's own up-move (weekly closes), 27 windows: median −41%; 22 of 27 (81%) had at least one ≥30% drawdown, and 14 (52%) at least one ≥40%. Examples: Bajaj Finance −61% (2020), Tata Elxsi −59% (2018–20), APL Apollo −57% (2018–19), BSE −55% (2022–23), Dixon −52% (2021–23), Page −52% (2018–20), Avanti −51% (2012–13), Balkrishna −48%, HAL −47% (2020), Caplin −47% (2013), Polycab −45%, CDSL −44%. The shallowest were Pidilite (−26%), Eicher 2008–17 (−26%), Trent 2020–24 (−22%) and Kaynes (−20%, a short run). Most of these drawdowns came from market shocks (2013 taper, 2018 small-cap crash, 2020 COVID) or de-rating while EPS kept rising (Caplin 2017–20: EPS 2x, price −68%), not from broken theses. Holding rule: a ≥40% fall is the normal cost of a multibagger. The question at −40% is whether EPS and ROCE are intact (hold or add) or the driver has broken (exit). Position size so a −60% move is survivable. Extends insight:winners-drawdowns to India.",
+  "tags": [
+   "india",
+   "multibagger",
+   "base-rate",
+   "drawdown",
+   "temperament"
+  ],
+  "date": "2026-11-19",
+  "data": {
+   "n": 27,
+   "median_mdd": "-41%",
+   "share_ge_30pct": "81%",
+   "share_ge_40pct": "52%"
+  },
+  "sources": [
+   "https://www.screener.in/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:winners-drawdowns",
+    "rel": "part_of"
+   },
+   {
+    "to": "strategy:position-sizing",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:caplin-point-2009-2026",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:bajaj-finance-2009-2021",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-mb-pe70-exit",
+  "title": "After a run ends at P/E ≥70: 13 of 15 Indian winners are lower 2–5 years later (median −48%)",
+  "body": "Fifteen winners reached trailing P/E ≥70 at the end of their up-move: Bajaj Finance 121 (2021), Astral 118, Pidilite 93, Deepak 93, Dixon 197, Tata Elxsi 103, KPIT 86, Trent 232, Cochin 95, Kaynes 203, CDSL 76, Symphony 84, Page 81, La Opala 70, Alkyl 76. Price change from that peak to 19 Nov 2026: Symphony −74%, KPIT −72%, Tata Elxsi −64%, Alkyl −64%, Kaynes −62%, Cochin −60%, Astral −48%, La Opala −48%, Deepak −46%, Page −42%, Trent −41%, Dixon −29%, CDSL −27%, Pidilite +28%, Bajaj Finance +39%. Median −48%; 13 of 15 negative. The two positive cases still underperformed their own EPS growth, which was 2x and 4.8x. Winners that peaked at 40–60x (Eicher 51, Balkrishna 49, HAL 49, Mazagon 52, Polycab 59, Garware 42, Avanti 45, Caplin 69) did better, with a median of about −25% and several recovering to new highs. The trigger was almost always P/E ≥70 combined with decelerating EPS (Page FY23, Astral FY22–26, Elxsi FY26, Trent LFL, Alkyl spreads, KPIT Europe). Rule for memory: P/E ≥70 alone is not a sell signal (Trent 2020 at 155 worked because EPS was depressed), but P/E ≥70 with the first quarter of EPS deceleration has a poor base rate. Trim rather than hope.",
+  "tags": [
+   "india",
+   "multibagger",
+   "base-rate",
+   "valuation",
+   "sell-discipline"
+  ],
+  "date": "2026-11-19",
+  "data": {
+   "n": 15,
+   "negative": 13,
+   "median_change": "-48%",
+   "positive": [
+    "Pidilite +28%",
+    "Bajaj Finance +39%"
+   ]
+  },
+  "sources": [
+   "https://www.screener.in/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:twin-engine",
+    "rel": "part_of"
+   },
+   {
+    "to": "case_study:symphony-2009-2018",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:kpit-technologies-2020-2024",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:tata-elxsi-2009-2022",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:alkyl-amines-2009-2021",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:page-industries-2007-2022",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:pidilite-2008-2026",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-mb-early-signal-taxonomy",
+  "title": "Six kinds of early signal behind Indian multibaggers (with counts)",
+  "body": "Classification of the original visible signal in 28 cases (some count twice). (1) Policy or regulation creates or reshapes an industry, 7 cases: vannamei legalisation Apr 2009 (Avanti), mobile PLI Oct 2020 (Dixon), defence indigenisation and orders such as the Tejas contract Feb 2021 (HAL, BEL, shipyards), SEBI one-expiry-per-exchange Nov 2024 (BSE), formalisation and hallmarking (Titan). (2) Capex commissioning or new technology visible in filings, 5: Deepak phenol plant (Nov 2018), APL Apollo DFT lines (2016–17), Balkrishna Bhuj, Alkyl capacity, La Opala Sitarganj. (3) Mix shift where profit grows faster than revenue, 5: Garware value-added products 35%→75%, Eicher/Royal Enfield, Caplin margins, Tata Elxsi 2014–15, Trent Zudio. (4) Management change or focus, 3: Bajaj Finance CEO 2007, Eicher divesting 13 of 15 businesses (2004–05), Suzlon equity repair 2022–23. (5) Free, frequent industry data, 3: CDSL demat counts, BSE options premium share, Trent store/LFL updates. (6) Panic mispricing of a known compounder, about 14 (see insight:india-mb-crisis-start). Most signals were public 6–24 months before EPS showed them, and in categories 1–3 the stock usually still traded at P/E <15. Process: monitor policy notifications, capex completion dates, segment mix and monthly industry series for the watchlist, then check the starting multiple. Category counts are judgement calls.",
+  "tags": [
+   "india",
+   "multibagger",
+   "pattern",
+   "checklist",
+   "alt-data",
+   "policy"
+  ],
+  "date": "2026-11-19",
+  "data": {
+   "policy": 7,
+   "capex_tech": 5,
+   "mix_shift": 5,
+   "management": 3,
+   "industry_data": 3,
+   "panic_mispricing": 14
+  },
+  "sources": [
+   "https://www.screener.in/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:multibagger-patterns",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:hidden-segment",
+    "rel": "about"
+   },
+   {
+    "to": "strategy:fisher-scuttlebutt",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-mb-how-they-end",
+  "title": "How Indian multibagger runs end: 13 of 27 are ≥40% below peak in Nov 2026",
+  "body": "Status on 19 Nov 2026 versus each stock's all-time high: 8 of 27 are ≥50% below (Symphony −74, KPIT −72, La Opala −66, Tata Elxsi −64, Alkyl −64, Kaynes −62, Cochin −60, Avanti −52); 5 more are 40–50% below (Deepak −50, Astral −48, Mazagon −47, Page −42, Trent −41); Suzlon is −56% from its 2024 turnaround peak. Still near highs (≤15% off): Eicher, Bajaj Finance, APL Apollo, Pidilite, Titan, BSE, HAL, BEL. Five ending mechanisms: (a) growth deceleration at a premium multiple (Page, Astral, Tata Elxsi, Trent, Symphony, La Opala, KPIT, Dixon); (b) commodity or spread reversal (Deepak, Alkyl, Avanti, Balkrishna's ROCE fall); (c) narrative timing slip (shipyards' P75(I) award); (d) earnings miss plus governance or disclosure question (Kaynes); (e) customer or regional concentration shock (KPIT on BMW and Europe, Tata Elxsi on JLR and autos, Avanti on US shrimp). The survivors share continuing double-digit EPS growth and a P/E that normalised gradually rather than being at a peak. Lesson: multibaggers are rentals more often than lifetime holdings. Define in advance the specific driver whose break means exit (LFL, spread, award, client), and track it quarterly.",
+  "tags": [
+   "india",
+   "multibagger",
+   "base-rate",
+   "sell-discipline",
+   "cycle"
+  ],
+  "date": "2026-11-19",
+  "data": {
+   "n": 27,
+   "ge_50pct_below_ath": 8,
+   "ge_40pct_below_ath": 13,
+   "near_highs": 8
+  },
+  "sources": [
+   "https://www.screener.in/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:symphony-2009-2018",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:la-opala-2009-2015",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:eicher-motors",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:deepak-nitrite-2009-2021",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:indian-shipyards-2020-2025",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-mb-ipo-entry",
+  "title": "IPO entry: PSU listings at <15x became 8–48x; hot-market listings at 80–200x went to −50–60%",
+  "body": "Ten cases here started at or near an IPO. Low-multiple PSU or out-of-favour listings: HAL (Mar 2018 at ~14x) first fell −56% in two years, then reached ~9x the issue price at its 2024 peak; Cochin Shipyard (2017 issue ≈₹216 adjusted) ~13x at peak; Mazagon (2020, issue ≈₹72.5 adjusted, ~7x P/E) ~48x at peak; CDSL (2017, ≈₹74.5) ~26x; BSE (2017, ≈₹90 adjusted) ~47x. Fairly priced private leaders: Polycab (2019, ~20–27x) ~19x; Dixon (2017, ~60x) ~52x, only because EPS rose ~10x on the PLI scheme. Boom-market listings: Kaynes (2022, ~100x) ~13x at peak and now −62% from it; Waaree (2024, 84x on first close) and Premier (214x) tripled EPS but are below their first close (1.6–1.8x the issue price). Pattern: what matters at listing is the P/E, not the story. Government or out-of-favour IPOs at low multiples left both engines available; hot-sector IPOs at 80x+ left only EPS, and those stocks fell 40–60% at the first stumble. Also, IPO buyers of winners often waited 1–3 years through a −50% drawdown (HAL, Dixon, CDSL). Issue prices here are from general knowledge and should be re-checked (unverified).",
+  "tags": [
+   "india",
+   "ipo",
+   "base-rate",
+   "valuation",
+   "psu"
+  ],
+  "date": "2026-11-19",
+  "data": {
+   "low_pe_ipos": "HAL, Cochin, Mazagon, CDSL, BSE: 9-48x at peak",
+   "boom_ipos": "Kaynes, Waaree, Premier: -37% to -62% from peak"
+  },
+  "sources": [
+   "https://www.screener.in/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:india-mb-starting-pe",
+    "rel": "part_of"
+   },
+   {
+    "to": "case_study:hal-2020-2024",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:kaynes-technology-2022-2026",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:waaree-premier-energies-2024-2026",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:polycab-2019-2026",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:indian-shipyards-2020-2025",
+    "rel": "about"
+   }
+  ]
  }
 ]
