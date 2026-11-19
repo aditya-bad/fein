@@ -1500,5 +1500,730 @@
    }
   ],
   "date": "2026-11-19"
+ },
+ {
+  "type": "event",
+  "id": "event:harshad-mehta-1992",
+  "title": "Harshad Mehta bull run and bust (1991-93)",
+  "date": "1992-04-22",
+  "tags": [
+   "india",
+   "blowup",
+   "fraud",
+   "policy",
+   "cyclical"
+  ],
+  "confidence": "verified",
+  "body": "Peak/trough: the Sensex rose from ~1,000 in early 1991 and ~2,000 in Jan 1992 to 4,467 in April 1992 (the Feb 1992 liberalisation budget added fuel), then fell to ~2,529 by Aug 1992 and below ~2,000 by spring 1993 - roughly a 55% drawdown (trough level approximate). Mechanism: Harshad Mehta used bank-to-bank 'ready forward' deals and bank receipts (BRs) that were not backed by securities to channel bank money into stocks; banks were left holding fake BRs (~Rs 4,000 crore owed per one source; totals of Rs 5,000 crore and higher are also cited). Exposed by Sucheta Dalal in the Times of India on 23 Apr 1992. What led: a narrow set of 'operator' stocks - ACC went from ~Rs 200 to ~Rs 9,000 in about three months (~4,400%); what lagged/collapsed afterwards: the same names, plus banks hit by the BR losses. Valuation at peak: Sensex P/E was reportedly ~50x+ (unverified). Top signals visible at the time: parabolic moves in a few stocks without earnings support, a celebrity broker ('Big Bull'), unexplained liquidity, and front-page euphoria. Aftermath: SEBI got statutory powers (1992), NSE screen trading began (1994). Lesson: when a rally is financed by leverage nobody can trace, the size of the eventual fall depends on the source of funding, not on fundamentals.",
+  "data": {
+   "peak": "Sensex 4,467 (Apr 1992)",
+   "trough": "~2,000 (1993, approximate)",
+   "drawdown": "~-55%",
+   "leaders": "ACC ~Rs200->~9,000",
+   "early_signals": "operator stocks parabolic, untraceable bank funding",
+   "lesson": "leverage source drives the bust"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/1992_Indian_stock_market_scam",
+   "https://en.wikipedia.org/wiki/Harshad_Mehta",
+   "https://www.businesstoday.in/magazine/focus/story/year-1992-round-up-20965-2011-01-03"
+  ],
+  "links": [
+   {
+    "to": "insight:india-cycle-top-bottom-signals",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "event",
+  "id": "event:india-lost-decade-1994-2003",
+  "title": "IPO boom, 'vanishing companies' and the 1994-2003 lost decade",
+  "date": "1994-09-12",
+  "tags": [
+   "india",
+   "blowup",
+   "fraud",
+   "base-rate",
+   "smallcap"
+  ],
+  "confidence": "single-source",
+  "body": "After FIIs were allowed in (1992) the Sensex made a new high of ~4,600 in Sept 1994 (level approximate), but then spent about a decade going nowhere: it was below ~3,000 in 2001 and only sustainably cleared its 1990s highs in 2003-04. The 1993-96 primary-market boom saw thousands of small IPOs (often at par or small premiums, sold through merchant bankers to retail); many companies later vanished with the money - the government's 'vanishing companies' list ran to a few hundred names (exact counts unverified). Mid/small caps of that era were the worst hit; S. Naren cites 1994-2004 as the lost decade for overvalued mid/small caps and as the analogue for 2025-26 risk. What led in 1994: newly listed small companies, cement, steel, finance companies; what lagged: everything afterwards except, from 1998, IT/ICE stocks. Signals at the top: issuance boom with poor-quality issuers, retail oversubscription, regulatory laxity (free pricing introduced 1992). Lesson: a market can deliver near-zero returns for ~10 years after an issuance and valuation peak; the quality of what is being listed is a top indicator, and it rhymes with the 2024 SME IPO mania.",
+  "data": {
+   "peak": "Sensex ~4,600 (Sep 1994, approx)",
+   "lesson": "issuance quality as a top signal; decade-long flat returns possible",
+   "analogue": "2024 SME IPOs"
+  },
+  "sources": [
+   "https://www.businesstoday.in/markets/stocks/story/icici-prudentials-s-naren-warns-1990s-like-risk-as-indian-stock-market-hits-frothy-valuations-489673-2025-08-16",
+   "https://www.tribuneindia.com/news/equity/equity-market-and-volatility-sensex-navigates-through-crises-from-1000-to-86000-journey-study"
+  ],
+  "links": [
+   {
+    "to": "event:india-sme-ipo-mania-2024",
+    "rel": "similar_to"
+   },
+   {
+    "to": "person:s-naren",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "event",
+  "id": "event:ketan-parekh-tech-2000",
+  "title": "Ketan Parekh and the ICE/tech bubble (1999-2001)",
+  "date": "2000-02-11",
+  "tags": [
+   "india",
+   "blowup",
+   "fraud",
+   "sector-it",
+   "cyclical"
+  ],
+  "confidence": "verified",
+  "body": "Sensex peaked at ~6,150 intraday on 11 Feb 2000 (level from memory; not confirmed in sources found) and fell to ~2,600 by Sept 2001 (post-9/11 low) - roughly -58%. What led: 'ICE' (information technology, communications, entertainment) and Ketan Parekh's 'K-10' stocks - Zee Telefilms (reportedly ~Rs 127 to ~Rs 10,000 pre-split), HFCL, Global Tele-Systems, DSQ Software, Pentamedia, Aftek, Silverline. Parekh funded positions via Madhavpura Mercantile Cooperative Bank and Global Trust Bank, plus 'badla' carry-forward financing. In the two months after April 2000, K-10 stocks fell ~67% vs -23% for the Sensex (student document; weak source); for the year to Feb 2002 the K-10 averaged -51.7% vs -16% for the Sensex (Business Standard). A bear-cartel raid and the Feb 2001 budget triggered the March 2001 crash; MMCB collapsed, UTI's US-64 froze (July 2001), badla was banned and rolling settlement introduced. What lagged: 'old economy' stocks that traded at single-digit P/Es (unverified levels). Valuation at peak: Sensex P/E ~28-35x depending on source (28x, 29x, ~35x Apr 2000). Top signals: extreme concentration in one theme, cooperative-bank funding of a broker, triple-digit P/Es on IT names. Lesson: many K-10 names never recovered; theme leaders of one bubble rarely lead the next.",
+  "data": {
+   "peak": "Sensex ~6,150 (Feb 2000, unconfirmed)",
+   "trough": "~2,600 (Sep 2001)",
+   "drawdown": "~-58%",
+   "pe_peak": "28-35x (sources vary)",
+   "laggards_after": "K-10 -51.7% vs Sensex -16% to Feb 2002",
+   "lesson": "theme leaders rarely recover"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ketan_Parekh",
+   "https://www.business-standard.com/article/markets/k-10-stocks-how-bad-are-they-102031801034_1.html",
+   "https://www.businesstoday.in/magazine/focus/story/year-2001-round-up-13856-2010-12-30",
+   "https://www.morningstar.in/posts/36274/how-investors-can-use-the-pe-ratio.aspx"
+  ],
+  "links": [
+   {
+    "to": "insight:india-leadership-rotation",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:india-bull-2003-08",
+  "title": "2003-08 bull run: infra, realty and capital goods mania",
+  "date": "2008-01-10",
+  "tags": [
+   "india",
+   "cyclical",
+   "sector-realty",
+   "sector-infra",
+   "rerating",
+   "base-rate"
+  ],
+  "confidence": "verified",
+  "body": "Sensex ~2,900 (April 2003) to 21,206.77 (10 Jan 2008), about 7x in under five years. Drivers: GDP growth 8-9%, ~30% credit growth, a corporate capex boom, a global commodity super-cycle and record FII inflows. Leaders: real estate (DLF IPO July 2007, then India's largest; Unitech), infrastructure developers and power (GMR, GVK, Lanco, Reliance Power), capital goods (BHEL, L&T, Suzlon), metals. Laggards: IT (after 2000), FMCG and pharma - defensives looked 'boring'. Valuation at peak: Sensex trailing P/E ~27-28x; market cap/GDP widely cited near 150% (one Business Standard figure is dated 'Dec 2017', likely meaning 2007). Top signals visible at the time: Reliance Power's Jan 2008 IPO (~Rs 11,560 crore, oversubscribed ~70x, listed below its issue price on 11 Feb 2008 - detail from memory), Sensex 10k to 20k in ~2 years, mid/small caps outrunning large caps, infra companies valued on land banks and order books rather than cash flows, rising leverage. What followed: a ~61% Sensex crash; the Indian capital goods index needed until ~2021 to regain its 2007-08 peak; Nifty Realty remains far below its 2008 high (unverified current level). Lesson: a capex-and-credit boom produces the biggest losses in the sectors that led it; land-bank and order-book valuations are reflexive.",
+  "data": {
+   "start": "Sensex ~2,900 (Apr 2003)",
+   "peak": "21,206.77 (10 Jan 2008)",
+   "multiple": "~7x",
+   "pe_peak": "~27-28x",
+   "mcap_gdp_peak": "~150% (approx)",
+   "early_signals": "RPower IPO frenzy, leverage, land-bank valuations",
+   "lesson": "leaders of a capex boom lose most"
+  },
+  "sources": [
+   "https://www.business-standard.com/amp/article/markets/bull-market-in-2008-and-now-top-five-companies-valuation-and-more-118011400772_1.html",
+   "https://www.business-standard.com/amp/article/markets/india-s-market-capitalisation-to-gdp-ratio-at-115-highest-since-2008-121060400043_1.html",
+   "https://cleartax.in/s/biggest-stock-market-crashes-in-india"
+  ],
+  "links": [
+   {
+    "to": "case_study:capital-goods-2007",
+    "rel": "part_of"
+   },
+   {
+    "to": "case_study:suzlon",
+    "rel": "part_of"
+   },
+   {
+    "to": "strategy:soros-reflexivity",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "event",
+  "id": "event:india-crash-2008",
+  "title": "2008 global financial crisis crash in India",
+  "date": "2008-10-27",
+  "tags": [
+   "india",
+   "blowup",
+   "base-rate",
+   "smallcap",
+   "cyclical"
+  ],
+  "confidence": "verified",
+  "body": "Sensex 21,206.77 (10 Jan 2008) to a closing low of ~8,160 (9 Mar 2009), -61.5%; intraday it touched ~7,700 on 27 Oct 2008 (from memory). Nifty 50 TRI -59% (calendar 2008); Nifty Smallcap 250 TRI -73%; Nifty Smallcap 100 intra-year fall -76%; the BSE Smallcap was -70.7% from its 52-week high by 17 Oct 2008. Sensex P/E more than halved, ~27x to ~11.9x (Business Standard; Morningstar says ~12). What led the fall: realty (DLF, Unitech -90%+), infra, capital goods, metals, small caps; what held up relatively: FMCG, pharma, IT. Bottom signals: P/E ~11-12x, record FII selling, IPO market shut, dividend yields ~2%, policy response (RBI rate cuts from Oct 2008, fiscal stimulus) and the May 2009 election result (Sensex upper circuit on 18 May 2009). Recovery: Sensex regained ~21,000 in Nov 2010 (about 34 months from peak) but did not sustain new highs until late 2013; the Nifty Smallcap 100 took ~69 months (Nov 2014, Value Research) and the BSE Smallcap until ~2017 to close above its Jan 2008 high; Smallcap 250 TRI >6 years (DSP). Entry before the crisis gave ~8% CAGR to Mar 2026 in Smallcap 250 TRI vs ~18% from the bottom. Lesson: buying small caps at cycle-peak valuations can cost 6+ years even when the long-run trend is up.",
+  "data": {
+   "peak": "Sensex 21,206.77 (10 Jan 2008)",
+   "trough": "~8,160 close (9 Mar 2009)",
+   "drawdown_sensex": "-61.5%",
+   "drawdown_smallcap250tri": "-73%",
+   "pe": "27x -> ~12x",
+   "recovery": "Sensex ~34m (brief), smallcap 6+ yrs",
+   "lesson": "peak-valuation small caps can take 6+ yrs"
+  },
+  "sources": [
+   "https://cleartax.in/s/biggest-stock-market-crashes-in-india",
+   "https://www.business-standard.com/article/markets/realty-metal-lead-market-meltdown-108101801049_1.html",
+   "https://www.dspim.com/smallcap-fund-page/truth-to-know",
+   "https://www.valueresearchonline.com/stories/226591/dark-side-small-cap-investing/",
+   "https://www.business-standard.com/article/markets/sensex-valuations-still-pricey-115082501267_1.html"
+  ],
+  "links": [
+   {
+    "to": "case_study:india-bull-2003-08",
+    "rel": "caused_by"
+   },
+   {
+    "to": "insight:smallcap-drawdown-durations",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:winners-drawdowns",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "event",
+  "id": "event:india-stagnation-taper-2010-13",
+  "title": "2010-13 stagnation and the 2013 taper tantrum",
+  "date": "2013-08-28",
+  "tags": [
+   "india",
+   "policy",
+   "base-rate",
+   "cyclical",
+   "macro"
+  ],
+  "confidence": "verified",
+  "body": "After touching ~21,000 in Nov 2010 the Sensex went sideways-to-down for three years: ~15,100 in Dec 2011 (approximate) and a taper-tantrum low near ~18,000 in Aug 2013, while small caps fell much more (BSE Smallcap roughly -40% in 2011; unverified). Causes: inflation near double digits and 13 RBI rate hikes in 2010-11 (from memory), 'policy paralysis' and corruption scandals (2G, coal), stalled projects that later became bank NPAs, a current-account deficit near ~4.8% of GDP in FY13. On 22 May 2013 the Fed signalled tapering; Indian markets sold off - the Sensex fell 12% in 20 sessions from July, and on 16 Aug 2013 it fell 3.97% (769 points) to 18,598 and the Nifty 4.08% to 5,507.85, the biggest daily fall since 2011. The rupee lost almost 15% between 22 May and 30 Aug 2013, hitting a record ~68.8/USD on 28 Aug 2013 (from memory; sources found cite 62-64 mid-August). RBI tightened abruptly; Raghuram Rajan took over in Sept 2013 and the FCNR(B) deposit swap rebuilt reserves. Leaders: IT, pharma, FMCG (dollar earners, defensives); laggards: infra, PSU banks, realty, capital goods. Bottom signals: rupee capitulation plus forceful policy response, maximum pessimism, mid/small caps at multi-year low valuations (P/B near ~1 for many). Lesson: currency crises mark bottoms when policy credibly responds.",
+  "data": {
+   "sensex_range": "~15k-21k 2010-13",
+   "taper_day": "16 Aug 2013 Sensex -3.97% to 18,598",
+   "rupee": "~-15% May-Aug 2013, record ~68.8 (from memory)",
+   "leaders": "IT, pharma, FMCG",
+   "laggards": "infra, PSU banks, realty",
+   "lesson": "currency panic + policy response = bottom"
+  },
+  "sources": [
+   "https://www.business-standard.com/article/pti-stories/sensex-crashes-769-pts-in-market-mayhem-113081600544_1.html",
+   "https://www.business-standard.com/article/reuters/nifty-slumps-4-pct-on-capital-control-u-s-stimulus-fears-113081600531_1.html",
+   "https://upstox.com/learning-center/share-market/what-is-taper-tantrum-in-india-meaning-examples-significance",
+   "https://www.business-standard.com/amp/article/markets/market-sell-off-brings-back-memories-of-the-2013-taper-tantrum-121022700045_1.html"
+  ],
+  "links": [
+   {
+    "to": "event:india-modi-rally-2014",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:india-cycle-top-bottom-signals",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "event",
+  "id": "event:india-modi-rally-2014",
+  "title": "2014 Modi election rally (Sept 2013 - Mar 2015)",
+  "date": "2014-05-16",
+  "tags": [
+   "india",
+   "policy",
+   "rerating",
+   "smallcap",
+   "cyclical"
+  ],
+  "confidence": "unverified",
+  "body": "From the taper-tantrum low (Sensex ~18,000, Aug-Sept 2013) the market re-rated on expectations of a decisive BJP win: Nifty crossed 7,000 around exit polls (May 2014) and the Sensex touched 25,000 intraday on results day, 16 May 2014; the Sensex then peaked near ~30,000 intraday in March 2015 (levels from memory). Calendar 2014 returns (from memory, unverified): Sensex ~+30%, BSE Midcap ~+55%, BSE Smallcap ~+69% - small caps led strongly. Leaders: PSU banks, capital goods, infra, cyclicals, mid/small caps that had been most beaten down; laggards: defensives (FMCG, pharma) on a relative basis. Valuation: Sensex P/E re-rated from ~15-16x to ~19-20x as earnings stayed flat - the move was hope. What followed: earnings disappointed for years (FY15-FY20 Nifty EPS growth was weak), the RBI's 2015 asset-quality review exposed PSU bank NPAs, and the Sensex fell ~25% to ~22,500 by Feb 2016. Signal visible at the time: the rally was P/E-driven with no earnings upgrades, and PSU banks rallied while stressed loans rose. Lesson: political change can trigger a sharp rerating from depressed valuations - the best returns came from buying the despair of 2013, not the euphoria of 2014-15; ratings without earnings fade.",
+  "data": {
+   "start": "Sensex ~18k (Aug 2013)",
+   "peak": "~30k intraday (Mar 2015, from memory)",
+   "2014_returns": "Sensex ~+30%, midcap ~+55%, smallcap ~+69% (unverified)",
+   "lesson": "rerating without earnings fades"
+  },
+  "sources": [
+   "https://www.business-standard.com/article/opinion/sensex-valuation-ratio-at-three-year-high-114061901150_1.html",
+   "https://www.businesstoday.in/visualstories/stock/niftys-14-year-journey-from-2700-to-20000-all-about-niftys-setbacks-and-how-it-bounced-back-higher-62269-11-09-2023"
+  ],
+  "links": [
+   {
+    "to": "event:india-stagnation-taper-2010-13",
+    "rel": "caused_by"
+   }
+  ]
+ },
+ {
+  "type": "event",
+  "id": "event:india-demonetisation-2016",
+  "title": "Demonetisation shock (Nov 2016) and the 2017 smallcap/realty surge",
+  "date": "2016-11-08",
+  "tags": [
+   "india",
+   "policy",
+   "smallcap",
+   "sector-realty",
+   "sector-nbfc"
+  ],
+  "confidence": "verified",
+  "body": "On 8 Nov 2016 Rs 500/1,000 notes (~86% of currency by value) were withdrawn. Nifty: above 8,500 before the move (8 Nov close cited ~8,516-8,544) to a seven-month low of 7,908 on 26 Dec 2016, about -7%. Hardest hit: BSE Realty -17% (8 Nov - 26 Dec); microfinance and gold-loan NBFCs such as Bharat Financial Inclusion and Manappuram fell 40%+; consumer discretionary and cash-heavy sectors. By mid-Feb 2017 benchmarks were ~3% above their 8 Nov close; Bharat Financial and Manappuram had rallied ~60% from December lows - helped by a stemming of FPI outflows, a better-than-feared December-quarter, and strong domestic MF buying. 2017 then became a broad small-cap and realty rally: Nifty Realty +~97% (biggest in a decade), with small caps also surging (BSE Smallcap ~+60% in 2017, from memory). Analysts noted demonetisation plus GST deferred earnings recovery by ~3 quarters. Signal: the shock was a liquidity/sentiment hit, not a balance-sheet crisis, and domestic flows (SIPs, post-demonetisation 'financialisation of savings') were rising. Lesson: policy shocks that don't damage the banking system are usually bought within months; but the flood of domestic money that followed fed the 2017 small-cap froth that crashed in 2018.",
+  "data": {
+   "nifty": "~8,516-8,544 -> 7,908 (26 Dec 2016)",
+   "drawdown": "~-7%",
+   "realty": "-17% then +97% in 2017",
+   "nbfc_mfi": "-40% then +60% by Feb 2017",
+   "lesson": "non-systemic policy shocks are bought fast"
+  },
+  "sources": [
+   "https://www.business-standard.com/amp/article/economy-policy/one-year-of-demonetisation-short-lived-scare-for-stock-markets-117110700022_1.html",
+   "https://www.business-standard.com/amp/article/markets/100-days-of-demonetisation-markets-recover-lost-ground-117021600219_1.html",
+   "https://www.business-standard.com/amp/article/markets/nifty-realty-index-zooms-97-in-2017-set-to-post-biggest-rally-in-10-years-117112900315_1.html"
+  ],
+  "links": [
+   {
+    "to": "event:india-smallcap-crash-2018",
+    "rel": "caused_by"
+   }
+  ]
+ },
+ {
+  "type": "event",
+  "id": "event:india-smallcap-crash-2018",
+  "title": "2018-19 smallcap crash and IL&FS/NBFC freeze",
+  "date": "2018-09-21",
+  "tags": [
+   "india",
+   "blowup",
+   "smallcap",
+   "sector-nbfc",
+   "policy",
+   "base-rate"
+  ],
+  "confidence": "verified",
+  "body": "BSE Smallcap record high 20,183 on 15 Jan 2018 (Business Standard; another BS piece cites 18,672 on 14 Feb 2018 as the 52-week high - definitions differ); -23.5% in calendar 2018; ~-40% from Jan 2018 to Aug 2019 (Value Research). Smallcap 250 TRI -36% vs Nifty 50 TRI -14% (DSP drawdown table); intra-year fall of the Smallcap 100 ~40%. Meanwhile the Nifty kept making highs into Aug-Sept 2018 - a narrow market. Triggers: Oct 2017 SEBI MF recategorisation (fixed definitions of large/mid/small caps forced portfolio reshuffles), Feb 2018 budget reintroducing LTCG tax, the ASM surveillance framework (2018), the IL&FS default (Sept 2018; ~Rs 91,000 crore of debt, from memory), DHFL's ~60% intraday crash (21 Sept 2018) and an NBFC funding freeze; then 2019 governance blow-ups (DHFL, Yes Bank, Cox & Kings, CG Power). Leaders before: everything small, MF-flow beneficiaries; laggards: NBFCs/housing finance, autos, realty, promoter-pledged names. Winners during: large private banks, IT, consumer 'quality' (the 2019-20 quality premium peak). Recovery: ~3 years to regain the prior peak (DSP) - aided by the 2020 liquidity wave. Top signals: record SIP and small-cap fund inflows, breadth peaking (Jan 2018) while the index rose, IPO and QIP rush by small companies. Lesson: breadth divergence plus a credit event = small-cap bear market even if the Nifty looks fine.",
+  "data": {
+   "peak": "BSE Smallcap 20,183 (15 Jan 2018)",
+   "drawdown": "~-40% to Aug 2019; SC250 TRI -36% in 2018",
+   "recovery": "~3 yrs",
+   "triggers": "recategorisation, LTCG, ASM, IL&FS, DHFL",
+   "lesson": "breadth divergence + credit event"
+  },
+  "sources": [
+   "https://www.business-standard.com/article/pti-stories/small-stocks-lose-sheen-tumbles-nearly-24-in-2018-118123100707_1.html",
+   "https://www.valueresearchonline.com/stories/226591/dark-side-small-cap-investing/",
+   "https://business-standard.com/article/markets/is-the-worst-over-for-small-caps-here-s-what-past-data-indicates-118120900518_1.html",
+   "https://www.dspim.com/smallcap-fund-page/truth-to-know"
+  ],
+  "links": [
+   {
+    "to": "case_study:porinju-2018-drawdown",
+    "rel": "about"
+   },
+   {
+    "to": "insight:smallcap-drawdown-durations",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "event",
+  "id": "event:india-covid-crash-2020",
+  "title": "COVID crash and liquidity recovery (2020-21)",
+  "date": "2020-03-24",
+  "tags": [
+   "india",
+   "base-rate",
+   "smallcap",
+   "policy",
+   "rerating"
+  ],
+  "confidence": "verified",
+  "body": "Nifty ~12,430 (Jan 2020 high; 12,168 cited as the pre-crash reference) to 7,511 on 24 Mar 2020, about -38 to -40%; Sensex ~42,270 to ~25,640 (levels from memory). Nifty 50 TRI -38% vs Smallcap 250 TRI -43% (DSP); Smallcap 100 intra-year fall -47%. Market cap/GDP fell to ~56% in March 2020 (Business Standard; other estimates ~70% on FY20 GDP) - the lowest in a decade. Recovery: the Nifty regained its high in Nov 2020 (about 8-10 months; sources differ on day counts), doubled to 15,000 by Feb 2021, and the Smallcap 100 was up 141% from its March low by the end of FY21. Bottom signals: global central-bank 'whatever it takes' (Fed unlimited QE 23 Mar 2020; RBI's 75bp cut on 27 Mar), valuation near decade lows, forced selling and record pessimism, a surge in new retail demat accounts. Leaders of the recovery: pharma, IT, specialty chemicals, metals, then small caps broadly; laggards: banks (loan moratorium), hotels, aviation. Rs 1 lakh in Smallcap 250 TRI at the Mar 2020 bottom became ~Rs 5 lakh by Mar 2026 (~31% CAGR) vs ~Rs 2.9 lakh (~19%) if invested in Jan 2020 (DSP). Lesson: exogenous crashes met by massive liquidity recover fastest; the best entries came when valuation indicators (mcap/GDP <60-70%) and policy turned together.",
+  "data": {
+   "peak": "Nifty ~12,430 (Jan 2020)",
+   "trough": "7,511 (24 Mar 2020)",
+   "drawdown": "~-38 to -40% (Nifty); SC250 TRI -43%",
+   "mcap_gdp_trough": "~56%",
+   "recovery": "~8-10 months",
+   "lesson": "liquidity + cheap valuation = fast recovery"
+  },
+  "sources": [
+   "https://www.bloombergquint.com/markets/from-12168-to-7511-back-mapping-the-niftys-journey-in-2020",
+   "https://www.business-standard.com/amp/article/markets/nifty-makes-k-shaped-recovery-to-wipe-out-covid-losses-crosses-12k-mark-120110600022_1.html",
+   "https://www.business-standard.com/amp/article/markets/india-s-market-capitalisation-to-gdp-ratio-at-115-highest-since-2008-121060400043_1.html",
+   "https://www.dspim.com/smallcap-fund-page/truth-to-know"
+  ],
+  "links": [
+   {
+    "to": "strategy:templeton-max-pessimism",
+    "rel": "illustrates"
+   },
+   {
+    "to": "strategy:druckenmiller-liquidity",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:india-ipo-mania-2021",
+  "title": "2021 new-age tech IPO mania (Zomato, Paytm, Nykaa)",
+  "date": "2021-11-18",
+  "tags": [
+   "india",
+   "blowup",
+   "ipo",
+   "rerating",
+   "sector-tech"
+  ],
+  "confidence": "verified",
+  "body": "2021 was a record IPO year - roughly $12-18bn raised depending on counting method; market cap/GDP reached ~115% (June 2021) and ~122% (Sept 2021), a 13-year high. Loss-making platform companies listed at rich valuations: Zomato (July 2021) and Nykaa (Nov 2021, +~80% on debut) surged on listing; Paytm (Nov 2021, issue price Rs 2,150, India's largest IPO then at ~$2.4-2.5bn) fell ~27% on debut. By mid-2022 Paytm was ~Rs 692 (-68% from issue), Zomato had lost ~66%, Nykaa ~50% from its high; five famed tech IPOs shed $18bn+ in value by Nov 2022. Paytm later fell further after the RBI's 2024 action against Paytm Payments Bank (to ~Rs 310-ish, ~-85%; from memory). Divergence: Zomato (now Eternal) later recovered far above its IPO price as quick commerce and food delivery turned profitable - the sector-wide crash was not uniform. Broad market: Nifty ~18,600 (Oct 2021) to ~15,200 (June 2022), ~-18% (from memory), as the Fed began tightening. Signals at the top: grey-market premiums, subscriptions in the tens-to-hundreds of times, valuation on GMV/'TAM' not profits, record new demat accounts and retail F&O growth, pre-IPO investors selling large OFS portions. Lesson: at IPO, the seller sets the price and the timing; wait for post-listing lock-up expiries and proof of unit economics.",
+  "data": {
+   "mcap_gdp": "~115-122% (2021)",
+   "paytm": "Rs2,150 issue -> ~Rs692 (mid-2022), lower in 2024",
+   "zomato": "-66% by mid-2022, later recovered",
+   "early_signals": "GMP mania, GMV valuations, big OFS",
+   "lesson": "sellers set IPO price; wait for lock-ups and unit economics"
+  },
+  "sources": [
+   "https://fortune.com/2021/11/18/paytm-ipo-share-falling-price-trading-debut-investors/",
+   "https://www.business-standard.com/amp/article/markets/5-famed-tech-ipos-in-india-flounder-shedding-more-than-18-bn-in-value-122111700578_1.html",
+   "https://theprint.in/economy/zomato-paytm-nykaa-how-investors-have-lost-big-time-after-these-big-tech-ipos/1056410",
+   "https://www.business-standard.com/article/companies/india-s-market-capitalisation-to-gdp-ratio-hits-13-year-high-of-122-121090100076_1.html"
+  ],
+  "links": [
+   {
+    "to": "insight:india-cycle-top-bottom-signals",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:india-psu-rally-2023-24",
+  "title": "2023-24 PSU, defence and railway rerating rally and its unwind",
+  "date": "2024-07-15",
+  "tags": [
+   "india",
+   "rerating",
+   "sector-psu",
+   "sector-defence",
+   "sector-railways",
+   "cyclical"
+  ],
+  "confidence": "verified",
+  "body": "The BSE PSU index rose ~5x from March 2020 to mid-2024 on government capex (~Rs 6 to ~9.5 lakh crore) and a narrative shift from 'value traps' to 'nation-building' stocks. Railway names (RVNL, IRFC) and defence/shipbuilding (Mazagon Dock, Cochin Shipyard, HAL, BEL) posted triple-digit gains; IRFC, a government lender, traded at a large multiple of book and RVNL, a contractor, at high P/Es (levels unverified). Business Standard (2023) found the rally was mainly multiple rerating; in Apr 2025 defence forward P/Es were ~2x their history (HAL ~28x vs ~14x; BEL ~41x vs ~21x). Peak: July 2024. Unwind: BSE CPSE index ~-30% from the July 2024 peak by end-Feb 2025; Mazagon Dock -59% and Cochin Shipyard -52% from July 2024; by late 2025 IRFC, Concor and RVNL were ~-46% and IRCTC ~-40%. The 4 June 2024 election result (no single-party majority) was an early crack (sharp one-day PSU fall, from memory). Defence had sharp rebounds in 2025 (geopolitics), railways briefly in Sept/Dec 2025. Top signals: valuations ~2x history with no matching earnings upgrade, heavy retail and thematic-fund ownership, government OFS selling into strength, high-stake PSUs (82-89% government) with tiny free floats. Lesson: rerating rallies end when multiples hit the ceiling, even when the capex story continues.",
+  "data": {
+   "run": "BSE PSU ~5x Mar 2020-Jul 2024",
+   "peak": "Jul 2024",
+   "drawdown": "CPSE ~-30% by Feb 2025; MDL -59%; railways ~-46%",
+   "valuation": "~2x historical P/E",
+   "lesson": "rerating ceilings end rallies"
+  },
+  "sources": [
+   "https://businesstoday.in/markets/stocks/story/irfc-hal-bhel-oil-ircon-nmdc-steel-rec-hudco-nbcc-why-psu-stocks-are-in-bear-grip-463499-2025-02-05",
+   "https://theprint.in/economy/once-the-darling-of-rookie-investors-psu-stocks-have-seen-rs-13-lakh-crore-wiped-out-of-market-cap/2517977",
+   "https://www.business-standard.com/markets/news/ircon-rvnl-disconnect-between-fundamentals-valuations-of-railway-stocks-125060900293_1.html",
+   "https://www.businesstoday.in/amp/markets/stocks/story/irfc-mazagon-dock-mrpl-ntpc-green-sjvn-shares-why-are-psu-stocks-with-high-govt-stakes-falling-534418-2026-06-02"
+  ],
+  "links": [
+   {
+    "to": "case_study:defence-psu-rerating",
+    "rel": "similar_to"
+   },
+   {
+    "to": "person:prashant-jain",
+    "rel": "about"
+   },
+   {
+    "to": "strategy:soros-reflexivity",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "event",
+  "id": "event:india-sme-ipo-mania-2024",
+  "title": "2024 SME IPO mania and SEBI's clampdown",
+  "date": "2024-08-22",
+  "tags": [
+   "india",
+   "blowup",
+   "ipo",
+   "smallcap",
+   "redflag",
+   "policy",
+   "governance"
+  ],
+  "confidence": "single-source",
+  "body": "SME IPOs boomed in FY24 and FY25: the RBI noted a strong surge driven by retail participation, and the BSE SME IPO index outperformed the mainboard IPO index and the Sensex. Symbol of the mania (from memory, not re-verified here): Resourceful Automobile (Aug 2024), a Delhi two-wheeler dealer with two showrooms and a handful of employees, raised ~Rs 12 crore and was oversubscribed ~400x; many SME issues were subscribed hundreds of times. SEBI officials warned in 2024 of manipulation, inflated financials and 'pump and dump' in SME listings; NSE capped SME listing-day gains at 90% (2024, from memory). SEBI board on 18 Dec 2024 tightened norms (in ICDR by Mar 2025): minimum EBITDA of Rs 1 crore in 2 of 3 years, minimum application of two lots, and other limits; exchanges applied new SME rules from 1 July 2025; by May 2025 some SME IPOs excluded retail bids under Rs 2 lakh. In Oct 2026 a SEBI working group/consultation proposed a further overhaul (e.g., scrapping compulsory 3-year market making). Post-listing, many 2024 SME stocks fell sharply in 2025 (no index-level figure found; unverified). Signals at the top: absurd subscription multiples for tiny, unknown issuers, listing pops used as the investment case, promoter-linked merchant bankers, regulator warnings. Lesson: same as the 1990s IPO boom - when the quality of what is being listed collapses, expect the worst losses there first.",
+  "data": {
+   "peak": "2024",
+   "signals": "100-1000x subscription for tiny issuers; regulator warnings",
+   "policy": "SEBI 18 Dec 2024; exchange rules 1 Jul 2025; Oct 2026 review",
+   "lesson": "issuer-quality collapse = top"
+  },
+  "sources": [
+   "https://www.rbi.org.in/Scripts/BS_ViewBulletin.aspx?Id=23715",
+   "https://www.angelone.in/news/market-updates/sebi-revealed-tighter-norms-for-sme-ipos",
+   "https://zerodha.com/z-connect/updates/no-more-retail-participation-in-sme-ipos",
+   "https://groww.in/blog/nse-and-bse-issue-new-rules-for-sme-ipos",
+   "https://www.moneylife.in/article/sebi-proposes-sweeping-overhaul-of-sme-ipo-framework/81956.html"
+  ],
+  "links": [
+   {
+    "to": "event:india-lost-decade-1994-2003",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:disqualifiers",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "event",
+  "id": "event:india-fpi-exodus-2025-26",
+  "title": "2025-26 FPI exodus, smallcap bear market and rupee record low",
+  "date": "2026-11-19",
+  "tags": [
+   "india",
+   "macro",
+   "policy",
+   "smallcap",
+   "base-rate",
+   "cyclical"
+  ],
+  "confidence": "verified",
+  "body": "Nifty peaked at ~26,277 on 27 Sept 2024 (from memory) and fell ~17% to ~21,700-22,000 by Mar-Apr 2025 (US tariff shock; from memory); the Nifty Smallcap 250 fell 24%+ from its Sept 2024 peak to 14,145 on 17 Feb 2025 and had its weakest calendar year in seven years in 2025 (-6 to -7%). Smallcap 250 TRI -24% vs Nifty 50 TRI -8% in the 2025 correction, still below its peak 18 months later (Mar 2026, DSP). FPIs sold a record ~Rs 1.66 lakh crore in 2025; 2026 then saw the US-Iran war (from 28 Feb 2026) and crude above $100: FPI outflows of ~Rs 1.68-1.92 lakh crore in Jan-Apr 2026, ~Rs 2.41 lakh crore for 2026 before November; FPI ownership of NSE firms fell to a 17-year low (~15.8%). The rupee breached 96/USD (record low ~96.5-97.2 in May 2026 per earlier memdb record) vs ~94.2 in mid-Nov. Domestic flows absorbed it: DII inflows ~Rs 8.5 lakh crore in FY26 and SIPs ~Rs 32,000 crore a month. Nifty ~23,700 on 22 May 2026; then recovery: record FPI buying of Rs 84,291 crore in the first half of Nov 2026, led by financials and autos; Nifty 25,228 and Sensex 82,032 on 18 Nov 2026. Valuation (Nov 2026): Nifty ~20.6x trailing; Smallcap 250 forward ~21.9x vs 18.7x average. Lesson: FPI selling plus a weak rupee hits small caps hardest; domestic SIP flows now cushion large caps; FPI capitulation (ownership at 17-year lows) preceded the turn.",
+  "data": {
+   "nifty_peak": "~26,277 (27 Sep 2024)",
+   "smallcap250_trough": "14,145 (17 Feb 2025), -24%",
+   "fpi_2025": "-Rs1.66 lakh cr",
+   "fpi_2026_pre_nov": "-Rs2.41 lakh cr",
+   "fpi_ownership": "15.8% (17-yr low)",
+   "rupee_low": "~96-97 (May 2026)",
+   "nov_2026": "FPI +Rs84,291cr H1 Nov; Nifty 25,228 (18 Nov)",
+   "lesson": "FPI capitulation + DII floor"
+  },
+  "sources": [
+   "https://www.business-standard.com/markets/news/can-smallcap-stocks-crash-trigger-a-capitulation-phase-what-analysts-say-125021700222_1.html",
+   "https://thewire.in/economy/rs-1-68-trillion-cumulative-fpi-outflow-so-far-in-first-four-months-of-2026-more-than-any-previous-full-year",
+   "https://www.outlookbusiness.com/markets/fpis-pull-out-60847-cr-in-apr-outflows-hit-192-lakh-cr-in-first-four-months-of-2026",
+   "https://www.business-standard.com/amp/markets/news/fpis-pour-record-84k-cr-in-1st-half-of-nov-financials-auto-rake-in-most-126111901252_1.html",
+   "https://www.marketcalls.in/futures-and-options/post-market-report-18-november-2026.html",
+   "https://www.dspim.com/smallcap-fund-page/truth-to-know"
+  ],
+  "links": [
+   {
+    "to": "insight:india-macro-nov-2026",
+    "rel": "about"
+   },
+   {
+    "to": "insight:smallcap-drawdown-durations",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:smallcap-drawdown-durations",
+  "title": "How deep and how long Indian smallcap drawdowns last",
+  "date": "2026-11-19",
+  "tags": [
+   "india",
+   "base-rate",
+   "smallcap",
+   "avoid-ruin"
+  ],
+  "confidence": "verified",
+  "body": "Depth: Nifty Smallcap 250 TRI calendar-year falls: 2008 -73% (Nifty 50 TRI -59%), 2018 -36% (-14%), 2020 -43% (-38%), 2025 -24% (-8%) (DSP). Nifty Smallcap 100 maximum intra-year falls: 76% (2008), 47% (2020), 40% (2018), 33% (2022), 23% (2025); a fall of at least 10% occurred in 21 of 22 calendar years 2004-2025 (5paisa). Frequency: intra-year falls over 20% happened 12 times in 2005-2025 for Smallcap 250 TRI vs 4 times for the Nifty 50 TRI - roughly every 2 years vs every 5. Time underwater: from Jan 2004 to Sep 2026 the Smallcap 100 spent 63% of trading days >10% below its peak, 45% >20% below and 36% >30% below (Sensex: 33%, 11%, 4%). Recovery to prior peak: after 2008 >6 years (Smallcap 250 TRI) or ~69 months to Nov 2014 for the Smallcap 100 (BSE Smallcap ~2017 on closes); after 2018 ~3 years; after the 2024 peak, still below 18 months later (Mar 2026). Rule of thumb: a 30-40% smallcap fall is normal and takes ~2-3 years to recover; a 60-75% fall after a valuation bubble takes 5-7 years. Implication: size smallcap allocations so that a 50% fall is survivable financially and psychologically; staggered buying during drawdowns earns most of the excess return (Rs 1 lakh at the 2008 bottom ~18% CAGR vs ~8% from the pre-crisis peak).",
+  "data": {
+   "normal_drawdown": "30-40%, ~2-3 yr recovery",
+   "bubble_drawdown": "60-75%, 5-7 yr recovery",
+   "time_underwater_gt30pct": "36% of days (2004-2026)"
+  },
+  "sources": [
+   "https://www.dspim.com/smallcap-fund-page/truth-to-know",
+   "https://www.5paisa.com/blog/small-cap-index-30-percent-below-peak-36-percent-trading-days",
+   "https://www.valueresearchonline.com/stories/226591/dark-side-small-cap-investing/",
+   "https://premium.capitalmind.in/2019/02/nifty-small-cap-index-is-massively-down-should-you-buy/"
+  ],
+  "links": [
+   {
+    "to": "insight:winners-drawdowns",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:avoid-ruin",
+    "rel": "about"
+   },
+   {
+    "to": "event:india-crash-2008",
+    "rel": "about"
+   },
+   {
+    "to": "event:india-smallcap-crash-2018",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-recovery-times",
+  "title": "Indian benchmark recovery times after major peaks",
+  "date": "2026-11-19",
+  "tags": [
+   "india",
+   "base-rate",
+   "cyclical"
+  ],
+  "confidence": "single-source",
+  "body": "Approximate time for the Sensex/Nifty to regain a prior peak (levels and dates partly from memory; treat as indicative): 1992 peak 4,467 - exceeded by Sept 1994 (~2.5 years) but that 1994 high then capped the market for most of a decade; 2000 peak ~6,150 - regained around 2004-05 (~4-5 years); 2008 peak 21,206 - briefly regained Nov 2010 (~34 months), sustainably only late 2013 (~6 years of flat returns from the peak); 2015 peak ~30,000 - regained 2017 (~2 years); 2020 COVID crash - new high Nov 2020 (~8-10 months); Sept 2024 Nifty peak ~26,277 - Nifty touched a record 26,310 intraday on 27 Nov 2025 (~14 months) and was ~25,228 on 18 Nov 2026. Pattern: crashes caused by exogenous shocks with policy support (2020, 2016) recover in under a year; crashes after valuation-plus-credit booms (1992, 2000, 2008) take 4-6+ years for large caps and longer for the boom's leading sectors (capital goods 2007 -> ~2021; K-10 tech names never). Small caps take roughly 1.5-2x as long as large caps (see insight:smallcap-drawdown-durations). Implication: the cause of the fall (shock vs bubble unwind) is the best predictor of recovery time.",
+  "data": {
+   "shock_recovery": "<1 yr (2016, 2020)",
+   "bubble_recovery": "4-6+ yrs (1992, 2000, 2008)",
+   "2024_peak": "regained Nov 2025 (~14 months)"
+  },
+  "sources": [
+   "https://www.bloombergquint.com/markets/from-12168-to-7511-back-mapping-the-niftys-journey-in-2020",
+   "https://www.newsonair.gov.in/sensex-and-nifty-hit-new-highs-markets-close-mixed-amid-mid-session-volatility",
+   "https://www.tribuneindia.com/news/equity/equity-market-and-volatility-sensex-navigates-through-crises-from-1000-to-86000-journey-study",
+   "https://cleartax.in/s/biggest-stock-market-crashes-in-india"
+  ],
+  "links": [
+   {
+    "to": "case_study:capital-goods-2007",
+    "rel": "about"
+   },
+   {
+    "to": "event:ketan-parekh-tech-2000",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-valuation-forward-returns",
+  "title": "Valuation levels that preceded bad (and great) 5-year Indian returns",
+  "date": "2026-11-19",
+  "tags": [
+   "india",
+   "base-rate",
+   "valuation"
+  ],
+  "confidence": "verified",
+  "body": "Nifty trailing P/E: a Stable Investor study (data to 2015) found that from P/E above 24, average subsequent 3/5/7-year returns were -5.1%/2.7%/9.9% a year, while from P/E below 12 the 5-year return averaged ~29% a year. Freefincal found every instance of a negative 5-year Nifty return started from P/E >=24.5, though over 3 years P/E was a weak predictor (negative 3-year returns from P/E >=22 only ~43% of the time). MoneyWorks4Me: entry above 22-25x led to poor 3-5 year returns, with the effect fading over 10-15 years. Sensex peaks: ~28x (2000) and ~27-28x (Jan 2008) both preceded ~60% crashes; troughs at ~12x (2008-09) preceded strong multi-year gains. Market cap/GDP: near 150% (2007) preceded roughly zero Sensex returns from Jan 2008 to late 2013; ~56% (Mar 2020) preceded a doubling within a year; 115-122% (2021) preceded a flat 2022; ~140% (mid-2024, a 15-year high) preceded the 2024-25 correction. Long-run average Sensex P/E ~18.5-19x; long-run mcap/GDP average ~76-81% (figures vary by GDP base). Caveats: index composition (more financials, fewer commodities) and lower rates may lift 'normal' P/Es; earnings-cycle troughs inflate P/E (Mar 2020). Rule: above ~24x trailing Nifty P/E or >~120% mcap/GDP, expect low single-digit 5-year returns; below ~14-15x or <~70%, expect high returns.",
+  "data": {
+   "pe_gt_24_5yr": "~2.7%/yr",
+   "pe_lt_12_5yr": "~29%/yr",
+   "mcap_gdp_hot": ">120% (2007 ~150%, 2024 ~140%)",
+   "mcap_gdp_cold": "<70% (2020 ~56%)",
+   "nov_2026": "Nifty ~20.6x trailing"
+  },
+  "sources": [
+   "https://stableinvestor.com/2015/03/pe-ratio-analysis-india-in-2015.html",
+   "https://freefincal.com/misconceptions-about-the-nifty-pe/",
+   "https://www.moneyworks4me.com/blog/nifty-pe-ratio",
+   "https://www.angelone.in/news/economy/indias-market-cap-to-gdp-ratio-reaches-15-year-high",
+   "https://www.business-standard.com/amp/article/markets/india-s-market-cap-to-gdp-now-below-long-term-average-of-76-report-120030800959_1.html",
+   "https://www.morningstar.in/posts/36274/how-investors-can-use-the-pe-ratio.aspx"
+  ],
+  "links": [
+   {
+    "to": "strategy:naren-contrarian-allocation",
+    "rel": "about"
+   },
+   {
+    "to": "strategy:marks-cycle-temperature",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-cycle-top-bottom-signals",
+  "title": "Recurring signals that marked Indian market tops and bottoms (1992-2026)",
+  "date": "2026-11-19",
+  "tags": [
+   "india",
+   "base-rate",
+   "process",
+   "redflag"
+  ],
+  "confidence": "single-source",
+  "body": "Tops (each appeared before or at the 1992, 1994, 2000, 2008, 2018, 2021 and 2024 peaks): (1) issuance boom with falling issuer quality - 1993-96 small IPOs, Reliance Power (Jan 2008), 2021 loss-making tech IPOs, 2024 SME IPOs subscribed hundreds of times; (2) leverage or unusual funding - bank receipts (1992), badla and co-op bank money (2000), project/land loans (2007), NBFC lending (2017-18), retail F&O (2021-24); (3) narrative stocks valued on non-cash metrics - land banks, order books, GMV, 'nation-building'; (4) valuation extremes - Sensex P/E 27-35x, Nifty >24x, market cap/GDP >120-150%, smallcap/midcap P/E above large caps; (5) breadth divergence - small caps peak first (Jan 2018, Sept/Dec 2024) while the index makes new highs; (6) regulator warnings/tightening (SEBI on SME IPOs 2024, MF stress tests 2024). Bottoms (2001-03, Oct 2008-Mar 2009, Aug 2013, Mar 2020, early 2025/2026 for small caps): P/E ~11-15x, mcap/GDP <70%, IPO drought, FPI capitulation (record outflows, ownership at multi-year lows - 15.8% in 2026), rupee panic followed by a forceful RBI/government response, and defensives leading. No signal times the turn; combinations of 3+ have marked zones where adding risk (bottoms) or trimming it (tops) paid off over 2-5 years.",
+  "data": {
+   "top_signals": "issuance quality, leverage, narrative valuation, P/E/mcap-GDP extremes, breadth divergence, regulator action",
+   "bottom_signals": "P/E 11-15x, mcap/GDP<70%, IPO drought, FPI capitulation, currency panic + policy response"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/1992_Indian_stock_market_scam",
+   "https://www.business-standard.com/article/markets/k-10-stocks-how-bad-are-they-102031801034_1.html",
+   "https://www.rbi.org.in/Scripts/BS_ViewBulletin.aspx?Id=23715",
+   "https://thewire.in/economy/fpis-withdraw-indian-markets-nifty-negative-return-falling-rupee",
+   "https://www.business-standard.com/amp/article/markets/india-s-market-capitalisation-to-gdp-ratio-at-115-highest-since-2008-121060400043_1.html"
+  ],
+  "links": [
+   {
+    "to": "strategy:marks-cycle-temperature",
+    "rel": "about"
+   },
+   {
+    "to": "strategy:templeton-max-pessimism",
+    "rel": "about"
+   },
+   {
+    "to": "event:india-sme-ipo-mania-2024",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-leadership-rotation",
+  "title": "Indian bull-market leaders rarely lead the next cycle",
+  "date": "2026-11-19",
+  "tags": [
+   "india",
+   "base-rate",
+   "cyclical",
+   "rerating"
+  ],
+  "confidence": "single-source",
+  "body": "Sequence of leadership: 1991-92 operator stocks (ACC) and 1993-94 new issues -> 1998-2000 ICE/tech (K-10, Zee, HFCL) -> 2003-08 realty, infra, power, capital goods, metals -> 2009-2019 consumer staples/discretionary, private banks, NBFCs, pharma/IT 'quality' (the 2019-20 quality-premium peak) -> 2020-24 PSUs, defence, railways, capital goods, manufacturing, small caps -> 2025-26 large financials and autos leading the recovery with FPI buying in Nov 2026. After each bull, its leaders took years to regain their highs or never did: K-10 stocks averaged -51.7% in the year to Feb 2002 and many never recovered; the capital goods index needed ~2007-2021; realty fell ~90% in 2008 and Nifty Realty is still well below its 2008 high (unverified current level); PSU/railway names were -46-59% from July 2024 peaks by 2025. Why: the leading sector attracts the most capital (IPOs, capacity, leverage), so supply catches up and multiples peak there; the next leaders are usually the sectors starved of capital in the prior boom (capital-cycle logic). Implication: after a crash, screen the previous cycle's laggards with improving supply discipline, and be most skeptical of the last cycle's heroes, however good the story.",
+  "data": {
+   "examples": "K-10 2000, cap goods 2007, realty 2008, PSU/rail 2024",
+   "mechanism": "capital floods the leading sector"
+  },
+  "sources": [
+   "https://www.business-standard.com/article/markets/k-10-stocks-how-bad-are-they-102031801034_1.html",
+   "https://businesstoday.in/markets/stocks/story/irfc-hal-bhel-oil-ircon-nmdc-steel-rec-hudco-nbcc-why-psu-stocks-are-in-bear-grip-463499-2025-02-05",
+   "https://www.business-standard.com/amp/markets/news/fpis-pour-record-84k-cr-in-1st-half-of-nov-financials-auto-rake-in-most-126111901252_1.html"
+  ],
+  "links": [
+   {
+    "to": "strategy:andrade-capital-cycle",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:capital-goods-2007",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:india-psu-rally-2023-24",
+    "rel": "about"
+   }
+  ]
  }
 ]

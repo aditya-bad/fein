@@ -45,3 +45,17 @@ On `www.nseindia.in`, the `/api/corporate*` endpoints work **without a cookie** 
 | 31 | India Ratings | `https://www.indiaratings.co.in/` | n/a | **SPA shell only** (7 KB); data is behind JS. Not scriptable with curl; use the exchange "Credit Rating" filings. | n/a |
 
 Rate limits: neither exchange publishes limits and no `X-RateLimit` headers were seen (BSE sends `Cache-Control: max-age=60`). Community experience says Akamai blocks an IP for minutes to hours after bursts. Policy in our helpers: **at least 1.5 s between requests**, back off exponentially on 403/429, cache everything locally, and pull bulk by date range rather than per symbol where the endpoint allows it.
+
+### Concall transcripts: where they live
+- **The exchange filing is the canonical source.** SEBI LODR (Reg 46 amendment 2021; Reg 30/Sch III amendment June 2023) requires transcripts on the company website and with the exchanges within 5 working days, and audio/video recordings promptly. The 2023 text says the next trading day or 24 h; secondary sources differ, so check the consolidated regulation. Sources: [Vinod Kothari guide](https://vinodkothari.com/2021/07/step-by-step-guide-for-disclosure-for-analysts-investors-meet/), [Khaitan 2023 note](https://www.khaitanco.com/sites/default/files/2023-06/SEBI%20enhances%20disclosure%20and%20governance%20requirements%20of%20listed%20entities_1.pdf).
+- NSE: in the announcements JSON, filter `desc == "Analysts/Institutional Investor Meet/Con. Call Updates"` and `"ranscript" in attchmntText` (this catches typos like "ransacript"). KPITTECH had 17 such filings.
+- BSE: `NEWSSUB` contains "Earnings Call Transcript".
+- screener.in: the Concalls section is visible **without login**, with Transcript, PPT and REC links per quarter. Transcript links go to BSE `AnnPdfOpen`. AI Summary needs login. Good as a cross-check index of which quarters exist.
+- Extraction: `pdftotext` (poppler) **is installed**. `pdftotext -layout` on KPIT Q2FY27 (20 pages) gave 8,530 words with speaker labels ("Kishor Patil:", "Moderator:"). That is enough to split management remarks from Q&A. Micro-cap scanned PDFs need OCR (tesseract, not tested).
+- Sample promise found in the KPIT Q2FY27 call (28-Oct-2026), as an example of a tracker item: an analyst asked whether EBITDA margins would return to the 20–21% range. The CEO replied: "it will go up to some extent, every quarter, but, it will be early next year when we get there." Tracker entry: metric = EBITDA margin; target = about 20–21%; deadline = early CY2027; specificity = medium (range given, date vague); check each quarter's result.
+
+### Credit rating rationales
+- ICRA: **works**. Use `icra.in/Rating/ShowRationalReportFilePdfViewer/<Id>` for the PDF; the Id comes from the rationale URL.
+- CRISIL: **works**. Plain HTML at `crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/...html`; discover the URLs via web search or the company's exchange "Credit Rating" filing.
+- CARE: site loads, JS-heavy, no clean endpoint found. India Ratings: JS SPA, **not curl-able**.
+- Best universal route: the Reg 30 "Credit Rating" exchange announcements plus the links on the screener company page.

@@ -1,0 +1,97 @@
+[
+ {
+  "type": "source",
+  "id": "source:nse-api-nseindia-in",
+  "title": "NSE corporate-data APIs (now on www.nseindia.in) - tested access",
+  "body": "Tested 2026-11-19 from a non-Indian cloud IP. www.nseindia.com now 301-redirects to www.nseindia.in (Akamai returns 403 to thin header sets). On www.nseindia.in the /api/ corporate endpoints return JSON WITHOUT a cookie if the request sends a browser User-Agent, Accept json, Accept-Language and Referer https://www.nseindia.in/. They work over HTTP/1.1, so Python urllib works. Working endpoints: corporate-announcements (per symbol: full history, 727 rows for KPITTECH back to 2019; or all companies by from_date/to_date), corporate-share-holdings-master, corporate-pledgedata (per symbol or all), corporate-sast-reg29, corporates-pit (per symbol; the all-market date form returned empty), corporates-financial-results, historicalOR/bulk-block-short-deals (optionType=bulk_deals|block_deals), snapshot-capital-market-largedeal, marketStatus. Attachments live on nsearchives.nseindia.in/corporate/*.pdf. Blocked: quote-equity (403 even with cookies). Dead: historical/bulk-deals, www1.nseindia.com. Archives CSVs (EQUITY_L.csv, bulk.csv, block.csv) work on nsearchives.nseindia.com. No published rate limit; use at least 1.5 s spacing and back off on 403. Helper script: tools/nse_fetch.py.",
+  "tags": [
+   "india",
+   "alt-data",
+   "process",
+   "source-exchange"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://www.nseindia.in/api/corporate-announcements?index=equities&symbol=KPITTECH",
+   "https://www.nseindia.in/api/corporate-pledgedata?index=equities"
+  ],
+  "confidence": "verified",
+  "data": {
+   "tested": "2026-11-19",
+   "host": "www.nseindia.in",
+   "cookie_needed": false,
+   "http1_ok": true,
+   "blocked": [
+    "quote-equity"
+   ],
+   "helper": "tools/nse_fetch.py"
+  },
+  "links": [
+   {
+    "to": "strategy:lynch",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "source",
+  "id": "source:bse-api-bseindia",
+  "title": "BSE India API (api.bseindia.com) - tested access",
+  "body": "Tested 2026-11-19. api.bseindia.com/BseIndiaAPI/api/* returns JSON only over HTTP/2, with a browser UA, Accept-Language, Accept-Encoding 'gzip, deflate, br', Sec-Fetch-Mode cors, Sec-Fetch-Site same-site, Sec-Fetch-Dest empty and Referer https://www.bseindia.com/. HTTP/1.1, or a request missing the Sec-Fetch headers, gets an Akamai 403. Python urllib therefore fails, so the helper shells out to curl --http2. Working: AnnSubCategoryGetData (announcements per scrip or all scrips per day, paged; includes NEWSSUB such as 'Earnings Call Transcript' and ATTACHMENTNAME), ComHeadernew (PE/ROE/ISIN/industry), getScripHeaderData (LTP), Corpforthresults (results calendar), TabResults_PAR (quarterly snapshot), SHPQNewFormat (shareholding filings + XBRL file names), ShpSecSummery_New, CorporateAction. Attachments: www.bseindia.com/xml-data/corpfiling/AttachLive/<name>.pdf (recent) or AttachHis (older); AnnPdfOpen.aspx?Pname= redirects there. BulkblockDeal and Sharehold_patternN redirect to an error page. Helper: tools/bse_fetch.py.",
+  "tags": [
+   "india",
+   "alt-data",
+   "process",
+   "source-exchange"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://api.bseindia.com/BseIndiaAPI/api/Corpforthresults/w",
+   "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c2af3076-540a-490f-b467-5b73ddbaf80d.pdf"
+  ],
+  "confidence": "verified",
+  "data": {
+   "tested": "2026-11-19",
+   "http2_required": true,
+   "sec_fetch_headers_required": true,
+   "helper": "tools/bse_fetch.py"
+  }
+ },
+ {
+  "type": "source",
+  "id": "source:concall-transcripts-india",
+  "title": "Where Indian concall transcripts live and how to extract them",
+  "body": "Under SEBI LODR (Reg 46 amendment May 2021; Reg 30/Schedule III amendment June 2023), listed companies must place earnings-call transcripts on their website and file them with the exchanges within 5 working days. Audio/video recordings must also be disclosed promptly (the 2023 text says before the next trading day or within 24 hours; secondary sources differ on the exact window, so re-check the consolidated regulation). In practice transcripts appear as exchange announcements. On NSE the category is 'Analysts/Institutional Investor Meet/Con. Call Updates' with attchmntText containing 'Transcript' (KPITTECH had 17 transcript filings in its announcement history). On BSE, NEWSSUB reads 'Announcement under Regulation 30 (LODR)-Earnings Call Transcript'. screener.in company pages show a Concalls section WITHOUT login, with Transcript links (BSE AnnPdfOpen), PPT links and REC links (company-hosted mp3); AI Summary and notes need login. PDFs download directly. Poppler pdftotext -layout is installed and turned the 20-page KPIT Q2FY27 transcript into 8,530 words of clean, speaker-labelled text. Scanned PDFs (common in micro caps) need OCR. Company IR sites duplicate the files but are inconsistent, so the exchange is the canonical source.",
+  "tags": [
+   "india",
+   "process",
+   "source-concall"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_03112026220723_KPIT_Q2FY27_Transcript_Signed.pdf",
+   "https://www.screener.in/company/KPITTECH/consolidated/",
+   "https://vinodkothari.com/2021/07/step-by-step-guide-for-disclosure-for-analysts-investors-meet/",
+   "https://www.khaitanco.com/sites/default/files/2023-06/SEBI%20enhances%20disclosure%20and%20governance%20requirements%20of%20listed%20entities_1.pdf"
+  ],
+  "confidence": "verified"
+ },
+ {
+  "type": "source",
+  "id": "source:credit-rating-rationales-india",
+  "title": "Credit rating rationales (ICRA, CRISIL, CARE, India Ratings) - access",
+  "body": "Rating rationales are an under-read, free, third-party diligence document. Analysts meet management, and the rationale lists key drivers, liquidity, covenants, related-party exposure and 'what could trigger downgrade'. Tested 2026-11-19: ICRA works. The rationale page is an HTML shell; the PDF sits at icra.in/Rating/ShowRationalReportFilePdfViewer/<Id> (9-page PDF downloaded). CRISIL works: plain HTML at crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/<Company>_<Month DD_ YYYY>_RR_<id>.html (Tega Industries Mar-2026 fetched, about 27K chars including Key Rating Drivers). CARE pages load but are JS-heavy, with no simple endpoint found. India Ratings is a JS single-page app, so curl gets only a shell. The practical route for all four is that companies must disclose rating actions as Reg 30 exchange filings ('Credit Rating' announcements), and screener.in lists rating links on company pages. Red flags to track: 'Issuer Not Cooperating' (borrower stopped sharing information, a strong governance warning), Watch Negative, and liquidity downgraded to 'Stretched'.",
+  "tags": [
+   "india",
+   "governance",
+   "redflag",
+   "source-credit"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://www.icra.in/Rationale/ShowRationaleReport/?Id=141659",
+   "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/TegaIndustriesLimited_March%2018_%202026_RR_391442.html"
+  ],
+  "confidence": "verified"
+ }
+]
