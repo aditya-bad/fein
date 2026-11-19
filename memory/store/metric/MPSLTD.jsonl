@@ -3,3 +3,5 @@
 {"as_of": "2026-11-19", "field": "mcap_cr", "period": "2026-11-19", "source": "idea pipeline", "ticker": "MPSLTD", "unit": "", "value": 3730.0}
 {"as_of": "2026-11-19", "field": "roce_pct", "period": "2026-11-19", "source": "idea pipeline", "ticker": "MPSLTD", "unit": "", "value": 39.0}
 {"as_of": "2026-11-19", "field": "score", "period": "2026-11-19", "source": "idea pipeline", "ticker": "MPSLTD", "unit": "", "value": 66.0}
+{"as_of": "2026-11-19", "field": "promoter_pledged_pct_of_promoter", "period": "2026-09-30", "source": "NSE corporate-pledgedata API via tools/nse_fetch.py (fetched 2026-11-19, shareholding as of 30-Sep-2026)", "ticker": "MPSLTD", "unit": "%", "value": 0.0}
+{"as_of": "2026-11-19", "field": "promoter_pledged_pct_of_total", "period": "2026-09-30", "source": "NSE corporate-pledgedata API via tools/nse_fetch.py (fetched 2026-11-19, shareholding as of 30-Sep-2026)", "ticker": "MPSLTD", "unit": "%", "value": 0.0}

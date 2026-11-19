@@ -11,7 +11,7 @@ Last updated: 2026-11-19
 
 ## Build plan (after answers) — don't start stock-picking before step 1
 1. Personalise the edge thesis in `mission_and_edge.md` around the user's domain.
-2. Test direct NSE/BSE filing access (announcements, shareholding, SAST pledges, concall transcripts).
+2. ~~Test direct NSE/BSE filing access~~ DONE 19-Nov-2026 (tools/nse_fetch.py, tools/bse_fetch.py).
 3. Build the management promise-vs-delivery tracker (start with 50–100 companies in the
    user's circle of competence; expand quarterly).
 4. Change-detection alerts each results season.
@@ -21,6 +21,12 @@ Last updated: 2026-11-19
 - Add semantic (embedding) search when an API key or local model is available.
 - Plan migration of memdb store to external DB/object storage before ~50k records.
 - Ask user whether to open a PR to merge the memory branch into main.
+
+## Ready to build next (no user input needed)
+- Promise tracker v1: schema in research_notes/Knowledge scout Nov 2026/edge_methods_data_access.md;
+  pipeline = NSE transcripts → pdftotext → extract promises → memdb `promise` records → score each quarter.
+- Text-change ("lazy prices") diff of annual reports/concalls year over year.
+- Weekly change detectors: pledge, SAST, insider (PIT), bulk/block, auditor/CFO exits, rating actions.
 
 ## Dated reminders
 - Feb 2027: Q3 FY27 results — re-check all watchlist kill criteria.

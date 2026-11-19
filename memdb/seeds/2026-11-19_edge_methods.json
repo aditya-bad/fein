@@ -159,5 +159,284 @@
     "rel": "about"
    }
   ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:lazy-prices-filing-changes",
+  "title": "Lazy Prices: year-on-year changes in filing text predict returns (Cohen-Malloy-Nguyen 2020)",
+  "body": "Cohen, Malloy and Nguyen (J. Finance 75(3), 2020; NBER w25084) compared each firm's 10-K/10-Q text with its previous filing, 1995-2014. Firms that changed their reports ('changers') subsequently underperformed. A short-changers / long-non-changers portfolio earned up to 188 bp/month (about 22%/yr) when changes were in the risk-factor section; broader value-weighted spreads were about 34-58 bp/month. Changes about the CEO/CFO, litigation and more negative wording were the most predictive. There was no announcement-day reaction. Returns built up over as long as 18 months as the news later surfaced, and did not reverse, which means investors simply don't read the diffs. Application to India: diff each annual report (MD&A, risk, contingent liabilities, related-party notes, auditor's report and CARO) and each concall against the prior year's. Flag unusually large changes, new risk language and dropped KPIs. Indian small caps are even less read than US filers, so the inattention premium is plausibly larger, though that is untested in India. Effect sizes come from the abstract and digest.",
+  "tags": [
+   "process",
+   "alt-data",
+   "base-rate",
+   "governance"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://www.nber.org/papers/w25084",
+   "https://www.nber.org/digest/nov18/are-investors-inattentive-sec-mandated-corporate-reports",
+   "https://econpapers.repec.org/RePEc:bla:jfinan:v:75:y:2020:i:3:p:1371-1415"
+  ],
+  "confidence": "verified",
+  "data": {
+   "alpha_bp_month_max": 188,
+   "alpha_bp_month_vw": "34-58",
+   "horizon_months": 18,
+   "sample": "US 1995-2014"
+  },
+  "links": [
+   {
+    "to": "strategy:lynch-at-scale-pipeline",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:text-tone-research-summary",
+  "title": "Text and tone research: LM dictionary, readability, call tone, obfuscation, deception",
+  "body": "Loughran & McDonald (J. Finance 2011): about 3/4 of Harvard-IV 'negative' words (tax, cost, liability) are not negative in 10-Ks. Their finance-specific list of 2,337 negative words relates to filing returns, volatility, fraud and material weakness, so generic sentiment tools should not be used on filings. Their readability paper shows the Fog index is poorly specified for finance; file size is a better proxy. Li (JAE 45, 2008): lower-earnings firms write longer, harder-to-read annual reports, and readable reports go with more persistent profits. Price, Doran, Peterson & Bliss (JBF 2012): US call tone predicts abnormal returns and volume and outweighs the earnings surprise over 60 days. Bushee, Gow & Taylor (JAR 2018; 60,172 calls): complexity mixes obfuscation and real information, and analysts' question complexity can benchmark it. Larcker & Zakolyukina (JAR 2012): deceptive executives use more general-knowledge phrases, fewer shareholder-value references, and CEOs use more extreme positive words; models beat random by 6-16%, and the most-deceptive-CFO portfolio had -4% to -11% annual alpha. Mayew & Venkatachalam (JF 2012): negative vocal affect predicts misses over 3 quarters, but the LVA software is disputed. Use these as within-company trend features and red flags, not as standalone signals.",
+  "tags": [
+   "process",
+   "base-rate",
+   "governance",
+   "redflag"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://papers.ssrn.com/abstract=1331573",
+   "https://ideas.repec.org/a/eee/jaecon/v45y2008i2-3p221-247.html",
+   "https://ideas.repec.org/a/eee/jbfina/v36y2012i4p992-1011.html",
+   "https://ideas.repec.org/a/bla/joares/v56y2018i1p85-121.html",
+   "https://corpgov.law.harvard.edu/2012/03/21/detecting-deceptive-discussions-in-conference-calls/",
+   "https://www.fuqua.duke.edu/duke-fuqua-insights/vocal-cues-influence-company-performance"
+  ],
+  "confidence": "verified"
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-concall-tone-cheap-talk",
+  "title": "India: optimistic concall tone moves prices but does not predict operating performance",
+  "body": "Jain, Khizer & Thirumalai studied 8,273 quarterly earnings-call transcripts from 559 S&P BSE 500 firms (2004-2019), measuring tone as optimistic minus pessimistic words. Optimistic tone produced positive short-window abnormal returns but did NOT predict better future operating performance. Retail investors reacted most, which the authors read as investors being misled. The paper is posted as an NSE white paper. Implication for our edge: in India, management cheerfulness is priced but uninformative, so scoring tone alone gives no edge and may push you the wrong way. The edge is checking stated promises against later delivery (the promise tracker). A 'tone minus credibility' gap is a candidate signal: high optimism with a poor delivery record should be overpriced, and understated managements with high delivery should be underpriced. This is a hypothesis to test on our own data. The sample is large caps; small-cap managements may be even more promotional.",
+  "tags": [
+   "india",
+   "process",
+   "myth",
+   "base-rate",
+   "governance"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://www.stern.nyu.edu/sites/default/files/assets/documents/Jain%20Khizer%20Thirumalai%20-%20Textual%20Disclosures%20and%20Retail%20Investors.pdf",
+   "https://nsearchives.nseindia.com/s3fs-public/inline-files/Retail%20Investors%20and%20Textual%20Disclosures%20-%20Jain%2C%20Khizer%20and%20Thirumalai%20-%20White%20Paper.pdf"
+  ],
+  "confidence": "single-source",
+  "data": {
+   "n_transcripts": 8273,
+   "n_firms": 559,
+   "period": "2004-2019",
+   "universe": "S&P BSE 500"
+  },
+  "links": [
+   {
+    "to": "strategy:promise-tracker",
+    "rel": "about"
+   },
+   {
+    "to": "insight:behavior-gap",
+    "rel": "similar_to"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:management-forecast-credibility",
+  "title": "Management credibility is a measurable track record that markets price",
+  "body": "Accounting research treats a manager's past forecast accuracy as the basis of their credibility reputation. Williams (1996, The Accounting Review): firms whose prior management forecasts were more accurate got larger analyst revisions to new forecasts. Hutton & Stocken (2009 working paper): the price reaction to good-news forecasts is larger for firms with a reputation for accurate, frequent forecasts (secondary summary). Rogers & Stocken (2005, TAR): bad-news forecasts are more credible than good-news ones, and the market takes bad news at face value but discounts good news where verification is hard. Implications for Indian small caps: guidance is informal and buried in concall text, few people systematically score it, and there is no I/B/E/S-style guidance database. A multi-year record of delivered, missed and goalpost-moved promises is therefore proprietary information. Weight bullish promises by the track record, and give more weight to management that pre-announces bad news candidly.",
+  "tags": [
+   "process",
+   "governance",
+   "base-rate"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://rodneywhitecenter.wharton.upenn.edu/wp-content/uploads/2014/04/0207.pdf",
+   "https://knowledge.wharton.upenn.edu/article/how-credible-are-management-forecasts-not-very/",
+   "https://core.ac.uk/download/13249539.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "strategy:promise-tracker",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "strategy",
+  "id": "strategy:promise-tracker",
+  "title": "Promise tracker: schema and scoring for management promise-vs-delivery",
+  "body": "One memdb 'promise' record per forward-looking statement from concalls, presentations, AR MD&A and press releases. Fields (in data): source_doc, source_url, speaker, verbatim quote, category (revenue_growth, margin, capex, capacity_commissioning, order_inflow, order_book, debt_reduction, working_capital, new_product, regulatory_approval, customer_win, m&a, payout), metric, baseline, target_low/high, unit, deadline plus deadline_precision, specificity 0-3, unprompted (yes/no), conditionality, status (open, delivered, partially_delivered, missed, moved_goalpost, withdrawn, superseded), status_history with evidence, check_after, delivery_ratio. Also extract each quarter's explanations for misses (to test 'one-off' claims) and KPIs or topics that stopped being mentioned. Scoring: delivered +1, partial +0.5, missed -1, moved goalpost or silent drop -1.5, candid withdrawal -0.5. Weights are specificity x materiality x recency (8-quarter half-life). Management Credibility Score is the weighted mean over 12 quarters, reported with hit rate, average delivery ratio, average delay, number of moved goalposts, and a candour index (share of misses acknowledged unprompted). Compare the score with tone: high tone and low score is an avoid or short-side flag; low-key tone and high score points to an under-recognised compounder. Example: KPIT Q2FY27 call (28-Oct-2026), CEO on EBITDA margin returning to about 20-21%: 'it will go up to some extent, every quarter... early next year'. Target 20-21%, deadline about Mar-2027, specificity 2.",
+  "tags": [
+   "process",
+   "governance",
+   "india"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_03112026220723_KPIT_Q2FY27_Transcript_Signed.pdf",
+   "https://ideas.repec.org/a/bla/joares/v56y2018i1p85-121.html"
+  ],
+  "confidence": "unverified",
+  "data": {
+   "weights": "specificity*materiality*recency(half-life 8q)",
+   "window_quarters": 12,
+   "scores": {
+    "delivered": 1,
+    "partial": 0.5,
+    "missed": -1,
+    "moved_goalpost": -1.5,
+    "silent_drop": -1.5,
+    "withdrawn_candid": -0.5
+   }
+  },
+  "links": [
+   {
+    "to": "strategy:lynch",
+    "rel": "about"
+   },
+   {
+    "to": "insight:india-concall-tone-cheap-talk",
+    "rel": "caused_by"
+   },
+   {
+    "to": "insight:management-forecast-credibility",
+    "rel": "caused_by"
+   }
+  ],
+  "tickers": [
+   "KPITTECH"
+  ]
+ },
+ {
+  "type": "strategy",
+  "id": "strategy:lynch-at-scale-pipeline",
+  "title": "Lynch-at-scale pipeline: AI reads every filing, human does scuttlebutt",
+  "body": "Quarterly loop. (1) Ingest: run tools/nse_fetch.py and bse_fetch.py for announcements (daily, all companies by date), transcripts, results, shareholding, pledge, SAST, PIT and bulk/block deals; save PDFs and pdftotext them. (2) Extract: an LLM fills promise records and a topic/KPI list per call, and diffs annual reports and calls against the prior ones (Lazy Prices). (3) Resolve: when results arrive, mark promises delivered/missed/moved and update the Management Credibility Score. (4) Change detectors: promoter pledge up, promoter SAST sale, PIT sell clusters, auditor/CFO exit, rating watch-negative or 'issuer not cooperating', bulk deals by known operators versus quality funds, related-party approvals in AGM notices, sudden length/complexity rise, dropped KPIs. (5) Human: each flagged company gets one decisive scuttlebutt question, Buffett-AmEx style ('is the moat damaged?', 'is capacity really commissioned?'), answered with dealer, customer and supplier calls, plant visits, pollution-board consent-to-operate records and job postings. (6) Write back: every result becomes a memdb record with a date and sources. The edge is breadth, consistency and memory over years across about 1,000+ small caps that sell-side does not cover, not any single clever signal.",
+  "tags": [
+   "process",
+   "india",
+   "alt-data"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://www.nseindia.in/api/corporate-announcements?index=equities&symbol=KPITTECH",
+   "https://api.bseindia.com/BseIndiaAPI/api/Corpforthresults/w",
+   "https://www.nber.org/papers/w25084"
+  ],
+  "confidence": "unverified",
+  "links": [
+   {
+    "to": "strategy:lynch",
+    "rel": "about"
+   },
+   {
+    "to": "strategy:fisher-scuttlebutt",
+    "rel": "about"
+   },
+   {
+    "to": "strategy:promise-tracker",
+    "rel": "part_of"
+   },
+   {
+    "to": "strategy:variant-perception",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "strategy",
+  "id": "strategy:scuttlebutt-individual-india",
+  "title": "Scuttlebutt for an individual investor in India: sources and question bank",
+  "body": "Fisher (Common Stocks and Uncommon Profits, 1958, ch.2): build a cross-section of opinions from competitors, customers, suppliers, ex-employees, researchers and trade-association staff; the composite picture of relative strength is surprisingly accurate. Buffett (1964): after the Nov-1963 salad-oil fraud hit American Express, he watched the cashier at Ross's Steak House in Omaha to see whether diners still used Amex cards and checked traveler's-cheque usage. Concluding the franchise was intact, he put about 40% of the partnership (about $13M) into the stock. The question was one decisive point (is the moat damaged?), not next quarter's EPS. Lynch: notice it first as a customer (Hanes L'eggs), and pass the two-minute drill. Question bank. Dealers: who is gaining counter share, what are the margins and credit terms, inventory days now versus 6 months ago, is stock being pushed at quarter-end. B2B customers: why this vendor over the L1 bidder, switching cost, wallet-share trend. Suppliers: does the company pay on time, has it asked for longer credit (an early stress sign). Ex-employees: culture, the promoter's treatment of minority money, capex discipline. Competitors: who prices irrationally, who is losing people. Records: state pollution-board consent-to-establish/operate (independently confirms capex timelines), MCA charges, eCourts, job postings, satellite imagery, app-store ratings. Keep a dated log.",
+  "tags": [
+   "process",
+   "india",
+   "alt-data"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://elearnmarkets.com/school/units/common-stocks-and-uncommon-profits/what-scuttlebutt-can-do",
+   "https://fortune.com/2012/11/21/why-warren-buffetts-betting-big-on-american-express",
+   "https://www.fool.com/investing/2017/05/27/1-stock-that-was-pivotal-in-billionaire-warren-buf.aspx",
+   "https://supersummary.com/one-up-on-wall-street/part-2-chapters-11-15-summary"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "strategy:fisher-scuttlebutt",
+    "rel": "similar_to"
+   },
+   {
+    "to": "person:warren-buffett",
+    "rel": "about"
+   },
+   {
+    "to": "person:peter-lynch",
+    "rel": "about"
+   },
+   {
+    "to": "insight:sebi-pit-scuttlebutt-limits",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:sebi-pit-scuttlebutt-limits",
+  "title": "SEBI PIT rules: where scuttlebutt becomes insider trading",
+  "body": "SEBI (Prohibition of Insider Trading) Regulations 2015. UPSI (Reg 2(1)(n)) is non-public information about a company or its securities likely to materially affect the price, ordinarily including financial results, dividends, capital-structure changes, M&A, delisting, disposals and KMP changes. 'Generally available information' (Reg 2(1)(e)) is information accessible to the public on a non-discriminatory basis; the May-2024 amendment excludes unverified media reports. An insider is anyone in possession of or with access to UPSI, however obtained, so an outsider who extracts unreleased sales or order numbers from an employee becomes an insider. Trading while in possession (Reg 4) and procuring or communicating UPSI (Reg 3) are prohibited. Safe practice: ask about your own observations and the counter-party's own business (a dealer's own sales and stock), never an employee's knowledge of unreleased company numbers or deals. If UPSI is volunteered, stop, note it, and do not trade until it is public. Never pay insiders. Treat expert-network calls with current employees as high risk. Keep a dated mosaic log. India has no explicit mosaic-theory safe harbour, so be conservative. Not legal advice.",
+  "tags": [
+   "india",
+   "policy",
+   "governance",
+   "process"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://assets.kpmg.com/content/dam/kpmg/in/pdf/2020/02/Safeguarding-UPSI.pdf",
+   "https://vinodkothari.com/wp-content/uploads/2024/01/FAQs_Primer-on-PIT-Regulations_ver-20.08.2021.pdf",
+   "https://chambers.com/articles/amendments-to-the-sebi-prohibition-of-insider-trading-regulations-2015-widening-the-scope-of-un"
+  ],
+  "confidence": "verified"
+ },
+ {
+  "type": "insight",
+  "id": "insight:ownership-disclosure-early-signals",
+  "title": "Exchange ownership feeds as early change detectors (pledge, SAST, PIT, bulk deals)",
+  "body": "All of these are free, structured and scriptable on the NSE API (tested 2026-11-19): corporate-pledgedata (Reg 31 encumbrance; the all-company list is 127 KB in one call), corporate-sast-reg29 (promoter and substantial-holder acquisitions/sales), corporates-pit (Reg 7 insider trades with before/after holdings and mode such as market or ESOP), corporate-share-holdings-master (quarterly promoter/public/employee-trust split), and bulk/block deals (client names). Signals worth tracking per company: rising promoter pledge, especially pledges to NBFCs (the API splits nbfcPromoShare out), which preceded many Indian small-cap blowups; promoter open-market sales near results or after a guidance raise; clusters of insider buying by several KMPs (more informative than a single buy or an ESOP); block sales by promoter-group entities; and bulk-deal buyers who are known operators or algo firms, as opposed to long-only funds. Combine with the promise tracker: a guidance raise followed by promoter selling is a credibility red flag.",
+  "tags": [
+   "india",
+   "redflag",
+   "governance",
+   "alt-data"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://www.nseindia.in/api/corporate-pledgedata?index=equities",
+   "https://www.nseindia.in/api/corporates-pit?index=equities&symbol=KPITTECH",
+   "https://www.nseindia.in/api/historicalOR/bulk-block-short-deals?optionType=block_deals&from=01-11-2026&to=19-11-2026"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "about"
+   },
+   {
+    "to": "strategy:lynch-at-scale-pipeline",
+    "rel": "part_of"
+   }
+  ]
  }
 ]

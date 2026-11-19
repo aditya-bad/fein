@@ -1,0 +1,2 @@
+{"as_of": "2026-11-19", "field": "promoter_pledged_pct_of_promoter", "period": "2026-09-30", "source": "NSE corporate-pledgedata API via tools/nse_fetch.py (fetched 2026-11-19, shareholding as of 30-Sep-2026)", "ticker": "INDOTECH", "unit": "%", "value": 82.41}
+{"as_of": "2026-11-19", "field": "promoter_pledged_pct_of_total", "period": "2026-09-30", "source": "NSE corporate-pledgedata API via tools/nse_fetch.py (fetched 2026-11-19, shareholding as of 30-Sep-2026)", "ticker": "INDOTECH", "unit": "%", "value": 57.93}

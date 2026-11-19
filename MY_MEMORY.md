@@ -1,14 +1,19 @@
 # My Memory — everything we've learned and decided
 
 *Your plain-language copy. Claude updates this at the end of every session.*
-*Last updated: 19 Nov 2026.*
+*Last updated: 19 Nov 2026 (evening).*
 
 ---
 
 ## 1. Where we are right now
 
-We've finished the **learning phase**. We have **not** started building our real edge yet.
-Claude is waiting on four answers from you (section 7) before building anything else.
+We've finished the **learning phase** and built the **memory**. The knowledge library now holds
+**100 case studies** (Indian and global multibaggers, 32 frauds/blow-ups), **19 sector playbooks**,
+**32 investor profiles**, **14 Indian market cycles (1992–2026)** and **68 insights** — all searchable.
+Claude can now pull filings, transcripts, pledges and insider trades **directly from NSE/BSE**.
+Next: build the "promise tracker" (what management said vs what they delivered).
+**Action for you:** merge the pull request so new sessions load the memory:
+https://github.com/aditya-bad/fein/pull/1
 
 ---
 
@@ -73,9 +78,11 @@ years without being fired, and nobody tracks small-company management this close
 
 Prices from 19 Nov 2026. Each has "kill criteria" — if one triggers, the idea is dead.
 
-- **Looked strongest:** Uniparts (72/100), Sandur Manganese (68), Bajaj Consumer (66),
-  Skipper (66), Transrail (62, only if new orders come in).
-- **Watch, wait for a lower price:** MPS, IOL Chemicals, Prudent, Rolex Rings, Honasa, Techno Electric.
+- **Looked strongest:** Uniparts (72/100), Sandur Manganese (68), Bajaj Consumer (66), Skipper (66).
+  Uniparts, Bajaj Consumer, MPS and IOL: **zero promoter pledge confirmed from NSE**.
+- **Watch, wait for a lower price:** MPS, IOL Chemicals, Prudent, Techno Electric.
+- **Downgraded to avoid on 19 Nov after checking NSE pledge data:** Transrail (promoter pledged 5.97%,
+  even though the company declared "no pledge" in April), Rolex Rings (5.13%), Honasa (4.15%), Birla Cable (6.28%).
 - **Avoid:** Indo Tech (promoter pledged 57.9% on 12 Nov), Jayaswal Neco (99.9% pledged),
   Genus Power, Syncom, gold jewellers.
 - Next check: **Feb 2027** results.
@@ -83,6 +90,16 @@ Prices from 19 Nov 2026. Each has "kill criteria" — if one triggers, the idea 
 Full details: `memory/watchlist.md` and the published report.
 
 ---
+
+## 5b. New things we learned in the knowledge scout
+- **Valuation timing matters.** Since 2004, every negative 5-year Nifty return started at P/E ≥ 24.5;
+  starting below P/E 12 gave ~29%/yr.
+- **Indian winners mostly grew profits;** only ~37% of the median gain came from a higher P/E. Stocks
+  that ended their run at P/E 70+ are mostly lower today (median −48%).
+- **Small caps fall >20% about every 2 years** and spent 36% of days (2004–26) >30% below their peak.
+- **Tone isn't an edge in India** — optimistic concall language moves prices short-term but doesn't
+  predict results. Checking promises vs delivery is the edge.
+- **Never trust a company's own "no pledge" statement** — check the exchange data.
 
 ## 6. Our rules
 

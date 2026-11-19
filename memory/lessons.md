@@ -35,3 +35,12 @@ immediately, and keep MY_MEMORY.md in sync for the user.
 - Size so being wrong is survivable; a few winners pay for many losers.
 - Disqualifiers regardless of price: promoter pledge, qualified audit, margin jump with
   no identifiable cause, debt-funded growth with negative CFO.
+
+## L6 (2026-11-19) — Check field meanings before trusting data
+First pledge pass used `percSharesPledged` (all pledged shares incl. public) and nearly reported
+false promoter pledges. Sanity check (pledge % of total vs of promoter didn't reconcile) caught it.
+**Rule:** inspect raw records and reconcile numbers before acting on a new data source.
+
+## L7 (2026-11-19) — Self-declarations go stale
+Transrail's Apr-26 no-encumbrance declaration was relied on; NSE data for 30-Sep-2026 shows a
+5.97% promoter pledge. **Rule:** verify governance flags from exchange data every quarter.

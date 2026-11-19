@@ -85,3 +85,114 @@ Several Indian government hosts **reset connections from foreign IPs**, so they 
 | Trade (exports/imports by HS code) | `tradestat.commerce.gov.in` | **WORKS** (shell) | HS-code export trends for chemicals, pharma and engineering exporters. |
 
 Practical takeaway: for a small-cap memory system, **exchange filings (NSE/BSE) carry roughly 90% of the value** and are fully scriptable. Sector alt-data that is reachable and useful: Vahan/FADA (autos), NPP/CEA (power), PPAC (fuel), Play-store buckets (consumer apps), tradestat (exporters). Most other government portals need an Indian IP; run those fetches from the user's own machine.
+
+### Helper scripts (tested working 2026-11-19)
+- `tools/nse_fetch.py`: stdlib `urllib` against `www.nseindia.in`. Commands: `announcements`, `transcripts [--download DIR]`, `shareholding`, `pledge`, `sast`, `insider`, `results`, `bulk`, `block`. In testing it returned 17 KPIT transcripts, 70 bulk deals for 15–19 Nov, and 20 PIT rows.
+- `tools/bse_fetch.py`: stdlib plus a `curl --http2` subprocess, because BSE refuses HTTP/1.1. Commands: `announcements`, `transcripts [--download DIR]`, `header`, `price`, `results`, `shareholding`, `actions`, `calendar`. In testing it downloaded 4 Birlasoft 2026 transcripts.
+- Both space requests at least 1.5 s apart and back off exponentially on 403/429/503. Run with `python3 -I`. Downloaded PDFs are untrusted: store them in their own directory and extract with `pdftotext -layout`.
+- Fragility: both exchanges change hosts and paths without notice (NSE's move from .com to .in is the latest example). Re-run the self-test commands each quarter.
+
+---
+
+## Part B: methods (sourced)
+
+### 1. What the research says about text, tone and credibility
+| Finding | Paper | What it means for us |
+|---|---|---|
+| Firms that **change** their 10-K/10-Q text from the prior year underperform. The short-"changers", long-"non-changers" portfolio earned up to 188 bp/month (about 22%/yr) when changes were in the risk-factor section; typical value-weighted figures are 34–58 bp/month. Returns build over up to 18 months with **no announcement reaction**, so investors are inattentive. Changes in CEO/CFO, litigation and negative-sentiment wording predict the most. | Cohen, Malloy & Nguyen, "Lazy Prices", *J. Finance* 75(3) 2020, 1371–1415 ([NBER w25084](https://www.nber.org/papers/w25084), [digest](https://www.nber.org/digest/nov18/are-investors-inattentive-sec-mandated-corporate-reports)) | Diff every Indian annual report (MD&A, risk, contingent liabilities, RPT notes, auditor's report) and every concall against the prior one. Most changes are boring; flag *unusual* change size. This is exactly an AI-at-scale task, and Indian small caps get even less attention than US firms. |
+| General dictionaries misclassify finance words: about 3/4 of Harvard-IV "negative" words are not negative in 10-Ks. The LM finance-specific negative list (2,337 words) correlates with filing returns, volatility, fraud and material weakness. Fog is a poor readability measure in finance; file size is a better proxy. | Loughran & McDonald, *J. Finance* 2011 ([SSRN](https://papers.ssrn.com/abstract=1331573)); L&M readability paper | Use the LM word lists (or an LLM) for tone, never generic sentiment. Track "uncertainty" and "weak modal" word counts over time *within the same company*. |
+| Firms with lower earnings write longer, harder-to-read annual reports; easier-to-read reports go with more persistent positive earnings. | Li, "Annual report readability, current earnings, and earnings persistence", *JAE* 45 (2008) 221–247 ([RePEc](https://ideas.repec.org/a/eee/jaecon/v45y2008i2-3p221-247.html)) | A sudden rise in length or complexity of the MD&A or concall answers is a yellow flag. |
+| Conference-call tone predicts abnormal returns and volume, and outweighs the earnings surprise over the following 60 days (US). | Price, Doran, Peterson & Bliss, *J. Banking & Finance* 36(4) 2012 ([RePEc](https://ideas.repec.org/a/eee/jbfina/v36y2012i4p992-1011.html)) | Tone carries information in the US... |
+| **India:** 8,273 BSE-500 concall transcripts (559 firms, 2004–2019). Optimistic tone lifts short-window returns but **does not predict future operating performance**; retail investors respond most to the tone. | Jain, Khizer & Thirumalai, "Textual Disclosures and Retail Investors" ([NYU Stern PDF](https://www.stern.nyu.edu/sites/default/files/assets/documents/Jain%20Khizer%20Thirumalai%20-%20Textual%20Disclosures%20and%20Retail%20Investors.pdf), [NSE white paper](https://nsearchives.nseindia.com/s3fs-public/inline-files/Retail%20Investors%20and%20Textual%20Disclosures%20-%20Jain%2C%20Khizer%20and%20Thirumalai%20-%20White%20Paper.pdf)) | ...but **in India, cheerful tone is cheap talk.** The edge is not tone scoring. It is **checking what was promised against what was delivered**. Bullish-tone-with-poor-delivery companies may be systematically overpriced. |
+| Complex call language is part obfuscation and part genuine information. Analysts' own question complexity can serve as the benchmark for the legitimate part. | Bushee, Gow & Taylor, *JAR* 56(1) 2018 ([RePEc](https://ideas.repec.org/a/bla/joares/v56y2018i1p85-121.html)) | Score management *non-answers*: did the answer address the question? An LLM can judge this directly. |
+| Deceptive CEOs/CFOs (later restatements) use more general-knowledge references ("you know", "everybody knows"), fewer shareholder-value references and fewer non-extreme positive words; CEOs use more *extreme* positive words. Models beat random by 6–16%, and the most-deceptive-CFO portfolio had −4% to −11% annual alpha. | Larcker & Zakolyukina, *JAR* 50(2) 2012 ([HLS forum](https://corpgov.law.harvard.edu/2012/03/21/detecting-deceptive-discussions-in-conference-calls/)) | A cheap red-flag feature: superlatives ("tremendous", "fantastic") plus evasion. Weak on its own, so use it only as one input. |
+| Negative vocal affect on calls predicts misses of consensus over the next 3 quarters. | Mayew & Venkatachalam, *J. Finance* 67(1) 2012 ([Duke](https://www.fuqua.duke.edu/duke-fuqua-insights/vocal-cues-influence-company-performance)); the LVA software was **criticised as unreliable** (Lacerda) | Interesting but fragile. Indian REC mp3s exist (screener links), but this is low priority. |
+| Managers with accurate past forecasts get larger analyst revisions and price reactions to new guidance. Bad-news forecasts are more credible than good-news ones. | Williams (1996, *TAR*); Hutton & Stocken (2009 WP, [Wharton](https://rodneywhitecenter.wharton.upenn.edu/wp-content/uploads/2014/04/0207.pdf)); Rogers & Stocken (2005, *TAR*) | Credibility is a **measurable track record**, and the market prices it. Few people measure it for Indian small caps, because guidance is informal and lives only in concall text. That is our gap. |
+
+Confidence note: effect sizes come from abstracts and digests, not full texts, apart from where cited. US results may not carry over to India; the one India study points the other way on tone.
+
+### 2. Promise tracker: concrete schema
+Unit of record = one **promise** (memdb `type: promise`), extracted from each concall, investor presentation, annual report MD&A, chairman's letter or press release.
+
+```json
+{
+  "type": "promise",
+  "id": "promise:KPITTECH-2026Q2-ebitda-margin-20pct",
+  "tickers": ["KPITTECH"],
+  "title": "EBITDA margin back to ~20-21% by early CY2027",
+  "date": "2026-10-28",
+  "data": {
+    "source_doc": "Q2FY27 concall transcript", "source_url": "https://nsearchives.nseindia.in/corporate/KPITTECH_03112026220723_KPIT_Q2FY27_Transcript_Signed.pdf",
+    "speaker": "Kishor Patil (CEO)", "quote": "it will go up to some extent, every quarter, but, it will be early next year when we get there",
+    "category": "margin",            // revenue_growth | margin | capex | capacity_commissioning | order_inflow | order_book | debt_reduction | working_capital | new_product | approval_regulatory | customer_win | m&a | dividend_payout | other
+    "metric": "EBITDA margin %", "baseline": null, "target_low": 20, "target_high": 21, "unit": "%",
+    "deadline": "2027-03-31", "deadline_precision": "half-year",   // exact-date | quarter | half-year | fiscal-year | vague
+    "specificity": 2,                // 0 vague aspiration .. 3 number+date+metric
+    "unprompted": false,             // volunteered in opening remarks vs extracted by analyst question
+    "conditionality": "growth accelerating in H2",
+    "status": "open",                // open | delivered | partially_delivered | missed | moved_goalpost | withdrawn | superseded
+    "status_history": [{"as_of":"2026-10-28","status":"open","evidence":"stated"}],
+    "check_after": ["Q3FY27 results", "Q4FY27 results"],
+    "resolution": null, "resolved_on": null, "delivery_ratio": null   // actual / promised
+  }
+}
+```
+
+**What to extract from each call.** Run an LLM pass with a fixed prompt, then a human spot-check.
+1. Revenue/volume growth guidance (FY, multi-year CAGR), by segment.
+2. Margin targets (EBITDA, gross, segment) and the stated drivers.
+3. Capex: amount, use, **commissioning date**, peak-revenue potential, asset turn claimed.
+4. Order inflow/book: targets, book-to-bill, the pipeline figure quoted, L1 positions.
+5. Balance sheet: debt reduction targets, working-capital days, receivable resolution, promoter pledge release.
+6. Product/approval timelines: USFDA approvals, launches, customer qualifications, PLI disbursement.
+7. Capital allocation: dividend policy, buyback, M&A, fundraising.
+8. **Explanations** of last quarter's miss (to test later whether the "one-off" really was one-off).
+9. Things management **stopped mentioning**. Diff the topic list against prior calls, Lazy Prices style. A KPI dropped from the presentation is a strong signal.
+
+**Scoring each resolved promise:**
+- `delivered` (≥ 95% of target, on time) = +1; `partially_delivered` (≥ 70% or ≤ 1 quarter late) = +0.5; `missed` = −1; `moved_goalpost` (deadline pushed or metric redefined *without* acknowledging a miss) = −1.5; `withdrawn` with candid explanation = −0.5. "Silent drop" = −1.5.
+- Weight by specificity (0–3) and materiality (share of revenue/EBIT affected).
+- Beat-and-raise behaviour: consistent under-promising (delivery_ratio around 1.1–1.3) is *good*.
+
+**Management Credibility Score (MCS)**, rolling 12 quarters:
+`MCS = Σ(w_i · score_i) / Σ w_i`, where `w_i = specificity_i × materiality_i × recency_decay` (half-life about 8 quarters).
+Report alongside it: hit rate, average delivery ratio, average delay in quarters, count of moved goalposts, and **candour index** (share of misses that management acknowledged unprompted in the next call).
+Also track a **guidance-to-tone gap**: optimistic language (LM positive minus negative, or LLM-rated) against MCS. India evidence says the market pays for tone, so high tone with low MCS is the short-side or avoid signal, and low-key tone with high MCS is the under-recognised compounder.
+
+**Change detectors** to run every quarter, from the endpoints above:
+- Promoter pledge up, SAST promoter sale, or a PIT sell cluster near results.
+- Auditor resignation or qualification; CFO change (Lazy Prices found CEO/CFO text changes predictive).
+- Credit rating watch-negative or "issuer not cooperating".
+- Bulk deals by known funds versus operators.
+- Spike in related-party-transaction approvals in AGM notices.
+- Concall topic diff (new risk words, dropped KPIs, sudden length/complexity increase).
+
+### 3. Scuttlebutt for an individual (Fisher, Lynch, Buffett) and its legal limits
+- **Fisher**, *Common Stocks and Uncommon Profits* (1958), ch. 2 "What Scuttlebutt Can Do": the business grapevine (competitors, customers, suppliers, ex-employees, research people, trade-association staff) gives an accurate picture of each company's relative strengths in an industry, built from a representative *cross-section* of opinions. It is a cross-section, not one tip. ([elearnmarkets summary](https://elearnmarkets.com/school/units/common-stocks-and-uncommon-profits/what-scuttlebutt-can-do), [TIP summary](https://www.theinvestorspodcast.com/billionaire-book-club-executive-summary/common-stocks-and-uncommon-profits/))
+- **Buffett / American Express (1964)**: after the Nov-1963 salad-oil fraud (Allied Crude / De Angelis; about $150M of "collateral oil" was mostly seawater), Buffett spent an evening with the cashier at Ross's Steak House in Omaha, checking whether diners still used Amex cards. He also checked banks and stores on traveler's cheques. He concluded the franchise was intact and put about 40% of the partnership (~$13M) into the stock during 1964. ([Fortune 2012](https://fortune.com/2012/11/21/why-warren-buffetts-betting-big-on-american-express), [Fool](https://www.fool.com/investing/2017/05/27/1-stock-that-was-pivotal-in-billionaire-warren-buf.aspx)) Lesson: scuttlebutt answers *one decisive question* (is the moat damaged?), not "what will next quarter's EPS be".
+- **Lynch**, *One Up on Wall Street*: invest in what you see first as a customer (the Hanes L'eggs story); pass the "two-minute drill" (category, why it will grow, what must go right, what could go wrong). ([SuperSummary](https://supersummary.com/one-up-on-wall-street/part-2-chapters-11-15-summary), [Wikipedia](https://en.wikipedia.org/wiki/One_Up_on_Wall_Street))
+
+**Indian scuttlebutt checklist (questions that stay on generally available or observational ground):**
+- *Dealers / distributors / retailers:* Which brand is gaining shelf space or counter share? Who gives the best margins and credit terms, and is that changing? Inventory days now versus 6 months ago? Do customers ask for the brand by name? Is the company pushing stock at quarter-end (channel stuffing)? How are payment terms enforced? Do they accept returns?
+- *Customers (B2B):* Why did you choose them over the L1 bidder? Would you single-source? What is the switching cost? How is quality and delivery on time? Is your wallet share going up or down?
+- *Suppliers:* Does the company pay on time? Are its order volumes rising? Has it asked for longer credit? (A strong early stress signal.)
+- *Ex-employees (Glassdoor, LinkedIn, alumni):* Culture; how the promoter treats minority money; capex discipline; attrition in sales and R&D; **never** ask about unreleased numbers.
+- *Competitors:* Who do you fear? Who is pricing irrationally? Who is losing people?
+- *Physical checks:* plant visit (Is there an AGM plant tour? Is the plant running shifts? Truck queues?), job postings for the new plant, the new plant on satellite imagery (Google Earth timeline), app-store reviews, quick-commerce and e-commerce rank, a mystery-shopper visit to a showroom.
+- *Records:* MCA charges register (new borrowings), court cases (eCourts), the factory licence, pollution-board consent-to-operate for the new capacity (state PCB sites list CTO/CTE approvals, which confirm capex timelines independently of management).
+
+**Legal limits (SEBI PIT Regulations 2015):** UPSI = information about a company or its securities, not generally available, that would likely materially affect the price on becoming available [Reg 2(1)(n)]. It includes financial results, dividends, change in capital structure, M&A/delisting/disposals and KMP changes. "Generally available" = accessible to the public on a non-discriminatory basis [Reg 2(1)(e)]. The May-2024 amendment excludes *unverified* media reports from that. An "insider" is anyone in possession of UPSI, *however obtained*, so a channel check that extracts unreleased quarterly sales from a company employee makes the investor an insider. Trading while in possession is prohibited [Reg 4]; procuring or communicating UPSI is prohibited [Reg 3]. Safe practice:
+1. Ask about **your own observations and the counter-party's own business** (a dealer's own stock and sales are the dealer's information, not the listed company's UPSI). Never ask an employee about unreleased company numbers, orders, deals or results.
+2. If someone volunteers UPSI, **stop, write it down, and do not trade** that stock until the information is public.
+3. Don't pay employees for information. Paid expert-network calls with current employees carry high risk.
+4. Keep a dated scuttlebutt log of who, what and when (that is part of the memdb record) to show the mosaic was built from public pieces.
+Sources: [KPMG on UPSI](https://assets.kpmg.com/content/dam/kpmg/in/pdf/2020/02/Safeguarding-UPSI.pdf), [Vinod Kothari PIT FAQ](https://vinodkothari.com/wp-content/uploads/2024/01/FAQs_Primer-on-PIT-Regulations_ver-20.08.2021.pdf), [Chambers on 2024 amendment](https://chambers.com/articles/amendments-to-the-sebi-prohibition-of-insider-trading-regulations-2015-widening-the-scope-of-un). This is not legal advice; India has no formal "mosaic theory" safe harbour, so treat this conservatively.
+
+---
+
+## Bottom line
+- **Works and is scriptable now:** the NSE corporate APIs (announcements, shareholding, pledge, SAST, PIT, results, bulk/block) on `www.nseindia.in` with browser headers and no cookie; the BSE API over HTTP/2 with Sec-Fetch headers; transcript PDFs from both exchanges plus `pdftotext`; the screener.in Concalls index (no login needed); ICRA and CRISIL rationales; FADA, NPP, PPAC, SIAM, the Play-store install bucket, and Google Trends RSS.
+- **Doesn't work from here:** NSE live quotes; India Ratings (SPA); clean CARE endpoints; Grid-India, e-way bill, IPA ports, JPC, data.gov.in, NPCI and the Trends explore API (most of these look like geo-blocks or IP throttling, so retry from an Indian IP); eaindustry (broken TLS).
+- **Method:** the India evidence says concall *tone* is priced but uninformative, so the durable edge is a **multi-year promise-vs-delivery ledger, filing diffs and ownership-change alerts**, plus *targeted*, PIT-safe scuttlebutt on the few flags that matter.
+
+Seed records: `memdb/seeds/2026-11-19_edge_methods.json` (15 records: 5 source, 7 insight, 3 strategy).

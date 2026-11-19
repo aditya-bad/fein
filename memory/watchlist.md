@@ -14,12 +14,12 @@ Re-check all kill criteria at Q3 FY27 results (Feb 2027). Full detail:
 | MPS (MPSLTD) | Rupee/services | ~2,182 | 20.2 | 66 | WATCH (<₹2,000) | Organic rev decline 2 qtrs; OPM <28%; debt-funded deal >1x EBITDA |
 | IOL Chemicals (IOLCP) | Quant | 192 | 27.7 | 64 | WATCH (Q3 or ≤22x) | OPM <12% 2 qtrs; non-ibuprofen <40%; promoter sells |
 | Prudent (PRUDENT) | Financialisation | ~2,920 | 46 | 63 | WATCH (<₹2,500) | SIP book growth <10%; OPM <23% |
-| Transrail (TRANSRAILL) | Power/T&D | 432.25* | 13.9 | 62 | BUY-ZONE conditional | FY27 inflow <₹7,000 cr; order book <₹12,000 cr; OPM <11% |
-| Rolex Rings (ROLEXRINGS) | Rupee/auto | 200.5 | 28.9 | 61 | WATCH (~₹170) | Underlying OPM <20%; rev growth <15% |
+| Transrail (TRANSRAILL) | Power/T&D | 432.25* | 13.9 | 62 | ~~BUY-ZONE conditional~~ **AVOID — promoter pledge 5.97% (19-Nov-2026)** | FY27 inflow <₹7,000 cr; order book <₹12,000 cr; OPM <11% |
+| Rolex Rings (ROLEXRINGS) | Rupee/auto | 200.5 | 28.9 | 61 | ~~WATCH~~ **AVOID — promoter pledge 5.13%** | Underlying OPM <20%; rev growth <15% |
 | Gulshan Polyols (GULPOLY) | Quant | 161.7 | 5.9 | 58 | WATCH (no position) | OPM <8%; debt >₹300 cr |
-| Honasa (HONASA) | Consumption | 529* | 61 | 55 | WATCH (−20–25%) | Rev growth <20%; OPM <10% |
+| Honasa (HONASA) | Consumption | 529* | 61 | 55 | ~~WATCH~~ **AVOID — promoter pledge 4.15%** | Rev growth <20%; OPM <10% |
 | Techno Electric (TECHNOE) | Power/DC | 929* | 22.3 | 50 | WATCH | FY27 CFO negative; no Chennai hyperscale lease |
-| Birla Cable (BIRLACABLE) | Quant | 301.2 | 10.8 | 45 | WATCH, don't chase | OPM <10%; fibre prices roll over |
+| Birla Cable (BIRLACABLE) | Quant | 301.2 | 10.8 | 45 | ~~WATCH~~ **AVOID — promoter pledge 6.28%** | OPM <10%; fibre prices roll over |
 
 \* single-sourced price on 19 Nov.
 
@@ -28,6 +28,11 @@ Indo Tech (promoter pledged 57.93% on 12 Nov 2026), Genus Power (CFO negative 3 
 Jayaswal Neco (99.9% pledge), Syncom (no identifiable cause), gold jewellers (inventory
 gains, negative CFO), Angel One (balance sheet), Modern Insulators (qualified audit).
 
-## Pending verification
-No pledge confirmed from a primary NSE SAST filing for any name. Segment/guidance data
-from secondary summaries.
+## Pledge check from NSE primary data (19-Nov-2026, shareholding date 30-Sep-2026)
+Via `tools/nse_fetch.py pledge TICKER` (field `percPromoterShares` = % of promoter holding pledged;
+NOT `percSharesPledged`, which counts all pledged shares incl. public).
+- Zero promoter pledge: UNIPARTS, BAJAJCON, MPSLTD, IOLCP.
+- Promoter pledge found → downgraded to AVOID: TRANSRAILL 5.97% (contradicts Apr-26 no-encumbrance
+  declaration), ROLEXRINGS 5.13%, HONASA 4.15%, BIRLACABLE 6.28%. INDOTECH 82.41% (57.93% of equity) confirmed.
+- No rows returned (not proof of zero): SANDUMA, SKIPPER, PRUDENT, GULPOLY, TECHNOE.
+Segment/guidance data still from secondary summaries.

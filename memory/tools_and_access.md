@@ -15,13 +15,23 @@ Last updated: 2026-11-19
 - Skills: deep-research, stock-research-analyst (verification gate), barak-report-design
   (light editorial theme), contra-miltibagger-1 (turnaround screening), artifact publishing.
 
+## NSE/BSE direct access (tested 19-Nov-2026) — see research_notes/Knowledge scout Nov 2026/edge_methods_data_access.md
+- `tools/nse_fetch.py` (www.nseindia.in API, browser headers, no cookie): announcements, transcripts
+  (--download), shareholding, pledge, sast, insider, results, bulk, block. Live quotes 403.
+- `tools/bse_fetch.py` (api.bseindia.com, needs curl --http2): announcements, transcripts, header,
+  price, results, shareholding, actions, calendar.
+- Concall transcript PDFs → `pdftotext` works (KPIT Q2FY27: 8,530 words).
+- Credit ratings: ICRA and CRISIL fetchable; India Ratings / CARE not (use exchange filings).
+- Alt data reachable: FADA, SIAM, npp.gov.in, CEA, PPAC, tradestat, Play Store buckets, Trends RSS.
+  Blocked from foreign IP: Grid-India, e-way bill, IPA ports, JPC steel, data.gov.in.
+- Pledge field gotcha: use `percPromoterShares`, not `percSharesPledged`.
+
 ## Blocked / missing
 - screener.in custom raw queries need login → ask user for a Screener account (paid w/ export ideal).
 - YouTube: yt-dlp blocked ("confirm you're not a bot"); youtubetotranscript 403 → need a
   transcript API key (e.g. Supadata) or browser cookies.
 - businessinsider.in blocked by network; some Business Standard / ET pages 403.
 - No live market data feed. Options: Zerodha Kite MCP (user account), Trendlyne MCP.
-- NSE/BSE filings direct fetch not yet tested (needed for pledge/SAST and concalls).
 
 ## Wanted (user offered to provide)
 Screener login, Kite MCP or Trendlyne MCP, US data API (Financial Datasets/Polygon),

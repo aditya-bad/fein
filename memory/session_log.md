@@ -22,3 +22,14 @@ multibaggers (Radico, NVIDIA) were spotted; become "the next Buffett".
   Cold-start recall test by a fresh agent: 8/8 correct. Fixed: CLAUDE.md now documents memdb; OR-fallback
   search; memory/*.md indexed; FTS delete perf bug.
   User is sceptical about recall — be transparent: Claude doesn't remember, it retrieves.
+
+## 2026-11-19 — Session 1 (continued): knowledge scout
+**Asked:** "Repeat the scout process and get the knowledge; don't wait for approval."
+**Done:** opened PR https://github.com/aditya-bad/fein/pull/1 (merge memory to main — user to merge).
+Six research agents (hit usage limit once, resumed) produced seed libraries, all ingested to memdb:
+India multibaggers (35), global multibaggers (33), blow-ups/frauds (42), sector playbooks (27),
+investors + Indian market cycles (64), edge methods + data access (15) + `tools/nse_fetch.py`, `tools/bse_fetch.py`.
+memdb now: 100 case studies, 68 insights, 33 strategies, 32 people, 19 sector themes, 656 passages.
+**Verified pledges from NSE primary data** → downgraded TRANSRAILL, ROLEXRINGS, HONASA, BIRLACABLE to AVOID.
+Lesson: company self-declarations (Transrail Apr-26 "no encumbrance") can be stale — always check exchange data.
+**Next:** build promise tracker v1 on NSE transcripts; weekly change detectors; still need user profile answers.
