@@ -1,0 +1,12 @@
+[
+ {"id":"D001","recognised":true,"p_o1":0.04,"p_o2":0.25,"p_o3":0.02,"decision":"AVOID","conviction":3},
+ {"id":"D002","recognised":true,"p_o1":0.08,"p_o2":0.45,"p_o3":0.30,"decision":"AVOID","conviction":4},
+ {"id":"D003","recognised":true,"p_o1":0.22,"p_o2":0.25,"p_o3":0.06,"decision":"WATCH","conviction":3},
+ {"id":"D004","recognised":true,"p_o1":0.04,"p_o2":0.60,"p_o3":0.45,"decision":"AVOID","conviction":5},
+ {"id":"D005","recognised":true,"p_o1":0.22,"p_o2":0.15,"p_o3":0.04,"decision":"OWN","conviction":3},
+ {"id":"D006","recognised":true,"p_o1":0.06,"p_o2":0.18,"p_o3":0.02,"decision":"WATCH","conviction":2},
+ {"id":"D007","recognised":true,"p_o1":0.03,"p_o2":0.12,"p_o3":0.02,"decision":"AVOID","conviction":2},
+ {"id":"D008","recognised":true,"p_o1":0.05,"p_o2":0.65,"p_o3":0.40,"decision":"AVOID","conviction":5},
+ {"id":"D009","recognised":true,"p_o1":0.25,"p_o2":0.22,"p_o3":0.05,"decision":"WATCH","conviction":3},
+ {"id":"D010","recognised":true,"p_o1":0.06,"p_o2":0.40,"p_o3":0.12,"decision":"AVOID","conviction":3}
+]

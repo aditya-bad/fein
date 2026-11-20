@@ -1,0 +1,762 @@
+[
+ {
+  "type": "case_study",
+  "id": "case_study:false-alarm-dmart-permanent-high-pe",
+  "title": "False alarm (then real): DMart's permanent 70-300x P/E",
+  "tickers": [
+   "DMART"
+  ],
+  "tags": [
+   "false-alarm",
+   "flag-judgment",
+   "redflag",
+   "india",
+   "sector-retail",
+   "valuation"
+  ],
+  "date": "2017-03-21",
+  "body": "FLAG: trailing P/E never below 66x since listing (range 66-314, median 117); FCF thin because investing outflow ~= CFO every year (FY26 CFO Rs 3,467 cr vs investing -Rs 4,207 cr). CONTEXT THAT MADE IT BENIGN (2017-21): DMart buys most of its stores instead of leasing, so 'capex' is partly land and buildings that do not depreciate economically, while rent-free stores let it run everyday-low-price at ~8% OPM with debtor days ~1 and working-capital days ~20. ROCE stayed 17-26% while sales compounded ~26%/yr (FY17 Rs 11,898 cr -> FY26 Rs 68,821 cr); EPS 7.67 -> 45.56 (5.9x). Founder R.K. Damani's cost culture made the growth self-funded: no QIP after the Mar-2017 IPO. Stock: IPO Rs 299, listing close ~Rs 641, peak ~Rs 5,324 (Oct 2021). WHERE THE FLAG CAME TRUE: from Jan 2021 (Rs 2,789) to 20 Nov 2026 (Rs 3,486) the price rose only ~25% while EPS rose ~2.8x; P/E fell from ~200 to ~73. Quick commerce (Blinkit/Zepto) slowed growth to ~16% and borrowings jumped to Rs 4,264 cr (Sep 2026). LESSON: a structurally high P/E was benign while growth x ROCE justified it, but buying at 2x the stock's own median P/E bought five flat years. 'Benign' is a statement about the business, not about every price.",
+  "data": {
+   "flag": "high P/E; low FCF",
+   "context": "owned-store real estate capex, EDLP model, negative-ish working capital, founder cost culture",
+   "multiple": "~11.7x from IPO Rs 299; ~5.4x from listing close",
+   "pe_range": "66-314, median 117",
+   "verdict": "benign 2017-21; real at P/E >200 (2021)",
+   "lesson": "high P/E benign only while growth x ROCE supports it; avoid >2x own median",
+   "note": "Prices/ratios: screener.in consolidated pages and chart API (split/bonus-adjusted closes), fetched 20-Nov-2026."
+  },
+  "sources": [
+   "https://www.screener.in/company/DMART/consolidated/",
+   "https://www.business-standard.com/article/companies/avenue-supermarts-sets-ipo-price-band-at-rs-295-299-117030100146_1.html",
+   "https://www.business-standard.com/amp/article/pti-stories/bumper-listing-for-avenue-supermarts-shares-soar-over-114-117032100919_1.html"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "person:radhakishan-damani",
+    "rel": "about"
+   },
+   {
+    "to": "theme:sector-retail-qsr",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:india-mb-pe70-exit",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:false-alarm-trent-150x-pe-and-lease-debt",
+  "title": "False alarm: Trent at 150-230x P/E with 'debt' jumping 10x",
+  "tickers": [
+   "TRENT"
+  ],
+  "tags": [
+   "false-alarm",
+   "flag-judgment",
+   "redflag",
+   "india",
+   "sector-retail",
+   "leases"
+  ],
+  "date": "2020-05-15",
+  "body": "FLAGS: (1) trailing P/E 155 in May 2020 (screener range since 2007: 21-636, median 132); (2) 'borrowings' jumped from Rs 300 cr (FY20) to Rs 2,964 cr (FY21) and Rs 4,725 cr (FY22); (3) FY21 loss (-Rs 181 cr), ROCE 1%. CONTEXT: the P/E was on COVID-depressed EPS; Zudio store unit economics (fast paybacks, hundreds of stores a year) were visible in quarterly updates. Much of the 'debt' jump is what screener reports as borrowings after Ind AS 116 put store leases on the balance sheet, plus temporary COVID funding [lease share of borrowings not separately verified]; CFO turned strongly positive (FY24 Rs 1,349 cr, FY26 Rs 2,668 cr) and borrowings fell back to ~Rs 2,300 cr. Result: Rs 294 (May 2020) -> Rs 5,490 (Oct 2024), ~19x, mostly EPS (Rs 2.3 -> Rs 32). WHERE IT FLIPPED: LFL growth decelerated in FY26 and the stock fell -59% to Rs 2,266 even though EPS kept rising, because P/E fell from 230 to ~90. LESSON: separate lease liabilities from financial debt (pre-Ind AS EBITDA, lease-adjusted net debt) and judge high P/E on normalised EPS; then watch the one metric that drives the thesis (here LFL), not the P/E.",
+  "data": {
+   "flag": "P/E 155+; debt 10x; loss year; ROCE 1%",
+   "context": "COVID-depressed EPS; Ind AS 116 lease liabilities; visible store economics",
+   "multiple": "~19x (2020-24)",
+   "verdict": "false alarm; exit signal was LFL, not P/E",
+   "lesson": "normalise EPS; strip leases from debt",
+   "note": "Prices/ratios: screener.in consolidated pages and chart API (split/bonus-adjusted closes), fetched 20-Nov-2026."
+  },
+  "sources": [
+   "https://www.screener.in/company/TRENT/consolidated/",
+   "https://www.business-standard.com/markets/news/trent-stock-falls-growth-slowdown-valuation-pressures-q1fy26-125070401184_1.html"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "case_study:trent-2020-2024",
+    "rel": "about"
+   },
+   {
+    "to": "insight:twin-engine",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:false-alarm-titan-negative-cfo-gold-loans",
+  "title": "False alarm: Titan fails the CFO/PAT test and 'borrows' Rs 30,000 cr",
+  "tickers": [
+   "TITAN"
+  ],
+  "tags": [
+   "false-alarm",
+   "flag-judgment",
+   "redflag",
+   "india",
+   "sector-jewellery",
+   "working-capital"
+  ],
+  "date": "2026-03-31",
+  "body": "FLAGS: CFO negative in 4 of 12 years (FY18 -Rs 51 cr, FY20 -348, FY22 -724, FY25 -541) while PAT was Rs 1,102-3,337 cr; cumulative CFO FY15-26 Rs 15,164 cr vs cumulative PAT Rs 24,524 cr = 0.62, below our forensic cut-off of 0.7 (insight:forensic-redflag-checklist rule 1). Borrowings rose from Rs 100 cr (FY15) to Rs 30,621 cr (FY26). CONTEXT: jewellery is ~85-90% of Titan's sales and its inventory is mostly gold, a liquid, priced asset that grows with sales and the gold price. Titan funds a large part of it with gold metal loans (GML), which are repaid in gold and naturally hedge price risk [GML share of borrowings from general knowledge, unverified]. So 'negative CFO' is inventory build, and 'debt' is a hedge. Debtor days stayed 4-8 and ROCE 19-35%; Tata parentage and clean governance. Stock: Rs 382 (2015) -> Rs 4,539 (20 Nov 2026), ~12x. LESSON: CFO/PAT < 0.7 is a hypothesis; ask what the working capital consists of. Gold inventory held in owned stores, funded by gold loans, is not the same as receivables from unknown distributors (contrast PC Jeweller and Gitanjali, where inventory and receivables grew with related-party exports).",
+  "data": {
+   "flag": "CFO/PAT 0.62 over 12 yrs; borrowings 300x",
+   "context": "gold inventory + gold metal loans (natural hedge); low debtor days",
+   "multiple": "~12x (2015-26)",
+   "verdict": "false alarm",
+   "lesson": "inspect what working capital is made of before applying CFO/PAT",
+   "note": "Prices/ratios: screener.in consolidated pages and chart API (split/bonus-adjusted closes), fetched 20-Nov-2026."
+  },
+  "sources": [
+   "https://www.screener.in/company/TITAN/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "case_study:titan-2009-2026",
+    "rel": "about"
+   },
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "contradicts"
+   },
+   {
+    "to": "case_study:hidden-trap-pc-jeweller-inventory",
+    "rel": "contradicts"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:false-alarm-bajaj-finance-negative-cfo-qips",
+  "title": "False alarm: Bajaj Finance's negative CFO every year and four QIPs",
+  "tickers": [
+   "BAJFINANCE"
+  ],
+  "tags": [
+   "false-alarm",
+   "flag-judgment",
+   "redflag",
+   "india",
+   "sector-nbfc",
+   "dilution"
+  ],
+  "date": "2023-11-09",
+  "body": "FLAGS: operating cash flow negative in every year FY15-FY26 (e.g., FY24 -Rs 72,760 cr, FY26 -Rs 65,790 cr); repeated equity raises: QIP Rs 1,400 cr (Jun 2015), Rs 4,500 cr (Sep 2017), Rs 8,500 cr (approved Sep 2019), Rs 8,800 cr (Nov 2023, at ~Rs 7,270 pre-bonus) plus Rs 1,200 cr warrants to promoter Bajaj Finserv. CONTEXT: for a lender, loan disbursals sit in operating cash flow, so a growing NBFC always shows negative CFO; FCF/CFO tests do not apply (see insight:lender-blowup-signals). The QIPs were growth capital raised at 5-8x book, which raises book value per share for existing holders; ROE stayed 19-23% (13% in COVID FY21) and EPS rose 1.79 -> 30.56 (17x) despite the dilution. The promoter subscribed (warrants) rather than sold. Stock: Rs 34 (2015) -> Rs 1,092 (20 Nov 2026), ~32x. WHAT WOULD HAVE MADE IT A TRAP: funding long loans with short CP (DHFL), concentrated wholesale loans (Yes Bank), credit costs rising faster than yields, or raising equity below book. LESSON: dilution is judged by the price paid and per-share outcomes (BVPS, EPS), and by who buys; negative CFO in a lender is a growth number, not a quality number.",
+  "data": {
+   "flag": "negative CFO 12/12 yrs; 4 QIPs",
+   "context": "lender accounting; growth equity at high P/B; promoter participation; ROE ~20%",
+   "multiple": "~32x (2015-26)",
+   "verdict": "false alarm",
+   "lesson": "for lenders use ALM, credit cost, ROA; judge dilution per share",
+   "note": "Prices/ratios: screener.in consolidated pages and chart API (split/bonus-adjusted closes), fetched 20-Nov-2026."
+  },
+  "sources": [
+   "https://www.screener.in/company/BAJFINANCE/consolidated/",
+   "https://www.business-standard.com/amp/markets/news/bajaj-finance-sets-base-price-for-rs-8-800-crore-qip-at-rs-7-250-per-share-123110601250_1.html",
+   "https://www.business-standard.com/amp/companies/news/bajaj-finance-to-raise-rs-10-000-crore-through-qip-preferential-issue-123100500770_1.html",
+   "https://www.bloombergquint.com/business/bajaj-finance-board-okays-raising-rs-8-500-cr-via-qip"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:bajaj-finance-2009-2021",
+    "rel": "about"
+   },
+   {
+    "to": "insight:lender-blowup-signals",
+    "rel": "about"
+   },
+   {
+    "to": "person:group-bajaj",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:false-alarm-consumer-franchises-long-high-pe",
+  "title": "False alarm with a ceiling: Asian Paints, Pidilite, Page at 40-60x for 15+ years",
+  "tickers": [
+   "ASIANPAINT",
+   "PIDILITIND",
+   "PAGEIND"
+  ],
+  "tags": [
+   "false-alarm",
+   "flag-judgment",
+   "redflag",
+   "india",
+   "sector-consumer",
+   "valuation",
+   "compounder"
+  ],
+  "date": "2021-12-31",
+  "body": "FLAG: 'too expensive' for two decades. Asian Paints trailing P/E median 50 (2005-26), Pidilite 52, Page mostly 40-80. CONTEXT: ROCE 26-42% (Asian Paints), 24-45% (Pidilite), 45-69% (Page) with low debt, dominant distribution and pricing power, so each rupee retained earned 25%+ and EPS compounded mid-to-high teens for 15+ years. Returns: Asian Paints Rs 39 (2005) -> Rs 3,576 (2022 peak), ~90x; Pidilite Rs 10.7 (2005) -> Rs 1,588 (Nov 2026), ~148x; Page Rs 272 (2007) -> Rs 53,453 (2022), ~197x. Buyers at 'fair' 40-50x did fine because the P/E held while EPS compounded. THE CEILING: when P/E reached ~2x its own long median (Asian Paints 117 and Pidilite ~100 in 2021; Page ~81 in 2022), subsequent 4-5-year returns were flat or negative even as EPS rose (Asian Paints Rs 2,776 Jan-2021 -> Rs 2,595 Nov-2026 while EPS rose ~54%; Pidilite +28% in 5 yrs on 2x EPS). Asian Paints also met a new deep-pocketed rival (Grasim's Birla Opus, 2024), a reminder that the moat itself is a variable. LESSON: a long high P/E is benign for high-ROCE franchises with long runways; the warning is not 'P/E > 40' but 'P/E far above the company's own history and growth slowing or competition entering'.",
+  "data": {
+   "flag": "P/E 40-60x for 15+ years",
+   "context": "ROCE 25-60%, low debt, distribution moat, long runway",
+   "multiples": "Asian Paints ~90x to 2022; Pidilite ~148x; Page ~197x",
+   "ceiling": "P/E ~2x own median -> 4-5 flat years",
+   "verdict": "false alarm below ~1.5x own median; real above ~2x",
+   "lesson": "compare P/E to the stock's own median and to growth, not to the market",
+   "note": "Prices/ratios: screener.in consolidated pages and chart API (split/bonus-adjusted closes), fetched 20-Nov-2026."
+  },
+  "sources": [
+   "https://www.screener.in/company/ASIANPAINT/consolidated/",
+   "https://www.screener.in/company/PIDILITIND/consolidated/",
+   "https://www.screener.in/company/PAGEIND/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "case_study:pidilite-2008-2026",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:page-industries-2007-2022",
+    "rel": "about"
+   },
+   {
+    "to": "insight:india-mb-pe70-exit",
+    "rel": "illustrates"
+   },
+   {
+    "to": "strategy:marcellus-cc",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:false-alarm-info-edge-losses-low-roce",
+  "title": "False alarm: Info Edge's reported losses and 3% ROCE",
+  "tickers": [
+   "NAUKRI"
+  ],
+  "tags": [
+   "false-alarm",
+   "flag-judgment",
+   "redflag",
+   "india",
+   "sector-internet",
+   "sum-of-parts"
+  ],
+  "date": "2023-03-31",
+  "body": "FLAGS: consolidated net losses in FY15 (-Rs 14 cr), FY17 (-43), FY20 (-246), FY23 (-70); ROCE 2-4% in most years; P/E swings from 16 to 565. CONTEXT: the consolidated numbers mix two things: (1) Naukri recruitment, a cash machine (standalone recruitment operating margin ~58-59% in Q4 FY26; debtor days 1-7; customers pay upfront, so deferred revenue funds the business), and (2) a venture portfolio (Zomato/Eternal from 2010, Policybazaar/PB Fintech, others) whose losses, impairments (e.g., Rs 276 cr 4B Networks write-off in Q3 FY23) and fair-value swings run through the P&L. The equity base is inflated by marked-up stakes, which crushes ROCE. FY22 PAT of Rs 12,882 cr was mostly a gain on Zomato. Sum-of-parts showed a profitable core plus listed stakes worth a large share of market cap. Stock: ~Rs 29 (2006) -> Rs 1,166 (Nov 2026), ~40x. LESSON: when consolidated losses come from investees or mark-to-market, re-cut the company by segment (standalone core margins + listed-stake value at market). Low ROCE caused by a big investment book is a capital-allocation question (are the bets good?), not an operating flaw.",
+  "data": {
+   "flag": "reported losses 4 years; ROCE 2-4%",
+   "context": "high-margin core + venture portfolio accounting",
+   "multiple": "~40x (2006-26)",
+   "verdict": "false alarm",
+   "lesson": "segment and sum-of-parts before reading consolidated ROCE",
+   "note": "Prices/ratios: screener.in consolidated pages and chart API (split/bonus-adjusted closes), fetched 20-Nov-2026."
+  },
+  "sources": [
+   "https://www.screener.in/company/NAUKRI/consolidated/",
+   "https://www.business-standard.com/amp/article/markets/info-edge-slumps-10-on-rs-116-cr-q3-loss-writes-off-invst-in-4b-network-123021300402_1.html",
+   "https://yourstory.com/2026/05/info-edges-investment-bets-power-profit-surge-core-recruitment-business-holds-firm"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:hidden-segment",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:platform-economics",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:false-alarm-eternal-zomato-losses-dilution",
+  "title": "Partly false alarm: Eternal (Zomato) losses, dilution and a 700x P/E",
+  "tickers": [
+   "ETERNAL"
+  ],
+  "tags": [
+   "false-alarm",
+   "flag-judgment",
+   "redflag",
+   "india",
+   "sector-internet",
+   "dilution",
+   "losses"
+  ],
+  "date": "2022-07-27",
+  "body": "FLAGS: losses every year to FY23 (cumulative ~-Rs 7,450 cr FY15-23); OPM -17% to -252%; shares issued for Blinkit (2022) and a Rs 8,500 cr QIP at Rs 252.62 (Nov 2024), equity capital Rs 764 cr -> Rs 921 cr (~+20% shares, plus ESOPs); after profits came, OPM only 2-3% and P/E ~712 (Nov 2026). CONTEXT: (1) food delivery's contribution margin turned positive before reported profits did, so losses were spend on growth and quick commerce; (2) the 2024 QIP was raised near highs, from domestic MFs, to fund dark stores, not to survive; (3) the low OPM in FY26 is partly an accounting change: Blinkit's move to an inventory-led model books the full value of goods as revenue (consolidated sales jumped to Rs 54,364 cr in FY26), which mechanically shrinks margin %. Stock: IPO Rs 76 (Jul 2021) -> low ~Rs 47 (2022) -> Rs 364 (20 Nov 2026), ~7.8x from the low. HONEST CAVEAT: at P/E ~700 the stock is a bet on future margins in a price war with Swiggy/Zepto; the losses flag was a false alarm at the 2022 low, not proof the current price is safe. LESSON: judge loss-makers on unit economics (contribution margin, cohort retention) and on what dilution buys; recompute margins on a like-for-like revenue basis after model changes.",
+  "data": {
+   "flag": "years of losses; dilution; 2-3% OPM; P/E ~712",
+   "context": "positive unit economics; growth QIP at high price; 1P revenue gross-up",
+   "multiple": "~4.8x from IPO; ~7.8x from 2022 low",
+   "verdict": "false alarm at 2022 low; valuation risk now",
+   "lesson": "unit economics + like-for-like margins",
+   "note": "Prices/ratios: screener.in consolidated pages and chart API (split/bonus-adjusted closes), fetched 20-Nov-2026."
+  },
+  "sources": [
+   "https://www.screener.in/company/ETERNAL/consolidated/",
+   "https://inc42.com/buzz/zomato-raises-inr-8500-cr-via-qip-at-an-issue-price-of-inr-252-62",
+   "https://www.outlookbusiness.com/start-up/e-commerce/why-zomatos-parent-eternal-is-going-local-with-domestic-capital-what-it-unlocks-for-blinkit-explained"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:india-ipo-mania-2021",
+    "rel": "about"
+   },
+   {
+    "to": "insight:platform-economics",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:false-alarm-reliance-jio-debt",
+  "title": "Partly false alarm: Reliance's Jio-era debt doubling and ~10% ROCE",
+  "tickers": [
+   "RELIANCE"
+  ],
+  "tags": [
+   "false-alarm",
+   "flag-judgment",
+   "redflag",
+   "india",
+   "sector-telecom",
+   "capex",
+   "debt"
+  ],
+  "date": "2020-06-19",
+  "body": "FLAGS: borrowings Rs 1.68 lakh cr (FY15) -> Rs 3.55 lakh cr (FY20); net debt Rs 1,61,035 cr (31 Mar 2020); ROCE stuck at 8-12% through FY15-26; Jio capex well ahead of revenue. CONTEXT: (1) the capex was ahead of demand that was very likely to come (India's mobile-data price elasticity) by a group with a cash-generating refining/petchem core and access to global capital; (2) Jio's price war drove the industry from many players to three, giving pricing power later; (3) leverage was cut by selling minority stakes at high valuations: Rs 1,15,694 cr from Jio Platforms investors (Facebook Rs 43,574 cr for 9.99%, Silver Lake, KKR, PIF etc.) plus a Rs 53,124 cr rights issue, and RIL declared itself net-debt-free on 19 Jun 2020. Stock: ~Rs 231 (2016) -> Rs 1,359 (Nov 2026), ~5.9x (~18% CAGR). HONEST VERDICT: the debt flag was a false alarm (no distress), but the low-ROCE flag stayed partly true: returns were good, not multibagger-grade, and the rights issue diluted holders who did not subscribe. LESSON: capex-ahead-of-demand is benign when demand is proven elsewhere, the sponsor can survive delays, and asset monetisation is possible; but low ROCE caps compounding.",
+  "data": {
+   "flag": "debt doubled; ROCE 8-12%",
+   "context": "capex ahead of near-certain demand, cash-generative core, stake sales, rights issue",
+   "multiple": "~5.9x (2016-26)",
+   "verdict": "debt: false alarm; ROCE: partly real",
+   "lesson": "survivable capex ahead of demand is fine; ROCE still caps returns",
+   "note": "Prices/ratios: screener.in consolidated pages and chart API (split/bonus-adjusted closes), fetched 20-Nov-2026."
+  },
+  "sources": [
+   "https://www.screener.in/company/RELIANCE/consolidated/",
+   "https://www.ril.com/sites/default/files/2023-01/Media-Release-19062020.pdf",
+   "https://www.business-standard.com/amp/article/companies/ril-net-debt-free-before-schedule-to-list-retail-telecom-biz-within-5-yrs-120061900238_1.html"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "person:group-reliance-mukesh",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:false-alarm-bharti-airtel-losses-debt",
+    "rel": "similar_to"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:false-alarm-bharti-airtel-losses-debt",
+  "title": "False alarm: Bharti Airtel's AGR losses, Rs 2 lakh cr debt and three equity raises",
+  "tickers": [
+   "BHARTIARTL"
+  ],
+  "tags": [
+   "false-alarm",
+   "flag-judgment",
+   "redflag",
+   "india",
+   "sector-telecom",
+   "debt",
+   "dilution"
+  ],
+  "date": "2020-01-15",
+  "body": "FLAGS: net loss Rs 30,664 cr (FY20) and Rs 12,364 cr (FY21) (Q2 FY20 alone -Rs 23,044 cr on a Rs 28,450 cr AGR provision); borrowings Rs 83,415 cr (FY15) -> Rs 2.26 lakh cr (FY23); ROCE 3-7% FY18-21; equity raised repeatedly: ~Rs 25,000 cr rights (May 2019, ~Rs 220/share), Rs 21,502 cr QIP+FCCB (Jan 2020), ~Rs 21,000 cr rights (2021). CONTEXT: the losses were a one-time court-ordered regulatory provision, not operating losses; CFO never went below Rs 18,000 cr and rose to Rs 1.22 lakh cr (FY26); working-capital days were deeply negative (-160 to -350); much of the debt is deferred spectrum payments to the government on long tenors; the Jio price war was consolidating the industry to three players, so tariffs would eventually rise. Governance graded clean (person:group-bharti) and promoters subscribed to rights. OPM went 32% (FY19) -> 55% (FY26). Stock: ~Rs 291 (2019) -> Rs 2,143 (Nov 2026), ~7.4x. LESSON: separate one-time provisions from operating results, and ask what kind of debt it is (government spectrum dues vs short-term bank loans). Equity raised to survive a consolidating price war, from a clean promoter who subscribes, is different from dilution to stay alive in a structurally losing market (Vodafone Idea).",
+  "data": {
+   "flag": "losses FY20-21; debt 2.7x; ROCE 3%; rights+QIP",
+   "context": "one-time AGR provision; CFO strong; spectrum dues; industry consolidation; promoter subscribed",
+   "multiple": "~7.4x (2019-26)",
+   "verdict": "false alarm",
+   "lesson": "classify losses (one-time vs operating) and debt (who is the lender, what tenor)",
+   "note": "Prices/ratios: screener.in consolidated pages and chart API (split/bonus-adjusted closes), fetched 20-Nov-2026."
+  },
+  "sources": [
+   "https://www.screener.in/company/BHARTIARTL/consolidated/",
+   "https://www.business-standard.com/article/companies/bharti-airtel-reports-loss-of-rs-23-045-crore-in-q2-blames-agr-ruling-119111401248_1.html",
+   "https://www.business-standard.com/article/companies/bharti-airtel-gets-board-approval-to-raise-3-bn-to-pay-agr-dues-119120500049_1.html",
+   "https://www.businessinsider.in/business/telecom/news/airtel-logs-2-billion-loss-as-it-sets-aside-money-for-regulatory-dues/amp_articleshow/77253294.cms"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "person:group-bharti",
+    "rel": "about"
+   },
+   {
+    "to": "insight:balance-sheet-survives-cycle",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:false-alarm-apl-apollo-low-margins",
+  "title": "False alarm: APL Apollo's 5-8% operating margin",
+  "tickers": [
+   "APLAPOLLO"
+  ],
+  "tags": [
+   "false-alarm",
+   "flag-judgment",
+   "redflag",
+   "india",
+   "sector-steel",
+   "margins"
+  ],
+  "date": "2013-03-31",
+  "body": "FLAG: OPM only 5-9% every year (FY19 5%, FY26 8%) in a steel-linked business; screens filtering on OPM > 15% exclude it. CONTEXT: return on capital, not margin, decides value. APL Apollo turned its capital very fast: working-capital days ~0 (dealers pay quickly; debtor days 3-6 since FY21), so ROCE was 20-32% at 5-8% margins. It also added differentiated products (Direct Forming Technology lines, 2016-17) and gained share (structural tubes ~40% per company). P/E was ~4-5 in 2013-14 because the market priced it as a commodity processor. Stock: Rs 3.22 (Mar 2009) -> Rs 2,148 (Nov 2026), ~670x. The same logic applies to DMart (8% OPM), Costco (~3% net margin) and Dixon (3-4% margin). WHEN LOW MARGIN IS A REAL FLAG: when asset turns are low too (ROCE < cost of capital), when the margin is shrinking because a rival has a cost advantage, or when tiny margins on huge revenue make the revenue itself hard to verify (Rajesh Exports at ~0.5%). LESSON: read margin x asset turn = ROCE; screen on ROCE and working-capital days, not OPM.",
+  "data": {
+   "flag": "OPM 5-8%",
+   "context": "fast asset turns, ~0 WC days, ROCE 20-32%, share gains",
+   "multiple": "~670x (2009-26)",
+   "verdict": "false alarm",
+   "lesson": "margin x turns = ROCE",
+   "note": "Prices/ratios: screener.in consolidated pages and chart API (split/bonus-adjusted closes), fetched 20-Nov-2026."
+  },
+  "sources": [
+   "https://www.screener.in/company/APLAPOLLO/consolidated/",
+   "https://www.smallcase.com/blog/why-apl-apollos-growth-doesnt-cost-it-a-rupee/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:apl-apollo-2009-2026",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:dixon-technologies-2019-2025",
+    "rel": "similar_to"
+   },
+   {
+    "to": "case_study:hidden-trap-rajesh-exports-low-pe",
+    "rel": "contradicts"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:false-alarm-hdfc-bank-expensive-bank",
+  "title": "False alarm (until the merger): HDFC Bank at 25-35x earnings and ~4x book",
+  "tickers": [
+   "HDFCBANK"
+  ],
+  "tags": [
+   "false-alarm",
+   "flag-judgment",
+   "redflag",
+   "india",
+   "banks",
+   "valuation"
+  ],
+  "date": "2019-12-31",
+  "body": "FLAG: a bank at trailing P/E 23-38 for most of 2005-2020 (median 26) and several times book, when most Indian banks traded at 1-2x book. CONTEXT: book-multiple is only 'expensive' relative to the ROE it earns and how long it can grow. HDFC Bank earned ROE 16-20% every year FY15-23 with low NPAs, a large low-cost CASA deposit base and ~20% loan growth, so book value compounded ~18-20% a year with no equity-destroying credit cycle; EPS rose 10.66 (FY15) -> 46.26 (FY25). Stock: ~Rs 28 (2005) -> ~Rs 1,000 (2026 peak), ~35x. WHERE IT TURNED: after the Jul-2023 merger with parent HDFC Ltd, ROE fell to ~14% and growth slowed as the bank had to raise deposits to replace HDFC's borrowings; P/E fell to ~16. From Jan 2021 (Rs 712) to Nov 2026 (Rs 824) the stock gained ~16% in ~6 years. LESSON: a premium P/B is justified by (ROE - cost of equity) x runway; when either input steps down (merger, slower growth), the premium compresses even without any credit problem. Contrast Yes Bank, whose similar-looking ROE was manufactured.",
+  "data": {
+   "flag": "P/E 25-35; P/B several x",
+   "context": "sustained ROE 16-20%, low NPA, CASA, long runway",
+   "multiple": "~35x (2005-26 peak)",
+   "verdict": "false alarm 2005-2020; premium compressed after 2023 merger",
+   "lesson": "justify P/B with ROE spread x runway",
+   "note": "Prices/ratios: screener.in consolidated pages and chart API (split/bonus-adjusted closes), fetched 20-Nov-2026."
+  },
+  "sources": [
+   "https://www.screener.in/company/HDFCBANK/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "theme:sector-private-banks",
+    "rel": "part_of"
+   },
+   {
+    "to": "case_study:hidden-trap-yes-bank-roe",
+    "rel": "contradicts"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:false-alarm-apollo-hospitals-promoter-pledge",
+  "title": "False alarm (with luck): Apollo Hospitals' 76% promoter pledge",
+  "tickers": [
+   "APOLLOHOSP"
+  ],
+  "tags": [
+   "false-alarm",
+   "flag-judgment",
+   "redflag",
+   "india",
+   "sector-healthcare",
+   "pledge",
+   "governance"
+  ],
+  "date": "2019-07-16",
+  "body": "FLAG: in 2019 the Reddy family had pledged ~68-78% of its holding (reports: 'likely to hit 75%', Jul 2019); the family sold a 3.6% stake to cut it, taking its holding to ~30.8%. Our hard rule (pledge >25% or rising) disqualifies this. CONTEXT: (1) the pledge was at the family level, the listed company itself was not over-levered and its core hospitals were profitable (OPM 10-15%, CFO Rs 537-1,293 cr FY18-20); (2) purpose and lenders were disclosed and management publicly committed to a reduction path (to ~20-25% by Nov 2019); (3) the trend was falling, funded by actual stake sales rather than promises; (4) the group had no history of fund diversion. By Aug 2025 a 1.3% block sale (Rs 1,489 cr) cut the pledge from 13.1% to ~2% of promoter holding. ROCE recovered from 7% (FY18) to 17%. Stock: ~Rs 1,293 (2019) -> Rs 9,040 (Nov 2026), ~7x. HONEST CAVEAT: a 2020-style crash could have triggered invocations; it worked partly because the price rose. LESSON: pledge severity depends on purpose, % of holding, trend, lender type, company leverage and group history; a high but falling, disclosed, family-level pledge with a clean group is a sizing/monitoring issue, not proof of fraud.",
+  "data": {
+   "flag": "promoter pledge ~68-78% of holding (2019)",
+   "context": "family-level, disclosed purpose, falling via real stake sales, unlevered company, clean group",
+   "multiple": "~7x (2019-26)",
+   "verdict": "false alarm, partly luck",
+   "lesson": "grade pledges; never treat as binary but size small",
+   "note": "Prices/ratios: screener.in consolidated pages and chart API (split/bonus-adjusted closes), fetched 20-Nov-2026."
+  },
+  "sources": [
+   "https://www.business-standard.com/amp/article/companies/apollo-hospitals-enterprise-s-promoter-pledging-likely-to-hit-75-119071601609_1.html",
+   "https://www.business-standard.com/amp/article/companies/apollo-hospitals-aims-to-reduce-promoter-group-pledged-shares-by-50-119053101577_1.html",
+   "https://www.bloombergquint.com/business/apollo-hospitals-promoter-family-will-use-stake-sale-proceeds-to-pare-debt",
+   "https://www.businesstoday.in/markets/stocks/story/apollo-hospitals-block-deal-promoter-to-trim-debt-rules-out-more-stake-sale-490621-2025-08-22",
+   "https://www.screener.in/company/APOLLOHOSP/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:promoter-pledge-group-contagion",
+    "rel": "contradicts"
+   },
+   {
+    "to": "insight:disqualifiers",
+    "rel": "contradicts"
+   },
+   {
+    "to": "case_study:zee-essel-pledges-2019",
+    "rel": "contradicts"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:false-alarm-hal-receivable-days",
+  "title": "False alarm: HAL's 227 receivable days, negative CFO and salary borrowings",
+  "tickers": [
+   "HAL"
+  ],
+  "tags": [
+   "false-alarm",
+   "flag-judgment",
+   "redflag",
+   "india",
+   "sector-defence",
+   "psu",
+   "receivables"
+  ],
+  "date": "2019-03-31",
+  "body": "FLAGS: debtor days 144 (FY15) -> 227 (FY19) -> 191 (FY20); CFO negative FY17-19 (-Rs 404 cr, -748, -7,700 cr) while PAT was ~Rs 2,000-2,600 cr; borrowings rose from Rs 80 cr (FY16) to Rs 5,927 cr (FY20), reportedly partly to pay salaries while the Defence Ministry delayed payments; inventory days 800+. CONTEXT: the debtor was the Government of India, a sovereign that delays but does not default; HAL was a near-monopoly supplier of military aircraft and helicopters with a multi-year order book; the delay was a budget-timing issue, visible in Defence Ministry statements. When the dues were cleared, CFO swung to Rs 15,263 cr (FY21) and borrowings fell to ~Rs 50 cr. P/E was 6-14 in 2020-22, so the market priced the flag as real. Stock: low ~Rs 251 (2020) -> Rs 4,762 (Nov 2026), ~19x. LESSON: receivable days must be read with the counterparty's credit quality and the reason for the delay. High receivables from a sovereign or AAA customer with a known payment backlog differ from receivables owed by related parties or unnamed foreign distributors (Gitanjali, PC Jeweller, Cox & Kings).",
+  "data": {
+   "flag": "debtor days 227; CFO -Rs 7,700 cr; borrowings for salaries",
+   "context": "sovereign counterparty, budget-timing delay, monopoly, order book",
+   "multiple": "~19x (2020-26)",
+   "verdict": "false alarm",
+   "lesson": "who owes you matters more than how many days",
+   "note": "Prices/ratios: screener.in consolidated pages and chart API (split/bonus-adjusted closes), fetched 20-Nov-2026."
+  },
+  "sources": [
+   "https://www.screener.in/company/HAL/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "case_study:hal-2020-2024",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:defence-psu-rerating",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:hidden-trap-gitanjali-receivables",
+    "rel": "contradicts"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:false-alarm-amazon-no-profits-capex",
+  "title": "False alarm: Amazon's missing profits and heavy capex",
+  "tickers": [
+   "US-AMZN"
+  ],
+  "tags": [
+   "false-alarm",
+   "flag-judgment",
+   "redflag",
+   "us",
+   "sector-internet",
+   "capex",
+   "losses"
+  ],
+  "date": "2002-12-31",
+  "body": "FLAGS: net losses through 2002, near-zero GAAP margins for most of 1997-2015, P/E meaningless or in the hundreds, rising capex (fulfilment centres, then AWS data centres); FCF negative again in 2021-22 during a warehouse over-build [2021-22 FCF magnitudes from memory, unverified]. CONTEXT: (1) negative working capital: customers paid Amazon before Amazon paid suppliers, so growth released cash; (2) management explicitly targeted FCF per share, not EPS (1997 letter); (3) expenses that looked like opex (Prime shipping, AWS R&D) were investments with high incremental returns; (4) AWS, broken out only in 2015, was a hidden high-margin segment. IPO $18 in 1997 = ~$0.075 split-adjusted -> ~$188 (Jul 2021), ~2,500x, through a -94% drawdown (1999-2001). WHERE THE FLAG WAS RIGHT: in 1999-2001 the valuation was absurd and the stock lost 94%; the business flag (no profits) was false, the price flag was true. LESSON: when reported profit is suppressed by deliberate reinvestment, look at gross profit growth, CFO, working-capital sign and segment economics; but a false business flag does not protect you from a valuation crash.",
+  "data": {
+   "flag": "no profits; high capex; meaningless P/E",
+   "context": "negative WC, FCF/share focus, reinvestment, hidden AWS segment",
+   "multiple": "~2,500x (1997-2021)",
+   "verdict": "business flag false; price flag true in 1999",
+   "lesson": "look through suppressed EPS but respect valuation",
+   "note": ""
+  },
+  "sources": [
+   "https://www.cnbc.com/2018/12/18/dotcom-bubble-amazon-stock-lost-more-than-90percent-long-term-investors-still-got-rich.html",
+   "https://www.fool.com/investing/2017/03/22/how-much-money-would-i-have-if-i-had-invested-at-a.aspx"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:amazon-1997-2021-compounding",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:amazon-drawdown",
+    "rel": "about"
+   },
+   {
+    "to": "insight:hidden-segment",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:false-alarm-netflix-negative-fcf",
+  "title": "False alarm: Netflix's -$3.3 bn free cash flow",
+  "tickers": [
+   "US-NFLX"
+  ],
+  "tags": [
+   "false-alarm",
+   "flag-judgment",
+   "redflag",
+   "us",
+   "sector-media",
+   "fcf"
+  ],
+  "date": "2019-12-31",
+  "body": "FLAG: free cash flow negative for years, about -$3.0 bn (2018) and -$3.27 bn (2019, 10-K), funded by junk bonds; cash content spending ~$14.6 bn vs only ~$9.2 bn of content amortisation in 2019, so reported profit overstated cash generation. Short sellers called it a debt-funded content treadmill. CONTEXT: (1) original content is a capital asset that builds a library and global brand; the gap between cash spend and amortisation was the growth investment; (2) subscribers and engagement grew globally with low churn, and prices could be raised; (3) content spend is a fixed cost spread over a growing base, so margins would rise with scale. FCF turned positive in 2020 (COVID production pause helped) and became large later as operating margin rose toward ~30% [post-2020 FCF levels from memory, unverified]. The stock still crashed -76% in 2021-22 on the first subscriber loss. LESSON: negative FCF is benign when the spend creates a durable asset that scales over a growing, retained customer base and the cash gap shrinks as a share of revenue; it is dangerous when the spend must rise faster than revenue just to stand still.",
+  "data": {
+   "flag": "FCF -$3.0bn (2018), -$3.27bn (2019); debt-funded",
+   "context": "content library as capex; scale economics; pricing power; retention",
+   "verdict": "false alarm",
+   "lesson": "track cash spend / revenue trend and retention",
+   "note": ""
+  },
+  "sources": [
+   "https://www.sec.gov/Archives/edgar/data/1065280/000106528020000040/form10kq419.htm",
+   "https://www.fool.com/investing/2020/03/06/netflix-shrinking-gap-cash-spend-content-expense.aspx",
+   "https://www.fool.com/investing/2020/02/03/netflix-details-its-path-toward-positive-cash-flow.aspx"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:netflix-2002-2025",
+    "rel": "about"
+   },
+   {
+    "to": "insight:great-business-crash",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:false-alarm-tesla-losses-dilution",
+  "title": "False alarm (on survival), real (on valuation): Tesla's losses and $12 bn of share sales",
+  "tickers": [
+   "US-TSLA"
+  ],
+  "tags": [
+   "false-alarm",
+   "flag-judgment",
+   "redflag",
+   "us",
+   "sector-auto",
+   "dilution",
+   "losses"
+  ],
+  "date": "2020-12-31",
+  "body": "FLAGS: GAAP losses every year until 2020; repeated equity raises; in 2020 alone $2 bn (Feb), $5 bn at-the-market (Sep) and $5 bn at-the-market (Dec) = $12 bn; extreme short interest; P/E >100 at the 2021 peak. CONTEXT: by mid-2019 the Model 3 ramp (~5k/week), a surprise Q3-2019 profit and the Shanghai factory built in ~10 months showed the survival risk was ending. The 2020 share sales were made after a ~650% rally at a ~$500 bn valuation, so each $5 bn was only ~1% dilution: cheap capital that fully funded new factories (Giga Texas) and removed bankruptcy risk. Dilution at a high price, for growth capex, is a gift to existing holders; dilution at a low price to survive is a transfer from them. Stock: ~$11.8 split-adjusted (Jun 2019) -> ~$414 (Nov 2021), ~35x. WHERE THE FLAG CAME TRUE: the price was mostly rerating; it fell -73% to ~$101 (Jan 2023) when auto margins fell. LESSON: measure dilution as % of shares and ask the price and purpose; separate 'will it survive?' from 'is it worth this price?'.",
+  "data": {
+   "flag": "losses to 2020; $12bn equity in 2020; P/E >100",
+   "context": "survival risk resolved; raises at peak valuation ~1% each; funded capex",
+   "multiple": "~35x (2019-21)",
+   "verdict": "survival flag false; valuation flag real",
+   "lesson": "dilution: price x purpose x % of shares",
+   "note": ""
+  },
+  "sources": [
+   "https://www.bloomberg.com/news/articles/2020-12-08/tesla-raising-up-to-5-billion-in-third-capital-raise-this-year",
+   "https://electrek.co/2020/09/01/tesla-tsla-5-billion-capital-raise/",
+   "https://fortune.com/2020/12/08/looking-to-build-a-monster-cash-pile-tesla-heads-back-to-the-markets-to-sell-shares/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:tesla-2010-2024",
+    "rel": "about"
+   },
+   {
+    "to": "insight:us-redflag-sbc-dilution",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:false-alarm-costco-thin-margins-high-pe",
+  "title": "False alarm: Costco's ~3% margin at 50-60x earnings",
+  "tickers": [
+   "US-COST"
+  ],
+  "tags": [
+   "false-alarm",
+   "flag-judgment",
+   "redflag",
+   "us",
+   "sector-retail",
+   "margins",
+   "valuation"
+  ],
+  "date": "2025-02-28",
+  "body": "FLAGS: net margin only ~2.5-3% [approx, unverified]; gross markup capped at ~14-15%; P/E ~48-60x in 2024-26, a record. CONTEXT: the low margin is a deliberate strategy: low prices build trust and volume, and most operating profit comes from membership fees (~90% renewal in US/Canada), which are recurring, prepaid and rise every ~5-6 years without churn. Inventory turns fast, so suppliers effectively fund inventory (negative working capital), and ROIC is high despite thin margins. EPS ~$2.5 (FY09) -> ~$18 (FY25), ~7x, plus special dividends; stock ~$38 (2009) -> $1,094 (May 2026), ~29x. Charlie Munger (director from 1997) was the long-term advocate; Berkshire sold ~2020 near ~$300 and missed ~3.5x. HONEST CAVEAT: ~3.5x of the 29x came from P/E expansion (15 -> ~50x), which cannot repeat; the last time P/E was this high (1999, 56x) the stock fell >20% within months. LESSON: margin is a strategy choice; judge by ROIC, renewal rates and the source of profit. High P/E for certainty is benign for the business but a real risk for forward returns.",
+  "data": {
+   "flag": "~3% net margin; P/E 48-60",
+   "context": "membership-fee profit model, negative WC, high ROIC, renewal ~90%",
+   "multiple": "~29x (2009-26)",
+   "verdict": "margin flag false; valuation flag partly real",
+   "lesson": "margin is strategy; ROIC + renewals decide",
+   "note": ""
+  },
+  "sources": [
+   "https://www.fool.com/investing/2025/01/11/heres-what-happened-the-last-time-costco-stock-was",
+   "https://www.fool.com/investing/2026/08/16/should-investors-be-concerned-that-costco-stock-tr/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:costco-2009-2026",
+    "rel": "about"
+   },
+   {
+    "to": "strategy:sleep-scale-economies-shared",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:false-alarm-apl-apollo-low-margins",
+    "rel": "similar_to"
+   }
+  ]
+ }
+]

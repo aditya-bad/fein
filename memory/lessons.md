@@ -64,3 +64,11 @@ User: high-P/E names with every number "against" them still multiplied; good num
 **Rule:** every flag (pledge, P/E, negative FCF, debtor days…) must be interpreted with the business's
 real story; record *why* we override or keep a flag. Track our checklist's false alarms and missed traps.
 (Note: our hard disqualifiers — fraud signals, governance — stay strict until evidence says otherwise.)
+
+## L11 (2026-11-20) — Claude's training knowledge contaminates historical drills
+Drill set 1: the blind analyst recognised all 10 "anonymised" companies (sector hints like a listed radio
+subsidiary, African lead plants, SME gate maker + real numbers were enough). Set 1 excluded from scoring.
+**Rules:** (a) drill v2: blur sector/geography to generic level, multiply all money by a hidden random
+factor, shift fiscal years, prefer obscure micro/small caps, strip group/listing-venue clues;
+(b) **forward paper calls are the only truly clean test of our skill** — weight them most in the phase-B gate;
+(c) historical drills remain useful as practice, scored only when "not recognised".

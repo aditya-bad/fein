@@ -20,6 +20,9 @@ save in stages.
 - Unseal → score with Brier score and log-loss; record what was missed. Store packets in
   `drills/packets/`, sealed outcomes in `drills/sealed/`, results as memdb `analysis` records tag `drill`.
 - Contamination check: analyst must state if it recognises the company; recognised drills are excluded.
+- **v2 anonymisation (after set 1 failed — 10/10 recognised, L11):** generic sector words only; all money ×
+  hidden factor (0.3–3); fiscal years shifted; no listing venue, subsidiaries, foreign brands, group events;
+  obscure micro/small caps; packet builder runs a "could I identify this?" self-check and rejects if yes.
 - Mix: ~1/3 later multibaggers, ~1/3 frauds/blow-ups, ~1/3 ordinary/mediocre (base-rate realistic).
 
 ## Forward paper calls (live, out-of-sample)
@@ -28,7 +31,7 @@ dated, with probabilities, scored when the outcome arrives. Stored as memdb `the
 These are tests of methods, not recommendations.
 
 ## Gate to phase B (bring the user ideas)
-All of: ≥60 scored blind drills with Brier clearly better than a naive base-rate forecaster; ≥30 forward
+All of: ≥30 forward paper calls resolved with positive skill (the cleanest test, L11); ≥60 scored, unrecognised blind drills with Brier clearly better than a naive base-rate forecaster; ≥30 forward
 paper calls resolved with positive skill; promise-tracker signal shown to predict something on ≥20
 companies; written post-mortems on misses. Until then: no idea-pitching (except "great stock spotted" notes).
 
@@ -36,6 +39,7 @@ companies; written post-mortems on misses. Until then: no idea-pitching (except 
 | Date | Drills scored | Brier (ours) | Brier (base rate) | Paper calls resolved | Notes |
 |---|---|---|---|---|---|
 | 2026-11-20 | 0 | – | – | 0 | loop started |
+| 2026-11-20 | set 1: 0 of 10 usable (all recognised) | – | – | 0 | method fixed → v2 anonymisation; forward calls prioritised |
 
 ## Knowledge backlog (top = next)
 0a. **False alarms vs real traps:** cases where our red flags fired but the stock compounded (high P/E,

@@ -31,7 +31,7 @@ def main(out):
         if BAD_SEC.search(r["security"]): drop["not_common"] += 1; continue
         if float(r["price"]) < 1 or float(r["shares"]) <= 0: drop["price<1_or_0sh"] += 1; continue
         t = r["ticker"]
-        if not re.fullmatch(r"[A-Z]{1,5}([.-][A-Z])?", t or ""): drop["bad_ticker"] += 1; continue
+        if t in ("NONE", "NA", "NULL") or not re.fullmatch(r"[A-Z]{1,5}([.-][A-Z])?", t or ""): drop["bad_ticker"] += 1; continue
         if not r["trans_date"] or not r["filing_date"]: drop["no_date"] += 1; continue
         keep.append(r)
     print(f"purchase rows {len(rows)} -> kept {len(keep)}; dropped {dict(drop)}", file=sys.stderr)
