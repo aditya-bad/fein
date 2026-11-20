@@ -1,0 +1,1222 @@
+[
+ {
+  "type": "strategy",
+  "id": "strategy:forensic-cash-conversion-test",
+  "title": "Cash conversion test: 5-year cumulative CFO/PAT and FCF/PAT",
+  "tickers": [
+   "GENSOL",
+   "ASIANPAINT"
+  ],
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "india",
+   "process",
+   "redflag"
+  ],
+  "body": "Formula: sum of 5 years CFO / sum of 5 years PAT (single years are noisy); companion: sum of 5y lease-adjusted FCF / sum of 5y PAT. Thresholds (practitioner convention, Marcellus-style CFO/EBITDA >=70-80%): >=0.9 healthy, 0.7-0.9 explain, <0.7 red flag, <0 with 3+ years of positive PAT = presumptive disqualifier. Worked example GENSOL FY20-FY24 (Screener, consolidated, Rs cr): PAT 2/3/11/23/53 = 92; CFO -18/6/-50/115/-98 = -45 -> ratio -0.49; FCF sum -1,014 funded by borrowings 11 -> 1,510; SEBI interim order 15-Apr-2025 later found loan diversion. Contrast ASIANPAINT FY22-26: PAT 20,943 vs CFO 22,795 = 1.09 despite FY22 alone at 0.32 (inventory build in raw-material inflation, CCC 59->94 days). Lesson: one bad year in a long clean record is a working-capital swing; repeated bad years in a fast grower is a pattern. Also split CFO into pre-working-capital CFO and working-capital change; if WC release supplies >30% of CFO two years running, find the line (payables stretch, factoring, advances) - it reverses.",
+  "data": {
+   "formula": "sum5(CFO)/sum5(PAT)",
+   "thresholds": {
+    "healthy": ">=0.9",
+    "explain": "0.7-0.9",
+    "red": "<0.7"
+   },
+   "examples": {
+    "GENSOL_FY20_24": -0.49,
+    "ASIANPAINT_FY22_26": 1.09
+   },
+   "lesson": "cumulative, not single-year"
+  },
+  "sources": [
+   "https://www.screener.in/company/GENSOL/consolidated/",
+   "https://www.screener.in/company/ASIANPAINT/consolidated/",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:ind-as-accounting-levers",
+    "rel": "about"
+   },
+   {
+    "to": "strategy:marcellus-cc",
+    "rel": "similar_to"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:supplier-finance-factoring-hidden-debt",
+  "title": "Supplier finance and factoring: CFO that is really debt (Advance Auto Parts)",
+  "tickers": [
+   "US-AAP"
+  ],
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "global",
+   "leverage",
+   "redflag",
+   "us"
+  ],
+  "body": "Reverse factoring (bank pays supplier early, company pays bank late) keeps the liability in trade payables and inflates CFO by the stretch; non-recourse factoring moves receivables to cash inside CFO. Disclosure: US ASU 2022-04 (from FY2023, XBRL tag SupplierFinanceProgramObligation; 87 filers tagged it at CY2025Q4, Walmart $6.0bn largest); IAS 7/IFRS 7 amendments (May 2023, effective 2024) and matching Ind AS 7/107 amendments - read the 'supplier finance arrangements' note. Worked example ADVANCE AUTO PARTS (10-K 0001193125-26-051305, $m): FY2023 payables 3,526 of which supplier finance 3,400 (~96%); payable days ~241 on continuing COGS 5,349; programme shrank to 2,500 by FY2025 while CFO went 287 -> 85 -> -46. Tests: supplier-finance obligations / trade payables (>30% red); DPO far above peers; a shrinking programme = coming cash outflow. Treat SF obligations as debt in net debt/EBITDA. Same family: First Brands 2025 off-balance-sheet receivable/inventory finance.",
+  "data": {
+   "formula": "SF obligations / trade payables",
+   "threshold": ">30% red",
+   "AAP": {
+    "FY23_SF": 3400,
+    "FY23_AP": 3526,
+    "FY23_DPO": 241,
+    "CFO": {
+     "FY23": 287,
+     "FY24": 85,
+     "FY25": -46
+    }
+   },
+   "xbrl_tag": "us-gaap:SupplierFinanceProgramObligation"
+  },
+  "sources": [
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0001158449.json",
+   "https://data.sec.gov/api/xbrl/frames/us-gaap/SupplierFinanceProgramObligation/USD/CY2025Q4I.json",
+   "https://www.fasb.org/page/getarticle?uid=fasb_Media_Advisory_09-29-22",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:ind-as-accounting-levers",
+    "rel": "about"
+   },
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "part_of"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:capitalisation-moves-costs-out-of-cfo",
+  "title": "Capitalising costs moves expenses out of CFO and the P&L - use FCF, not CFO",
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "global",
+   "india",
+   "redflag"
+  ],
+  "body": "An expensed cost reduces CFO; a capitalised one goes to CFI (capex, intangible additions) so CFO and EBITDA both look better. Levers: development/software capitalisation (Ind AS 38), borrowing costs (Ind AS 23), pre-operative expenses parked in CWIP, contract-acquisition costs (Ind AS 115/ASC 340-40), and outright line-cost capitalisation (WorldCom ~$3.8bn in 2001-02 per SEC complaint). Tests: (1) judge cash generation on FCF after capitalised intangibles; (2) capex and intangible additions vs depreciation, vs peers, and vs own history - capex rising without revenue growth is a flag; (3) capitalised borrowing cost / total finance cost >20% (Ind AS 23 note); (4) intangible additions vs cash R&D in MD&A/con-call. Indian specific: Schedule III (from FY22) requires ageing of CWIP and intangible assets under development.",
+  "data": {
+   "tests": [
+    "FCF after capitalised intangibles",
+    "capex/depreciation vs peers",
+    "capitalised interest / finance cost >20%",
+    "intangibles under development ageing"
+   ],
+   "case": "WorldCom 2001-02 ~$3.8bn"
+  },
+  "sources": [
+   "https://www.sec.gov/litigation/complaints/complainta.htm",
+   "https://www.ifrs.org/issued-standards/list-of-standards/ias-38-intangible-assets/",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:ind-as-accounting-levers",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "part_of"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:cash-flow-classification-games",
+  "title": "Cash-flow classification games: interest, leases, acquisitions, lending subsidiaries (L&T example)",
+  "tickers": [
+   "LT"
+  ],
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "global",
+   "india",
+   "process",
+   "us"
+  ],
+  "body": "Ind AS 7/IAS 7 lets interest paid sit in operating OR financing, and interest/dividends received in operating OR investing; US ASC 230 forces operating. Ind AS 116 puts lease principal (and usually interest) in financing; US operating-lease cash stays in CFO. Acquisitions are investing everywhere, so serial acquirers show clean CFO and weak FCF-after-M&A. IFRS 18 (effective 2027 for IFRS reporters) removes the choice for most corporates (interest paid -> financing); India had not notified an Ind AS equivalent as of Nov-2026 - recheck before FY28. Lending subsidiaries: for an NBFC, loan growth is operating cash. Worked example L&T consolidated (Screener, Rs cr): PAT 4,966/4,592/6,486/8,004/10,217 in FY15-19 while CFO was -1,365/-3,240/6,655/-10,031/-4,756, largely the L&T Finance loan book; once it stopped growing CFO turned 23,074 (FY21), 22,777 (FY23). Lesson: for conglomerates use segment/standalone cash flow or strip the financing arm; restate Indian CFO to US basis by moving interest and lease payments back into it.",
+  "data": {
+   "rules": {
+    "IndAS7_interest_paid": "operating or financing",
+    "ASC230": "operating",
+    "IndAS116_lease_cash": "financing",
+    "IFRS18": "2027, interest paid -> financing"
+   },
+   "LT_CFO_FY15_19": [
+    -1365,
+    -3240,
+    6655,
+    -10031,
+    -4756
+   ],
+   "LT_PAT_FY15_19": [
+    4966,
+    4592,
+    6486,
+    8004,
+    10217
+   ]
+  },
+  "sources": [
+   "https://www.screener.in/company/LT/consolidated/",
+   "https://www.ifrs.org/issued-standards/list-of-standards/ias-7-statement-of-cash-flows/",
+   "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "case_study:false-alarm-bajaj-finance-negative-cfo-qips",
+    "rel": "similar_to"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "strategy",
+  "id": "strategy:fcf-definitions-forensic",
+  "title": "FCF definitions: pick one, apply consistently (simple, forensic FCFF, owner earnings, after-SBC, after-M&A)",
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "global",
+   "india",
+   "process",
+   "us"
+  ],
+  "body": "Simple FCF = CFO - capex (Screener's; misleading for lease-heavy firms and firms classifying interest in CFF). Forensic FCF to firm = CFO - capex - capitalised intangibles - total lease payments (principal + interest) - interest paid if classified in CFF: comparable across Ind AS and US GAAP. Owner earnings (Buffett 1986 letter) = PAT + D&A - maintenance capex +/- working capital needed to hold competitive position. FCF after SBC for US tech (SBC is a real cost; see insight:us-redflag-sbc-dilution). FCF after net acquisitions for serial acquirers. Worked example INDIGO FY26 (Screener): CFO 23,470, capex ~1,703, Screener FCF 21,767, but CFF -21,276 is mostly aircraft lease servicing; lease-adjusted FCF is roughly zero (approximate - take lease payment line from the AR). Forensic use: cumulative 5y forensic FCF / cumulative PAT < 0.5 = flag.",
+  "data": {
+   "definitions": {
+    "simple": "CFO-capex",
+    "forensic": "CFO-capex-cap_intangibles-lease_payments-interest_if_CFF",
+    "owner_earnings": "PAT+D&A-maint_capex+-WC",
+    "after_SBC": "FCF-SBC"
+   },
+   "INDIGO_FY26": {
+    "CFO": 23470,
+    "screener_FCF": 21767,
+    "CFF": -21276
+   }
+  },
+  "sources": [
+   "https://www.screener.in/company/INDIGO/consolidated/",
+   "https://www.berkshirehathaway.com/letters/1986.html",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:us-redflag-sbc-dilution",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "strategy",
+  "id": "strategy:working-capital-days-ccc",
+  "title": "Working-capital days and cash conversion cycle: formulas, thresholds, creditor-flight signal (PC Jeweller vs HUL)",
+  "tickers": [
+   "PCJEWELLER",
+   "HINDUNILVR",
+   "SUZLON"
+  ],
+  "tags": [
+   "accounting",
+   "blowup",
+   "course",
+   "forensic",
+   "india",
+   "process",
+   "redflag"
+  ],
+  "body": "DSO = receivables/revenue*365; DIO = inventory/COGS*365 (Screener uses sales if COGS missing); DPO = payables/COGS*365; CCC = DSO+DIO-DPO. Flags: DSO or DIO up >15 days/yr for 2+ years while revenue grows; receivables growth >1.5x revenue growth; DPO falling >30 days in a year = creditor flight (suppliers know first). Worked example PCJEWELLER (Screener): FY19 DPO collapsed 160 -> 57 while inventory days held ~227 and CFO was -1,931 on PAT 1 (funded by +1,005 borrowings); inventory days then 434 (FY20), 954, 1,465, 3,044 (FY24) as sales fell 9,610 (FY18) -> 604 (FY24). Contrast HINDUNILVR: CCC -50 to -107 days FY15-26 (FY26 -89) - suppliers/distributors fund growth; test is deterioration, not level. SUZLON FY19-20 CCC 227/315 days survived only on 250+ payable days and lender roll-overs until the FY21 restructuring. Levels by model: FMCG negative, jeweller 150-250, EPC 60-150 (net of advances).",
+  "data": {
+   "formulas": {
+    "DSO": "AR/Rev*365",
+    "DIO": "Inv/COGS*365",
+    "DPO": "AP/COGS*365",
+    "CCC": "DSO+DIO-DPO"
+   },
+   "PCJ_inventory_days": {
+    "FY19": 227,
+    "FY20": 434,
+    "FY21": 954,
+    "FY22": 1465,
+    "FY24": 3044
+   },
+   "PCJ_DPO": {
+    "FY18": 160,
+    "FY19": 57
+   },
+   "HUL_CCC_FY26": -89
+  },
+  "sources": [
+   "https://www.screener.in/company/PCJEWELLER/consolidated/",
+   "https://www.screener.in/company/HINDUNILVR/consolidated/",
+   "https://www.screener.in/company/SUZLON/consolidated/",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "part_of"
+   },
+   {
+    "to": "case_study:suzlon",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:channel-stuffing-and-bill-and-hold-signals",
+  "title": "Channel stuffing and bill-and-hold: detection signals (BMS 2004, Sunbeam 1997)",
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "fraud",
+   "global",
+   "india",
+   "redflag",
+   "us"
+  ],
+  "body": "Channel stuffing = pushing inventory into distributors to pull revenue forward; bill-and-hold = recognising revenue on goods still in the seller's warehouse. Ind AS 115/ASC 606 (B79-B82) allow bill-and-hold only if: substantive customer-requested reason, goods separately identified, ready for transfer, and seller cannot redirect them. Signals: (1) receivables growing faster than revenue, especially Q4 debtor days vs Q2/Q3; (2) Q4 share of annual revenue rising year after year; (3) gross margin down while volume up (discounts to push stock); (4) refund liabilities/returns provisions rising, credit notes in subsequent events; (5) finished goods 'held for customers' rising; shipments/freight/e-way-bill data not matching revenue; (6) next quarter 'trade inventory correction' commentary. Cases: Bristol-Myers Squibb paid $150m (SEC, 2004) over ~$1.5bn of wholesaler inventory build in 2000-01; Sunbeam's 1997 record earnings relied on improper bill-and-hold and early-buy sales (SEC 2001), later restated, bankruptcy 2001.",
+  "data": {
+   "signals": [
+    "Q4 DSO spike",
+    "rising Q4 revenue share",
+    "GM down volume up",
+    "returns provisions up",
+    "goods held for customers",
+    "next-quarter inventory correction"
+   ],
+   "cases": {
+    "BMS": "$150m SEC 2004",
+    "Sunbeam": "1997 restated, Ch.11 2001"
+   }
+  },
+  "sources": [
+   "https://www.sec.gov/news/press/2004-105.htm",
+   "https://www.sec.gov/litigation/litreleases/lr17001.htm",
+   "https://asc.fasb.org/606",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "part_of"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:unbilled-revenue-contract-assets",
+  "title": "Unbilled revenue / contract assets: total DSO for IT and EPC (Infosys vs Wipro worked)",
+  "tickers": [
+   "INFY",
+   "WIPRO"
+  ],
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "india",
+   "redflag",
+   "sector-epc",
+   "sector-it"
+  ],
+  "body": "Revenue recognised before the right to invoice is a contract asset (unbilled revenue); it is the riskiest receivable because the customer has not accepted a bill. Total DSO = (trade receivables + contract assets/accrued income) / revenue * 365. From 20-F IFRS XBRL: INFOSYS FY23 revenue $18,212m, receivables 3,094, accrued income incl. contract assets 2,037 -> billed 62d + unbilled 41d = 103d; FY25 revenue 19,277, receivables 3,645, accrued 1,764 -> 69d + 33d = 102d (stable, structural fixed-price/milestone mix - not a flag). WIPRO FY23 revenue Rs 90,488 cr, receivables 12,635, contract assets 2,300 -> 60d total; FY25 89,088 / 11,775 / 1,580 -> 55d (contract assets shrinking = cleaner). Flag: unbilled days rising 2+ years together with billed DSO. EPC: use contract assets net of contract liabilities (customer advances) vs revenue and order book; ask for unbilled ageing and claims under arbitration included in contract assets.",
+  "data": {
+   "formula": "(AR+contract_assets)/revenue*365",
+   "INFY": {
+    "FY23_total_DSO": 103,
+    "FY25_total_DSO": 102
+   },
+   "WIPRO": {
+    "FY23_total_DSO": 60,
+    "FY25_total_DSO": 55
+   },
+   "flag": "unbilled days and billed DSO both rising 2y"
+  },
+  "sources": [
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0001067491.json",
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0001123799.json",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:ind-as-accounting-levers",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:false-alarm-hal-receivable-days",
+    "rel": "similar_to"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:percentage-of-completion-estimate-risk",
+  "title": "Percentage-of-completion: how cost-estimate revisions front-load margin (and the tests)",
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "global",
+   "india",
+   "redflag",
+   "sector-epc"
+  ],
+  "body": "Over-time revenue (Ind AS 115/ASC 606) on cost-to-cost: revenue to date = cost incurred / estimated total cost * contract price. Lowering estimated total cost raises % complete and margin with zero cash. Illustration: Rs1,000 cr contract, Rs400 cr incurred; estimate 800 -> 50% complete, revenue 500, margin 100; revised estimate 720 -> 55.6%, revenue 556, margin 156 (+56%), reversing later if the original estimate was right. Tests: (1) contract assets / revenue trend; (2) 'changes in estimates' and cumulative catch-up disclosures; (3) onerous-contract provisions appearing late (Wipro short-term onerous provisions Rs160 cr FY24, Rs129 cr FY25 per 20-F XBRL); (4) claims/variations recognised before customer acceptance; (5) liquidated-damages contingencies; (6) the auditor's KAM/CAM on revenue estimates. Sectors: EPC, defence, real estate, fixed-price software.",
+  "data": {
+   "example": {
+    "price": 1000,
+    "incurred": 400,
+    "est_old": 800,
+    "est_new": 720,
+    "margin_old": 100,
+    "margin_new": 156
+   }
+  },
+  "sources": [
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0001123799.json",
+   "https://asc.fasb.org/606",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:ind-as-accounting-levers",
+    "rel": "part_of"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:gross-vs-net-revenue",
+  "title": "Gross vs net revenue (principal vs agent): Eternal/Blinkit FY26 gross-up",
+  "tickers": [
+   "ETERNAL"
+  ],
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "india",
+   "process",
+   "sector-internet",
+   "us"
+  ],
+  "body": "Principal books gross sale price; agent books commission. Test is control before transfer (inventory risk, pricing discretion, primary responsibility). Gross-up leaves profit unchanged but inflates revenue, cuts margin %, raises asset turnover and wrecks P/S comparisons - and is a pre-IPO growth trick (Groupon revised its 2011 S-1 to net revenue after SEC review). Worked example ETERNAL (Screener): consolidated revenue FY25 20,243 -> FY26 54,364 (+169%), TTM 77,956, as Blinkit moved to an owned-inventory model and books full goods value; management cited like-for-like growth of ~64-66% in Q3 FY26 against ~173% reported (press reports of shareholder letter; verify). Side effects: OPM 3.1% -> 2.2%, payable days 101 -> 36, CCC -54 -> +2, FCF -623 -> -1,114. Rule: after any model change, recompute margins, DSO, turnover on a like-for-like basis (GOV/NOV, net revenue, contribution) and never compare P/S across the change.",
+  "data": {
+   "ETERNAL": {
+    "rev_FY25": 20243,
+    "rev_FY26": 54364,
+    "reported_growth": "169%",
+    "lfl_growth_Q3FY26": "~64-66% (press)",
+    "CCC": {
+     "FY25": -54,
+     "FY26": 2
+    }
+   }
+  },
+  "sources": [
+   "https://www.screener.in/company/ETERNAL/consolidated/",
+   "https://inc42.com/buzz/eternal-q1-profit-rises-3x-yoy-to-%e2%82%b992-cr-but-declines-47-sequentially/",
+   "https://yourstory.com/2026/04/zomato-parent-eternal-revenue-jumps-blinkit-drives-growth",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:false-alarm-eternal-zomato-losses-dilution",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:related-party-revenue-tests",
+  "title": "Related-party revenue and flows: approval rules (LODR Reg 23, s.188) and four tests",
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "fraud",
+   "governance",
+   "india",
+   "redflag"
+  ],
+  "body": "Rules: SEBI LODR Reg 23 - all RPTs need prior audit-committee approval; material RPTs (lower of Rs1,000 cr or 10% of consolidated turnover) need shareholder approval with related parties not voting; Companies Act s.188 for non-arm's-length/non-ordinary-course deals; Ind AS 24 disclosure. Tests: (1) RPT sales / revenue (>10% explain; >20% and rising = flag); (2) margin on RPT sales vs third-party sales; (3) receivables from related parties vs their revenue share (slow-paying related party = circular cash); (4) year-end round trips (sale to related party, purchase or advance back). Read the AGM notice: omnibus 'material RPT up to Rs X cr' resolutions map where cash may go next. Cases: SEBI Dec-2024 SME memo on circular sales/purchases among related parties; Brightcom; Satyam/Maytas; Gensol (diversion via related entities).",
+  "data": {
+   "material_threshold": "min(Rs1000cr, 10% consolidated turnover)",
+   "tests": [
+    "RPT sales/revenue",
+    "RPT margin vs third-party",
+    "RPT receivables share",
+    "year-end round trips"
+   ]
+  },
+  "sources": [
+   "https://www.sebi.gov.in/legal/regulations/",
+   "https://www.sebi.gov.in/sebi_data/meetingfiles/jan-2025/1735725342588_1.pdf",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:ind-as-accounting-levers",
+    "rel": "part_of"
+   },
+   {
+    "to": "case_study:brightcom",
+    "rel": "illustrates"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:cwip-ageing-test",
+  "title": "CWIP that never completes: ageing, capitalised interest and the capitalisation cliff (Reliance, Gensol)",
+  "tickers": [
+   "RELIANCE",
+   "GENSOL"
+  ],
+  "tags": [
+   "accounting",
+   "capex",
+   "course",
+   "forensic",
+   "india",
+   "redflag"
+  ],
+  "body": "CWIP is not depreciated and can absorb capitalised interest (Ind AS 23) and pre-operative costs, so a never-finishing project keeps costs out of the P&L. Schedule III (MCA, 24-Mar-2021, from FY22) mandates CWIP ageing (<1y, 1-2y, 2-3y, >3y) and overdue/over-budget project disclosure. Flags: CWIP/(net block+CWIP) >30% for 3+ years in a non-greenfield firm; CWIP >2y old >25% of CWIP; capitalised borrowing cost >20% of total finance cost; CWIP rising while capacity/revenue does not. Legitimate magnitude case RELIANCE (Screener): CWIP 338,855 vs fixed assets 779,985 at FY24 (~30%), down to 237,686 by FY26 (~17%) as Jio 5G/new energy capitalised; depreciation 50,832 -> 57,688 and interest 23,118 -> 27,061 - the 'capitalisation cliff' that slows EPS. Forensic case GENSOL: CWIP 41 (FY23) -> 88 (FY24) -> 171 (Sep-24) while fixed assets fell 723 -> 257.",
+  "data": {
+   "thresholds": {
+    "cwip_share": ">30% 3y",
+    "aged_over_2y": ">25%",
+    "capitalised_interest_share": ">20%"
+   },
+   "RELIANCE": {
+    "FY24_CWIP": 338855,
+    "FY26_CWIP": 237686
+   },
+   "GENSOL_CWIP": {
+    "FY23": 41,
+    "FY24": 88,
+    "Sep24": 171
+   }
+  },
+  "sources": [
+   "https://www.screener.in/company/RELIANCE/consolidated/",
+   "https://www.screener.in/company/GENSOL/consolidated/",
+   "https://www.mca.gov.in/Ministry/pdf/ScheduleIIIAmendmentNotification_24032021.pdf",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:ind-as-accounting-levers",
+    "rel": "part_of"
+   },
+   {
+    "to": "case_study:false-alarm-reliance-jio-debt",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:capitalised-rnd-intangibles-goodwill",
+  "title": "Capitalised R&D, intangibles and goodwill: Ind AS 38 vs ASC 730 and the tangible-capital check",
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "global",
+   "india",
+   "process",
+   "us"
+  ],
+  "body": "Ind AS 38/IAS 38 require capitalising development cost once feasibility, intent, ability, future benefit and measurability are met; US GAAP ASC 730 expenses R&D (narrow software exceptions ASC 350-40/985-20). So an Indian auto/pharma/software firm can show higher EBITDA and EPS than a US peer with identical R&D cash. Tests: capitalised development / total R&D spend trend; amortisation life vs product life; ageing of 'intangible assets under development' (Schedule III); impairment-test assumptions (terminal growth, discount rate) named in KAMs/CAMs. Goodwill: impairment-only under both (US private companies may amortise); impairment reversal allowed for non-goodwill assets under Ind AS 36, prohibited under US GAAP. Rule: if goodwill + intangibles > equity, compute tangible book and ROCE on tangible capital; compare across GAAPs on cash R&D.",
+  "data": {
+   "IndAS38": "capitalise development when criteria met",
+   "ASC730": "expense",
+   "rule": "goodwill+intangibles>equity -> use tangible capital"
+  },
+  "sources": [
+   "https://www.ifrs.org/issued-standards/list-of-standards/ias-38-intangible-assets/",
+   "https://asc.fasb.org/730",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:ind-as-accounting-levers",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:deferred-tax-and-etr-swings",
+  "title": "Deferred-tax recognition and tax-rate swings inflate PAT (Suzlon FY25-26, HUL FY26)",
+  "tickers": [
+   "SUZLON",
+   "HINDUNILVR"
+  ],
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "india",
+   "process",
+   "redflag"
+  ],
+  "body": "DTA on carried-forward losses needs 'convincing evidence' of future profit (Ind AS 12); recognising it is a non-cash PAT boost. SUZLON (Screener): PBT 1,447 / PAT 2,072 in FY25 (ETR -43%), PBT 2,422 / PAT 3,163 in FY26 (ETR -31%) - ~Rs1,366 cr of PAT over two years from tax credits; normalised FY26 PAT at ~25% tax is ~1,800, so a P/E on 3,163 overstates earnings power ~75% (derived from Screener lines; confirm DTA note). HINDUNILVR FY26 ETR fell 26% -> 17% because the ~Rs4,611 cr ice-cream demerger gain was largely untaxed. Other causes: India's FY20 move to 25.17% (s.115BAA) DTA remeasurement, SEZ/holiday expiry, uncertain tax positions. Rule: value on PBT x normalised rate (India 25.17%; US 21% + state); treat ETR <15% or >35% as non-representative unless structural. Exercise: PBT +7% with ETR 25% -> 9% shows PAT +30%; true growth +7%.",
+  "data": {
+   "SUZLON": {
+    "FY25": {
+     "PBT": 1447,
+     "PAT": 2072
+    },
+    "FY26": {
+     "PBT": 2422,
+     "PAT": 3163
+    },
+    "tax_credit_2y": 1366
+   },
+   "statutory": {
+    "India": 0.2517,
+    "US_federal": 0.21
+   },
+   "rule": "ETR outside 15-35% = normalise"
+  },
+  "sources": [
+   "https://www.screener.in/company/SUZLON/consolidated/",
+   "https://www.screener.in/company/HINDUNILVR/consolidated/",
+   "https://www.outlookbusiness.com/corporate/hul-net-profit-soars-136-in-q3-boosted-by-4611-cr-kwality-walls-demerger-gain",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "case_study:suzlon",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:contingent-liabilities-and-guarantees",
+  "title": "Contingent liabilities and off-balance-sheet guarantees: tests and treatment",
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "governance",
+   "india",
+   "leverage",
+   "redflag",
+   "us"
+  ],
+  "body": "Ind AS 37 recognises a provision if outflow is probable (>50%) and estimable, else discloses as contingent unless remote; US ASC 450 recognises only if 'probable' (a higher bar in practice) and at the low end of a range - US firms disclose more, recognise less. Tests: (1) contingent liabilities / net worth (>25% needs work; >50% flag); (2) split tax demands (historically settle for a fraction - haircut 70-90%) from corporate guarantees for group companies (treat as debt, flag #8 related-party); (3) 'claims not acknowledged as debt' growing while cash falls; (4) s.186 disclosures of guarantees and securities. Off-balance-sheet structures: unconsolidated SPVs/associates holding debt, inventory sold to SPV with buy-back, recourse securitisation, supplier finance, First Brands-style receivable/inventory financing. Canonical India case: telecom AGR dues - a disclosed dispute that became a recognised liability after the Supreme Court ruling of 24-Oct-2019; ADAG and IL&FS show guarantees crystallising.",
+  "data": {
+   "threshold": {
+    "CL_ex_tax_over_NW": ">25%"
+   },
+   "treatment": {
+    "tax_demands": "haircut",
+    "group_guarantees": "add to debt"
+   }
+  },
+  "sources": [
+   "https://www.ifrs.org/issued-standards/list-of-standards/ias-37-provisions-contingent-liabilities-and-contingent-assets/",
+   "https://asc.fasb.org/450",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:ind-as-accounting-levers",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:lease-accounting-indas116-vs-asc842",
+  "title": "Lease accounting break: Ind AS 116 inflates EBITDA and CFO vs US ASC 842 (IndiGo worked)",
+  "tickers": [
+   "INDIGO"
+  ],
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "india",
+   "leverage",
+   "process",
+   "sector-aviation",
+   "us"
+  ],
+  "body": "Ind AS 116/IFRS 16 (from 1-Apr-2019) put nearly every lease on balance sheet; P&L shows depreciation + interest (rent leaves opex, EBITDA rises) and cash principal/interest sits in financing (CFO rises). US ASC 842 operating leases are also on balance sheet but the P&L shows one straight-line lease cost in opex and cash stays in CFO. Worked example INDIGO adoption (Screener): FY19 -> FY20 borrowings incl. leases 2,429 -> 22,719; depreciation 760 -> 3,974; interest 563 -> 1,902; EBITDA -149 -> 4,090; CFO 3,176 -> 6,972. Restating FY20 pre-116 (subtract incremental D&A + interest 4,553) gives EBITDA ~ -463, i.e. the business worsened while reported EBITDA swung +4,239. FY26: borrowings 77,749, depreciation 10,808, interest 5,944, PAT -2,394. Rule: for Indian airlines, retailers, hospitals, QSRs subtract total lease payments from EBITDA and CFO before comparing with US peers or pre-FY20 history; use lease-adjusted net debt / EBITDAR.",
+  "data": {
+   "INDIGO": {
+    "FY19": {
+     "borrowings": 2429,
+     "dep": 760,
+     "int": 563,
+     "EBITDA": -149,
+     "CFO": 3176
+    },
+    "FY20": {
+     "borrowings": 22719,
+     "dep": 3974,
+     "int": 1902,
+     "EBITDA": 4090,
+     "CFO": 6972
+    },
+    "FY20_pre116_EBITDA_est": -463
+   }
+  },
+  "sources": [
+   "https://www.screener.in/company/INDIGO/consolidated/",
+   "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-16-leases/",
+   "https://asc.fasb.org/842",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "case_study:false-alarm-trent-150x-pe-and-lease-debt",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:other-income-and-exceptional-dependence",
+  "title": "Other-income and 'one-off' dependence: core PBT test (Eternal, IndiGo, HUL, Suzlon)",
+  "tickers": [
+   "ETERNAL",
+   "INDIGO",
+   "HINDUNILVR",
+   "SUZLON",
+   "WIPRO"
+  ],
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "india",
+   "process",
+   "redflag"
+  ],
+  "body": "Formulas: other income / PBT; core PBT = PBT - other income; recurring exceptionals = sum 5y exceptional charges / sum 5y PAT. Thresholds: OI/PBT <15% fine, 15-30% explain, >30% flag (unless a holding company valued as such), >100% = core loses money; recurring exceptionals >10% = operating cost, deduct average. Note Screener folds exceptionals into Other Income. FY26 (Screener): ETERNAL OI 1,396 vs PBT 615 -> core PBT -781 (treasury income on raised cash funds the P&L); INDIGO OI 2,755 vs PBT -1,960 -> core -4,715; HINDUNILVR OI 4,923 vs PBT 18,219 (27%), including a ~Rs4,611 cr non-cash demerger gain (Ind AS 10 Appendix A fair-value distribution) - PAT +41% reported, ~-2% ex-gain (approximate); SUZLON FY23 OI 2,739 vs PBT 2,892 (95%) in the debt-restructuring year. WIPRO FY25 interest income Rs2,721 cr ~21% of profit - strip for EV/EBIT.",
+  "data": {
+   "thresholds": {
+    "OI_PBT": {
+     "fine": "<15%",
+     "explain": "15-30%",
+     "flag": ">30%"
+    },
+    "exceptionals": ">10% of PAT over 5y"
+   },
+   "FY26": {
+    "ETERNAL_core_PBT": -781,
+    "INDIGO_core_PBT": -4715,
+    "HUL_OI_share": 0.27,
+    "HUL_demerger_gain": 4611
+   }
+  },
+  "sources": [
+   "https://www.screener.in/company/ETERNAL/consolidated/",
+   "https://www.screener.in/company/INDIGO/consolidated/",
+   "https://www.screener.in/company/HINDUNILVR/consolidated/",
+   "https://www.screener.in/company/SUZLON/consolidated/",
+   "https://www.freepressjournal.in/business/hindustan-unilever-net-profit-soars-121-yoy-to-6603-crore-in-q3-fy26-boosted-by-ice-cream-business-demerger",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:ind-as-accounting-levers",
+    "rel": "part_of"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "strategy",
+  "id": "strategy:sloan-accruals-ratio",
+  "title": "Sloan accruals ratio: (PAT - CFO) / average assets, with real readings",
+  "tickers": [
+   "US-SMCI",
+   "PCJEWELLER",
+   "GENSOL",
+   "INFY",
+   "ASIANPAINT"
+  ],
+  "tags": [
+   "accounting",
+   "base-rate",
+   "course",
+   "forensic",
+   "global",
+   "india",
+   "redflag",
+   "us"
+  ],
+  "body": "Sloan (1996, The Accounting Review) showed the accrual component of earnings is less persistent than the cash component and that the market overprices high-accrual firms; a long-low/short-high accrual decile hedge earned ~10%/yr in 1962-91 (anomaly weaker post-publication). Cash-flow version: accruals = (PAT - CFO) / average total assets. Thresholds (practitioner): < -5% conservative; > +10% high-accrual flag; > 20% extreme. Readings: SMCI FY2024 +53.9% and FY2026 +41.1% (SEC XBRL); PC Jeweller FY19 +23.2%; Gensol FY24 +8.9%; Infosys FY2025 -7.0%; Asian Paints FY26 -8.3% (Screener). Not for banks/NBFCs. Use the trend and pair with DSO/DIO to find which accrual is growing; it is the same signal as Beneish's TATA term (weight 4.679).",
+  "data": {
+   "formula": "(PAT-CFO)/avg_TA",
+   "thresholds": {
+    "clean": "<-5%",
+    "flag": ">+10%",
+    "extreme": ">20%"
+   },
+   "readings": {
+    "SMCI_FY24": 0.539,
+    "SMCI_FY26": 0.411,
+    "PCJ_FY19": 0.232,
+    "GENSOL_FY24": 0.089,
+    "INFY_FY25": -0.07,
+    "ASIANPAINT_FY26": -0.083
+   }
+  },
+  "sources": [
+   "https://www.jstor.org/stable/248290",
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0001375365.json",
+   "https://www.screener.in/company/PCJEWELLER/consolidated/",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:beneish-m-score",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "part_of"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:beneish-worked-smci-fy2024-fy2026",
+  "title": "Beneish M-score worked step-by-step: Super Micro Computer FY2023-FY2026",
+  "tickers": [
+   "US-SMCI"
+  ],
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "fraud",
+   "governance",
+   "process",
+   "redflag",
+   "us"
+  ],
+  "date": "2026-11-20",
+  "body": "Inputs from SEC XBRL (10-K 0001375365-26-000022, 0001375365-25-000027), $m. FY2024 vs FY2023: DSRI 1.133, GMI 1.310 (GM 18.01% -> 13.75%), AQI 0.876, SGI 2.104, DEPI 1.252, SGAI 0.857, LVGI 0.968 (total liabilities/assets simplification), TATA 0.370 ((NI 1,152.7 - CFO -2,486.0)/TA 9,826.1). M = -4.84 + 1.042 + 0.692 + 0.354 + 1.877 + 0.144 - 0.147 + 1.733 - 0.317 = +0.54 (flag > -1.78). Other years: FY23 -1.94 (grey), FY25 -2.32 (clean: receivables fell, CFO +1,660), FY26 +0.07 (DSRI 1.56: receivables +178% vs revenue +78%; TATA 0.30; CFO -6,810 on NI 2,230). Context visible at the time: 2018 8-K 4.02 non-reliance; Aug-2020 SEC $17.5m penalty for improper revenue recognition; Hindenburg report 27-Aug-2024; delayed 10-K; EY resignation 8-K 4.01 (30-Oct-2024); BDO appointed (18-Nov-2024); special committee found no misconduct evidence; 10-K filed Feb-2025. Lesson: FY24 M was driven by SGI and TATA (hyper-growth funded by inventory) - a known false-positive mode - so M alone was not proof; M + prior restatement + auditor exit = three red-flag families = no position without variant view.",
+  "data": {
+   "M": {
+    "FY23": -1.94,
+    "FY24": 0.54,
+    "FY25": -2.32,
+    "FY26": 0.07
+   },
+   "FY24_components": {
+    "DSRI": 1.133,
+    "GMI": 1.31,
+    "AQI": 0.876,
+    "SGI": 2.104,
+    "DEPI": 1.252,
+    "SGAI": 0.857,
+    "LVGI": 0.968,
+    "TATA": 0.37
+   },
+   "FY26_components": {
+    "DSRI": 1.563,
+    "GMI": 1.022,
+    "AQI": 0.615,
+    "SGI": 1.778,
+    "DEPI": 0.962,
+    "SGAI": 0.714,
+    "LVGI": 0.938,
+    "TATA": 0.302
+   },
+   "early_signal": "M>-1.78 + 2018 restatement + 2020 SEC penalty",
+   "lesson": "combine score with governance flags; growth causes false positives"
+  },
+  "sources": [
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0001375365.json",
+   "https://www.sec.gov/Archives/edgar/data/1375365/000137536524000036/smci-20241024.htm",
+   "https://www.sec.gov/news/press-release/2020-190",
+   "https://hindenburgresearch.com/smci/",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:beneish-m-score",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:us-redflag-8k-401-402",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:altman-worked-intel-fy2024",
+  "title": "Altman Z-score worked step-by-step: Intel FY2023-FY2025 (distress resolved by dilution, not default)",
+  "tickers": [
+   "US-INTC"
+  ],
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "leverage",
+   "process",
+   "redflag",
+   "us"
+  ],
+  "date": "2026-11-20",
+  "body": "Inputs SEC XBRL (10-K 0000050863-25-000009, 0000050863-26-000011), $m; market value = cover-page public float at Q2 end (filing-sourced proxy); total liabilities = assets - equity incl. NCI. FY2024: X1 = (47,324-35,666)/196,485 = 0.0593 (x1.2 = 0.071); X2 = RE 49,032/TA = 0.2495 (x1.4 = 0.349); X3 = EBIT -11,678/TA = -0.0594 (x3.3 = -0.196); X4 = float 132,400 / TL 91,453 = 1.448 (x0.6 = 0.869); X5 = sales 53,101/TA = 0.270. Z = 1.36 (distress < 1.81). FY2023 1.91 (grey); FY2025 1.42 (distress). Book-equity Z'' FY2024 = 2.01 (grey) - the gap between book and market says the market doubted fab book values. Outcome: no default; Aug-2025 US government took ~433m new shares at $20.47 (~9.9%) by converting CHIPS grants, SoftBank bought $2bn at $23, Nvidia invested $5bn; shares outstanding 4.33bn (FY24) -> 4.99bn (Jan-2026) -> 5.32bn (Oct-2026), ~+23%. Lesson: Z measures balance-sheet distress, not the resolution path; strategic firms tend to resolve via dilution or bail-in, which still hurts existing equity.",
+  "data": {
+   "Z": {
+    "FY23": 1.91,
+    "FY24": 1.36,
+    "FY25": 1.42
+   },
+   "Zpp_FY24": 2.01,
+   "FY24_X": {
+    "X1": 0.0593,
+    "X2": 0.2495,
+    "X3": -0.0594,
+    "X4": 1.448,
+    "X5": 0.2703
+   },
+   "shares_bn": {
+    "FY24": 4.33,
+    "2026-01": 4.99,
+    "2026-10": 5.32
+   },
+   "lesson": "distress -> dilution, not bankruptcy"
+  },
+  "sources": [
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0000050863.json",
+   "https://www.npr.org/2025/08/22/nx-s1-5509673/trump-says-us-government-will-take-stake-intel",
+   "https://www.nbcnews.com/business/business-news/nvidia-invest-5-billion-intel-develop-chips-one-time-rival-rcna232094",
+   "https://doi.org/10.1111/j.1540-6261.1968.tb00843.x",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:altman-z-score",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:avoid-ruin",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:piotroski-worked-drreddy-fy2025",
+  "title": "Piotroski F-score worked step-by-step: Dr. Reddy's FY2025 scores 2/9 (acquisition-year misfire)",
+  "tickers": [
+   "DRREDDY"
+  ],
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "india",
+   "process",
+   "sector-pharma",
+   "value-trap"
+  ],
+  "date": "2026-11-20",
+  "body": "Inputs 20-F IFRS XBRL (0001575872-25-000393), Rs million, split-adjusted shares. (1) ROA = NI 57,245 / opening TA 387,518 = 14.8% -> 1. (2) CFO 46,428 > 0 -> 1. (3) dROA: 14.8% vs 17.3% (55,684/321,854) -> 0. (4) CFO/TA 12.0% < ROA -> 0. (5) LTD/avg TA 1.79% vs 1.69% -> 0. (6) current ratio 1.92 (250,112/130,392) vs 2.58 -> 0. (7) shares 832.6m vs 830.8m (ESOPs) -> 0 strictly. (8) gross margin 58.50% vs 58.61% -> 0. (9) asset turnover 0.840 vs 0.867 -> 0. F = 2. Why: Dr. Reddy's bought Haleon's Nicotinell NRT portfolio for GBP 458m upfront (completed 30-Sep-2024), funded partly with short-term borrowing (borrowing proceeds Rs80,646m vs 19,366m), so assets jumped 27% and ratio tests fell mechanically. Lesson: Piotroski (2000) built F for the cheapest book-to-market quintile (high-minus-low F ~23%/yr in 1976-96); on quality/growth names or in acquisition years it misfires - re-run pro-forma ex-acquisition, and allow <1% ESOP dilution on test 7.",
+  "data": {
+   "F": 2,
+   "tests": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "ROA": {
+    "FY25": 0.148,
+    "FY24": 0.173
+   },
+   "current_ratio": {
+    "FY25": 1.92,
+    "FY24": 2.58
+   },
+   "gross_margin": {
+    "FY25": 0.585,
+    "FY24": 0.5861
+   },
+   "asset_turnover": {
+    "FY25": 0.84,
+    "FY24": 0.867
+   },
+   "cause": "Nicotinell acquisition GBP458m, 30-Sep-2024"
+  },
+  "sources": [
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0001135951.json",
+   "https://business-standard.com/amp/companies/news/dr-reddy-s-laboratories-completes-acquisition-of-haleon-s-nrt-portfolio-124093000809_1.html",
+   "https://doi.org/10.2307/2672906",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:piotroski-f-score",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:indas-vs-usgaap-comparability",
+  "title": "Ind AS vs US GAAP differences that change cross-border comparisons (adjustment table)",
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "india",
+   "process",
+   "us"
+  ],
+  "body": "Adjust before comparing an Indian company with a US peer: (1) Leases - Ind AS 116 single model lifts EBITDA and CFO; deduct total lease payments. (2) Interest paid - Ind AS 7 operating or financing; US operating; move it into CFO. (3) Development costs - capitalised under Ind AS 38, expensed under ASC 730; compare on cash R&D. (4) PP&E revaluation - allowed Ind AS 16, prohibited US; revaluation reserves inflate book, depress ROE. (5) Impairment reversals - allowed for non-goodwill under Ind AS 36, prohibited US; watch reversals in other income. (6) LIFO - prohibited Ind AS, allowed US; add LIFO reserve. (7) Provisions - Ind AS 37 >50% probable vs ASC 450 higher bar/low end of range. (8) 'Exceptional items' line common in India (Schedule III); US has no extraordinary items (ASU 2015-01). (9) Bank overdrafts can be cash under Ind AS 7. (10) Componentisation required under Ind AS. (11) Non-GAAP: US Reg G/Item 10(e) reconciliation; India no equivalent - rebuild 'adjusted EBITDA'. (12) Consolidation: control model vs US voting + VIE model. Revenue (Ind AS 115 vs ASC 606) and goodwill (impairment-only) are broadly converged. Upcoming: IFRS 18 (2027) not yet notified in India.",
+  "data": {
+   "adjustments": [
+    "leases",
+    "interest classification",
+    "dev cost",
+    "revaluation",
+    "impairment reversal",
+    "LIFO",
+    "provisions threshold",
+    "exceptional items",
+    "overdraft",
+    "componentisation",
+    "non-GAAP",
+    "consolidation"
+   ]
+  },
+  "sources": [
+   "https://www.mca.gov.in/MinistryV2/indianaccountingstandards.html",
+   "https://asc.fasb.org/",
+   "https://www.sec.gov/rules-regulations/2003/01/conditions-use-non-gaap-financial-measures",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:us-vs-india-market-structure",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-promoter-loans-icd-rpt-approvals",
+  "title": "Indian specifics: promoter loans, inter-corporate deposits, s.185/186 limits, RPT approvals, pledges",
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "fraud",
+   "governance",
+   "india",
+   "redflag"
+  ],
+  "body": "Promoter loans in (unsecured, often quasi-equity) prop up weak balance sheets; loans OUT to promoter entities are the classic leak (RHFL 'general purpose corporate loans', Gensol). Companies Act s.185 restricts loans to directors/interested entities; s.186 caps loans + guarantees + investments at the higher of 60% of paid-up capital + free reserves + securities premium or 100% of free reserves + securities premium unless a special resolution is passed - read the s.186 note and the special resolutions. Inter-corporate deposits: short-term deposits with group firms or friendly NBFCs, often presented as cash-like; IL&FS (2018) froze many. Tests: loans + advances + investments + guarantees to group / net worth (>10% explain, >25% flag); ICDs / (cash + investments) and counterparty names; RPT limits sought in AGM notices vs revenue and their year-on-year change; promoter pledge >25% or rising (SAST Reg 31; tools/nse_fetch.py pledge). CARO 3(iii)/3(iv) are where the auditor reports these.",
+  "data": {
+   "group_exposure_threshold": ">25% of NW",
+   "laws": [
+    "Companies Act s.185",
+    "s.186",
+    "s.188",
+    "SEBI LODR Reg 23",
+    "SAST Reg 31"
+   ]
+  },
+  "sources": [
+   "https://www.mca.gov.in/content/mca/global/en/acts-rules/ebooks/acts.html",
+   "https://www.business-standard.com/companies/news/rhfl-fund-diversion-case-5-year-market-ban-for-anil-ambani-24-others-124082300983_1.html",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:governance-surfacing-sequence",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "strategy",
+  "id": "strategy:caro-2020-reading-guide",
+  "title": "CARO 2020 reading guide: the auditor clauses that pre-announce blow-ups",
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "governance",
+   "india",
+   "process",
+   "redflag"
+  ],
+  "body": "Companies (Auditor's Report) Order 2020 (MCA, 25-Feb-2020) is an annexure to the STANDALONE audit report - read it even when analysing consolidated numbers. Priority order: 3(ix) loan defaults, wilful-defaulter status, short-term funds used for long-term purposes, funds raised to meet subsidiaries' obligations; 3(xi) fraud noticed, whistle-blower complaints, s.143(12) reports; 3(xviii) statutory-auditor resignation and issues raised; 3(iii) loans/advances/guarantees to related parties, overdue amounts, loans repayable on demand; 3(xix) material uncertainty about meeting liabilities within one year. Then 3(ii)(b) quarterly stock/debtor statements to banks vs books (material differences = drawing-power inflation risk), 3(vii) undeposited statutory dues (GST/PF/tax - cash stress shows here first), 3(i) title deeds not in company name/benami, 3(viii) unrecorded income surrendered in tax assessments, 3(x) use of IPO/preferential money, 3(xvii) cash losses, 3(xxi) adverse remarks in group companies' CARO. Also read KAMs, Emphasis of Matter, the IFC report (s.143(3)(i)) and Schedule III 'additional regulatory information' (CWIP ageing, struck-off company dealings, ratios with >25% change explanations).",
+  "data": {
+   "priority": [
+    "3(ix)",
+    "3(xi)",
+    "3(xviii)",
+    "3(iii)",
+    "3(xix)",
+    "3(ii)(b)",
+    "3(vii)"
+   ],
+   "applies_to": "standalone audit report"
+  },
+  "sources": [
+   "https://www.mca.gov.in/Ministry/pdf/CARO_Order_25022020.pdf",
+   "https://www.icai.org/post/guidance-note-on-caro-2020",
+   "research_notes/Accounting forensics course/course.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:governance-surfacing-sequence",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "strategy",
+  "id": "strategy:forensic-first-read-30min",
+  "title": "30-minute forensic first read of an annual report / 10-K, with 0-32 scoring template",
+  "tags": [
+   "accounting",
+   "course",
+   "forensic",
+   "india",
+   "process",
+   "redflag",
+   "us"
+  ],
+  "body": "Order: 0-3 min auditor report (opinion, EoM, KAMs/CAMs, tenure, IFC/ICFR); 3-7 CARO 3(ix),(xi),(xviii),(iii),(xix),(ii)(b),(vii) [US: 8-K 4.01/4.02, NT 10-K]; 7-12 cash test (5y CFO/PAT, lease-adjusted FCF, WC share of CFO); 12-16 working capital (DSO incl. unbilled, DIO, DPO, supplier finance); 16-19 other income, exceptionals, ETR; 19-23 balance sheet (CWIP ageing, capitalised interest/dev, goodwill vs equity, leases, contingent liabilities, guarantees); 23-27 related parties and promoter (RPT note, AGM RPT resolutions, pledge, holding trend) [US: DEF 14A Item 13, Form 4]; 27-30 scores (Beneish, Altman Z/Z'', Piotroski for cheap stocks, Sloan) and verdict. Gatekeepers (any = kill): qualified/adverse opinion; mid-term auditor resignation; CARO fraud/default/diversion; group loans/guarantees >25% NW; material uncertainty. Quant section: 16 items scored 0/1/2 (max 32): 0-6 passes gate, 7-12 deep work, >=13 kill. Banks/NBFCs: replace scores with GNPA/NNPA, SMA-2, restructured book, ALM, CRAR, RBI divergence. Worked: Gensol FY24 scores 9 on just 6 Screener-computable items. Thresholds are practitioner conventions, not yet back-tested on Indian data - log each scored company and check outcomes in 2-3 years.",
+  "data": {
+   "gatekeepers": 5,
+   "quant_items": 16,
+   "max": 32,
+   "bands": {
+    "pass": "0-6",
+    "deep_work": "7-12",
+    "kill": ">=13 or any gatekeeper"
+   },
+   "status": "not back-tested",
+   "template_path": "research_notes/Accounting forensics course/course.md"
+  },
+  "sources": [
+   "research_notes/Accounting forensics course/course.md",
+   "https://www.sec.gov/answers/reada10k.htm"
+  ],
+  "confidence": "unverified",
+  "links": [
+   {
+    "to": "strategy:read-10k-efficiently",
+    "rel": "similar_to"
+   },
+   {
+    "to": "strategy:us-forensic-screen-workflow",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "part_of"
+   }
+  ],
+  "date": "2026-11-20"
+ }
+]

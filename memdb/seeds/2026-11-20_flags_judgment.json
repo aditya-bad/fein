@@ -606,8 +606,7 @@
    "context": "negative WC, FCF/share focus, reinvestment, hidden AWS segment",
    "multiple": "~2,500x (1997-2021)",
    "verdict": "business flag false; price flag true in 1999",
-   "lesson": "look through suppressed EPS but respect valuation",
-   "note": ""
+   "lesson": "look through suppressed EPS but respect valuation"
   },
   "sources": [
    "https://www.cnbc.com/2018/12/18/dotcom-bubble-amazon-stock-lost-more-than-90percent-long-term-investors-still-got-rich.html",
@@ -650,8 +649,7 @@
    "flag": "FCF -$3.0bn (2018), -$3.27bn (2019); debt-funded",
    "context": "content library as capex; scale economics; pricing power; retention",
    "verdict": "false alarm",
-   "lesson": "track cash spend / revenue trend and retention",
-   "note": ""
+   "lesson": "track cash spend / revenue trend and retention"
   },
   "sources": [
    "https://www.sec.gov/Archives/edgar/data/1065280/000106528020000040/form10kq419.htm",
@@ -693,8 +691,7 @@
    "context": "survival risk resolved; raises at peak valuation ~1% each; funded capex",
    "multiple": "~35x (2019-21)",
    "verdict": "survival flag false; valuation flag real",
-   "lesson": "dilution: price x purpose x % of shares",
-   "note": ""
+   "lesson": "dilution: price x purpose x % of shares"
   },
   "sources": [
    "https://www.bloomberg.com/news/articles/2020-12-08/tesla-raising-up-to-5-billion-in-third-capital-raise-this-year",
@@ -736,8 +733,7 @@
    "context": "membership-fee profit model, negative WC, high ROIC, renewal ~90%",
    "multiple": "~29x (2009-26)",
    "verdict": "margin flag false; valuation flag partly real",
-   "lesson": "margin is strategy; ROIC + renewals decide",
-   "note": ""
+   "lesson": "margin is strategy; ROIC + renewals decide"
   },
   "sources": [
    "https://www.fool.com/investing/2025/01/11/heres-what-happened-the-last-time-costco-stock-was",
@@ -756,6 +752,1305 @@
    {
     "to": "case_study:false-alarm-apl-apollo-low-margins",
     "rel": "similar_to"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:hidden-trap-satyam-cash",
+  "title": "Hidden trap: Satyam's 'cash-rich, debt-free' balance sheet",
+  "tickers": [
+   "US-SAY"
+  ],
+  "tags": [
+   "hidden-trap",
+   "flag-judgment",
+   "redflag",
+   "blowup",
+   "india",
+   "fraud",
+   "sector-it"
+  ],
+  "date": "2009-01-07",
+  "body": "THE GOOD NUMBER: a debt-free IT exporter with ~Rs 5,000 cr+ of cash, growth, NYSE ADRs and a PwC audit; on screens it looked like one of India's safest balance sheets. WHY IT LIED: Raju confessed on 7 Jan 2009 that Rs 5,040 cr of the Rs 5,361 cr cash did not exist; Rs 376 cr of 'accrued interest' was invented; the SFIO found Satyam even paid tax on interest from non-existent fixed deposits (2000-01 to 2007-08) to keep the fiction consistent. TELLS THAT WERE PUBLIC: (1) cash that does not behave like cash: CLSA in Sep 2008 found it 'intriguing' that a company with ~$1.2 bn of cash closed FY08 with $56 m of debt; holding large cash while borrowing is irrational unless the cash is trapped or fake; (2) the cash never came back to shareholders (no large buyback/dividend); (3) promoter holding fell from ~25% to ~8.6% and was pledged; (4) the Dec-2008 attempt to spend $1.6 bn on promoter-family Maytas companies. TEST: compute interest income / average (cash + deposits) and compare with prevailing FD rates (~7-9% then); ask for bank confirmations by name; check that cash grows with retained CFO. LESSON: the strongest-looking number (cash) is the easiest to forge when the auditor relies on management-supplied confirmations.",
+  "data": {
+   "good_number": "Rs 5,361 cr cash and bank (Sep 2008), steady growth, ~20%+ margins, NYSE listing, Big-4 audit",
+   "why_misleading": "Rs 5,040 cr of the cash and Rs 376 cr of accrued interest were fictitious; fake FDs even attracted tax on fake interest",
+   "test_that_catches_it": "interest income / average cash vs FD rates; why hold huge cash AND borrow; why no buyback/dividend"
+  },
+  "sources": [
+   "https://www.business-standard.com/article/companies/satyam-paid-tax-on-fictitious-interest-income-sfio-109051000065_1.html",
+   "https://www.businesstoday.in/magazine/cover-story/story/on-the-trail-of-fraud-245695-2009-01-20",
+   "https://www.wikipedia.org/wiki/Satyam_scandal"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:satyam-2009",
+    "rel": "about"
+   },
+   {
+    "to": "insight:flag-cash-pile-context",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:hidden-trap-wirecard-margins-cash",
+  "title": "Hidden trap: Wirecard's fintech growth, margins and EUR 1.9 bn cash",
+  "tickers": [
+   "DE-WDI"
+  ],
+  "tags": [
+   "hidden-trap",
+   "flag-judgment",
+   "redflag",
+   "blowup",
+   "global",
+   "fraud",
+   "sector-fintech"
+  ],
+  "date": "2020-06-25",
+  "body": "THE GOOD NUMBER: a payments company growing 30%+ with high margins and a large cash pile, in the DAX, audited by EY for a decade. WHY IT LIED: about half of profits came through third-party acquirers (TPAs) in Asia that Wirecard did not own and that auditors could not see directly; EUR 1.9 bn of cash was said to sit in Philippine trustee accounts. On 18 Jun 2020 EY could not confirm it, on 22 Jun the company said it probably did not exist; insolvency 25 Jun 2020; shares -98%. TELLS: (1) margin and growth far above listed payment peers with lower take-rates in a competitive industry; (2) profits concentrated in an opaque, outsourced segment; (3) operating cash flow much weaker than EBITDA once customer-fund movements were removed; rising receivables; (4) expensive acquisitions in India/Asia paid to obscure funds; (5) the company and regulator (BaFin short-selling ban, complaints against FT journalists) attacked critics instead of producing evidence. TEST: insist that cash is held in the company's own name at a known bank; check whether the profitable segment is the same one you can verify; strip customer/merchant funds out of CFO. LESSON: high quality numbers that live in places you cannot audit are not high quality.",
+  "data": {
+   "good_number": "fast revenue/EBITDA growth, ~25-30% EBITDA margins [approx], DAX member, EY audit, EUR 1.9 bn cash",
+   "why_misleading": "profits came from Asian 'third-party acquirers' it did not control; the cash 'in trustee accounts' did not exist",
+   "test_that_catches_it": "where do profits come from (segment you can audit?); cash held by trustees/escrow; CFO ex customer funds vs EBITDA"
+  },
+  "sources": [
+   "https://www.wikipedia.org/wiki/Wirecard_scandal",
+   "https://www.irishtimes.com/business/financial-services/wirecard-scandal-leaves-german-regulators-under-fire-1.4287230"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:wirecard-2020",
+    "rel": "about"
+   },
+   {
+    "to": "insight:flag-cash-pile-context",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:short-seller-reports-outcomes",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:hidden-trap-dhfl-growth",
+  "title": "Hidden trap: DHFL's 33% AUM growth and low reported NPAs",
+  "tickers": [
+   "DHFL"
+  ],
+  "tags": [
+   "hidden-trap",
+   "flag-judgment",
+   "redflag",
+   "blowup",
+   "india",
+   "sector-nbfc",
+   "growth"
+  ],
+  "date": "2018-09-21",
+  "body": "THE GOOD NUMBER: India's third-largest housing financier grew AUM ~33% to ~Rs 1.1 lakh cr in FY18 (Motilal Oswal), loan book Rs 91,932 cr (+28%), profit growth ~25%, low reported NPAs, valuation below HDFC. WHY IT LIED: the growth mix shifted to project/developer and other non-retail loans (project loans +55% YoY in Q3 FY18, non-retail +52% YoY), and much of it went to little-known entities later alleged to be linked to the Wadhawan promoters (Cobrapost: ~Rs 31,000 cr). The book was long-dated but funded with commercial paper and MF money. Low NPAs in a fast-growing book are mechanical: new loans have not had time to default. When IL&FS defaulted (Sep 2018) and DSP MF dumped DHFL paper, refinancing froze; default June 2019; equity wiped out in the 2021 Piramal resolution. TEST: for lenders read growth by segment, ALM buckets (1-year gap), CP share of liabilities, top-20 borrower exposure and related-party links; compare NPAs against loans seasoned 2-3 years (lagged NPA), not today's book. LESSON: in a lender, fast growth plus low NPAs is the ingredients list of a future problem unless funding is long and the book is granular retail.",
+  "data": {
+   "good_number": "AUM ~Rs 1.1 lakh cr, +33% YoY in FY18; profits +25%; low gross NPAs; cheap vs HDFC",
+   "why_misleading": "growth came from developer/project and wholesale loans (project loans +55% YoY), many to promoter-linked entities, funded by short-term CP/MF money",
+   "test_that_catches_it": "ALM gap in 1-year bucket; share of CP funding; wholesale/project loan growth vs retail; borrower concentration and promoter links"
+  },
+  "sources": [
+   "https://www.angelone.in/get-html-report/AngelBrokingResearch_Dewan HousingFinance_3QFY2018RU_25012018.html",
+   "https://www.motilaloswal.com/site/rreports/636609355081759160.pdf",
+   "https://theprint.in/governance/promoters-of-housing-finance-major-dhfl-swindled-rs-31000-crore-alleges-cobrapost/184961"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:dhfl-2019",
+    "rel": "about"
+   },
+   {
+    "to": "person:group-dhfl-wadhawan",
+    "rel": "about"
+   },
+   {
+    "to": "insight:lender-blowup-signals",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:flag-high-roe-context",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:hidden-trap-yes-bank-roe",
+  "title": "Hidden trap: Yes Bank's 17.7% ROE and 1.28% gross NPA",
+  "tickers": [
+   "YESBANK"
+  ],
+  "tags": [
+   "hidden-trap",
+   "flag-judgment",
+   "redflag",
+   "blowup",
+   "india",
+   "banks",
+   "roe"
+  ],
+  "date": "2018-04-26",
+  "body": "THE GOOD NUMBER: in FY18 Yes Bank reported ROE 17.7%, RoA 1.6% and gross NPA 1.28% (down from 1.72% the previous quarter) with loans up ~54%, numbers that rivalled HDFC Bank and earned a premium valuation; the stock peaked ~Rs 393-404 in Aug 2018. WHY IT LIED: ROE in a bank equals reported profit after provisions; under-provisioning lifts it. RBI's own inspections found NPA divergence of ~Rs 4,177 cr (FY16) and ~Rs 6,355 cr (FY17), i.e., reported NPAs were a fraction of real ones, and these divergences were publicly disclosed in 2017. A 54% loan growth rate in a corporate book is evergreening risk, and the lending was concentrated in groups that later failed (ADAG, Essel, DHFL, IL&FS, Cox & Kings, Jet). Low-cost deposits (CASA) were thin, so the bank paid up for bulk money. Sep 2018: RBI refused to extend the founder's term. GNPA went 1.3% (FY18) -> 7.4% (Sep 2019); moratorium Mar 2020; stock ~Rs 5.6. TEST: compare loan growth with system growth (3x system = red), read divergence notes, list top exposures by group, check CASA and cost of funds; ROA for a bank should be earned with granular retail, not by lending to stressed promoters. LESSON: a high ROE is a result, not a quality; in lenders the denominator of risk shows up 2-3 years later. Contrast HDFC Bank, whose ROE came with low-cost deposits and seasoned retail assets.",
+  "data": {
+   "good_number": "FY18 ROE 17.7%, RoA 1.6%, GNPA 1.28%, loan growth 54%, premium P/B",
+   "why_misleading": "NPAs were under-recognised (RBI divergence Rs 4,177 cr FY16, Rs 6,355 cr FY17); growth came from corporate loans to stressed groups",
+   "test_that_catches_it": "RBI divergence disclosures; loan growth >30%/yr in corporate book; CASA ratio; exposure to stressed groups; regulator action on CEO"
+  },
+  "sources": [
+   "https://www.prnewswire.com/in/news-releases/yes-bank-aces-quarterly-results-stock-jumps-10-after-beating-earnings-revenue-forecasts-681038891.html",
+   "https://trendlyne.com/posts/1459507/yes-bank-4qfy18-result-update",
+   "https://www.isas.nus.edu.sg/papers/yes-bank-in-moratorium-how-it-collapsed-and-what-next"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:yes-bank-2020",
+    "rel": "about"
+   },
+   {
+    "to": "person:group-yes-bank-rana-kapoor",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:false-alarm-hdfc-bank-expensive-bank",
+    "rel": "contradicts"
+   },
+   {
+    "to": "insight:flag-high-roe-context",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:hidden-trap-manpasand-growth",
+  "title": "Hidden trap: Manpasand's growth faster than Frooti",
+  "tickers": [
+   "MANPASAND"
+  ],
+  "tags": [
+   "hidden-trap",
+   "flag-judgment",
+   "redflag",
+   "blowup",
+   "india",
+   "fraud",
+   "sector-fmcg"
+  ],
+  "date": "2018-05-24",
+  "body": "THE GOOD NUMBER: a mango-drink maker (Mango Sip) growing 33-44% in FY18, faster than Parle Agro's Frooti, with Q4 FY18 profit +256% to Rs 43 cr; marquee fund holders; big new plant capex. WHY IT LIED: GST investigators found sales inflated through invoices to bogus firms with no goods moving (outward bogus transactions ~Rs 691 cr, inward ~Rs 188 cr); MD and officials arrested in 2019 in a ~Rs 40 cr tax fraud; FY19 revenue fell 33% with a receivables write-off. TELLS: (1) a small brand outgrowing the category leader in a mature, distribution-heavy category is physically unlikely; a fund manager publicly questioned growth and market share in Dec 2016; (2) trade receivables growing faster than sales [commentary estimate ~40% vs ~25%, unverified]; (3) Deloitte resigned in May 2018 citing denial of revenue and capex data; the next auditor quit in 2019. TEST: compare growth with the category and the leader; ask for distributor counts and channel checks (shop visits); match capex to physical capacity; treat an auditor citing denied information as a disqualifier. LESSON: growth that beats the industry's best operator without a visible mechanism (new channel, technology, price) is a question, not a strength.",
+  "data": {
+   "good_number": "revenue +33-44% (FY18, ~Rs 955-985 cr), PAT +256% in Q4 FY18, growth outpacing market leader Parle Agro",
+   "why_misleading": "sales were inflated through fake invoices to shell distributors (CGST: ~Rs 691 cr outward bogus transactions); receivables outgrew sales",
+   "test_that_catches_it": "growth vs category leader; receivables growth vs revenue; capex verification; distributor names; auditor exit"
+  },
+  "sources": [
+   "https://zeebiz.com/companies/news-manpasand-beverages-strong-q4fy18-result-gives-mixed-cues-to-investors-256-rise-in-profit-to-rs-43-crore-52819",
+   "https://www.outlookbusiness.com/markets-5/trend-19/no-longer-streets-manpasand-4438",
+   "https://nsearchives.nseindia.com/content/circulars/INVG61840.pdf",
+   "https://business-standard.com/article/current-affairs/manpasand-beverages-md-officials-arrested-in-rs-40-crore-gst-fraud-119052500241_1.html"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:vakrangee-manpasand",
+    "rel": "about"
+   },
+   {
+    "to": "insight:auditor-exit-signal",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:good-numbers-too-good",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:hidden-trap-vakrangee-roce-debt-free",
+  "title": "Hidden trap: Vakrangee's 40% ROCE, zero debt and positive CFO",
+  "tickers": [
+   "VAKRANGEE"
+  ],
+  "tags": [
+   "hidden-trap",
+   "flag-judgment",
+   "redflag",
+   "blowup",
+   "india",
+   "fraud",
+   "roce"
+  ],
+  "date": "2018-04-30",
+  "body": "THE GOOD NUMBER: screener-perfect: ROCE 37-43%, OPM ~25%, borrowings cut from Rs 416 cr (FY15) to zero (FY18), PAT Rs 322 -> 680 cr in three years, and CFO was positive and above PAT in FY17-18 (Rs 669 cr, Rs 530 cr), so even our CFO/PAT test passed. The stock ran to ~Rs 515 (Jan 2018). WHY IT LIED: a network of franchised rural kiosks for banking, e-governance and e-commerce is a thin-margin, low-ticket business; 25% operating margins and 40% ROCE were out of line with every comparable. In FY18 sales jumped 63% to Rs 6,502 cr while OPM fell from 24% to 15%, signalling a mix shift into low-value trading. Debtor days were 157 in FY15. PwC resigned in Apr 2018; the stock fell ~84%; FY19 revenue collapsed to Rs 1,508 cr and debtor days went to 319, 729 and 1,301 (FY19-21). It trades at ~Rs 5 (Nov 2026). TEST: rebuild unit economics bottom-up (revenue per outlet x outlets x margin) and compare with the reported total; treat a sudden revenue-mix shift plus a parabolic price as a request for evidence. LESSON: CFO/PAT can pass in a trap; numbers that are too good for the business's physics are a flag on their own.",
+  "data": {
+   "good_number": "ROCE 37-43% (FY15-18), OPM 24-26%, debt cut to zero by FY18, PAT Rs 680 cr, CFO Rs 669 cr (FY17) > PAT",
+   "why_misleading": "economics far above what a rural kiosk/e-governance franchise business can earn; sales jumped and margin halved in FY18 as low-margin trading was added; then revenue collapsed 77%",
+   "test_that_catches_it": "margin vs business physics and peers; revenue mix shifts; parabolic price; auditor resignation"
+  },
+  "sources": [
+   "https://www.screener.in/company/VAKRANGEE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "case_study:vakrangee-manpasand",
+    "rel": "about"
+   },
+   {
+    "to": "insight:good-numbers-too-good",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:auditor-exit-signal",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:hidden-trap-luckin-growth",
+  "title": "Hidden trap: Luckin's store and same-order growth",
+  "tickers": [
+   "US-LKNCY"
+  ],
+  "tags": [
+   "hidden-trap",
+   "flag-judgment",
+   "redflag",
+   "blowup",
+   "global",
+   "fraud",
+   "china",
+   "alt-data"
+  ],
+  "date": "2020-04-02",
+  "body": "THE GOOD NUMBER: China's challenger to Starbucks reported hyper-growth in stores and revenue and improving unit margins, proof (it seemed) that subsidised growth was turning profitable; stock $17 IPO (May 2019) -> ~$50 (Jan 2020). WHY IT LIED: on 2 Apr 2020 Luckin admitted its COO fabricated ~RMB 2.2 bn ($310 m) of 2019 sales; shares -80% in a day; delisted Jun 2020. The improvement in 'store-level margins' was produced by the fake sales. TELLS: (1) Muddy Waters circulated an anonymous report based on ~11,000 hours of store video showing far fewer items per order than reported, an alt-data refutation of the reported unit economics; (2) chairman and founders had pledged most of their shares for margin loans; (3) follow-on equity and a convertible within months of IPO; (4) related-party history of the founding team. TEST: verify unit economics outside the company (receipts, footfall, app downloads, supplier volumes); treat insider margin loans plus rapid post-IPO capital raising as a governance flag. LESSON: unit-economics improvement is the most persuasive number in a loss-making growth company, so it is also the one worth faking. Contrast Eternal, where order volumes were checkable via restaurant partners and third-party data.",
+  "data": {
+   "good_number": "explosive store count and revenue growth after a May-2019 IPO; improving store-level margins",
+   "why_misleading": "COO fabricated ~RMB 2.2 bn of 2019 Q2-Q4 sales; items-per-order inflated",
+   "test_that_catches_it": "independent foot-traffic/receipt data; founder share pledges; capital raises right after IPO"
+  },
+  "sources": [
+   "https://www.aljazeera.com/economy/2020/4/3/coffee-plunger-luckin-shares-crater-on-misconduct-allegations",
+   "https://fortune.com/2020/05/20/luckin-coffee-stock-delisting-nasdaq-china-ipo/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:luckin-coffee-2020",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:false-alarm-eternal-zomato-losses-dilution",
+    "rel": "contradicts"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:hidden-trap-valeant-eps-growth",
+  "title": "Hidden trap: Valeant's 'cash EPS' growth from acquisitions",
+  "tickers": [
+   "US-BHC"
+  ],
+  "tags": [
+   "hidden-trap",
+   "flag-judgment",
+   "redflag",
+   "blowup",
+   "us",
+   "sector-pharma",
+   "roll-up"
+  ],
+  "date": "2015-10-21",
+  "body": "THE GOOD NUMBER: Valeant reported fast-rising 'cash EPS' and revenue, run by a McKinsey-trained CEO who cut R&D to ~3% of sales; Pershing Square and Sequoia Fund owned it; the stock peaked ~$262 (Aug 2015). WHY IT LIED: (1) the growth was acquired, not organic: dozens of deals financed with ~$30 bn of debt (debt/EBITDA ~5-7x); (2) 'cash EPS' excluded acquisition and restructuring costs that recurred every year because buying companies was the business model; (3) revenue growth came from price increases (e.g., Syprine +3,000%) rather than volumes, inviting political backlash; (4) an undisclosed specialty pharmacy, Philidor, which Valeant had an option to buy, pushed its drugs. After Citron's Oct-2015 report and Philidor's exposure, the stock fell >90%; renamed Bausch Health. TEST: separate organic from acquired growth; add back 'one-time' costs that recur; check GAAP EPS and FCF after acquisitions; ask whether price or volume drives sales. Buffett's warning on high-P/E acquirers manufacturing EPS applies (insight:buffett-conglomerate-chain-letter-2014). LESSON: EPS growth that needs a continuous flow of debt-financed deals is a financing story, not a compounding business.",
+  "data": {
+   "good_number": "rapid growth in adjusted 'cash EPS' and revenue; star investors; low R&D cost base",
+   "why_misleading": "growth was bought with ~$30 bn of debt and price hikes; recurring acquisition costs were excluded from 'cash EPS'; an undisclosed pharmacy (Philidor) channelled sales",
+   "test_that_catches_it": "organic volume growth; GAAP vs non-GAAP gap; debt/EBITDA; price vs volume; related distribution channels"
+  },
+  "sources": [
+   "https://fortune.com/2015/10/31/valeant-scandal",
+   "https://amp.cbc.ca/news/business/valeant-pharmaceuticals-pershing-1.4023893"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:valeant-2015",
+    "rel": "about"
+   },
+   {
+    "to": "insight:buffett-conglomerate-chain-letter-2014",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:us-redflag-related-party-nongaap",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:hidden-trap-ge-smooth-earnings",
+  "title": "Hidden trap: GE's smooth earnings, low P/E and dividend",
+  "tickers": [
+   "US-GE"
+  ],
+  "tags": [
+   "hidden-trap",
+   "flag-judgment",
+   "redflag",
+   "blowup",
+   "us",
+   "value-trap",
+   "sector-industrials"
+  ],
+  "date": "2017-11-13",
+  "body": "THE GOOD NUMBER: for years GE delivered steady, predictable earnings that met or beat guidance, a moderate P/E and a long dividend record; the stock was ~$30-32 in mid-2016. WHY IT LIED: earnings that smooth across power turbines, aviation and a finance arm are improbable; GE Capital and accounting choices absorbed volatility. Industrial cash flow was flattered by selling receivables to GE Capital and by 'deferred monetisation' (booking service-contract profits ahead of cash, so contract assets grew faster than revenue); the dividend exceeded free cash flow; a run-off long-term-care insurance book was under-reserved (Jan 2018: $6.2 bn after-tax charge plus ~$15 bn reserve top-ups); Alstom (2015) was bought at the power cycle peak ($22 bn goodwill impairment, Oct 2018). Dividend halved Nov 2017 and cut to $0.01 in 2018; stock ~$6.7 by Dec 2018. TEST: compare reported earnings volatility with what the businesses' cycles imply; dividend cover by FCF; trend of contract assets and factored receivables; ask what long-tail liabilities sit in a finance subsidiary. LESSON: unusually smooth earnings in cyclical businesses are a sign of management, not of quality.",
+  "data": {
+   "good_number": "decades of steady EPS beats, 'reasonable' P/E, long dividend record, AAA-era reputation",
+   "why_misleading": "smoothness came from GE Capital and accounting levers (receivable factoring, contract-asset 'deferred monetisation'); hidden long-term-care insurance liability",
+   "test_that_catches_it": "dividend vs FCF; contract assets vs revenue; receivables sold; earnings volatility too low for the businesses"
+  },
+  "sources": [
+   "https://fortune.com/2018/01/16/ge-shares-billion-charge-capital-insurance-finance-flannery/",
+   "https://www.ge.com/news/press-releases/ge-announces-third-quarter-2018-results",
+   "https://www.nasdaq.com/articles/fall-blue-chip-general-electrics-horrible-2018-2018-12-10"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:ge-2017-2018",
+    "rel": "about"
+   },
+   {
+    "to": "insight:value-trap-patterns",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:good-numbers-too-good",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:hidden-trap-rajesh-exports-low-pe",
+  "title": "Hidden trap: Rajesh Exports at 9-20x P/E on Rs 2 lakh cr of revenue",
+  "tickers": [
+   "RAJESHEXPO"
+  ],
+  "tags": [
+   "hidden-trap",
+   "flag-judgment",
+   "redflag",
+   "blowup",
+   "india",
+   "sector-jewellery",
+   "value-trap",
+   "forensic"
+  ],
+  "date": "2016-03-31",
+  "body": "THE GOOD NUMBER: Rajesh Exports looked cheap and solid: trailing P/E mostly 9-20 (screener median ~15), ROCE 17-20% in FY15-17, PAT Rs 1,069-1,292 cr (FY16-19), revenue Rs 1.6-2.6 lakh cr, positive CFO in most years, promoter holding ~54%. Price peaked ~Rs 947 (2022, adjusted). WHY IT LIED (alleged): at operating margins of 0.4-1.1%, profit is a sliver of a revenue figure that is mostly gold passing through; a small mis-statement of revenue or cost moves profit 100%. Disclosure by segment and geography was thin and auditors changed often. SEBI's ex-parte interim order (3 Jun 2026, confirmed Oct 2026) alleged standalone revenue overstated by ~Rs 12,557 cr over FY21-24 and said the forensic auditor was denied ERP and journal access; promoter barred from dealing. Reported OPM fell to ~0.0-0.1% and ROCE to 1-3% (FY24-26); stock ~Rs 48 (20 Nov 2026), about -95% from peak. Allegations are not final findings. TEST: when margin < 2%, value the company on what you can verify (cash returned, dividends, independently confirmed volumes), not on P/E; treat 'cheap' plus opacity plus auditor churn as a trap pattern. LESSON: a low P/E on unverifiable earnings is not a margin of safety.",
+  "data": {
+   "good_number": "P/E 8-20 (median ~15), ROCE 17-20% (FY15-17), PAT ~Rs 1,000-1,300 cr, positive CFO most years, 'world's largest gold refiner' after Valcambi",
+   "why_misleading": "0.4-1% margins on huge pass-through gold revenue made profit unverifiable; SEBI's interim order (Jun 2026) alleged ~Rs 12,557 cr standalone revenue overstated FY21-24 and the forensic auditor was denied records",
+   "test_that_catches_it": "tiny margin x giant revenue = small errors swamp profit; segment/geography disclosure; auditor changes; access for forensic audit"
+  },
+  "sources": [
+   "https://www.screener.in/company/RAJESHEXPO/consolidated/",
+   "https://www.businesstoday.in/markets/stocks/story/bt-explainer-what-sebis-interim-order-against-rajesh-exports-and-its-promoter-reveals-534811-2026-06-04",
+   "https://www.moneylife.in/article/sebi-confirms-interim-directions-on-rajesh-exports-retains-trading-ban-on-promoter-rajesh-mehta/81948.html"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "person:group-rajesh-exports",
+    "rel": "about"
+   },
+   {
+    "to": "insight:value-trap-patterns",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:false-alarm-apl-apollo-low-margins",
+    "rel": "contradicts"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:hidden-trap-pc-jeweller-inventory",
+  "title": "Hidden trap: PC Jeweller's growth, profits and low P/E",
+  "tickers": [
+   "PCJEWELLER"
+  ],
+  "tags": [
+   "hidden-trap",
+   "flag-judgment",
+   "redflag",
+   "blowup",
+   "india",
+   "sector-jewellery",
+   "working-capital"
+  ],
+  "date": "2018-01-16",
+  "body": "THE GOOD NUMBER: PC Jeweller grew sales and profits fast, opened stores and traded at a fraction of Titan's P/E, so it looked like 'Titan at a discount'; it peaked ~Rs 600 (Jan 2018, pre-split). WHY IT LIED: inventory and export receivables (largely to the UAE) rose much faster than sales and CFO stayed weak or negative for years despite reported profits, funded by gold-metal loans and bank working capital. The reported profit depended on receivables that later proved hard to collect. In 2018 the promoter 'gifted' shares to family off-market, a buyback was announced and then withdrawn (-43% in a week); 2021-22 the company defaulted on ~Rs 3,400 cr of bank loans. CONTRAST WITH TITAN: Titan's negative-CFO years came from gold inventory in its own stores with single-digit debtor days and a clean group; PC Jeweller's came from export receivables to counterparties outside India plus governance events. Same flag, different content. TEST: inventory and receivable days by segment (domestic retail vs export); who owes the money; does the discount to the leader reflect worse economics. LESSON: 'cheap versus the leader' is often the market correctly pricing lower-quality earnings.",
+  "data": {
+   "good_number": "fast sales and profit growth, a 'cheap' P/E vs Titan, expanding store count, export business",
+   "why_misleading": "inventory and export receivables (UAE) grew faster than sales; CFO weak or negative for years; profits were not turning into cash",
+   "test_that_catches_it": "inventory + receivable days trend; CFO/PAT; who the export customers are; promoter share 'gifts'"
+  },
+  "sources": [
+   "https://www.business-standard.com/amp/article/companies/2-7-bn-shaved-off-pc-jeweller-m-cap-after-promoter-gifts-shares-to-family-118050400496_1.html",
+   "https://www.business-standard.com/amp/article/markets/pc-jeweller-tanks-43-in-one-week-on-withdrawal-of-buyback-offer-118071900539_1.html",
+   "https://finshots.in/archive/pc-jeweller-from-shining-star-to-insolvency/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:pc-jeweller-2018",
+    "rel": "about"
+   },
+   {
+    "to": "person:group-pc-jeweller",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:false-alarm-titan-negative-cfo-gold-loans",
+    "rel": "contradicts"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:hidden-trap-ricoh-india-mnc-growth",
+  "title": "Hidden trap: Ricoh India's MNC parent and revenue surge",
+  "tickers": [
+   "RICOHINDIA"
+  ],
+  "tags": [
+   "hidden-trap",
+   "flag-judgment",
+   "redflag",
+   "blowup",
+   "india",
+   "fraud",
+   "mnc"
+  ],
+  "date": "2016-07-19",
+  "body": "THE GOOD NUMBER: an Indian subsidiary of Japan's Ricoh, audited by a Big-4 affiliate, growing revenue much faster than its parent after moving into services contracts; the stock went from ~Rs 100 to above Rs 1,000 in 2013-15. Investors took MNC parentage as a governance guarantee. WHY IT LIED: a PwC forensic audit found unsupported out-of-books entries; in Q1 FY16 Rs 66.7 cr of them turned a Rs 64 cr loss into a Rs 2.7 cr profit; the FY16 loss was later estimated at ~Rs 1,118-1,123 cr; reports suggest the fraud began in FY14. Shares were suspended; minority holders got little after the NCLT recapitalisation. TELLS: (1) receivables and unbilled revenue rose faster than revenue (Beneish DSRI); (2) the subsidiary's growth was far above the parent and peers in a slow-growing hardware/services market; (3) Q2 FY16 results were delayed and the auditor raised concerns; (4) a ~26% free float made the run easy. TEST: receivable + unbilled days trend; ask why a subsidiary grows 3-5x faster than its parent; treat delayed results as a disqualifier until explained. LESSON: parentage is not an audit; local management incentives can diverge from the parent's.",
+  "data": {
+   "good_number": "Japanese parent with ~74% stake, Big-4 audit, revenue surge into 'managed document services', stock ~10x",
+   "why_misleading": "out-of-books entries manufactured profit (Rs 66.7 cr in Q1 FY16 alone turned a loss into a profit); receivables and unbilled revenue ballooned",
+   "test_that_catches_it": "receivable/unbilled growth vs sales; growth vs parent and peers; delayed results; thin free float"
+  },
+  "sources": [
+   "https://www.business-standard.com/article/companies/ricoh-india-admits-accounting-violations-falsification-of-books-116071901198_1.html",
+   "https://www.bloombergquint.com/markets/did-the-fraud-at-ricoh-india-begin-much-before-the-company-claims"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:ricoh-india-2016",
+    "rel": "about"
+   },
+   {
+    "to": "insight:beneish-m-score",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:flag-receivable-days-context",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:hidden-trap-gitanjali-receivables",
+  "title": "Hidden trap: Gitanjali Gems' revenue and 'standard' loans",
+  "tickers": [
+   "GITANJALI"
+  ],
+  "tags": [
+   "hidden-trap",
+   "flag-judgment",
+   "redflag",
+   "blowup",
+   "india",
+   "fraud",
+   "sector-jewellery",
+   "related-party"
+  ],
+  "date": "2018-02-15",
+  "body": "THE GOOD NUMBER: Gitanjali Gems reported large revenues and profits, ran well-known jewellery brands, and its bank loans were 'standard' with regular debt servicing until Dec 2017; over 30 lenders (SBI, StanChart, BoI, BoB...) were exposed per the FY17 annual report. WHY IT LIED: a large share of its business was with its own group: group-company receivables were reported at ~33% of the company's total receivables, so 'sales' partly moved money within the promoter's network. Import trade was financed by letters of undertaking from PNB with credit of ~360 days against RBI's 90-day norm for precious-stone imports; PNB later found 151 fraudulent LoUs and no proof the trades were bona fide. Feb 2018: PNB declared the fraud (Nirav Modi/Mehul Choksi); Gitanjali fell ~61% in seven days. TELLS THAT WERE PUBLIC OR SEMI-PUBLIC: SMA-2 classification in 2014 after >60-day payment delays; a March 2017 auditor warning of default to LIC; a sharp fall in promoter Mehul Choksi's shareholding; sector receivables at ~5 months of sales (CARE). TEST: related-party share of receivables and sales; receivable days vs domestic peers; whether credit periods exceed regulatory norms; promoter stake trend. LESSON: receivables owed by your own group are not assets; pre-2018 debtor-days data was not found this session [gap].",
+  "data": {
+   "good_number": "large reported revenue and profits, a big branded jewellery network, loans serviced and classified 'standard' until Dec 2017, 30+ lending banks",
+   "why_misleading": "receivables were concentrated in group companies (~33% of total receivables) and trade was financed by fraudulent PNB letters of undertaking with ~360-day credit vs a 90-day norm",
+   "test_that_catches_it": "related-party share of receivables; credit period vs regulation/industry; SMA-2 history; promoter stake trend; number of lenders"
+  },
+  "sources": [
+   "https://www.business-standard.com/amp/article/finance/pnb-scam-bank-ignored-warnings-from-gitanjali-gems-auditor-in-march-2017-118022700558_1.html",
+   "https://www.business-standard.com/amp/article/finance/pnb-fraud-case-lenders-seek-forensic-audit-of-gitanjali-group-s-books-118021500065_1.html",
+   "https://www.business-standard.com/amp/article/markets/gitanjali-tanks-61-in-seven-days-pc-jeweller-plunges-42-in-one-month-118022200212_1.html",
+   "https://www.business-standard.com/article/current-affairs/pnb-fraud-gems-jewellery-industry-bad-loans-may-rise-to-30-says-care-118022700662_1.html"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:flag-receivable-days-context",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:false-alarm-hal-receivable-days",
+    "rel": "contradicts"
+   },
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "case_study",
+  "id": "case_study:hidden-trap-cox-and-kings-brand",
+  "title": "Hidden trap: Cox & Kings' 250-year brand and reported profits",
+  "tickers": [
+   "COX&KINGS"
+  ],
+  "tags": [
+   "hidden-trap",
+   "flag-judgment",
+   "redflag",
+   "blowup",
+   "india",
+   "fraud",
+   "sector-travel",
+   "working-capital"
+  ],
+  "date": "2019-06-26",
+  "body": "THE GOOD NUMBER: Cox & Kings had a famous brand, reported profits and an international footprint, and looked like a cheap way to own Indian outbound travel. WHY IT LIED: travel operators collect money from customers before paying hotels and airlines, so the model should run on negative working capital and little debt. Cox & Kings instead carried heavy and rising debt and large receivables and advances, with CFO persistently weak relative to profit. A lender-appointed PwC audit later found ~Rs 4,367 cr siphoned and books manipulated from Apr 2014 to Jun 2019; foreign subsidiaries allegedly forged audit reports and bank statements that Indian auditors consolidated. CP default 26 Jun 2019; stock to ~Rs 2-3 from Rs 250-400. TEST: write down the working-capital sign the business model implies (DMart, Bharti, airlines, travel = negative) and compare with the balance sheet; a mismatch means either a bad business or wrong accounts. Check which audit firm signs each material subsidiary. LESSON: the simplest forensic test is coherence between business model and balance sheet; brand age is not evidence.",
+  "data": {
+   "good_number": "a 250-year-old global travel brand, reported profits, international subsidiaries (Holidaybreak UK)",
+   "why_misleading": "a business that collects cash in advance showed high receivables, loans/advances and rising debt; foreign subsidiaries' books were forged",
+   "test_that_catches_it": "does working-capital sign match the business model; CFO vs PAT; who audits subsidiaries; pledge and CP dependence"
+  },
+  "sources": [
+   "https://www.business-standard.com/article/companies/cox-kings-forged-financials-siphoned-off-rs-4-387-cr-audit-report-120042501079_1.html",
+   "https://www.thequint.com/news/india/cox-and-kings-fudged-audit-and-bank-records-via-foreign-subsidiaries-says-report"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "case_study:cox-and-kings-2019",
+    "rel": "about"
+   },
+   {
+    "to": "insight:flag-negative-fcf-context",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:flag-rising-debt-context",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:flag-high-pe-context",
+  "title": "Reading a high P/E: benign when reinvestment x incremental ROIC supports the implied growth",
+  "tags": [
+   "flag-judgment",
+   "redflag",
+   "process",
+   "india",
+   "us",
+   "valuation"
+  ],
+  "date": "2026-11-20",
+  "body": "RULE: a high P/E is benign when (a) a reverse DCF's implied growth is achievable, i.e., growth ~= reinvestment rate x incremental ROIC and the company can keep reinvesting at that rate; (b) the runway (market share, category formalisation, store count headroom) is long; and (c) current EPS is not peak-cycle. It is also benign when EPS is temporarily depressed (Trent at 155x in May 2020 on COVID EPS). EVIDENCE OF BENIGN: DMart 2017-21 (ROCE 20%+, sales +26%/yr, self-funded), Asian Paints/Pidilite/Page at 40-60x for 15 years (ROCE 25-60%), HDFC Bank at 25-35x with ROE 16-20%. WHERE IT TURNS REAL: (1) P/E ~2x the stock's own long median (Asian Paints 117 and Pidilite ~100 in 2021, Page 81 in 2022, DMart ~200 in 2021, Bajaj Finance 121 in 2021) was followed by 4-6 flat years despite EPS growth; (2) growth decelerates or a new competitor arrives (Birla Opus vs Asian Paints, quick commerce vs DMart, LFL slowdown at Trent); (3) price driven by rerating, not EPS (Tesla 2021). India base rate: after runs ending at P/E >= 70, 13 of 15 winners were lower 2-5 years later (insight:india-mb-pe70-exit). PRACTICAL TEST: reverse DCF at today's price; compare required 10-year EPS CAGR with the last 10 years and with reinvestment x ROIC; check P/E vs own 10-year median; ask whether the next 3 years' EPS growth is visible in unit data (stores, subscribers, volumes).",
+  "data": {
+   "benign_if": "implied growth <= reinvestment x incremental ROIC; long runway; EPS not at peak",
+   "real_if": "P/E >= ~2x own median; growth slowing; competitor entry; rerating-driven price",
+   "test": "reverse DCF + own-median P/E + unit-data visibility"
+  },
+  "sources": [
+   "https://www.screener.in/company/ASIANPAINT/consolidated/",
+   "https://www.screener.in/company/DMART/consolidated/",
+   "https://www.screener.in/company/PIDILITIND/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:false-alarm-dmart-permanent-high-pe",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:false-alarm-consumer-franchises-long-high-pe",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:false-alarm-trent-150x-pe-and-lease-debt",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:india-mb-pe70-exit",
+    "rel": "about"
+   },
+   {
+    "to": "insight:twin-engine",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:flag-negative-fcf-context",
+  "title": "Reading negative FCF / low CFO: what the cash went into decides",
+  "tags": [
+   "flag-judgment",
+   "redflag",
+   "process",
+   "india",
+   "us",
+   "cash-flow"
+  ],
+  "date": "2026-11-20",
+  "body": "RULE: negative FCF is benign when CFO is positive and the capex earns high returns on proven demand (DMart's owned stores, Bharti's network, APL Apollo's DFT lines), when it funds a durable asset that scales (Netflix content 2018-19: FCF -$3.0 bn and -$3.27 bn, positive from 2020), or when negative CFO reflects a lender's loan growth (Bajaj Finance: negative every year FY15-26 while ROE stayed ~20%). Low CFO/PAT is benign when the working capital is liquid and the business's own (Titan: CFO/PAT 0.62 over FY15-26 because of gold inventory in its stores, funded by gold loans, debtor days 4-8) or when the debtor is sovereign and the delay is budgetary (HAL FY17-19). IT IS SUSPECT WHEN: (1) CFO is weak while receivables or 'loans and advances' grow faster than sales (PC Jeweller exports, Ricoh unbilled revenue, Cox & Kings); (2) the working-capital sign contradicts the business model (a travel company or retailer should be negative); (3) 'capex' goes to related parties or CWIP ages without commissioning; (4) CFO is propped by factoring or customer funds (GE, Wirecard). WARNING: the CFO/PAT test can pass in a trap (Vakrangee FY17-18 CFO > PAT), so it is necessary, not sufficient. TEST: split the cash gap into capex (growth vs maintenance), inventory, receivables (by counterparty), and loans; name the asset created; check incremental ROCE on capex completed 2-3 years ago.",
+  "data": {
+   "benign_if": "positive CFO + high-return capex; durable scaling asset; lender loan growth; liquid own inventory; sovereign debtor",
+   "suspect_if": "receivables/advances outgrow sales; WC sign contradicts model; related-party capex; aging CWIP; factoring",
+   "caveat": "CFO/PAT can pass in traps (Vakrangee)"
+  },
+  "sources": [
+   "https://www.screener.in/company/TITAN/consolidated/",
+   "https://www.sec.gov/Archives/edgar/data/1065280/000106528020000040/form10kq419.htm"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:false-alarm-titan-negative-cfo-gold-loans",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:false-alarm-netflix-negative-fcf",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:false-alarm-bajaj-finance-negative-cfo-qips",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:hidden-trap-cox-and-kings-brand",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "about"
+   },
+   {
+    "to": "insight:buffett-owner-earnings-1986",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:flag-pledge-severity",
+  "title": "Grading a promoter pledge: purpose, size, trend, lender, leverage, group history",
+  "tags": [
+   "flag-judgment",
+   "redflag",
+   "process",
+   "india",
+   "us",
+   "pledge",
+   "governance"
+  ],
+  "date": "2026-11-20",
+  "body": "RULE: our disqualifier (pledge >25% of promoter holding or rising) stays the DEFAULT; an override must be written down as a decision record. Grade severity on six questions: (1) PURPOSE: disclosed and specific (family debt from a known investment, funding the listed company's own rights issue) vs undisclosed or to fund other group companies; (2) SIZE: % of promoter holding and % of total equity, plus the price cushion before margin calls; (3) TREND: falling via actual stake sales or repayments (Apollo Hospitals: ~76% in 2019 -> ~2% by Aug 2025 after block sales) vs rising while price rises (Zee/Essel 59% -> ~90%); (4) LENDER: banks with long tenor vs NBFCs/MFs with loan-against-shares and short tenor (2018-19 IL&FS freeze turned MF pledges into fire sales); (5) LISTED-COMPANY LEVERAGE: is the company itself unlevered and cash-generative, or does it also guarantee group debt; (6) GROUP HISTORY: any past invocations, diversion or contagion (ADAG, Essel, Future, Cox & Kings = severe). A pledge that is high but falling, disclosed, bank-funded, at the family level, in a clean group with an unlevered company is a sizing and monitoring issue; a rising pledge with undisclosed purpose in a group with a history is a disqualifier. Also treat non-disposal undertakings and 'encumbrances' as pledges. HONEST CAVEAT: even benign pledges are reflexive in a crash; Apollo worked partly because the price rose. Size such positions small and track quarterly SAST disclosures.",
+  "data": {
+   "default": "pledge >25% or rising = disqualifier (insight:disqualifiers)",
+   "override_needs": "all six checks pass + decision record + small size",
+   "checks": [
+    "purpose",
+    "size & cushion",
+    "trend",
+    "lender type/tenor",
+    "company leverage & guarantees",
+    "group history"
+   ]
+  },
+  "sources": [
+   "https://www.business-standard.com/amp/article/companies/apollo-hospitals-enterprise-s-promoter-pledging-likely-to-hit-75-119071601609_1.html",
+   "https://www.businesstoday.in/markets/stocks/story/apollo-hospitals-block-deal-promoter-to-trim-debt-rules-out-more-stake-sale-490621-2025-08-22",
+   "https://business-standard.com/article/pf/zee-stock-crash-shows-why-you-should-avoid-firms-with-high-pledged-shares-119013100051_1.html"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:false-alarm-apollo-hospitals-promoter-pledge",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:promoter-pledge-group-contagion",
+    "rel": "about"
+   },
+   {
+    "to": "insight:disqualifiers",
+    "rel": "about"
+   },
+   {
+    "to": "case_study:zee-essel-pledges-2019",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:group-contagion-pledge-cycles",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:flag-high-roe-context",
+  "title": "When a high ROE is suspect: CFO << PAT, leverage, under-provisioning, fast lender growth",
+  "tags": [
+   "flag-judgment",
+   "redflag",
+   "process",
+   "india",
+   "us",
+   "roe",
+   "banks"
+  ],
+  "date": "2026-11-20",
+  "body": "RULE: a high ROE is a result to be explained, not a quality. Decompose it (DuPont: margin x asset turn x leverage) and ask which leg carries it. SUSPECT WHEN: (1) CFO is far below PAT for several years in a non-lender (profits not becoming cash); (2) ROE comes from leverage (equity a thin slice; NBFC leverage >7-8x; DHFL ~10x); (3) in a lender, ROE is lifted by low provisions on a fast-growing book: new loans have not had time to default (Yes Bank FY18: ROE 17.7%, GNPA 1.28%, loans +54%, while RBI's divergence reports showed NPAs under-recognised by Rs 4,177 cr in FY16 and Rs 6,355 cr in FY17); (4) margins/ROCE far above peers in a commodity-like business with no visible mechanism (Vakrangee ROCE ~40% in rural kiosks); (5) ROE flattered by buybacks or a shrinking equity base from write-offs. BENIGN WHEN: ROE comes from high margins or asset turns with low debt and is matched by CFO (Page 45-69% ROCE, Pidilite, APL Apollo at 5-8% margins but ~0 WC days), or in a bank from low-cost deposits, granular seasoned retail loans and stable credit costs (HDFC Bank 16-20% for a decade). TEST: 5-year CFO/PAT; leverage; for lenders: loan growth vs system (>2-3x system = red), lagged NPA (NPA / loans of 2-3 years ago), divergence notes, CASA, top-20 exposures; compare ROE with the best peer and ask why it is higher.",
+  "data": {
+   "suspect_if": [
+    "CFO << PAT",
+    "leverage-driven",
+    "lender growth >2-3x system with low NPA",
+    "ROCE far above peers without mechanism"
+   ],
+   "benign_if": "margin/turn-driven with CFO; bank with CASA + seasoned retail",
+   "test": "DuPont + CFO/PAT + lagged NPA"
+  },
+  "sources": [
+   "https://trendlyne.com/posts/1459507/yes-bank-4qfy18-result-update",
+   "https://www.isas.nus.edu.sg/papers/yes-bank-in-moratorium-how-it-collapsed-and-what-next"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:hidden-trap-yes-bank-roe",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:hidden-trap-dhfl-growth",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:hidden-trap-vakrangee-roce-debt-free",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:false-alarm-hdfc-bank-expensive-bank",
+    "rel": "contradicts"
+   },
+   {
+    "to": "insight:lender-blowup-signals",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:flag-cash-pile-context",
+  "title": "When a cash pile is suspect: test its yield, location and behaviour",
+  "tags": [
+   "flag-judgment",
+   "redflag",
+   "process",
+   "india",
+   "us",
+   "cash",
+   "fraud"
+  ],
+  "date": "2026-11-20",
+  "body": "RULE: cash is the easiest number to forge, so test that it behaves like cash. (1) YIELD: interest/other income divided by average cash + liquid investments should be near prevailing deposit/T-bill rates (India FDs ~6-8% in most years; US T-bills 0-5%). Satyam's ~Rs 5,000 cr+ 'cash' produced too little real interest; Rs 376 cr of accrued interest was fake. Adjust for mark-to-market funds where gains sit in other income or OCI, and for cash held near year-end only. (2) LOCATION: cash in the company's own name at named banks vs 'trustee', escrow or offshore-subsidiary accounts (Wirecard EUR 1.9 bn in Philippine trustee accounts; Cox & Kings foreign subsidiaries). (3) BEHAVIOUR: holding large cash while also borrowing is irrational unless the cash is trapped, restricted or fake (CLSA on Satyam, Sep 2008: ~$1.2 bn cash yet $56 m of debt). Cash that never returns to shareholders, never funds visible capex and keeps growing with reported profit (not CFO) is a flag. (4) CONSISTENCY: change in cash should reconcile with CFO - capex - dividends. BENIGN WHEN: yield matches market rates, cash is in named banks/AAA instruments, the company returns cash or uses it visibly (Info Edge's large investment book is disclosed by investee and marked to listed prices). TEST: compute yield each year; read the cash note for restricted balances and banks; check gross debt alongside cash.",
+  "data": {
+   "tests": [
+    "interest income / avg cash vs market rates",
+    "named banks vs trustees/offshore",
+    "cash + debt together",
+    "cash change reconciles with CFO-capex-dividends"
+   ],
+   "cases": [
+    "Satyam",
+    "Wirecard",
+    "Cox & Kings"
+   ]
+  },
+  "sources": [
+   "https://www.business-standard.com/article/companies/satyam-paid-tax-on-fictitious-interest-income-sfio-109051000065_1.html",
+   "https://www.businesstoday.in/magazine/cover-story/story/on-the-trail-of-fraud-245695-2009-01-20",
+   "https://www.wikipedia.org/wiki/Wirecard_scandal"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:hidden-trap-satyam-cash",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:hidden-trap-wirecard-margins-cash",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:flag-low-margin-context",
+  "title": "Reading low margins: margin x asset turn = ROCE; worry about margins that are too HIGH or unverifiable",
+  "tags": [
+   "flag-judgment",
+   "redflag",
+   "process",
+   "india",
+   "us",
+   "margins"
+  ],
+  "date": "2026-11-20",
+  "body": "RULE: a low margin is not a flag by itself. Value creation is margin x asset turn (= ROCE) over a long runway. BENIGN WHEN: asset turns are high and working capital is near zero or negative (APL Apollo 5-8% OPM, ROCE 20-32%, WC days ~0; DMart ~8% OPM, debtor days ~1; Costco ~3% net margin with membership fees and supplier-funded inventory; Dixon 3-4%), when low price is a deliberate moat-building strategy (Costco, DMart EDLP), or when margin % falls because of an accounting gross-up (Eternal's Blinkit inventory-led model books full goods value, so OPM shrinks without economics changing; recompute on net revenue). REAL WHEN: (1) low margin AND low asset turns (ROCE below cost of capital); (2) margin falling because a competitor has a structural cost edge; (3) tiny margins on huge pass-through revenue (Rajesh Exports 0.4-1% OPM on Rs 2 lakh cr+): small mis-statements swamp profit, so earnings become unverifiable. INVERSE FLAG: margins far ABOVE peers with no visible mechanism are more dangerous than low ones (Vakrangee ~25% OPM in kiosks; Wirecard; Manpasand growth). TEST: ROCE and WC days instead of OPM; peer table; ask 'what would margin be if the reported revenue were net?'; for high-margin outliers ask for the mechanism (patent, brand price premium, cost position) and check it outside the company.",
+  "data": {
+   "benign_if": "high turns, ~0/negative WC, deliberate pricing strategy, gross-up accounting",
+   "real_if": "low margin + low turns; rival cost edge; tiny margin on huge pass-through revenue",
+   "inverse": "too-high margins vs peers are the bigger flag"
+  },
+  "sources": [
+   "https://www.screener.in/company/APLAPOLLO/consolidated/",
+   "https://www.screener.in/company/RAJESHEXPO/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:false-alarm-apl-apollo-low-margins",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:false-alarm-costco-thin-margins-high-pe",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:hidden-trap-rajesh-exports-low-pe",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:false-alarm-eternal-zomato-losses-dilution",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:flag-rising-debt-context",
+  "title": "Reading rising debt: classify it by lender, tenor, purpose and what Ind AS calls 'borrowings'",
+  "tags": [
+   "flag-judgment",
+   "redflag",
+   "process",
+   "india",
+   "us",
+   "debt"
+  ],
+  "date": "2026-11-20",
+  "body": "RULE: before reacting to 'debt up 5x', classify it. BENIGN TYPES: (1) lease liabilities created by Ind AS 116/ASC 842 (Trent's 'borrowings' Rs 300 cr -> Rs 2,964 cr in FY21; use lease-adjusted net debt and pre-Ind AS EBITDA); (2) gold metal loans hedging gold inventory (Titan Rs 100 cr -> Rs 30,621 cr); (3) deferred government spectrum dues with long tenor (Bharti); (4) capex debt ahead of demand that is near-certain, for a sponsor that can survive delays and monetise assets (Reliance: net debt Rs 1.61 lakh cr Mar 2020, cleared by Rs 1.16 lakh cr Jio stake sales + Rs 53,124 cr rights by Jun 2020); (5) temporary bridge debt caused by a sovereign customer's payment delay (HAL FY19-20). DANGEROUS TYPES: (1) debt rising with negative CFO and rising receivables (growth funded by lenders, Cox & Kings); (2) short-term money funding long assets (DHFL CP vs 15-20-year loans; IL&FS); (3) debt in a business whose model should be negative-WC (travel, retail, telecom subscriptions); (4) listed-company guarantees or ICDs to group firms; (5) debt raised to pay dividends (GE 2017). METRICS: net debt/EBITDA (>4x outside utilities = red), interest cover (<2x = red), maturity profile (1-year bucket), fixed vs floating, lender type, and whether the debt sits at company or promoter level.",
+  "data": {
+   "benign": [
+    "leases",
+    "gold metal loans",
+    "govt spectrum deferrals",
+    "survivable capex ahead of proven demand",
+    "sovereign-delay bridge"
+   ],
+   "dangerous": [
+    "debt + negative CFO + rising receivables",
+    "short funds long assets",
+    "debt in negative-WC model",
+    "group guarantees",
+    "debt-funded dividends"
+   ],
+   "metrics": "ND/EBITDA, interest cover, 1-yr maturities, lender type"
+  },
+  "sources": [
+   "https://www.screener.in/company/TRENT/consolidated/",
+   "https://www.ril.com/sites/default/files/2023-01/Media-Release-19062020.pdf",
+   "https://www.screener.in/company/BHARTIARTL/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:false-alarm-trent-150x-pe-and-lease-debt",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:false-alarm-reliance-jio-debt",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:false-alarm-bharti-airtel-losses-debt",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:hidden-trap-cox-and-kings-brand",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:hidden-trap-dhfl-growth",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:balance-sheet-survives-cycle",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:flag-receivable-days-context",
+  "title": "Reading receivable days: who owes the money matters more than how many days",
+  "tags": [
+   "flag-judgment",
+   "redflag",
+   "process",
+   "india",
+   "us",
+   "receivables",
+   "working-capital"
+  ],
+  "date": "2026-11-20",
+  "body": "RULE: high or rising receivable days are a hypothesis about revenue quality; resolve it by counterparty, trend and industry norm. BENIGN WHEN: the debtor is a sovereign or AAA customer and the delay is budgetary and visible (HAL: debtor days 227 in FY19, CFO -Rs 7,700 cr; dues cleared FY21, CFO +Rs 15,263 cr); the industry norm is long (EPC, defence, B2B pharma exports to regulated markets) and the company is at or better than peers; days are falling as the company gains bargaining power (Polycab ~84-95 days FY15-16 -> 30-48). SUSPECT WHEN: (1) receivables or unbilled revenue grow faster than sales for 2+ years (Ricoh India; Manpasand per commentary); (2) a large share is owed by related parties (Gitanjali: group firms ~33% of receivables) or by unnamed foreign distributors (PC Jeweller UAE exports); (3) credit periods exceed regulatory or industry norms (Gitanjali-linked LoUs ~360 days vs 90-day norm); (4) receivable days jump right after a revenue surge (Vakrangee 157 -> 319 -> 729 -> 1,301 days); (5) receivables disappear via factoring at quarter end (GE), so low days can also mislead. TEST: receivable + unbilled + contract-asset days vs sales growth, related-party note (amounts owed by related parties), ageing schedule (>180 days share), provisions for doubtful debts, customer concentration; compare with the best peer.",
+  "data": {
+   "benign_if": "sovereign/AAA counterparty with visible delay; industry norm; falling trend",
+   "suspect_if": [
+    "outgrowing sales",
+    "related-party share",
+    "credit beyond norms",
+    "jump after revenue surge",
+    "factoring hides it"
+   ],
+   "test": "ageing + related-party note + peer days"
+  },
+  "sources": [
+   "https://www.screener.in/company/HAL/consolidated/",
+   "https://www.screener.in/company/POLYCAB/consolidated/",
+   "https://www.business-standard.com/amp/article/finance/pnb-fraud-case-lenders-seek-forensic-audit-of-gitanjali-group-s-books-118021500065_1.html"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:false-alarm-hal-receivable-days",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:hidden-trap-gitanjali-receivables",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:hidden-trap-ricoh-india-mnc-growth",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:beneish-m-score",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:flag-losses-dilution-context",
+  "title": "Reading losses and dilution: unit economics, what the money buys, and at what price",
+  "tags": [
+   "flag-judgment",
+   "redflag",
+   "process",
+   "india",
+   "us",
+   "dilution",
+   "losses"
+  ],
+  "date": "2026-11-20",
+  "body": "RULE (LOSSES): losses are benign when (1) unit economics are already positive (contribution margin per order/customer/store) and the losses are growth spending or a new segment (Eternal 2022-23; Amazon 1997-2002); (2) the loss is one-time and non-operating (Bharti FY20-21 AGR provision Rs 28,450 cr in one quarter while CFO stayed strong); (3) losses are investee/mark-to-market items around a profitable core (Info Edge). Losses are real when unit economics are negative and worsen with scale, when cash burn needs ever-larger raises, or when the 'path to profit' depends on competitors leaving. RULE (DILUTION): judge by price x purpose x buyer x per-share outcome. Benign: raising at high valuation for high-return growth, ideally small in % terms (Tesla 2020: $12 bn at ~$500 bn, ~1% per raise; Bajaj Finance QIPs at 5-8x book with EPS still up 17x FY15-26; Eternal's Rs 8,500 cr QIP at Rs 252.62 from domestic MFs); rights issues the promoter fully subscribes (Bharti 2019, Reliance 2020). Malignant: equity raised at depressed prices to survive, preferential allotments/warrants to obscure entities, convertible death spirals, heavy SBC (insight:us-redflag-sbc-dilution), or promoter selling into the raise. TEST: per-share metrics net of dilution (EPS, BVPS, FCF/share, 5-year diluted share count CAGR); who bought; use of proceeds vs subsequent capex/ROCE.",
+  "data": {
+   "losses_benign_if": "positive unit economics; one-time; investee/MTM",
+   "dilution_benign_if": "high price, growth purpose, small %, promoter/strong buyers, per-share metrics rise",
+   "dilution_malignant_if": "low price to survive; obscure preferential; SBC; promoter selling"
+  },
+  "sources": [
+   "https://inc42.com/buzz/zomato-raises-inr-8500-cr-via-qip-at-an-issue-price-of-inr-252-62",
+   "https://www.bloomberg.com/news/articles/2020-12-08/tesla-raising-up-to-5-billion-in-third-capital-raise-this-year",
+   "https://www.business-standard.com/amp/markets/news/bajaj-finance-sets-base-price-for-rs-8-800-crore-qip-at-rs-7-250-per-share-123110601250_1.html"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:false-alarm-eternal-zomato-losses-dilution",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:false-alarm-tesla-losses-dilution",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:false-alarm-bajaj-finance-negative-cfo-qips",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:false-alarm-bharti-airtel-losses-debt",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:us-redflag-sbc-dilution",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:flag-low-early-roce-context",
+  "title": "Reading low ROCE: denominator effects, gestation and incremental returns",
+  "tags": [
+   "flag-judgment",
+   "redflag",
+   "process",
+   "india",
+   "us",
+   "roce"
+  ],
+  "date": "2026-11-20",
+  "body": "RULE: a low current ROCE matters less than the ROCE on capital deployed 2-3 years ago (incremental ROCE) and whether today's capital base contains non-earning items. BENIGN WHEN: (1) the denominator holds large CWIP/new capacity not yet earning (Bharti ROCE 3-7% FY18-21 during network build and the price war -> 18% FY26; Apollo Hospitals 7% FY18 with new hospitals ramping -> 17%); (2) the capital base is inflated by investments marked to market or held at cost (Info Edge 2-4% ROCE around a ~58% margin core); (3) EPS is cyclically or one-off depressed (Trent 1% in FY21 -> 31% FY25). REAL WHEN: ROCE stays low after projects are commissioned (Reliance stayed 8-12% for a decade even after Jio matured, which capped returns at ~18% CAGR rather than multibagger rates); when repeated new capex keeps resetting ROCE without the old projects ever earning; when the industry's structure (fragmented, commoditised) prevents high returns at maturity. TEST: (a) ROCE excluding CWIP and non-operating investments; (b) incremental ROCE = change in EBIT / change in capital employed over 3-5 years; (c) segment ROCE for mature units; (d) management's stated payback/ROCE hurdle vs delivered.",
+  "data": {
+   "benign_if": "CWIP/new capacity in denominator; MTM investments; depressed EPS",
+   "real_if": "low after commissioning; perpetual capex resets; industry structure caps returns",
+   "test": "ROCE ex-CWIP/investments; incremental ROCE over 3-5 yrs"
+  },
+  "sources": [
+   "https://www.screener.in/company/RELIANCE/consolidated/",
+   "https://www.screener.in/company/BHARTIARTL/consolidated/",
+   "https://www.screener.in/company/APOLLOHOSP/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:false-alarm-reliance-jio-debt",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:false-alarm-info-edge-losses-low-roce",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:false-alarm-apollo-hospitals-promoter-pledge",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:buffett-retained-dollar-test",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:good-numbers-too-good",
+  "title": "Too-good numbers: smoothness, peer-beating margins and growth without a mechanism",
+  "tags": [
+   "flag-judgment",
+   "redflag",
+   "process",
+   "india",
+   "us",
+   "forensic",
+   "fraud"
+  ],
+  "date": "2026-11-20",
+  "body": "RULE: treat these 'green flags' as hypotheses too. (1) SMOOTHNESS: earnings steadier than the businesses' cycles allow, with regular small beats (GE for years before 2017-18). (2) MARGIN/ROCE OUTLIERS: margins or ROCE far above every peer in a commodity-like or low-ticket business (Vakrangee ~25% OPM and ~40% ROCE in rural kiosks; Wirecard margins from partners it did not control). (3) GROWTH ABOVE THE LEADER: a small player outgrowing the category leader with no new channel, technology or price advantage (Manpasand vs Parle Agro's Frooti; Ricoh India growing far faster than its own parent). (4) IMPROVING UNIT ECONOMICS THAT CAN'T BE CHECKED outside company reports (Luckin's items per order, refuted by store video). (5) CHEAP + OPAQUE: low P/E with thin disclosure and auditor churn (Rajesh Exports). (6) CLEAN CASH THAT DOESN'T EARN (Satyam). (7) EPS GROWTH VIA DEALS + non-GAAP adjustments (Valeant). (8) LOW NPAs IN A FAST-GROWING LOAN BOOK (Yes Bank, DHFL). COMMON THREAD: each good number could only be verified through the company's own accounts; outsiders had no independent read (store counts, subscriber data, sovereign payments, industry volumes). TEST: for every standout metric ask 'what mechanism produces this, and what outside data would show it?'. If none exists, the number gets no credit until it does.",
+  "data": {
+   "patterns": [
+    "smoothness",
+    "margin outliers",
+    "growth above leader",
+    "uncheckable unit economics",
+    "cheap+opaque",
+    "idle cash",
+    "deal-driven EPS",
+    "low NPA + fast growth"
+   ],
+   "test": "mechanism + outside verification"
+  },
+  "sources": [
+   "https://www.nasdaq.com/articles/fall-blue-chip-general-electrics-horrible-2018-2018-12-10",
+   "https://www.outlookbusiness.com/markets-5/trend-19/no-longer-streets-manpasand-4438",
+   "https://www.screener.in/company/VAKRANGEE/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "case_study:hidden-trap-ge-smooth-earnings",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:hidden-trap-vakrangee-roce-debt-free",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:hidden-trap-manpasand-growth",
+    "rel": "illustrates"
+   },
+   {
+    "to": "case_study:hidden-trap-luckin-growth",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:flag-override-template",
+  "title": "Flag override template: flag -> context questions -> evidence that clears -> evidence that confirms",
+  "tags": [
+   "flag-judgment",
+   "redflag",
+   "process",
+   "india",
+   "us",
+   "checklist",
+   "template"
+  ],
+  "date": "2026-11-20",
+  "body": "HOW TO USE: every flag that fires on a candidate gets one row, written down before a decision, and saved as a decision/analysis record (L10). Hard disqualifiers (fraud signals, auditor exit citing information denial, related-party diversion, fake-cash signals) are NOT overridable by this template. ROW FORMAT: FLAG (metric, value, years) | CONTEXT QUESTIONS | EVIDENCE THAT CLEARS (must come from outside the company's own P&L where possible) | EVIDENCE THAT CONFIRMS | VERDICT (cleared / open / confirmed) | WHAT WOULD CHANGE MY MIND | REVIEW DATE. EXAMPLES: High P/E -> Is EPS depressed? Reverse DCF implied growth vs reinvestment x ROIC? P/E vs own median? -> clears: implied growth below demonstrated, unit data shows runway; confirms: P/E >2x own median, slowing unit growth. Negative FCF/low CFO -> What asset is being built? Whose working capital? -> clears: own inventory/sovereign debtor/high-ROCE capex; confirms: receivables to related or unknown parties, WC sign contradicts model. Rising debt -> Lease, GML, govt dues or bank/CP? Tenor? -> clears: lease/GML/long-tenor; confirms: short funds long, debt + negative CFO. Pledge -> six checks (insight:flag-pledge-severity). High ROE/ROCE -> DuPont; CFO/PAT; peer gap; lender growth vs system. Cash pile -> yield, location, cash+debt. Receivables -> counterparty, ageing, related-party share. Losses/dilution -> unit economics; price x purpose x buyer; per-share outcome. Low margin -> ROCE and WC days. RULES: a flag cleared only by management's explanation stays OPEN; if 3+ flags stay open, no position without a variant view; record false alarms and missed traps afterwards to calibrate the checklist.",
+  "data": {
+   "columns": [
+    "flag",
+    "context questions",
+    "clearing evidence (external)",
+    "confirming evidence",
+    "verdict",
+    "what changes my mind",
+    "review date"
+   ],
+   "non_overridable": [
+    "fraud signals",
+    "auditor exit citing denied info",
+    "related-party diversion",
+    "fake-cash signals"
+   ],
+   "rule": "management explanation alone = open; 3+ open = no position without variant view"
+  },
+  "sources": [
+   "https://www.screener.in/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "decision:depth-and-context-standards",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:disqualifiers",
+    "rel": "about"
+   },
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "about"
+   },
+   {
+    "to": "strategy:variant-perception",
+    "rel": "about"
+   },
+   {
+    "to": "insight:flag-pledge-severity",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:false-alarm-vs-trap-lessons",
+  "title": "What separated false alarms from hidden traps (17 vs 14 cases)",
+  "tags": [
+   "flag-judgment",
+   "redflag",
+   "process",
+   "india",
+   "us",
+   "base-rate",
+   "calibration"
+  ],
+  "date": "2026-11-20",
+  "body": "From 17 false-alarm and 14 hidden-trap cases (India 21, US/global 10): (1) VERIFIABILITY OUTSIDE THE ACCOUNTS: every false alarm had a mechanism an outsider could check independently: store counts and footfall (DMart, Trent), subscribers/engagement (Netflix, Bharti), gold prices and owned-store inventory (Titan), sovereign counterparty and order book (HAL), listed investee prices (Info Edge), deliveries/factory output (Tesla). Every trap's good number could only be checked through company-supplied data (Satyam cash, Wirecard TPAs, Luckin orders, Manpasand distributors, Gitanjali group receivables). (2) CASH EVENTUALLY ARRIVED in false alarms (HAL FY21, Bharti CFO Rs 1.22 lakh cr, Netflix FCF 2020+, Reliance stake sales); in traps, cash never arrived or vanished. (3) GOVERNANCE was clean or improving in false alarms (Bharti, Tata/Titan, Bajaj, Apollo reducing pledge); traps carried governance flags (auditor exits, promoter stake falls, related-party deals, regulator action). (4) WHO TOOK THE OTHER SIDE: false-alarm dilution was bought by strong investors or the promoter; trap capital came from short-term lenders/MFs. (5) MANY FALSE ALARMS WERE ONLY HALF FALSE: high P/E stopped working at ~2x own median (DMart, Asian Paints, Pidilite, Page, Bajaj Finance, HDFC Bank all had 4-6 flat years after peak multiples) and Reliance's low ROCE capped returns. So 'flag false for the business' and 'flag false for the price' are separate verdicts. (6) Our checklist would have wrongly rejected Titan (CFO/PAT 0.62), Apollo (pledge) and HAL (receivables), and wrongly passed Vakrangee on CFO/PAT: calibrate, don't abandon.",
+  "data": {
+   "n_false_alarms": 17,
+   "n_traps": 14,
+   "separators": [
+    "outside verifiability",
+    "cash arrives",
+    "governance trend",
+    "quality of capital providers"
+   ],
+   "half_false": "high P/E bites at ~2x own median",
+   "checklist_errors": {
+    "false_rejects": [
+     "Titan",
+     "Apollo Hospitals",
+     "HAL"
+    ],
+    "false_pass": [
+     "Vakrangee (CFO/PAT)"
+    ]
+   }
+  },
+  "sources": [
+   "https://www.screener.in/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:flag-override-template",
+    "rel": "about"
+   },
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "about"
+   },
+   {
+    "to": "decision:depth-and-context-standards",
+    "rel": "about"
+   },
+   {
+    "to": "insight:disqualifiers",
+    "rel": "about"
    }
   ]
  }

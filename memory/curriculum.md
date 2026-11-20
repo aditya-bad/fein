@@ -58,7 +58,6 @@ companies; written post-mortems on misses. Until then: no idea-pitching (except 
 0e. **YouTube/podcasts** — blocked until transcript access (see My Requirements).
 1. Blind drill packets set 1 (India + US) — packet builder running 20-Nov.
 2. Back-test the insider-buying (Form 4 cluster) filter on US data — method calibration.
-3. Accounting deep-dive: reading cash-flow statements, working-capital games, Ind AS vs US GAAP differences.
 4. Valuation craft: reverse DCF practice, sector multiples history, when cheap stays cheap.
 5. Capital allocation scorecards (buybacks, M&A, dilution) — India & US examples.
 6. Behavioural finance applied: our own bias checklist; pre-mortem templates.
@@ -72,6 +71,7 @@ companies; written post-mortems on misses. Until then: no idea-pitching (except 
 India slightly > US; both always in scope.
 
 ## Done
+- 20 Nov 2026: Accounting forensics course (7 lessons, exercises, 30-min first-read protocol + scoring template; 25 records). TODO: log every scored company and check outcomes in 2–3 yrs to calibrate thresholds.
 - 20 Nov 2026: US toolkit — tools/sec_fetch.py (EDGAR facts/filings/full-text/Form 4/13F), US base rates & SEC red flags (21 records).
 - 19–20 Nov 2026: playbook, winners' edges, 100 case studies, 19 sectors, 75 investors/groups, cycles,
   frauds, primary sources, base rates, NSE/BSE tools, promise tracker pilots (2).
