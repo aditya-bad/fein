@@ -26,6 +26,15 @@ Last updated: 2026-11-19
   Blocked from foreign IP: Grid-India, e-way bill, IPA ports, JPC steel, data.gov.in.
 - Pledge field gotcha: use `percPromoterShares`, not `percSharesPledged`.
 
+## US access (tested 20-Nov-2026) — see research_notes/US toolkit Nov 2026/us_toolkit.md
+- `tools/sec_fetch.py`: facts (≈19 line items + forensic checks), concept, frames, filings (form/8-K item
+  filter e.g. 4.01/4.02), doc, search (EDGAR full-text), insider (Form 4, 10b5-1 flag, clusters),
+  holdings13f, selftest. UA "fein-research admin@example.com", ≥0.15 s between requests.
+- Frames API has filer scaling errors → sanity-check outliers.
+- Transcripts: Motley Fool pages + SEC 8-K exhibits work; Seeking Alpha 403.
+- Prices: Yahoo v8 chart API (adjusted) works; Nasdaq API (browser UA, 10y, unadjusted); Stooq blocked.
+- Scheduled tasks (create_trigger) blocked by auto-mode classifier — user must add a permission rule.
+
 ## Blocked / missing
 - screener.in custom raw queries need login → ask user for a Screener account (paid w/ export ideal).
 - YouTube: yt-dlp blocked ("confirm you're not a bot"); youtubetotranscript 403 → need a

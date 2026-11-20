@@ -1,0 +1,657 @@
+[
+ {
+  "type": "insight",
+  "id": "insight:us-ipo-long-run-returns",
+  "title": "US IPOs underperform for 3 years after listing; small unprofitable IPOs worst (Ritter 1980-2024)",
+  "tags": [
+   "us",
+   "base-rate",
+   "ipo"
+  ],
+  "body": "Jay Ritter's IPO statistics (Table 16/16b, updated 16-Feb-2026; 9,253 US operating-company IPOs 1980-2024, returns through Dec-2025, measured from first closing price, 3-year buy-and-hold incl. dividends). Average IPO: first-day return 18.9%, 3-yr BHR +19.1%, market-adjusted -20.5%, style-adjusted (size and book-to-market matched) -8.9%. By pre-IPO sales (2025$): under $10m sales -16.2% raw, -52.3% vs market; $100-500m sales +39.1% raw, -2.6% vs market, +5.4% style-adjusted. By profitability: unprofitable IPOs (3,926) -0.5% raw / -30.7% market-adjusted; profitable (5,327) +33.6% / -13.0%. Worst cell: unprofitable with sales under $100m: -10.3% raw, -40.9% vs market. Lesson: buying the average US IPO in its first 3 years is a negative-expectancy bet versus an index fund; the penalty is concentrated in small, young, loss-making issuers (the ones that look most like 'future multibaggers'). Larger, profitable IPOs roughly match style benchmarks. Edge, if any, comes from waiting for the post-IPO de-rating, lock-up expiry (typically 180 days) and the first few 10-Qs, not from subscribing.",
+  "data": {
+   "sample": "9,253 IPOs 1980-2024",
+   "avg_first_day": "18.9%",
+   "bhr_3y": "19.1%",
+   "mkt_adj_3y": "-20.5%",
+   "style_adj_3y": "-8.9%",
+   "unprofitable_mkt_adj": "-30.7%",
+   "profitable_mkt_adj": "-13.0%",
+   "sales_lt_10m_mkt_adj": "-52.3%",
+   "sales_100_500m_style_adj": "+5.4%",
+   "lesson": "Don't buy small loss-making IPOs at listing; revisit after lock-up and 2-4 public quarters."
+  },
+  "sources": [
+   "https://site.warrington.ufl.edu/ritter/files/IPO-Statistics.pdf",
+   "https://site.warrington.ufl.edu/ritter/ipo-data/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:bessembinder",
+    "rel": "similar_to"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:us-ipo-return-distribution",
+  "title": "US IPO 3-year return distribution: 60% lose money, 38.5% lose over half, 0.5% go 10x+",
+  "tags": [
+   "us",
+   "base-rate",
+   "ipo",
+   "multibagger"
+  ],
+  "body": "Ritter Table 16e (9,195 operating-company IPOs 1975-2021, 3-year buy-and-hold from first close): BHR below -50%: 38.5%; -50% to 0%: 21.5%; 0-50%: 14.5%; 50-100%: 9.5%; 100-200%: 8.3%; 200-500%: 6.0%; 500-1,000%: 1.3%; above 1,000% (11x+): 0.5% (39 of 9,195). Mean 38.1% but median 2.6% - the mean is carried by a thin right tail, the same skew Bessembinder found for all stocks. For IPOs with LTM sales >= $100m (2025$; 4,112 IPOs) the left tail shrinks: 25.9% lose more than half (vs 38.5%), and 51.2% are positive. Lesson for a multibagger hunter: the 10x IPO exists but is ~1-in-200 over 3 years; a basket of small IPOs loses to the market. Requiring real revenue (>= $100m) cuts the wipe-out rate by about a third. Base rate to quote before any IPO enthusiasm.",
+  "data": {
+   "lt_minus50": "38.5%",
+   "minus50_0": "21.5%",
+   "gt_1000pct": "0.5%",
+   "mean": "38.1%",
+   "median": "2.6%",
+   "sales_ge_100m_lt_minus50": "25.9%"
+  },
+  "sources": [
+   "https://site.warrington.ufl.edu/ritter/files/IPO-Statistics.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:bessembinder",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:us-ipo-long-run-returns",
+    "rel": "part_of"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:us-size-effect-by-era",
+  "title": "US small/micro-cap premium: real before 1980, absent since - but huge drawdowns either way",
+  "tags": [
+   "us",
+   "base-rate",
+   "small-cap"
+  ],
+  "body": "Computed by us from Ken French's 'Portfolios Formed on ME' (value-weighted size deciles, NYSE breakpoints, CRSP through Sep-2026). Compounded annual returns: smallest decile (Lo 10, essentially micro-caps) 12.1% vs largest decile (Hi 10) 10.1% over Jul-1926 to Sep-2026. But by era: 1926-1979 Lo10 13.6% vs Hi10 8.2%; 1980-2026 Lo10 10.4% vs Hi10 12.3%. Decades: 1980s-90s 11.9% vs 18.2% (large won); 2000-09 8.9% vs -2.3% (small won big); 2010-19 8.6% vs 13.6%; 2020-Sep 2026 10.4% vs 16.5%. Since 1964 Lo10 11.4% vs Hi10 10.4%. Max drawdown of Lo10 -89% (1929-32) and -62% since 1980, vs -82% / -49% for Hi10. SMB factor (small minus big) compounded +1.5%/yr 1927-2026 but -1.0%/yr 2007-2026. Lesson: 'small caps always outperform' is a myth for the US over the last 45 years; the premium is regime-dependent (cheap small caps after large-cap manias, e.g. 2000) and micro-caps carry junk. Small size is where research edge is possible (less coverage), not a free premium. Contrast with India where small/mid caps had long runs.",
+  "data": {
+   "lo10_1926_2026": "12.1%",
+   "hi10_1926_2026": "10.1%",
+   "lo10_1980_2026": "10.4%",
+   "hi10_1980_2026": "12.3%",
+   "lo10_2000s": "8.9%",
+   "hi10_2000s": "-2.3%",
+   "lo10_maxdd": "-89%",
+   "smb_2007_2026": "-1.0%",
+   "method": "compounded monthly VW decile returns; 2026 partial to Sep"
+  },
+  "sources": [
+   "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+   "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Portfolios_Formed_on_ME_CSV.zip"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:bessembinder",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:us-factor-premia-by-decade",
+  "title": "US factor premia by decade (Fama-French): profitability steadiest; value and momentum flat since 2007",
+  "tags": [
+   "us",
+   "base-rate",
+   "factor",
+   "value",
+   "momentum"
+  ],
+  "body": "Computed by us from Ken French data (F-F 3 factors, 5 factors 2x3, momentum; CRSP through Sep-2026); compounded annual long-short returns. Full history: Mkt-RF 6.8% (1927-2026), HML value 3.5%, MOM 6.1%, SMB 1.5%; since Jul-1963 RMW profitability 2.7%, CMA investment (conservative minus aggressive) 2.8%. HML by decade: 1940s 9.6, 50s 3.3, 60s 3.2, 70s 7.7, 80s 5.6, 90s -0.4, 2000s 7.4, 2010s -2.6, 2020-26 0.7. MOM: 50s 10.9, 60s 11.1, 70s 9.3, 80s 8.6, 90s 13.7, 2000s -2.0 (2009 crash), 2010s 2.6, 2020-26 2.5. RMW: 60s 1.3, 70s -0.7, 80s 4.9, 90s 2.2, 2000s 7.6, 2010s 1.2, 2020-26 1.7. CMA: 70s 6.2, 80s 5.5, 2000s 6.5, ~0 in 90s/2010s/2020s. Split 1964-2006 vs 2007-2026: HML 5.4 -> -2.0; MOM 9.1 -> 0.3; RMW 2.7 -> 2.6; CMA 4.1 -> -0.1. Lesson: published factors decay and can go flat for 15-20 years (McLean-Pontiff post-publication decay); profitability/quality is the most persistent and pairs with value (cheap AND profitable). Do not build the US system on 'buy cheap P/B' alone. Momentum works on average but crashes after bear markets.",
+  "data": {
+   "hml_1964_2006": "5.4%",
+   "hml_2007_2026": "-2.0%",
+   "mom_1964_2006": "9.1%",
+   "mom_2007_2026": "0.3%",
+   "rmw_1964_2006": "2.7%",
+   "rmw_2007_2026": "2.6%",
+   "cma_1964_2006": "4.1%",
+   "cma_2007_2026": "-0.1%",
+   "mkt_rf_1927_2026": "6.8%",
+   "note": "compounded annual long-short; 2026 through Sep"
+  },
+  "sources": [
+   "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+   "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_5_Factors_2x3_CSV.zip",
+   "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Momentum_Factor_CSV.zip"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "strategy:buffett-munger",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:spiva-us-2025",
+  "title": "SPIVA US year-end 2025: 79% of active large-cap funds lagged the S&P 500; 89% over 5 years",
+  "tags": [
+   "us",
+   "base-rate",
+   "luck-vs-skill"
+  ],
+  "body": "S&P Dow Jones Indices SPIVA U.S. Year-End 2025: 79% of active large-cap US equity funds underperformed the S&P 500 in calendar 2025 (65% in 2024) - the fourth-worst year in the scorecard's 25-year history, in the third straight year that large caps beat mid and small caps. Large-cap underperformance rates: 1-yr 79%, 3-yr 67%, 5-yr 89%. 2025 single-year: 55% of mid-cap and 41% of small-cap funds lagged their benchmarks (small-cap managers did better when their index was weak). SPIVA Institutional 2025: 67% of institutional accounts and 75% of wrap accounts lagged the S&P 500 even gross of fees. Earlier SPIVA reports put the 15-20 year large-cap failure rate around 90% (unverified for YE2025; scorecard PDF blocked from our IP). Lesson: the default for US core equity is an index fund; an active US sleeve must justify itself with a specific, repeatable edge (small/under-covered names, forensic filing work, insider signals), and judge itself against SPY after fees and taxes.",
+  "data": {
+   "lc_1y": "79%",
+   "lc_3y": "67%",
+   "lc_5y": "89%",
+   "lc_2024_1y": "65%",
+   "midcap_1y": "55%",
+   "smallcap_1y": "41%",
+   "institutional_gross": "67%"
+  },
+  "sources": [
+   "https://www.spglobal.com/spdji/en/spiva/article/spiva-us-year-end-2025/",
+   "https://investmentnews.com/equities/active-managers-stumble-again-in-2025-as-large-caps-dominate/265541",
+   "https://www.spglobal.com/spdji/en/documents/spiva/spiva-institutional-scorecard-year-end-2025.pdf"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:luck-vs-skill",
+    "rel": "illustrates"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "source",
+  "id": "source:sec-edgar-apis",
+  "title": "SEC EDGAR JSON APIs (submissions, companyfacts, companyconcept, frames) - free, tested",
+  "tags": [
+   "us",
+   "process",
+   "data-access"
+  ],
+  "body": "Tested 2026-11-20, all HTTP 200 with User-Agent 'fein-research admin@example.com', no key. (1) data.sec.gov/submissions/CIK##########.json - company metadata (SIC, FYE, tickers, former names) and last ~1,000 filings with form, date, accession, 8-K items, primary doc; older history in paged files. (2) data.sec.gov/api/xbrl/companyfacts/CIK##########.json - every XBRL fact ever filed (Apple: 3.9MB) with start/end, form, fiscal period, filed date, accession, so restated values and as-first-reported values are both recoverable. (3) companyconcept/CIK/us-gaap/TAG.json - one line item. (4) frames/us-gaap/TAG/USD/CY2024.json - one item across all filers (Revenues CY2024: 2,513 filers; NetIncomeLoss CY2025: 5,723) = free cross-sectional screen. Gotchas: frames contain filer scaling errors (one CY2025 NetIncomeLoss value was $1.157 trillion); companies switch tags (Revenues -> RevenueFromContractWithCustomer...); 10-Q cash flows are year-to-date; fiscal Q4 is not filed separately. Archives: www.sec.gov/Archives/edgar/data/CIK/ACCNODASH/index.json lists filing files. Ticker map: www.sec.gov/files/company_tickers.json. Limit 10 req/s. Wrapped by tools/sec_fetch.py.",
+  "data": {
+   "tool": "tools/sec_fetch.py",
+   "rate_limit": "10 req/s",
+   "auth": "none, descriptive UA required",
+   "tested": "2026-11-20"
+  },
+  "sources": [
+   "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+   "https://www.sec.gov/os/accessing-edgar-data",
+   "https://data.sec.gov/submissions/CIK0000320193.json"
+  ],
+  "confidence": "verified",
+  "date": "2026-11-20"
+ },
+ {
+  "type": "source",
+  "id": "source:sec-full-text-search",
+  "title": "EDGAR full-text search (efts.sec.gov) - grep all filings since 2001 for red-flag phrases",
+  "tags": [
+   "us",
+   "process",
+   "data-access",
+   "redflag",
+   "alt-data"
+  ],
+  "body": "Endpoint efts.sec.gov/LATEST/search-index?q=\"phrase\"&forms=10-K,8-K&dateRange=custom&startdt=YYYY-MM-DD&enddt=YYYY-MM-DD (&ciks=, &from= offset; 100 hits/page). Returns JSON with filer names/tickers, SIC, state, form, file type (so exhibits like EX-99.2 are individually searchable) and 8-K item codes. Tested 2026-11-20: '\"going concern\"' in 10-Ks: 10,000+ hits (capped); '\"material weakness\"' in 8-Ks 1-Oct to 20-Nov-2026: 254 hits, including Item 4.02 non-reliance filings (e.g. AAON 8-K 9-Nov-2026 items 2.02,4.02,7.01); '\"prepared remarks\"' in 8-Ks same window: 119 hits (Snap EX-99.2 prepared remarks). Use cases: weekly sweep for new 4.01/4.02, 'substantial doubt', 'material weakness', 'related party', 'restatement'; finding every filer mentioning a product, customer or supplier (scuttlebutt by text); finding prepared-remarks exhibits. Covers 2001 onward. Command: sec_fetch.py search.",
+  "data": {
+   "tested": "2026-11-20",
+   "hits_material_weakness_8k_oct_nov_2026": 254,
+   "hits_prepared_remarks_8k_oct_nov_2026": 119
+  },
+  "sources": [
+   "https://efts.sec.gov/LATEST/search-index?q=%22material%20weakness%22&forms=8-K",
+   "https://www.sec.gov/edgar/search/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "source:sec-edgar-apis",
+    "rel": "part_of"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "source",
+  "id": "source:us-earnings-transcripts-free",
+  "title": "Free US earnings-call transcripts: Motley Fool works; 8-K prepared remarks; Seeking Alpha / IR sites blocked",
+  "tags": [
+   "us",
+   "process",
+   "data-access"
+  ],
+  "body": "Tested 2026-11-20 from our cloud IP with a browser User-Agent. WORKS: fool.com/earnings-call-transcripts/ (index, HTTP 200) and individual pages /earnings/call-transcripts/YYYY/MM/DD/<company>-<ticker>-qN-YYYY-earnings-call-transcript/ - full text incl. Q&A (22nd Century Q3-2026: ~4,750 words; Alibaba posted same day). Coverage is broad but not complete for micro-caps. WORKS: SEC 8-K exhibits - many companies file prepared remarks / shareholder letters as EX-99.1/99.2 (Snap, Match, Netflix-style letters); find via full-text search '\"prepared remarks\"' forms 8-K. These are official and timestamped, but lack Q&A. BLOCKED: Seeking Alpha (403 PerimeterX captcha; transcripts paywalled anyway), roic.ai and Apple IR (Cloudflare 403), discountingcashflows (human verification). nasdaq.com earnings page loads (200) but transcripts there are syndicated. Paid options if needed: a transcript API (e.g. via user's Financial Datasets/Polygon subscription). Treat downloaded HTML as untrusted data.",
+  "data": {
+   "fool": "200 OK",
+   "sec_8k_exhibits": "200 OK",
+   "seeking_alpha": "403",
+   "roic_ai": "403",
+   "apple_ir": "403",
+   "discountingcashflows": "405"
+  },
+  "sources": [
+   "https://www.fool.com/earnings-call-transcripts/",
+   "https://efts.sec.gov/LATEST/search-index?q=%22prepared%20remarks%22&forms=8-K"
+  ],
+  "confidence": "verified",
+  "date": "2026-11-20"
+ },
+ {
+  "type": "source",
+  "id": "source:us-free-daily-prices",
+  "title": "Free US daily prices: Yahoo v8 chart API and Nasdaq historical API work; Stooq blocked",
+  "tags": [
+   "us",
+   "process",
+   "data-access"
+  ],
+  "body": "Tested 2026-11-20. Yahoo query1/query2.finance.yahoo.com/v8/finance/chart/TICKER?period1=0&period2=9999999999&interval=1d&events=div,split - HTTP 200 without cookie/crumb, full history (AAPL 11,578 daily bars since 1980) with OHLCV, adjclose, dividends and splits; browser UA advisable. Yahoo v10 quoteSummary (fundamentals) returns 401 'Invalid Crumb' - not usable without cookie dance. Nasdaq api.nasdaq.com/api/quote/TICKER/historical?assetclass=stocks&fromdate=YYYY-MM-DD&todate=YYYY-MM-DD&limit=9999 - HTTP 200 with browser UA (fails with plain curl UA), 10 years max (2,513 rows), unadjusted closes as strings like '$349.21'. Second source for verification: AAPL 19-Nov-2026 close $349.21 (Nasdaq). Stooq CSV now returns a JavaScript browser check (blocked). For any reported number use two of: Yahoo, Nasdaq, SEC filing, Google Finance via search.",
+  "data": {
+   "yahoo_chart": "200, full history, adjusted",
+   "yahoo_quotesummary": "401 crumb",
+   "nasdaq_historical": "200 with browser UA, 10y",
+   "stooq": "JS challenge"
+  },
+  "sources": [
+   "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=5d&interval=1d",
+   "https://api.nasdaq.com/api/quote/AAPL/historical?assetclass=stocks&limit=10"
+  ],
+  "confidence": "verified",
+  "date": "2026-11-20"
+ },
+ {
+  "type": "source",
+  "id": "source:fama-french-ritter-data",
+  "title": "Free academic base-rate data: Ken French data library and Jay Ritter IPO statistics (both downloadable)",
+  "tags": [
+   "us",
+   "global",
+   "base-rate",
+   "process"
+  ],
+  "body": "Ken French Data Library (mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) - HTTP 200; CSV zips download directly (e.g. ftp/F-F_Research_Data_5_Factors_2x3_CSV.zip, F-F_Momentum_Factor_CSV.zip, Portfolios_Formed_on_ME_CSV.zip). Current files built from CRSP through Sep-2026. Monthly and annual factor returns from Jul-1926 (5-factor from Jul-1963), sorted portfolios on size, B/M, profitability, investment, momentum, industries; also international and emerging-market factor sets (India is inside EM). Jay Ritter IPO data (site.warrington.ufl.edu/ritter/ipo-data/) - IPO-Statistics.pdf (1.36MB, tables updated Feb-2026) with first-day returns, 3-yr buy-and-hold by sales, profitability, VC-backing, dual-class, price-to-sales; pdftotext extracts cleanly. Use these to compute base rates ourselves rather than quoting blog summaries. SPIVA site (spglobal.com) returns 403 to our IP - use search snippets / press.",
+  "data": {
+   "french": "200, CSV zips",
+   "ritter": "200, PDF",
+   "spglobal_spiva": "403"
+  },
+  "sources": [
+   "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+   "https://site.warrington.ufl.edu/ritter/files/IPO-Statistics.pdf"
+  ],
+  "confidence": "verified",
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:us-redflag-going-concern",
+  "title": "US red flag: going-concern language (substantial doubt) in 10-K/10-Q",
+  "tags": [
+   "us",
+   "redflag",
+   "process",
+   "blowup"
+  ],
+  "body": "Under US GAAP (ASC 205-40, effective 2016) management must evaluate each annual and interim period whether conditions raise 'substantial doubt about the entity's ability to continue as a going concern' within one year after the financial statements are issued, and disclose it plus mitigating plans. Auditors (PCAOB AS 2415) add an explanatory paragraph to the opinion when doubt remains. Where to look: auditor's report in Item 8, Note 1 / 'Liquidity and going concern', MD&A liquidity section, Item 1A. Search: sec_fetch.py search '\"substantial doubt\"' --forms 10-K,10-Q. Interpretation: a first-time going-concern paragraph usually means an imminent dilutive raise, debt covenant breach or Chapter 11; equity is often wiped or massively diluted (ATM programs, toxic convertibles, reverse splits). It is common in pre-revenue biotech/SPAC-era names, so check runway: cash / quarterly operating cash burn under 4 quarters is the danger zone. Disappearance of the paragraph after a real financing is a turnaround signal worth noting. Lesson: treat as a disqualifier for long-term holds unless the thesis is explicitly a distressed/turnaround bet sized for zero.",
+  "data": {
+   "standard": "ASC 205-40; PCAOB AS 2415",
+   "search_phrase": "\"substantial doubt\"",
+   "rule_of_thumb": "runway < 4 quarters of burn"
+  },
+  "sources": [
+   "https://pcaobus.org/oversight/standards/auditing-standards/details/AS2415",
+   "https://www.fasb.org/page/getarticle?uid=fasb_Media_Advisory_08-27-14"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:avoid-ruin",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:us-redflag-icfr-material-weakness",
+  "title": "US red flag: material weakness in internal control (SOX 404, Item 9A)",
+  "tags": [
+   "us",
+   "redflag",
+   "governance",
+   "process"
+  ],
+  "body": "SOX 404(a) requires management's annual assessment of internal control over financial reporting (ICFR), reported in 10-K Item 9A; 404(b) requires an auditor attestation for accelerated and large accelerated filers (non-accelerated filers and emerging growth companies are exempt - so small caps and recent IPOs often have no auditor ICFR opinion at all). A 'material weakness' means a reasonable possibility that a material misstatement will not be prevented or detected on time. Typical causes: revenue recognition, IT general controls, inventory, tax, insufficient accounting staff after rapid growth or acquisitions. Look for: 'not effective' in Item 9A, adverse auditor ICFR opinion, repeated weaknesses (unremediated over 2+ years is much worse than a one-off), weaknesses tied to revenue, and combos with CFO/auditor turnover. Tested 2026-11-20: 254 8-K documents mentioned 'material weakness' between 1-Oct and 20-Nov-2026. Lesson: material weakness + revenue-related + management turnover is a classic precursor of restatement (8-K Item 4.02); the numbers in the screens you used may not be real.",
+  "data": {
+   "where": "10-K Item 9A; auditor report Item 8",
+   "exempt_from_404b": "non-accelerated filers, EGCs",
+   "search_phrase": "\"material weakness\""
+  },
+  "sources": [
+   "https://www.sec.gov/rules-regulations/2007/06/management-s-report-internal-control-over-financial-reporting",
+   "https://efts.sec.gov/LATEST/search-index?q=%22material%20weakness%22&forms=8-K"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "part_of"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:us-redflag-8k-401-402",
+  "title": "US red flags in 8-Ks: Item 4.01 auditor change and Item 4.02 non-reliance (restatement)",
+  "tags": [
+   "us",
+   "redflag",
+   "governance",
+   "fraud",
+   "process"
+  ],
+  "body": "8-Ks are due within 4 business days. Item 4.01 'Changes in Registrant's Certifying Accountant': company must say whether the auditor resigned, declined to stand or was dismissed, and disclose any 'disagreements' or 'reportable events' (e.g. material weaknesses) in the last two years; the departing auditor's letter agreeing/disagreeing is filed as Exhibit 16.1. Red flags: auditor RESIGNS (vs routine rotation/fee tender), change shortly before the 10-K deadline, step-down from Big-4 to a tiny firm, any disclosed disagreement, repeated changes. Item 4.02 'Non-Reliance on Previously Issued Financial Statements': prior financials should no longer be relied upon - a 'Big R' restatement (vs quiet 'little r' revisions inside a 10-K). Also watch 10-K Item 9 (changes in and disagreements with accountants), NT 10-K / NT 10-Q late-filing notices (Form 12b-25), and 8-K 5.02 sudden CFO departure. Tool: sec_fetch.py filings TICKER --form 8-K --items 4.01,4.02 (submissions JSON carries item codes) and full-text search for market-wide sweeps. Example found in test: AAON 8-K 9-Nov-2026 carried items 2.02, 4.02, 7.01. Lesson: any 4.02 or auditor resignation = stop, re-underwrite from scratch, assume prior numbers are wrong.",
+  "data": {
+   "deadline": "4 business days",
+   "exhibit": "16.1 auditor letter",
+   "related": "NT 10-K (12b-25), 8-K 5.02, 10-K Item 9",
+   "test_example": "AAON 0000824142-26-000083"
+  },
+  "sources": [
+   "https://www.sec.gov/files/form8-k.pdf",
+   "https://efts.sec.gov/LATEST/search-index?q=%22material%20weakness%22&forms=8-K"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "part_of"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:us-redflag-related-party-nongaap",
+  "title": "US red flags: related-party transactions and non-GAAP vs GAAP gaps",
+  "tags": [
+   "us",
+   "redflag",
+   "governance",
+   "process"
+  ],
+  "body": "Related parties: disclosed in the financial-statement footnote (ASC 850) and, for transactions above $120,000 with directors, officers, 5% holders or their families, in Regulation S-K Item 404 - usually in the DEF 14A proxy ('Certain Relationships and Related Transactions', incorporated into 10-K Item 13). Watch: leases from the CEO, purchases from founder-owned suppliers, loans to insiders (banned for executives by SOX 402 at US issuers, so a loan is itself a flag), family members on payroll, aircraft use. US companies have no 'promoter group', but founder-controlled firms (dual-class) can have the same tunnelling risk. Non-GAAP: Regulation G and S-K Item 10(e) require reconciliation to the nearest GAAP measure with equal or greater prominence. Flags: 'adjusted EBITDA' that excludes stock-based comp, 'one-time' restructuring every year, adding back acquisition costs for serial acquirers, adjusted EPS growing while GAAP EPS falls, and a widening gap between adjusted net income and CFO. Check via the 8-K EX-99.1 earnings release reconciliation tables and compare with XBRL GAAP net income (sec_fetch.py facts). Lesson: value the business on GAAP owner earnings minus real SBC, not on management's adjusted metrics.",
+  "data": {
+   "rp_threshold": "$120,000 (S-K Item 404)",
+   "where": "DEF 14A, 10-K Item 13, RP footnote",
+   "nongaap_rules": "Reg G; S-K Item 10(e)"
+  },
+  "sources": [
+   "https://www.sec.gov/rules-regulations/staff-guidance/compliance-disclosure-interpretations/non-gaap-financial-measures",
+   "https://www.ecfr.gov/current/title-17/chapter-II/part-229/subpart-229.400/section-229.404"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "part_of"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:us-redflag-sbc-dilution",
+  "title": "US-specific: stock-based compensation is a real cost - check SBC/FCF and diluted share count",
+  "tags": [
+   "us",
+   "redflag",
+   "process",
+   "sector-software"
+  ],
+  "body": "SBC (ASC 718) is the biggest structural difference between US and Indian earnings quality. Companies report 'free cash flow' that adds back SBC, then spend cash on buybacks just to offset dilution. Worked example from our tool (sec_fetch.py facts SNOW, XBRL as filed): Snowflake FY ending 31-Jan-2026 revenue $4.68B, CFO $1.22B, FCF $1.12B, SBC $1.60B (143% of FCF; 34% of revenue), GAAP net loss $1.33B, and despite $873.5M of buybacks the diluted share count still rose 1.4%. Apple FY ending Sep-2026 for contrast: SBC $13.79B = 10% of FCF $136.1B, diluted shares -1.9%. Checks: (1) SBC / revenue (>15% is heavy), (2) SBC / FCF (>50% means 'FCF' is mostly paid in stock), (3) 3-5 year change in diluted weighted shares (net dilution after buybacks), (4) buyback dollars vs. share reduction achieved, (5) owner earnings = FCF - SBC. Lesson: a US 'cash-generative compounder' that only generates cash before SBC is not one; per-share growth is what compounds.",
+  "data": {
+   "snow_fy2026": {
+    "revenue": "4.68B",
+    "fcf": "1.12B",
+    "sbc": "1.60B",
+    "sbc_fcf": "143%",
+    "diluted_shares_chg": "+1.4%"
+   },
+   "aapl_fy2026": {
+    "sbc_fcf": "10%",
+    "diluted_shares_chg": "-1.9%"
+   },
+   "thresholds": "SBC/rev >15% heavy; SBC/FCF >50% flag"
+  },
+  "sources": [
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0001640147.json",
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json"
+  ],
+  "confidence": "single-source",
+  "tickers": [
+   "US-SNOW",
+   "US-AAPL"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "part_of"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:us-redflag-insider-selling-clusters",
+  "title": "Reading Form 4 selling: ignore routine 10b5-1 sales, flag off-plan clusters",
+  "tags": [
+   "us",
+   "redflag",
+   "alt-data",
+   "governance",
+   "process"
+  ],
+  "body": "Form 4 is due within 2 business days of an insider trade (SOX). Codes: P open-market purchase, S open-market sale, A grant, M option exercise, F shares withheld for tax, G gift. Since the SEC's Rule 10b5-1 amendments (effective Feb-2023; Form 4 checkbox from Apr-2023) each Form 4 flags whether the trade was under a 10b5-1 plan, and directors/officers face a cooling-off of the later of 90 days or 2 business days after the 10-Q/10-K (max 120 days) before trading under a new plan. Most selling is diversification: e.g. our test on Apple (last 15 Form 4s to 19-Nov-2026) found 30 open-market sales by 7 insiders ($127M), 0 buys, and almost all flagged 10b5-1 - normal for a mega-cap. Evidence (Lakonishok-Lee 2001) says sales have little predictive power. Flags that DO matter: several insiders (3+) selling off-plan within ~30 days, CFO/GC selling ahead of results, newly adopted plans followed by quick sales, selling into a stock-funded acquisition or secondary, founders cutting stakes sharply, and Form 144 notices clustering. sec_fetch.py insider TICKER prints transactions, the 10b5-1 flag and a cluster detector.",
+  "data": {
+   "deadline": "2 business days",
+   "codes": {
+    "P": "buy",
+    "S": "sell",
+    "A": "grant",
+    "M": "exercise",
+    "F": "tax withholding",
+    "G": "gift"
+   },
+   "10b5_1_cooling_off": "90-120 days directors/officers",
+   "aapl_test": "30 sells/7 insiders/$127M, mostly 10b5-1, 0 buys"
+  },
+  "sources": [
+   "https://www.sec.gov/newsroom/press-releases/2022-222",
+   "https://www.sec.gov/files/forms-3-4-5.pdf"
+  ],
+  "confidence": "single-source",
+  "tickers": [
+   "US-AAPL"
+  ],
+  "links": [
+   {
+    "to": "insight:us-insider-buying-evidence",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:us-insider-buying-evidence",
+  "title": "Insider BUYING predicts returns (esp. small caps, opportunistic insiders); selling mostly doesn't",
+  "tags": [
+   "us",
+   "alt-data",
+   "base-rate",
+   "governance"
+  ],
+  "body": "Lakonishok & Lee, 'Are Insider Trades Informative?' (Review of Financial Studies 14(1):79-111, 2001; NYSE/AMEX/Nasdaq 1975-1995): the market barely reacts when insiders trade or report, yet insider activity predicts future returns; the informativeness comes from PURCHASES, selling has no predictive ability, and the effect is driven by smaller firms. Insiders in aggregate are contrarian and time the market better than simple contrarian rules. Cohen, Malloy & Pomorski, 'Decoding Inside Information' (Journal of Finance 67(3):1009-1043, 2012; 1986-2007): classify an insider as 'routine' if they traded in the same calendar month in each of the prior three years; everyone else is 'opportunistic'. A portfolio following only opportunistic trades earns value-weighted abnormal returns of ~82 bp/month (~10%/yr); routine trades earn essentially zero. Most informative: local, non-executive insiders at geographically concentrated, poorly governed firms; opportunistic traders also attract more SEC enforcement. Practical rule: weight open-market buys (code P) by non-routine insiders, multiple insiders, size of buy vs. their holdings/salary, and small/under-covered firms; ignore grants, exercises, and calendar-regular trades. Signal is public within 2 business days - edge comes from filtering, not speed.",
+  "data": {
+   "ll2001": "purchases informative, sales not, small firms drive it",
+   "cmp2012_opportunistic": "82 bp/month VW abnormal",
+   "cmp2012_routine": "~0",
+   "routine_definition": "traded same month in each of prior 3 years"
+  },
+  "sources": [
+   "https://ideas.repec.org/a/oup/rfinst/v14y2001i1p79-111.html",
+   "https://www.nber.org/papers/w16454",
+   "https://econpapers.repec.org/RePEc:bla:jfinan:v:67:y:2012:i:3:p:1009-1043"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:us-redflag-insider-selling-clusters",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:us-13f-cloning-limits",
+  "title": "13F filings: useful for idea sourcing and crowding checks, weak as a copy-trading signal",
+  "tags": [
+   "us",
+   "alt-data",
+   "process"
+  ],
+  "body": "Form 13F-HR: institutional managers with >= $100M in 13(f) securities report long US-listed equity/option positions within 45 days of quarter end. Not included: shorts, cash, bonds, most non-US holdings; confidential treatment can delay positions. So a 13F is a stale (up to ~4.5 months), partial snapshot. Data since 2013 is XML; the value field switched from thousands to whole dollars in Jan-2023 (handled in sec_fetch.py). Test 20-Nov-2026: Berkshire 13F for 30-Sep-2026 (filed 16-Nov-2026) parsed to 30 positions, $304.2B, top Apple 25.0%, American Express 15.2%, Coca-Cola 11.3%. Evidence (to verify before citing numbers): the academic work on managers' 'best ideas' (Cohen-Polk-Silli 2010) finds their highest-conviction positions outperform while diversified remainder does not; activist 13D filings (>5% with intent, now due within 5 business days after 2023 amendments) show positive announcement returns (Brav-Jiang-Partnoy-Thomas 2008). Uses: find what concentrated, long-horizon managers own in small caps; check crowding (many funds in one name = exit risk); track 13D/13G stake changes. Don't clone mechanically: lag, survivorship of famous managers, and position size context are missing.",
+  "data": {
+   "threshold": "$100M 13(f) assets",
+   "deadline": "45 days after quarter",
+   "value_units": "USD from 2023-01-03, thousands before",
+   "brk_q3_2026": {
+    "positions": 30,
+    "total": "$304.2B",
+    "top": "AAPL 25.0%"
+   }
+  },
+  "sources": [
+   "https://www.sec.gov/divisions/investment/13ffaq",
+   "https://www.sec.gov/Archives/edgar/data/1067983/000119312526463399/"
+  ],
+  "confidence": "unverified",
+  "tickers": [
+   "US-BRK-B"
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "strategy",
+  "id": "strategy:read-10k-efficiently",
+  "title": "How to read a US 10-K in 60-90 minutes: order of attack",
+  "tags": [
+   "us",
+   "process"
+  ],
+  "body": "Order: (1) Item 8 auditor's report first - opinion type, going-concern paragraph, Critical Audit Matters (CAMs, required since 2019-20: tell you where the auditor saw the most judgment), auditor name/tenure. (2) Item 9A controls (effective or not) and Item 9 (auditor disagreements). (3) Financial statements: cash-flow statement before income statement - CFO vs net income, capex, SBC add-back, acquisitions, buybacks. (4) Notes that matter most: revenue recognition and disaggregation (segments, geography, top customers >10%), segment note, debt (maturities, covenants, rates), leases, contingencies/litigation, SBC note (dilution, unvested awards), income taxes (cash taxes vs book), goodwill/impairment tests, related parties, subsequent events. (5) Item 7 MD&A - management's own KPIs, liquidity, critical accounting estimates; compare wording year-over-year (diffing is easy with sec_fetch.py doc --text). (6) Item 1 Business (customers, competition, backlog, employees) and Item 1A Risk Factors - read only what is NEW vs last year. (7) Item 5 buybacks and Item 7A market risk. (8) Part III (Items 10-14) lives in the DEF 14A proxy: exec pay metrics (what management is paid to maximize), beneficial ownership table (Item 12, insider skin), related-party transactions (Item 13), audit vs non-audit fees (Item 14). Then 10-Qs for the latest quarters and 8-K EX-99.1 releases. Skip boilerplate risk factors and forward-looking statement pages.",
+  "data": {
+   "tools": "sec_fetch.py filings --form 10-K; doc --text; facts",
+   "new_since": "CAMs 2019-20; Item 1C cybersecurity 2023"
+  },
+  "sources": [
+   "https://www.sec.gov/answers/reada10k.htm",
+   "https://pcaobus.org/oversight/standards/auditing-standards/details/AS3101"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "strategy:fisher-scuttlebutt",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "strategy",
+  "id": "strategy:us-forensic-screen-workflow",
+  "title": "US forensic workflow with sec_fetch.py: from ticker to red-flag checklist in one pass",
+  "tags": [
+   "us",
+   "process",
+   "redflag"
+  ],
+  "body": "Step 1 facts TICKER --years 10: revenue, op income, NI, CFO, capex, FCF, SBC, buybacks, diluted shares, receivables, inventory; auto-checks print SBC/FCF, CFO/NI, share dilution, receivables vs revenue growth (receivables growing far faster than revenue = channel stuffing / aggressive recognition flag). Step 2 filings TICKER --form 8-K --items 4.01,4.02,5.02 --all: auditor changes, non-reliance, executive departures. Step 3 search '\"material weakness\" OR \"substantial doubt\"' --ciks TICKER. Step 4 filings --form 'NT 10-K,NT 10-Q' (late filings). Step 5 insider TICKER --limit 100: open-market buys, off-plan sell clusters. Step 6 filings --form 'DEF 14A' then doc --text: pay metrics, ownership, related parties. Step 7 filings --form 'S-1,S-3,424B5' for recent equity raises/ATM shelves (dilution pipeline). Step 8 frames TAG CY2025 for peer cross-section. Step 9 cross-check two numbers against a second dated source (Yahoo chart / Nasdaq / filing PDF). Output becomes a memdb analysis record with source accession numbers. Edge thesis: most retail and many funds read screens, not footnotes; systematic red-flag avoidance + insider-buy filtering on under-covered small caps is a plausible, testable edge - to be validated, not assumed.",
+  "data": {
+   "tool": "tools/sec_fetch.py",
+   "status": "process, not yet back-tested"
+  },
+  "sources": [
+   "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+  ],
+  "confidence": "unverified",
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "about"
+   },
+   {
+    "to": "source:sec-edgar-apis",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ },
+ {
+  "type": "insight",
+  "id": "insight:us-vs-india-market-structure",
+  "title": "US vs India market structure: what changes for our process",
+  "tags": [
+   "us",
+   "india",
+   "process",
+   "governance"
+  ],
+  "body": "(1) Ownership: India has disclosed 'promoter' groups with quarterly shareholding and pledge data; US has no promoter concept - most large firms are widely held, control risk shows up as founder dual-class shares, activist 13D stakes and board entrenchment. Insider data instead comes from Form 4 within 2 business days (India SAST/PIT disclosures are similar but promoter pledges have no US equivalent). (2) Pay: US management is paid heavily in stock (SBC), so per-share dilution and SBC-adjusted FCF matter more than in India. (3) Capital return: US firms return cash mainly via buybacks (Rule 10b-18 safe harbor; 1% excise tax on net buybacks since 2023); in India buybacks are rarer and since 1-Oct-2024 buyback proceeds are taxed as dividend income for shareholders. (4) Short-selling is normal and disclosed (FINRA short interest twice monthly; activist short reports) - US prices react faster to red flags; India restricts naked shorts and stock borrowing is thin. (5) Options: US single-stock options are deep and implied volatility/skew are informative; Indian F&O is dominated by index options and SEBI found ~9 in 10 retail F&O traders lose. (6) Coverage and efficiency: US large caps are among the most efficient markets (SPIVA 79-89% failure); under-covered US micro/small caps and spin-offs remain where research edge plausibly exists. (7) Disclosure quality: XBRL for all filers, full-text search and standardized 8-K items make systematic forensic screens far cheaper than in India. (8) Taxes/currency for an Indian resident (LRS limits, US estate tax exposure for non-residents, USD/INR) must be checked before any allocation (unverified here).",
+  "data": {
+   "us_buyback_excise": "1% (from 2023)",
+   "india_buyback_tax": "taxed as dividend from 2024-10-01",
+   "form4": "2 business days"
+  },
+  "sources": [
+   "https://www.sec.gov/rules-regulations/2023/05/share-repurchase-disclosure-modernization",
+   "https://www.finra.org/finra-data/browse-catalog/equity-short-interest"
+  ],
+  "confidence": "unverified",
+  "links": [
+   {
+    "to": "insight:sebi-fo-losses",
+    "rel": "about"
+   },
+   {
+    "to": "insight:spiva-us-2025",
+    "rel": "about"
+   }
+  ],
+  "date": "2026-11-20"
+ }
+]
