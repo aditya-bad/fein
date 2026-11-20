@@ -58,3 +58,9 @@ for stocks?" — same failure as L1.
 **Rule:** companies used to test a method are *test material*. Report what the method revealed, not a
 buy/sell verdict. No BUY-ZONE/WATCHLIST/score language unless the user explicitly asks about a stock.
 Default next steps should be learning/method (playbooks, calibration, teaching), not more stocks.
+
+## L10 (2026-11-20) — Red flags are hypotheses, not verdicts
+User: high-P/E names with every number "against" them still multiplied; good numbers can hide traps.
+**Rule:** every flag (pledge, P/E, negative FCF, debtor days…) must be interpreted with the business's
+real story; record *why* we override or keep a flag. Track our checklist's false alarms and missed traps.
+(Note: our hard disqualifiers — fraud signals, governance — stay strict until evidence says otherwise.)

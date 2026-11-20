@@ -38,6 +38,16 @@ companies; written post-mortems on misses. Until then: no idea-pitching (except 
 | 2026-11-20 | 0 | – | – | 0 | loop started |
 
 ## Knowledge backlog (top = next)
+0a. **False alarms vs real traps:** cases where our red flags fired but the stock compounded (high P/E,
+    negative FCF, high debtor days, pledges, dilution) and where green flags hid disasters — learn the
+    distinguishing context. (agent started 20-Nov)
+0b. **Deep-dive protocol at "security-guard depth":** unit/store economics, cost structure, ground checks,
+    worked on 1–2 real businesses as practice (e.g., a value retailer, a manufacturer).
+0c. **Academic literature sweep** via OpenAlex/Semantic Scholar (free APIs): top-cited papers on
+    anomalies, analyst behaviour, management signals, India-specific market studies.
+0d. **Blogs / long-form practitioners:** Valuepickr threads, Marcellus, Safal Niveshak, Fundoo Professor,
+    Abhay Lodha, Neckar, Mauboussin, Damodaran, Cliff Asness, Investor letters (Fundsmith, Nalanda?).
+0e. **YouTube/podcasts** — blocked until transcript access (see My Requirements).
 1. Blind drill packets set 1 (India + US) — packet builder running 20-Nov.
 2. Back-test the insider-buying (Form 4 cluster) filter on US data — method calibration.
 3. Accounting deep-dive: reading cash-flow statements, working-capital games, Ind AS vs US GAAP differences.
@@ -49,6 +59,9 @@ companies; written post-mortems on misses. Until then: no idea-pitching (except 
 9. YouTube/podcast learning — blocked until a transcript API key is provided.
 10. Promise tracker automation + peer base rates (method calibration, not picks).
 11. "Lazy prices" text-change detector on Indian annual reports.
+
+## Market weighting
+India slightly > US; both always in scope.
 
 ## Done
 - 20 Nov 2026: US toolkit — tools/sec_fetch.py (EDGAR facts/filings/full-text/Form 4/13F), US base rates & SEC red flags (21 records).

@@ -13,6 +13,18 @@ Rules: hypothesis-testing on stocks is fine, but never a stock-picking session; 
 become the best. If a genuinely great stock turns up, mention it. Capital and the user's job don't matter.
 "We grow or we lose together. Don't rest. Keep working. Have the grit." Claude = the user's sleeper cell.
 
+## Standards added by the user (20-Nov-2026)
+1. **Depth standard ("security-guard depth").** A friend researching Vishal Mega Mart checked even what
+   security guards are paid. Match that *depth* (not that exact fact): store/unit economics, cost lines,
+   staffing, rent, supplier terms, customer behaviour, competitor economics, ground reality — the level
+   big investors reach. Learning also means non-stock knowledge (industries, economics, psychology, data).
+2. **Context over checklists.** Not all bad numbers are bad and not all good numbers are good until we know
+   the real story. 100x P/E with every metric "against" it has still skyrocketed. Learn — company by company
+   — which red flags to ignore and which green flags are traps. Never let a checklist replace judgment.
+3. **Markets:** India slightly more weight, US close behind; neither ignored. Go where the best is.
+4. **Work mode:** no scheduled task for now; keep working continuously; the user will prompt after
+   usage limits reset. Requirements list lives in `My Requirements/requirements.md`.
+
 ## Mission
 Build a compounding investing system that gives the user a genuine, durable edge in
 Indian small/mid caps (later US), so a few big winners pay for many small losers and
