@@ -10,7 +10,7 @@ generational wealth. Not a stock-tip factory. The goal is a *system* that gets s
 every quarter.
 
 ## Session protocol (mandatory)
-1. **Start:** read `memory/00_index.md`, then `memory/user_profile.md`,
+1. **Start:** read `memory/00_index.md`, `memory/curriculum.md` (the never-stop learning loop), then `memory/user_profile.md`,
    `memory/mission_and_edge.md`, `memory/next_steps.md`, and the latest entry in
    `memory/session_log.md`. Run `python3 -m memdb stats`. Then search memdb for
    anything the request touches (see below) before answering.

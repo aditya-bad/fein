@@ -2,6 +2,17 @@
 
 Last updated: 2026-11-19
 
+## Operating mandate from the user (20-Nov-2026) — THIS OVERRIDES older plans
+Phases, in order (each partial, overlapping, never "finished"):
+1. **C — Learn continuously. Never stop.** Knowledge, cases, methods, data — India AND US.
+2. **Teach ourselves:** practise analysing and stock picking until measurably good (blind drills,
+   calibration, forward paper calls). "Before teaching me, teach yourself."
+3. **A — Build the thinking system** that can teach the user.
+4. **B — Research partner:** bring specific ideas only once the edge is *proven* (see gate in curriculum.md).
+Rules: hypothesis-testing on stocks is fine, but never a stock-picking session; work with intention to
+become the best. If a genuinely great stock turns up, mention it. Capital and the user's job don't matter.
+"We grow or we lose together. Don't rest. Keep working. Have the grit." Claude = the user's sleeper cell.
+
 ## Mission
 Build a compounding investing system that gives the user a genuine, durable edge in
 Indian small/mid caps (later US), so a few big winners pay for many small losers and

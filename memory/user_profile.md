@@ -24,10 +24,13 @@ Last updated: 2026-11-19
 - **Does NOT want stock recommendations unless they ask.** Has flagged stock-centric output twice
   (19 Nov pipeline, 20 Nov pilots). Wants learning, method and edge-building; companies only as examples.
 
+- 20-Nov-2026: says their work and capital don't matter ("if we find our edge, 1 lakh or 10 lakh doesn't
+  matter"). Markets: India and US. Wants continuous, relentless work: learn → self-train → thinking system → ideas.
+
 ## Unknown — ask (see next_steps.md)
-- Profession / industry / domain expertise (their potential information edge)
+- ~~Profession~~ (user: doesn't matter — don't ask again)
 - City and what they can physically check (dealers, factories, markets, network)
-- Capital size, time horizon, separate income, risk tolerance
+- ~~Capital size~~ (user: irrelevant), time horizon, risk tolerance — don't push; not needed now
 - Hours per week available
 - Current holdings / broker (Zerodha? — Kite MCP possible)
 - Investing vs trading preference (research strongly favours investing; F&O base rates terrible)
