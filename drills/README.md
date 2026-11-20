@@ -7,5 +7,13 @@ Categories are recorded ONLY in the sealed files. This table deliberately does n
 |---|---|---|---|---|
 | D001 | India | 2019 Q3 | packets/D001.md | sealed/D001.md |
 | D002 | US | 2017 Q1 | packets/D002.md | sealed/D002.md |
+| D003 | India | 2019 Q3 | packets/D003.md | sealed/D003.md |
+| D004 | India | 2017 Q3 | packets/D004.md | sealed/D004.md |
+| D005 | US | 2019 Q1 | packets/D005.md | sealed/D005.md |
+| D006 | India | 2019 Q3 | packets/D006.md | sealed/D006.md |
+| D007 | US | 2015 Q2 | packets/D007.md | sealed/D007.md |
+| D008 | India | 2019 Q2 | packets/D008.md | sealed/D008.md |
+| D009 | India | 2019 Q3 | packets/D009.md | sealed/D009.md |
+| D010 | US | 2017 Q1 | packets/D010.md | sealed/D010.md |
 
 Build notes: data from screener.in (India; consolidated annual P&L/BS/CF/ratios and price-chart API) and SEC EDGAR XBRL companyfacts plus 10-K text (US). Figures are rounded to reduce exact-match lookup. Quarterly data is included where the source exposed it for the pre-T period. Indian packets mostly lack it, because screener only shows the latest ~13 quarters.
