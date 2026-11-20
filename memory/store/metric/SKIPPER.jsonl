@@ -3,3 +3,4 @@
 {"as_of": "2026-11-19", "field": "mcap_cr", "period": "2026-11-19", "source": "idea pipeline", "ticker": "SKIPPER", "unit": "", "value": 5955.0}
 {"as_of": "2026-11-19", "field": "roce_pct", "period": "2026-11-19", "source": "idea pipeline", "ticker": "SKIPPER", "unit": "", "value": 24.0}
 {"as_of": "2026-11-19", "field": "score", "period": "2026-11-19", "source": "idea pipeline", "ticker": "SKIPPER", "unit": "", "value": 66.0}
+{"as_of": "2026-11-20", "field": "mgmt_credibility_weighted_pct", "period": "2026-11", "source": "promise tracker pilot", "ticker": "SKIPPER", "unit": "%", "value": 41.0}

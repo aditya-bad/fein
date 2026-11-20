@@ -44,3 +44,9 @@ false promoter pledges. Sanity check (pledge % of total vs of promoter didn't re
 ## L7 (2026-11-19) — Self-declarations go stale
 Transrail's Apr-26 no-encumbrance declaration was relied on; NSE data for 30-Sep-2026 shows a
 5.97% promoter pledge. **Rule:** verify governance flags from exchange data every quarter.
+
+## L8 (2026-11-20) — Management credibility changes the verdict
+Skipper looked BUY-ZONE on numbers (screen). Promise tracker: ~41% weighted delivery, 5 re-dated
+capacity deadlines, reversed "no more equity" promise. Downgraded 66 → 55, WATCHLIST.
+**Rule:** no BUY-ZONE without a promise-tracker credibility read on the last 6–8 calls.
+Also: score 2–3 sector peers before judging a credibility number (no base rate yet).

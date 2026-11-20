@@ -506,7 +506,7 @@
   ],
   "date": "2026-11-19",
   "confidence": "verified",
-  "body": "Flag: SEVERE. After the 2005 Ambani split Anil took telecom (RCom), power, infra, financial services (Reliance Capital, Reliance Home Finance, Reliance Commercial Finance) -- then a ~$40bn+ market-cap group. Over 2008-2020 it destroyed most of that value: debt-funded expansion, near-100% promoter pledges, insolvency of RCom (2019), Reliance Capital (RBI-supersession 2021, sold to IndusInd International/Hinduja 2024-25), Reliance Naval, and RHFL (resolution 2022). Regulator findings: SEBI (Aug-2024) banned Anil Ambani and 24 entities for 5 years and fined him Rs 25 cr for diverting RHFL funds via 'general purpose corporate loans' to promoter-linked shells (SAT stay/appeal status: verify). SBI classified RCom/Anil Ambani accounts as 'fraud' (Jun-2025); CBI registered a case on an alleged Rs 2,929 cr SBI loss (Aug-2025); ED opened PMLA cases, arrested the Reliance Power CFO (Oct-2025) over an alleged Rs 68 cr fake bank guarantee to SECI, arrested aides Amitabh Jhunjhunwala and Amit Bapna (Apr-2026) and says it has attached ~Rs 17,000 cr of assets in an alleged Rs 40,000 cr laundering case -- these are agency allegations, not court findings; a further CBI FIR (Apr-2026) alleges Rs 3,750 cr loss to LIC. NCLT admitted SBI's personal-insolvency plea against him as guarantor. Anil Ambani denies wrongdoing; he had not been arrested per reports found. Status Nov-2026: Reliance Power and Reliance Infra remain listed and have raised fresh equity via preferential allotments to promoter/investors -- treat any revival narrative with extreme caution.",
+  "body": "Flag: SEVERE. After the 2005 Ambani split Anil took telecom (RCom), power, infra, financial services (Reliance Capital, Reliance Home Finance, Reliance Commercial Finance) -- then a ~$40bn+ market-cap group. Over 2008-2020 it destroyed most of that value: debt-funded expansion, near-100% promoter pledges, insolvency of RCom (2019), Reliance Capital (RBI-supersession 2021, sold to IndusInd International/Hinduja 2024-25), Reliance Naval, and RHFL (resolution 2022). Regulator findings: SEBI (Aug-2024) banned Anil Ambani and 24 entities for 5 years and fined him Rs 25 cr for diverting RHFL funds via 'general purpose corporate loans' to promoter-linked shells (order dated 22-Aug-2024; total penalties ~Rs 624 cr on 27 parties; appeal status not verified). SBI classified RCom/Anil Ambani accounts as 'fraud' (Jun-2025); CBI registered a case on an alleged Rs 2,929 cr SBI loss (Aug-2025); ED opened PMLA cases, arrested the Reliance Power CFO (Oct-2025) over an alleged Rs 68 cr fake bank guarantee to SECI, arrested aides Amitabh Jhunjhunwala and Amit Bapna (Apr-2026) and says it has attached ~Rs 17,000 cr of assets in an alleged Rs 40,000 cr laundering case -- these are agency allegations, not court findings; a further CBI FIR (Apr-2026) alleges Rs 3,750 cr loss to LIC. NCLT admitted SBI's personal-insolvency plea against him as guarantor. Anil Ambani denies wrongdoing; he had not been arrested per reports found. Status Nov-2026: Reliance Power and Reliance Infra remain listed and have raised fresh equity via preferential allotments to promoter/investors -- treat any revival narrative with extreme caution.",
   "data": {
    "flag": "severe",
    "red_flags": "ICDs to shells (SEBI finding 2024); 'fraud' tags by banks; near-total pledges; repeated insolvencies; fake BG allegation",
@@ -514,6 +514,8 @@
    "lesson": "group-wide promoter leverage + ICDs = minority wipe-out"
   },
   "sources": [
+   "https://www.business-standard.com/companies/news/rhfl-fund-diversion-case-5-year-market-ban-for-anil-ambani-24-others-124082300983_1.html",
+   "https://www.businesstoday.in/markets/top-story/story/anil-ambani-24-others-barred-from-securities-market-for-5-years-fined-rs-25-crore-for-diversion-of-funds-442716-2024-08-23",
    "https://www.businesstoday.in/latest/corporate/story/ed-arrests-amitabh-jhunjhunwala-amit-bapna-close-aides-of-anil-ambani-in-rhfl-rcfl-loan-fraud-case-525865-2026-04-15",
    "https://www.businesstoday.in/amp/india/story/after-cbi-raids-ed-slaps-fresh-money-laundering-case-on-anil-ambani-rcom-493304-2025-09-10",
    "https://www.businesstoday.in/latest/corporate/story/ed-arrests-reliance-power-cfo-in-money-laundering-case-linked-to-anil-ambani-group-497808-2025-10-11",
@@ -530,7 +532,7 @@
     "rel": "illustrates"
    },
    {
-    "to": "insight:icd-diversion-first-signal",
+    "to": "insight:governance-surfacing-sequence",
     "rel": "illustrates"
    }
   ]
@@ -1136,7 +1138,7 @@
   ],
   "links": [
    {
-    "to": "insight:thin-float-post-ibc-relisting",
+    "to": "insight:governance-surfacing-sequence",
     "rel": "illustrates"
    }
   ]
@@ -1361,8 +1363,8 @@
    "succession"
   ],
   "date": "2026-11-19",
-  "confidence": "single-source",
-  "body": "Flag: CLEAN (HCL Tech) with a legacy blemish (HCL Infosystems). HCL Technologies (promoter ~60%) has been a high-payout company: quarterly dividends with a stated ~75%+ payout policy and occasional buybacks; no promoter pledging; no SEBI findings against promoters. Succession was handled in steps: Roshni Nadar Malhotra became chair of HCL Tech (2020), and in Mar-2025 Shiv Nadar gifted 47% stakes in promoter vehicles Vama Sundari Investments and HCL Corp to her, making her the controlling promoter -- disclosed and exempted under takeover rules (amounts single-source). Legacy blemish: HCL Infosystems (hardware/distribution) shrank into heavy losses through the 2010s, eroding its minority shareholders' value; it was eventually wound into the group (details unverified). HCL Tech's large IBM software IP purchase (2019, $1.8bn) was a capital-allocation debate, not a governance breach. Investor read: one of the cleaner promoter-led IT names; the payout policy is the key minority protection.",
+  "confidence": "verified",
+  "body": "Flag: CLEAN (HCL Tech) with a legacy blemish (HCL Infosystems). HCL Technologies (promoter ~60%) has been a high-payout company: quarterly dividends with a stated ~75%+ payout policy and occasional buybacks; no promoter pledging; no SEBI findings against promoters. Succession was handled in steps: Roshni Nadar Malhotra became chair of HCL Tech (2020), and by gift deeds of 6-Mar-2025 Shiv Nadar gave her 47% of promoter vehicles Vama Sundari Investments (Delhi) and HCL Corp (his stake 51% -> 4%; hers 10.33% -> ~57.3%), giving her voting control of ~44.3% of HCL Tech; SEBI exempted the open offer and total promoter holding stayed ~60.8%. Legacy blemish: HCL Infosystems (hardware/distribution) shrank into heavy losses through the 2010s, eroding its minority shareholders' value; it was eventually wound into the group (details unverified). HCL Tech's large IBM software IP purchase (2019, $1.8bn) was a capital-allocation debate, not a governance breach. Investor read: one of the cleaner promoter-led IT names; the payout policy is the key minority protection.",
   "data": {
    "flag": "clean",
    "good_conduct": "high dividend payout; clean succession",
@@ -1370,8 +1372,9 @@
    "status_2026": "Roshni Nadar controlling promoter since Mar-2025"
   },
   "sources": [
-   "https://www.business-standard.com/amp/markets/news/infosys-founders-skip-share-buyback-rs18000-crore-plan-125102200636_1.html",
-   "https://www.indmoney.com/blog/stocks/infosys-buyback-promoters-not-participating"
+   "https://businesstoday.in/latest/corporate/story/hcl-succession-shiv-nadar-gifts-47-stake-roshni-nadar-malhotra-takes-majority-control-467282-2025-03-08",
+   "https://www.freepressjournal.in/business/shiv-nadar-reshapes-hcls-future-with-major-stake-transfer-to-daughter",
+   "https://www.angelone.in/news/market-updates/shiv-nadar-transfers-47-stake-in-hcl-group-to-roshni-nadar-malhotra"
   ],
   "links": []
  },
@@ -1392,7 +1395,7 @@
   ],
   "date": "2026-11-19",
   "confidence": "single-source",
-  "body": "Flag: CLEAN. Wipro (promoter group ~72-73%, much of it held for the Azim Premji Foundation's endowment) has a long record of buybacks (2016, 2017, 2019, 2021, 2023 ~Rs 12,000 cr) and dividends, no promoter pledging and no SEBI findings against promoters. The high promoter holding means tender-offer buybacks largely return cash to the promoter/foundation, and Wipro has occasionally been near the 75% MPS ceiling -- a structural, not ethical, issue. Allegations dismissed: an NGO ('India Awake for Transparency') filed multiple complaints alleging Premji transferred assets of three group companies improperly; the Karnataka High Court quashed them (2021-22), imposed costs on the complainants, and later convicted the NGO's representatives for contempt (unverified details) -- a case where allegations against a promoter failed. Capital-allocation debates: Capco acquisition (2021, $1.45bn) and long underperformance vs. TCS/Infosys; CEO turnover. Premji's philanthropy (pledged equity worth ~$21bn to the foundation, 2019) separated economic interest from the family. Status Nov-2026: Rishad Premji chairman; no open governance issues found.",
+  "body": "Flag: CLEAN. Wipro (promoter group ~72-73%, much of it held for the Azim Premji Foundation's endowment) has a long record of repeated buybacks (2016-2023; the 2023 one ~Rs 12,000 cr -- figures single-source from memory, verify) and dividends, no promoter pledging and no SEBI findings against promoters. The high promoter holding means tender-offer buybacks largely return cash to the promoter/foundation, and Wipro has occasionally been near the 75% MPS ceiling -- a structural, not ethical, issue. Allegations dismissed: an NGO ('India Awake for Transparency') filed multiple complaints alleging Premji transferred assets of three group companies improperly; the Karnataka High Court dismissed a petition under the RBI Act as 'abuse of process' (18-Jan-2021), quashed two private complaints against Premji and his wife, imposed Rs 10 lakh costs for repetitive petitions (Feb-2021), and later convicted two NGO representatives of contempt -- a case where allegations against a promoter failed. Capital-allocation debates: Capco acquisition (2021, $1.45bn) and long underperformance vs. TCS/Infosys; CEO turnover. Premji's philanthropy (pledged equity worth ~$21bn to the foundation, 2019) separated economic interest from the family. Status Nov-2026: Rishad Premji chairman; no open governance issues found.",
   "data": {
    "flag": "clean",
    "good_conduct": "repeated buybacks; dividends; foundation ownership",
@@ -1400,7 +1403,9 @@
    "status_2026": "no open issues found"
   },
   "sources": [
-   "https://www.indmoney.com/blog/stocks/infosys-buyback-promoters-not-participating"
+   "https://www.livelaw.in/news-updates/karnataka-high-court-10-lakh-cost-for-multiple-petitions-against-azim-premjit-170255",
+   "https://www.livelaw.in/news-updates/karnataka-high-court-rbi-azim-premji-private-complaint-india-awake-for-transparency-168664",
+   "https://www.thenewsminute.com/article/karnataka-hc-convicts-two-filing-repeated-cases-against-wipro-azim-premji-159917"
   ],
   "links": []
  },
@@ -1433,12 +1438,7 @@
    "https://www.businesstoday.in/markets/stocks/story/infosys-stock-in-focus-as-narayana-murthy-promoters-skip-rs-18000-crore-share-buyback-499241-2025-10-23",
    "https://www.indmoney.com/blog/stocks/infosys-buyback-promoters-not-participating"
   ],
-  "links": [
-   {
-    "to": "insight:governance-surfacing-sequence",
-    "rel": "contradicts"
-   }
-  ]
+  "links": []
  },
  {
   "type": "person",

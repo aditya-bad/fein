@@ -10,7 +10,7 @@ Re-check all kill criteria at Q3 FY27 results (Feb 2027). Full detail:
 | Uniparts (UNIPARTS) | Rupee/exports | ~725 | 16.7 | 72 | BUY-ZONE | OPM <18% 2 qtrs; inventory >450d with CFO <60% PAT; any pledge; FY27 rev growth <15% |
 | Sandur Manganese (SANDUMA) | Quant | 167.6 | 9.7 | 68 | BUY-ZONE | Qtr PAT <₹180 cr 2 qtrs; net debt rising for new acquisition; FII <1.5% |
 | Bajaj Consumer (BAJAJCON) | Consumption | ~410 | 21.3 | 66 | BUY-ZONE | OPM <19% 2 qtrs; Almond Drops vol <5%; pledge; debtor days >40 |
-| Skipper (SKIPPER) | Power/T&D | 487.75* | 24.2 | 66 | BUY-ZONE staggered (~₹470 anchor) | 2 qtrs YoY PAT decline; order book <₹8,000 cr; debtor days >120; debt >₹1,000 cr |
+| Skipper (SKIPPER) | Power/T&D | 487.75* | 24.2 | ~~66~~ 55 | ~~BUY-ZONE~~ **WATCHLIST — mgmt credibility ~41% (20-Nov-2026)** | 2 qtrs YoY PAT decline; order book <₹8,000 cr; debtor days >120; debt >₹1,000 cr |
 | MPS (MPSLTD) | Rupee/services | ~2,182 | 20.2 | 66 | WATCH (<₹2,000) | Organic rev decline 2 qtrs; OPM <28%; debt-funded deal >1x EBITDA |
 | IOL Chemicals (IOLCP) | Quant | 192 | 27.7 | 64 | WATCH (Q3 or ≤22x) | OPM <12% 2 qtrs; non-ibuprofen <40%; promoter sells |
 | Prudent (PRUDENT) | Financialisation | ~2,920 | 46 | 63 | WATCH (<₹2,500) | SIP book growth <10%; OPM <23% |
