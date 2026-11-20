@@ -39,7 +39,11 @@ companies; written post-mortems on misses. Until then: no idea-pitching (except 
 | Date | Drills scored | Brier (ours) | Brier (base rate) | Paper calls resolved | Notes |
 |---|---|---|---|---|---|
 | 2026-11-20 | 0 | – | – | 0 | loop started |
+| 2026-11-20 | paper calls: 7 opened (promise tracker, resolve Feb–May 2027) | | | 0 | |
 | 2026-11-20 | set 1: 0 of 10 usable (all recognised) | – | – | 0 | method fixed → v2 anonymisation; forward calls prioritised |
+
+## Open paper calls
+`python3 -m memdb search "" --tag paper-call` — resolve each after Q3/Q4 FY27 results; record outcome + Brier.
 
 ## Knowledge backlog (top = next)
 0a. **False alarms vs real traps:** cases where our red flags fired but the stock compounded (high P/E,
