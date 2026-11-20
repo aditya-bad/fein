@@ -48,3 +48,8 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
   memdb: 100 case studies, 116 insights, 75 persons/groups, 136 promises, 784 passages.
 **Next:** score 2–3 T&D/auto-component peers for credibility base rates; automate promise pipeline
 (fetch → pdftotext → extract → score vs screener); weekly change detectors; still need user profile.
+- 20-Nov-2026 (late): usage limit hit (resets ~08:30 UTC). Stopped mid-run, to resume via SendMessage:
+  drill set 2 builder (D011–D020, v2 anonymisation), US insider-cluster backtest, literature sweep
+  (OpenAlex budget exhausted → switching to Semantic Scholar), VMM "security-guard depth" deep-dive practice.
+  Done this stretch: accounting forensics course (25), flags-judgment library (44) + graded pledge rule (L12),
+  7 forward paper calls, drill set 1 (excluded, L11), US toolkit (21 + sec_fetch.py).
