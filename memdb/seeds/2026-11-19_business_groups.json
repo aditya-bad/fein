@@ -366,8 +366,7 @@
    "ORIENTELEC",
    "HIL",
    "BSOFT",
-   "ORIENTPPR",
-   "NBIFIN"
+   "ORIENTPPR"
   ],
   "tags": [
    "india",
@@ -601,11 +600,7 @@
   "title": "Vedanta group (Anil Agarwal) — governance history",
   "tickers": [
    "VEDL",
-   "HINDZINC",
-   "VEDALUM",
-   "VEDOILGAS",
-   "VEDPOWER",
-   "VEDIRON"
+   "HINDZINC"
   ],
   "tags": [
    "india",
@@ -618,7 +613,7 @@
   ],
   "date": "2026-11-19",
   "confidence": "single-source",
-  "body": "Flag: MIXED (leaning poor on minority treatment). UK-based Vedanta Resources (VRL, promoter holdco) carries large debt serviced largely by dividends and brand fees from listed Vedanta Ltd (VEDL), which in turn controls Hindustan Zinc (~61%). Pattern: very high dividend payouts upstream (good for VEDL minorities' cash yield but driven by holdco debt needs), plus brand and strategic-service fees -- Viceroy Research (Jul-2025) alleged VEDL and subsidiaries paid ~$361 m (Rs 3,085 cr) in brand fees to VRL in FY25 and called the structure a 'parasite' holdco; Vedanta rejected the report as 'selective misinformation'. A shareholder PIL on brand fees was reported (undated). History of contested minority actions: Cairn India merger (2017) with preference-share consideration; failed delisting of Vedanta Ltd (2020) when promoters sought to buy out minorities near lows; Vedanta lending to/receiving from group entities; Sterlite Copper Tuticorin closure (2018, after police firing on protesters). Hindustan Zinc's government (~28%) stake gives some check on cash moves. Status Nov-2026: VEDL's demerger into Vedanta Aluminium, Oil & Gas, Power, Iron & Steel plus residual Vedanta Ltd (with HZL) became effective 1-May-2026 (record date, 1:1 shares); VEDL revised dividend policy to drop mandatory HZL dividend up-streaming; lost Jaiprakash Associates to Adani at NCLAT (May-2026). Watch: brand-fee agreements at each demerged entity, ICDs to VRL, promoter pledges (historically ~99% of VEDL promoter shares encumbered -- verify current SAST).",
+  "body": "Flag: MIXED (leaning poor on minority treatment). UK-based Vedanta Resources (VRL, promoter holdco) carries large debt serviced largely by dividends and brand fees from listed Vedanta Ltd (VEDL), which in turn controls Hindustan Zinc (~61%). Pattern: very high dividend payouts upstream (good for VEDL minorities' cash yield but driven by holdco debt needs), plus brand and strategic-service fees -- Viceroy Research (Jul-2025) alleged VEDL and subsidiaries paid ~$361 m (Rs 3,085 cr) in brand fees to VRL in FY25 and called the structure a 'parasite' holdco; Vedanta rejected the report as 'selective misinformation'. A shareholder PIL on brand fees was reported (undated). History of contested minority actions: Cairn India merger (2017) with preference-share consideration; failed delisting of Vedanta Ltd (2020) when promoters sought to buy out minorities near lows; Vedanta lending to/receiving from group entities; Sterlite Copper Tuticorin closure (2018, after police firing on protesters). Hindustan Zinc's government (~28%) stake gives some check on cash moves. Status Nov-2026: VEDL's demerger into Vedanta Aluminium, Oil & Gas, Power, Iron & Steel plus residual Vedanta Ltd (with HZL) became effective 1-May-2026 (record date, 1:1 shares); VEDL revised dividend policy to drop mandatory HZL dividend up-streaming; lost Jaiprakash Associates to Adani at NCLAT (May-2026). Watch: brand-fee agreements at each demerged entity, ICDs to VRL, promoter pledges (historically ~99% of VEDL promoter shares encumbered -- verify current SAST). (Tickers of the four demerged entities were not verified here; check NSE.)",
   "data": {
    "flag": "mixed",
    "red_flags": "brand fees to holdco; holdco debt dependence; 2020 delisting attempt at lows; high encumbrance",
@@ -1197,8 +1192,7 @@
   "tickers": [
    "DABUR",
    "EVEREADY",
-   "RELIGARE",
-   "AFLL"
+   "RELIGARE"
   ],
   "tags": [
    "india",
@@ -1383,8 +1377,7 @@
   "id": "person:group-wipro-premji",
   "title": "Wipro / Azim Premji — governance history",
   "tickers": [
-   "WIPRO",
-   "WIPRO-CON"
+   "WIPRO"
   ],
   "tags": [
    "india",
@@ -1809,6 +1802,301 @@
    {
     "to": "insight:auditor-exit-signal",
     "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:group-contagion-pledge-cycles",
+  "title": "India: group contagion runs through promoter-level leverage and repeats with the credit cycle",
+  "tickers": [
+   "ZEEL",
+   "EMAMILTD",
+   "BAJAJCON",
+   "FRETAIL",
+   "RPOWER",
+   "JPASSOCIAT"
+  ],
+  "tags": [
+   "india",
+   "governance",
+   "pledge",
+   "base-rate",
+   "redflag",
+   "cyclical"
+  ],
+  "date": "2026-11-19",
+  "confidence": "verified",
+  "body": "Across the 43 group profiles reviewed (Nov-2026), the worst minority outcomes (ADAG, Essel, Future, Jaypee, Videocon, Lanco, GVK, Srei, Singh brothers) shared one structure: the promoter borrowed outside the listed company -- against its shares, or through cross-guarantees -- to fund unrelated, capital-hungry ventures (power, infra, real estate, telecom, oil). The trigger is usually an outside credit event, not the business itself: the 2008 crisis, the 2013-14 infra bust, IL&FS (Sep-2018, which froze MF/NBFC loans against shares), and COVID (2020). Pledge cycles repeat even in good groups: Emami pledged, sold ~10% in Feb-2019 to cut group debt, and a fresh ~4.95% pledge appeared in Jan-2026; Bajaj Consumer's promoters had ~70% of their stake pledged in Dec-2018 to support the sugar/power side before cutting it to zero in Oct-2019; JSW and GMR carry long-running encumbrance. Contagion is group-wide: when one company defaults, lenders cut lines to all of them, pledges get invoked, and the stocks fall together regardless of each one's fundamentals (Essel 2019: Zee, Dish, Zee Media, Siti; ADAG 2018-19). Rules: (1) count pledges across all group listed companies plus promoter holdco debt; (2) a rising pledge in a bull market is borrowing against inflated collateral; (3) a pledge cut by selling stake (Emami 2019, BAJAJCON 2019, Adani 2023) helps, but check where the money went; (4) the cycle tends to come back at the next credit tightening. Complements insight:promoter-pledge-group-contagion.",
+  "data": {
+   "rule": "sum encumbrance across the group; rising pledge plus outside ventures = exit trigger",
+   "examples": "Essel, ADAG, Future, Emami, Kushagra Bajaj, GMR"
+  },
+  "sources": [
+   "https://business-standard.com/article/companies/emami-promoters-sell-10-stake-to-pare-group-debt-pledged-shares-119021801092_1.html",
+   "https://www.business-standard.com/amp/article/companies/promoters-sell-22-stake-in-bajaj-consumer-care-for-rs-700-crore-119101501423_1.html",
+   "https://www.moneylife.in/article/sebi-bars-former-zee-executives-subhash-chandra-punit-goenka-from-securities-market-for-1-year/81233.html",
+   "https://filingreader.com/news-wire/mumbai/2025-11-14/gmr-enterprises-pledges-shares-in-gmr-power-and-urban-infra"
+  ],
+  "links": [
+   {
+    "to": "insight:promoter-pledge-group-contagion",
+    "rel": "similar_to"
+   },
+   {
+    "to": "person:group-essel-zee",
+    "rel": "about"
+   },
+   {
+    "to": "person:group-emami",
+    "rel": "about"
+   },
+   {
+    "to": "person:group-reliance-adag",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:clean-cash-cow-funds-sick-sibling",
+  "title": "The cash-rich listed company is often what pays for the promoter's sick sibling",
+  "tickers": [
+   "UNITDSPR",
+   "ZEEL",
+   "BAJAJCON",
+   "JPINFRATEC",
+   "EMAMILTD"
+  ],
+  "tags": [
+   "india",
+   "governance",
+   "redflag",
+   "related-party",
+   "base-rate"
+  ],
+  "date": "2026-11-19",
+  "confidence": "verified",
+  "body": "A recurring Indian pattern: a high-quality, cash-generative listed company sits in the same group as a loss-making, capital-hungry sibling, and value moves from the first to the second through ICDs, guarantees, letters of comfort, collateral or forced promoter selling. Cases: United Spirits -> Kingfisher (SEBI 2017: ~Rs 1,880 cr diverted to UB-group entities); Zee -> Essel infra (SEBI 2023: letter-of-comfort FD adjustments; SEBI 31-Jul-2026: ZEEL's Hyderabad land mortgaged for four Essel entities' loans without authority); Jaypee Infratech -> Jaiprakash Associates (SC 2020: ~858 acres mortgaged for the parent's debt held to be preferential transactions); MIAL -> GVK group (CBI FIR 2020 alleges ~Rs 705 cr); Bajaj Consumer -> Bajaj Hindusthan/Lalitpur Power (2018-19 pledges, stake sales to fund the power business); Emami -> cement/power (2019 stake sale to repay group debt). Things to check every year: (1) RPT notes listing loans, guarantees or security given to group firms; (2) 'other financial assets' and capital advances to related parties; (3) charge filings on MCA showing listed-company assets securing other entities' loans; (4) the promoter's other businesses and their debt; (5) whether a strategic partner or buyer (Diageo at USL) later finds diversions, since they often do. Rule: the safety of a great franchise is capped by the weakest balance sheet the promoter controls.",
+  "data": {
+   "checks": "RPT loans/guarantees; MCA charges; promoter's unlisted debt"
+  },
+  "sources": [
+   "https://www.business-standard.com/article/pti-stories/sebi-bans-mallya-6-others-in-usl-fund-diversion-case-117012501425_1.html",
+   "https://www.moneylife.in/article/sebi-bars-former-zee-executives-subhash-chandra-punit-goenka-from-securities-market-for-1-year/81233.html",
+   "https://theprint.in/india/cbi-books-gvk-group-chairman-gvk-reddy-son-over-alleged-rs-705-crore-mumbai-airport-scam/452805",
+   "https://www.business-standard.com/amp/article/companies/promoters-sell-22-stake-in-bajaj-consumer-care-for-rs-700-crore-119101501423_1.html"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "part_of"
+   },
+   {
+    "to": "person:group-ub-mallya",
+    "rel": "about"
+   },
+   {
+    "to": "person:group-bajaj-kushagra",
+    "rel": "about"
+   },
+   {
+    "to": "person:group-jaypee",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:group-holdco-discount",
+  "title": "Indian holding companies trade at deep, persistent discounts, and the discount rarely closes on its own",
+  "tickers": [
+   "BAJAJHLDNG",
+   "TATAINVEST",
+   "GODREJIND",
+   "BFINVEST",
+   "CHOLAHLDNG",
+   "GRASIM",
+   "TVSHLTD"
+  ],
+  "tags": [
+   "india",
+   "governance",
+   "holdco-discount",
+   "valuation",
+   "myth"
+  ],
+  "date": "2026-11-19",
+  "confidence": "single-source",
+  "body": "Listed holdcos in good groups (Bajaj Holdings, Tata Investment, Godrej Industries, Cholamandalam Financial Holdings, TVS Holdings, BF Investment/Kalyani Investment, and Grasim with its stakes in UltraTech and ABCL) usually trade well below the market value of their listed stakes. Commonly cited gaps are 40-70%, but that range was not re-derived here, so compute it yourself for each name. The reasons are structural: tax leakage on dividends and exits, no promoter intent to distribute or unwind, the holdco being used to fund new ventures (Grasim -> paints and B2B e-commerce), illiquidity, and control premia that accrue to the promoter, not to minorities. What actually closed gaps in this sample was a corporate event: a demerger or mirror listing (Bajaj 2008, Vedanta 2026, Piramal 2022), a regulator forcing a listing (RBI's upper-layer rule for Tata Sons, reiterated 17-Nov-2026, which matters for Tata Investment and SP group), a merger of holdco into opco (Piramal Enterprises into Piramal Finance, Sep-2025; GMR 2024), or a buyback/dividend policy change. Rules: (1) 'cheap vs NAV' is not a thesis without a named catalyst and its probability; (2) family disputes (TVS 2026, Kalyani 2023-26) can widen the discount; (3) holdco debt (Vedanta Resources, Bharti Telecom's planned stake build) changes everything, because the discount then reflects a claim ahead of minorities. Mark the 40-70% range unverified until computed.",
+  "data": {
+   "rule": "need catalyst; compute discount yourself",
+   "catalysts": "demerger, forced listing, holdco-opco merger, payout change"
+  },
+  "sources": [
+   "https://www.businesstoday.in/latest/corporate/story/tata-sons-listing-rbi-makes-its-stand-clear-again-asks-the-company-to-comply-567742-2026-11-17",
+   "https://www.angelone.in/news/market-updates/piramal-enterprises-shares-to-be-delisted-on-sep-23-shareholders-to-receive-1-1-allotment-in-piramal-finance",
+   "https://www.moneylife.in/article/vedanta-sets-1-may-2026-as-demerger-record-date-shareholders-to-receive-11-shares-in-four-new-entities/80266.html"
+  ],
+  "links": [
+   {
+    "to": "person:group-tata",
+    "rel": "about"
+   },
+   {
+    "to": "person:group-bajaj",
+    "rel": "about"
+   },
+   {
+    "to": "insight:value-trap-patterns",
+    "rel": "similar_to"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:governance-surfacing-sequence",
+  "title": "How governance problems typically surface first in India (the order of signals)",
+  "tickers": [
+   "GENSOL",
+   "RAJESHEXPO",
+   "DHFL",
+   "YESBANK",
+   "FORTIS"
+  ],
+  "tags": [
+   "india",
+   "governance",
+   "redflag",
+   "process",
+   "base-rate",
+   "forensic"
+  ],
+  "date": "2026-11-19",
+  "confidence": "verified",
+  "body": "In the severe/poor cases reviewed, outside parties found the problem years before the regulator ruled on it, and the signals tended to arrive in this order. (1) Financing and structure: promoter pledges rising, ICDs or 'general purpose corporate loans' to opaque entities (RHFL to ADAG shells, SEBI 2024; DHFL's 'Bandra Book', SEBI 2025: ~Rs 14,040 cr; Fortis ICDs 2017-18), listed assets securing group debt (Zee, Jaypee), thin float after relisting (Ruchi/Patanjali 2020). (2) Credit market: rating downgrades, CP/NCD rollovers failing, lender 'fraud' tags (SBI on RCom 2025; PNB on Srei 2022), or forged no-default letters (Gensol, 2025). (3) Gatekeepers: auditor qualifications or resignations, delayed accounts (Byju's FY21 ~18 months late; Deloitte quit Jun-2023), independent directors leaving, a forensic auditor reporting non-cooperation (Rajesh Exports, per SEBI's 3-Jun-2026 interim order). (4) Bank regulator signals: RBI divergences and refusal of a CEO's term (Yes Bank 2016-18), RBI special audits (Srei), supersession. (5) Outsiders: whistleblowers (Videocon 2016), investigative media (Cobrapost on DHFL 2019), short sellers (Hindenburg on Adani 2023, Viceroy on Vedanta 2025). The short-seller claims were largely not upheld by SEBI in Adani's case, so on their own they are prompts for diligence, not verdicts. (6) Regulators and agencies act last: SEBI interim orders, then ED/CBI, often 2-7 years later. Counter-example: Infosys (2019 whistleblower allegations not substantiated after an independent probe; stock recovered). Process rule: any one of items 1-3 means a deeper check; two together means exit or don't enter.",
+  "data": {
+   "sequence": "financing -> credit market -> gatekeepers -> RBI -> outsiders -> regulators",
+   "rule": "two signals from items 1-3 = avoid"
+  },
+  "sources": [
+   "https://www.moneylife.in/article/dhfls-bandra-book-scam-sebi-slaps-rs120-crore-fine-bans-4-wadhawans-2-others-for-diverting-rs14000-crore-loan/77969.html",
+   "https://www.business-standard.com/companies/news/rhfl-fund-diversion-case-5-year-market-ban-for-anil-ambani-24-others-124082300983_1.html",
+   "https://www.businesstoday.in/markets/stocks/story/bt-explainer-what-sebis-interim-order-against-rajesh-exports-and-its-promoter-reveals-534811-2026-06-04",
+   "https://business-standard.com/markets/news/sebi-bars-gensol-engineering-promoters-for-alleged-fund-diversion-125041501266_1.html",
+   "https://www.business-standard.com/markets/news/sebi-clears-adani-group-dismisses-hindenburg-allegations-125091801259_1.html"
+  ],
+  "links": [
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:auditor-exit-signal",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:short-seller-reports-outcomes",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:ownership-disclosure-early-signals",
+    "rel": "similar_to"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:succession-disputes-governance",
+  "title": "Family succession disputes: frequent, slow, and mostly a holdco-level risk if the listed companies are ring-fenced",
+  "tickers": [
+   "TVSHLTD",
+   "HIKAL",
+   "BHARATFORG",
+   "BIRLACORPN",
+   "ASHOKLEY",
+   "INDUSINDBK"
+  ],
+  "tags": [
+   "india",
+   "governance",
+   "succession",
+   "family-dispute",
+   "base-rate"
+  ],
+  "date": "2026-11-19",
+  "confidence": "verified",
+  "body": "Of the 43 group profiles reviewed, at least 10 had a public family or control dispute: Ambani (2002-05 split), Tata (Mistry ouster 2016, SC 2021; trustee split 2025-26), Birla-Lodha (Priyamvada will, 2004 onwards; Calcutta HC Dec-2023), Murugappa (2019-23, settled), Godrej (amicable split 2024), TVS (2020 partition; Venu Srinivasan family dispute open in Oct-2026), Kalyani (Hikal and Sulochana Kalyani will; SC mediator Jul-2026), Hinduja (2014 letter litigation; Gopichand died Nov-2025), Bajaj (old branch splits), and the Singh brothers vs. their spiritual-guru lenders. Pattern: disputes that stayed at the family holdco level and left listed companies' cash alone (Godrej, Murugappa, Tata) did little lasting harm to minorities. Where the dispute froze strategy or control (Birla-Lodha: ~20 years of litigation over Birla Corp and others) or touched listed boards (Tata-Mistry 2016; Kalyani-Hikal), it raised uncertainty and holdco discounts. Settlements take 3-20 years. A pre-announced split with listed companies untouched and a non-compete (Godrej 2024) is the good template. Signals: deaths of patriarchs without a public will, 'family arrangement' documents of disputed legal status (Hikal 1993-94; Hinduja 2014), trust structures with vague beneficiaries (TVS Holdings' VS Trust at 66.55%), and women heirs excluded from holdco boards (Murugappa). Investor read: price the dispute as a governance discount, not a business impairment, unless listed-company cash, board control or a forced stake sale is in play.",
+  "data": {
+   "good_template": "Godrej 2024",
+   "bad_template": "Birla-Lodha 2004-",
+   "open_2026": "TVS, Kalyani, Tata Trusts, Hinduja"
+  },
+  "sources": [
+   "https://www.businesstoday.in/latest/corporate/story/family-assets-dont-belong-to-one-individual-venu-srinivasans-family-says-no-settlement-has-been-reached-561153-2026-10-13",
+   "https://moneylife.in/article/kalyani-family-feud-sc-pushes-baba-kalyani-sister-sugandha-hiremath-towards-mediation-appoints-justice-l-nageswara-rao-as-mediator/81050.html",
+   "https://businesstoday.in/latest/corporate/story/127-year-old-godrej-empire-splits-adi-nadir-to-keep-listed-firms-jamshyd-smita-get-unlisted-cos-land-bank-427735-2024-05-01",
+   "https://business-standard.com/amp/companies/news/birla-lodha-battle-calcutta-hc-shrinks-priyamvada-birla-estate-s-reach-123121401093_1.html",
+   "https://gulfnews.com/business/markets/who-will-succeed-gopichand-hinduja-inside-the-battle-for-a-15-billion-empire-1.500333305"
+  ],
+  "links": [
+   {
+    "to": "person:group-tvs",
+    "rel": "about"
+   },
+   {
+    "to": "person:group-kalyani",
+    "rel": "about"
+   },
+   {
+    "to": "person:group-godrej",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:regulator-outcomes-vs-conduct",
+  "title": "Judge governance history on conduct, not on final legal outcomes: Indian orders are often quashed, settled or delayed",
+  "tickers": [
+   "RELIANCE",
+   "FRETAIL",
+   "PCJEWELLER",
+   "ADANIENT",
+   "STERLINGBI"
+  ],
+  "tags": [
+   "india",
+   "governance",
+   "process",
+   "myth",
+   "base-rate"
+  ],
+  "date": "2026-11-19",
+  "confidence": "verified",
+  "body": "Legal outcomes are poor proxies for how a promoter behaved, in both directions. Penalties quashed on appeal: SAT set aside SEBI's 2021 RPL manipulation penalty on Mukesh Ambani (Dec-2023) and a Rs 25 cr takeover penalty on the Ambani family (Jul-2023), citing SEBI's long delay; SAT quashed SEBI's 2021 insider-trading ban on Kishore Biyani (Dec-2023), even as Future Retail went into liquidation; the Supreme Court (Apr-2022) set aside insider-trading orders against PC Jeweller relatives. Settlements: Adani's MPS case was settled for ~Rs 1.48 cr (Sep-2026, no admission); the Sandesaras' criminal cases were quashed on a Rs 5,100 cr deposit (SC, Nov-2025), and the SC then told SEBI to close its case (2026). Dismissals: US DOJ charges against the Adanis were dismissed with prejudice (Aug-2026); SEBI found no violation on Hindenburg's related-party allegations (Sep-2025). Delay: Videocon-ICICI (FIR 2019), DHFL (CBI 2022), Yes Bank (2020) and Religare (2019) had no final criminal verdicts by Nov-2026; promoters got bail citing trial delay. Meanwhile, conduct is often visible directly in filings: ICDs to shells, collateral given for group debt, pledge cycles, auditor exits. Rules: (1) record regulator findings, interim orders, settlements and allegations as separate categories, which this library does; (2) a quashed penalty is not proof of good conduct, and an allegation is not proof of bad conduct; (3) for investing, the question is whether minority value was transferred, which filings can usually answer before the courts do.",
+  "data": {
+   "categories": "final finding / interim order / settlement / allegation / dismissed"
+  },
+  "sources": [
+   "https://www.taxmann.com/post/blog/sat-quashes-sebis-order-imposing-penalty-on-mukesh-ambani-2-others-in-case-related-to-manipulative-trading/",
+   "https://www.outlookbusiness.com/news/sat-quashes-sebis-order-against-kishore-biyani-others-in-insider-trading-case",
+   "https://www.taxmann.com/post/blog/sc-sets-aside-insider-trading-orders-against-p-chand-jeweller/",
+   "https://www.moneylife.in/article/sebi-clears-vinod-adani-in-mps-case-gautam-adani-4-group-companies-settle-for-148-crore/81785.html",
+   "https://www.businesstoday.in/latest/economy/story/supreme-court-agrees-to-drop-criminal-proceedings-against-fugitive-sandesara-brothers-if-they-paid-rs-5100-crore-503463-2025-11-24"
+  ],
+  "links": [
+   {
+    "to": "insight:governance-surfacing-sequence",
+    "rel": "similar_to"
+   },
+   {
+    "to": "person:group-adani",
+    "rel": "about"
+   },
+   {
+    "to": "person:group-future",
+    "rel": "about"
    }
   ]
  }
