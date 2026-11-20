@@ -21,6 +21,9 @@ Last updated: 2026-11-19
   120 → 4,600; research corrected this — move began 2016–17, see knowledge_base.md).
 - Writes informally, fast, with typos; don't nitpick, interpret intent.
 
+- **Does NOT want stock recommendations unless they ask.** Has flagged stock-centric output twice
+  (19 Nov pipeline, 20 Nov pilots). Wants learning, method and edge-building; companies only as examples.
+
 ## Unknown — ask (see next_steps.md)
 - Profession / industry / domain expertise (their potential information edge)
 - City and what they can physically check (dealers, factories, markets, network)

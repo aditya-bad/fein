@@ -50,3 +50,11 @@ Skipper looked BUY-ZONE on numbers (screen). Promise tracker: ~41% weighted deli
 capacity deadlines, reversed "no more equity" promise. Downgraded 66 → 55, WATCHLIST.
 **Rule:** no BUY-ZONE without a promise-tracker credibility read on the last 6–8 calls.
 Also: score 2–3 sector peers before judging a credibility number (no base rate yet).
+
+## L9 (2026-11-20) — Method tests are not recommendations
+Ran promise-tracker pilots on UNIPARTS/SKIPPER (chosen only because data was already in memory), then
+reported them as verdicts ("downgraded to watchlist", "stays BUY-ZONE"). User: "again you are searching
+for stocks?" — same failure as L1.
+**Rule:** companies used to test a method are *test material*. Report what the method revealed, not a
+buy/sell verdict. No BUY-ZONE/WATCHLIST/score language unless the user explicitly asks about a stock.
+Default next steps should be learning/method (playbooks, calibration, teaching), not more stocks.
