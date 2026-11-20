@@ -41,3 +41,10 @@ sources (YouTube, paywalls, Screener login, India-only IPs), generic knowledge h
 33% hit vs FY26–27 new-CEO era 78%; execution promises −0.08 vs cycle promises +0.53; candour ~5%),
 SKIPPER pilot, business-group governance histories, Berkshire/Marks primary sources + Indian base rates.
 Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tools/promise_tracker/.
+- Round 2 complete (20-Nov-2026): SKIPPER pilot (credibility ~41%, downgraded to WATCHLIST 66→55),
+  business-group governance (43 groups + 6 insights), Berkshire/Marks primary sources (29) +
+  Indian base rates (13; IIMA factors: momentum ~10.6%/yr, value ~6.5%, size not significant;
+  ~42–58% of IPOs below issue; SPIVA 76–79% of active funds lag over 10 yrs).
+  memdb: 100 case studies, 116 insights, 75 persons/groups, 136 promises, 784 passages.
+**Next:** score 2–3 T&D/auto-component peers for credibility base rates; automate promise pipeline
+(fetch → pdftotext → extract → score vs screener); weekly change detectors; still need user profile.

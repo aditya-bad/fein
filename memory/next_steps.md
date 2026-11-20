@@ -23,6 +23,10 @@ Last updated: 2026-11-19
 - ~~Ask user whether to open a PR~~ User keeps this branch as home; asked them to set it as GitHub default branch (19-Nov-2026). Close PR #1 after.
 
 ## Ready to build next (no user input needed)
+- Credibility base rates: run promise tracker on 2–3 peers each of Skipper (KEC, Kalpataru, Transrail) and
+  Uniparts (Sansera, Happy Forgings) — a score means nothing without peers.
+- Fix tools/nse_fetch.py: `transcripts --download` ignores --from/--to.
+- Add `supersedes` links for re-dated promises (count goalpost moves automatically).
 - Promise tracker v1: schema in research_notes/Knowledge scout Nov 2026/edge_methods_data_access.md;
   pipeline = NSE transcripts → pdftotext → extract promises → memdb `promise` records → score each quarter.
 - Text-change ("lazy prices") diff of annual reports/concalls year over year.

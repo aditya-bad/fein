@@ -1,11 +1,13 @@
 # Primary-source wisdom and Indian market base rates
 
-Research date: 2026-11-19. Knowledge-scout notes behind seed file `memdb/seeds/2026-11-19_primary_and_baserates.json`.
-Research, not SEBI-registered advice.
+Research date: 2026-11-19/20. These are the knowledge-scout notes behind seed file `memdb/seeds/2026-11-19_primary_and_baserates.json` (42 insight records: 29 primary-source, 13 Indian base-rate).
+This is research, not SEBI-registered advice.
 
-## Method
-- Library 1: read Berkshire Hathaway letters 1977-2000, 2008, 2014, 2023, 2024 and 2025 (the 2025 letter is Greg Abel's first as CEO), downloaded from berkshirehathaway.com/letters, plus Howard Marks memos from oaktreecapital.com (2000, 2003, 2008, 2016, 2021, 2022, 2023, 2025, 2026). All quotes were grep-checked against the downloaded text. Quotes may differ slightly from the originals in punctuation (curly quotes and dashes were normalised).
-- Library 2: Indian base rates from regulator, exchange, academic and index-provider sources (SEBI, NSE, IIMA, S&P SPIVA, RBI/NSDL, CBDT/Finance Acts). Figures with only one source are marked single-source.
+## Method and caveats
+- **Library 1:** I downloaded and read the Berkshire Hathaway shareholder letters for 1977-2000, 2008, 2014, 2023, 2024 and 2025 from berkshirehathaway.com/letters. The 2025 letter, published Feb 2026, is Greg Abel's first as CEO. I also read Howard Marks memos from oaktreecapital.com: 2000, 2003, 2008 (two), 2016, 2021, 2022, 2023, 2025 (four) and 2026 (three, up to 11 Nov 2026). Every quote was checked by grep against the downloaded text. Punctuation such as curly quotes and dashes was normalised.
+- **Library 2:** The primary sources here are SEBI (Dec-2024 board memo and Oct-2026 SME consultation paper), the IIM Ahmedabad factor data library (I computed the factor statistics myself from the Dec-2025 CSV), NSE Indices factsheets (30 Oct 2026) and whitepapers, and S&P SPIVA. Press coverage was used for flows, tax and IPO outcomes. Single-source figures are labelled.
+- **Gaps:** the niftyindices historical P/E API was not reachable, so the EPS-vs-index decomposition relies on Marcellus estimates plus our own arithmetic. The SPIVA PDF was blocked (403), so its figures come from search excerpts of the official report and match the mid-year press coverage. The IPO tracker (marketping.in) gives no as-of date or benchmark adjustment.
+- **2026 context found while researching:** a Gulf conflict began in late Feb 2026, causing an oil shock, record FPI outflows and a rupee slide to about 97 per dollar. The Nifty 50 total return was -10.9% YTD at 30 Oct 2026 and the trailing P/E was about 19-21. RBI held the repo rate at 5.25% in Jun 2026.
 
 ## Library 1: Primary-source wisdom (Buffett / Berkshire, Marks / Oaktree)
 
@@ -14,200 +16,417 @@ Research, not SEBI-registered advice.
 
 Berkshire 1986 letter (Scott Fetzer purchase-accounting appendix). Definition, verbatim: owner earnings are '(a) reported earnings plus (b) depreciation, depletion, amortization, and certain other non-cash charges ... less (c) the average annual amount of capitalized expenditures for plant and equipment, etc. that the business requires to fully maintain its long-term competitive position and its unit volume.' Add any extra working capital needed to hold position. Buffett admits (c) 'must be a guess' but says owner earnings, not GAAP, is 'the relevant item for valuation purposes', quoting Keynes: 'I would rather be vaguely right than precisely wrong.' Warning: Wall Street 'cash flow' = (a)+(b) without subtracting (c); 'you shouldn't add (b) without subtracting (c)'. When (c) exceeds (b), 'GAAP earnings overstate owner earnings' (his example: oil majors). Even See's spent $0.5-1m a year above depreciation 'simply to hold our ground competitively.' Closing line: 'accounting is but an aid to business thinking, never a substitute for it.' Actionable: for Indian capex-heavy firms (metals, telecom, airlines, cement), estimate maintenance capex from 5-10yr capex/depreciation history; treat EBITDA-based or 'cash-profit' pitches as red flags (the 2023 letter says 'EBITDA is a banned measurement at Berkshire').
 
-Sources: https://www.berkshirehathaway.com/letters/1986.html, https://www.berkshirehathaway.com/letters/2023ltr.pdf
+Sources:
+- https://www.berkshirehathaway.com/letters/1986.html
+- https://www.berkshirehathaway.com/letters/2023ltr.pdf
 
 ### Buffett 1989: 'Mistakes of the First Twenty-five Years' - cigar butts, bad horses, avoid dragons
 `insight:buffett-mistakes-first-25-years` | confidence: verified | date: 1990-03-02
 
 1989 letter section, Buffett's condensed list of his own errors. (1) Buying control of Berkshire's textile mill because 'the price looked cheap'. The 'cigar butt' approach works only for liquidators: 'never is there just one cockroach in the kitchen' and 'Time is the friend of the wonderful business, the enemy of the mediocre.' (2) Hochschild Kohn department store, bought below book with real-estate and LIFO 'extras' - 'three years later I was lucky to sell the business for about what I had paid.' Lesson: 'It's far better to buy a wonderful company at a fair price than a fair company at a wonderful price. Charlie understood this early; I was a slow learner.' (3) 'Good jockeys will do well on good horses, but not on broken-down nags'; 'when a management with a reputation for brilliance tackles a business with a reputation for bad economics, it is the reputation of the business that remains intact' (first said in 1980s letters, repeated 1985 with the leaking-boat line: 'energy devoted to changing vessels is likely to be more productive than energy devoted to patching leaks'). (4) 'Easy does it': 'we concentrated on identifying one-foot hurdles that we could step over'; 'we've done better by avoiding dragons than by slaying them.' Exception: 'a marvelous business encounters a one-time huge, but solvable, problem' (AmEx, GEICO). (5) Errors of omission: passing on big purchases he understood - 'the cost of this thumb-sucking has been huge.' Related 1979 line: 'turnarounds seldom turn'. Actionable: a cheap price on a structurally poor Indian business (commodity textiles, sub-scale PSU, leveraged infra) is not a margin of safety; time compounds against you.
 
-Sources: https://www.berkshirehathaway.com/letters/1989.html, https://www.berkshirehathaway.com/letters/1985.html, https://www.berkshirehathaway.com/letters/1979.html
+Sources:
+- https://www.berkshirehathaway.com/letters/1989.html
+- https://www.berkshirehathaway.com/letters/1985.html
+- https://www.berkshirehathaway.com/letters/1979.html
 
 ### Buffett 1989: the 'institutional imperative' - four ways rational managers go wrong
 `insight:buffett-institutional-imperative` | confidence: verified | date: 1990-03-02
 
 1989 letter, called his 'most surprising discovery': 'rationality frequently wilts when the institutional imperative comes into play.' Four forms, verbatim: '(1) As if governed by Newton's First Law of Motion, an institution will resist any change in its current direction; (2) Just as work expands to fill available time, corporate projects or acquisitions will materialize to soak up available funds; (3) Any business craving of the leader, however foolish, will be quickly supported by detailed rate-of-return and strategic studies prepared by his troops; and (4) The behavior of peer companies, whether they are expanding, acquiring, setting executive compensation or whatever, will be mindlessly imitated.' Cause is 'Institutional dynamics, not venality or stupidity'. The 1990 letter applies it to banks: lenders 'played follow-the-leader with lemming-like zeal; now they are experiencing a lemming-like fate', and at 20x assets/equity 'mistakes that involve only a small portion of assets can destroy a major portion of equity.' Berkshire's response: concentrate in companies 'alert to the problem'. Actionable checklist for Indian companies: cash pile growing + 'diversification' into unrelated areas (imperative #2); every peer announcing the same capex (#4, e.g., capacity waves in cement, steel, specialty chem, NBFC loan books); CEO pet projects with consultant decks (#3). Also: 'We've never succeeded in making a good deal with a bad person.'
 
-Sources: https://www.berkshirehathaway.com/letters/1989.html, https://www.berkshirehathaway.com/letters/1990.html
+Sources:
+- https://www.berkshirehathaway.com/letters/1989.html
+- https://www.berkshirehathaway.com/letters/1990.html
 
 ### Buffett on leverage: refuse 99:1 odds; 'borrowed money has no place in the investor's tool kit'
 `insight:buffett-leverage-99-to-1` | confidence: verified | date: 1990-03-02
 
 1989 letter: higher (still conventional) leverage would have lifted Berkshire's 23.8% average ROE, and 'perhaps we could have judged there to be a 99% probability that higher leverage would lead to nothing but good' - yet a 1% chance of 'temporary anguish and default' is unacceptable: 'We wouldn't have liked those 99:1 odds - and never will. A small chance of distress or disgrace cannot, in our view, be offset by a large chance of extra returns. If your actions are sensible, you are certain to get good results; in most such cases, leverage just moves things along faster.' 1990: banks at 20:1 leverage magnify managerial errors, so 'we have no interest in purchasing shares of a poorly-managed bank at a "cheap" price.' 2014 letter: investors make stocks risky through 'Active trading, attempts to "time" market movements, inadequate diversification, the payment of high and unnecessary fees ... and the use of borrowed money'; 'borrowed money has no place in the investor's tool kit: Anything can happen anytime in markets'; 'Market forecasters will fill your ear but will never fill your wallet.' 2025 (Abel): balance sheet as 'a strategic asset to be deployed at the right time', cash+T-bills over $370bn. Actionable for an Indian individual: no margin/MTF, no F&O for leverage (ties to SEBI F&O loss study); in companies, prefer net-cash or low-debt compounders; for lenders demand best-in-class management.
 
-Sources: https://www.berkshirehathaway.com/letters/1989.html, https://www.berkshirehathaway.com/letters/1990.html, https://www.berkshirehathaway.com/letters/2014ltr.pdf, https://www.berkshirehathaway.com/letters/2025ltr.pdf
+Sources:
+- https://www.berkshirehathaway.com/letters/1989.html
+- https://www.berkshirehathaway.com/letters/1990.html
+- https://www.berkshirehathaway.com/letters/2014ltr.pdf
+- https://www.berkshirehathaway.com/letters/2025ltr.pdf
 
 ### Buffett 1983/1981: economic goodwill, consumer franchises and inflation-proof businesses (See's)
 `insight:buffett-economic-goodwill-sees` | confidence: verified | date: 1984-03-14
 
 1983 letter goodwill appendix: Blue Chip bought See's in 1972 for $25m when it had ~$8m net tangible assets and earned ~$2m after tax, i.e., ~25% on tangible assets 'with conservative accounting and no financial leverage.' 'Our first lesson: businesses logically are worth far more than net tangible assets when they can be expected to produce earnings on such assets considerably in excess of market rates of return. The capitalized value of this excess return is economic Goodwill.' Source of See's premium: 'a pervasive favorable reputation with consumers'; such a reputation 'allows the value of the product to the purchaser, rather than its production cost, to be the major determinant of selling price.' Other goodwill sources: unregulated government franchises (TV stations) and 'an enduring position as the low cost producer in an industry.' 1981 letter gives the inflation test - favoured businesses have '(1) an ability to increase prices rather easily (even when product demand is flat and capacity is not fully utilized) without fear of significant loss of either market share or unit volume, and (2) an ability to accommodate large dollar volume increases in business ... with only minor additional investment of capital.' Actionable for India (5-6% CPI): screen for pricing power proven in inflationary years (2010-13, 2022) - gross margin held while volume held - and low incremental capital per rupee of revenue growth. Brands, distribution moats and low-cost producers qualify; commodity converters usually don't.
 
-Sources: https://www.berkshirehathaway.com/letters/1983.html, https://www.berkshirehathaway.com/letters/1981.html
+Sources:
+- https://www.berkshirehathaway.com/letters/1983.html
+- https://www.berkshirehathaway.com/letters/1981.html
 
 ### Buffett 1979/1983/1984: judge managers by ROE and the $1-retained-creates-$1 test, not EPS growth
 `insight:buffett-retained-dollar-test` | confidence: verified | date: 1980-03-03
 
 1979 letter: 'The primary test of managerial economic performance is the achievement of a high earnings rate on equity capital employed (without undue leverage, accounting gimmickry, etc.) and not the achievement of consistent gains in earnings per share.' EPS rose ~20% in 1979 but Buffett called it 'an improper figure upon which to focus' because EPS 'will rise constantly on a dormant savings account' when earnings are retained; 'even a stopped clock can look like a growth stock if the dividend payout ratio is low.' 1983 owner's manual: 'We test the wisdom of retaining earnings by assessing whether retention, over time, delivers shareholders at least $1 of market value for each $1 retained', on a five-year rolling basis; and 'We will issue common stock only when we receive as much in business value as we give.' 1984: unrestricted earnings should be retained only if reinvestment returns are at least what shareholders could earn themselves. Reaffirmed by Greg Abel in the 2025 letter: no dividends 'so long as more than one dollar of market value for shareholders is reasonably likely to be created by each dollar of retained earnings.' Actionable: compute for any Indian company over 5-10 yrs: (change in market cap) / (cumulative retained earnings). Below 1.0 = capital destruction regardless of EPS growth. Watch EPS growth that only reflects rising equity base at flat or falling ROE.
 
-Sources: https://www.berkshirehathaway.com/letters/1979.html, https://www.berkshirehathaway.com/letters/1983.html, https://www.berkshirehathaway.com/letters/1984.html, https://www.berkshirehathaway.com/letters/2025ltr.pdf
+Sources:
+- https://www.berkshirehathaway.com/letters/1979.html
+- https://www.berkshirehathaway.com/letters/1983.html
+- https://www.berkshirehathaway.com/letters/1984.html
+- https://www.berkshirehathaway.com/letters/2025ltr.pdf
 
 ### Buffett 1987/1995: castles with moats; 'Severe change and exceptional returns usually don't mix'
 `insight:buffett-moats-and-change` | confidence: verified | date: 1996-03-01
 
 1995 letter: 'In business, I look for economic castles protected by unbreachable "moats."' (GEICO's moat widened as expenses fell to 23.6% of premiums). 1996: GEICO's 'economies of scale ... should allow us to maintain or even widen the protective moat'; its 'sustainable cost advantage' is what attracted him in 1951. 1987 letter on unglamorous holdings: 'Severe change and exceptional returns usually don't mix. Most investors, of course, behave as if just the opposite were true', conferring 'the highest price-earnings ratios on exotic-sounding businesses that hold out the promise of feverish change.' And: 'a business that constantly encounters major change also encounters many chances for major error ... economic terrain that is forever shifting violently is ground on which it is difficult to build a fortress-like business franchise. Such a franchise is usually the key to sustained high returns.' 1989 acquisition criteria: 'demonstrated consistent earning power (future projections are of little interest to us, nor are "turnaround" situations)', good ROE with little debt, 'simple businesses (if there's lots of technology, we won't understand it)'. Actionable: weight 'stable industry + widening cost or brand advantage' over 'disruption story'; check whether the moat is widening (falling unit cost vs peers, rising share) each year rather than assuming it.
 
-Sources: https://www.berkshirehathaway.com/letters/1987.html, https://www.berkshirehathaway.com/letters/1995.html, https://www.berkshirehathaway.com/letters/1996.html, https://www.berkshirehathaway.com/letters/1989.html
+Sources:
+- https://www.berkshirehathaway.com/letters/1987.html
+- https://www.berkshirehathaway.com/letters/1995.html
+- https://www.berkshirehathaway.com/letters/1996.html
+- https://www.berkshirehathaway.com/letters/1989.html
 
 ### Buffett 1986/1987: Mr. Market is there to serve you; be fearful when others are greedy
 `insight:buffett-mr-market-fear-greed` | confidence: verified | date: 1988-02-29
 
 1986 letter: 'we simply attempt to be fearful when others are greedy and to be greedy only when others are fearful', followed by 'As this is written, little fear is visible in Wall Street. Instead, euphoria prevails' (written months before the Oct-1987 crash). 1987 letter retells Graham's parable: Mr. Market 'appears daily and names a price', has 'incurable emotional problems', 'doesn't mind being ignored', and 'the more manic-depressive his behavior, the better for you.' Warning: 'Mr. Market is there to serve you, not to guide you. It is his pocketbook, not his wisdom, that you will find useful ... it will be disastrous if you fall under his influence.' 1997 'final exam': a lifetime net saver should welcome lower prices - 'they are elated when stock prices rise and depressed when they fall' is backwards for net buyers. 2008 letter in the crash: 'Price is what you pay; value is what you get' (Graham), 'Whether we're talking about socks or stocks, I like buying quality merchandise when it is marked down', and 'Beware the investment activity that produces applause; the great moves are usually greeted by yawns.' Actionable: for an Indian SIP-stage investor, falling markets are a pay raise; pre-write buy lists with prices so panic periods (Mar-2020, 2008, 2013 taper) trigger action, not paralysis.
 
-Sources: https://www.berkshirehathaway.com/letters/1986.html, https://www.berkshirehathaway.com/letters/1987.html, https://www.berkshirehathaway.com/letters/1997.html, https://www.berkshirehathaway.com/letters/2008ltr.pdf
+Sources:
+- https://www.berkshirehathaway.com/letters/1986.html
+- https://www.berkshirehathaway.com/letters/1987.html
+- https://www.berkshirehathaway.com/letters/1997.html
+- https://www.berkshirehathaway.com/letters/2008ltr.pdf
 
 ### Buffett 1993/1996: circle of competence, concentration, and risk = possibility of loss
 `insight:buffett-circle-of-competence-concentration` | confidence: verified | date: 1997-02-28
 
 1996 letter: 'Your goal as an investor should simply be to purchase, at a rational price, a part interest in an easily-understandable business whose earnings are virtually certain to be materially higher five, ten and twenty years from now. Over time, you will find only a few companies that meet these standards - so when you see one that qualifies, you should buy a meaningful amount of stock.' Also: 'If you aren't willing to own a stock for ten years, don't even think about owning it for ten minutes.' On competence: 'You only have to be able to evaluate companies within your circle of competence. The size of that circle is not very important; knowing its boundaries, however, is vital.' 1993: 'a policy of portfolio concentration may well decrease risk if it raises ... both the intensity with which an investor thinks about a business and the comfort-level he must feel with its economic characteristics', with risk defined 'as "the possibility of loss or injury"', not beta. But the same letter's other half: 'By periodically investing in an index fund ... the know-nothing investor can actually out-perform most investment professionals. Paradoxically, when "dumb" money acknowledges its limitations, it ceases to be dumb.' Concentration is only for the 'know-something investor' who can find 'five to ten sensibly-priced companies that possess important long-term competitive advantages.' 1988: 'our favorite holding period is forever' (for outstanding businesses + managements). Actionable: honest self-classification first; index core + concentrated satellite only in sectors where we have documented edge.
 
-Sources: https://www.berkshirehathaway.com/letters/1993.html, https://www.berkshirehathaway.com/letters/1996.html, https://www.berkshirehathaway.com/letters/1988.html
+Sources:
+- https://www.berkshirehathaway.com/letters/1993.html
+- https://www.berkshirehathaway.com/letters/1996.html
+- https://www.berkshirehathaway.com/letters/1988.html
 
 ### Buffett 1993: the five factors that determine a stock's risk/value (a usable checklist)
 `insight:buffett-1993-five-factor-checklist` | confidence: verified | date: 1994-03-01
 
 1993 letter lists 'the primary factors bearing upon this evaluation' of a business's investment risk: '1) The certainty with which the long-term economic characteristics of the business can be evaluated; 2) The certainty with which management can be evaluated, both as to its ability to realize the full potential of the business and to wisely employ its cash flows; 3) The certainty with which management can be counted on to channel the rewards from the business to the shareholders rather than to itself; 4) The purchase price of the business; 5) The levels of taxation and inflation that will be experienced and that will determine the degree by which an investor's purchasing-power return is reduced from his gross return.' He concedes they 'will probably strike many analysts as unbearably fuzzy, since they cannot be extracted from a data base of any kind', but 'the difficulty of precisely quantifying these matters does not negate their importance.' Pair with 1994: 'We will continue to ignore political and economic forecasts, which are an expensive distraction', and the Ted Williams 'happy zone' discipline (also cited in Abel's 2025 letter). Actionable for India: factor 3 (promoter channels value to self via related-party deals, royalty, pledges, preferential warrants) is the most common failure in Indian small caps; factor 5 means model post-tax real returns (LTCG 12.5% above Rs1.25 lakh from Jul-2024; CPI ~4-6%).
 
-Sources: https://www.berkshirehathaway.com/letters/1993.html, https://www.berkshirehathaway.com/letters/1994.html, https://www.berkshirehathaway.com/letters/2025ltr.pdf
+Sources:
+- https://www.berkshirehathaway.com/letters/1993.html
+- https://www.berkshirehathaway.com/letters/1994.html
+- https://www.berkshirehathaway.com/letters/2025ltr.pdf
 
 ### Buffett 1992/2000: growth and value are 'joined at the hip'; growth only helps above the cost of capital
 `insight:buffett-growth-value-joined` | confidence: verified | date: 1993-03-01
 
 1992 letter: the two approaches 'are joined at the hip: Growth is always a component in the calculation of value, constituting a variable whose importance can range from negligible to enormous and whose impact can be negative as well as positive'; 'the very term "value investing" is redundant.' Key rule: 'Growth benefits investors only when the business in point can invest at incremental returns that are enticing - in other words, only when each dollar used to finance the growth creates over a dollar of long-term market value. In the case of a low-return business requiring incremental funds, growth hurts the investor.' Example given: airlines - 'The more the industry has grown, the worse the disaster for owners.' He condenses John Burr Williams: value 'is determined by the cash inflows and outflows - discounted at an appropriate interest rate - that can be expected to occur during the remaining life of the asset.' 2000 letter restates via Aesop: 'a bird in the hand is worth two in the bush' - ask how certain the birds are, when and how many, and the risk-free rate. 'Common yardsticks such as dividend yield, the ratio of price to earnings or to book value, and even growth rates have nothing to do with valuation except to the extent they provide clues to the amount and timing of cash flows'; 'growth can destroy value if it requires cash inputs in the early years' that exceed later discounted value; 'Using precise numbers is, in fact, foolish; working with a range of possibilities is the better approach.' Actionable: always pair revenue growth with incremental ROCE; low-P/E/low-P/B is not value by itself.
 
-Sources: https://www.berkshirehathaway.com/letters/1992.html, https://www.berkshirehathaway.com/letters/2000pdf.pdf
+Sources:
+- https://www.berkshirehathaway.com/letters/1992.html
+- https://www.berkshirehathaway.com/letters/2000pdf.pdf
 
 ### Buffett 2000: bubble companies built for IPOs = 'wealth transfer'; Cinderella's clock has no hands
 `insight:buffett-2000-bubble-ipo-wealth-transfer` | confidence: verified | date: 2001-02-28
 
 2000 letter (written early 2001, after the dot-com peak): 'value is destroyed, not created, by any business that loses money over its lifetime, no matter how high its interim valuation may get.' What happens instead is 'wealth transfer, often on a massive scale. By shamelessly merchandising birdless bushes, promoters have in recent years moved billions of dollars from the pockets of the public to their own purses'; 'a bubble market has allowed the creation of bubble companies, entities designed more with an eye to making money off investors rather than for them. Too often, an IPO, not profits, was the primary goal of a company's promoters.' The 'business model' was 'the old-fashioned chain letter, for which many fee-hungry investment bankers acted as eager postmen.' 'But a pin lies in wait for every bubble.' On psychology: 'Nothing sedates rationality like large doses of effortless money'; speculators plan to leave the ball 'just seconds before midnight. There's a problem, though: They are dancing in a room in which the clocks have no hands.' Evidence he cites: a Dec-1999 PaineWebber-Gallup survey where investors expected ~19% annual returns for the next decade. Actionable for India: SME/mainboard IPO frenzies (record subscriptions, grey-market premia, OFS-heavy issues where promoters/PE sell) are the modern version; check whether proceeds go to the company or to selling holders.
 
-Sources: https://www.berkshirehathaway.com/letters/2000pdf.pdf
+Sources:
+- https://www.berkshirehathaway.com/letters/2000pdf.pdf
 
 ### Berkshire's admitted mistakes 2008-2025: ConocoPhillips, Irish banks, Tesco, Kraft Heinz, Pilot - and 'thumb-sucking'
 `insight:buffett-mistakes-admitted-2008-2025` | confidence: verified | date: 2026-02-28
 
 Primary-source error log. 2008 letter: 'I made at least one major mistake of commission' - buying 'a large amount of ConocoPhillips stock when oil and gas prices were near their peak' ('the terrible timing of my purchase has cost Berkshire several billion dollars'); $244m in two Irish banks that 'appeared cheap', written down to $27m (-89%) by year-end ('unforced errors'); and errors of omission, 'sucking my thumb when new facts came in.' 2014: Tesco - 'I made a big mistake with this investment by dawdling'; after souring on management in 2013 he sold slowly; 'bad news often surfaces serially: You see a cockroach in your kitchen; as the days go by, you meet his relatives' (after-tax loss ~$444m per the letter). 1999: Dexter Shoe (bought 1993 with Berkshire stock) collapsed as ~93% of US shoes came from imports. 2024: 'During the 2019-23 period, I have used the words "mistake" or "error" 16 times'; 'The cardinal sin is delaying the correction of mistakes or what Charlie Munger called "thumb-sucking."' 2025 (Greg Abel): 'Our investment in Kraft Heinz has been disappointing ... our return has been well short of adequate'; Pilot - control delayed until 2023 by contract: 'That mistake will not happen again.' Patterns: buying commodity exposure near cyclical peaks; 'cheap' leveraged banks; slow exit when management or moat deteriorates; paying with own stock for a business whose moat is eroding. Actionable: write a sell trigger at purchase; act on the first cockroach.
 
-Sources: https://www.berkshirehathaway.com/letters/2008ltr.pdf, https://www.berkshirehathaway.com/letters/2014ltr.pdf, https://www.berkshirehathaway.com/letters/1999htm.html, https://www.berkshirehathaway.com/letters/2024ltr.pdf, https://www.berkshirehathaway.com/letters/2025ltr.pdf
+Sources:
+- https://www.berkshirehathaway.com/letters/2008ltr.pdf
+- https://www.berkshirehathaway.com/letters/2014ltr.pdf
+- https://www.berkshirehathaway.com/letters/1999htm.html
+- https://www.berkshirehathaway.com/letters/2024ltr.pdf
+- https://www.berkshirehathaway.com/letters/2025ltr.pdf
 
 ### Buffett 2014: 'Volatility is far from synonymous with risk' - but only for investors with long horizons and no forced selling
 `insight:buffett-volatility-not-risk-2014` | confidence: verified | date: 2015-02-27
 
 2014 (50th-anniversary) letter: business schools use volatility as a proxy for risk; 'this pedagogic assumption makes for easy teaching, it is dead wrong: Volatility is far from synonymous with risk.' The real risk is loss of purchasing power over the holding period. Caveat stated plainly: 'owning equities for a day or a week or a year is far riskier ... than leaving funds in cash-equivalents', relevant to anyone 'forced to sell securities during depressed markets', and 'any party that might have meaningful near-term needs for funds should keep appropriate sums in Treasuries or insured bank deposits.' For multi-decade investors, 'a diversified equity portfolio, bought over time, will prove far less risky than dollar-based securities.' 2024 letter adds the currency angle: 'Paper money can see its value evaporate if fiscal folly prevails ... Fixed-coupon bonds provide no protection against runaway currency', and Berkshire 'will never prefer ownership of cash-equivalent assets over the ownership of good businesses.' 2008: the 'U.S. Treasury bond bubble of late 2008' - 'Clinging to cash equivalents ... is almost certainly a terrible policy if continued for long.' Actionable for an Indian investor: segregate a 2-3 year cash/FD/liquid-fund need bucket so no equity sale is ever forced; above that, measure risk as permanent loss and real (INR-inflation-adjusted) return, not drawdown size.
 
-Sources: https://www.berkshirehathaway.com/letters/2014ltr.pdf, https://www.berkshirehathaway.com/letters/2024ltr.pdf, https://www.berkshirehathaway.com/letters/2008ltr.pdf
+Sources:
+- https://www.berkshirehathaway.com/letters/2014ltr.pdf
+- https://www.berkshirehathaway.com/letters/2024ltr.pdf
+- https://www.berkshirehathaway.com/letters/2008ltr.pdf
 
 ### Buffett 2014: how high-P/E acquirers manufacture EPS growth - the 1960s conglomerate drill
 `insight:buffett-conglomerate-chain-letter-2014` | confidence: verified | date: 2015-02-27
 
 2014 letter, 'Berkshire Today': 'Conglomerates ... have a terrible reputation with investors. And they richly deserve it.' The late-1960s drill: 'By personality, promotion or dubious accounting - and often by all three - these managers drove a fledgling conglomerate's stock to, say, 20 times earnings and then issued shares as fast as possible to acquire another business selling at ten-or-so times earnings. They immediately applied "pooling" accounting to the acquisition, which - with not a dime's worth of change in the underlying businesses - automatically increased per-share earnings, and used the rise as proof of managerial genius.' The game needs an ever-rising stock price and ends when it stops. Same letter credits Munger's blueprint: 'Forget what you know about buying fair businesses at wonderful prices; instead, buy wonderful businesses at fair prices.' Berkshire's own rule (1983/1989): issue stock only 'when we receive as much in intrinsic business value as we give.' Actionable red flag for Indian markets: serial acquirers or roll-ups paying with richly valued paper or QIP money, rising EPS mostly from acquisitions, goodwill growing faster than operating cash flow, frequent restatements/segment changes. Test: organic growth and cash conversion excluding acquisitions.
 
-Sources: https://www.berkshirehathaway.com/letters/2014ltr.pdf, https://www.berkshirehathaway.com/letters/1983.html
+Sources:
+- https://www.berkshirehathaway.com/letters/2014ltr.pdf
+- https://www.berkshirehathaway.com/letters/1983.html
 
 ### Buffett 2019-24 Japan trading houses + 2023 buyback rule: look at the records, buy the cheap, price-dependent repurchases
 `insight:buffett-japan-trading-houses-buybacks` | confidence: verified | date: 2025-02-22
 
 2024 letter: Berkshire began buying ITOCHU, Marubeni, Mitsubishi, Mitsui and Sumitomo in July 2019: 'We simply looked at their financial records and were amazed at the low prices of their stocks.' What they liked: the five 'increase dividends when appropriate, they repurchase their shares when it is sensible to do so, and their top managers are far less aggressive in their compensation programs than their U.S. counterparts.' Initial cap below 10% of each, relaxed moderately; aggregate cost $13.8bn at end-2024 (market value $23.5bn per the letter); position partly funded with yen borrowings to match currency. 2023 letter on buybacks: 'All stock repurchases should be price-dependent. What is sensible at a discount to business-value becomes stupid if done at a premium.' And on Coke/AmEx (held 20+ years with no trades in 2023): 'When you find a truly wonderful business, stick with it. Patience pays, and one wonderful business can offset the many mediocre decisions that are inevitable.' Also 2023: 'By both luck and pluck, a few huge winners have emerged from a great many dozens of decisions.' Actionable: (1) plain-vanilla reading of financials in an unfashionable market can be an edge (cf. Indian PSUs 2020-21, Japan 2019); (2) judge Indian buybacks on price vs intrinsic value, not as a signal per se; (3) a few winners drive lifetime returns - don't trim them for 'valuation' alone.
 
-Sources: https://www.berkshirehathaway.com/letters/2024ltr.pdf, https://www.berkshirehathaway.com/letters/2023ltr.pdf
+Sources:
+- https://www.berkshirehathaway.com/letters/2024ltr.pdf
+- https://www.berkshirehathaway.com/letters/2023ltr.pdf
 
 ### Greg Abel's first letter (2025): Berkshire's five capital-allocation criteria and the dry-powder doctrine
 `insight:abel-2025-capital-allocation-principles` | confidence: verified | date: 2026-02-28
 
 Berkshire's 2025 letter (published 2026) is the first signed by Greg Abel as CEO; Buffett remains Chairman. Stated criteria, verbatim bullets: 'Invest in businesses that we thoroughly understand, with durable advantages and long-term economic prospects'; 'Partner with high integrity leaders who understand their customers and act like owners'; 'Avoid businesses that undermine the fabric of society or could jeopardize Berkshire's reputation'; 'Act quickly and concentrate our capital in a few high conviction ideas'; 'Maintain discipline and let compounding unfold.' Opportunities are judged on growth of 'intrinsic value per share over a time horizon measured in perpetuity.' Cash and US Treasuries 'now exceed $370 billion' - 'our dry powder' - and a large cash position 'does not' signal 'a retreat from investing.' 2025 deals: OxyChem (from Occidental) and Bell Laboratories (rodent control: 'easy to understand and always needed' - 'We only wish it had been ten times bigger'). Buybacks only 'below our estimate of intrinsic value, conservatively determined'; no dividend while $1 retained creates >$1 of value. Operating cash flow $46bn in 2025 vs >$40bn five-year average. Candour carried over: Kraft Heinz 'disappointing', Pilot control delay a 'mistake'. Actionable: a ready-made 5-line purchase checklist; patience with cash is a position, not a failure.
 
-Sources: https://www.berkshirehathaway.com/letters/2025ltr.pdf
+Sources:
+- https://www.berkshirehathaway.com/letters/2025ltr.pdf
 
 ### Marks 2003 'The Most Important Thing': price vs value first, invest scared, avoid losers, be average in good times
 `insight:marks-most-important-thing-2003` | confidence: verified | date: 2003-07-01
 
 Memo of 1 Jul 2003 (later a book). 'The most important thing - above all - is the relationship between price and value.' 'no asset is so good that it can't become a bad investment if bought at too high a price. And there are few assets so bad that they can't be a good investment when bought cheap enough.' On conviction: 'Few things are more dangerous than an incorrect opinion held with conviction and relied on to excess.' Defensive investing: 'If we avoid the losers, the winners will take care of themselves'; ingredients are '(a) insistence on solid, identifiable value at a bargain price, (b) diversification rather than concentration, and (c) avoidance of reliance on macro-forecasts and market timing.' Simplified: 'Invest scared! Worry about the possibility of loss. Worry that there's something you don't know.' Return profile target: 'average in good times ... and far above average in bad times', because 'in the good times, it's good enough to be average.' Other headings (each 'the most important thing'): intrinsic value estimate; avoiding bad years; limits of macro knowledge; 'being mindful of cycles (and where we stand in them)'; contrarian behavior; 'patient opportunism'; 'being leery of leverage'; acknowledging uncontrollable factors. 'Ignoring cycles and extrapolating trends is one of the most dangerous things an investor can do.' Note tension with Buffett's concentration (Marks runs credit); use his loss-avoidance asymmetry rather than his diversification prescription for an equity compounder book.
 
-Sources: https://www.oaktreecapital.com/docs/default-source/memos/2003-07-01-the-most-important-thing.pdf
+Sources:
+- https://www.oaktreecapital.com/docs/default-source/memos/2003-07-01-the-most-important-thing.pdf
 
 ### Marks Jan-2000 'bubble.com': the timeless markers of a mania (South Sea to TMT)
 `insight:marks-bubble-com-2000` | confidence: verified | date: 2000-01-02
 
 Memo of 2 Jan 2000, Marks's first widely read memo, written after reading Edward Chancellor's 'Devil Take the Hindmost'. Uses the 1720 South Sea Bubble as a template: companies financed losses by issuing stock at ever-higher prices; 'Some argued that the higher the shares rose, the more they were actually worth' - Marks's gloss: '[There's no such thing as too high a price if the concept is right...]'; the legendary company 'for carrying on an undertaking of great advantage but no one to know what it is' - gloss: '[I can't understand what it does, but that's okay]'. Isaac Newton sold early, bought back at the top and lost £20,000. RCA fell from $114 to $2.5 within three years after 1929; airlines' cumulative profit from founding to 1992 was zero despite transforming the world. Verdict quoted in his 2023 recap: 'I find the evidence of an overheated, speculative market in technology, Internet and telecommunications stocks overwhelming, as are the similarities to past manias.' Outcome (per 'Taking the Temperature', 2023): S&P 500 -46% from 2000 high to 2002 low, NASDAQ -80%. Marks's definition: a bubble is 'an irrationally elevated opinion of an asset or sector.' Markers to check: prices set on revenue or 'concept and hope'; people quitting day jobs to trade; money-losing firms funded by rising equity; transformative technology assumed to mean investor profits.
 
-Sources: https://www.oaktreecapital.com/docs/default-source/memos/2000-01-02-bubble.pdf, https://www.oaktreecapital.com/insights/memo/taking-the-temperature
+Sources:
+- https://www.oaktreecapital.com/docs/default-source/memos/2000-01-02-bubble.pdf
+- https://www.oaktreecapital.com/insights/memo/taking-the-temperature
 
 ### Marks Jan-2016 'On the Couch': perception swings from 'flawless' to 'hopeless'
 `insight:marks-on-the-couch-2016` | confidence: verified | date: 2016-01-14
 
 Memo of 14 Jan 2016 (written amid the China/oil sell-off). Core line: 'in the real world, things generally fluctuate between "pretty good" and "not so hot." But in the world of investing, perception often swings from "flawless" to "hopeless." The pendulum careens from one extreme to the other, spending almost no time at "the happy medium"'. Investors' failings take 'two primary forms: selective perception and skewed interpretation' - noting only positives (or only negatives), and reading the same event bullishly or bearishly depending on mood; 'rarely are their perceptions and interpretations balanced and neutral.' He also flags repeated failure to see 'ramifications and second-order consequences' (e.g., underestimating contagion from sub-prime 2007-08). Actionable: when Indian market narratives go to extremes (e.g., 'India can only go up' in 2024 small-cap froth; 'India is uninvestable' in 2013 taper or Mar-2020), write down the base-case reality ('pretty good'/'not so hot') and compare to what prices imply.
 
-Sources: https://www.oaktreecapital.com/docs/default-source/memos/on-the-couch.pdf
+Sources:
+- https://www.oaktreecapital.com/docs/default-source/memos/on-the-couch.pdf
 
 ### Marks Sep/Oct-2008 'Nobody Knows' + 'The Limits to Negativism': skepticism means doubting pessimism too
 `insight:marks-limits-to-negativism-2008` | confidence: verified | date: 2008-10-15
 
 Memos of 19 Sep 2008 and 15 Oct 2008, written in the Lehman panic. Binary framing: 'I think the outlook has to be viewed as binary: will the world end or won't it? If you can't say yes, you have to say no and act accordingly' - if the world ends, nothing you did matters; if it doesn't and you didn't invest, 'we wouldn't have done our job.' Oaktree invested ~$400m a week from 18 Sep 2008 to year-end (~$6bn in distressed debt, $7.5bn firm-wide), buying senior debt at prices that would work even if companies were worth 'only one-quarter or one-third of what the buyout funds had just paid.' The CIO meeting where no scenario was 'too bad' convinced him 'little optimism was embodied in the prices.' Key lines: 'Skepticism and pessimism aren't synonymous. Skepticism calls for pessimism when optimism is excessive. But it also calls for optimism when pessimism is excessive'; in the third stage of a bear market 'everyone agrees things can only get worse', and 'the greater long-term risk probably lies in not investing.' Outcome (per Marks): S&P 500 fell to 735 in Feb 2009, -53% from its 2007 high of 1,549, then recovered. Actionable for India: in a crash, ask whether the system survives; if yes, buy senior/high-quality claims at prices that work in bad cases (2008, Mar-2020 analogues).
 
-Sources: https://www.oaktreecapital.com/docs/default-source/memos/2008-10-15-the-limits-to-negativism.pdf, https://www.oaktreecapital.com/insights/memo/taking-the-temperature
+Sources:
+- https://www.oaktreecapital.com/docs/default-source/memos/2008-10-15-the-limits-to-negativism.pdf
+- https://www.oaktreecapital.com/insights/memo/taking-the-temperature
 
 ### Marks Jul-2023 'Taking the Temperature': five market calls in 50 years and the checklist behind them
 `insight:marks-taking-the-temperature-2023` | confidence: verified | date: 2023-07-10
 
 Memo of 10 Jul 2023. His son Andrew: his calls were right 'because you did it five times in 50 years' - Jan 2000 (TMT), 2004-07 (credit excess), late 2008 (buy), Mar 2012 (buy amid equity disillusionment; S&P then returned 16.5%/yr 2012-2021), Mar 2020 (buy; 'The bottom is the day before the recovery begins'). 'Once in a while - once or twice a decade, perhaps - markets go so high or so low that the argument for action is compelling and the probability of being right is high'; otherwise 'one key is to avoid making macro calls too often.' Edge does not come from data: 'readily available quantitative data regarding the past and present can't hold the secret' - 'The key lies in understanding prevailing investor psychology.' Checklist (paraphrased headings, quotes verbatim): engage in pattern recognition (cycles 'fluctuate in ways that approach dependability'); cycles stem from 'excesses and corrections'; watch for 'things can only get better' ('there's no price too high') or 'things can only get worse' ('a sale at any price is a good sale'); in extremes 'the secret to making money lies in contrarianism, not conformity' but 'most of the time, the consensus is as close to right as most individuals can get'; to be contrarian know '(a) what the herd is doing, (b) why it's doing it, (c) what's wrong with it, and (d) what should be done instead and why'; 'Resist your own emotionality'; on illogical propositions, 'See something; do something.' 2004-07 tell: 'If deals like this can get done ... there's something wrong with the market.'
 
-Sources: https://www.oaktreecapital.com/insights/memo/taking-the-temperature
+Sources:
+- https://www.oaktreecapital.com/insights/memo/taking-the-temperature
 
 ### Marks Jan-2021 'Something of Value': low multiples are not value; edge lives in qualitative, forward judgement
 `insight:marks-something-of-value-2021` | confidence: verified | date: 2021-01-11
 
 Memo of 11 Jan 2021, from months of debate with his son Andrew (a growth/tech investor) during the pandemic. Context: growth had beaten value for ~13 years. Conclusions: 'carrying low valuation parameters' is 'far from synonymous with "underpriced"'; 'a stock with a low p/e ratio, for example, is likely to be a bargain only if its current earnings and recent earnings growth are indicative of the future.' Pure low-multiple pursuit leads to 'value traps': things that look cheap 'because they have operating weaknesses or because the sales and earnings creating those valuations can't be replicated.' On edge: 'Since quantitative information regarding the present is so readily available, success in the highly competitive field of investing is more likely to be the result of superior judgments about qualitative factors and future events'; 'successful investing has to be more about superior judgments concerning (a) qualitative, non-computable factors and (b) how things are likely to unfold in the future.' Marks admits Oaktree's Graham-style caution may have cost returns in winners-take-most industries. Actionable: public screens (low P/E, high ROE on screener.in) carry no edge by themselves; edge comes from scuttlebutt, industry structure and variant perception about the future.
 
-Sources: https://www.oaktreecapital.com/insights/memo/something-of-value
+Sources:
+- https://www.oaktreecapital.com/insights/memo/something-of-value
 
 ### Marks Dec-2022 'Sea Change': the 40-year falling-rate tailwind ended; a 'full-return world' favours lenders and bargain hunters
 `insight:marks-sea-change-2022` | confidence: verified | date: 2022-12-13
 
 Memo of 13 Dec 2022. Marks counts only three sea changes in 53 years: (1) the 1970s shift to risk/return thinking (birth of high yield, distressed debt), (2) Volcker's 1980 hike to a 20% fed funds rate that ushered in 'a declining-interest-rate environment that prevailed for four decades', and (3) the end of ultra-low rates in 2022. On 1980-2021 returns: 'I'd be surprised if 40 years of declining interest rates didn't play the greatest role of all.' 2009-21 was 'an asset owner's market and a borrower's market ... a frustrating period for lenders and bargain hunters.' Now: 'We've gone from the low-return world of 2009-21 to a full-return world'; credit can deliver 'equity-like returns, sourced from contractual cash flows', so investors 'no longer have to rely as heavily on riskier investments.' 'highly stimulative rates are likely not in the cards for the next several years, barring a serious recession.' Motto restated: 'we never know where we're going, but we ought to know where we are.' Actionable for India: valuation multiples expanded with falling global rates; in a higher-for-longer world, compare equity earnings yields with Indian G-sec/AAA yields (~6.5-7.5%) and don't assume multiple expansion in return models.
 
-Sources: https://www.oaktreecapital.com/insights/memo/sea-change
+Sources:
+- https://www.oaktreecapital.com/insights/memo/sea-change
 
 ### Marks Jan-2025 'On Bubble Watch': starting P/E ~22x has historically meant ~+2% to -2% ten-year S&P returns
 `insight:marks-on-bubble-watch-2025` | confidence: single-source | date: 2025-01-02
 
 Memo of 2 Jan 2025 (25 years after bubble.com). Cites a J.P. Morgan Asset Management chart of ~324 monthly observations (1988-late 2014) of S&P 500 forward P/E vs subsequent ten-year annualised return: 'There's a strong relationship between starting valuations and subsequent annualized ten-year returns. Higher starting valuations consistently lead to lower returns, and vice versa'; 'when people bought the S&P at p/e ratios in line with today's multiple of 22, they always earned ten-year returns between plus 2% and minus 2%.' Notes banks projecting low- to mid-single-digit ten-year S&P returns; 'the return on an investment is significantly a function of the price paid for it.' Flags concentration: the top-7 stocks' share of the index was roughly 22% in 2000 vs ~one-third now. Not a call to sell everything - he did not say a bubble existed, only that 'investors clearly shouldn't be indifferent to today's market valuation.' Actionable: build an Indian equivalent - Nifty 50 trailing/forward P/E vs subsequent 5/10-yr CAGR (data from NSE index factsheets) - and use starting valuation to set return expectations, not to time exits. Small sample caveat: overlapping 10-yr windows over ~27 years.
 
-Sources: https://www.oaktreecapital.com/insights/memo/on-bubble-watch
+Sources:
+- https://www.oaktreecapital.com/insights/memo/on-bubble-watch
 
 ### Marks Aug-2025 'The Calculus of Value': market moved from 'elevated' to 'worrisome'; the INVESTCON defensive ladder
 `insight:marks-calculus-of-value-investcon-2025` | confidence: verified | date: 2025-08-13
 
 Memo of 13 Aug 2025. Observations: about half the S&P 500's 58% two-year return in 2023-24 came from the Magnificent Seven, which reached ~one-third of index value; their average P/E ~33 he did not find unreasonable given 'exceptional products, significant market shares, high incremental profit margins, and strong competitive moats.' But fundamentals looked 'less good overall than they were seven months ago' (tariffs) while prices were higher; S&P +14% in the four months after 1 Apr 2025. A P/E 'is basically the result of applying a discounted cash flow calculation' with inputs growth, durability and ROIC; today's index is faster-growing, less cyclical, less capital-intensive - so 'it's different this time' is a cliche that 'always bears scrutiny' yet failing to see real change 'stands between the average investor and superiority.' Verdict: 'the stock market has moved from "elevated" to "worrisome."' INVESTCON scale: '6. Stop buying; 5. Reduce aggressive holdings and increase defensive holdings; 4. Sell off the remaining aggressive holdings; 3. Trim defensive holdings as well; 2. Eliminate all holdings; 1. Go short.' He says 3-2-1 are essentially never justified ('"overvaluation" is never synonymous with "sure to go down soon"'), and called for INVESTCON 5. Actionable: a graded, reversible response to high temperature - tilt, don't exit.
 
-Sources: https://www.oaktreecapital.com/insights/memo/the-calculus-of-value
+Sources:
+- https://www.oaktreecapital.com/insights/memo/the-calculus-of-value
 
 ### Marks Nov-2025 'Cockroaches in the Coal Mine': long booms breed a 'bezzle'; credit red flags as a mosaic
 `insight:marks-cockroaches-bezzle-2025` | confidence: verified | date: 2025-11-06
 
 Memo of 6 Nov 2025, after the First Brands (auto parts) and Tricolor (subprime auto) bankruptcies, both private-credit borrowers. Jamie Dimon: 'when you see one cockroach, there are probably more.' Marks on the risk-attitude cycle: in good times people say 'Risk is my friend', ambiguous news is read positively and 'the possibility of loss recedes from consciousness'; after losses, 'Get me out at any price.' Galbraith's 'bezzle' - wealth fraudsters appear to have created until found out; Munger said good times create conditions for 'a good bezzle.' 'The markets aren't crooked per se, but they're full of money, and thus they tend to attract crooks'; 'It shouldn't come as a surprise ... if the last sixteen years of largely uninterrupted economic growth, rising markets, and profitable risk taking are shown to have produced a bumper crop of frauds.' First Brands mechanics: customers paid some receivables to First Brands rather than the factor, allegedly allowing receivables to be sold more than once; inventory sold to related SPVs and borrowed against, with buy-back obligations - heavy off-balance-sheet financing. Oaktree held a small position, dug in early summer 2025, and exited. Method: conclusions are a 'mosaic' built from 'a preponderance of the evidence'; 'In detecting credit defects, the big payoff is for being early.' Actionable for India: watch supply-chain finance, factoring, related-party inventory transfers, and receivables growing faster than sales (cf. Ind AS levers record).
 
-Sources: https://www.oaktreecapital.com/insights/memo/cockroaches-in-the-coal-mine
+Sources:
+- https://www.oaktreecapital.com/insights/memo/cockroaches-in-the-coal-mine
 
 ### Marks on AI (Dec-2025 'Is It a Bubble?', Nov-2026 'A Layman Thinks About AI'): moderate, selective exposure; price still rules
 `insight:marks-ai-bubble-and-layman-2025-26` | confidence: verified | date: 2026-11-11
 
 'Is It a Bubble?' (9 Dec 2025): transformational technologies have 'a consistent history' of 'excessive enthusiasm and investment, resulting in more infrastructure than is needed and asset prices that prove to have been too high', though the excess speeds adoption. Differences from 2000: AI products exist at scale with fast-rising revenue, and leader P/Es are below 1998-2000 Microsoft/Cisco/Oracle levels (Goldman data). Templeton: 'this time it's different' is heard in every bubble, but '20% of the time things really are different.' Verdict: 'no one should go all-in without acknowledging that they face the risk of ruin if things go badly. But by the same token, no one should stay all-out ... A moderate position, applied with selectivity and prudence, seems like the best approach.' 'A Layman Thinks About AI' (11 Nov 2026): an AI investor must be right about technology, compute demand, competitive structure, beneficiaries, financing and timing - compounding probabilities (a 60% chance on each of four variables gives ~13%). Different claims need different correctness: a frontier-lab equity investor needs many things right; a data-centre lender under a long contract needs fewer (tenant credit, terms, power, residual value). 'intelligent investing is largely about price'; 'Two kinds of investors lose a lot of money: those who know nothing and those who know everything.' Quotes Buffett: 'you pay a very high price in the stock market for a cheery consensus. Uncertainty actually is the friend of the buyer of long-term values.' Actionable: for Indian AI/data-centre/power themes, size moderately and prefer positions whose thesis needs fewer things to go right.
 
-Sources: https://www.oaktreecapital.com/insights/memo/is-it-a-bubble, https://www.oaktreecapital.com/insights/memo/a-layman-thinks-about-ai
+Sources:
+- https://www.oaktreecapital.com/insights/memo/is-it-a-bubble
+- https://www.oaktreecapital.com/insights/memo/a-layman-thinks-about-ai
 
 ### Marks 2026 on private credit ('What's Going On in Private Credit?', Apr) and US fiscal risk ('Repeal the Laws of Economics III', Sep)
 `insight:marks-private-credit-fiscal-2026` | confidence: single-source | date: 2026-09-22
 
 Apr-2026 memo (published 9 Apr 2026): private equity returns have 'fallen precipitously' (MSCI estimate cited: US PE funds ~5.8% annualised 2022-Q3 2025 vs 11.6% for the S&P 500); future private-loan performance depends on sponsor skill and on exits; weak borrowers increasingly use payment-in-kind (PIK) interest instead of cash service. Lenders' security comes from borrower performance and seniority; disciplined underwriters will be fine. Marks closes by quoting Oaktree's Bob O'Leary comparing today to the high-yield bust of 1989-91: a new instrument over-indulged, then spooked by a Middle East war - 'Ultimately, high yield was fine (even great), and direct lending will be as well, but it may have to go through a credit cycle to get to a better place.' Sep-2026 'Part III' memo: 'you can't ignore the laws of economics and expect to come out ahead'; the US cannot 'perpetually spend more than it takes in' without its 'currency and Treasury securities' being 'disrespected'; but selling US stocks is not the answer since dollar cash and bonds carry the same risk, and non-US assets bring 'other risks' (slower growth, regulation, EM uncertainty). Modest diversification makes sense for 'investors with non-dollar needs.' Actionable for an Indian investor: rising PIK share is a stress signal in any credit book (including Indian NBFC/AIF credit); US fiscal risk argues for INR-based core holdings with only considered USD diversification.
 
-Sources: https://www.oaktreecapital.com/insights/memo/whats-going-on-in-private-credit, https://www.oaktreecapital.com/insights/memo/shall-we-repeal-the-laws-of-economics---part-iii
+Sources:
+- https://www.oaktreecapital.com/insights/memo/whats-going-on-in-private-credit
+- https://www.oaktreecapital.com/insights/memo/shall-we-repeal-the-laws-of-economics---part-iii
+
+## Library 2: Indian market base rates
+
+### SEBI 2024 study: IPO allottees flip - 54% of shares (by value) sold within a week of listing
+`insight:india-ipo-flipping-sebi-2024` | confidence: verified | date: 2024-09-02
+
+SEBI study (published 2 Sep 2024) of 144 mainboard IPOs listed Apr 2021-Dec 2023. Excluding anchors, ~54% of allotted shares by value were sold within one week of listing. Individual investors sold ~50% within a week and ~70% within a year. Selling is return-driven (disposition effect): when listing returns exceeded 20%, individuals sold 67.6% within a week vs 23.3% when listing returns were negative - i.e., they bank winners and hold losers. By category, mutual funds sold ~3.3% of allotted value within a week vs ~79.8% for banks. After SEBI's NII allotment change and RBI's April-2022 cap on NBFC IPO financing, NII oversubscription fell from ~38x to ~17x and applications above Rs1 crore fell from ~626 to ~20 per IPO - evidence that leveraged 'IPO funding' inflated subscription numbers. Base-rate lessons: (1) headline subscription multiples largely measure leveraged flipping demand, not long-term conviction; (2) the listing-day price is set by short-term sellers, so the stock's 'real' price discovery happens over 6-24 months as lock-ins expire (anchor 30/90 days; pre-IPO 6 months); (3) the retail habit of holding losers is exactly the wrong half of the trade. Actionable: if interested in a new listing, wait for the first two results and anchor/PE lock-in expiry; never treat subscription as a quality signal.
+
+Sources:
+- https://www.business-standard.com/markets/ipo/investors-sell-over-half-of-ipo-shares-within-a-week-shows-sebi-study-124090201046_1.html
+- https://businessworld.in/article/54-of-ipo-shares-allocated-to-retail-investors-sold-within-a-week-sebi-study-531635
+- https://zeenews.india.com/economy/sebi-study-reveals-54-per-cent-of-ipo-shares-sold-by-investors-within-a-week-2787034.html
+
+### Indian IPO base rates: roughly 40-50% of mainboard and ~50-58% of SME IPOs trade below issue price; listing pop fades
+`insight:indian-ipo-long-run-returns` | confidence: verified | date: 2026-11-19
+
+Evidence (different samples, so treat ranges, not points). (1) Tracker marketping.in (methodology: issue price to latest close; accessed Nov 2026; single-source): mainboard share trading below issue - 2021 44.4% (median +24.8%), 2022 42.9% (+25.9%), 2023 42.4% (+33.0%), 2024 49.5% (median 0.0%), 2025 48.1% (+1.9%); SME - 2023 48.9% (+9.8%), 2024 58.3% (median -20.4%), 2025 56.6% (-11.5%). (2) Economic Times analysis cited by Share India (2026): over 51% of 155 large IPOs (Rs500cr+) listed 2023-25 were below issue price, several 50-70% off debut levels. (3) Client Associates 'New-Age IPO Performance Analysis' (25 VC/PE-backed listings May-2020 to Jun-2025, vs BSE 500, as of 16 Jun 2025): average subscription 48.5x; 17 of 25 had listing gains averaging 24.15%, yet only 36% of IPO-price buyers and 32% of post-listing buyers earned positive alpha (43% of pre-IPO investors). (4) SEBI flipping study (separate record): most allottees exit within a week. Pattern: the median mainboard IPO roughly matches or slightly lags the market over 1-3 years, a minority of big winners lifts the average, and buying on listing day (after the pop) is the worst entry. Issues during hot windows (2021, 2024) fare worst. Consistent with Buffett's 2000 'wealth transfer' warning and global IPO-underperformance literature. Actionable: default answer to any IPO is 'not now'; revisit after 4-8 quarters of listed results unless we have a genuine information edge.
+
+Sources:
+- https://marketping.in/ipo/performance
+- https://www.shareindia.com/knowledge-center/market-insight/why-half-of-indias-big-ipos-are-now-below-issue-price-and-what-investors-must-learn-from-this-wake-up-call
+- https://www.businesstoday.in/markets/ipo-corner/story/day-one-gains-fade-fast-study-finds-just-36-of-new-age-ipos-deliver-long-term-alpha-489928-2025-08-18
+- https://www.businesstoday.in/markets/stocks/story/new-age-ipos-gap-between-market-hype-and-value-creation-india-489290-2025-08-13
+
+### India's 2021 IPO vintage: record fundraising, then new-age tech fell 40-75% - profitability path separated survivors
+`insight:india-2021-new-age-ipo-vintage` | confidence: verified | date: 2022-02-16 | tickers: PAYTM, NYKAA, POLICYBZR, ETERNAL, LICI
+
+2021 was then India's best-ever year for IPO fundraising (Business Today year-ender). By 30 Dec 2021, 45 of 65 IPOs were above issue and 15 had doubled - the 'listing pop' peak. The marquee loss-making tech listings then de-rated in 2022: Paytm (issue Rs2,150, Nov-2021, largest IPO to that date) was at ~Rs864 (-60%) by Feb 2022 and later fell further; Nykaa (issue Rs1,125, listed ~Rs2,206, peaked ~Rs2,573) was ~21% below issue (bonus-adjusted) in 2023; PB Fintech (issue Rs980, +22.7% on day one) ~22% below issue by Feb 2022; Zomato (issue Rs76, peaked ~Rs169) fell >50% to ~Rs82 by Feb 2022 before turning into a large winner by 2024 as quick commerce scaled and it turned profitable. LIC (May-2022, issue Rs949) listed at Rs867 (-8.6%). Client Associates' later study found companies 'with clear profitability paths, revenue scaling, and margin improvements significantly outperformed', while cash-burning firms lost value. Lesson: in a hot vintage, the issue price embeds the peak multiple; the long-run outcome then splits on whether unit economics turn positive (Zomato, PB Fintech recovered; Paytm suffered a regulatory blow in Jan-2024 RBI action on Paytm Payments Bank). Early signal visible at the time: losses + high OFS share (PE/VC exits) + price set on revenue multiples. Prices quoted are snapshot values from dated articles, not current.
+
+Sources:
+- https://www.businesstoday.in/markets/ipo-corner/story/2021-proved-to-be-the-best-ever-for-ipo-fundraising-317014-2021-12-28
+- https://www.5paisa.com/news/ipo-stocks-touch-new-lows-in-the-stock-markets
+- https://www.bloombergquint.com/business/paras-defence-and-nykaa-to-paytm-the-best-and-worst-performing-ipo-stocks-of-2021
+- https://www.business-standard.com/article/markets/down-nearly-8-at-closing-bell-lic-adds-to-poor-listing-scorecard-of-psus-122051701092_1.html
+- https://www.businesstoday.in/markets/stocks/story/new-age-ipos-gap-between-market-hype-and-value-creation-india-489290-2025-08-13
+
+### PSU IPOs in India: poor for a decade, then a 2020-24 rerating made them the best IPO cohort - regime, not structure
+`insight:india-psu-ipo-regime` | confidence: verified | date: 2025-04-27 | tickers: MAZDOCK, RVNL, IRCTC, IRFC, LICI, GRSE
+
+Two contradictory base rates, both true for their window. (1) 2010-2021: ThePrint (May 2022) - shares of about half the PSUs that went public since 2010 traded below IPO price; Quartz (2019) - eight of ten government firms listed since 2017 had lost investors money. PSU IPOs were priced for disinvestment targets, and LIC (May 2022) listed at Rs867 vs Rs949 issue. (2) 2020-2025: a PTI analysis (Apr 2025) found IPO investors in 15 of 18 CPSEs listed over eight years earned 'bumper' gains: Mazagon Dock (2020 issue Rs145) ~+3,700%; RVNL (2019, ~Rs19) ~+1,866%; IRCTC (2019, Rs320) ~+1,110% (only PSU IPO listing at >100% premium); Garden Reach >1,000%; IRFC (2021, Rs26) ~Rs142 in Apr 2025. Laggards were insurers - LIC below issue; GIC Re and New India Assurance negative even after 2018 1:1 bonuses. Drivers of the turn: defence indigenisation and rail capex budgets, dividend yields of 5-8% at 2020-21 lows, single-digit P/Es, then retail/thematic-fund flows. Lesson: ownership type is not destiny; starting valuation + policy tailwind + order book visibility drove returns. Early signal visible in 2020-21: PSU P/E and P/B at multi-decade lows while government capex and import substitution policy were explicit. Risk on the other side: 2024 peak valuations (40-60x P/E for some defence/rail names) reversed sharply. Figures are dated snapshots (2019-2025), adjust for splits/bonuses before reuse.
+
+Sources:
+- https://www.business-standard.com/markets/ipo/ipo-investors-in-cpse-stocks-see-bumper-returns-mazagon-dock-leads-125042700166_1.html
+- https://www.outlookbusiness.com/markets/ipo-investors-in-cpse-stocks-get-bumper-returns-in-8-years-mazagon-dock-tops-chart
+- https://theprint.in/economy/lic-isnt-alone-shares-of-half-the-psus-that-went-public-since-2010-trading-below-ipo-price/977839
+- https://qz.com/india/1583136/indias-rail-vikas-nigam-initial-public-offering-opens-today
+
+### India SME IPO platform: boom, abuse and SEBI's 2025 reforms (and the Oct-2026 proposal to loosen some)
+`insight:india-sme-platform-outcomes-reforms` | confidence: verified | date: 2026-10-14
+
+Scale (SEBI, data to 31 Jul 2026): 1,496 entities listed on SME platforms since inception (2012), 365 migrated to main board, Rs40,222 crore raised, combined market cap ~Rs4.71 lakh crore. Boom: FY24 was the record year with 196 SME IPOs raising >Rs6,000 crore; 159 more raised >Rs5,700 crore by 15 Oct 2024 (SEBI board memo, Dec 2024). Abuse documented by SEBI: IPO and rights proceeds 'diverted ... to related / connected parties or to shell companies controlled by promoters', and 'fraudulent sales and purchases through circular transactions amongst related parties' to create positive sentiment; SEBI issued an investor caution on 28 Aug 2024. Reforms approved Dec 2024 and notified in the ICDR amendment of March 2025: minimum application two lots and above Rs2 lakh (from ~Rs1 lakh); OFS capped at 20% of issue size and each seller can sell at most 20% of holding; operating profit of Rs1 crore in 2 of 3 preceding years (the Oct-2026 paper describes the existing test as EBIT); promoter lock-in for MPC raised to 5 years from 3; monitoring agency mandatory above Rs20 crore (from Rs100 crore); IPO only if issue size >Rs10 crore; 2-year cooling-off after conversion from partnership/LLP or change of control. Oct-2026 consultation paper proposes a Rs3 crore average operating profit test but also lowering the Rs2 lakh minimum application and aligning allocation with main board (RII category). Outcomes: tracker data show 58% of 2024 SME IPOs below issue (median -20%) (single-source). Actionable: treat SME listings as presumptively promoter-exit or manipulation vehicles unless cash-flow, auditor and related-party checks pass.
+
+Sources:
+- https://www.sebi.gov.in/sebi_data/meetingfiles/jan-2025/1735725342588_1.pdf
+- https://www.sebi.gov.in/sebi_data/attachdocs/oct-2026/1791972839578.pdf
+- https://bcajonline.org/journal/redefining-ipo-frameworks-a-detailed-exploration-of-sebis-march-2025-icdr-amendment/
+- https://marketping.in/ipo/performance
+
+### IIMA factor library (1994-2025, computed): momentum and value paid in India; size did not - with 50-86% drawdowns
+`insight:iima-factor-premiums-india` | confidence: single-source | date: 2026-11-19
+
+Computed by us from IIM Ahmedabad's Fama-French-Momentum data library (Dec-2025 release, survivorship-bias-adjusted monthly long-short factor returns; BSE+NSE stocks via CMIE Prowess DX; micro-caps below 10% of median market cap and sub-Rs1 stocks excluded; RF = 91-day T-bill). Jan-1994 to Dec-2025 (383 months): WML momentum CAGR +10.6% (arith 13.1%/yr, vol 24.5%, t=3.0), max drawdown -53% (Feb-Nov 2000), worst years 2000 -36%, 1998 -32%, 2009 -30% (momentum crashes at market rebounds). HML value CAGR +6.5% (vol 20.4%, t=2.3), max drawdown -59% (1994-2000), worst years 2018 -21%, 2019 -21%; best 2007 +49%, 2021 +39%, 2023 +35%; 2020-25 value CAGR +18.9% (the PSU/cyclical rerating). SMB size CAGR -3.8% (t=-0.85, not significant), max drawdown -86% (1995-2009), negative in 16 of 31 years - the 'small caps always win in India' story is not supported once micro-caps are excluded and the factor is measured long-short. Market factor (excess over T-bills) CAGR only +4.9% vs RF 6.9%, max drawdown -75% (1994-2001): Indian T-bills were a high hurdle. By decade, momentum was strongest 2015-25 (CAGR 12.8%, t=3.0, vol only 14.5%). Lessons: factor premia exist but come with multi-year droughts that test discipline; momentum and value are negatively timed (good diversifiers); size is a tilt, not an edge. Caveats: long-short paper portfolios before costs; data vary between releases.
+
+Sources:
+- https://faculty.iima.ac.in/iffm/Indian-Fama-French-Momentum/
+- https://faculty.iima.ac.in/iffm/Indian-Fama-French-Momentum/DATA/2025-12_FourFactors_and_Market_Returns_Monthly_SurvivorshipBiasAdjusted.csv
+- https://faculty.iima.ac.in/iffm/Indian-Fama-French-Momentum/FAQ.php
+
+### NSE factor indices (2005-2026): momentum, quality and multifactor beat the cap-weighted market, with deep drawdowns in momentum and value
+`insight:nse-factor-indices-quality-lowvol-momentum` | confidence: verified | date: 2026-10-30
+
+Primary NSE Indices data (TR = total return; base 1 Apr 2005). Nifty200 Momentum 30 (whitepaper data to 27 Feb 2026): 19.19% CAGR since inception vs 15.08% for Nifty 200, at higher volatility; maximum drawdowns of momentum indices 68% (Nifty200 Mom 30), 73% (Midcap150 Mom 50), 70% (Nifty500 Mom 50) vs 64%, 73%, 64% for parents - 'momentum strategies ... thrive in trending markets but face challenges during market reversals.' Factsheets as of 30 Oct 2026: Nifty200 Momentum 30 TR 18.05% since 2005 but 7.93% over 5 years and -8.48% over 1 year (vol 22.3% since inception); Nifty200 Quality 30 TR 16.58% since 2005 (5y 6.96%, 1y -8.86%; vol 17.9%, beta 0.79 vs Nifty 50); Nifty500 Value 50 TR 10.28% since 2005, 5y -1.93%, 1y -19.56% (vol 27.2%); Nifty 50 TR 12.15% since Nov-1995 (5y 6.70%, 1y -9.45%, YTD-2026 -10.91%; P/E 19.3). Nifty500 Multifactor MQVLv 50 (momentum+quality+value+low-vol, data to 31 Dec 2024): 21.11% CAGR since 2005 vs 14.97% for Nifty 500 TR, at lower volatility (17.4% vs 20.6%); positive in 100% of rolling 5-year windows but negative in 15.5% of 1-year windows (worst -48.6%). Lessons: quality/low-vol give most of the premium with smaller drawdowns; momentum and value are cyclical (2026 drawdown hit both); all are back-tested from 2005 for indices launched 2018-2024 (look-ahead/selection bias in launch timing). Actionable: a quality/low-vol core is a reasonable passive baseline to beat before claiming stock-picking skill.
+
+Sources:
+- https://www.niftyindices.com/docs/default-source/indices/nifty200-momentum-30/momentum-strategy-whitepaper_2026.pdf
+- https://niftyindices.com/docs/default-source/indices/nifty500-multifactor-mqvlv-50/nifty500-multifactor-mqvlv-50-whitepaper_2024.pdf
+- https://www.niftyindices.com/Factsheet/Factsheet_Nifty200_Quality30.pdf
+- https://www.niftyindices.com/Factsheet/Factsheet_Nifty500_Value50.pdf
+- https://www.niftyindices.com/Factsheet/Factsheet_Nifty200_Momentum30.pdf
+- https://www.niftyindices.com/Factsheet/ind_nifty50.pdf
+
+### Indian market liquidity: domestic SIP/DII money now outweighs FPI selling - 2024-26 record flows both ways
+`insight:india-liquidity-fpi-vs-dii` | confidence: verified | date: 2026-11-19
+
+Who sets the marginal price has changed. Calendar 2025: FPIs sold a record ~Rs1.5-2.0 lakh crore of Indian equities (NSDL-based reports differ by cutoff: Rs1.51 tn YTD mid-Dec per Business Standard; Rs2.03 tn full year per Angel One citing NSDL), while DIIs bought a record ~Rs6 lakh crore+ (highest since BSE data began in 2007; Rs5.26 tn in 2024). SIP inflows (AMFI, as reported) were ~Rs3.34 lakh crore in 2025 vs ~Rs2.68 lakh crore in 2024, with monthly SIP records around Rs26-32k crore through 2025-26. Oct-2024 was itself a then-record FPI monthly outflow (>$8.5bn by mid-month). 2026: after the Gulf conflict began in late Feb-2026, FPIs pulled ~$12.6bn in March alone (Finnovate/NSDL, single-source) and the Nifty fell ~15% Jan-Mar 2026; blogs report 2026 YTD FPI outflow already exceeding 2025 (unverified). Interpretation: (1) DII/SIP flows dampen drawdowns and keep domestic valuations above EM peers, but they are pro-cyclical too - SIP stoppage ratios rise after weak years; (2) FPI flows still drive large caps (banks, IT) and the rupee; (3) persistent domestic flows can keep 'expensive stays expensive' longer than value investors expect, which also lowers future returns. Actionable: track monthly NSDL FPI net flows, AMFI SIP gross flows and SIP stoppage ratio as a liquidity dashboard; a simultaneous FPI exodus and falling SIP flows is the setup for deeper Indian drawdowns.
+
+Sources:
+- https://www.business-standard.com/markets/news/year-ender-2025-d-st-set-to-see-record-fii-selloff-dii-inflows-cushion-125122400097_1.html
+- https://www.angelone.in/news/market-updates/dii-flows-cross-rs-6-trillion-in-2025-in-india-stocks-offsetting-fpi-outflows-of-rs-2-trillion
+- https://www.business-standard.com/markets/news/rs-6-trillion-counting-diis-pump-record-money-in-indian-stocks-in-2025-125101500254_1.html
+- https://www.business-standard.com/amp/markets/news/record-outflows-fpi-selling-this-month-reverberate-covid-selloff-124101701268_1.html
+- https://www.finnovate.in/learn/blog/nifty-20-year-cagr-below-10-percent-history
+
+### RBI rates and the rupee, 2025-26: cuts to 5.25%, then an oil-shock rupee slide to ~97/$ - why FX matters for Indian equity returns
+`insight:india-rates-rupee-regime-2025-26` | confidence: verified | date: 2026-06-05
+
+RBI cut the repo rate through 2025 (from 6.50% in early 2025 to 5.25% by Dec-2025 per subsequent reports) and on 5 Jun 2026 held at 5.25% with a neutral stance, choosing FX-inflow measures over hikes after the war-driven crude spike; it cut its FY27 GDP forecast to 6.6% and raised CPI to 5.1%. The rupee went from ~Rs83/$ in early FY25 and ~Rs90 in 2025 to a record closing low of ~96.86 on 20 May 2026 (reports cite 'near Rs97'). Mechanics for an equity investor: (1) FPI outflows, a wider current-account deficit (oil) and a weaker rupee reinforce each other; in USD terms the Nifty's 2026 drawdown was materially worse than in INR; (2) rate cuts help rate-sensitive sectors (NBFCs, real estate, autos) with a 2-4 quarter lag, but rupee stress can cap further easing; (3) a falling rupee helps IT services, pharma exporters and specialty chemicals with USD revenue and hurts oil marketers, importers and companies with unhedged foreign-currency debt; (4) long-run: INR has depreciated roughly 3-4% a year vs USD over decades, so Indian equity returns must be compared with US returns after FX. Base rate: crude oil shocks (2008, 2013 taper + CAD, 2022, 2026) are the recurring trigger for Indian macro stress. Actionable: check each holding's FX exposure (USD revenue share, foreign-currency borrowings, import content) and include an oil/rupee stress case in valuations.
+
+Sources:
+- https://theprint.in/economy/rbi-pauses-rate-cuts-retains-interest-rate-at-5-25-pc/2847398
+- https://www.freepressjournal.in/business/indian-economy-remains-resilient-rbi-governor-malhotra
+- https://www.outlookbusiness.com/news/rbi-holds-interest-rates-as-oil-shock-clouds-outlook-unveils-measures-to-support-rupee
+- https://www.finnovate.in/learn/blog/rbi-june-2026-mpc-policy-analysis-rupee
+
+### Nifty earnings vs index returns: ~10% EPS CAGR (FY05-25) vs ~13% price CAGR - the gap was re-rating; FY26 20-yr CAGR fell below 10%
+`insight:nifty-eps-vs-index-returns` | confidence: verified | date: 2026-11-19
+
+Long run, Indian index returns track earnings growth plus dividends plus valuation change. Data points: Marcellus estimates Nifty 50 EPS grew ~10% CAGR over FY05-FY25, with an unusual 24% CAGR over FY21-24 (post-Covid, bank/NBFC cleanup, commodity margins) slowing to ~6% in FY25; Business Standard (May 2025) reported Q4FY25 Nifty EPS growth of just 4.7%, slowest since 2017, and index EPS rising from Rs503 (Mar-2021) to ~Rs1,071. Price return Jun-2005 to Jun-2025: Nifty 2,220.6 to 25,517, ~12.98% CAGR (BacktestIndia) - i.e., ~2-3 points a year of P/E expansion on top of ~10% EPS growth (our arithmetic; NSE also switched from standalone to consolidated earnings for P/E in 2021, which complicates the P/E series). Nifty 50 TR since Nov-1995 is 12.15% (NSE factsheet, 30 Oct 2026); Finnovate computes that by FY26 the 20-year rolling Nifty CAGR dropped below 10% for only the second time, and from the Jan-2008 peak the CAGR to end-FY26 was ~7.3%. Trailing P/E ~19.3-20.7 in Oct 2026 vs ~23-24 a year earlier. Lessons: (1) budget 10-12% nominal index returns, not 15%; (2) starting from high P/Es (2008, 2021, 2024) produced subpar multi-year returns - the same valuation-return link Marks shows for the S&P; (3) earnings growth bursts (2003-08, 2021-24) do the heavy lifting. Actionable: decompose any stock's expected return into EPS growth + dividend yield + P/E change, and refuse theses that need P/E expansion from already-high levels.
+
+Sources:
+- https://marcellus.in/newsletter/consistent-compounders/earnings-growth-in-india-sliding-nifty-rising-ccp/
+- https://www.business-standard.com/markets/news/nifty-50-eps-grew-just-4-7-in-march-quarter-slowest-pace-since-2017-125051301530_1.html
+- https://backtestindia.com/data/nifty-50-cagr
+- https://www.finnovate.in/learn/blog/nifty-20-year-cagr-below-10-percent-history
+- https://www.niftyindices.com/Factsheet/ind_nifty50.pdf
+- https://siblisresearch.com/data/cape-ratio-india-nifty/
+
+### SPIVA India year-end 2025: 76% of large-cap and 79% of mid/small-cap funds lagged over 10 years; ELSS 83%
+`insight:spiva-india-2025` | confidence: verified | date: 2026-03-15
+
+S&P Dow Jones Indices SPIVA India Year-End 2025 scorecard (benchmarks now S&P India LargeMidCap for large-cap funds, S&P India SmallCap for mid/small-cap, S&P India BMI for ELSS). Large-cap funds: underperformance 75.0% (1 yr), 74.2% (3 yr), 84.4% (5 yr), 76.3% (10 yr). In 2025 the benchmark rose 8.9% vs 7.3% equal-weighted / 9.4% asset-weighted for funds. Mid/small-cap funds: 12.1% (1 yr), 41.5% (3 yr), 46.0% (5 yr), 79.0% (10 yr) - 2025 was their best relative year since 2014 as the S&P India SmallCap fell 7.9% while funds lost only 0.7%/0.3% (defensive cash/quality tilts help in falling small-cap markets). ELSS: 55.0%, 58.5% and 82.9% underperformance over 3, 5 and 10 years. Mid-year 2025 report (to Jun-2025): 73% large-cap and 82% mid/small-cap underperformed over 10 years. SPIVA adjusts for survivorship (merged/liquidated funds count as losers). Lessons: (1) in Indian large caps, after costs, 3 in 4 professionals lose to a cheap index over a decade - large-cap stock picking is the hardest place to add value; (2) mid/small-cap active managers do better in down years but still mostly lose over 10 years; (3) short-run outperformance (1-yr) is a poor guide to persistence. Actionable: our personal stock picks must be benchmarked against a Nifty 50/LargeMidcap index fund and a quality factor index, net of taxes and costs, with records kept honestly (Buffett 1993: the know-nothing indexer beats most professionals).
+
+Sources:
+- https://www.spglobal.com/spdji/en/documents/spiva/spiva-india-scorecard-year-end-2025.pdf
+- https://www.spglobal.com/spdji/en/spiva/article/spiva-india-year-end-2025/
+- https://cafemutual.com/news/industry/35917-73-of-indian-large-cap-and-82-of-mid-and-small-cap-funds-have-underperformed-sp-india-benchmarks-over-a-10-year-period
+
+### Indian dividend and buyback taxation 2020-2026: three buyback regimes in 18 months; dividends taxed at slab
+`insight:india-dividend-buyback-tax` | confidence: verified | date: 2026-09-03
+
+Dividends: since FY2020-21 (Finance Act 2020 abolished DDT) dividends are taxed in shareholders' hands at slab rates (up to ~35.9% with surcharge/cess for top individuals; surcharge on dividends capped at 15%), with TDS of 10% above the annual threshold. Capital gains on listed equity from 23 Jul 2024: LTCG (held >12 months) 12.5% above Rs1.25 lakh annual exemption; STCG 20%. Buybacks (Business Today, Sep-2026): (1) to 30 Sep 2024 - company paid buyback tax u/s 115QA (~23.3% effective), shareholders exempt, making tender buybacks the tax-efficient payout for promoters and HNIs; (2) 1 Oct 2024 to 31 Mar 2026 - whole buyback consideration taxed as deemed dividend u/s 2(22)(f) at slab, cost of shares allowed only as a capital loss (e.g., Rs50 lakh buyback on Rs10 lakh cost = Rs50 lakh dividend income + Rs10 lakh capital loss) - buybacks became tax-inefficient for high-slab holders and volumes fell; (3) from 1 Apr 2026 (Budget 2026 / Income-tax Act 2025) - back to capital gains (consideration minus cost) at 12.5%/20% for non-promoters, with an additional levy making promoters' effective rate ~22% (corporate) / ~30% (non-corporate). Implications: (a) for a high-slab Indian investor, a low-payout compounder that reinvests at high ROCE is more tax-efficient than a high-dividend stock (only 12.5% on eventual LTCG, deferred); (b) dividend yield screens overstate post-tax yield for top-bracket investors by ~1/3; (c) buyback announcements should be judged on price vs value (Buffett 2023) and on the tax regime in force on the record date.
+
+Sources:
+- https://www.businesstoday.in/markets/story/buyback-tax-how-india-changed-the-rules-three-times-in-18-months-and-what-investors-need-to-know-553004-2026-09-03
+- https://www.business-standard.com/budget/news/budget-2026-buyback-proceeds-to-be-treated-as-capital-gains-126020101050_1.html
+- https://freefincal.com/budget-2024-how-share-buybacks-will-be-taxed-from-1st-oct-2024/
+- https://caalley.com/news-updates/budget-2026/budget-2026-buy-back-proceeds-will-be-taxed-as-capital-gains-for-shareholders-but-promoters-pay-an-extra-price
+
+### Common Ind AS earnings levers in Indian companies - what to check (revenue, capitalisation, other income, exceptionals, related parties)
+`insight:ind-as-accounting-levers` | confidence: verified | date: 2026-11-19 | tickers: GENSOL, INDUSINDBK
+
+Checklist of where reported profit diverges from owner earnings (Buffett 1986) under Ind AS. (1) Revenue recognition (Ind AS 115): percentage-of-completion/over-time recognition in EPC, real estate, defence and software projects lets margins be front-loaded; watch contract assets/unbilled revenue and trade receivables growing faster than revenue, rising receivable days, and 'channel stuffing' near quarter-end (SEBI's Dec-2024 memo documents SME 'fraudulent sales and purchases through circular transactions amongst related parties'). (2) Capitalisation (Ind AS 16/23/38): capitalising interest, R&D/product development or 'pre-operative' costs flatters EBITDA and PAT; check CWIP ageing, capitalised borrowing costs vs finance cost, and intangible additions vs cash R&D. (3) Other income: treasury income, interest on loans to group entities, FX gains and fair-value gains (Ind AS 109) can be a large share of PBT; strip them out and ask whether core EBIT covers interest. (4) Exceptional items: recurring 'one-offs' (write-offs, restructuring, impairment) every year are operating costs; compare cumulative exceptionals over 5 years with cumulative PAT. (5) Related parties (Ind AS 24; SEBI LODR Reg 23 approvals for material RPTs): sales to/purchases from promoter entities, loans and guarantees to group firms, royalty to promoter-owned brands, and ICDs - Gensol (SEBI interim order 15 Apr 2025) diverted EV term loans to promoter uses; IndusInd Bank (Mar-Apr 2025) found internal derivative mis-accounting worth ~Rs1,960 crore cumulative P&L impact (Grant Thornton). (6) Off-balance-sheet: supplier finance/factoring and inventory sales to related SPVs (cf. First Brands, Marks Nov-2025). Test of truth: 5-yr cumulative CFO vs cumulative EBITDA/PAT, and cumulative FCF vs reported profits; auditor changes and qualified opinions are red flags.
+
+Sources:
+- https://www.sebi.gov.in/sebi_data/meetingfiles/jan-2025/1735725342588_1.pdf
+- https://www.businesstoday.in/markets/company-stock/story/sebi-bars-gensol-engineering-its-promoters-from-accessing-markets-in-fund-diversion-case-472151-2025-04-15
+- https://www.business-standard.com/amp/companies/news/indusind-bank-fiasco-gt-flags-errors-in-accounting-of-derivative-trades-125042700669_1.html
+- https://www.business-standard.com/industry/banking/external-audit-finds-rs-1-979-crore-hit-for-indusind-bank-on-derivatives-125041501306_1.html
+
+## Cross-links worth noticing
+- Buffett 2000 (IPO wealth transfer) is linked to the Indian IPO base rates, the SEBI flipping study and the SME abuse findings.
+- Buffett 1986 (owner earnings) is linked to the Ind AS levers and to Marks's 'Cockroaches' memo (First Brands off-balance-sheet financing).
+- Marks's 'On Bubble Watch' (starting P/E sets 10-year returns) is linked to Nifty EPS vs index returns.
+- Buffett 1993 (the know-nothing index investor) is linked to SPIVA India and the NSE factor indices. Together they set the passive baseline that our picks must beat.

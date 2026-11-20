@@ -78,7 +78,7 @@ years without being fired, and nobody tracks small-company management this close
 
 Prices from 19 Nov 2026. Each has "kill criteria" — if one triggers, the idea is dead.
 
-- **Looked strongest:** Uniparts (72/100), Sandur Manganese (68), Bajaj Consumer (66), Skipper (66).
+- **Looked strongest:** Uniparts (72/100), Sandur Manganese (68), Bajaj Consumer (66), Skipper (now watchlist — see 5a).
   Uniparts, Bajaj Consumer, MPS and IOL: **zero promoter pledge confirmed from NSE**.
 - **Watch, wait for a lower price:** MPS, IOL Chemicals, Prudent, Techno Electric.
 - **Downgraded to avoid on 19 Nov after checking NSE pledge data:** Transrail (promoter pledged 5.97%,
@@ -90,6 +90,19 @@ Prices from 19 Nov 2026. Each has "kill criteria" — if one triggers, the idea 
 Full details: `memory/watchlist.md` and the published report.
 
 ---
+
+## 5a. The promise tracker works (first real edge, 20 Nov 2026)
+We read 10 earnings calls each for Uniparts and Skipper and checked every promise against what happened.
+- **Uniparts:** credibility +0.28. Numbers guidance reliable under the new CEO (78% hit), but execution
+  promises keep slipping (Mexico plant ~10 months late, promised acquisition never happened). Stays 72/100.
+- **Skipper:** only ~41% of promises delivered; capacity date moved 5 times; promised "no more equity"
+  then raised ₹433.5 cr. **Downgraded from buy-zone to watchlist (66 → 55).**
+- New rule: no stock goes in the buy zone without this credibility check.
+
+Also added: governance history of **43 Indian business groups** (clean → severe), **29 lessons straight
+from Buffett's letters and Howard Marks' memos**, and **Indian base rates** (about half of IPOs trade below
+issue price; ~3 in 4 active funds lag the index over 10 years; momentum and value factors have worked in
+India, small size by itself has not).
 
 ## 5b. New things we learned in the knowledge scout
 - **Valuation timing matters.** Since 2004, every negative 5-year Nifty return started at P/E ≥ 24.5;

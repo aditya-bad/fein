@@ -1207,5 +1207,636 @@
     "rel": "part_of"
    }
   ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-ipo-flipping-sebi-2024",
+  "title": "SEBI 2024 study: IPO allottees flip - 54% of shares (by value) sold within a week of listing",
+  "body": "SEBI study (published 2 Sep 2024) of 144 mainboard IPOs listed Apr 2021-Dec 2023. Excluding anchors, ~54% of allotted shares by value were sold within one week of listing. Individual investors sold ~50% within a week and ~70% within a year. Selling is return-driven (disposition effect): when listing returns exceeded 20%, individuals sold 67.6% within a week vs 23.3% when listing returns were negative - i.e., they bank winners and hold losers. By category, mutual funds sold ~3.3% of allotted value within a week vs ~79.8% for banks. After SEBI's NII allotment change and RBI's April-2022 cap on NBFC IPO financing, NII oversubscription fell from ~38x to ~17x and applications above Rs1 crore fell from ~626 to ~20 per IPO - evidence that leveraged 'IPO funding' inflated subscription numbers. Base-rate lessons: (1) headline subscription multiples largely measure leveraged flipping demand, not long-term conviction; (2) the listing-day price is set by short-term sellers, so the stock's 'real' price discovery happens over 6-24 months as lock-ins expire (anchor 30/90 days; pre-IPO 6 months); (3) the retail habit of holding losers is exactly the wrong half of the trade. Actionable: if interested in a new listing, wait for the first two results and anchor/PE lock-in expiry; never treat subscription as a quality signal.",
+  "tags": [
+   "india",
+   "ipo",
+   "base-rate",
+   "behavior",
+   "policy"
+  ],
+  "date": "2024-09-02",
+  "sources": [
+   "https://www.business-standard.com/markets/ipo/investors-sell-over-half-of-ipo-shares-within-a-week-shows-sebi-study-124090201046_1.html",
+   "https://businessworld.in/article/54-of-ipo-shares-allocated-to-retail-investors-sold-within-a-week-sebi-study-531635",
+   "https://zeenews.india.com/economy/sebi-study-reveals-54-per-cent-of-ipo-shares-sold-by-investors-within-a-week-2787034.html"
+  ],
+  "confidence": "verified",
+  "data": {
+   "sample": "144 mainboard IPOs Apr-2021 to Dec-2023",
+   "sold_1wk_all_ex_anchor": "54%",
+   "individuals_1wk": "~50%",
+   "individuals_1yr": "~70%",
+   "sell_rate_if_listing_gt20pct": "67.6%",
+   "sell_rate_if_negative": "23.3%",
+   "nii_oversub": "38x -> 17x"
+  },
+  "links": [
+   {
+    "to": "insight:behavior-gap",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:indian-ipo-long-run-returns",
+  "title": "Indian IPO base rates: roughly 40-50% of mainboard and ~50-58% of SME IPOs trade below issue price; listing pop fades",
+  "body": "Evidence (different samples, so treat ranges, not points). (1) Tracker marketping.in (methodology: issue price to latest close; accessed Nov 2026; single-source): mainboard share trading below issue - 2021 44.4% (median +24.8%), 2022 42.9% (+25.9%), 2023 42.4% (+33.0%), 2024 49.5% (median 0.0%), 2025 48.1% (+1.9%); SME - 2023 48.9% (+9.8%), 2024 58.3% (median -20.4%), 2025 56.6% (-11.5%). (2) Economic Times analysis cited by Share India (2026): over 51% of 155 large IPOs (Rs500cr+) listed 2023-25 were below issue price, several 50-70% off debut levels. (3) Client Associates 'New-Age IPO Performance Analysis' (25 VC/PE-backed listings May-2020 to Jun-2025, vs BSE 500, as of 16 Jun 2025): average subscription 48.5x; 17 of 25 had listing gains averaging 24.15%, yet only 36% of IPO-price buyers and 32% of post-listing buyers earned positive alpha (43% of pre-IPO investors). (4) SEBI flipping study (separate record): most allottees exit within a week. Pattern: the median mainboard IPO roughly matches or slightly lags the market over 1-3 years, a minority of big winners lifts the average, and buying on listing day (after the pop) is the worst entry. Issues during hot windows (2021, 2024) fare worst. Consistent with Buffett's 2000 'wealth transfer' warning and global IPO-underperformance literature. Actionable: default answer to any IPO is 'not now'; revisit after 4-8 quarters of listed results unless we have a genuine information edge.",
+  "tags": [
+   "india",
+   "ipo",
+   "base-rate",
+   "sme",
+   "myth",
+   "redflag"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://marketping.in/ipo/performance",
+   "https://www.shareindia.com/knowledge-center/market-insight/why-half-of-indias-big-ipos-are-now-below-issue-price-and-what-investors-must-learn-from-this-wake-up-call",
+   "https://www.businesstoday.in/markets/ipo-corner/story/day-one-gains-fade-fast-study-finds-just-36-of-new-age-ipos-deliver-long-term-alpha-489928-2025-08-18",
+   "https://www.businesstoday.in/markets/stocks/story/new-age-ipos-gap-between-market-hype-and-value-creation-india-489290-2025-08-13"
+  ],
+  "confidence": "verified",
+  "data": {
+   "mainboard_below_issue": {
+    "2021": "44.4%",
+    "2022": "42.9%",
+    "2023": "42.4%",
+    "2024": "49.5%",
+    "2025": "48.1%"
+   },
+   "sme_below_issue": {
+    "2023": "48.9%",
+    "2024": "58.3%",
+    "2025": "56.6%"
+   },
+   "new_age_alpha": {
+    "pre_ipo": "43%",
+    "ipo": "36%",
+    "post_listing": "32%"
+   },
+   "caveat": "tracker single-source; returns not benchmark-adjusted"
+  },
+  "links": [
+   {
+    "to": "insight:buffett-2000-bubble-ipo-wealth-transfer",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:india-ipo-flipping-sebi-2024",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-2021-new-age-ipo-vintage",
+  "title": "India's 2021 IPO vintage: record fundraising, then new-age tech fell 40-75% - profitability path separated survivors",
+  "body": "2021 was then India's best-ever year for IPO fundraising (Business Today year-ender). By 30 Dec 2021, 45 of 65 IPOs were above issue and 15 had doubled - the 'listing pop' peak. The marquee loss-making tech listings then de-rated in 2022: Paytm (issue Rs2,150, Nov-2021, largest IPO to that date) was at ~Rs864 (-60%) by Feb 2022 and later fell further; Nykaa (issue Rs1,125, listed ~Rs2,206, peaked ~Rs2,573) was ~21% below issue (bonus-adjusted) in 2023; PB Fintech (issue Rs980, +22.7% on day one) ~22% below issue by Feb 2022; Zomato (issue Rs76, peaked ~Rs169) fell >50% to ~Rs82 by Feb 2022 before turning into a large winner by 2024 as quick commerce scaled and it turned profitable. LIC (May-2022, issue Rs949) listed at Rs867 (-8.6%). Client Associates' later study found companies 'with clear profitability paths, revenue scaling, and margin improvements significantly outperformed', while cash-burning firms lost value. Lesson: in a hot vintage, the issue price embeds the peak multiple; the long-run outcome then splits on whether unit economics turn positive (Zomato, PB Fintech recovered; Paytm suffered a regulatory blow in Jan-2024 RBI action on Paytm Payments Bank). Early signal visible at the time: losses + high OFS share (PE/VC exits) + price set on revenue multiples. Prices quoted are snapshot values from dated articles, not current.",
+  "tags": [
+   "india",
+   "ipo",
+   "base-rate",
+   "bubble",
+   "sector-internet",
+   "case-history"
+  ],
+  "date": "2022-02-16",
+  "sources": [
+   "https://www.businesstoday.in/markets/ipo-corner/story/2021-proved-to-be-the-best-ever-for-ipo-fundraising-317014-2021-12-28",
+   "https://www.5paisa.com/news/ipo-stocks-touch-new-lows-in-the-stock-markets",
+   "https://www.bloombergquint.com/business/paras-defence-and-nykaa-to-paytm-the-best-and-worst-performing-ipo-stocks-of-2021",
+   "https://www.business-standard.com/article/markets/down-nearly-8-at-closing-bell-lic-adds-to-poor-listing-scorecard-of-psus-122051701092_1.html",
+   "https://www.businesstoday.in/markets/stocks/story/new-age-ipos-gap-between-market-hype-and-value-creation-india-489290-2025-08-13"
+  ],
+  "confidence": "verified",
+  "data": {
+   "tickers_note": "PAYTM, NYKAA, POLICYBZR, ETERNAL(ex-ZOMATO), LICI",
+   "early_signals": "losses, OFS-heavy, revenue-multiple pricing, record subscription",
+   "lesson": "vintage peak multiples; outcome splits on unit economics"
+  },
+  "links": [
+   {
+    "to": "insight:indian-ipo-long-run-returns",
+    "rel": "part_of"
+   }
+  ],
+  "tickers": [
+   "PAYTM",
+   "NYKAA",
+   "POLICYBZR",
+   "ETERNAL",
+   "LICI"
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-psu-ipo-regime",
+  "title": "PSU IPOs in India: poor for a decade, then a 2020-24 rerating made them the best IPO cohort - regime, not structure",
+  "body": "Two contradictory base rates, both true for their window. (1) 2010-2021: ThePrint (May 2022) - shares of about half the PSUs that went public since 2010 traded below IPO price; Quartz (2019) - eight of ten government firms listed since 2017 had lost investors money. PSU IPOs were priced for disinvestment targets, and LIC (May 2022) listed at Rs867 vs Rs949 issue. (2) 2020-2025: a PTI analysis (Apr 2025) found IPO investors in 15 of 18 CPSEs listed over eight years earned 'bumper' gains: Mazagon Dock (2020 issue Rs145) ~+3,700%; RVNL (2019, ~Rs19) ~+1,866%; IRCTC (2019, Rs320) ~+1,110% (only PSU IPO listing at >100% premium); Garden Reach >1,000%; IRFC (2021, Rs26) ~Rs142 in Apr 2025. Laggards were insurers - LIC below issue; GIC Re and New India Assurance negative even after 2018 1:1 bonuses. Drivers of the turn: defence indigenisation and rail capex budgets, dividend yields of 5-8% at 2020-21 lows, single-digit P/Es, then retail/thematic-fund flows. Lesson: ownership type is not destiny; starting valuation + policy tailwind + order book visibility drove returns. Early signal visible in 2020-21: PSU P/E and P/B at multi-decade lows while government capex and import substitution policy were explicit. Risk on the other side: 2024 peak valuations (40-60x P/E for some defence/rail names) reversed sharply. Figures are dated snapshots (2019-2025), adjust for splits/bonuses before reuse.",
+  "tags": [
+   "india",
+   "ipo",
+   "psu",
+   "rerating",
+   "policy",
+   "base-rate",
+   "sector-defence",
+   "sector-rail"
+  ],
+  "date": "2025-04-27",
+  "sources": [
+   "https://www.business-standard.com/markets/ipo/ipo-investors-in-cpse-stocks-see-bumper-returns-mazagon-dock-leads-125042700166_1.html",
+   "https://www.outlookbusiness.com/markets/ipo-investors-in-cpse-stocks-get-bumper-returns-in-8-years-mazagon-dock-tops-chart",
+   "https://theprint.in/economy/lic-isnt-alone-shares-of-half-the-psus-that-went-public-since-2010-trading-below-ipo-price/977839",
+   "https://qz.com/india/1583136/indias-rail-vikas-nigam-initial-public-offering-opens-today"
+  ],
+  "confidence": "verified",
+  "data": {
+   "cohort_2017_2025": "15 of 18 CPSE IPOs positive (PTI Apr-2025)",
+   "cohort_2010_2021": "~half below IPO price (ThePrint 2022)",
+   "winners": {
+    "MAZDOCK": "~+3700%",
+    "RVNL": "~+1866%",
+    "IRCTC": "~+1110%"
+   },
+   "losers": [
+    "LICI",
+    "GICRE",
+    "NIACL"
+   ],
+   "lesson": "regime + valuation, not ownership"
+  },
+  "links": [
+   {
+    "to": "insight:indian-ipo-long-run-returns",
+    "rel": "part_of"
+   },
+   {
+    "to": "case_study:suzlon",
+    "rel": "similar_to"
+   }
+  ],
+  "tickers": [
+   "MAZDOCK",
+   "RVNL",
+   "IRCTC",
+   "IRFC",
+   "LICI",
+   "GRSE"
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-sme-platform-outcomes-reforms",
+  "title": "India SME IPO platform: boom, abuse and SEBI's 2025 reforms (and the Oct-2026 proposal to loosen some)",
+  "body": "Scale (SEBI, data to 31 Jul 2026): 1,496 entities listed on SME platforms since inception (2012), 365 migrated to main board, Rs40,222 crore raised, combined market cap ~Rs4.71 lakh crore. Boom: FY24 was the record year with 196 SME IPOs raising >Rs6,000 crore; 159 more raised >Rs5,700 crore by 15 Oct 2024 (SEBI board memo, Dec 2024). Abuse documented by SEBI: IPO and rights proceeds 'diverted ... to related / connected parties or to shell companies controlled by promoters', and 'fraudulent sales and purchases through circular transactions amongst related parties' to create positive sentiment; SEBI issued an investor caution on 28 Aug 2024. Reforms approved Dec 2024 and notified in the ICDR amendment of March 2025: minimum application two lots and above Rs2 lakh (from ~Rs1 lakh); OFS capped at 20% of issue size and each seller can sell at most 20% of holding; operating profit of Rs1 crore in 2 of 3 preceding years (the Oct-2026 paper describes the existing test as EBIT); promoter lock-in for MPC raised to 5 years from 3; monitoring agency mandatory above Rs20 crore (from Rs100 crore); IPO only if issue size >Rs10 crore; 2-year cooling-off after conversion from partnership/LLP or change of control. Oct-2026 consultation paper proposes a Rs3 crore average operating profit test but also lowering the Rs2 lakh minimum application and aligning allocation with main board (RII category). Outcomes: tracker data show 58% of 2024 SME IPOs below issue (median -20%) (single-source). Actionable: treat SME listings as presumptively promoter-exit or manipulation vehicles unless cash-flow, auditor and related-party checks pass.",
+  "tags": [
+   "india",
+   "sme",
+   "ipo",
+   "policy",
+   "fraud",
+   "redflag",
+   "governance",
+   "base-rate"
+  ],
+  "date": "2026-10-14",
+  "sources": [
+   "https://www.sebi.gov.in/sebi_data/meetingfiles/jan-2025/1735725342588_1.pdf",
+   "https://www.sebi.gov.in/sebi_data/attachdocs/oct-2026/1791972839578.pdf",
+   "https://bcajonline.org/journal/redefining-ipo-frameworks-a-detailed-exploration-of-sebis-march-2025-icdr-amendment/",
+   "https://marketping.in/ipo/performance"
+  ],
+  "confidence": "verified",
+  "data": {
+   "listed_since_inception": 1496,
+   "migrated": 365,
+   "funds_raised_cr": 40222,
+   "mcap_cr": 470984,
+   "as_of": "2026-07-31",
+   "fy24": {
+    "ipos": 196,
+    "raised_cr": ">6000"
+   },
+   "march_2025_rules": {
+    "min_application": "2 lots, >Rs2 lakh",
+    "ofs_cap": "20% of issue; 20% of holding",
+    "profit_test": "Rs1cr operating profit in 2 of 3 yrs",
+    "mpc_lockin": "5 yrs",
+    "monitoring_agency": ">Rs20cr"
+   },
+   "oct_2026_proposal": "avg op profit >=Rs3cr; lower min application"
+  },
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "about"
+   },
+   {
+    "to": "insight:indian-ipo-long-run-returns",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:iima-factor-premiums-india",
+  "title": "IIMA factor library (1994-2025, computed): momentum and value paid in India; size did not - with 50-86% drawdowns",
+  "body": "Computed by us from IIM Ahmedabad's Fama-French-Momentum data library (Dec-2025 release, survivorship-bias-adjusted monthly long-short factor returns; BSE+NSE stocks via CMIE Prowess DX; micro-caps below 10% of median market cap and sub-Rs1 stocks excluded; RF = 91-day T-bill). Jan-1994 to Dec-2025 (383 months): WML momentum CAGR +10.6% (arith 13.1%/yr, vol 24.5%, t=3.0), max drawdown -53% (Feb-Nov 2000), worst years 2000 -36%, 1998 -32%, 2009 -30% (momentum crashes at market rebounds). HML value CAGR +6.5% (vol 20.4%, t=2.3), max drawdown -59% (1994-2000), worst years 2018 -21%, 2019 -21%; best 2007 +49%, 2021 +39%, 2023 +35%; 2020-25 value CAGR +18.9% (the PSU/cyclical rerating). SMB size CAGR -3.8% (t=-0.85, not significant), max drawdown -86% (1995-2009), negative in 16 of 31 years - the 'small caps always win in India' story is not supported once micro-caps are excluded and the factor is measured long-short. Market factor (excess over T-bills) CAGR only +4.9% vs RF 6.9%, max drawdown -75% (1994-2001): Indian T-bills were a high hurdle. By decade, momentum was strongest 2015-25 (CAGR 12.8%, t=3.0, vol only 14.5%). Lessons: factor premia exist but come with multi-year droughts that test discipline; momentum and value are negatively timed (good diversifiers); size is a tilt, not an edge. Caveats: long-short paper portfolios before costs; data vary between releases.",
+  "tags": [
+   "india",
+   "factor",
+   "base-rate",
+   "momentum",
+   "value",
+   "size",
+   "quant"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://faculty.iima.ac.in/iffm/Indian-Fama-French-Momentum/",
+   "https://faculty.iima.ac.in/iffm/Indian-Fama-French-Momentum/DATA/2025-12_FourFactors_and_Market_Returns_Monthly_SurvivorshipBiasAdjusted.csv",
+   "https://faculty.iima.ac.in/iffm/Indian-Fama-French-Momentum/FAQ.php"
+  ],
+  "confidence": "single-source",
+  "data": {
+   "period": "1994-01..2025-12",
+   "WML": {
+    "cagr": 10.6,
+    "vol": 24.5,
+    "t": 3.03,
+    "maxdd": -53
+   },
+   "HML": {
+    "cagr": 6.5,
+    "vol": 20.4,
+    "t": 2.31,
+    "maxdd": -59,
+    "cagr_2020_25": 18.9
+   },
+   "SMB": {
+    "cagr": -3.8,
+    "t": -0.85,
+    "maxdd": -86,
+    "neg_years": "16/31"
+   },
+   "MKT_excess": {
+    "cagr": 4.9,
+    "maxdd": -75
+   },
+   "RF_cagr": 6.9,
+   "computed_by": "FEIN from IIMA CSV"
+  },
+  "links": [
+   {
+    "to": "insight:winners-drawdowns",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:nse-factor-indices-quality-lowvol-momentum",
+  "title": "NSE factor indices (2005-2026): momentum, quality and multifactor beat the cap-weighted market, with deep drawdowns in momentum and value",
+  "body": "Primary NSE Indices data (TR = total return; base 1 Apr 2005). Nifty200 Momentum 30 (whitepaper data to 27 Feb 2026): 19.19% CAGR since inception vs 15.08% for Nifty 200, at higher volatility; maximum drawdowns of momentum indices 68% (Nifty200 Mom 30), 73% (Midcap150 Mom 50), 70% (Nifty500 Mom 50) vs 64%, 73%, 64% for parents - 'momentum strategies ... thrive in trending markets but face challenges during market reversals.' Factsheets as of 30 Oct 2026: Nifty200 Momentum 30 TR 18.05% since 2005 but 7.93% over 5 years and -8.48% over 1 year (vol 22.3% since inception); Nifty200 Quality 30 TR 16.58% since 2005 (5y 6.96%, 1y -8.86%; vol 17.9%, beta 0.79 vs Nifty 50); Nifty500 Value 50 TR 10.28% since 2005, 5y -1.93%, 1y -19.56% (vol 27.2%); Nifty 50 TR 12.15% since Nov-1995 (5y 6.70%, 1y -9.45%, YTD-2026 -10.91%; P/E 19.3). Nifty500 Multifactor MQVLv 50 (momentum+quality+value+low-vol, data to 31 Dec 2024): 21.11% CAGR since 2005 vs 14.97% for Nifty 500 TR, at lower volatility (17.4% vs 20.6%); positive in 100% of rolling 5-year windows but negative in 15.5% of 1-year windows (worst -48.6%). Lessons: quality/low-vol give most of the premium with smaller drawdowns; momentum and value are cyclical (2026 drawdown hit both); all are back-tested from 2005 for indices launched 2018-2024 (look-ahead/selection bias in launch timing). Actionable: a quality/low-vol core is a reasonable passive baseline to beat before claiming stock-picking skill.",
+  "tags": [
+   "india",
+   "factor",
+   "quality",
+   "momentum",
+   "low-volatility",
+   "index",
+   "base-rate",
+   "passive"
+  ],
+  "date": "2026-10-30",
+  "sources": [
+   "https://www.niftyindices.com/docs/default-source/indices/nifty200-momentum-30/momentum-strategy-whitepaper_2026.pdf",
+   "https://niftyindices.com/docs/default-source/indices/nifty500-multifactor-mqvlv-50/nifty500-multifactor-mqvlv-50-whitepaper_2024.pdf",
+   "https://www.niftyindices.com/Factsheet/Factsheet_Nifty200_Quality30.pdf",
+   "https://www.niftyindices.com/Factsheet/Factsheet_Nifty500_Value50.pdf",
+   "https://www.niftyindices.com/Factsheet/Factsheet_Nifty200_Momentum30.pdf",
+   "https://www.niftyindices.com/Factsheet/ind_nifty50.pdf"
+  ],
+  "confidence": "verified",
+  "data": {
+   "as_of": "2026-10-30",
+   "tr_since_2005": {
+    "mom30": 18.05,
+    "quality30": 16.58,
+    "value50": 10.28
+   },
+   "nifty50_tr_since_1995": 12.15,
+   "mqvlv50_to_2024": {
+    "cagr": 21.11,
+    "nifty500": 14.97
+   },
+   "maxdd_mom": {
+    "nifty200_mom30": 68,
+    "parent": 64
+   }
+  },
+  "links": [
+   {
+    "to": "insight:iima-factor-premiums-india",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:spiva-india-2025",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-liquidity-fpi-vs-dii",
+  "title": "Indian market liquidity: domestic SIP/DII money now outweighs FPI selling - 2024-26 record flows both ways",
+  "body": "Who sets the marginal price has changed. Calendar 2025: FPIs sold a record ~Rs1.5-2.0 lakh crore of Indian equities (NSDL-based reports differ by cutoff: Rs1.51 tn YTD mid-Dec per Business Standard; Rs2.03 tn full year per Angel One citing NSDL), while DIIs bought a record ~Rs6 lakh crore+ (highest since BSE data began in 2007; Rs5.26 tn in 2024). SIP inflows (AMFI, as reported) were ~Rs3.34 lakh crore in 2025 vs ~Rs2.68 lakh crore in 2024, with monthly SIP records around Rs26-32k crore through 2025-26. Oct-2024 was itself a then-record FPI monthly outflow (>$8.5bn by mid-month). 2026: after the Gulf conflict began in late Feb-2026, FPIs pulled ~$12.6bn in March alone (Finnovate/NSDL, single-source) and the Nifty fell ~15% Jan-Mar 2026; blogs report 2026 YTD FPI outflow already exceeding 2025 (unverified). Interpretation: (1) DII/SIP flows dampen drawdowns and keep domestic valuations above EM peers, but they are pro-cyclical too - SIP stoppage ratios rise after weak years; (2) FPI flows still drive large caps (banks, IT) and the rupee; (3) persistent domestic flows can keep 'expensive stays expensive' longer than value investors expect, which also lowers future returns. Actionable: track monthly NSDL FPI net flows, AMFI SIP gross flows and SIP stoppage ratio as a liquidity dashboard; a simultaneous FPI exodus and falling SIP flows is the setup for deeper Indian drawdowns.",
+  "tags": [
+   "india",
+   "liquidity",
+   "fpi",
+   "dii",
+   "sip",
+   "macro",
+   "base-rate"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://www.business-standard.com/markets/news/year-ender-2025-d-st-set-to-see-record-fii-selloff-dii-inflows-cushion-125122400097_1.html",
+   "https://www.angelone.in/news/market-updates/dii-flows-cross-rs-6-trillion-in-2025-in-india-stocks-offsetting-fpi-outflows-of-rs-2-trillion",
+   "https://www.business-standard.com/markets/news/rs-6-trillion-counting-diis-pump-record-money-in-indian-stocks-in-2025-125101500254_1.html",
+   "https://www.business-standard.com/amp/markets/news/record-outflows-fpi-selling-this-month-reverberate-covid-selloff-124101701268_1.html",
+   "https://www.finnovate.in/learn/blog/nifty-20-year-cagr-below-10-percent-history"
+  ],
+  "confidence": "verified",
+  "data": {
+   "cy2025": {
+    "fpi_net_rs_tn": "-1.5 to -2.0",
+    "dii_net_rs_tn": ">6",
+    "sip_rs_tn": 3.34
+   },
+   "cy2024": {
+    "dii_net_rs_tn": 5.26,
+    "sip_rs_tn": 2.68
+   },
+   "mar_2026_fpi_usd_bn": -12.58,
+   "dashboard": [
+    "NSDL FPI net",
+    "AMFI SIP gross + stoppage ratio",
+    "DII net"
+   ]
+  },
+  "links": [
+   {
+    "to": "insight:behavior-gap",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-rates-rupee-regime-2025-26",
+  "title": "RBI rates and the rupee, 2025-26: cuts to 5.25%, then an oil-shock rupee slide to ~97/$ - why FX matters for Indian equity returns",
+  "body": "RBI cut the repo rate through 2025 (from 6.50% in early 2025 to 5.25% by Dec-2025 per subsequent reports) and on 5 Jun 2026 held at 5.25% with a neutral stance, choosing FX-inflow measures over hikes after the war-driven crude spike; it cut its FY27 GDP forecast to 6.6% and raised CPI to 5.1%. The rupee went from ~Rs83/$ in early FY25 and ~Rs90 in 2025 to a record closing low of ~96.86 on 20 May 2026 (reports cite 'near Rs97'). Mechanics for an equity investor: (1) FPI outflows, a wider current-account deficit (oil) and a weaker rupee reinforce each other; in USD terms the Nifty's 2026 drawdown was materially worse than in INR; (2) rate cuts help rate-sensitive sectors (NBFCs, real estate, autos) with a 2-4 quarter lag, but rupee stress can cap further easing; (3) a falling rupee helps IT services, pharma exporters and specialty chemicals with USD revenue and hurts oil marketers, importers and companies with unhedged foreign-currency debt; (4) long-run: INR has depreciated roughly 3-4% a year vs USD over decades, so Indian equity returns must be compared with US returns after FX. Base rate: crude oil shocks (2008, 2013 taper + CAD, 2022, 2026) are the recurring trigger for Indian macro stress. Actionable: check each holding's FX exposure (USD revenue share, foreign-currency borrowings, import content) and include an oil/rupee stress case in valuations.",
+  "tags": [
+   "india",
+   "macro",
+   "interest-rates",
+   "currency",
+   "rbi",
+   "oil",
+   "cycles"
+  ],
+  "date": "2026-06-05",
+  "sources": [
+   "https://theprint.in/economy/rbi-pauses-rate-cuts-retains-interest-rate-at-5-25-pc/2847398",
+   "https://www.freepressjournal.in/business/indian-economy-remains-resilient-rbi-governor-malhotra",
+   "https://www.outlookbusiness.com/news/rbi-holds-interest-rates-as-oil-shock-clouds-outlook-unveils-measures-to-support-rupee",
+   "https://www.finnovate.in/learn/blog/rbi-june-2026-mpc-policy-analysis-rupee"
+  ],
+  "confidence": "verified",
+  "data": {
+   "repo_jun_2026": 5.25,
+   "rupee_record_low": "96.86 (2026-05-20)",
+   "rbi_fy27_gdp": 6.6,
+   "rbi_fy27_cpi": 5.1,
+   "trigger": "Gulf conflict from late Feb-2026, crude spike"
+  },
+  "links": [
+   {
+    "to": "insight:india-liquidity-fpi-vs-dii",
+    "rel": "about"
+   },
+   {
+    "to": "insight:marks-private-credit-fiscal-2026",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:nifty-eps-vs-index-returns",
+  "title": "Nifty earnings vs index returns: ~10% EPS CAGR (FY05-25) vs ~13% price CAGR - the gap was re-rating; FY26 20-yr CAGR fell below 10%",
+  "body": "Long run, Indian index returns track earnings growth plus dividends plus valuation change. Data points: Marcellus estimates Nifty 50 EPS grew ~10% CAGR over FY05-FY25, with an unusual 24% CAGR over FY21-24 (post-Covid, bank/NBFC cleanup, commodity margins) slowing to ~6% in FY25; Business Standard (May 2025) reported Q4FY25 Nifty EPS growth of just 4.7%, slowest since 2017, and index EPS rising from Rs503 (Mar-2021) to ~Rs1,071. Price return Jun-2005 to Jun-2025: Nifty 2,220.6 to 25,517, ~12.98% CAGR (BacktestIndia) - i.e., ~2-3 points a year of P/E expansion on top of ~10% EPS growth (our arithmetic; NSE also switched from standalone to consolidated earnings for P/E in 2021, which complicates the P/E series). Nifty 50 TR since Nov-1995 is 12.15% (NSE factsheet, 30 Oct 2026); Finnovate computes that by FY26 the 20-year rolling Nifty CAGR dropped below 10% for only the second time, and from the Jan-2008 peak the CAGR to end-FY26 was ~7.3%. Trailing P/E ~19.3-20.7 in Oct 2026 vs ~23-24 a year earlier. Lessons: (1) budget 10-12% nominal index returns, not 15%; (2) starting from high P/Es (2008, 2021, 2024) produced subpar multi-year returns - the same valuation-return link Marks shows for the S&P; (3) earnings growth bursts (2003-08, 2021-24) do the heavy lifting. Actionable: decompose any stock's expected return into EPS growth + dividend yield + P/E change, and refuse theses that need P/E expansion from already-high levels.",
+  "tags": [
+   "india",
+   "base-rate",
+   "valuation",
+   "earnings",
+   "nifty",
+   "index"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://marcellus.in/newsletter/consistent-compounders/earnings-growth-in-india-sliding-nifty-rising-ccp/",
+   "https://www.business-standard.com/markets/news/nifty-50-eps-grew-just-4-7-in-march-quarter-slowest-pace-since-2017-125051301530_1.html",
+   "https://backtestindia.com/data/nifty-50-cagr",
+   "https://www.finnovate.in/learn/blog/nifty-20-year-cagr-below-10-percent-history",
+   "https://www.niftyindices.com/Factsheet/ind_nifty50.pdf",
+   "https://siblisresearch.com/data/cape-ratio-india-nifty/"
+  ],
+  "confidence": "verified",
+  "data": {
+   "eps_cagr_fy05_25": "~10%",
+   "eps_cagr_fy21_24": "~24%",
+   "price_cagr_jun05_jun25": 12.98,
+   "tr_cagr_since_1995": 12.15,
+   "cagr_from_jan2008_peak_to_fy26": 7.33,
+   "trailing_pe_oct2026": "19.3-20.7"
+  },
+  "links": [
+   {
+    "to": "insight:marks-on-bubble-watch-2025",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:twin-engine",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:spiva-india-2025",
+  "title": "SPIVA India year-end 2025: 76% of large-cap and 79% of mid/small-cap funds lagged over 10 years; ELSS 83%",
+  "body": "S&P Dow Jones Indices SPIVA India Year-End 2025 scorecard (benchmarks now S&P India LargeMidCap for large-cap funds, S&P India SmallCap for mid/small-cap, S&P India BMI for ELSS). Large-cap funds: underperformance 75.0% (1 yr), 74.2% (3 yr), 84.4% (5 yr), 76.3% (10 yr). In 2025 the benchmark rose 8.9% vs 7.3% equal-weighted / 9.4% asset-weighted for funds. Mid/small-cap funds: 12.1% (1 yr), 41.5% (3 yr), 46.0% (5 yr), 79.0% (10 yr) - 2025 was their best relative year since 2014 as the S&P India SmallCap fell 7.9% while funds lost only 0.7%/0.3% (defensive cash/quality tilts help in falling small-cap markets). ELSS: 55.0%, 58.5% and 82.9% underperformance over 3, 5 and 10 years. Mid-year 2025 report (to Jun-2025): 73% large-cap and 82% mid/small-cap underperformed over 10 years. SPIVA adjusts for survivorship (merged/liquidated funds count as losers). Lessons: (1) in Indian large caps, after costs, 3 in 4 professionals lose to a cheap index over a decade - large-cap stock picking is the hardest place to add value; (2) mid/small-cap active managers do better in down years but still mostly lose over 10 years; (3) short-run outperformance (1-yr) is a poor guide to persistence. Actionable: our personal stock picks must be benchmarked against a Nifty 50/LargeMidcap index fund and a quality factor index, net of taxes and costs, with records kept honestly (Buffett 1993: the know-nothing indexer beats most professionals).",
+  "tags": [
+   "india",
+   "base-rate",
+   "active-vs-passive",
+   "mutual-funds",
+   "passive",
+   "luck-vs-skill"
+  ],
+  "date": "2026-03-15",
+  "sources": [
+   "https://www.spglobal.com/spdji/en/documents/spiva/spiva-india-scorecard-year-end-2025.pdf",
+   "https://www.spglobal.com/spdji/en/spiva/article/spiva-india-year-end-2025/",
+   "https://cafemutual.com/news/industry/35917-73-of-indian-large-cap-and-82-of-mid-and-small-cap-funds-have-underperformed-sp-india-benchmarks-over-a-10-year-period"
+  ],
+  "confidence": "verified",
+  "data": {
+   "large_cap_underperf": {
+    "1y": 75.0,
+    "3y": 74.2,
+    "5y": 84.4,
+    "10y": 76.3
+   },
+   "mid_small_underperf": {
+    "1y": 12.1,
+    "3y": 41.5,
+    "5y": 46.0,
+    "10y": 79.0
+   },
+   "elss_underperf": {
+    "3y": 55.0,
+    "5y": 58.5,
+    "10y": 82.9
+   },
+   "period_end": "2025-12-31"
+  },
+  "links": [
+   {
+    "to": "insight:luck-vs-skill",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:buffett-circle-of-competence-concentration",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-dividend-buyback-tax",
+  "title": "Indian dividend and buyback taxation 2020-2026: three buyback regimes in 18 months; dividends taxed at slab",
+  "body": "Dividends: since FY2020-21 (Finance Act 2020 abolished DDT) dividends are taxed in shareholders' hands at slab rates (up to ~35.9% with surcharge/cess for top individuals; surcharge on dividends capped at 15%), with TDS of 10% above the annual threshold. Capital gains on listed equity from 23 Jul 2024: LTCG (held >12 months) 12.5% above Rs1.25 lakh annual exemption; STCG 20%. Buybacks (Business Today, Sep-2026): (1) to 30 Sep 2024 - company paid buyback tax u/s 115QA (~23.3% effective), shareholders exempt, making tender buybacks the tax-efficient payout for promoters and HNIs; (2) 1 Oct 2024 to 31 Mar 2026 - whole buyback consideration taxed as deemed dividend u/s 2(22)(f) at slab, cost of shares allowed only as a capital loss (e.g., Rs50 lakh buyback on Rs10 lakh cost = Rs50 lakh dividend income + Rs10 lakh capital loss) - buybacks became tax-inefficient for high-slab holders and volumes fell; (3) from 1 Apr 2026 (Budget 2026 / Income-tax Act 2025) - back to capital gains (consideration minus cost) at 12.5%/20% for non-promoters, with an additional levy making promoters' effective rate ~22% (corporate) / ~30% (non-corporate). Implications: (a) for a high-slab Indian investor, a low-payout compounder that reinvests at high ROCE is more tax-efficient than a high-dividend stock (only 12.5% on eventual LTCG, deferred); (b) dividend yield screens overstate post-tax yield for top-bracket investors by ~1/3; (c) buyback announcements should be judged on price vs value (Buffett 2023) and on the tax regime in force on the record date.",
+  "tags": [
+   "india",
+   "tax",
+   "dividends",
+   "buyback",
+   "policy",
+   "capital-allocation"
+  ],
+  "date": "2026-09-03",
+  "sources": [
+   "https://www.businesstoday.in/markets/story/buyback-tax-how-india-changed-the-rules-three-times-in-18-months-and-what-investors-need-to-know-553004-2026-09-03",
+   "https://www.business-standard.com/budget/news/budget-2026-buyback-proceeds-to-be-treated-as-capital-gains-126020101050_1.html",
+   "https://freefincal.com/budget-2024-how-share-buybacks-will-be-taxed-from-1st-oct-2024/",
+   "https://caalley.com/news-updates/budget-2026/budget-2026-buy-back-proceeds-will-be-taxed-as-capital-gains-for-shareholders-but-promoters-pay-an-extra-price"
+  ],
+  "confidence": "verified",
+  "data": {
+   "ltcg": "12.5% above Rs1.25 lakh (from 2024-07-23)",
+   "stcg": "20%",
+   "buyback_regimes": {
+    "to_2024-09-30": "company 115QA ~23.3%",
+    "2024-10-01_to_2026-03-31": "deemed dividend at slab + capital loss",
+    "from_2026-04-01": "capital gains; promoters ~22%/30% effective"
+   },
+   "dividends": "slab since FY21"
+  },
+  "links": [
+   {
+    "to": "insight:buffett-retained-dollar-test",
+    "rel": "about"
+   },
+   {
+    "to": "insight:buffett-japan-trading-houses-buybacks",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:ind-as-accounting-levers",
+  "title": "Common Ind AS earnings levers in Indian companies - what to check (revenue, capitalisation, other income, exceptionals, related parties)",
+  "body": "Checklist of where reported profit diverges from owner earnings (Buffett 1986) under Ind AS. (1) Revenue recognition (Ind AS 115): percentage-of-completion/over-time recognition in EPC, real estate, defence and software projects lets margins be front-loaded; watch contract assets/unbilled revenue and trade receivables growing faster than revenue, rising receivable days, and 'channel stuffing' near quarter-end (SEBI's Dec-2024 memo documents SME 'fraudulent sales and purchases through circular transactions amongst related parties'). (2) Capitalisation (Ind AS 16/23/38): capitalising interest, R&D/product development or 'pre-operative' costs flatters EBITDA and PAT; check CWIP ageing, capitalised borrowing costs vs finance cost, and intangible additions vs cash R&D. (3) Other income: treasury income, interest on loans to group entities, FX gains and fair-value gains (Ind AS 109) can be a large share of PBT; strip them out and ask whether core EBIT covers interest. (4) Exceptional items: recurring 'one-offs' (write-offs, restructuring, impairment) every year are operating costs; compare cumulative exceptionals over 5 years with cumulative PAT. (5) Related parties (Ind AS 24; SEBI LODR Reg 23 approvals for material RPTs): sales to/purchases from promoter entities, loans and guarantees to group firms, royalty to promoter-owned brands, and ICDs - Gensol (SEBI interim order 15 Apr 2025) diverted EV term loans to promoter uses; IndusInd Bank (Mar-Apr 2025) found internal derivative mis-accounting worth ~Rs1,960 crore cumulative P&L impact (Grant Thornton). (6) Off-balance-sheet: supplier finance/factoring and inventory sales to related SPVs (cf. First Brands, Marks Nov-2025). Test of truth: 5-yr cumulative CFO vs cumulative EBITDA/PAT, and cumulative FCF vs reported profits; auditor changes and qualified opinions are red flags.",
+  "tags": [
+   "india",
+   "accounting",
+   "forensic",
+   "redflag",
+   "governance",
+   "fraud",
+   "process"
+  ],
+  "date": "2026-11-19",
+  "sources": [
+   "https://www.sebi.gov.in/sebi_data/meetingfiles/jan-2025/1735725342588_1.pdf",
+   "https://www.businesstoday.in/markets/company-stock/story/sebi-bars-gensol-engineering-its-promoters-from-accessing-markets-in-fund-diversion-case-472151-2025-04-15",
+   "https://www.business-standard.com/amp/companies/news/indusind-bank-fiasco-gt-flags-errors-in-accounting-of-derivative-trades-125042700669_1.html",
+   "https://www.business-standard.com/industry/banking/external-audit-finds-rs-1-979-crore-hit-for-indusind-bank-on-derivatives-125041501306_1.html"
+  ],
+  "confidence": "verified",
+  "data": {
+   "levers": [
+    "Ind AS 115 over-time revenue",
+    "Ind AS 16/23/38 capitalisation",
+    "other income incl. FV gains",
+    "recurring exceptionals",
+    "Ind AS 24 related parties / LODR Reg 23",
+    "off-balance-sheet factoring/SPVs"
+   ],
+   "tests": [
+    "5y CFO/EBITDA",
+    "5y FCF/PAT",
+    "receivable days trend",
+    "CWIP ageing",
+    "auditor changes"
+   ],
+   "cases": {
+    "GENSOL": "SEBI interim order 2025-04-15",
+    "INDUSINDBK": "~Rs1,960cr derivative accounting impact (GT)"
+   }
+  },
+  "links": [
+   {
+    "to": "insight:buffett-owner-earnings-1986",
+    "rel": "about"
+   },
+   {
+    "to": "insight:marks-cockroaches-bezzle-2025",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:disqualifiers",
+    "rel": "part_of"
+   }
+  ],
+  "tickers": [
+   "GENSOL",
+   "INDUSINDBK"
+  ]
  }
 ]
