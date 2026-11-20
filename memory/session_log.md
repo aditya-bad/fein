@@ -33,3 +33,11 @@ memdb now: 100 case studies, 68 insights, 33 strategies, 32 people, 19 sector th
 **Verified pledges from NSE primary data** → downgraded TRANSRAILL, ROLEXRINGS, HONASA, BIRLACABLE to AVOID.
 Lesson: company self-declarations (Transrail Apr-26 "no encumbrance") can be stale — always check exchange data.
 **Next:** build promise tracker v1 on NSE transcripts; weekly change detectors; still need user profile answers.
+
+## 2026-11-19/20 — Research round 2
+**Asked:** "Are you done with research? What is stopping you?" → not done; limits: usage caps, blocked
+sources (YouTube, paywalls, Screener login, India-only IPs), generic knowledge has diminishing returns.
+**Launched:** promise-tracker pilots (UNIPARTS done: 68 promises, credibility +0.28; FY25 promoter era
+33% hit vs FY26–27 new-CEO era 78%; execution promises −0.08 vs cycle promises +0.53; candour ~5%),
+SKIPPER pilot, business-group governance histories, Berkshire/Marks primary sources + Indian base rates.
+Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tools/promise_tracker/.
