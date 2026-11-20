@@ -72,3 +72,11 @@ subsidiary, African lead plants, SME gate maker + real numbers were enough). Set
 factor, shift fiscal years, prefer obscure micro/small caps, strip group/listing-venue clues;
 (b) **forward paper calls are the only truly clean test of our skill** — weight them most in the phase-B gate;
 (c) historical drills remain useful as practice, scored only when "not recognised".
+
+## L12 (2026-11-20) — Our own checklist has measurable false alarms
+Flags-judgment study: our checklist would have rejected Titan, Apollo Hospitals (76% pledge) and HAL, and
+passed Vakrangee (CFO > PAT). Separator: false alarms had a mechanism outsiders could verify without
+company-supplied data, cash eventually arrived, governance clean/improving; traps' good numbers were verifiable
+only via company data. Also: buying at ~2× a stock's own median P/E gave flat 4–6 yrs even with earnings growth.
+**Rule:** hard disqualifiers stay; soft flags are graded with a written override (insight:flag-override-template).
+Pledge rule changed to graded; four 19-Nov downgrades (4–6% pledges) reverted to "open question".
