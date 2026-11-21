@@ -64,7 +64,7 @@ def cl_mean(recs, field, cl="wk", shift=0.0):
     se = math.sqrt(G / (G - 1) * float((e ** 2).sum())) / len(x) if G > 1 else float("nan")
     idx = RNG.integers(G, size=(NB, G))
     bs = np.sort(S[idx].sum(1) / N[idx].sum(1))
-    return {"n": len(x), "G": G, "mean": m, "t": m / se if se > 0 else None,
+    return {"n": len(x), "G": G, "mean": m, "t": m / se if se == se and se > 0 else None,
             "lo": float(bs[int(.025 * NB)]), "hi": float(bs[int(.975 * NB) - 1]),
             "median": float(np.median(x)), "hit": float((x > 0).mean())}
 
@@ -78,14 +78,14 @@ def cl_diff(A, B, field, cl="wk"):
     xa = np.array([r[field] for r in A]); xb = np.array([r[field] for r in B])
     ma, mb = xa.mean(), xb.mean(); d = float(ma - mb)
     psi = np.bincount(ga, weights=(xa - ma) / len(xa), minlength=G) - np.bincount(gb, weights=(xb - mb) / len(xb), minlength=G)
-    se = math.sqrt(G / (G - 1) * float((psi ** 2).sum()))
+    se = math.sqrt(G / (G - 1) * float((psi ** 2).sum())) if G > 1 else float("nan")
     SA = np.bincount(ga, weights=xa, minlength=G); NA = np.bincount(ga, minlength=G).astype(float)
     SB = np.bincount(gb, weights=xb, minlength=G); NB_ = np.bincount(gb, minlength=G).astype(float)
     idx = RNG.integers(G, size=(NB, G))
     with np.errstate(invalid="ignore", divide="ignore"):
         bs = SA[idx].sum(1) / NA[idx].sum(1) - SB[idx].sum(1) / NB_[idx].sum(1)
     bs = np.sort(bs[np.isfinite(bs)]); k = len(bs)
-    return {"nA": len(xa), "nB": len(xb), "G": G, "mean": d, "t": d / se if se > 0 else None,
+    return {"nA": len(xa), "nB": len(xb), "G": G, "mean": d, "t": d / se if se == se and se > 0 else None,
             "lo": float(bs[int(.025 * k)]), "hi": float(bs[int(.975 * k) - 1])}
 
 
@@ -182,8 +182,8 @@ json.dump(OUT, open(os.path.join(V2, f"v2_results{suffix}.json"), "w"), indent=1
 
 def f(s, k="mean"):
     if not isinstance(s, dict) or s.get(k) is None: return f"n/a {s}"
-    t = s.get("t"); n = s.get("n", s.get("n_q", s.get("nA")))
-    return (f"{s['mean'] * 100:+.2f}% [{s['lo'] * 100:+.2f}, {s['hi'] * 100:+.2f}] t={t:.2f} n={n}"
+    t = s.get("t"); n = s.get("n", s.get("n_q", s.get("nA"))); ts = f"{t:.2f}" if t is not None else "n/a"
+    return (f"{s['mean'] * 100:+.2f}% [{s['lo'] * 100:+.2f}, {s['hi'] * 100:+.2f}] t={ts} n={n}"
             + (f" G={s['G']}" if "G" in s else ""))
 
 

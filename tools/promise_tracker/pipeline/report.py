@@ -261,7 +261,8 @@ def markdown(s, rows):
         ch = r.get("chain") or {}
         cs = ("goalpost move; " if ch.get("goalpost_move") else "") + (f"supersedes {ch['supersedes'].split(':')[-1]}" if ch.get("supersedes") else "") \
             + (f"restates {ch['restates'].split(':')[-1]}" if ch.get("restates") else "")
-        L.append(f"| {r['said_on']} | {re.sub(r' *\\(.*', '', str(r.get('speaker')))} | {str(r.get('metric'))[:50]} | "
+        spk = re.sub(r" *[(].*", "", str(r.get("speaker")))
+        L.append(f"| {r['said_on']} | {spk} | {str(r.get('metric'))[:50]} | "
                  f"{str(r.get('target'))[:40]} | {str(r.get('deadline'))[:10]} | {r['_status']} ({r['_status_src']}) | {cs} |")
     return "\n".join(L) + "\n"
 

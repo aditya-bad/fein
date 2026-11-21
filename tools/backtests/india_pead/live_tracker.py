@@ -26,7 +26,7 @@ import argparse, bisect, csv, datetime as dt, glob, gzip, json, math, os, random
 import urllib.error, urllib.parse, urllib.request
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", ".."))
-LIVE = os.path.join(ROOT, "research_notes", "Backtests", "india_pead_live")
+LIVE = os.environ.get("PEAD_LIVE_DIR") or os.path.join(ROOT, "research_notes", "Backtests", "india_pead_live")  # env override = testing
 PXC = os.path.join(LIVE, ".pxcache")          # gitignored price cache
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import v2_fetch as F                           # reuse polite getters + XBRL parser

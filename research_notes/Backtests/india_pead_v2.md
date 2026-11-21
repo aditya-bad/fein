@@ -139,3 +139,51 @@ State: `research_notes/Backtests/india_pead_live/`.
   H2 filter contrast. A second primary row reports the provisional (fixed-cut) quintile, because that is the version
   a person could actually trade on the day. Until then every live number is "interim". No rule changes after the first
   live row is logged; any change gets a new dated entry here, and the old rule is still reported.
+
+---
+
+# RESULTS — written 2026-11-21 AFTER the run (everything above is the unchanged pre-registration and deviation log)
+
+## Stage 1: fresh 2026 out-of-sample results (pass A complete for all 1,870 symbols; final for these quarters)
+
+**Data.** 1,870 universe symbols → 312 never in ₹400–60,000 cr in 2021–26, 3 with no quarterly filings →
+**1,555 companies** (about 2.7× v1's 580). **4,272 fresh events from 1,181 companies**; 79% use consolidated EPS. Median
+mcap is ₹3,636 cr, and the median number of size-matched controls per event is 374 (v1: 116). Event dates come from an
+exchange announcement on the same day as the feed date (3,763), an announcement earlier than the feed date (360), or
+the feed date only (150). Events per fiscal quarter: Dec-25 1,112, Mar-26 1,034, Jun-26 1,122 (1,121 with a closed 63d
+window), Sep-26 1,004 (only 45 with a closed 21d window).
+
+### Verdicts on the fresh data (decision rules as pre-committed)
+
+| Hyp. | Pre-committed test (63d, 2026 events, week-clustered) | Result | Verdict |
+|---|---|---|---|
+| **H1** | top quintile vs controls **net of 1%** > 0, t > 3 or CI ∌ 0 | gross **+2.41%** [+0.84, +4.23] t 2.81; **net +1.41% [−0.14, +3.27], t 1.65** (n 652, 25 weeks) | **NOT PROVEN-fresh.** This already fails H1, whatever the re-run shows |
+| **H2** | D = top∩(ann_ret>0) − top∩(ann_ret≤0) > 0, t > 3 or CI ∌ 0 | **D = +0.26% [−3.06, +3.37], t 0.16**; filtered top net +1.52% vs unfiltered +1.41% | **NOT SUPPORTED.** v1's "confirmed beat" filter did not hold up on fresh data |
+| **H3** | bottom quintile ≤ −1%, t < −3 or CI upper < 0 | **−2.73% [−4.41, −1.51], t −3.60** (n 655) | **SUPPORTED.** The avoid leg held out of sample |
+| H4 (expl.) | mid tertile strongest | top vs controls: small **+4.50%** (t 3.6), **mid −0.84%** (t −0.6), large **+4.46%** (t 3.3); T−B: 6.00 / 3.27 / 7.34% | **Not seen.** In 2026 the middle tertile was the *weakest*, so v1's exploratory pattern looks like noise |
+
+Month-clustered sensitivity check (7 clusters): top net +1.41% [−0.42, +3.13], t 1.53; bottom −2.73% [−5.01, −1.20],
+t −2.75. The verdicts do not change. H3 holds on the CI rule, although its month-clustered t is below 3.
+
+### Context (exploratory, not verdicts)
+- **Top-minus-bottom (raw returns) is still strong:** 63d **+5.14%** [+2.81, +7.98], t 3.87; 21d +3.15% (t 4.5); 126d
+  +5.88% (t 2.7, Dec-25 and part of Mar-26 only). The anomaly is alive in 2026 and about as large as in v1 (test
+  +4.24%). Again, the money is mostly on the **short or avoid side**.
+- **Quintile ladder, 63d excess:** Q1 −2.73, **Q2 −2.81**, Q3 −0.15, Q4 +1.43, Q5 +2.41%. The "avoid" zone covers the
+  bottom two quintiles, not only the bottom one.
+- **By quarter, top vs controls at 63d:** Dec-25 +0.87%, Mar-26 +1.85%, Jun-26 **+4.47%**. Bottom: −2.02, −4.20, −2.08%.
+  The long leg is positive in all three quarters but carried by Jun-26. The bottom leg is negative in all three.
+- **Consolidated-only events** (79%): top +2.63% (t 3.0), bottom −2.43% (t −3.2), close to the full set. Consolidated
+  EPS did not obviously sharpen the signal compared with v1's standalone figures.
+- **Calibration:** all events vs controls −0.37% at 63d (t −1.25), and −0.54% at 21d (t −2.3). The slight negative is
+  probably the mechanical "single stock vs equal-weight mean of ~370 stocks" effect noted in v1. It works *against* the
+  long leg, so it does not flatter it.
+- **Sep-2026 quarter (filed Oct–Nov 2026): PENDING.** Its 21d windows close in late Nov–mid Dec 2026, and its 63d
+  windows in Jan–Feb 2027. At the run date only 45 events had a closed 21d window, which is too few to report. Re-run
+  `v2_events.py` + `v2_analyze.py` after about 2027-02-20.
+- **The fresh result is close to a replica of v1's test result.** Gross long-only +2.41% (v1 +2.36%), net of 1%
+  +1.41% with a CI touching zero (v1 +1.36%, CI −0.06). Two independent periods now give the same answer: a real
+  but small long-only edge of about +2.4% per quarter gross. It is **not separable from zero once a 1% round trip is
+  paid**, at 3–4 years' or 3 quarters' worth of data.
+
+*(Stage 2, the 2022–25 re-run with consolidated EPS, is added below when pass B completes.)*

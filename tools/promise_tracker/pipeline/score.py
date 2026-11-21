@@ -527,9 +527,14 @@ def compare(a, b):
             out.append("lowered")
         elif (lb > la + tol and not lower_better) or (lb < la - tol and lower_better):
             out.append("raised")
+    vague = "vague" in (str(a.get("deadline_precision")), str(b.get("deadline_precision")))
+    if b.get("restates_earlier") and "lowered" not in out:
+        return "same"  # speaker says 'maintained'; only a lower number overrides that
     try:
         dda, ddb = dt.date.fromisoformat(da), dt.date.fromisoformat(db)
-        if (ddb - dda).days > 45:
+        if vague:
+            pass  # an open-ended aspiration restated later is not a re-date
+        elif (ddb - dda).days > 45:
             out.append("deadline_pushed")
         elif (dda - ddb).days > 45:
             out.append("deadline_pulled")

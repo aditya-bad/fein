@@ -43,6 +43,13 @@ Last updated: 2026-11-19
 - **NSE PIT insider feed has no records after 30-Apr-2026** (BSE insider endpoint empty too) — insider rules
   dormant until it resumes; SAST promoter trades still captured.
 
+## Promise-tracker pipeline (21-Nov-2026) — tools/promise_tracker/pipeline/ (Pi-ready, stdlib + pdftotext/curl)
+fetch → turns → candidates (rules) → llm_extract (`claude -p` or Gemini CLI) → score (vs screener) → report; run.py
+runs all with a human-override file. Validation vs manual pilots (SKIPPER/UNIPARTS): formula reproduces pilot scores
+exactly; rules+LLM recall 85–87%, precision ≥36–40% (lower bound; LLM over-extracts ~3×); auto-scorable vs
+screener only ~30% of promises (segment/order-book/capex need results-PDF CSVs next); judgment items (status of
+non-financial promises, goalpost vs missed, candour) still need human/LLM review.
+
 ## Blocked / missing
 - screener.in custom raw queries need login → ask user for a Screener account (paid w/ export ideal).
 - YouTube: yt-dlp blocked ("confirm you're not a bot"); youtubetotranscript 403 → need a

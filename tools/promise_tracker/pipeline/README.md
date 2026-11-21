@@ -1,0 +1,210 @@
+# Promise-tracker pipeline (v1, 2026-11-21)
+
+This pipeline turns the two manual pilots (UNIPARTS, SKIPPER; see `research_notes/Promise tracker pilot/`)
+into a repeatable process. It uses the Python standard library only, plus the `pdftotext` (poppler) and
+`curl` binaries, so it runs on a Raspberry Pi. The LLM step calls any CLI that reads a prompt on stdin
+and prints text: `claude -p` (tested) or the Gemini CLI.
+This is research, not SEBI-registered advice.
+
+```
+fetch.py ──> turns.py ──> candidates.py ──> llm_extract.py ──> score.py ──> report.py
+ NSE list     speaker      rule filter        LLM confirms      screener     MCS, candour,
+ + PDFs in    turns,       (high recall)      + structures      numbers +    breakdowns,
+ date range   boilerplate                     (JSONL)           chains       memdb seed
+```
+`run.py` chains all six stages. `validate.py` compares any stage with a manual ledger.
+
+## Usage
+```bash
+cd tools/promise_tracker/pipeline
+export PT_CACHE=~/pt_cache            # or pass --cache DIR to every script
+# full run (first time: ~10 calls x ~2-4 min of LLM time)
+python3 -I run.py SKIPPER --since 2024-07-01 --llm-cmd "claude -p" --as-of 2026-11-19
+# quarterly update: same command plus --refresh-list. Only the new call is downloaded and sent to the LLM.
+# without an LLM: stops after candidates and writes ready-to-paste prompts
+python3 -I run.py SKIPPER --since 2024-07-01 --no-llm
+
+# stage by stage
+python3 -I fetch.py SKIPPER --since 2024-07-01 [--until 2026-11-30] [--refresh]
+python3 -I turns.py SKIPPER [--roster "Name One,Name Two"]     # or: turns.py --txt f.txt --print
+python3 -I candidates.py SKIPPER [--min-tier A] [--emit-prompts DIR]
+python3 -I llm_extract.py SKIPPER --cmd "claude -p"            # or --cmd "gemini -p ''"
+python3 -I financials.py SKIPPER [--csv-out numbers.csv]       # inspect the parsed screener tables
+python3 -I score.py SKIPPER --promises $PT_CACHE/SKIPPER/promises.jsonl [--csv fixes.csv] --as-of 2026-11-19
+python3 -I report.py SKIPPER --scored $PT_CACHE/SKIPPER/scored.jsonl --candour-auto \
+        --seed-out seed.json --md-out SKIPPER_credibility.md --json-out summary.json
+# score a pilot ledger directly (memdb seed JSON)
+python3 -I score.py SKIPPER --seed memdb/seeds/2026-11-19_promises_SKIPPER.json --as-of 2026-11-19 --out s.jsonl
+python3 -I report.py SKIPPER --scored s.jsonl --status-source manual --as-of 2026-11-19
+```
+**Human corrections** go in `<out>/<SYMBOL>_overrides.jsonl`, one object per line, for example
+`{"id": "...", "human_status": "missed", "admitted_unprompted": false}`. They are merged before scoring
+and always take precedence.
+
+**Seed output** is written to the path you give; nothing is written into `memdb/seeds/` automatically.
+Review the seed, copy it into `memdb/seeds/`, then run `python3 -m memdb add --json-file`. Promise ids
+follow the pilot scheme, `promise:SYM:<said_on>:<slug>`. The analysis id is
+`analysis:SYM:credibility-YYYY-MM`. Each promise carries `data.supersedes`, `data.restates` and
+`supersedes`/`restates` links.
+
+### Files
+| File | What it does |
+|---|---|
+| `common.py` | Cache layout, the Indian fiscal calendar, date parsing |
+| `fetch.py` | Pulls the NSE announcement list with the short UA `Mozilla/5.0` and filters it to transcript PDFs (catches typos such as "Trancript"; skips .zip files). Downloads **only the PDFs in the date range**, which fixes pilot lesson 1. Runs `pdftotext -layout`, detects the call date (the "held on …" date, never the quarter-end date) and the quarter. Flags PDFs that look scanned (fewer than 1,500 words; these need OCR). |
+| `turns.py` | Splits the text into speaker turns: management, analyst, moderator or host. Speaker roles are resolved in this order: (1) the cover-page roster, merged across all of the company's calls, with fuzzy matching (handles "Parmjit Soni", "Paramjit Sonis", "Aditya Dujari :", dropped middle names); (2) generic labels such as "Management:"; (3) analysts named in the moderator's announcement; (4) a content vote. Each turn records `role_basis` so it can be audited. Turns are tagged opening / qa / closing. Removes the cover letter, page headers, safe-harbour text and operator housekeeping. Optional `rosters.json` maps `{SYMBOL: [names]}`. |
+| `candidates.py` | Rule-based extraction of forward-looking sentences. Signals: guidance verbs; numbers with %, ₹/INR/cr, tonnes, days; qualitative magnitudes ("mid-teens", "double-digit", "flat"); timelines (FY28, Q3FY27, H2, "next year", "in 2-3 years", "end of the year", month names). A metric may come from the analyst's question when the answer only says "it". Also catches "Yes, absolutely" answers that endorse a target the analyst stated. Output is `candidates.jsonl` with quote, speaker, call date, section, volunteered flag, the question being answered, numbers, and a deadline resolved with the **later-date rule** (`assumed` explains each choice). Tier A = strong, tier B = directional. |
+| `llm_extract_prompt.md` | Prompt template for the LLM confirmation and structuring step. The output schema matches `score.py`'s input: measure vocabulary, period, target_low/high, comparator, deadline rules, `chain_key`, `restates_earlier`, `acknowledges_revision`. |
+| `llm_extract.py` | Runs the template call by call, oldest first. Feeds the `chain_key`s already used into each later prompt so the same target keeps the same key. Validates the output and assigns ids. Caches raw output in `llm/`. |
+| `llm_candour_prompt.md` | Optional per-shortfall prompt: "was this miss admitted unprompted?" |
+| `financials.py` | Fetches the screener.in consolidated page with curl (cached for 3 days) and parses the quarterly, P&L, balance-sheet, cash-flow and ratio tables. A CSV can be supplied instead or as an override. |
+| `score.py` | Auto-scores financial promises and builds the supersedes chains (details below). |
+| `report.py` | MCS, weighted delivery ratio, hit rate, candour index; breakdowns by category, driver (cycle vs execution), specificity, volunteered/prompted, year said and speaker; markdown ledger; memdb seed. |
+| `validate.py` | Compares pipeline output with a manual ledger (recall/precision, field agreement, status agreement, goalposts). |
+| `run.py` | Orchestrator. |
+
+### How score.py decides
+- **Measures** it can check against screener: revenue YoY / QoQ / absolute (quarter, half or FY),
+  EBITDA margin (screener OPM, which excludes other income, or including other income when the
+  promise says so), PAT growth / absolute, finance cost % of revenue, debtor days, ROCE, FCF,
+  dividend payout and borrowings. Capex counts only if it is in a CSV or `--derived-capex` is set,
+  because screener has no capex line and the balance-sheet proxy is rough.
+- The scorer **does not touch** segment, export, order-book/inflow, capacity, market-share,
+  "normalised"/ex-FX or company-defined working-capital metrics (pilot lesson 7). These keep the
+  LLM or human status.
+- **Thresholds** are fixed across companies (pilot lesson 4):
+  - Growth targets: delivered within max(0.5 pp, 5% of the target); partly within max(2 pp, 20%).
+  - Margin, ROCE and finance-cost targets: delivered within 0.3 pp; partly within 1.5 pp.
+  - Amounts and days: delivered at 95% of the target or better; partly at 80-95%.
+  - Explicit floors and ceilings ("25% plus", "below 4.5%") are strict: delivered only if met;
+    partly if within 2.5% (relative).
+  - Beating a target counts as delivered.
+  - A level target met on the TTM figure one quarter after the deadline counts as partly.
+- **Fuzzy deadlines.** The period scored is the fiscal period that contains the deadline. Per-quarter
+  run-rate targets are divided by the number of quarters in that period. Vague or missing deadlines
+  default to the fiscal year two years after the call and are flagged.
+- **Supersedes chains.** Promises are grouped by the LLM's `chain_key`, or by `measure+period`.
+  Without either, they are clustered by category and metric-token Jaccard similarity; per-period flows
+  only chain within one fiscal year, and ordinal words ("second 75k block") must match.
+  - A later statement with the same target is linked with `restates`.
+  - A later statement with a lower target or a later date is linked with `supersedes`. If it was not
+    flagged `acknowledges_revision`, that is a **goalpost move**, counted once per new statement.
+  - Final status: an earlier promise that was quietly superseded and whose original target was not
+    met becomes `moved-goalpost`. If the revision was acknowledged, it becomes `withdrawn`.
+- **"Silently dropped?"** is only ever a *suggestion*: a material, unresolved promise that is not
+  restated in the following 4 calls (pilot lesson 5).
+
+## Validation (as of 2026-11-19, the pilots' as-of date)
+Pilot ledgers: 68 manual promises each. There are 10 calls per company, the same transcripts as the
+pilots, re-fetched from NSE. All 20 call dates detected match the pilots.
+
+### 1. Formula reproduction (report.py on the manual statuses)
+| | MCS | Weighted delivery ratio | Hit rate | Candour |
+|---|---|---|---|---|
+| UNIPARTS pilot | +0.28 | – | 55% | ~5% |
+| UNIPARTS report.py | **+0.280** | 65.7% | 55.3% | 4.8% |
+| SKIPPER pilot | −0.18 | 41.3% | 33.3% | 12.5% |
+| SKIPPER report.py | **−0.178** | 41.3% | 33.3% | 12.5% |
+
+The formula is identical to the pilots.
+
+### 2. Speaker turns
+- 67/68 manual quotes per company fall inside a turn labelled management.
+- The one exception per company is a quote spanning an analyst interjection.
+- Volunteered/prompted flags agree with the manual ledger 95% (SKIPPER) and 98% (UNIPARTS) of the time.
+
+### 3. Candidate extraction (rules only) vs the manual promise list
+| | SKIPPER | UNIPARTS |
+|---|---|---|
+| Recall, tier A | 75% | 78% |
+| **Recall, tier A+B** | **93%** (63/68) | **88%** (60/68) |
+| Candidates per call (manual promises per call) | 79 (6.8) | 79 (6.8) |
+| Precision vs manual (lower bound), A / A+B | 17% / 11% | 14% / 9% |
+| Text kept | ~25% of management sentences | ~20% |
+
+How to read these:
+- **Precision vs manual is a lower bound.** The pilots logged only material promises.
+- In a 40-sentence hand spot-check of unmatched candidates, about 35% were still promise-like
+  forward statements (about 18% clearly checkable). The rest were past results, industry commentary
+  or boilerplate. That is the LLM's job to drop.
+- **The misses (13 in total) are mostly anaphoric answers.** Examples: "I think all those
+  expectations are definitely still continuing"; "we'd rather be conservative and outperform"; and a
+  quote split across a page break. This supports pilot lesson 2: give the LLM the full Q&A
+  exchange, not single sentences.
+
+### 4. Rules + LLM (claude -p on all 20 calls, ~2-4 min per call)
+| | SKIPPER | UNIPARTS |
+|---|---|---|
+| LLM promises | 204 | 154 |
+| **Recall vs manual** | **87%** (59/68) | **85%** (58/68) |
+| Precision vs manual (lower bound) | 36% | 40% |
+| Field agreement on matched pairs: category / deadline FY / volunteered / specificity | 73% / 73% / 97% / 71% | 93% / 83% / 97% / 81% |
+| Restatements linked by `chain_key` | 57 | 55 |
+
+How to read these:
+- The LLM keeps about 3x as many promises as the pilots did. Many are restatements, now linked
+  rather than double-counted, and minor items.
+- Expect a human to trim: about 20 records per call to review, down from about 80 candidates.
+
+### 5. Auto-scoring of financial promises vs manual status
+| | SKIPPER | UNIPARTS |
+|---|---|---|
+| Manual promises the scorer accepts (coverage) | 20/68 (29%) | 23/68 (34%) |
+| **Numbers only, both resolved: exact agreement** | **8/11** | **14/14** |
+| Same, using the LLM-structured version of each promise | 5/7 | 11/11 |
+| After the chain rule, both resolved: exact / direction | 7/12 / 10/12 | 14/14 / 14/14 |
+| LLM path after the chain rule: exact | 9/16 | 12/13 |
+| Moved goalposts, manual / auto / both | 9 / 12 / 5 | 6 / 2 / 2 |
+
+**The disagreements are boundary cases, not arithmetic errors:**
+- SKIPPER "below 4.5%" finance cost: actual 4.63%. The pilot called it missed; the late rule gives
+  partly because the next quarter's TTM figure met it.
+- ">25% in FY25 and FY26": the pilot gave partly as a composite of the two years; the scorer
+  only checks FY26, so it says missed.
+- The FY26 "25% plus" revenue chain: the pilot said missed; the chain rule says moved-goalpost
+  because the guidance was relabelled "aspirational" and cut without being acknowledged. Arguably the
+  stricter reading is correct, but it is a judgment call. The rule pushes SKIPPER's hybrid MCS from
+  −0.18 to −0.34.
+- UNIPARTS goalposts missed by inference: the Mexico storyline sits under different metric names and
+  categories. LLM `chain_key`s fix this partly. The pilot's "H2 > H1 / Q4 highest" shape promise is
+  not auto-scorable.
+
+**Coverage is about 30%, not the ~60% the pilot hoped for.** The gap is promises that are financial
+but not on screener: segment revenue (polymer, aftermarket, infra), order inflow and order book,
+capex, and company-defined working-capital days. The next step is to parse the quarterly results
+PDFs (`nse_fetch.py results`) for segment data and feed them in as `--csv`.
+
+### 6. Candour (`report.py --candour-auto`, keyword heuristic)
+- On 34 shortfalls where the manual ledger records admitted-unprompted: TP 3, FN 2, FP 2, TN 27.
+- The candour index it produces happens to match the pilots (4.8% and 12.5%), but n is tiny.
+- Use `llm_candour_prompt.md` or a human for anything that matters.
+
+### 7. Headline MCS from the LLM path alone (not usable on its own)
+- SKIPPER −0.64 (44 scored); UNIPARTS +0.52 (21 scored).
+- Only auto-resolved and chain-resolved items are scored. The judgment items (segment, execution,
+  M&A) remain pending until a human or LLM status is added, so these numbers are biased.
+  Pilot values are −0.18 and +0.28.
+
+## What still needs human or LLM judgment
+1. **Status of non-financial promises.** Commissioning dates, Mexico/IMMEX, acquisitions, segment
+   targets, order inflow. About 65-70% of promises. Use overrides (`human_status`).
+2. **Moved-goalpost vs missed vs withdrawn.** Was a revision acknowledged? The LLM's
+   `acknowledges_revision` flag helps, but the pilot rule ("revised before the deadline without
+   saying so") needs a second reader on every flagged chain.
+3. **Composite promises** ("25% in FY25 *and* FY26", "Q3 < Q2, Q4 highest, H2 ≈ H1"). Split them into
+   one record per check, or score them by hand.
+4. **Company definitions vs screener.** EBITDA including other income; NWC or inventory days on the
+   company's own basis. The scorer refuses these unless `measure` says otherwise; keep both figures.
+5. **Candour.** Whether a miss was admitted unprompted.
+6. **Materiality, and whether an LLM promise is worth keeping.** Trim the roughly 3x over-extraction.
+7. **"Silently dropped".** Suggested only; it may have been met, or be immaterial.
+8. **Cycle confound.** Read MCS next to an industry cycle indicator (UNIPARTS lesson 7).
+
+## Known limits / next steps
+- Scanned PDFs need OCR (`tesseract`, not installed). `fetch.py` flags them.
+- NSE only; BSE-only companies need `tools/bse_fetch.py` (HTTP/2).
+- Segment numbers are not covered: add a results-PDF/XBRL parser that writes the `--csv` format.
+- Data access is fragile: NSE and screener change hosts, headers and markup without notice.
+  Re-run `financials.py SYMBOL` and `fetch.py` each quarter as a smoke test.
+- Precision tuning: candidates are deliberately high-recall. If the LLM budget on the Pi is tight,
+  use `--min-tier A`, which loses about 15 points of recall.
