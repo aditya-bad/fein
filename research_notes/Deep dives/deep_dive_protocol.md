@@ -1,6 +1,6 @@
 # Deep-dive protocol (sector-agnostic) at "security-guard depth"
 
-**Version 1.1 · 2026-11-21.** Built from the Vishal Mega Mart practice run (`VMM_practice.md`, a retailer). Revised after the Cummins India practice run (`CUMMINSIND_practice.md`, a manufacturer and MNC subsidiary). Links: `insight:flag-override-template`, `strategy:fisher-scuttlebutt`, lessons L9, L10, L12, L13. The changelog is at the bottom.
+**Version 1.2 · 2026-11-21.** Built from the Vishal Mega Mart practice run (`VMM_practice.md`, a retailer). Revised after the Cummins India practice run (`CUMMINSIND_practice.md`, a manufacturer and MNC subsidiary), then after the Five Below practice run (`FIVE_practice.md`, the first US filer). Links: `insight:flag-override-template`, `strategy:fisher-scuttlebutt`, lessons L9, L10, L12, L13. The changelog is at the bottom.
 
 **What "security-guard depth" means:** you can rebuild the business's economics from its smallest operating unit (a store, a plant, a branch, a truck, a salesperson). You can express every major cost line in physical terms: people × wage, square feet × rent, kWh × tariff, tonnes × freight. And you can name the one or two micro-drivers (a wage notification, a tariff order, a commodity, a related-party contract) that move margins before the P&L shows it.
 
@@ -25,6 +25,7 @@ Tip (v1.1): list the 5 most-asked questions from the last call's Q&A. The variab
 | **MNC subsidiary / group company** | All of the above plus the **parent relationship** | Royalty, support/cost allocations, transfer-pricing formulas, purchases from and sales to group companies, dividends to the parent, renewal dates |
 | Lender | Branch / loan cohort | Cost of funds, credit cost by vintage, collection staff |
 | Platform / software | Cohort / account | CAC, retention, take rate |
+| **US widely held company (v1.2)** | Same unit as its business type, plus **management as the "related party"** | KPI definitions (payback, comps, "adjusted"), SBC and retention awards, 8-K Item 5.02 pay and perks, Form 4 clusters, guidance-beat pattern |
 
 ---
 
@@ -65,14 +66,34 @@ For a 1-day screen, do L1–L2 plus the L4 top-3 costs plus the L5 RPT table onl
 | L6 | Store/plant visits; B2B channel checks (OEM/dealer price sheets by product node, lead times, parts prices); GeM/railway/defence tender results; MCA filings of private channel partners and sister companies; job portals (AmbitionBox, Indeed, Naukri) for pay and attrition reviews; Google Maps (reviews, competitor distances); landlord/broker rent quotes; dealer and supplier calls; app-store reviews; quick-commerce price checks by PIN code |
 | L7 | memdb `insight:flag-override-template`; our false-alarm case base (`--tag false-alarm`) |
 
-### US
-| Layer | Primary sources |
-|---|---|
-| L1–L2 | 10-K (Item 1 Business, Item 7 MD&A, notes); S-1 for IPOs; 10-Q |
-| L3 | Investor-day decks; earnings transcripts; S-1 "Key metrics" and cohort charts; franchise disclosure documents (FDD Item 19 gives unit-level sales for franchise systems) |
-| L4 | BLS OES wage data by occupation and metro; state minimum-wage schedules (DOL, EPI tracker); EIA electricity prices by state; CoStar/LoopNet rent comps; 10-K headcount and "human capital" section; EEO-1 if published |
-| L5 | DEF 14A proxy (pay, related-party transactions, PSU metrics); Form 4 (insider); 13D/13G; Form 144 (planned sales); lock-up expiry from S-1 |
-| L6 | Glassdoor/Indeed reviews; Placer.ai/SafeGraph-type foot traffic (paid); app downloads; Google Trends; channel checks; court records (PACER) |
+### US (rewritten in v1.2 after the Five Below run)
+| Layer | Primary sources (in order of value per hour) | Tool |
+|---|---|---|
+| L1 | 10-K Item 1 (business, store/plant counts, **sourcing %**, vendor concentration, **human capital headcount**); Item 2 Properties (DC/plant sq ft, purchase cost, lease expiry); S-1 for IPOs; peer 10-Ks | `sec_fetch.py filings T --form 10-K`, `doc ... --text` |
+| L2 | XBRL companyfacts (10-year table); 10-K Item 7 MD&A (KPI definitions, capex plan, contractual obligations, leases signed after year-end); notes (leases, SBC, PP&E, income taxes, subsequent events); 10-Q for the latest YTD; **8-K Item 2.02 Ex-99.1 non-GAAP reconciliation** (one-offs live here) | `sec_fetch.py facts T --years 10`, `doc --file ex991.htm --text` |
+| L3 | 10-K "new store model"/unit-economics paragraph (copy it verbatim); Item 7 "average sales per unit"; capex guidance per unit; pre-opening cost note; lease-note "leases committed, not commenced" $ ÷ count; investor-day decks; transcripts (Motley Fool, company replay; automated transcripts are single-source); FDD Item 19 for franchisors | — |
+| L4 | Lease note (Topic 842: operating vs variable lease cost, cash paid vs straight-line, weighted remaining term and rate, maturity table); 10-K human capital (FT/PT/store/DC/corporate headcount by year); **BLS OEWS** (market wage by occupation and metro); DOL/EPI state minimum-wage schedules; EIA diesel and electricity; Drewry/Freightos ocean freight; USITC DataWeb/HTS duty rates; CBP and court rulings for tariff regimes; CoStar/LoopNet rents | `sec_fetch.py search` for full-text terms |
+| L5 | **DEF 14A** (pay mix, PSU metrics and whether they are GAAP or adjusted, clawback, Item 404 related parties, director independence); **8-K Item 5.02 exhibits** (offer letters, severance, consulting/perk agreements, retention awards); 8-K 1.01 (credit agreements), 4.01/4.02 (auditor change/non-reliance: hard flags), 8.01; **Form 4** (codes P/S vs A/F/M/G; the 10b5-1 checkbox); Form 144; **13F** (quarterly, 45-day lag, long-only); **13D/13G** (5%+ holders; read the remarks field); Item 3 litigation stage | `sec_fetch.py insider T`, `holdings13f CIK`, `filings T --form "SCHEDULE 13G/A"`, `filings T --form 8-K --items 5.02` |
+| L6 | Store/plant visits; store locator scrape (count by state); Glassdoor/Indeed (pay, staffing); LoopNet listings for the centre; Placer.ai-type foot traffic (paid); app downloads; Google Trends; country-of-origin label counts; court records (PACER/CourtListener) | — |
+| L7 | memdb `insight:flag-override-template`; false-alarm base (`--tag false-alarm`); L14 insider-signal base rates | — |
+
+**US 10-K reading list (v1.2): read these first, then diff each against last year's 10-K.**
+1. **Item 1:** unit model paragraph; sourcing (% domestic vs import, largest country); vendor concentration; human capital (FT/PT/segment headcount); seasonality.
+2. **Item 1A:** diff year over year. Deleted or added words are signals (FIVE dropped "(including beyond $5 per item)").
+3. **Item 2:** DCs/plants (sq ft, owned/leased, cost, expiry).
+4. **Item 3:** litigation stage (motion to dismiss granted/denied, class certification, discovery).
+5. **Item 5:** buybacks by month; remaining authorisation.
+6. **Item 7:** KPI definitions (comps, average sales per unit and which units it counts); capex plan by use; liquidity; contractual obligations; leases signed after the balance-sheet date.
+7. **Item 9A:** material weaknesses.
+8. **Notes:** significant accounting policies (what COGS includes: occupancy? distribution?); leases; SBC (unvested units, unrecognised $, weighted period, withheld shares); PP&E; taxes; subsequent events (tariff rulings, refunds).
+
+**SBC handling rule (v1.2).** (a) Report SBC as % of sales, of net income and of FCF. (b) Use **FCF − SBC** as owner cash flow. (c) Add back "adjusted" exclusions that are pay: retention awards, "one-time" equity grants, CEO transition awards. (d) Dilution cost = **the buyback cash needed to hold diluted shares flat**, over 5–10 years. (e) Overhang = unvested RSU + PSU + options ÷ shares. (f) Read the PSU metric in the proxy: if it is "adjusted EPS", check which one-offs the board lets management exclude.
+
+**Form 4 / 13F / 13G reading rules (v1.2).**
+- **Form 4.** Only codes P and S are open-market. A/M/F/G are grants, exercises, tax withholding and gifts. Check the 10b5-1 checkbox on the form itself; the parser flag is not enough. Clusters of sales after a rally or a vesting window are weak (L14). Open-market buys by several insiders are the only Form 4 pattern worth a prior.
+- **13F.** Long-only, 45 days late, no shorts. Compare share counts, not values (the tool's value units can misparse).
+- **13G/A.** Read the **remarks** before reading a 0%. Vanguard's 12-Jan-2026 realignment made its 13G/As show 0% with no sale.
+- **Proxy beneficial-ownership table:** management plus directors as a group.
 
 ---
 
@@ -111,6 +132,11 @@ Always show the method next to the number, give a range, and mark it `[EST]` wit
 16. **Regulatory-transition template (v1.1)** for emission norms, BIS/QCOs and labour codes. Date each phase: notification → pre-buy spike → price step (%) → volume trough → competitor catch-up → volume recovery (Cummins CPCB IV+: ~15 months) → **aftermarket tail** after warranty expiry. Each phase is a dated, checkable number.
 17. **Own capacity vs group/supplier capacity (v1.1).** "70% utilisation" at own plants is irrelevant if the bottleneck product is made by a sister company or allocated by the parent. Find where the constrained product is physically built.
 18. **Customer concentration → channel map (v1.1).** Match the number of ≥10% customers to the channel structure (e.g. 3 genset OEMs). Concentration in channel partners is a different risk from end-customer concentration. Check the partners' health through MCA filings.
+19. **Company store model vs its own capex guidance (v1.2).** Divide the capex budgeted "for new stores" by planned gross openings. Compare it with the "new store investment" in the 10-K, then rebuild that investment (build-out − tenant allowance + inventory net of payables + pre-opening). If the tenant allowance needed to reconcile is implausible (more than ~40% of build-out), the headline payback is stale or narrowly defined. Add network capex (DCs, systems) ÷ stores served. (FIVE: $100M / ~155 = $0.65M gross vs "$0.4M"; DCs ~$0.14M per store.)
+20. **Rent per new lease from the lease note (v1.2).** "Committed to N new leases … future minimum payments $X" ÷ N ÷ term = base rent per unit per year; ÷ model sq ft = $/sq ft. Repeat with the post-year-end lease sentence in Item 7 for a fresh read. Variable lease cost ÷ net lease cost = CAM/tax/%-rent share.
+21. **Tariff cost from refunds and duty math (v1.2).** A refund booked through COGS reveals the tariff cost actually borne. Divide by direct-import FOB (purchases × import share ÷ (1 + rate)) for the effective rate. Split importer-of-record exposure (refundable) from domestic-vendor exposure (embedded in vendor prices, not refundable to you) and ask who gets the vendors' refunds.
+22. **Guidance implied-remainder (v1.2).** From a full-year guide and the year-to-date actual, solve for the implied remaining-quarter figure (weight comps by the prior year's quarterly sales). Compare it with the beat history (actual − guide midpoint, last 4–6 quarters). Score long-range (investor day) and near-term promises separately, and by management team.
+23. **US payroll estimate when not disclosed (v1.2).** Route A: SG&A − advertising − SBC − pre-opening − corporate (headcount × loaded salary) = store payroll. Route B: unit-level crew (10-K human capital ÷ units) × hours × market wage (BLS OEWS metro) × 1.15 load. The sensitivity unit is bps per 1% wage and per $1/hour.
 
 ---
 
@@ -137,6 +163,7 @@ For every flag, good or bad, fill: flag | context questions | clearing evidence 
 ---
 
 ## Deliverables checklist
+- [ ] **US filers (v1.2):** 10-K item/note reading list done with a year-over-year text diff; non-GAAP reconciliation table by quarter; SBC table (SBC % of sales/NI/FCF, FCF − SBC, overhang, buyback-to-hold-flat); Form 4 summary (P/S only, 10b5-1 checked); 13F/13G holder changes with remarks read; management-change table from 8-K 5.02; promise tracker split long-range vs near-term
 - [ ] Edge question (3 lines) written first
 - [ ] Source tag on every number; `[EST]` with the method on every estimate; a second source or route for every key number
 - [ ] Unit P&L table (fully loaded and, if possible, four-wall)
@@ -161,6 +188,12 @@ For every flag, good or bad, fill: flag | context questions | clearing evidence 
 - (v1.1) **High ROCE can be borrowed from the group's balance sheet.** If the constrained product is made by a sister company, the listed entity's capital looks small.
 - (v1.1) **Cost allocations from the parent can step up without notice** (Cummins: support services ₹111 → ₹223 cr in a year, then a further Q2 "true-up"). Read the other-expenses note every year, and the call's "one-offs" answer every quarter.
 - (v1.1) **Company "ranges" can hide the number.** "DC = 30–40% of power gen" is ±₹130 cr a quarter, wide enough to hide a slowdown in the rest of the business.
+- (v1.2) **US GAAP gross margin is not comparable across retailers.** Some put occupancy, distribution and buying in COGS (FIVE); others put them in SG&A. Compare operating margin, or rebuild merchandise margin.
+- (v1.2) **One-off credits inside COGS.** FIVE's Q2 FY26 GAAP gross margin of 48.5% included a $163.6M tariff refund. Trailing GAAP EPS screens are wrong for four quarters. Always read the Ex-99.1 reconciliation.
+- (v1.2) **Ownership-filing false alarms.** Vanguard's 13G/A shows 0% after its Jan-2026 realignment. The 13F still shows the shares.
+- (v1.2) **"Average sales per store" usually counts only stores open the full year.** Also compute total sales ÷ average store count.
+- (v1.2) **FCF in a slowdown-of-openings year is flattered** (capex and working-capital timing). Normalise before using it.
+- (v1.2) **Tool notes:** use `sec_fetch.py doc T ACC --file NAME --text` for exhibits; `holdings13f` value can misparse (use shares); confirm the insider "non-10b5-1" flag on the form.
 - (v1.1) **Tool note:** `tools/nse_fetch.py transcripts SYMBOL --download DIR` ignores `--from/--to` and downloads everything. List first, then fetch only the URLs you need.
 
 ---
@@ -175,3 +208,9 @@ For every flag, good or bad, fill: flag | context questions | clearing evidence 
   - New techniques #13–18: BRSR intensity → units; commodity pass-through lag; transfer-pricing bounds; regulatory-transition template; own vs group capacity; concentration → channel map. Demand-side physics check added under #12.
   - Added manufacturer data sources and B2B scuttlebutt rules.
   - Two new deliverables, four new traps and a tool note.
+- **v1.2 · 2026-11-21.** From the Five Below practice run (US specialty retailer, first US filer):
+  - Rewrote the US data-source table by layer, with tools.
+  - Added the US 10-K item/note reading list (with a year-over-year text diff), the SBC handling rule, and Form 4 / 13F / 13G reading rules.
+  - Added a "US widely held company" row to the unit table (management as the related party).
+  - New techniques #19 (store model vs capex guidance), #20 (rent per new lease from the lease note), #21 (tariff cost from refunds and duty math), #22 (guidance implied-remainder and split promise tracking) and #23 (US payroll estimate).
+  - One new deliverable line and six new traps/tool notes.

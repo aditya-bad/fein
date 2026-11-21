@@ -247,3 +247,145 @@ That is a new CEO, CFO and CMO in 10 months, plus the founder's exit. The curren
 - **Securities class action** (E.D. Pa., class periods Dec-2022–Jul-2024). The motion to dismiss was **partly denied (25-Aug-2025)**. The class-certification motion was briefed by Apr-2026. Discovery is ongoing. Derivative suits are stayed. The Special Litigation Committee declined to sue `[10K25 Item 3]`.
 - **Cyber incident** of 14–15 Jul 2026: one employee laptop, files exfiltrated, "no PII", not material `[8K-20260722]`.
 - **ABL amendment** of 14-Oct-2026 (§2.4).
+
+---
+
+## 6. Ground check (L6): three stores, what to count
+**Site choice (hypothesis-driven):**
+- **(A)** A mature store (opened ≤2015) in the Philadelphia/NJ core. It tests mature productivity and the Five Beyond/open-wall reset.
+- **(B)** A 2025–26 opening in one of the two newest states (46 states vs 44 a year ago). It tests the $2M new-store model and new-market awareness.
+- **(C)** A store sharing a centre or within 1 mile of a **Dollar Tree and/or an Ollie's**. It tests price overlap and cannibalisation.
+
+Visit each twice: a weekday 3–5 pm (teens after school) and a Saturday midday.
+
+| Count / observe | Why (model line) | How |
+|---|---|---|
+| **Transactions per hour** | Bills → footfall; checks comps-by-traffic | Receipt numbers at the start and end of 1 hour (buy one cheap item each time) + a queue count every 15 min |
+| **Crew on the floor and at registers** by hour | Store labour hours (§4.2: 370–455 hours a week) | Count name-tagged crew 4× per visit; ask nothing confidential |
+| **Price-point mix:** % of facings tagged >$5, and the top price seen | Price architecture (§4.3), the share above $5 | Count facings in 3 fixed bays (Tech, Room, Sports) |
+| **Fixed 15-item basket** (5 FIVE private/no-name, 5 licensed, 5 branded candy/beverage) vs Dollar Tree ($1.25/$1.50 multi-price) and Ollie's | Value gap; pass-through of tariffs and refunds | Same 15 items every quarter, photographed with date |
+| **Locked cases, security tags, guard present, empty pegs (%)** | Shrink (§4.3) and in-stock | Count locked fixtures; out-of-stocks per 100 pegs |
+| **Sq ft check** (pace the box) and back-room size | $/sq ft (§3.2); 9,500 model | Pacing plus the landlord/LoopNet listing for the centre |
+| **Co-tenants and vacancy in the centre** | Traffic dependence; rent leverage | Count anchors, dark boxes and asking rent on LoopNet/CoStar |
+| **Hiring signs and posted pay** | Market wage vs statutory minimum (§4.2) | In-store sign; Indeed listings for the same zip |
+| **Country of origin** on 20 random items | China share (not disclosed) | Read the labels; tally China / Vietnam / India / other / USA |
+
+**Ethics:** identify yourself honestly if asked. Never seek non-public sales data from crew. No recordings without consent.
+**Output:** a surprises-vs-model list. The rows to mark confirmed / contradicted / no read: $210 vs $265/sq ft; ~12 crew; shrink controls; the >$5 share; the China share.
+
+---
+
+## 7. Promise tracker (last investor day + 5 calls)
+
+### 7.1 Long-range: investor day of 30-Mar-2022, "Triple-Double" (prior CEO) `[WEB: Retail Dive 31-Mar-2022; Motley Fool 2-May-2022]`
+| Promise | Target | Delivered by FY25 | Hit rate |
+|---|---|---|---|
+| Double sales by FY2025 | ~$5.7B (2 × FY21 $2.85B) | $4.76B | **84%** |
+| Double EPS by FY2025 | ~$9.90 (2 × $4.95) | $6.47 GAAP / $6.67 adj. | **65–67%** |
+| ~1,000 openings FY22–25 (up to 400 in FY22–23, up to 600 in FY24–25) | ~2,190 stores | 1,921 (+731 net) | **73%** |
+| Operating margin ~14% by FY25 | single-source `[WEB: Quartr summary]` | 9.6% (FY21: 13.3%) | miss |
+| 3,500+ stores **by FY2030** | ~316 net a year needed from FY26 | Plan ~150 a year. **The 10-K now says "more than 3,500 locations over time"** | silently softened |
+
+### 7.2 Near-term: quarterly comp guidance vs delivery (new CEO/CFO era) `[PR-*]`
+| Guide date | Period | Comp guide | Actual | Beat vs midpoint |
+|---|---|---|---|---|
+| 4-Jun-2025 | Q2 FY25 | +7–9% | +12.4% | +4.4 pp |
+| 27-Aug-2025 | Q3 FY25 | +5–7% | +14.3% | +8.3 pp |
+| 3-Dec-2025 | Q4 FY25 | +6–8% (raised to ~14.5% on 12-Jan) | +15.4% | +8.4 pp |
+| 18-Mar-2026 | Q1 FY26 | +14–16% | +22.7% | +7.7 pp |
+| 3-Jun-2026 | Q2 FY26 | +7–9% | +14.1% | +6.1 pp |
+| 2-Sep-2026 | Q3 FY26 | +8–10% | due ~early Dec-2026 | — |
+
+- **Full-year comp guide path:**
+  - FY25: +3–5% (Jun) → +5–7% (Aug) → +9.4–10.1% (Dec) → ~12.5% (Jan) → **12.8% actual**.
+  - FY26: +3–5% (Mar) → +6–8% (Jun) → +10–12% (Sep).
+- **EPS:** Q4 FY25 GAAP guide $3.34–3.52 → $4.28. Q1 FY26 adjusted $1.57–1.69 → $2.22. Q2 FY26 adjusted $1.17–1.29 → $1.68.
+- **Reading:** two different credibility numbers. **Long-range targets were missed (65–84%)** under the prior team. **Near-term guides have been beaten 5 for 5, by 4–8 pp**, under the new CFO's method. The CFO calls the outlook "thoughtful", not conservative `[CC-Q2FY26]`.
+- **Method lesson:** a promise tracker must **score long-range and near-term promises separately, and by management team.**
+
+---
+
+## 8. Flag override (L7)
+
+### 8.1 Bad-but-benign / good-but-misleading
+| Item | Looks | Why it misleads | Verdict |
+|---|---|---|---|
+| Vanguard 13G/A = 0% (Mar-2026) | Bad (top holder exits) | Jan-2026 realignment to disaggregated reporting; the 13F still holds 5.34M | Benign. **Closed** |
+| $2.03B lease liabilities | Bad (debt-like) | 10-year leases with early-termination options; 7.0 years remaining; covered by store cash flow | Benign, but use lease-adjusted metrics |
+| ABL doubled to $450M | Bad? | Seasonal inventory line, undrawn at year-end, maturity extended to 2031 | Benign. **Closed** |
+| SBC doubled FY24 → FY25 | Bad | FY24 was depressed by forfeitures at the CEO exit | Mostly benign; treat SBC as cash anyway |
+| Zero buybacks in FY25 | Bad? | CEO transition plus tariff uncertainty; $60M in Q2 FY26 and a $600M programme | Benign |
+| **Q2 FY26 GAAP EPS $3.99, GAAP GM 48.5%** | Good | $163.6M IEEPA refund in COGS (13% of the quarter's sales) | **Misleading.** Use adjusted figures; flag for 4 quarters |
+| **FY25 FCF $412M** (3.9× FY24) | Good | Capex halved (fewer openings) + payables and incentive accrual build | **Misleading as run-rate.** Normalise to ~$250–300M [EST] |
+| **"Payback ~1 year"** | Good | Undefined numerator; net of tenant allowances *and* payables; excludes DC/network capex; unchanged text; capex guide implies ~$0.65M gross per store | **Open** (§3.3) |
+| **"Average net sales per store $2.5M"** | Good | Includes only stores open before the start of the year (excludes the new, weaker class) | Mildly misleading; use total sales ÷ average stores ($2.58M ≈ similar this year) |
+| **Comps +22.7% / +14.1%** | Good | FY25 had +5.3% ticket from pricing; e-commerce is inside comps; 2-year stack; trend/licence spikes | **Open** (durability) |
+| "Adjusted" excludes retention awards | Good | It is pay | Add back (small) |
+| Flat share count for 10 years | Good | Bought with ~$34M a year of cash | Neutral. SBC is a real cost |
+
+### 8.2 Open soft flags (each with what would change my mind)
+1. **New-store investment vs capex gap** (§3.3). *Clears if* the tenant allowance is disclosed at ≥$0.4M per store, or a cohort payback table is published. *Confirms if* the next 10-K raises the $0.4M or quietly drops the payback sentence.
+2. **Comp durability** (2-year stack ~+30% in H1 FY26). *Clears if* Q4 FY26 and FY27 comps stay positive against +15–23% comparisons, with transactions positive. *Confirms if* traffic turns negative while ticket carries the comp.
+3. **Tariff regime and vendor pass-through.** The refund is one-off; replacement tariffs are possibly higher in 2027; the 60% domestic-vendor channel's refunds are unknown. *Clears if* merchandise margin holds in FY27 with tariffs at the new rates.
+4. **Insider cluster selling** (Sep-2026, 5 insiders, $6M+). Low weight (L14). *Changes if* the CEO or CFO sell outside 10b5-1, or an insider buys at scale.
+5. **Executive turnover** (CEO, 2 CFOs, CMO and other senior exits in 18 months). *Clears* after 4+ quarters with a stable team.
+6. **Class action in discovery.** *Clears* on dismissal or settlement below ~1% of market cap.
+
+**Count of open soft flags: 6** (plus a mechanical normalisation of FCF and GAAP EPS). That is above the 3+ rule, so *no position without a written variant view*. This is a statement about our evidence, not about the company.
+**Hard disqualifiers found: none** (no restatement, no auditor change, no going-concern language, no related-party diversion).
+
+---
+
+## 9. Note on the open paper call (not a change to it)
+`thesis:paper-call:US-FIVE:fy2026-comps-11pct-plus` (made 2026-11-21, P = 0.58, base 0.50). Facts its reasoning did **not** use, recorded for the post-mortem:
+- **What the guide implies.** H1 FY26 comps were +18.3%; Q3 is guided +8–10%. Management says the FY guide of +10–12% **implies Q4 ≈ +3%** `[CC-Q2FY26, single-source]`.
+- **My comp-base weighting.** Weights from FY25 quarterly sales: H1 41.6%, Q3 21.8%, Q4 36.3% [EST]. On these, FY ≥ 11.0% needs Q4 ≥ ~4% if Q3 lands at +9%, and **Q4 ≥ ~1% if Q3 repeats the beat pattern (~+14%)**.
+- **For YES:** 5 for 5 quarterly beats of +4.4 to +8.4 pp; the Q3 results (~early Dec) arrive before resolution; holiday merchandise newness.
+- **For NO:** Q4 laps +15.4%; an "unfavorable shrink comparison" (a margin item, not comps); fuel; consumer softening; and the CFO explicitly calls the guide "thoughtful", not conservative.
+- **Net:** the call's main premise (beat-and-raise means a conservative H2) is supported by the promise tracker in §7.2. The weighting shows the threshold is low *if* Q3 beats. **Lesson for the paper-call method:** compute the implied remaining-quarter comp from the FY guide before setting a probability.
+
+---
+
+## 10. What this exercise taught (method, not stock)
+1. **US filings move the "boring filings" (L13).** There is no BRSR, so headcount comes from the 10-K *human capital* section. The lease note (Topic 842 tables plus "leases committed but not commenced", with dollar totals) gives **rent per new lease** directly: $258M ÷ 141 leases. The **non-GAAP reconciliation in the 8-K Ex-99.1** is where the one-offs hide (the $163.6M tariff refund).
+2. **For a widely held US company, the L16 "money to the parent" question becomes "money to management, and what the KPIs leave out".** The useful documents were the 8-K Item 5.02 exhibits (severance, signing bonuses, founder perks, retention awards), the KPI definitions in Items 1 and 7, and Form 4 plus 13G.
+3. **Diff the 10-K text year over year.** Deleting "(including beyond $5 per item)" and replacing "by 2030" with "over time" were the cheapest promise-tracker signals in the set.
+4. **Triangulate the company's store model against its own capex guidance.** "$100M for ~150 stores" contradicts "$0.4M investment" unless tenant allowances are huge. That made a 2-minute check into the main L3 finding.
+5. **Ownership-filing mechanics create false alarms** (the Vanguard realignment) and tool misparses (13F value units). Read the 13G remarks field before reading a 0%.
+6. **Two credibility scores:** long-range vs near-term, and by team.
+7. **Time spent:** ~70% primary SEC filings (two 10-Ks, 11 8-Ks/exhibits, 80 Form 4s, 13F/13G), ~15% one call transcript (secondary, automated), ~15% estimates. Broker notes were not needed.
+
+## Open items
+- **Tenant allowance per new store** and the FY24/FY25 cohort's first-year sales. Ask IR, or look for a cohort chart at the next investor event.
+- **Earlier 10-K store-model text** (FY2019–FY2023): has the $2.0M / $0.4M ever changed?
+- **Total chain sq ft** (not disclosed). Estimate from pacing and listings.
+- **Store count by state** (locator scrape), for the minimum-wage bps model.
+- **China share** of direct and domestic-vendor purchases. Read the full Q4 FY25 and Q1 FY26 transcripts. The Q2 call is single-source and automated; get the Motley Fool or official replay and re-verify the quotes.
+- **DEF 14A (1-May-2026):** read the CEO pay mix, PSU metrics (is it EPS? adjusted or GAAP? are tariff refunds excluded?), clawback, and Item 404.
+- **Peer COGS definitions** for DG, DLTR and OLLI, before any gross-margin comparison.
+- **DC capacity** in stores. When is the next ship centre due?
+- **George Hill's role** (Feb-2026 exit).
+
+## Sources
+- 10-K FY2025: https://www.sec.gov/Archives/edgar/data/1177609/000117760926000010/five-20260131.htm ; 10-K FY2024: https://www.sec.gov/Archives/edgar/data/1177609/000117760925000009/five-20250201.htm
+- Earnings releases (Ex-99.1): Q2 FY26 https://www.sec.gov/Archives/edgar/data/1177609/000117760926000023/q22026fivebelowexhibit991.htm ; Q1 FY26 https://www.sec.gov/Archives/edgar/data/1177609/000117760926000015/q12026fivebelowexhibit991.htm ; Q4 FY25 https://www.sec.gov/Archives/edgar/data/1177609/000117760926000006/q42025fivebelowexhibit991.htm ; holiday 2025 https://www.sec.gov/Archives/edgar/data/1177609/000117760926000003/holiday2025fivebelowex991.htm ; Q3 FY25 https://www.sec.gov/Archives/edgar/data/1177609/000117760925000048/q32025fivebelowexhibit991.htm ; Q2 FY25 https://www.sec.gov/Archives/edgar/data/1177609/000117760925000037/q22025fivebelowexhibit991.htm ; Q1 FY25 https://www.sec.gov/Archives/edgar/data/1177609/000117760925000019/q12025fivebelowexhibit991.htm
+- 8-Ks: ABL https://www.sec.gov/Archives/edgar/data/1177609/000117760926000072/five-20261014.htm ; director https://www.sec.gov/Archives/edgar/data/1177609/000117760926000050/five-20260921.htm ; cyber https://www.sec.gov/Archives/edgar/data/1177609/000119312526312573/d19155d8k.htm ; Hill https://www.sec.gov/Archives/edgar/data/1177609/000119312526042901/d25218d8k.htm ; CFO https://www.sec.gov/Archives/edgar/data/1177609/000119312525227293/d18933d8k.htm ; Chipman/Vellios https://www.sec.gov/Archives/edgar/data/1177609/000117760925000019/five-20250604.htm
+- 13G/A: Vanguard https://www.sec.gov/Archives/edgar/data/1177609/000010290926001383/xslSCHEDULE_13G_X02/primary_doc.xml ; D. E. Shaw https://www.sec.gov/Archives/edgar/data/1177609/000110465925112499/xslSCHEDULE_13G_X01/primary_doc.xml ; T. Rowe https://www.sec.gov/Archives/edgar/data/1177609/000189761225000532/xslSCHEDULE_13G_X01/primary_doc.xml
+- Q2 FY26 call: https://www.webull.com/news/15510981903246336 ; https://www.nasdaq.com/articles/five-below-q2-earnings-call-highlights
+- 2022 investor day: https://www.retaildive.com/news/five-below-looks-to-triple-store-count-by-2030/621334/ ; https://www.fool.com/investing/2022/05/02/five-below-plans-to-triple-its-store-count-by-2030 ; https://quartr.com/events/five-below-inc-five-q4-2022-investor-day-2022_QQIH5QT
+
+---
+
+## 11. Protocol v1.2: US adaptations (applied to `deep_dive_protocol.md`)
+
+**What worked unchanged:** rule zero (list the call's questions to find the un-asked variable), technique #1 triangulation (it exposed the capex gap), technique #10 definition audit, the override table including the "looks good" rows, and "rank cost lines by weight".
+
+**What was missing for a US filer:**
+1. **No document map by 10-K item and note.** India's equivalents (BRSR, "other expenses" note, RPT note) do not exist. The US depth sits in: Item 1 (store model, sourcing %, human capital headcount), Item 1A (diff year over year), Item 2 (DC sq ft, cost, lease terms), Item 3 (litigation stage), Item 5 (buybacks), Item 7 (KPI definitions, capex plan, contractual obligations, leases signed after year-end), and the notes: leases (Topic 842 cost table, cash vs straight-line, "committed not commenced" $), SBC (unvested units, unrecognised $), PP&E, subsequent events.
+2. **No rule for 8-K exhibits.** Item 2.02 Ex-99.1 is the quarterly results and the non-GAAP reconciliation (one-offs). Item 5.02 gives officer pay, severance and founder perks. Item 1.01 covers credit agreements. Item 8.01 covers other events (cyber). Items 4.01 and 4.02 cover auditor change and non-reliance (hard flags).
+3. **No SBC handling rule.** Treat SBC as a cash cost; compute FCF − SBC; add back "retention award" exclusions; dilution cost = buyback cash needed to hold the share count flat.
+4. **No Form 4 / 13F / 13G reading rules:** codes; 10b5-1 checkbox; clusters vs L14 base rates; 13G remarks; reporting realignments; 13F value units; 45-day lag.
+5. **The US wage logic differs.** The market wage, not the statutory minimum, usually binds. Payroll is not disclosed; estimate it by two routes.
+6. **The proxy (DEF 14A) replaces the AGM notice** for pay, PSU metrics and Item 404 related parties.
+7. **Promise tracker:** split long-range from near-term, and score by team. Diff 10-K text year over year.
+8. **Tool notes:** `sec_fetch.py doc --file X --text` for exhibits; `holdings13f` value misparse; the "non-10b5-1" flag needs manual confirmation.
