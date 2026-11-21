@@ -186,7 +186,31 @@ t −2.75. The verdicts do not change. H3 holds on the CI rule, although its mon
   but small long-only edge of about +2.4% per quarter gross. It is **not separable from zero once a 1% round trip is
   paid**, at 3–4 years' or 3 quarters' worth of data.
 
-*(Stage 2, the 2022–25 re-run with consolidated EPS, is **PENDING**. The pass-B fetch of quarters Jun-2019 → Sep-2022 was still running at hand-off, so its numbers are not yet in this report. When pass B completes, run `v2_events.py V1 V2` then `v2_analyze.py V2` and add the RERUN block. H1 is already "not supported" because the fresh half failed, so the re-run cannot change the H1 verdict.)*
+## Stage 2: 2022–25 re-run (consolidated EPS, full universe; pass B complete for all symbols)
+
+The 2022–25 re-run has 14,624 events from 1,322 companies over 16 fiscal quarters; 79% use consolidated EPS. It uses
+v1's method: the mean of the 16 quarterly values, a t-stat across quarters, and a bootstrap over quarters. Re-running
+the events with full history left the fresh results identical (checked).
+
+| Test (63d) | 2022–25 re-run | Verdict |
+|---|---|---|
+| H1 top vs controls **net of 1%** | **+1.10% [−0.07, +2.18], t 1.88** (gross +2.10%, t 3.59) | **Does NOT replicate.** Same story as v1 and as 2026 |
+| H2 contrast up − down (replication only) | **+3.02% [+1.50, +4.51], t 3.79**; filtered top net of 1% +2.32% (t 3.29) | Strong in 2022–25, the same data where v1 found it. **Failed on fresh 2026 data, so not supported** |
+| H3 bottom vs controls | **−2.32% [−3.40, −1.23], t −4.11** | Replicates |
+| H4 tertiles (exploratory): top vs controls / T−B | small +3.11% / +5.31%; mid +2.74% / **+5.86%**; large +1.29% / +2.95% | Mid is strongest on T−B in 2022–25 (v1 pattern), weakest in 2026 → **unstable** |
+
+**Final verdicts.**
+- **H1 not supported.** It fails on fresh data and in the re-run.
+- **H2 not supported.** It replicates in-sample only and fails out of sample.
+- **H3 supported.** It holds on fresh data and in the re-run.
+- **H4 unstable** (exploratory).
+
+Context (exploratory):
+- T−B 63d is +4.33% (t 4.34). All events vs controls is +0.20%, so the controls are calibrated.
+- Event-level top net of 1% is +1.00% (t 2.30, clustered by week over 127 weeks).
+- 126d: top net of 1% +2.29% (t 2.80). This was not the primary horizon, as in v1.
+- **2025 was weak on both legs** (event level, 63d: top +0.24%, bottom −0.55%; neither significant). 2026 recovered
+  (+2.41% / −2.73%). This looks like a weak year, not a decay trend, but it is one more reason to run the live test.
 
 ## How to run the live tracker (laptop or Raspberry Pi)
 

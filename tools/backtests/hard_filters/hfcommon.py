@@ -114,6 +114,11 @@ def metrics_at(fy, last_fy, n=5):
     m["debtor_days_d2"] = (dd[-1] - dd[-3]) if dd[-1] is not None and len(dd) >= 3 and dd[-3] is not None else None
     s = [g("sales", y) for y in ys]
     m["sales_cagr"] = round((s[-1] / s[0]) ** (1 / (len(ys) - 1)) - 1, 3) if s[0] and s[-1] and s[0] > 0 and s[-1] > 0 else None
+    ro = [g("roce", y) for y in ys[-3:] if g("roce", y) is not None]
+    m["roce_3y"] = round(sum(ro) / len(ro), 1) if ro else None
+    om = [(g("op", y) / g("sales", y) * 100) if g("op", y) is not None and g("sales", y) else None for y in ys]
+    m["opm_last"] = round(om[-1], 1) if om[-1] is not None else None
+    m["opm_step_3y"] = round(om[-1] - om[-4], 1) if len(om) >= 4 and om[-1] is not None and om[-4] is not None else None
     eqc = [g("eqcap", y) for y in ys]
     m["eqcap_growth"] = round(eqc[-1] / eqc[-4], 2) if len(eqc) >= 4 and eqc[-4] and eqc[-1] else None
     return m
@@ -125,7 +130,7 @@ def rules(m, lender=False):
     r = {}
     if m.get("n_years", 0) < 3:
         return {k: None for k in ("F1_cfo_pat_lt_0.7", "F1b_cfo_pat_lt_0.3", "G2_debt_up_neg_cfo",
-                                  "G5_neg_fcf", "G6_debtor_days", "F2_other_income")}
+                                  "G5_neg_fcf", "G6_debtor_days", "F2_other_income", "H1b_proxy")}
     na = lender
     cp = m.get("cfo_pat")
     if na:
@@ -142,6 +147,9 @@ def rules(m, lender=False):
         r["G5_neg_fcf"] = None if f is None else f < 0
     dd, d2 = m.get("debtor_days"), m.get("debtor_days_d2")
     r["G6_debtor_days"] = None if dd is None else (dd > 120 or (d2 is not None and d2 > 30))
+    # blind, mechanical proxy for H1b 'economics too good for the business': ROCE >40% (3y avg) or OPM +10pp in 3y
+    rc, st = m.get("roce_3y"), m.get("opm_step_3y")
+    r["H1b_proxy"] = None if (rc is None and st is None) or lender else ((rc is not None and rc > 40) or (st is not None and st >= 10))
     o = m.get("oi_pbt_3y")
     r["F2_other_income"] = None if (o is None or lender) else o > 0.30   # lenders: other income = fees
     if lender:

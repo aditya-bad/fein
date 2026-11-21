@@ -15,7 +15,7 @@ import hfcommon as hc          # noqa: E402
 from a2_episodes import EPISODES, EXCLUDED, H, G   # noqa: E402
 
 CD, CJ, OUT = sys.argv[1], sys.argv[2], sys.argv[3]
-MECH = ["F1_cfo_pat_lt_0.7", "F1b_cfo_pat_lt_0.3", "G2_debt_up_neg_cfo", "G5_neg_fcf", "G6_debtor_days", "F2_other_income"]
+MECH = ["F1_cfo_pat_lt_0.7", "F1b_cfo_pat_lt_0.3", "G2_debt_up_neg_cfo", "G5_neg_fcf", "G6_debtor_days", "F2_other_income", "H1b_proxy"]
 pledge = json.load(open(os.path.join(CD, "pledge.json"))) if os.path.exists(os.path.join(CD, "pledge.json")) else {}
 
 
@@ -51,7 +51,7 @@ def us_metrics(key, T):
         if pe + dt.timedelta(days=90) > T:
             continue
         f = lambda x: float(r[x]) / 1e6 if r.get(x) not in (None, "") else None
-        rec = {"sales": f("revenue"), "pat": f("net_income"), "cfo": f("cfo"), "fcf": f("fcf"),
+        rec = {"sales": f("revenue"), "pat": f("net_income"), "cfo": f("cfo"), "fcf": f("fcf"), "op": f("op_income"),
                "debt": f("lt_debt"), "pbt": None}
         if rec["sales"] and f("receivables") is not None:
             rec["debtor_days"] = round(365 * f("receivables") / rec["sales"], 1)
@@ -149,7 +149,7 @@ for k in RULES:
 COMBOS = {
     "HARD_current (H1a,H1b,H1c,H2,H3,H4,H5)": ["H1a", "H1b", "H1c", "H2", "H3", "H4", "H5"],
     "HARD + H2b broad": ["H1a", "H1b", "H1c", "H2", "H2b", "H3", "H4", "H5"],
-    "GRADED any (G1,G3,G4 + mechanical)": G + MECH,
+    "GRADED any (G1,G3,G4 + mechanical)": G + [k for k in MECH if k != "H1b_proxy"],
     "mech cash only (F1b CFO/PAT<0.3 or G2)": ["F1b_cfo_pat_lt_0.3", "G2_debt_up_neg_cfo"],
     "pledge only (G1)": ["G1"],
 }
@@ -159,7 +159,7 @@ for name, rs in COMBOS.items():
                                                for s in ("fraud", "lev", "bust")}
 # count of graded flags fired per episode (the '3+ open flags' rule)
 for r in rows:
-    r["n_graded_Y"] = sum(v(r, k) == "Y" for k in G + MECH)
+    r["n_graded_Y"] = sum(v(r, k) == "Y" for k in G + MECH if k != "H1b_proxy")
     r["n_hard_Y"] = sum(v(r, k) == "Y" for k in H if k != "H2b")
     r["final"] = {k: v(r, k) for k in RULES}
 res["graded_count_dist"] = {}

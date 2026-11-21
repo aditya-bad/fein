@@ -17,6 +17,9 @@ for fn in sorted(glob.glob(os.path.join(PEAD, "results", "*.json"))):
     j = json.load(open(fn))
     if j.get("status") == "ok":
         syms.append(j["symbol"])
+if os.environ.get("SHARD"):            # e.g. SHARD=1/3 -> every 3rd symbol starting at index 1
+    i, n = map(int, os.environ["SHARD"].split("/"))
+    syms = syms[i::n]
 os.makedirs(OUT, exist_ok=True)
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 
@@ -103,7 +106,7 @@ elif WHAT == "shp":
                 if x.get("qtr") == want:
                     pick[want] = x
         res = {"symbol": s, "bse": code, "status": "ok", "q": {}}
-        for want in ("March 2020", "March 2019", "March 2018"):
+        for want in ("March 2020",):   # trend quarters dropped for speed
             x = pick.get(want) or (pick.get("December 2019") if want == "March 2020" else None)
             if not x:
                 continue

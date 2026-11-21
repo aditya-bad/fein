@@ -1,0 +1,13 @@
+{
+ "status_ok": 1555,
+ "status_out_of_range": 312,
+ "unit_rescaled": 57,
+ "status_no_quarters": 3,
+ "ev_in_window": 29657,
+ "drop_mcap_range": 6699,
+ "events_kept": 18899,
+ "drop_no_sue": 4017,
+ "drop_late_filing": 26,
+ "drop_short_history": 15,
+ "drop_no_entry_px_yet": 1
+}
