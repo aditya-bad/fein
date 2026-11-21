@@ -102,6 +102,8 @@ QUAL_RANGES = {  # qualitative magnitudes -> (low, high) %
 ABBREV = re.compile(r"\b(Mr|Ms|Mrs|Dr|Rs|No|Nos|vs|approx|Ltd|Co|Inc|Pvt|St|Jr|Sr|e\.g|i\.e|etc|Fig|Mn|Bn|Cr)\.", re.I)
 NUMWORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9,
             "ten": 10, "twelve": 12, "eighteen": 18, "few": 3, "couple of": 2, "a": 1}
+AFFIRM = re.compile(r"^\W*(yes|yeah|yep|absolutely|definitely|certainly|correct|right|that's right|sure|of course|"
+                    r"very much|exactly|that is correct|we hope so|hopefully)\b", re.I)
 MONTH_RX = r"(January|February|March|April|May|June|July|August|September|October|November|December)"
 
 
@@ -363,7 +365,28 @@ def extract_call(doc, min_tier="B"):
         if t.get("question_i") is not None:
             q = turns[t["question_i"]]["text"][:500]
         sents = sentences(t["text"])
+        # prompted affirmations: analyst states a forward target, management answers "Yes, absolutely ..."
+        affirm = set()
+        if q and sents and AFFIRM.match(sents[0]) and t["section"] == "qa":
+            qtier = score_sentence(q, call)[0]
+            if qtier == "A" and extract_numbers(q):
+                affirm = {0, 1} if len(sents[0].split()) < 8 else {0}
         for j, s in enumerate(sents):
+            if j in affirm and score_sentence(s, call, " ".join(sents[max(0, j - 1): j + 2]) + " " + q[-300:])[0] != "A":
+                ctx = " ".join(sents[max(0, j - 1): j + 2])
+                _, score, sig, _, _, met = score_sentence(q, call)
+                qn = extract_numbers(q)
+                qd = extract_deadlines(q, call)
+                out.append({
+                    "id": f"cand:{doc['symbol']}:{doc['call_date']}:{t['i']:03d}-{j:02d}",
+                    "symbol": doc["symbol"], "call_date": doc["call_date"], "quarter": doc.get("quarter"),
+                    "source_url": doc.get("source_url"), "speaker": t["speaker"], "speaker_basis": t.get("role_basis"),
+                    "section": t["section"], "volunteered": False, "question": q, "sentence": s, "context": ctx,
+                    "tier": "B", "score": round(score, 2), "signals": dict(sig, affirms_question=True),
+                    "category": category_of(q), "metric_terms": met, "numbers": qn,
+                    "deadline": primary_deadline(qd), "all_deadlines": qd,
+                })
+                continue
             if len(s.split()) < 5:
                 continue
             if s.rstrip().endswith("?") and not (j + 1 < len(sents) and re.match(
@@ -386,24 +409,36 @@ def extract_call(doc, min_tier="B"):
     return out
 
 
-def emit_prompts(cands, outdir, symbol):
+def build_prompt(symbol, call_date, cs, known_keys=None):
     tmpl = open(os.path.join(HERE, "llm_extract_prompt.md")).read()
+    tmpl = tmpl.split("\n---\n", 1)[1] if "\n---\n" in tmpl else tmpl
+    slim = []
+    for c in cs:
+        s = {k: c[k] for k in ("id", "speaker", "section", "question", "context", "sentence", "category",
+                               "numbers", "deadline")}
+        s["question"] = (s["question"] or "")[-300:] or None
+        s["numbers"] = [n["raw"] for n in s["numbers"]][:4]
+        s["deadline"] = (s["deadline"] or {}).get("date")
+        slim.append(s)
+    keys = ""
+    if known_keys:
+        keys = ("## chain_key values already used for this company (reuse them when it is the same target)\n"
+                + "\n".join(f"- {k}: {v}" for k, v in sorted(known_keys.items())))
+    return (tmpl.replace("{{SYMBOL}}", symbol).replace("{{CALL_DATE}}", call_date)
+            .replace("{{QUARTER}}", cs[0].get("quarter") or "" if cs else "").replace("{{N}}", str(len(cs)))
+            .replace("{{EXISTING_CHAIN_KEYS}}", keys)
+            .replace("{{CANDIDATES_JSONL}}", "\n".join(json.dumps(x, ensure_ascii=False) for x in slim)))
+
+
+def emit_prompts(cands, outdir, symbol, known_keys=None):
     os.makedirs(outdir, exist_ok=True)
     by = {}
     for c in cands:
         by.setdefault(c["call_date"], []).append(c)
     paths = []
     for d, cs in sorted(by.items()):
-        slim = [{k: c[k] for k in ("id", "speaker", "section", "question", "context", "sentence", "category",
-                                   "numbers", "deadline")} for c in cs]
-        for s in slim:
-            if s["question"]:
-                s["question"] = s["question"][:300]
-        body = tmpl.replace("{{SYMBOL}}", symbol).replace("{{CALL_DATE}}", d).replace(
-            "{{QUARTER}}", cs[0].get("quarter") or "").replace("{{N}}", str(len(cs))).replace(
-            "{{CANDIDATES_JSONL}}", "\n".join(json.dumps(s, ensure_ascii=False) for s in slim))
         p = os.path.join(outdir, f"{symbol}_{d}_prompt.md")
-        open(p, "w").write(body)
+        open(p, "w").write(build_prompt(symbol, d, cs, known_keys))
         paths.append(p)
     return paths
 

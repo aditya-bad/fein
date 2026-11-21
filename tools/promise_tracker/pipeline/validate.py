@@ -148,7 +148,8 @@ def main(argv=None):
             au = r.get("auto")
             if not au or au.get("status") in (None, "not-auto-scorable"):
                 continue
-            rows.append((pid, mstat.get(pid), au["status"], au.get("actual"), au.get("measure")))
+            rows.append((pid, mstat.get(pid), r.get("auto_status_final") or au["status"], au.get("actual"),
+                         au.get("measure")))
         def norm(s):
             return {"partially_delivered": "partly", "moved_goalpost": "moved-goalpost"}.get(s, s)
         exact = sum(norm(m) == norm(x) for _, m, x, _, _ in rows)
@@ -156,7 +157,26 @@ def main(argv=None):
                "withdrawn": -1, "pending": None, "unverifiable": None}
         direction = sum((pos.get(norm(m)) is not None and pos.get(norm(x)) is not None
                          and (pos[norm(m)] > 0) == (pos[norm(x)] > 0)) or norm(m) == norm(x) for _, m, x, _, _ in rows)
+        resolved = [x for x in rows if norm(x[1]) not in ("pending", "unverifiable") and norm(x[2]) not in ("pending", "awaiting-data")]
+        ex_res = sum(norm(m) == norm(x) for _, m, x, _, _ in resolved)
+        dir_res = sum((pos.get(norm(m)) or 0) > 0 and (pos.get(norm(x)) or 0) > 0 or
+                      (pos.get(norm(m)) or 0) <= 0 and (pos.get(norm(x)) or 0) <= 0 for _, m, x, _, _ in resolved)
+        # goalpost detection over ALL promises (chain rule works for non-financial ones too)
+        mg = {pid for pid, s_ in mstat.items() if s_ == "moved-goalpost"}
+        ag = {pid for pid, r in sc.items() if r.get("auto_status_final") == "moved-goalpost"}
+        res["goalposts"] = {"manual_moved_goalpost": len(mg), "auto_moved_goalpost": len(ag),
+                            "both": len(mg & ag), "auto_only": sorted(ag - mg), "manual_only": sorted(mg - ag),
+                            "goalpost_moves_counted": sum(1 for r in sc.values() if r.get("chain", {}).get("goalpost_move")),
+                            "restatements_linked": sum(1 for r in sc.values() if r.get("chain", {}).get("restates"))}
+        num_rows = [(pid, mstat.get(pid), sc[pid]["auto"]["status"]) for pid, *_ in rows]
+        num_res = [x for x in num_rows if norm(x[1]) not in ("pending", "unverifiable") and x[2] not in ("pending", "awaiting-data")]
+        res["autoscore_numbers_only"] = {
+            "resolved_both": len(num_res),
+            "exact": f"{sum(norm(m) == x for _, m, x in num_res)}/{len(num_res)}",
+            "confusion": Counter(f"{norm(m)} -> {x}" for _, m, x in num_res).most_common()}
         res["autoscore"] = {
+            "resolved_both": len(resolved), "resolved_exact_agreement": f"{ex_res}/{len(resolved)}",
+            "resolved_direction_agreement": f"{dir_res}/{len(resolved)}",
             "n_manual_promises": len(man), "n_auto_scorable": len(rows),
             "coverage": round(len(rows) / len(man), 3),
             "exact_status_agreement": f"{exact}/{len(rows)}",
