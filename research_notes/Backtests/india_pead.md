@@ -104,3 +104,7 @@ truncated price history, and bound the effect under stated assumptions.
   2025 results come from NSE's new "Integrated Filing – Financials" feed (SEBI regime from 2025).
 - **D6 (data): SUE needs ≥ 4 prior seasonal changes**, so the first eligible events of 2018 rely on EPS back to
   2015; NSE's result feed for some companies starts later (e.g. only 2022+), so those firms enter later.
+- **D7 (2026-11-21, stopping rule fixed before any return statistic was computed):** the sample is
+  shuffled-list positions **0–349 and 500–849** (700 symbols; two fetch processes ran on the two slices).
+  Data collection stops when both slices are done; no T−B number was looked at before that. A usage-limit
+  pause interrupted the fetch at ~290 companies; it was resumed with this rule written down first.
