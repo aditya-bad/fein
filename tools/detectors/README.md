@@ -191,4 +191,52 @@ The scripts reopen their log file if it is moved, so plain logrotate works.
 
 ## Test run and sample alerts
 
-SAMPLE_PLACEHOLDER
+Live run on 21-Nov-2026 for events dated 2026-11-18 to 2026-11-20, with `FEIN_DATA` in a scratch folder:
+
+```
+collect.py --from 2026-11-18 --to 2026-11-20   16/16 steps ok, 358 s, peak memory 39.5 MB
+  NSE announcements 517 / 540 / 479, BSE announcements 693 / 635 / 630,
+  SAST 20 / 35 / 21, bulk+block deals 118 / 125 / 113,
+  pledge snapshot 1,474 companies (81 names not matched to an NSE symbol)
+detect.py  -> 72 alerts: pledge_cross_50 1, pledge_up 1, auditor_resignation 4, rating_not_cooperating 1,
+  insolvency_new 2, kmp_resignation 13, insider_cluster 2, sast_promoter_open_market 23,
+  large_deal 17, auditor_change 7, pledge_release 1
+```
+
+**Pledge rule check, Indo Tech Transformers (INDOTECH).** The live NSE snapshot (broadcast
+20-Nov-2026, shareholding as of 30-Sep-2026) shows 6,152,236 of 10,620,000 shares pledged by
+promoters: 57.93% of equity (`percTotShares`) and 82.41% of the promoter holding
+(`percPromoterShares`). `percSharesPledged` says 61.97% because it includes non-promoter pledges,
+which is why the code never uses it. A real first run has only one snapshot, so the test added a
+baseline row dated 2026-11-12 at the level before the 21-Nov-2025 encumbrance disclosed under SAST
+Reg 29(2) (+2,761,200 shares, so 3,391,036 shares = 31.93% of equity). The rule then fired
+`pledge_cross_50` and `pledge_up`, as expected. `detect.py --selftest` repeats this check live every
+time it runs.
+
+Selected alerts from `alerts/2026-11-21.md`:
+
+| date | symbol | rule | details |
+|---|---|---|---|
+| 2026-11-21 | INDOTECH | pledge_cross_50 | crossed 50% (of equity, of promoter holding); promoter pledge 45.43% -> 82.41% of promoter holding; 31.93% -> 57.93% of equity (snapshots 2026-11-12 vs 2026-11-21, SHP 2026-09-30) |
+| 2026-11-21 | INDOTECH | pledge_up | promoter pledge 45.43% -> 82.41% of promoter holding; 31.93% -> 57.93% of equity (snapshots 2026-11-12 vs 2026-11-21, SHP 2026-09-30) |
+| 2026-11-18 | KALIND | auditor_resignation | [BSE: Company Update / Resignation of Statutory Auditors] match 'Resignation of Statutory Auditors' - Intimation regarding resignation of M/s. PHHAD & Co LLP (formerly D G K T & Co LLP), Chartered Accountant as Statutory Audito... |
+| 2026-11-20 | ICIL | kmp_resignation | [NSE: Resignation] match 'Chief Financial Officer and Key Managerial Personnel, has re' - Indo Count Industries Limited has informed the Exchange regarding Resignation of  Mr. Manish Bhatia as Chief Financial Officer of the com... |
+| 2026-11-18 | TIAANC | insolvency_new | [BSE: Company Update / Appointment of Interim Resolution Professional (IRP)] match 'Interim Resolution Professional' - Dear Sir |
+| 2026-11-20 | SINCLAIR | insider_cluster | 2 insiders buy in 30d (2026-11-20..2026-11-20): Navin Chand Suchanti; Pramina Suchanti |
+| 2026-11-20 | GALLANTT | sast_promoter_open_market | Dinesh R. Agarwal (promoter) Sale 5,000,000 sh (2.07%) on 03-NOV-2026 to 03-NOV-2026; after 3.57% [Reg29(2)] |
+| 2026-11-19 | IIFLCAPS | large_deal | bulk net BUY FIH MAURITIUS INVESTMENTS LTD: 44,000,000 sh, Rs 1,540.00 cr = 11.81% of equity |
+| 2026-11-20 | GSTL | pledge_release | [NSE: Disclosure under SEBI Takeover Regulations] match 'revocation of Pledge' - Ragavan Rajkumar has submitted to  the Exchange  a copy of Disclosure regarding revocation of Pledge on Share under Regulation 31(2) of SEBI (SAST... |
+
+The same alerts in `alerts/2026-11-21.csv` (first rows):
+
+```csv
+date,symbol,rule,details,source_url
+2026-11-21,INDOTECH,pledge_cross_50,"crossed 50% (of equity, of promoter holding); promoter pledge 45.43% -> 82.41% of promoter holding; 31.93% -> 57.93% of equity (snapshots 2026-11-12 vs 2026-11-21, SHP 2026-09-30)",https://www.nseindia.in/api/corporate-pledgedata?index=equities&symbol=INDOTECH
+2026-11-20,GALLANTT,sast_promoter_open_market,"Dinesh R. Agarwal (promoter) Sale 5,000,000 sh (2.07%) on 03-NOV-2026 to 03-NOV-2026; after 3.57% [Reg29(2)]",https://nsearchives.nseindia.in/corporate/Dis4_11202026154824_54207.zip
+2026-11-19,IIFLCAPS,large_deal,"bulk net BUY FIH MAURITIUS INVESTMENTS LTD: 44,000,000 sh, Rs 1,540.00 cr = 11.81% of equity",https://www.nseindia.com/report-detail/display-bulk-and-block-deals
+```
+
+Things to know when reading alerts: `kmp_resignation` and `auditor_change` are the noisiest rules
+(an appointment of a new auditor after a normal term ending also fires `auditor_change`).
+`sast_promoter_open_market` includes trivial top-ups of a few thousand shares. Sort by rule priority,
+which the .md file already does, and open the linked filing before drawing any conclusion.

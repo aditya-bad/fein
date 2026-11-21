@@ -226,7 +226,7 @@ def rule_announcements(con, frm, to):
             if dk in seen:   # same event filed on NSE and BSE, or several filings that day
                 continue
             seen.add(dk)
-            first = (r["text"] or r["subject"] or "").split("\n")[0]
+            first = re.sub(r"\s+", " ", (r["text"] or r["subject"] or "").split("\n[summary]")[0]).strip()
             out.append(dict(date=r["date"], symbol=r["symbol"] or f"BSE:{r['bse_code']}", rule=rule, url=r["url"],
                             key=f"{rule}|{r['source']}|{r['id']}",
                             details=f"[{r['source']}: {r['category']}] match '{match[:60]}' - {first[:220]}"))
@@ -312,7 +312,7 @@ def write_outputs(alerts, day, frm, to, new_only):
         if a["rule"] != cur:
             cur = a["rule"]
             md += ["", f"## {cur}", "", "| date | symbol | details | source |", "|---|---|---|---|"]
-        det = (a["details"] or "").replace("|", "/").replace("\n", " ")
+        det = re.sub(r"\s+", " ", (a["details"] or "").replace("|", "/"))
         md.append(f"| {a['date']} | {a['symbol']} | {det} | {'[link](' + a['url'] + ')' if a['url'] else ''} |")
     with open(os.path.join(d, f"{day}.md"), "w") as f:
         f.write("\n".join(md) + "\n")
