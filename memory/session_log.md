@@ -58,3 +58,7 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
   Done this stretch: deep-dive protocol v1 (VMM) + v1.1 (Cummins, L16), US insider backtest (no edge, L14),
   literature sweep (36), drill set 2 (9/10 recognised → drills retired as skill test, L15), paper-call batch 1
   (35; 42 open total), verified NVIDIA CEO resignation event.
+- 21-Nov-2026 (afternoon): user made branch default (PR #1 closed); roadmap.md (7 stages) + roadmap rule; List 3 Pi
+  security checklist (SSH not needed by Claude); change detectors done (NSE PIT feed empty since 30-Apr-2026);
+  paper-call batch 2 (77 open); India PEAD v1 positive OOS (L17); T&D peer credibility (KPIL 77 / Skipper 41 / KEC 20, L18).
+  Usage limit hit (resets 17:30 UTC). To resume via SendMessage: PEAD v2 (live tracker), promise-tracker pipeline.
