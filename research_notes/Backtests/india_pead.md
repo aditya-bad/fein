@@ -83,3 +83,24 @@ truncated price history, and bound the effect under stated assumptions.
 ## Deviation log (append-only, each dated)
 
 *(empty at pre-registration)*
+
+- **2026-11-21 D1 (data, before any returns were computed): standalone, not consolidated.** NSE's quarterly
+  consolidated results were optional before FY2020 for most firms, so a consolidated series would not reach
+  back to 2015 for the SUE denominator. All EPS/revenue are **standalone** for every company (one basis
+  throughout, as the pre-registration requires).
+- **D2 (data): EPS split/bonus adjustment.** Reported EPS is divided by the product of Yahoo split/bonus
+  ratios dated *after* that quarter's filing date (Ind AS 33 restates EPS for a split between quarter-end and
+  filing). Revenue SUE needs no adjustment.
+- **D3 (data): returns are price returns** (Yahoo `close`, split-adjusted, not dividend-adjusted) for events
+  and controls alike; dividends (~1%/yr) are ignored on both sides.
+- **D4 (data): sample, not full universe.** Fetching ~40 quarterly filings per company at polite rates takes
+  ~15 s/company, so the test uses the first N symbols of a seeded shuffle (seed 20261121) of all 1,791 NSE
+  EQ/BE equities listed on or before 2023-06-30 in the *current* NSE equity list (survivors only). Symbols are
+  dropped if their mcap never touched ₹400–60,000 cr in 2018–2025 (pre-filter); event-level ₹500–50,000 cr
+  filter as pre-registered.
+- **D5 (data): event date** = earliest of the filing's broadcast date, filing date and the date stamped in its
+  XBRL filename (NSE's `broadCastDate` sometimes shows a later revision). Filings > 150 days after quarter-end
+  are dropped (these are mostly prior-year comparatives re-filed under Ind AS, not real announcements).
+  2025 results come from NSE's new "Integrated Filing – Financials" feed (SEBI regime from 2025).
+- **D6 (data): SUE needs ≥ 4 prior seasonal changes**, so the first eligible events of 2018 rely on EPS back to
+  2015; NSE's result feed for some companies starts later (e.g. only 2022+), so those firms enter later.

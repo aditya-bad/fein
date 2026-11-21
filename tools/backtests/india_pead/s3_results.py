@@ -11,7 +11,7 @@ Sources (all www.nseindia.in / nsearchives.nseindia.in, tested 2026-11-21):
     SEBI 'Integrated Filing' regime; figures from its XBRL)
 Pre-filter (saves calls): shares (latest pre-2025 filing) x unadjusted Yahoo close must touch
 Rs 400-60,000 cr at some point in 2018-2025, else the symbol is marked 'out_of_range' and skipped.
-Usage: python3 s3_results.py OUTDIR [max_symbols]   -> OUTDIR/results/<SYM>.json
+Usage: python3 s3_results.py OUTDIR [max_symbols] [start_index]   -> OUTDIR/results/<SYM>.json
 Rate: API host >=1.0 s between calls, archive host >=0.5 s; two worker threads (one per host)."""
 import concurrent.futures as cf, datetime as dt, gzip, json, os, re, sys, threading, time
 import urllib.error, urllib.parse, urllib.request
@@ -213,9 +213,11 @@ def do_symbol(sym, ex_api, ex_arc):
 
 
 if __name__ == "__main__":
+    START = int(sys.argv[3]) if len(sys.argv) > 3 else 0   # optional: run a 2nd process on a later slice
     syms = open(os.path.join(S, "sample.txt")).read().split()[:N]
     ex_api, ex_arc = cf.ThreadPoolExecutor(1), cf.ThreadPoolExecutor(1)
     for i, s in enumerate(syms):
+        if i < START: continue
         t0 = time.time()
         try: st = do_symbol(s, ex_api, ex_arc)
         except Exception as e: st = "error " + str(e)[:80]
