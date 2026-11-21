@@ -11,7 +11,7 @@ disruption, transmission-line delays for renewables. These shape several sector-
 Margin convention for India calls: unless the rule says 'company-reported', margins are computed as Operating Profit ÷ Sales
 from screener.in's quarterly table (consolidated unless marked standalone), to one decimal.
 
-**Count:** 20 calls — india: 20. By method: promise-tracker: 7, sector-cycle: 6, base-rate: 2, mgmt-tone: 3, flags-judgment: 1, valuation-temperature: 1.
+**Count:** 35 calls — india: 20, us: 15. By method: promise-tracker: 12, sector-cycle: 6, base-rate: 6, mgmt-tone: 6, flags-judgment: 3, valuation-temperature: 2.
 
 ## Summary table
 
@@ -37,6 +37,21 @@ from screener.in's quarterly table (consolidated unless marked standalone), to o
 | 18 | india | CUMMINSIND | Cummins India Q3 FY27 standalone operating margin recovers to ≥17.0% | sector-cycle | 0.38 | 0.45 | 2027-02-28 |
 | 19 | india | INDOTECH | Indo Tech Transformers' promoter pledge (as % of total shares) is lower in the Mar-2027 disclosure than the 57.93% reported for Sep-2026 | flags-judgment | 0.20 | 0.30 | 2027-04-30 |
 | 20 | india | GENUSPOWER | Genus Power's share price return from 20-Nov-2026 to 30-Jun-2027 beats the Nifty 50's price return | valuation-temperature | 0.52 | 0.45 | 2027-06-30 |
+| 21 | us | NVDA | NVIDIA Q4 FY27 revenue is ≥$133.9B (above the top of its $130.0B ±3% guide) | flags-judgment | 0.72 | 0.85 | 2027-03-10 |
+| 22 | us | AMD | AMD Q4 2026 revenue is ≥$17.51B (above the top of its ~$17B ±3% guide) | base-rate | 0.38 | 0.35 | 2027-02-20 |
+| 23 | us | PLTR | Palantir's share price return from 20-Nov-2026 to 30-Jun-2027 beats SPY's price return | valuation-temperature | 0.42 | 0.47 | 2027-06-30 |
+| 24 | us | AAPL | Apple announces a new share-repurchase authorization of ≥$100B with its fiscal Q2 2027 results | base-rate | 0.75 | 0.60 | 2027-05-31 |
+| 25 | us | GE | GE Aerospace FY2026 adjusted EPS is ≥$8.10 (top of its raised $8.00–8.10 guide) | promise-tracker | 0.62 | 0.40 | 2027-02-15 |
+| 26 | us | CAT | Caterpillar announces a quarterly dividend increase of ≥7% (to ≥$1.75) by 30-Jun-2027 | base-rate | 0.72 | 0.75 | 2027-06-30 |
+| 27 | us | AAON | AAON FY2026 net sales growth is ≥72% (low end of its raised 72–75% outlook) | flags-judgment | 0.72 | 0.80 | 2027-03-15 |
+| 28 | us | WMT | Walmart FY27 adjusted EPS is ≥$2.89 (top of its $2.84–2.89 guide) | promise-tracker | 0.58 | 0.35 | 2027-03-01 |
+| 29 | us | TGT | Target Q4 2026 comparable sales growth is ≥+3.0% | base-rate | 0.62 | 0.55 | 2027-03-15 |
+| 30 | us | FIVE | Five Below FY2026 comparable sales growth is ≥+11.0% (midpoint of its 10–12% outlook) | promise-tracker | 0.58 | 0.50 | 2027-03-31 |
+| 31 | us | ULTA | Ulta Beauty FY2026 diluted EPS is ≥$29.00 (top of its August outlook) | mgmt-tone | 0.52 | 0.45 | 2027-03-31 |
+| 32 | us | DECK | Deckers FY27 diluted EPS is ≥$7.95 (top of its $7.80–7.95 guide) | promise-tracker | 0.52 | 0.40 | 2027-06-05 |
+| 33 | us | UNH | UnitedHealth's initial 2027 adjusted EPS outlook has a low end/floor ≥$22.50 | mgmt-tone | 0.42 | 0.50 | 2027-01-31 |
+| 34 | us | ISRG | Intuitive Surgical reports FY2026 worldwide da Vinci procedure growth of ≥14.5% | promise-tracker | 0.45 | 0.50 | 2027-01-31 |
+| 35 | us | HIMS | Hims & Hers Q4 2026 adjusted EBITDA is ≥$80M (midpoint of its $70–90M guide) | mgmt-tone | 0.40 | 0.50 | 2027-03-10 |
 
 ## Evidence and resolution rules
 
@@ -239,6 +254,156 @@ from screener.in's quarterly table (consolidated unless marked standalone), to o
 - **Resolution rule:** YES if (Genus close on NSE 30-Jun-2027 ÷ 266.0) > (Nifty 50 close 30-Jun-2027 ÷ 25,800.6). Use the last trading day ≤30-Jun-2027; adjust Genus for any split/bonus; dividends ignored for both.
 - **Resolution source:** NSE/Yahoo Finance closes (GENUSPOWER.NS, ^NSEI); screener.in price
 - **Sources used:** https://www.screener.in/company/GENUSPOWER/consolidated/; https://query1.finance.yahoo.com/v8/finance/chart/%5ENSEI
+
+### 21. NVDA — NVIDIA Q4 FY27 revenue is ≥$133.9B (above the top of its $130.0B ±3% guide)
+- **id:** `thesis:paper-call:US-NVDA:q4fy27-revenue-above-top-of-guide`
+- **Method:** flags-judgment context · **P(ours)** 0.72 · **P(base)** 0.85 · resolve by 2027-03-10
+- **Evidence:** 8-K 17-Nov-2026 (Q3 FY27): revenue $115.8B (+20% QoQ, +103% YoY) vs Q3 guide $108.0B ±2% (top $110.2B) — beat the top by ~5%. Q4 guide (14-week quarter) $130.0B ±3%, gross margin 71–72% (Q3 74.8%), no China DC compute assumed. Governance flags: 8-K 12-Nov-2026 (Item 5.02) — Board accepted Jen-Hsun Huang's resignation as CEO and director effective 11-Nov-2026; CFO Colette Kress interim CEO; Harvey Jones named Chair; Q3 release references an ongoing independent board-committee investigation and pending Hugging Face acquisition. $150B buyback increase (Sep-2026).
+- **Why our number differs from base:** Flags-judgment test: does a severe governance shock change near-term delivery when demand and supply are already contracted? We think mostly not, but the range was widened to ±3% (vs ±2%) and margins are guided down, so we shade below NVDA's own beat history.
+- **Base-rate reasoning:** NVIDIA's revenue exceeded the top of its own guidance range in essentially every quarter of the last ~3 years (Q3 FY27 included), ~85–90%.
+- **Resolution rule:** YES if NVIDIA's reported Q4 FY27 total revenue (8-K Item 2.02 earnings release) ≥ $133.9B.
+- **Resolution source:** NVIDIA Q4 FY27 earnings 8-K (SEC EDGAR, CIK 1045810)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/nvda-20261117.htm; https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm; https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/nvda-20260826.htm
+
+### 22. AMD — AMD Q4 2026 revenue is ≥$17.51B (above the top of its ~$17B ±3% guide)
+- **id:** `thesis:paper-call:US-AMD:q4-2026-revenue-above-top-of-guide`
+- **Method:** base rate · **P(ours)** 0.38 · **P(base)** 0.35 · resolve by 2027-02-20
+- **Evidence:** 8-K 3-Nov-2026: Q3 2026 revenue record $13.4B (+45% YoY), 'exceeding the high end of our guidance'; Data Center nearly doubled. Q4 guide ~$17B ±3% (midpoint +66% YoY, +27% QoQ), non-GAAP GM ~55%. SEC XBRL quarterly revenue: $10.25B, $11.54B, $13.38B (Q1–Q3 2026).
+- **Why our number differs from base:** A +27% sequential guide already embeds a big MI-series ramp; beating the top needs supply upside on top of that. AMD's beat-the-top frequency is lower than NVIDIA's.
+- **Base-rate reasoning:** Large-cap semis beat the top of their own quarterly revenue range roughly a third of the time.
+- **Resolution rule:** YES if AMD's reported Q4 2026 revenue (8-K earnings release) ≥ $17.51B.
+- **Resolution source:** AMD Q4 2026 earnings 8-K (SEC EDGAR, CIK 2488)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/2488/000000248826000188/q32026991.htm
+
+### 23. PLTR — Palantir's share price return from 20-Nov-2026 to 30-Jun-2027 beats SPY's price return
+- **id:** `thesis:paper-call:US-PLTR:hot-valuation-beats-spy-to-jun27`
+- **Method:** valuation-temperature · **P(ours)** 0.42 · **P(base)** 0.47 · resolve by 2027-06-30
+- **Evidence:** Yahoo close 20-Nov-2026: PLTR $143.49 (52-wk $106.37–212.94), SPY $689.81 (fell 3.6% that day). SEC XBRL: TTM diluted EPS ≈ $1.43 (Q4-25 0.24 derived as FY25 0.63 − 9M 0.39; Q1–Q3 26: 0.34/0.41/0.44) → P/E ≈100×; TTM revenue ≈ $7.30B vs market cap ≈ $346B (2.41B shares) → ≈47× sales; Q3-26 revenue $2.31B, +96% YoY.
+- **Why our number differs from base:** Valuation-temperature test at the hot end: ~100× earnings and ~47× sales leave little room for any growth deceleration, but momentum and +96% growth can carry a hot stock for months. We lean modestly toward underperformance.
+- **Base-rate reasoning:** A single S&P 500 stock beats the index over ~7 months a bit under half the time (~47%).
+- **Resolution rule:** YES if (PLTR close 30-Jun-2027 ÷ 143.49) > (SPY close 30-Jun-2027 ÷ 689.81); last trading day ≤30-Jun-2027; split-adjust; dividends ignored.
+- **Resolution source:** Yahoo Finance / Nasdaq closes for PLTR and SPY
+- **Sources used:** https://query1.finance.yahoo.com/v8/finance/chart/PLTR; https://query1.finance.yahoo.com/v8/finance/chart/SPY; https://data.sec.gov/api/xbrl/companyfacts/CIK0001321655.json
+
+### 24. AAPL — Apple announces a new share-repurchase authorization of ≥$100B with its fiscal Q2 2027 results
+- **id:** `thesis:paper-call:US-AAPL:buyback-authorization-100bn-may27`
+- **Method:** base rate · **P(ours)** 0.75 · **P(base)** 0.60 · resolve by 2027-05-31
+- **Evidence:** 8-K 30-Apr-2026: dividend raised 4% to $0.27; 'additional program to repurchase up to $100 billion'. Q4 FY26 8-K (2-Nov-2026): $0.27 dividend declared. Annual May authorizations (from memory, partly unverified): 2022 $90B, 2023 $90B, 2024 $110B, 2025 $100B, 2026 $100B.
+- **Why our number differs from base:** Apple has set ≥$100B for three straight years and still generates >$100B FCF; a cut would signal a capital shift (AI capex/M&A) that we see no evidence for yet.
+- **Base-rate reasoning:** In 3 of the last 5 years the May authorization was ≥$100B (60%).
+- **Resolution rule:** YES if Apple's fiscal Q2 2027 earnings release (or another announcement on or before 31-May-2027) authorizes a new/additional repurchase program of ≥$100B.
+- **Resolution source:** Apple Q2 FY27 earnings 8-K (SEC EDGAR, CIK 320193)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/320193/000032019326000011/aapl-20260430.htm; https://www.sec.gov/Archives/edgar/data/320193/000032019326000024/aapl-20261102.htm
+
+### 25. GE — GE Aerospace FY2026 adjusted EPS is ≥$8.10 (top of its raised $8.00–8.10 guide)
+- **id:** `thesis:paper-call:US-GE:fy2026-adj-eps-above-8-10`
+- **Method:** promise-tracker credibility · **P(ours)** 0.62 · **P(base)** 0.40 · resolve by 2027-02-15
+- **Evidence:** 8-K 20-Oct-2026 (Q3 2026): orders +49%, revenue +18%, EPS +36%; guidance raised 'across the board': adjusted revenue growth ~19–20% (prior high-teens), operating profit $10.9–11.0B (prior $10.55–10.75B), adjusted EPS $8.00–8.10 (prior $7.65–7.85), FCF $9.1–9.4B. 2025 adjusted EPS was $6.37 (vs a final 2025 guide that, from memory, topped out near $6.20 — unverified).
+- **Why our number differs from base:** Culp-era GE has habitually guided conservatively and finished above range; the narrow 10-cent band after a big raise still leaves room for a Q4 beat given 49% order growth.
+- **Base-rate reasoning:** A large industrial finishes at or above the top of its final-quarter EPS range ~40% of the time.
+- **Resolution rule:** YES if GE Aerospace's reported FY2026 adjusted EPS (Q4 2026 earnings release, non-GAAP as defined by the company) ≥ $8.10.
+- **Resolution source:** GE Aerospace Q4 2026 earnings 8-K (SEC EDGAR, CIK 40545)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/40545/000004054526000063/ge3q2026earningsrelease.htm
+
+### 26. CAT — Caterpillar announces a quarterly dividend increase of ≥7% (to ≥$1.75) by 30-Jun-2027
+- **id:** `thesis:paper-call:US-CAT:dividend-raise-7pct-by-jun27`
+- **Method:** base rate · **P(ours)** 0.72 · **P(base)** 0.75 · resolve by 2027-06-30
+- **Evidence:** 8-K 11-Jun-2026: Board raised quarterly dividend by 12 cents (+8%) to $1.63, 'maintains our place on the S&P 500 Dividend Aristocrats Index'. Prior June raises (from memory): 2023 +8%, 2024 +8%, 2025 +7%. Q3 2026 8-K: $1.2B buybacks + $0.7B dividends in the quarter; enterprise cash $7.9B; operating cash flow $4.4B.
+- **Why our number differs from base:** Pattern is very stable and cash generation strong; the main risk is a smaller raise if the machinery cycle softens (rate hikes globally).
+- **Base-rate reasoning:** Persistence: 4 of 4 recent June raises were ≥7%; generic aristocrat repeat-size base ~75%.
+- **Resolution rule:** YES if, on or before 30-Jun-2027, Caterpillar declares a regular quarterly dividend ≥ $1.745 per share (rounded: ≥$1.75).
+- **Resolution source:** Caterpillar dividend 8-K / press release (SEC EDGAR, CIK 18230)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/18230/000110465926072929/tm2617177d1_8k.htm; https://www.sec.gov/Archives/edgar/data/18230/000001823026000052/0000018230-26-000052-index.htm
+
+### 27. AAON — AAON FY2026 net sales growth is ≥72% (low end of its raised 72–75% outlook)
+- **id:** `thesis:paper-call:US-AAON:fy2026-sales-growth-72pct-plus`
+- **Method:** flags-judgment context · **P(ours)** 0.72 · **P(base)** 0.80 · resolve by 2027-03-15
+- **Evidence:** 8-K 9-Nov-2026: Q3 net sales +84.1% to record $707.4M; BASX (data-centre) +218%; AAON-branded +19.6%; backlog +40.5% YoY to $1.9B but −5.9% QoQ. Outlook raised to 72–75% growth (prior 55–60%), GM ~26%. Same release: restated Q1 and Q2 2026 (H1 net sales +$10.7M, GM +71 bps, EPS +$0.09) and disclosed a material weakness in ICFR; 'no evidence of fraud'.
+- **Why our number differs from base:** Flags-judgment: a restatement plus material weakness is a classic warning, but here the restatement raised prior numbers and the guide needs only Q4. The QoQ backlog decline and revenue-recognition-control questions keep us below the 'only one quarter left' base.
+- **Base-rate reasoning:** Companies meet the low end of a full-year sales outlook raised with only one quarter left ~80% of the time.
+- **Resolution rule:** YES if AAON's FY2026 reported net sales ÷ FY2025 net sales − 1 ≥ 72.0% (per the Q4/FY2026 earnings release or 10-K; use the company's stated growth figure if given).
+- **Resolution source:** AAON Q4 2026 earnings 8-K / FY2026 10-K (SEC EDGAR, CIK 824142)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/824142/000082414226000083/liveaaonpressreleaseexs.htm
+
+### 28. WMT — Walmart FY27 adjusted EPS is ≥$2.89 (top of its $2.84–2.89 guide)
+- **id:** `thesis:paper-call:US-WMT:fy27-adj-eps-at-or-above-2-89`
+- **Method:** promise-tracker credibility · **P(ours)** 0.58 · **P(base)** 0.35 · resolve by 2027-03-01
+- **Evidence:** Q3 FY27 earnings presentation (19-Nov-2026): FY27 adjusted EPS guide raised for the third time — $2.75–2.85 (Feb) → $2.80–2.87 (Aug) → $2.84–2.89 (Nov); net sales cc +4.9–5.2%; adjusted operating income cc +8.0–8.6%. Q3 adj EPS $0.65 (+4.8%); FY26 adjusted EPS base $2.64 (which, from memory, was above the top of its own final FY26 range of $2.58–2.63).
+- **Why our number differs from base:** Walmart has a recent habit of finishing at or above the top of its final guide, and has raised three times this year; holiday trends and tariff-refund noise are the risks.
+- **Base-rate reasoning:** S&P 500 companies finish at or above the top of their final-quarter annual EPS range ~35% of the time.
+- **Resolution rule:** YES if Walmart's reported FY27 adjusted EPS (Q4 FY27 earnings release) ≥ $2.89.
+- **Resolution source:** Walmart Q4 FY27 earnings 8-K (SEC EDGAR, CIK 104169)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/104169/000010416926000168/earningspresentationfy27.htm
+
+### 29. TGT — Target Q4 2026 comparable sales growth is ≥+3.0%
+- **id:** `thesis:paper-call:US-TGT:q4-2026-comps-3pct-plus`
+- **Method:** base rate · **P(ours)** 0.62 · **P(base)** 0.55 · resolve by 2027-03-15
+- **Evidence:** 8-K 18-Nov-2026 (Q3 2026): net sales +7.1%, comparable sales +5.6% (traffic +5.0%; stores +4.6%, digital +9.8%); November month-to-date 'in line with the Company's guidance… accelerating from October'. FY2026 guide raised: net sales growth ~6% (+1 pt), operating margin ~6.2% incl. ~1.1 pt tariff-refund benefit, EPS $10.65–11.40. Q4 2025 is an easy compare (Target's comps were negative through 2025).
+- **Why our number differs from base:** Traffic-led comps and an easy compare favour ≥3%; risks are a weaker holiday consumer (rate hikes, inflation) and the 53rd/calendar shift noise.
+- **Base-rate reasoning:** A retailer comping +5–6% with traffic leading sustains ≥3% the next quarter roughly 55% of the time.
+- **Resolution rule:** YES if Target's reported Q4 2026 comparable sales change (Q4 earnings release) ≥ +3.0%.
+- **Resolution source:** Target Q4 2026 earnings 8-K (SEC EDGAR, CIK 27419)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/27419/000002741926000051/a2026q3ex-99.htm
+
+### 30. FIVE — Five Below FY2026 comparable sales growth is ≥+11.0% (midpoint of its 10–12% outlook)
+- **id:** `thesis:paper-call:US-FIVE:fy2026-comps-11pct-plus`
+- **Method:** promise-tracker credibility · **P(ours)** 0.58 · **P(base)** 0.50 · resolve by 2027-03-31
+- **Evidence:** 8-K 2-Sep-2026 (Q2 FY26): net sales +22.9% to $1.26B, comps +14.1%; double-digit comps for five straight quarters; FY26 comps outlook raised to +10–12% (prior +6–8%), net sales $5.63–5.71B (prior $5.40–5.48B), Q3 comps guide +8–10%; outlook excludes future tariff refunds and buybacks. Q3 results due early Dec-2026 (before resolution).
+- **Why our number differs from base:** The guide implies a sharp H2 deceleration from a +14% Q2; management has beaten and raised, which usually signals conservative H2 assumptions.
+- **Base-rate reasoning:** Coin-flip for landing above a guidance midpoint absent track record (~50%).
+- **Resolution rule:** YES if Five Below's reported FY2026 (year ending ~Jan-2027) comparable sales increase (Q4 FY26 earnings release) ≥ +11.0%.
+- **Resolution source:** Five Below Q4 FY2026 earnings 8-K (SEC EDGAR, CIK 1177609)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/1177609/000117760926000023/q22026fivebelowexhibit991.htm
+
+### 31. ULTA — Ulta Beauty FY2026 diluted EPS is ≥$29.00 (top of its August outlook)
+- **id:** `thesis:paper-call:US-ULTA:fy2026-eps-at-or-above-29`
+- **Method:** management-tone-vs-delivery · **P(ours)** 0.52 · **P(base)** 0.45 · resolve by 2027-03-31
+- **Evidence:** 8-K 27-Aug-2026 (Q2 FY26): net sales +8.9% to $3.0B (incl. Space NK acquisition), comps +3.8%; FY26 outlook raised — net sales growth 6.7–7.2% (prior 6–7%), comps 3.2–3.7% (prior 2.5–3.5%), operating income growth 8.3–9.3%, EPS $28.70–29.00 (prior $28.36–28.80); buyback plan raised to $1.8B (from $1.5B). CEO: 'confidence in our strategic priorities… in a dynamic environment.' Q3 results due early Dec-2026.
+- **Why our number differs from base:** Confident tone plus bigger buyback supports EPS; the 30-cent band is narrow and the consumer backdrop is softening. Slightly above base.
+- **Base-rate reasoning:** Retailers finish at/above the top of an August full-year EPS range ~45% of the time.
+- **Resolution rule:** YES if Ulta's reported FY2026 diluted EPS (Q4 FY26 earnings release) ≥ $29.00.
+- **Resolution source:** Ulta Beauty Q4 FY2026 earnings 8-K (SEC EDGAR, CIK 1403568)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/1403568/000110465926102438/ulta-20260827xex99d1.htm
+
+### 32. DECK — Deckers FY27 diluted EPS is ≥$7.95 (top of its $7.80–7.95 guide)
+- **id:** `thesis:paper-call:US-DECK:fy27-eps-at-or-above-7-95`
+- **Method:** promise-tracker credibility · **P(ours)** 0.52 · **P(base)** 0.40 · resolve by 2027-06-05
+- **Evidence:** 8-K 22-Oct-2026 (Q2 FY27): record revenue $1.48B; EPS $2.31 (+27%) incl. $0.28 IEEPA tariff-refund benefit; gross margin 60.5% (56.2%). FY27 guide raised: net sales $5.700–5.725B, GM ~58.5%, op margin ~23%, EPS $7.80–7.95 incl. ~$0.52 refund benefit; assumes $1.0B buyback. CEO Stefano Caroti: 'a challenging consumer environment… taking deliberate' actions in H2.
+- **Why our number differs from base:** Deckers has a reputation for conservative guidance (track record not yet coded in promise tracker), but the CEO's own words flag a tougher H2 and the range is narrow. Modestly above base.
+- **Base-rate reasoning:** Consumer companies finish at/above the top of a mid-year EPS range ~40% of the time.
+- **Resolution rule:** YES if Deckers' reported FY27 (ending 31-Mar-2027) diluted EPS (Q4 FY27 earnings release) ≥ $7.95, as reported (including tariff-refund effects).
+- **Resolution source:** Deckers Q4 FY27 earnings 8-K (SEC EDGAR, CIK 910521)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/910521/000091052126000028/deckex991pressrelease-9302.htm
+
+### 33. UNH — UnitedHealth's initial 2027 adjusted EPS outlook has a low end/floor ≥$22.50
+- **id:** `thesis:paper-call:US-UNH:2027-initial-eps-guide-22-50`
+- **Method:** management-tone-vs-delivery · **P(ours)** 0.42 · **P(base)** 0.50 · resolve by 2027-01-31
+- **Evidence:** 8-K 13-Oct-2026 (Q3 2026): revenue $112.7B; adjusted EPS $4.69; full-year 2026 outlook raised to net EPS 'at least $19.50' and adjusted EPS 'at least $20.50'; CEO cites 'discipline and execution'. Context: UNH opened 2026 with an 'at least' style floor well below where it now stands (post-2025 reset), i.e., deliberately conservative guidance.
+- **Why our number differs from base:** Management-tone test: post-crisis UNH under-promises; an initial 2027 floor ≥$22.50 (≈+10% on the 2026 floor) would break that habit. Medicare Advantage cost trend and rate-hike macro add caution.
+- **Base-rate reasoning:** Coin-flip on a threshold set near ~10% growth, roughly UNH's historical long-term EPS growth target low end (~50%).
+- **Resolution rule:** YES if the 2027 adjusted EPS outlook first issued (expected with Q4 2026 results, Jan-2027) has a low end or 'at least' floor ≥ $22.50. If issued as a single point, use that point.
+- **Resolution source:** UnitedHealth Q4 2026 earnings 8-K (SEC EDGAR, CIK 731766)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/731766/000073176626000255/earningsrelease3q26unh.htm
+
+### 34. ISRG — Intuitive Surgical reports FY2026 worldwide da Vinci procedure growth of ≥14.5%
+- **id:** `thesis:paper-call:US-ISRG:fy2026-procedure-growth-14-5-plus`
+- **Method:** promise-tracker credibility · **P(ours)** 0.45 · **P(base)** 0.50 · resolve by 2027-01-31
+- **Evidence:** 8-K 20-Oct-2026 (Q3 2026): da Vinci procedures +~14%, Ion +~31%; FY2026 outlook: procedure growth ~14–15%, 'The Company expects to be closer to the midpoint of this range'; non-GAAP GM 68.7–69.3% (incl. ~0.9 pt tariff hit); opex growth 11–13%.
+- **Why our number differs from base:** Management explicitly steers to ~14.5%; with Q3 at ~14% the outcome hinges on Q4 and on ISRG's rounding ('approximately 14%' would resolve NO). Slight lean below coin-flip because of the rounding convention.
+- **Base-rate reasoning:** Coin-flip on a midpoint the company itself points to (~50%).
+- **Resolution rule:** YES if ISRG's reported FY2026 worldwide da Vinci procedure growth (Q4 2026 release or preliminary January announcement) is ≥14.5% as stated; 'approximately 14%' = NO, 'approximately 15%' or '14.5%' = YES.
+- **Resolution source:** Intuitive Surgical Q4 2026 / preliminary FY2026 release (SEC EDGAR, CIK 1035267)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/1035267/000103526726000067/q326ex-991earningsrelease.htm
+
+### 35. HIMS — Hims & Hers Q4 2026 adjusted EBITDA is ≥$80M (midpoint of its $70–90M guide)
+- **id:** `thesis:paper-call:US-HIMS:q4-2026-adj-ebitda-80m-plus`
+- **Method:** management-tone-vs-delivery · **P(ours)** 0.40 · **P(base)** 0.50 · resolve by 2027-03-10
+- **Evidence:** 8-K 9-Nov-2026 (Q3 2026): revenue +49% YoY (second straight quarter of acceleration). Guidance: Q4 revenue $875–895M, adjusted EBITDA $70–90M (8–10% margin); FY2026 revenue tightened to $3.13–3.15B and adjusted EBITDA reduced to $257–277M. CFO Yemi Okupe: 'deliberate strategic decisions to position… for durable, multi-year growth' (i.e., investment over margin).
+- **Why our number differs from base:** A company that just cut its EBITDA guide while framing it as 'deliberate investment' tends to keep spending; the 20M-wide range invites a sub-midpoint print. Lean below coin-flip.
+- **Base-rate reasoning:** Coin-flip for landing at/above a guidance midpoint (~50%).
+- **Resolution rule:** YES if HIMS's reported Q4 2026 adjusted EBITDA (Q4 earnings release) ≥ $80.0M.
+- **Resolution source:** Hims & Hers Q4 2026 earnings 8-K (SEC EDGAR, CIK 1773751)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/1773751/000177375126000242/hims-20260930x8xkearningsr.htm
 
 ## Scoring protocol
 
