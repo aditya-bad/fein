@@ -103,3 +103,9 @@ control, a 74.8% promoter stake, an overseas plant, a common pandemic-era date).
 Skill is measured by **forward paper calls** (dated probabilities on events nobody knows yet) — make many,
 cheaply, every results season. Possible future v3: synthetic composite packets blending 2–3 companies.
 D017 (only clean drill): Brier 0.170 vs base-rate 0.230 (n=1 — meaningless alone).
+
+## L16 (2026-11-21) — For subsidiaries of foreign parents, follow the money to the parent
+Cummins India practice: royalty + support services to the parent rose from 8.8% to 11.6% of EBITDA; total
+cash to parent ≈8.9% of sales; royalty agreement expires 31-Mar-2027; 51% of purchases and most exports are
+intra-group at cost-plus — so "weak rupee helps exporters" mostly helps the parent. Best source: the
+AGM-notice related-party annex (formulas, rates, sunset dates). Protocol v1.1 adds a parent-take table.

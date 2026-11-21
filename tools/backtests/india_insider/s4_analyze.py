@@ -73,7 +73,7 @@ def basis_k(sym, px, d, win=10):
     for dd, p in L:
         if abs((date.fromisoformat(dd) - date.fromisoformat(d)).days) <= win:
             c = close_on(px, dd, 3)
-            if c: ks.append(p / c)
+            if c and 0.05 < p / c < 50: ks.append(p / c)
     if not ks: return None
     ks.sort(); return ks[len(ks) // 2]
 

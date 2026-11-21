@@ -1,0 +1,99 @@
+[
+ {
+  "type": "analysis",
+  "id": "analysis:cumminsind-deep-dive-practice-2026-11",
+  "title": "Cummins India practice deep dive #2 (manufacturer + 51% MNC subsidiary) - method test, NO verdict",
+  "body": "PRACTICE run of the deep-dive protocol on a manufacturer, done to improve the protocol (L9). There is no buy/sell/watchlist verdict and none should be inferred. Research, not advice. Key findings from filings: (1) Parent take. Support services to Cummins Inc doubled from Rs 110.6 to 222.5 cr in FY26 (1.07% -> 1.83% of sales; 20.5% of other expenses), with a further 'true-up' of corporate cost allocations inside Q2 FY27 other expenses. Royalty is 4% of eligible sales (Rs 77.9 cr; eligible base about 16% of revenue), under an agreement that expires 31-Mar-2027. Royalty plus support = 2.47% of sales and 11.6% of EBITDA (FY25: 1.75% / 8.8%). Cash to the parent (dividend 756 + royalty 78 + support 213 + reimbursements 28) is about Rs 1,075 cr = 8.9% of sales. (2) 51% of purchases come from related parties (Tata Cummins JV, CTIPL) at cost plus about 11%. Sales to group companies are at cost plus at least 11%, and they make up about 50-80% of exports, so the export margin is capped and a weak rupee mostly accrues to the group. (3) Margin turn: the materials ratio went 63.5% (Q2 FY26) -> 66.5% (Q1 FY27) -> 67.9% (Q2 FY27), and OPM 22% -> 15%. The lag is structural: cost-plus pass-in from sister companies, contracted order books, and an inventory layer of +Rs 186 cr in H1. Peer KOEL's OPM fell 14% -> 11% in the same quarter. (4) BRSR intensity ratios imply about 147.9k equivalent units in FY26 (+7%), so price/mix was about +10%. Management cites 70% utilisation, but the binding HHP capacity sits at CTIPL and in parent imports. (5) Data centres are 30-40% of power gen; a physics check puts Cummins' DC revenue at the top of the implied India DC-genset market (an open gap). (6) Three customers = 31% of sales (FY25: two, 21%), likely the 3 GOEMs. (7) Contract labour at minimum wage is only about 0.3% of sales, so wage gazettes are noise here (unlike VMM). (8) Other income is 23% of PBT; core PBT is about Rs 2,384 cr. 7 open soft flags plus 1 dated watch (royalty renewal). Paper call thesis:paper-call:CUMMINSIND:q3fy27-opm-17pct-plus was NOT changed. Noted for its post-mortem: the unquantified Q2 one-off in other expenses implies a normalised Q2 OPM of about 16.1-16.5%. Full notes: research_notes/Deep dives/CUMMINSIND_practice.md.",
+  "tickers": ["CUMMINSIND", "KIRLOSENG"],
+  "tags": ["practice", "method-test", "deep-dive", "india", "sector-capital-goods", "manufacturer", "mnc-subsidiary", "related-party"],
+  "date": "2026-11-21",
+  "data": {
+   "verdict": null,
+   "purpose": "protocol test #2 (manufacturer)",
+   "fy26_revenue_cr": 12143.19,
+   "fy26_materials_pct_sales": 63.2,
+   "q2fy27_materials_pct_sales": 67.9,
+   "royalty_rate_pct_eligible_sales": 4,
+   "royalty_agreement_expiry": "2027-03-31",
+   "support_services_cr": {"FY25": 110.58, "FY26": 222.52},
+   "royalty_cr": {"FY25": 70.65, "FY26": 77.94},
+   "royalty_plus_support_pct_ebitda": {"FY25": 8.8, "FY26": 11.6},
+   "rpt_share_of_purchases_pct": {"FY25": 52.3, "FY26": 51.2},
+   "cash_to_parent_cr_est": {"FY25": 729, "FY26": 1075},
+   "dividend_payout_pct_fy26": 78.5,
+   "top3_customer_share_pct": {"FY25_two_customers": 21.5, "FY26_three_customers": 30.8},
+   "brsr_equivalent_units": {"FY25": 138100, "FY26": 147900},
+   "dc_share_of_powergen_pct": "30-40 (Q2 FY27)",
+   "contract_min_wage_workers": 1640,
+   "core_pbt_cr_est": 2384,
+   "open_soft_flags": 7,
+   "dated_watch": ["royalty renewal 2027-03-31", "Q3 FY27 materials ratio", "FY27 AR note on support services"]
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/CUMMINSIND_09072026220941_SEIntimationAGMNotice_AR.pdf",
+   "https://nsearchives.nseindia.in/corporate/CUMMINSIND_04112026223607_SEintimation_OutcomeFR_04112026.pdf",
+   "https://nsearchives.nseindia.in/corporate/CUMMINSIND_20112026163131_SEIntimationTranscriptQ2Final.pdf",
+   "https://nsearchives.nseindia.in/corporate/CUMMINSIND_06112026173755_SEIntimationNoticeofPBfinal.pdf",
+   "https://www.screener.in/company/CUMMINSIND/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {"to": "strategy:deep-dive-protocol", "rel": "applies"},
+   {"to": "analysis:vmm-deep-dive-practice-2026-11", "rel": "follows"},
+   {"to": "thesis:paper-call:CUMMINSIND:q3fy27-opm-17pct-plus", "rel": "informs"},
+   {"to": "theme:sector-capital-goods-epc-td", "rel": "sector"}
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:mnc-parent-take-table",
+  "title": "MNC subsidiaries: build a 'parent take' table from the RPT note plus the AGM-notice RPT annex (rates, formulas, renewal dates)",
+  "body": "For any listed MNC subsidiary (or group company), the minority's real question is who gets paid before them. Each year, tabulate: royalty (rate x eligible base); technical, support and cost-allocation fees; reimbursements; purchases from and sales to group companies, with their pricing formulas; dividends to the parent; and stock pay in parent shares. Express the total as % of sales and % of EBITDA, and calendar every agreement renewal. Since SEBI's Jun-2025 'minimum information' standard, AGM and postal-ballot material-RPT annexes disclose pricing formulas, royalty rates, uniform-rate confirmations and sunset clauses. This is the richest and least-read document. Worked case, Cummins India FY26: royalty 4% of eligible sales (Rs 77.9 cr), agreement to 31-Mar-2027; support services doubled to Rs 222.5 cr (1.83% of sales) plus a Q2 FY27 'true-up'; royalty + support = 11.6% of EBITDA (FY25 8.8%); cash to the parent about Rs 1,075 cr = 8.9% of sales. Only one of about 11 analysts on the call touched it, and only indirectly. Signals: whether the non-pro-rata channels (fees) grow faster than the pro-rata one (dividends); rate changes at renewal; unannounced true-ups. Grade it a soft flag unless there is diversion. Apply to Nestle, HUL, Maruti, Siemens, ABB, Bosch, Colgate and similar.",
+  "tickers": ["CUMMINSIND"],
+  "tags": ["process", "governance", "related-party", "india", "mnc-subsidiary", "deep-dive", "technique"],
+  "date": "2026-11-21",
+  "data": {"example": "CUMMINSIND FY26", "royalty_rate_pct": 4, "renewal": "2027-03-31", "support_services_growth_pct": 101, "parent_cash_pct_sales": 8.9},
+  "sources": ["https://nsearchives.nseindia.in/corporate/CUMMINSIND_09072026220941_SEIntimationAGMNotice_AR.pdf", "https://nsearchives.nseindia.in/corporate/CUMMINSIND_06112026173755_SEIntimationNoticeofPBfinal.pdf"],
+  "confidence": "verified",
+  "links": [{"to": "strategy:deep-dive-protocol", "rel": "part_of"}, {"to": "insight:rpt-share-by-cost-line", "rel": "extends"}]
+ },
+ {
+  "type": "insight",
+  "id": "insight:brsr-intensity-to-physical-units",
+  "title": "BRSR intensity per unit of physical output gives free volume data: energy GJ / GJ-per-unit = units",
+  "body": "BRSR Principle 6 reports total energy, water and waste, and also intensity 'per unit of physical output'. Dividing the total by the intensity backs out the company's physical output, even when it never discloses volumes. Cross-foot with water (kL / kL-per-unit) and waste (t / t-per-unit). Matching results confirm the arithmetic, not the definition. Then revenue / units = realisation, which splits growth into volume vs price/mix. Worked case, Cummins India: FY26 193,212 GJ / 1.3060 = ~147,900 'equivalent units' (water 179,627 / 1.2142 = 147,939; waste 7,796.5 / 0.0527 = 147,941); FY25 ~138,100. So volume +7% and price/mix about +10% against revenue +17%. With a stated utilisation (70%), implied capacity is about 210k units. Caveats: 'equivalent units' is a company weighting, and the definition can change year to year (read the footnote). Useful for any manufacturer (cement, chemicals, autos, engineering) that does not publish volumes.",
+  "tickers": ["CUMMINSIND"],
+  "tags": ["alt-data", "process", "india", "brsr", "manufacturer", "capacity", "deep-dive", "technique"],
+  "date": "2026-11-21",
+  "data": {"fy26_units_est": 147900, "fy25_units_est": 138100, "volume_growth_pct": 7.1, "price_mix_pct": 9.6, "capacity_est_units": 210000},
+  "sources": ["https://nsearchives.nseindia.in/corporate/CUMMINSIND_09072026220941_SEIntimationAGMNotice_AR.pdf"],
+  "confidence": "single-source",
+  "links": [{"to": "strategy:deep-dive-protocol", "rel": "part_of"}]
+ },
+ {
+  "type": "insight",
+  "id": "insight:pass-through-lag-who-carries-mismatch",
+  "title": "Commodity pass-through lag: classify input and output contracts to find who carries the timing mismatch",
+  "body": "For manufacturers, track materials / revenue by quarter (at least 8 quarters). Then classify the contracts on each side. Inputs: cost-plus or index-linked contracts pass inflation in at once, while spot buys at lagged list prices. Outputs: order-book or tender sales at agreed prices pass inflation out with a lag; list-price sales pass it out faster. Add the inventory layer, since stock bought at high cost hits the next quarter's COGS. Estimate the lag from the last cycle's OPM recovery. Sensitivity = metal-linked share of materials x % move, in bps. Leading indicators: weekly pig iron and steel (BigMint, SteelOrbis, Mysteel) and LME Cu/Al turn before the P&L. In a group, the listed minority entity often carries the mismatch: cost-plus sister-company supply against fixed-price customer contracts. Worked case, Cummins India: materials 63.5% -> 66.5% -> 67.9% (Q2 FY26 -> Q2 FY27); 51% of purchases are from related parties at cost plus about 11%; DC and rail orders at contracted prices; inventory +Rs 186 cr in H1 FY27; OPM 22% -> 15%. Peer KOEL fell 14% -> 11% in the same quarter, so the cause is industry-wide. Pig iron was flat to softer by Nov-2026. Last cycle's lag was about 2-4 quarters [EST].",
+  "tickers": ["CUMMINSIND", "KIRLOSENG"],
+  "tags": ["process", "margins", "commodities", "manufacturer", "india", "deep-dive", "technique", "lead-indicator"],
+  "date": "2026-11-21",
+  "data": {"materials_pct": {"Q2FY26": 63.5, "Q1FY27": 66.5, "Q2FY27": 67.9}, "opm_pct": {"Q2FY26": 22, "Q1FY27": 18, "Q2FY27": 15}, "lag_quarters_est": "2-4"},
+  "sources": ["https://nsearchives.nseindia.in/corporate/CUMMINSIND_04112026223607_SEintimation_OutcomeFR_04112026.pdf", "https://nsearchives.nseindia.in/corporate/CUMMINSIND_20112026163131_SEIntimationTranscriptQ2Final.pdf", "https://www.screener.in/company/KIRLOSENG/"],
+  "confidence": "single-source",
+  "links": [{"to": "strategy:deep-dive-protocol", "rel": "part_of"}, {"to": "thesis:paper-call:CUMMINSIND:q3fy27-opm-17pct-plus", "rel": "informs"}]
+ },
+ {
+  "type": "insight",
+  "id": "insight:transfer-pricing-bounds-line-margins",
+  "title": "Use related-party pricing formulas to bound undisclosed product-line margins (and know when a weak rupee will not help)",
+  "body": "When a company reports one segment, the RPT pricing formulas in the AGM-notice annex can bound line margins. A sale to a group company at 'cost + 11%' earns about 10% of sales before the seller's own overheads. Estimate how much of a line goes to the group (e.g. export revenue vs sales to group distributors), assign it the cost-plus margin, and back-solve the remaining business: (EBITDA - group-sales margin) / remaining revenue. Worked case, Cummins India FY26: exports Rs 2,007 cr, of which about 50-80% went to group companies (Cummins Ltd UK Rs 1,018 cr plus others) at cost plus at least 11%. If exports earn about 10%, domestic EBITDA is about 23.6% against the company's 21.4% [EST]. Implications: (a) exports are structurally the lowest-margin line; (b) a weak rupee mostly accrues to the group buyer, not the listed exporter; (c) a high reported ROCE can be partly 'borrowed' from sister companies that hold the constrained capacity (QSK60 at CTIPL). Confidence stays unverified until there is a disclosed segment P&L or a second route.",
+  "tickers": ["CUMMINSIND"],
+  "tags": ["process", "related-party", "margins", "exports", "fx", "mnc-subsidiary", "india", "deep-dive", "technique"],
+  "date": "2026-11-21",
+  "data": {"export_revenue_cr": 2006.88, "sales_to_cl_uk_cr": 1018.25, "markup_floor_pct": 11, "domestic_ebitda_est_pct": 23.6, "company_ebitda_pct": 21.4},
+  "sources": ["https://nsearchives.nseindia.in/corporate/CUMMINSIND_09072026220941_SEIntimationAGMNotice_AR.pdf"],
+  "confidence": "unverified",
+  "links": [{"to": "strategy:deep-dive-protocol", "rel": "part_of"}, {"to": "insight:mnc-parent-take-table", "rel": "related"}]
+ }
+]
