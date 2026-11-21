@@ -53,3 +53,8 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
   (OpenAlex budget exhausted → switching to Semantic Scholar), VMM "security-guard depth" deep-dive practice.
   Done this stretch: accounting forensics course (25), flags-judgment library (44) + graded pledge rule (L12),
   7 forward paper calls, drill set 1 (excluded, L11), US toolkit (21 + sec_fetch.py).
+- 21-Nov-2026: usage limit hit again (resets ~07:20 UTC). Stopped mid-run (resume via SendMessage): India PEAD
+  test (was writing analysis script), India insider test (fixing UA throttling), FIVE US deep-dive practice.
+  Done this stretch: deep-dive protocol v1 (VMM) + v1.1 (Cummins, L16), US insider backtest (no edge, L14),
+  literature sweep (36), drill set 2 (9/10 recognised → drills retired as skill test, L15), paper-call batch 1
+  (35; 42 open total), verified NVIDIA CEO resignation event.
