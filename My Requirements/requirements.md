@@ -98,3 +98,58 @@ for each. List 1 above still stands.*
 ## F. Anything else
 - [ ] When the device is connected, tell me its OS, CPU/RAM and timezone, so I size jobs correctly.
 - [ ] Decide who gets notified when a nightly job fails (I can write failures to a `logs/` file in the repo).
+
+
+---
+
+# List 2 — update (21 Nov 2026): Raspberry Pi, your own Kite MCP wrapper, Screener step by step
+
+*Replaces sections A, C and D of List 2 above where they differ. Everything else stands.*
+
+## A2. Raspberry Pi setup (step by step)
+1. **OS:** Raspberry Pi OS **64-bit** (Bookworm or newer). Pi 4/5 with ≥4 GB RAM. Use an SSD over USB if you can,
+   because SD cards wear out with constant database writes. Set timezone: `sudo timedatectl set-timezone Asia/Kolkata`.
+2. **Packages:**
+   `sudo apt update && sudo apt install -y git python3 python3-venv poppler-utils sqlite3 curl nodejs npm`
+3. **Repo:** `mkdir -p ~/fein-lab && cd ~/fein-lab && git clone https://github.com/aditya-bad/fein.git && cd fein && git checkout claude/focused-brahmagupta-g3hraq`
+   (needs a GitHub login with access to the repo, for example a fine-grained token with access to this one repo only.)
+4. **Data folder:** `mkdir -p ~/fein-data` (the nightly collectors write here).
+5. **Connecting it to me (Remote Control).** The Claude desktop app doesn't run on a Pi, so use Claude Code in a terminal:
+   - Install Claude Code on the Pi (`curl -fsSL https://claude.ai/install.sh | bash`), then run `claude` once and log in with **your** account.
+   - In the folder to share, run: `cd ~/fein-lab && claude remote-control`. Keep it running (for example in `tmux`, or as a systemd service).
+   - Tell me when it's running. I'll check whether this cloud session can see the folder and request access; you approve on the Pi.
+   - Honest caveat: using a computer's folder from a cloud session isn't available on every account yet. If I can't see it,
+     you can still run a Claude session **on the Pi itself**, which reads this same repo, memory and all.
+6. **Cron jobs** (I'll give the exact lines when the detector scripts are ready in `tools/detectors/README.md`). They run without
+   Claude, so they cost none of my usage.
+7. **Gemini CLI:** `sudo npm install -g @google/gemini-cli`, then run `gemini` once and log in. Check `gemini -p "say ok"` prints a reply.
+
+## C2. Kite: your own MCP wrapper (not the official one). Tools I'd like it to expose
+All **read-only**. No order, position, funds, holdings or profile tools. The access token stays on the Pi.
+| Tool | Inputs | Returns |
+|---|---|---|
+| `instruments` | exchange (NSE/BSE/NFO), optional search text | instrument_token, tradingsymbol, name, segment, lot size, tick size |
+| `historical` | symbol or token, from, to, interval (day/60minute/15minute/minute), `continuous` (for futures), `oi` | OHLCV (+OI) candles. **Say whether prices are adjusted for splits/bonuses.** |
+| `historical_bulk` | list of symbols, from, to, interval=day | same, for many symbols in one call (saves my usage). Do the paging and rate-limit sleeps inside your wrapper. |
+| `quote` / `ltp` | up to ~200 symbols | last price, OHLC, volume (for verifying prices) |
+| `index_history` | index name (NIFTY 50, NIFTY 500, NIFTY SMALLCAP 250, sector indices) | daily closes (benchmarks for backtests) |
+| `health` | none | token valid? last refresh time? |
+Nice to have:
+- Results as **CSV/JSON files written to a shared folder** (e.g. `~/fein-data/kite/`) for big pulls, with the tool returning just the file path.
+  That keeps large data out of my context.
+- Your wrapper handling the daily Kite login/token refresh.
+
+Also tell me how I'll reach the wrapper: over Remote Control on the Pi (simplest), or as a remote MCP URL added to this environment.
+
+## D2. Screener.in: exactly what to do
+1. Create a **new free account** at screener.in with a **separate email** used only for research (not your main one).
+2. On the Pi, install a browser-cookie export or simply log in once with a script. Simplest:
+   - Log in on any browser, open DevTools → Application → Cookies → `www.screener.in`, and copy the `sessionid` and `csrftoken` values.
+   - On the Pi, save them in `~/fein-data/secrets/screener_cookies.txt` (`chmod 600`) as two lines: `sessionid=…` and `csrftoken=…`.
+   - **Never paste them in chat.** I'll read the file only from scripts on the Pi.
+3. Tell me it's done. I'll then:
+   - run custom screens to build a complete NSE/BSE universe (every company: market cap, sector, P/E, ROCE, growth, pledge %) for backtests;
+   - save a snapshot every week, building our own point-in-time history;
+   - collect concall/transcript links for the promise tracker.
+4. Sessions expire every few weeks. When a script reports "login expired", repeat step 2.
+5. If free screens turn out to be capped (no paging/export), I'll tell you before suggesting premium.
