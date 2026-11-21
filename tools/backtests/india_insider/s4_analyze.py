@@ -11,12 +11,15 @@ If a series ends early (delisted/merged) the last price is used ('truncated').
 Controls: 5 random (seed 11) from all PIT-filing NSE symbols with prices, mcap x0.5-x2 of event firm, listed >= 180 d
 before event, no own qualifying event within +-365 d, price on entry day. Excess = event - mean(controls).
 Stats: mean, 1/99 winsorised mean, median, hit, naive t, 95% bootstrap CI resampling event-months (2000).
-Usage: python3 s4_analyze.py OUTDIR"""
+Usage: python3 s4_analyze.py OUTDIR [--seed N] [--no-ctl-jump-screen] [--tag NAME]   (sensitivity runs write results_<tag>.*)"""
 import bisect, csv, json, math, os, random, sys
 from collections import defaultdict
 from datetime import date, datetime, timezone, timedelta
 
 S = sys.argv[1]; P = os.path.join(S, "prices")
+SEED = int(sys.argv[sys.argv.index("--seed") + 1]) if "--seed" in sys.argv else 11
+CTL_JUMP = "--no-ctl-jump-screen" not in sys.argv
+TAG = ("_" + sys.argv[sys.argv.index("--tag") + 1]) if "--tag" in sys.argv else ""
 H = {"3m": 63, "6m": 126, "12m": 252}
 LAST_OK = "2026-11-10"
 _cache = {}
@@ -135,7 +138,7 @@ universe = open(os.path.join(S, "universe.txt")).read().split()
 bench = load("^CRSLDX")
 funnel = defaultdict(int); funnel["events_2021_2024"] = len(ev)
 rows, missing = [], []
-rnd = random.Random(11)
+rnd = random.Random(SEED)
 for e in ev:
     sym, d = e["sym"], e["event_date"]
     px = load(sym)
@@ -178,7 +181,7 @@ for e in ev:
         j0 = entry(cp, d)
         if j0 is None or cp["d"][j0] != px["d"][i0]: continue
         cjump = any(not (0.5 < cp["adj"][j] / cp["adj"][j - 1] < 2.0) for j in range(j0 + 1, min(j0 + 253, len(cp["d"]))))
-        if cjump: continue
+        if cjump and CTL_JUMP: continue
         cr, _ = rets(cp, j0); ctl.append((c, cr))
         if len(ctl) == 5: break
     if len(ctl) < 3: funnel["lt3_controls"] += 1; continue
@@ -224,13 +227,13 @@ BEN = {"event vs NIFTY500": {k: stats([x["bex"][k] for x in rows], [x["month"] f
        "controls vs NIFTY500": {k: stats([x["cex"][k] for x in rows], [x["month"] for x in rows]) for k in H},
        "raw event return": {k: stats([x["r"][k] for x in rows], [x["month"] for x in rows]) for k in H}}
 json.dump({"funnel": funnel, "groups": G, "bench": BEN, "missing": missing, "rows": rows},
-          open(os.path.join(S, "results.json"), "w"), indent=1, default=str)
+          open(os.path.join(S, "results%s.json" % TAG), "w"), indent=1, default=str)
 def f(s, k="mean"):
     if s.get("n", 0) < 5: return f"n={s.get('n')}"
     return (f"n={s['n']:4d} mean {s['mean']*100:+6.1f}% [{s['ci'][0]*100:+.1f},{s['ci'][1]*100:+.1f}] "
             f"wmean {s['wmean']*100:+6.1f}% med {s['median']*100:+6.1f}% [{s['med_ci'][0]*100:+.1f},{s['med_ci'][1]*100:+.1f}] "
             f"hit {s['hit']*100:4.1f}% t {s['t']:+.2f}")
-with open(os.path.join(S, "results.txt"), "w") as o:
+with open(os.path.join(S, "results%s.txt" % TAG), "w") as o:
     o.write("FUNNEL " + json.dumps(funnel) + "\n")
     for g in G:
         for k in H: o.write(f"{g['name']:22s} {k:3s} {f(g[k])}\n")
@@ -240,4 +243,4 @@ with open(os.path.join(S, "results.txt"), "w") as o:
     if rows: o.write(f"median mcap {mcs[len(mcs)//2]:.0f} cr; median buy {vs[len(vs)//2]:.2f} cr; "
                      f"controls/event {sum(x['nctl'] for x in rows)/len(rows):.2f}\n")
     o.write(f"missing in-band events: {len(missing)}\n")
-print(open(os.path.join(S, "results.txt")).read())
+print(open(os.path.join(S, "results%s.txt" % TAG)).read())
