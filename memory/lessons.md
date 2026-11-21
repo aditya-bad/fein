@@ -95,3 +95,11 @@ US insider-buying clusters (849 events, 2021–24) vs size-matched random contro
 "Stronger" variants (3+ insiders, CEO/CFO buying) did worse. **Rule:** always test against matched
 controls, date signals at filing (not trade), audit survivorship, pre-register subgroup tests.
 Next: pre-registered "opportunistic insider" rule (train 2017–20, test 2021–24) and the India SEBI PIT version.
+
+## L15 (2026-11-21) — Historical blind drills don't work for an LLM; forward calls are the test
+Set 2 (money scaled, years relabelled) still 9/10 recognised from qualitative details (dual-class family
+control, a 74.8% promoter stake, an overseas plant, a common pandemic-era date). Across sets 1–2: 19/20 recognised.
+**Decision:** stop treating historical drills as a skill measure. Use them only as analysis *practice*.
+Skill is measured by **forward paper calls** (dated probabilities on events nobody knows yet) — make many,
+cheaply, every results season. Possible future v3: synthetic composite packets blending 2–3 companies.
+D017 (only clean drill): Brier 0.170 vs base-rate 0.230 (n=1 — meaningless alone).

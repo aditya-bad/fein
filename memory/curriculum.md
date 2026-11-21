@@ -31,7 +31,7 @@ dated, with probabilities, scored when the outcome arrives. Stored as memdb `the
 These are tests of methods, not recommendations.
 
 ## Gate to phase B (bring the user ideas)
-All of: ≥30 forward paper calls resolved with positive skill (the cleanest test, L11); ≥60 scored, unrecognised blind drills with Brier clearly better than a naive base-rate forecaster; ≥30 forward
+All of: ≥50 forward paper calls resolved with Brier clearly better than a naive base-rate forecaster (the only clean test — L11, L15); ≥30 forward
 paper calls resolved with positive skill; promise-tracker signal shown to predict something on ≥20
 companies; written post-mortems on misses. Until then: no idea-pitching (except "great stock spotted" notes).
 
@@ -40,7 +40,12 @@ companies; written post-mortems on misses. Until then: no idea-pitching (except 
 |---|---|---|---|---|---|
 | 2026-11-20 | 0 | – | – | 0 | loop started |
 | 2026-11-20 | paper calls: 7 opened (promise tracker, resolve Feb–May 2027) | | | 0 | |
+| 2026-11-21 | set 2: 1 of 10 usable (9 recognised); D017 Brier 0.170 vs base 0.230 | 0.170 | 0.230 | 0 | historical drills retired as skill test (L15) |
 | 2026-11-20 | set 1: 0 of 10 usable (all recognised) | – | – | 0 | method fixed → v2 anonymisation; forward calls prioritised |
+
+## Forward paper calls = main skill engine (L15)
+Target: 20–40 new dated calls each results season across India and US (guidance delivery, margin direction,
+capex commissioning, pledge changes, rating actions, earnings vs consensus). Cheap, many, scored.
 
 ## Open paper calls
 `python3 -m memdb search "" --tag paper-call` — resolve each after Q3/Q4 FY27 results; record outcome + Brier.
