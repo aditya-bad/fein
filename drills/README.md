@@ -17,3 +17,13 @@ Categories are recorded ONLY in the sealed files. This table deliberately does n
 | D010 | US | 2017 Q1 | packets/D010.md | sealed/D010.md |
 
 Build notes: data from screener.in (India; consolidated annual P&L/BS/CF/ratios and price-chart API) and SEC EDGAR XBRL companyfacts plus 10-K text (US). Figures are rounded to reduce exact-match lookup. Quarterly data is included where the source exposed it for the pre-T period. Indian packets mostly lack it, because screener only shows the latest ~13 quarters.
+
+## Drill index (set 2 (v2), built 2026-11-20)
+v2 anonymisation: generic sector words, all money multiplied by a hidden per-packet factor (0.3–3; recorded only in sealed files), fiscal years relabelled Y-7…Y0, price as an index (T = 100), no listing venue / subsidiaries / brands / group events / distinctive geography. Calendar dates of T are recorded only in sealed files.
+
+| Drill | Market | Set | Packet | Sealed |
+|---|---|---|---|---|
+| D011 | India | set 2 (v2) | packets/D011.md | sealed/D011.md |
+| D012 | US | set 2 (v2) | packets/D012.md | sealed/D012.md |
+| D013 | India | set 2 (v2) | packets/D013.md | sealed/D013.md |
+| D014 | India | set 2 (v2) | packets/D014.md | sealed/D014.md |

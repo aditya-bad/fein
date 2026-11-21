@@ -98,6 +98,8 @@ def main():
     sic = json.load(open(os.path.join(out, "sic.json")))
     bench = {b: load_px(pdir, b) for b in ("IWM", "SPY")}
     bidx = {b: {d: i for i, d in enumerate(px["d"])} for b, px in bench.items()}
+    rp = os.path.join(out, "renamed_tickers.json")
+    renamed = json.load(open(rp)) if os.path.exists(rp) else {}
     funnel = defaultdict(int); funnel["cluster_events_2021_2024"] = len(ev)
     res = []
     for e in ev:
@@ -108,8 +110,15 @@ def main():
         grp = "spac" if s in SPAC else "fund" if s in FUND else "bio" if s in BIO else "bank" if s in BANK else "other"
         if grp in ("spac", "fund"): funnel["spac_or_fund"] += 1; continue
         px = load_px(pdir, e["ticker"])
+        if px and px.get("missing") and e["issuer_cik"] in renamed:   # ticker changed later: use current one
+            px2 = load_px(pdir, renamed[e["issuer_cik"]][1])
+            if px2 and not px2.get("missing"):
+                px = px2; funnel["recovered_via_current_ticker"] += 1
         if px is None: funnel["price_not_fetched"] += 1; continue
         if px.get("missing"): funnel["yahoo_missing(delisted/renamed)"] += 1; e["_miss"] = 1; res.append(dict(e, grp=grp, status="missing")); continue
+        if e["ticker"] in ("NONE", "NA"): funnel["no_ticker"] += 1; continue
+        if px["d"][0] > "2020-12-05" and (date.fromisoformat(e["event_date"]) - date.fromisoformat(px["d"][0])).days < 180:
+            funnel["recent_listing(<180d: IPO/de-SPAC)"] += 1; continue
         i0 = entry_idx(px, e["event_date"])
         if i0 is None or (date.fromisoformat(px["d"][i0]) - date.fromisoformat(e["event_date"])).days > 7:
             funnel["no_price_at_entry"] += 1; res.append(dict(e, grp=grp, status="missing")); continue
@@ -150,6 +159,7 @@ def main():
         for (cik, t), px in poolpx.items():
             if cik == row["issuer_cik"]: continue
             if any(abs((dd - x).days) <= 365 for x in evdates.get(cik, [])): continue
+            if px["d"][0] > "2020-12-05" and (dd - date.fromisoformat(px["d"][0])).days < 180: continue
             i0 = entry_idx(px, d)
             if i0 is None or px["d"][i0] != row["entry"]: continue
             s_ = S3.shares_at(sh, cik, d)
