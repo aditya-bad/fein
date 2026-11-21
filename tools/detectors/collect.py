@@ -296,12 +296,14 @@ def days(frm, to):
 def run_one(con, name, day, fn):
     try:
         n = fn()
+        con.commit()   # one commit per dataset-day
         log.info("%-13s %s rows=%d", name, day, n)
         con.execute("INSERT INTO runs VALUES(datetime('now'),?,?,?,?,?)", (name, day, n, "ok", ""))
         con.commit()
         return True
     except Exception as e:
         log.error("%-13s %s FAILED: %s", name, day, e)
+        con.rollback()
         con.execute("INSERT INTO runs VALUES(datetime('now'),?,?,?,?,?)", (name, day, 0, "error", str(e)[:300]))
         con.commit()
         return False
@@ -351,6 +353,10 @@ def main():
     if a.selftest:
         return selftest()
     C.setup_logging("collect")
+    lock = C.single_instance("collect")
+    if not lock:
+        log.error("another collect.py is still running; exiting")
+        return 1
     want = set((a.only or ",".join(DATASETS)).split(","))
     if a.no_bse:
         want.discard("bse")
@@ -365,6 +371,8 @@ def main():
                 results.append(run_one(con, name, day, lambda: fn(con, day)))
     if "pledges" in want:
         results.append(run_one(con, "pledges", t.isoformat(), lambda: fetch_pledges(con, t.isoformat())))
+    con.execute("PRAGMA wal_checkpoint(TRUNCATE)")
+    con.close()
     log.info("collect done: %d/%d steps ok", sum(results), len(results))
     return 0 if any(results) else 1
 

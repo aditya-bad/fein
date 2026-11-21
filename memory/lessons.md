@@ -109,3 +109,12 @@ Cummins India practice: royalty + support services to the parent rose from 8.8% 
 cash to parent ≈8.9% of sales; royalty agreement expires 31-Mar-2027; 51% of purchases and most exports are
 intra-group at cost-plus — so "weak rupee helps exporters" mostly helps the parent. Best source: the
 AGM-notice related-party annex (formulas, rates, sunset dates). Protocol v1.1 adds a parent-take table.
+
+## L17 (2026-11-21) — First positive, out-of-sample finding: Indian post-earnings drift
+Pre-registered PEAD test (580 cos, 10,026 events): top-minus-bottom SUE quintile +4.24% over 63 days in the
+2022–25 TEST period (t 3.99; train +4.84%, t 4.06). Long-only top quintile vs size-matched controls +2.36%
+gross (t 3.23), +1.36% net of 1% costs — misses our pre-committed cost bar by 0.06 pp (reported, not rounded up).
+Bottom quintile (big misses) is the strongest leg (≈ −2.1 to −2.7%, t ≈ −4.5). Small-vs-large hypothesis NOT supported.
+**Use:** a timing/filter layer, not a multibagger method — avoid/exit after big earnings misses; tilt research
+toward top surprises; ~30-name baskets. Exploratory (needs fresh pre-registration): mid-cap tertile strongest;
+"price rose on results" filter; 2025 weak (decay or noise). Weakness: standalone EPS, price-only, sample not universe.

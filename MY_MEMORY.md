@@ -104,6 +104,15 @@ from Buffett's letters and Howard Marks' memos**, and **Indian base rates** (abo
 issue price; ~3 in 4 active funds lag the index over 10 years; momentum and value factors have worked in
 India, small size by itself has not).
 
+## 5c. Tested on real data (Nov 2026) — what holds and what doesn't
+- **US insider buying clusters:** no edge vs similar random stocks (12-month excess 0.0%).
+- **Indian promoter buying:** not reliable — a few big winners make the average look good; the typical case lags.
+- **Indian post-earnings drift: REAL.** Stocks with the biggest earnings surprise beat the biggest disappointments
+  by ~4.2% over the next 3 months, and it held in a fresh 2022–25 test. After trading costs, buying only the winners
+  is borderline. **The clearest use: don't hold (or don't buy) a stock right after a big earnings miss.**
+- **Blind historical drills don't work for an AI** (it recognised 19/20 companies). So we test skill with
+  dated predictions about the future instead: 42+ open, scored from Jan 2027.
+
 ## 5b. New things we learned in the knowledge scout
 - **Valuation timing matters.** Since 2004, every negative 5-year Nifty return started at P/E ≥ 24.5;
   starting below P/E 12 gave ~29%/yr.

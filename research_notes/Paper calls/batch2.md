@@ -19,7 +19,7 @@ Method balance target for batch 2 (user brief): at least 5 calls per method, and
 insurance, AMC, exchange, cement, steel, aluminium/copper, real estate, defence, EMS, telecom, card issuer, infra/EPC,
 US money-centre and regional bank, net-lease REIT, utility, SaaS, consumer staples, energy, levered cable.
 
-**Count:** 16 calls — india: 16, us: 0. By method: promise-tracker: 5, mgmt-tone: 4, sector-cycle: 3, base-rate: 3, valuation-temperature: 1.
+**Count:** 35 calls — india: 21, us: 14. By method: mgmt-tone: 7, sector-cycle: 7, promise-tracker: 6, base-rate: 5, valuation-temperature: 5, flags-judgment: 5.
 
 ## Summary table
 
@@ -41,6 +41,25 @@ US money-centre and regional bank, net-lease REIT, utility, SaaS, consumer stapl
 | 14 | india | BHARTIARTL | Bharti Airtel announces a headline prepaid mobile tariff increase (≥10% on its core unlimited plans) by 30-Jun-2027 | sector-cycle | 0.35 | 0.30 | 2027-06-30 |
 | 15 | india | TITAN | Titan's share price return from 20-Nov-2026 to 30-Jun-2027 beats the Nifty 50's price return | valuation-temperature | 0.45 | 0.48 | 2027-06-30 |
 | 16 | india | POLYCAB | Polycab India Q3 FY27 consolidated operating margin is ≥13.0% | mgmt-tone | 0.72 | 0.70 | 2027-02-28 |
+| 17 | india | KAYNES | Kaynes Technology Q3 FY27 consolidated revenue from operations is ≥₹1,050 cr | flags-judgment | 0.38 | 0.45 | 2027-02-28 |
+| 18 | india | AFCONS | Afcons Infrastructure Q3 FY27 consolidated revenue from operations is ≥₹2,976 cr (no YoY decline vs Q3 FY26) | flags-judgment | 0.28 | 0.32 | 2027-02-28 |
+| 19 | india | SBICARD | SBI Cards Q3 FY27 gross NPA ratio is ≤1.90% (no rise from Q2 FY27) | sector-cycle | 0.55 | 0.65 | 2027-02-15 |
+| 20 | india | ICICIGI | ICICI Lombard Q3 FY27 combined ratio is ≤103.5% | mgmt-tone | 0.55 | 0.40 | 2027-02-15 |
+| 21 | india | HINDALCO | Hindalco's share price return from 20-Nov-2026 to 30-Jun-2027 beats the Nifty 50's price return | valuation-temperature | 0.42 | 0.48 | 2027-06-30 |
+| 22 | us | OPTU | Optimum Communications (ex-Altice USA) or its subsidiary CSC Holdings files for Chapter 11 by 30-Jun-2027 | flags-judgment | 0.65 | 0.55 | 2027-06-30 |
+| 23 | us | MPWR | Monolithic Power Systems' FY2026 10-K concludes internal control over financial reporting is effective (the deferred-tax material weakness is remediated) | flags-judgment | 0.55 | 0.65 | 2027-03-15 |
+| 24 | us | PAYO | Payoneer's FY2026 10-K concludes internal control over financial reporting is effective (the Q3-2026 material weakness is remediated) | flags-judgment | 0.22 | 0.30 | 2027-03-31 |
+| 25 | us | JPM | JPMorgan Chase's initial full-year 2027 net interest income guidance (given with Q4 2026 results, Jan 2027) is ≥$110 bn | mgmt-tone | 0.38 | 0.45 | 2027-01-31 |
+| 26 | us | PNC | PNC Financial Q4 2026 net interest income is ≥$4,250 m | sector-cycle | 0.60 | 0.55 | 2027-01-31 |
+| 27 | us | O | Realty Income's initial 2027 AFFO per share guidance has a midpoint ≥$4.59 (≥~3% above 2026 guidance midpoint) | sector-cycle | 0.40 | 0.50 | 2027-03-15 |
+| 28 | us | NEE | The Virginia State Corporation Commission issues a final order approving (with or without conditions) the NextEra–Dominion combination by 31-Mar-2027 | base-rate | 0.55 | 0.62 | 2027-04-15 |
+| 29 | us | KO | Coca-Cola's initial full-year 2027 organic revenue growth guidance is ≥6% (low end or point estimate) | base-rate | 0.22 | 0.30 | 2027-02-28 |
+| 30 | us | PG | Procter & Gamble reports Q2 FY27 (Oct–Dec 2026) organic sales growth ≥3% | mgmt-tone | 0.45 | 0.40 | 2027-01-31 |
+| 31 | us | XOM | ExxonMobil's Q4 2026 adjusted (non-GAAP) EPS is ≥$4.23 (at or above Q3 2026) | sector-cycle | 0.35 | 0.50 | 2027-02-15 |
+| 32 | us | CRM | Salesforce's initial FY28 revenue guidance midpoint implies ≥10% YoY growth over FY27 actual revenue | promise-tracker | 0.30 | 0.25 | 2027-03-15 |
+| 33 | us | ADBE | Adobe's share price return from 20-Nov-2026 to 30-Jun-2027 beats SPY's price return | valuation-temperature | 0.52 | 0.48 | 2027-06-30 |
+| 34 | us | COST | Costco's share price return from 20-Nov-2026 to 30-Jun-2027 beats SPY's price return | valuation-temperature | 0.42 | 0.48 | 2027-06-30 |
+| 35 | us | SNOW | Snowflake's share price return from 20-Nov-2026 to 30-Jun-2027 beats SPY's price return | valuation-temperature | 0.43 | 0.48 | 2027-06-30 |
 
 ## Evidence and resolution rules
 
@@ -219,6 +238,215 @@ US money-centre and regional bank, net-lease REIT, utility, SaaS, consumer stapl
 - **Resolution source:** Polycab Q3 FY27 results (NSE) / screener.in consolidated quarterly table
 - **Sources used:** https://nsearchives.nseindia.in/corporate/POLYCAB_19102026163912_Intimation_of_Earnings_Call_Transcript.pdf; https://www.screener.in/company/POLYCAB/consolidated/
 - **Confidence of evidence:** verified
+
+### 17. KAYNES — Kaynes Technology Q3 FY27 consolidated revenue from operations is ≥₹1,050 cr
+- **id:** `thesis:paper-call:KAYNES:q3fy27-revenue-1050cr-plus`
+- **Method:** flags-judgment context · **P(ours)** 0.38 · **P(base)** 0.45 · resolve by 2027-02-28
+- **Evidence:** Q2 FY27 call (16-Nov-2026): consolidated revenue ₹952.5 cr, EBITDA ₹125.6 cr (13.2%), PAT ₹39.8 cr; H1 revenue ₹1,898.7 cr, EBITDA margin 14.1%. Flags: change of auditor (new auditor Walker Chandiok & Co); FY26 and Q1 FY27 comparatives restated (FY26 revenue ₹3,620 cr→₹3,680 cr, FY26 EBITDA margin 15.8%→14.2%; bill-discounted receivables moved into borrowings); limited-review conclusion 'not modified' but carries an emphasis of matter on the restatement. Smart-meter business deliberately throttled: revenue there 'purely based on the amount of collection', target total smart-meter receivables <₹750 cr (₹1,091 cr at Sep-26 vs ₹1,402 cr Jun-26); H1 smart-meter revenue ~₹270 cr vs ~₹960 cr in all of FY26. Management: 'confident of growing the electronic business… more than 30% for FY27', 'second half is stronger… in revenue and margins', OSAT revenue started and PCB unit contributes from Q3. Screener (₹ cr): sales Dec-24 661, Mar-25 984, Jun-25 673, Sep-25 912, Dec-25 804, Mar-26 1,243, Jun-26 946, Sep-26 953 (+4% YoY); OPM 13% in Q2.
+- **Why our number differs from base:** The flags here (auditor change, restatement, receivable reclassification) have teeth for revenue specifically because management is now explicitly trading revenue for collections in the meter business. ₹1,050 cr needs +10% QoQ while the highest-margin, previously fastest-growing line shrinks; new OSAT/PCB units are just ramping. We set our number below a naive 'H2 is seasonally bigger and management says stronger' reading.
+- **Base-rate reasoning:** Kaynes' Q3 revenue was below Q2 in FY26 (804 vs 912) but above it in FY25 (661 vs 572); a naive forecaster taking management's 'stronger H2' at face value puts ≥10% QoQ growth near 45%.
+- **Resolution rule:** YES if Kaynes Technology's consolidated revenue from operations for the quarter ended 31-Dec-2026 (results filing; equivalently screener.in consolidated 'Sales') is ≥₹1,050 cr. Use the figure as first reported, not later restatements.
+- **Resolution source:** Kaynes Technology Q3 FY27 results (NSE filing) / screener.in consolidated quarterly table
+- **Sources used:** https://nsearchives.nseindia.in/corporate/KAYNESTECH_20112026152655_TranscriptoftheEarningAnnouncement.pdf; https://www.screener.in/company/KAYNES/consolidated/
+- **Confidence of evidence:** verified
+
+### 18. AFCONS — Afcons Infrastructure Q3 FY27 consolidated revenue from operations is ≥₹2,976 cr (no YoY decline vs Q3 FY26)
+- **id:** `thesis:paper-call:AFCONS:q3fy27-revenue-yoy-nonnegative`
+- **Method:** flags-judgment context · **P(ours)** 0.28 · **P(base)** 0.32 · resolve by 2027-02-28
+- **Evidence:** NSE pledge data (as of 30-Sep-2026 shareholding): promoters (Shapoorji Pallonji group) hold 50.17%, 53.29% of promoter holding pledged. Q2 FY27 call (5-Nov-2026): company 'revenue' ₹2,906 cr incl. other income (revenue from operations per screener ₹2,635 cr), EBITDA ₹316 cr (10.9%, incl. other income), PAT ₹41 cr; H1 top line −13.6% YoY; 'payments are being stretched' by state agencies, UP Jal Jeevan Mission dues ₹372 cr outstanding, paid only after 75% completion; growth guidance 'held back' due to geopolitical uncertainty; 'Second half would be definitely higher than the first half'; order intake ₹19,437 cr YTD vs FY27 guidance ₹30,000 cr; order book ex-L1 ₹43,836 cr. Screener revenue from operations (₹ cr): Dec-24 3,211, Mar-25 3,223, Jun-25 3,370, Sep-25 2,988, Dec-25 2,976, Mar-26 2,614, Jun-26 2,671, Sep-26 2,635 — three straight YoY declines (−19%, −21%, −12%).
+- **Why our number differs from base:** Flags-judgment test: the loud flag is the group pledge, but for this specific event we think it is mostly noise; the flag with teeth is customer payment stretch, which management says it will not fund ('we do not want to go overboard in terms of funding any project'). That caps execution. Q3 needs ~+13% QoQ to reach last year's level. Order wins are real but convert to revenue with a lag. We sit a little under the persistence base.
+- **Base-rate reasoning:** Persistence: after three consecutive YoY revenue declines, the naive chance the next quarter is flat-or-up YoY is roughly one in three.
+- **Resolution rule:** YES if Afcons Infrastructure's consolidated revenue from operations for the quarter ended 31-Dec-2026 (results filing; screener.in consolidated 'Sales') is ≥₹2,976 cr. Other income is excluded.
+- **Resolution source:** Afcons Q3 FY27 results (NSE filing) / screener.in consolidated quarterly table; NSE pledge disclosures
+- **Sources used:** https://nsearchives.nseindia.in/corporate/AFCONS_06112026175905_Afcons_Intimation_TranscriptofEarningsCall_Q2H1FY27.pdf; https://www.screener.in/company/AFCONS/consolidated/; https://www.nseindia.com/companies-listing/corporate-filings-pledged-data
+- **Confidence of evidence:** verified
+
+### 19. SBICARD — SBI Cards Q3 FY27 gross NPA ratio is ≤1.90% (no rise from Q2 FY27)
+- **id:** `thesis:paper-call:SBICARD:q3fy27-gnpa-at-or-below-1-90`
+- **Method:** sector cycle/lead indicator · **P(ours)** 0.55 · **P(base)** 0.65 · resolve by 2027-02-15
+- **Evidence:** Q2 FY27 call (29-Oct-2026): GNPA 1.90% (−14 bps QoQ, −95 bps YoY), NNPA 0.77%, gross credit cost 5.6% (−98 bps QoQ); management overlay raised by ₹30 cr to ₹100 cr citing 'prolonged conflict in West Asia… higher energy prices, inflation and interest rates may impact household cash flows'; guide 'gross credit costs to stay around 6% for the current financial year' and 'we don't expect the credit costs to moderate much beyond' 5.5–6%; cost of funds 6.8% (+18 bps QoQ) and 'expected to increase over the next few quarters'; receivables ₹58,376 cr, festive spends to lift receivables in Q3. Screener GNPA: Jun-24 3.06%, Sep-24 3.27%, Dec-24 3.24%, Mar-25 3.08%, Jun-25 3.07%, Sep-25 2.85%, Dec-25 2.86%, Mar-26 2.41%, Jun-26 2.04%, Sep-26 1.90%.
+- **Why our number differs from base:** Lead indicator: RBI has hiked (repo 5.5%, more expected), fuel inflation is squeezing households, and management itself built an overlay and called the credit-cost bottom. Unsecured card delinquencies respond to rate/inflation shocks with a 1–3 quarter lag. Festive receivable growth (bigger denominator) helps the ratio, so we stay just above even, but below the trend-following base.
+- **Base-rate reasoning:** Trend persistence: GNPA has fallen in each of the last four quarters; a naive forecaster gives ~65% to another non-rise.
+- **Resolution rule:** YES if SBI Cards and Payment Services' reported gross NPA ratio (% of gross advances/receivables) for the quarter ended 31-Dec-2026 is ≤1.90% (two decimals as reported).
+- **Resolution source:** SBI Cards Q3 FY27 results / investor presentation (NSE) / screener.in quarterly table
+- **Sources used:** https://nsearchives.nseindia.in/corporate/SBICPSL_29102026165052_SEfilingtranscriptoct2026.pdf; https://www.screener.in/company/SBICARD/
+- **Confidence of evidence:** verified
+
+### 20. ICICIGI — ICICI Lombard Q3 FY27 combined ratio is ≤103.5%
+- **id:** `thesis:paper-call:ICICIGI:q3fy27-combined-ratio-103-5-or-better`
+- **Method:** management-tone-vs-delivery · **P(ours)** 0.55 · **P(base)** 0.40 · resolve by 2027-02-15
+- **Evidence:** Q2 FY27 call (Oct-2026): combined ratio 104.5% (102.7% ex-CAT losses of ₹118 cr) vs 103.9% in Q2 FY26; H1 FY27 105.2% (104.2% ex-CAT) vs 103.0% — H1 included provisions on motor third-party reserves after a Supreme Court judgement; management: 'we do not anticipate any need for any further requirement of provision' on that; industry motor combined ratio deteriorating (industry CoR 116.8% in Q1 FY27); GDPI +5.4% H1 vs industry +8.9%, fire de-growth easing. Q3 FY26 transcript (19-Jan-2026): Q3 FY26 combined ratio 103.1% (n basis); 9M FY26 103.1%. Q2 FY27 PAT ₹1,031 cr (+27.5%).
+- **Why our number differs from base:** Management sounds confident the TP reserve hit was one-off and Q3 is usually light on catastrophe losses; Q2 ex-CAT was already 102.7%. The delivery record on 'no further provisions' statements in Indian GI is mixed, but here the arithmetic supports it. We go above the backward-looking base.
+- **Base-rate reasoning:** Naive: average of the last three reported quarterly combined ratios (Q3 FY26 103.1%, Q1 FY27 ~105.9% implied from H1, Q2 FY27 104.5%) is ~104.5%; chance of printing ≤103.5% is ~40%.
+- **Resolution rule:** YES if ICICI Lombard's reported combined ratio (n basis, including CAT losses, as stated in the Q3 FY27 press release/presentation) for the quarter ended 31-Dec-2026 is ≤103.5%.
+- **Resolution source:** ICICI Lombard Q3 FY27 press release / investor presentation (NSE)
+- **Sources used:** https://nsearchives.nseindia.in/corporate/ICICIGI_19102026131424_SE_Intimation_Earnings_call_transcript.pdf; https://nsearchives.nseindia.in/corporate/ICICIGI_19012026180922_SE_Intimation_-_Earnings_Call_Transcript.pdf; https://www.screener.in/company/ICICIGI/
+- **Confidence of evidence:** verified
+
+### 21. HINDALCO — Hindalco's share price return from 20-Nov-2026 to 30-Jun-2027 beats the Nifty 50's price return
+- **id:** `thesis:paper-call:HINDALCO:peak-cycle-cheap-vs-nifty-to-jun27`
+- **Method:** valuation-temperature · **P(ours)** 0.42 · **P(base)** 0.48 · resolve by 2027-06-30
+- **Evidence:** Yahoo/screener 20-Nov-2026: Hindalco ₹929.5 (52-wk ₹772–1,179); Nifty 50 25,800.6. Screener: P/E 8.97 on TTM EPS ₹85.4, P/B ~1.3, market cap ₹2.09 lakh cr; but earnings are at a cyclical peak: quarterly OP ₹13,932 cr (Jun-26) and ₹12,814 cr (Sep-26) vs ₹7,500–10,000 cr in the prior eight quarters; H1 FY27 EPS ₹64.7 (≈₹130 annualised). Q2 FY27 call (12-Nov-2026): record copper EBITDA ₹1,673 cr on 'elevated LME prices'; aluminium hedged only ~29% of rest-of-FY27 at $3,000/t; Novelis EBITDA/t $289 in Q2 vs $600 long-term guide, Oswego normalised, Bay Minette commercial shipments slipped to Q1 FY28; net debt/EBITDA 1.8×; ₹50,000 cr India capex programme.
+- **Why our number differs from base:** Valuation-temperature with a cyclical twist: the stock is 'cold' on P/E but that P/E is computed on peak commodity earnings with mostly unhedged LME exposure. The classic pattern (low P/E at the top of the cycle) argues slightly against outperformance; offset by Novelis recovery optionality.
+- **Base-rate reasoning:** A single Nifty-50 large cap beats the index over ~7 months a bit under half the time (~48%).
+- **Resolution rule:** YES if (Hindalco NSE close on 30-Jun-2027 ÷ 929.5) > (Nifty 50 close on 30-Jun-2027 ÷ 25,800.6). Use the last trading day ≤30-Jun-2027; adjust for splits/bonuses; dividends ignored.
+- **Resolution source:** NSE / Yahoo Finance closes (HINDALCO.NS, ^NSEI)
+- **Sources used:** https://query1.finance.yahoo.com/v8/finance/chart/HINDALCO.NS; https://query1.finance.yahoo.com/v8/finance/chart/%5ENSEI; https://www.screener.in/company/HINDALCO/consolidated/; https://nsearchives.nseindia.in/corporate/HINDALCOIND_12112026113611_Q2FY27_Transcript_signed.pdf
+- **Confidence of evidence:** verified
+
+### 22. OPTU — Optimum Communications (ex-Altice USA) or its subsidiary CSC Holdings files for Chapter 11 by 30-Jun-2027
+- **id:** `thesis:paper-call:US-OPTU:chapter11-filing-by-jun27`
+- **Method:** flags-judgment context · **P(ours)** 0.65 · **P(base)** 0.55 · resolve by 2027-06-30
+- **Evidence:** 8-K (16-Nov-2026): CSC Holdings 'elected not to make' ~$102.5m of interest due 16-Nov-2026 on its 11.25% 2028, 4.5% 2031 guaranteed and 5% 2031 notes, entering a 30-day grace period; negotiating with 'the steering committee of an ad hoc group of debtholders' that 'holds the vast majority of the nearly $22 billion of debt'; any deal 'would result in a material reduction of the indebtedness'; 'cannot provide any assurances that such an agreement will be reached within the Grace Period or at all'; cash $1.1bn at 30-Sep-2026. 10-Q (Q2 2026, as restated): going-concern 'substantial doubt' with $4.1225bn principal maturing April 2027 and $2.225bn later in 2027 vs cash $1.30bn; Q2 2026 financials restated for an ASC 740 deferred-tax error (non-reliance), alongside cable-franchise impairments.
+- **Why our number differs from base:** Flags-judgment: here the flags (going-concern doubt, skipped coupon, restatement, a $4.1bn April-2027 maturity it cannot pay from cash) all point at the same event and have teeth. With a 'vast majority' ad hoc group already organised, the efficient route to bind holdouts across a ~$22bn multi-tranche structure is usually a pre-packaged or pre-negotiated Chapter 11; an out-of-court exchange is possible but needs near-unanimity. We lean above the reference class.
+- **Base-rate reasoning:** Reference class (unverified, from memory of rating-agency default studies): issuers that skip a coupon and enter a grace period while negotiating with an ad hoc group end in a bankruptcy filing within ~6–8 months a bit over half the time; the rest are distressed exchanges or extensions.
+- **Resolution rule:** YES if Optimum Communications, Inc., CSC Holdings LLC or any parent/intermediate holding company of CSC Holdings files a voluntary or involuntary petition under Chapter 11 (including a pre-packaged case) on or before 30-Jun-2027, per an 8-K or the bankruptcy docket. A purely out-of-court exchange does not count.
+- **Resolution source:** SEC EDGAR 8-K filings of Optimum Communications (CIK 1702780) / PACER or claims-agent docket
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/1702780/000170278026000077/optu-20261116.htm; https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1702780
+- **Confidence of evidence:** verified
+
+### 23. MPWR — Monolithic Power Systems' FY2026 10-K concludes internal control over financial reporting is effective (the deferred-tax material weakness is remediated)
+- **id:** `thesis:paper-call:US-MPWR:material-weakness-remediated-fy26-10k`
+- **Method:** flags-judgment context · **P(ours)** 0.55 · **P(base)** 0.65 · resolve by 2027-03-15
+- **Evidence:** Q3 2026 10-Q: a material weakness 'related to the accounting for deferred income taxes' associated with 'a one-time tax incentive granted by a certain foreign jurisdiction' was identified at FY2025 year-end; it 'was not remediated as of September 30, 2026'; disclosure controls 'not effective'; management still concluded the financial statements are fairly presented. Business is strong: Q3 2026 revenue $1,202.4m (+63.1% YoY, +22.6% QoQ), non-GAAP gross margin 55.7%, Q4 guide $1,315–1,385m; capacity $6bn → $8bn by H2 2027.
+- **Why our number differs from base:** Flags-judgment: this flag is narrow (one tax-accounting area, not revenue) and low-teeth for the business, but the event is about remediation itself. Nine months in with no remediation claim and a fast-growing, more complex foreign-tax footprint argues for some slippage; still, single-area tax weaknesses at well-funded companies are usually closed within a year.
+- **Base-rate reasoning:** Reference class (unverified, Audit Analytics-type studies from memory): roughly two-thirds of material weaknesses disclosed in a 10-K are reported remediated in the next annual report.
+- **Resolution rule:** YES if MPWR's 10-K for fiscal year ended 31-Dec-2026 states that internal control over financial reporting was effective as of 31-Dec-2026 and that the previously reported material weakness has been remediated (and no new material weakness is reported). NO otherwise, including if the 10-K is not filed by 15-Mar-2027.
+- **Resolution source:** SEC EDGAR — MPWR FY2026 Form 10-K, Item 9A
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/1280452/000162828026068202/mpwr-20260930xexx991.htm; https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1280452&type=10-Q
+- **Confidence of evidence:** single-source
+
+### 24. PAYO — Payoneer's FY2026 10-K concludes internal control over financial reporting is effective (the Q3-2026 material weakness is remediated)
+- **id:** `thesis:paper-call:US-PAYO:material-weakness-remediated-fy26-10k`
+- **Method:** flags-judgment context · **P(ours)** 0.22 · **P(base)** 0.30 · resolve by 2027-03-31
+- **Evidence:** Q3 2026 10-Q: after the Q2 10-Q, management 'identified an error in Financial income (expense), net', corrected out-of-period (not restated); identified a material weakness in operating effectiveness of related controls; disclosure controls 'not effective' at 30-Sep-2026; remediation 'will require validation and testing of the operating effectiveness of internal controls over a sustained period of financial reporting cycles… timing… is uncertain'. Q3 2026 release (5-Nov-2026): revenue $276.9m (+2%), revenue ex-interest +5%, volume +13%, B2B volume +59%; pending merger with Nuvei (stockholders approved 14-Sep-2026; targeted mid-2027 close) and recent executive-management changes.
+- **Why our number differs from base:** The flag itself is low-teeth for the business (an out-of-period financial-income error), but the question is timing: only one quarter of testing is available before year-end, management's own language warns of 'sustained period' testing, and attention is on the Nuvei merger and leadership changes. We go below the base.
+- **Base-rate reasoning:** Reference class (unverified): material weaknesses first disclosed in a Q3 10-Q are reported remediated by that fiscal year's 10-K only about a third of the time or less.
+- **Resolution rule:** YES if Payoneer's 10-K for fiscal year ended 31-Dec-2026 states ICFR was effective as of 31-Dec-2026 and the material weakness disclosed in the Q3 2026 10-Q is remediated, with no new material weakness. NO otherwise, including if no 10-K is filed by 31-Mar-2027.
+- **Resolution source:** SEC EDGAR — Payoneer Global FY2026 Form 10-K, Item 9A
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/1845815/000110465926123062/payo-ex99d1.htm; https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1845815&type=10-Q
+- **Confidence of evidence:** single-source
+
+### 25. JPM — JPMorgan Chase's initial full-year 2027 net interest income guidance (given with Q4 2026 results, Jan 2027) is ≥$110 bn
+- **id:** `thesis:paper-call:US-JPM:initial-fy27-nii-guide-110bn-plus`
+- **Method:** management-tone-vs-delivery · **P(ours)** 0.38 · **P(base)** 0.45 · resolve by 2027-01-31
+- **Evidence:** Q3 2026 earnings release (Oct-2026): net revenue $50.9bn (+8%), NII $27.1bn (+13%), NII ex-Markets $24.7bn (+6%); net income $15.3bn; Dimon: 'large fiscal deficits, sticky inflation, elevated asset prices, rising interest rates and geopolitical conditions continue to shift under the surface… we remain prepared for a wide range of outcomes.' SEC XBRL (InterestIncomeExpenseNet, GAAP): Q1 2026 $25.37bn, Q2 $25.51bn, Q3 $27.04bn (9M $77.9bn) vs FY2025 $95.44bn. US 10-yr ~4.9–5.1% (Yahoo ^TNX).
+- **Why our number differs from base:** Management-tone test: JPM's outlook language is habitually cautious and its January NII guides have tended to sit close to the Q4 run-rate ×4 (history from memory, unverified). Q3 ×4 is ~$108bn; reaching a ≥$110bn guide needs a Q4 step-up plus explicit growth assumptions that Dimon's tone argues against. We lean below base.
+- **Base-rate reasoning:** Naive: initial guide ≈ Q4 2026 NII ×4; with Q4 likely ~$27–27.5bn, ≥$110bn needs a guide above run-rate — roughly 45%.
+- **Resolution rule:** YES if the firmwide (total, managed basis) FY2027 NII outlook in JPM's Q4 2026 earnings presentation/call is ≥$110bn ('~$110bn' or a range with midpoint ≥$110bn counts). If only NII ex-Markets is guided, add the stated Markets NII assumption if given; otherwise void.
+- **Resolution source:** JPMorgan Chase Q4 2026 earnings presentation / call (jpmorganchase.com IR) and 8-K
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/19617/000162828026065582/a3q26erfexhibit991narrative.htm; https://data.sec.gov/api/xbrl/companyconcept/CIK0000019617/us-gaap/InterestIncomeExpenseNet.json
+- **Confidence of evidence:** verified
+
+### 26. PNC — PNC Financial Q4 2026 net interest income is ≥$4,250 m
+- **id:** `thesis:paper-call:US-PNC:q4-2026-nii-4250m-plus`
+- **Method:** sector cycle/lead indicator · **P(ours)** 0.60 · **P(base)** 0.55 · resolve by 2027-01-31
+- **Evidence:** Q3 2026 financial highlights (Oct-2026): NII $4,206m (+2% QoQ, +15% YoY incl. FirstBank), NIM 2.94%; Q2 2026 NII $4,107m, Q3 2025 $3,648m; 'commercial loan growth and higher yields on interest-earning assets, partially offset by increased funding costs'; efficiency ratio 57%; Q4 buybacks to approximate Q3. US 10-yr yield Q4-to-date average 5.07% vs 4.75% in Q3 (Yahoo ^TNX).
+- **Why our number differs from base:** Lead indicator: higher long rates keep lifting yields on PNC's repricing fixed-rate securities and loans (a multi-year tailwind the bank has cited), while loan growth continues; funding costs are the offset. $4,250m is only +1% QoQ, below the recent QoQ pace, so we lean slightly above the base.
+- **Base-rate reasoning:** Naive: NII rose QoQ in each of the last two reported quarters; a ≥1% QoQ rise in the next quarter has roughly 55% odds for a large regional bank.
+- **Resolution rule:** YES if PNC's reported total net interest income (GAAP, not fully taxable-equivalent) for the quarter ended 31-Dec-2026 is ≥$4,250m per its Q4 2026 earnings release.
+- **Resolution source:** PNC Q4 2026 financial highlights / earnings release (8-K, EDGAR)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/713676/000162828026065936/q32026financialhighlightsa.htm; https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX
+- **Confidence of evidence:** single-source
+
+### 27. O — Realty Income's initial 2027 AFFO per share guidance has a midpoint ≥$4.59 (≥~3% above 2026 guidance midpoint)
+- **id:** `thesis:paper-call:US-O:initial-2027-affo-guide-midpoint-4-59-plus`
+- **Method:** sector cycle/lead indicator · **P(ours)** 0.40 · **P(base)** 0.50 · resolve by 2027-03-15
+- **Evidence:** Q3 2026 release (Nov-2026): AFFO/share $1.12 (+3.7% YoY); 2026 AFFO guidance raised to $4.45–4.46 (from $4.44–4.45); YTD $3.35; reaffirmed $10.0bn 2026 investment volume; 116th consecutive quarterly dividend increase, annualised $3.258 (72.6% payout); raised $472.5m equity at ~$60.49 via ATM forwards, ~18.5m forward shares (~$1.1bn) unsettled. US 10-yr ~4.9–5.1% (Yahoo ^TNX), up from ~4.1% a year earlier.
+- **Why our number differs from base:** Sector-cycle lead indicator: net-lease AFFO growth = investment spread × volume. With the 10-year near 5% and the stock (cost of equity) weak, spreads on new acquisitions compress and the company usually guides initial growth conservatively. We lean under even odds for a ≥3% midpoint.
+- **Base-rate reasoning:** Naive: Realty Income's initial annual AFFO guides have implied ~1–4% growth (from memory, unverified); a ≥3% midpoint is roughly a coin flip.
+- **Resolution rule:** YES if the first 2027 AFFO per share guidance range Realty Income publishes (whenever issued, normally with Q4 2026 results) has a midpoint ≥$4.59. If no 2027 guidance is published by 15-Mar-2027, void.
+- **Resolution source:** Realty Income Q4 2026 earnings release / supplemental (8-K, EDGAR; realtyincome.com IR)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/726728/000072672826000056/o-991q32026.htm; https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX
+- **Confidence of evidence:** single-source
+
+### 28. NEE — The Virginia State Corporation Commission issues a final order approving (with or without conditions) the NextEra–Dominion combination by 31-Mar-2027
+- **id:** `thesis:paper-call:US-NEE:virginia-scc-approves-dominion-merger-by-mar27`
+- **Method:** base rate · **P(ours)** 0.55 · **P(base)** 0.62 · resolve by 2027-04-15
+- **Evidence:** NEE Q3 2026 release (Oct-2026): shareholders of both companies approved the combination on 3-Sep-2026; 'In Virginia and South Carolina, procedural schedules have been set with hearings in November and December, respectively, and the companies expect final orders in January 2027'; North Carolina procedural schedule set; a Virginia 'comprehensive benefits package centered around affordability'; closing expected in H2 2027. NEE reaffirmed 2026 adjusted EPS $3.92–4.02 (targeting the high end).
+- **Why our number differs from base:** Base-rate test: state utility-merger approvals usually come within a couple of months of company-expected dates, but Virginia is the politically hardest state here (data-centre load growth, bill affordability, Dominion's home state), and an SCC order with unacceptable conditions or a delayed schedule is plausible. We shade below the reference class and give two months of slack past January.
+- **Base-rate reasoning:** Reference class (unverified): US utility mergers that obtain a state procedural schedule receive that state's final order within ~2 months of the company-expected date roughly 60–65% of the time.
+- **Resolution rule:** YES if the Virginia SCC issues a final order approving the NextEra Energy–Dominion Energy merger (approval with conditions counts, even if the companies later contest conditions) on or before 31-Mar-2027, per the SCC docket or a company 8-K/press release. A rejection, or no final order by that date, is NO.
+- **Resolution source:** Virginia SCC case docket / NEE and D 8-K filings
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/753308/000075330826000077/neeq32026exhibit99.htm; https://www.scc.virginia.gov/docketsearch
+- **Confidence of evidence:** single-source
+
+### 29. KO — Coca-Cola's initial full-year 2027 organic revenue growth guidance is ≥6% (low end or point estimate)
+- **id:** `thesis:paper-call:US-KO:initial-2027-organic-revenue-guide-6pct-plus`
+- **Method:** base rate · **P(ours)** 0.22 · **P(base)** 0.30 · resolve by 2027-02-28
+- **Evidence:** Q3 2026 release (27-Oct-2026): 'Raises Full Year Guidance'; Q3 organic revenues +7% (concentrate sales +7%, price/mix +1%; 'Concentrate sales were 2 points ahead of unit case volume due to the timing of concentrate shipments'); global unit case volume +5%; comparable operating margin 32.9%; 2026 organic revenue guide raised to 'at least 5%' (from ~5%); comparable currency-neutral EPS ex-A&D 'at least 9%' (from 7–8%); 'The company will provide full year 2027 guidance when it reports fourth quarter earnings.'
+- **Why our number differs from base:** Base-rate test with a twist: unusually, volume (not price) is driving growth, so a 6% initial guide would require management to extrapolate volume strength — something KO rarely does in its first guide of a year. Price/mix of only +1% removes the usual inflation cushion. We sit below the base.
+- **Base-rate reasoning:** Naive: KO's long-term algorithm is 4–6% organic; initial-year guides in recent years were ~5–7% in the inflationary years and ~5% after (from memory, unverified); a ≥6% initial guide ~30%.
+- **Resolution rule:** YES if the FY2027 organic revenue (non-GAAP) growth guidance in KO's Q4 2026 earnings release has a lower bound ≥6% ('6% to 7%', 'at least 6%', '~6%' count; '5% to 6%' does not).
+- **Resolution source:** Coca-Cola Q4 2026 earnings release (8-K, EDGAR)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/21344/000162828026067403/a2026q3earningsreleaseex-9.htm
+- **Confidence of evidence:** single-source
+
+### 30. PG — Procter & Gamble reports Q2 FY27 (Oct–Dec 2026) organic sales growth ≥3%
+- **id:** `thesis:paper-call:US-PG:q2fy27-organic-sales-3pct-plus`
+- **Method:** management-tone-vs-delivery · **P(ours)** 0.45 · **P(base)** 0.40 · resolve by 2027-01-31
+- **Evidence:** Q1 FY27 release (22-Oct-2026): net sales $23.3bn (+4%), organic +4% (volume +2, mix +1, price minor) — above the maintained FY27 organic guide of 1–3% (incl. 30–50 bps headwind from discontinuations); FY27 core EPS guide $6.89–7.11 (in-line to +3%) maintained; CEO Jejurikar: 'we expect there will continue to be geopolitical and economic challenges'; Thorne acquired 1-Oct-2026 (excluded from organic).
+- **Why our number differs from base:** Management-tone test: P&G kept its full-year range after a quarter well above it and talked down the macro; the gap between cautious words and a volume-led +4% suggests momentum management is not yet willing to bank. Against that, comparisons and the discontinuation headwind weigh. We nudge above the base.
+- **Base-rate reasoning:** Naive: with full-year guidance of 1–3%, a quarter at ≥3% is the upper end; P&G printed ≥3% organic in roughly 4 of the last 10 quarters (from memory, unverified) → ~40%.
+- **Resolution rule:** YES if P&G's reported organic sales growth for the quarter ended 31-Dec-2026 (Q2 FY27 earnings release) is ≥3% (as rounded by the company).
+- **Resolution source:** P&G Q2 FY27 earnings release (8-K, EDGAR; pginvestor.com)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/80424/000008042426000250/fy2627q1jas8-kexhibit991.htm
+- **Confidence of evidence:** single-source
+
+### 31. XOM — ExxonMobil's Q4 2026 adjusted (non-GAAP) EPS is ≥$4.23 (at or above Q3 2026)
+- **id:** `thesis:paper-call:US-XOM:q4-2026-adj-eps-above-q3`
+- **Method:** sector cycle/lead indicator · **P(ours)** 0.35 · **P(base)** 0.50 · resolve by 2027-02-15
+- **Evidence:** Q3 2026 release (30-Oct-2026): earnings $15.4bn ($3.72/share), adjusted earnings $17.5bn ($4.23/share), CFO $25.7bn, FCF $19.1bn; announced 2027 buybacks of $20bn; Q4 dividend $1.07. Lead indicators (Yahoo futures, daily closes): Brent averaged $91.50 in Q3 and $103.07 Q4-to-date (to 20-Nov) but has fallen to ~$92.6; NYMEX 3-2-1 crack proxy (2×RBOB+1×HO vs 3×Brent) ~$60/bbl in Q3 vs ~$45/bbl Q4-to-date; Henry Hub $2.89 → $3.06.
+- **Why our number differs from base:** Sector-cycle lead-indicator test: upstream gains from higher average Brent are likely more than offset by the ~25% fall in refining cracks (XOM is the largest US refiner), and Brent is already back near Q3 levels with six weeks left. Seasonal Q4 items (year-end asset/tax adjustments) add noise but are excluded from adjusted EPS.
+- **Base-rate reasoning:** Naive: next quarter's adjusted EPS above/below the current one is roughly a coin flip (50%).
+- **Resolution rule:** YES if ExxonMobil's Q4 2026 earnings excluding identified items per share (company-defined non-GAAP adjusted EPS) is ≥$4.23.
+- **Resolution source:** ExxonMobil Q4 2026 earnings release (8-K, EDGAR)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/2115436/000211543626000018/livef8k3q26991.htm; https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF; https://query1.finance.yahoo.com/v8/finance/chart/RB%3DF; https://query1.finance.yahoo.com/v8/finance/chart/HO%3DF; https://query1.finance.yahoo.com/v8/finance/chart/NG%3DF
+- **Confidence of evidence:** verified
+
+### 32. CRM — Salesforce's initial FY28 revenue guidance midpoint implies ≥10% YoY growth over FY27 actual revenue
+- **id:** `thesis:paper-call:US-CRM:initial-fy28-revenue-guide-10pct-plus`
+- **Method:** promise-tracker credibility · **P(ours)** 0.30 · **P(base)** 0.25 · resolve by 2027-03-15
+- **Evidence:** Q2 FY27 release (26-Aug-2026): revenue $11.3bn (+11%, incl. $456m Informatica), subscription & support +12%; cRPO $33.5bn (+14%); FY27 revenue guide raised by $200m to $46.1–46.4bn (+11–12%); CFO Washington: 'NNAOV growth is the strongest it's been in four years, keeping us on track for second-half organic revenue reacceleration'; Agentforce + Data 360 ARR ~$3.9bn (+210%); Contentful and Fin acquisitions expected to close in Q3 FY27. Yahoo: CRM $180.62 on 20-Nov-2026 (52-wk $146–269).
+- **Why our number differs from base:** Promise-tracker: management has promised organic reacceleration. FY28 loses most of the Informatica inorganic boost (deal laps during FY27), so a ≥10% guide needs either real organic acceleration (cRPO +14% hints at it) or meaningful Contentful/Fin contribution. Salesforce's recent initial guides have been 7–9% (from memory, unverified). We go slightly above the base because cRPO is leading revenue.
+- **Base-rate reasoning:** Naive: Salesforce initial annual guides in FY25–FY27 implied high-single-digit growth except when padded by acquisitions; ≥10% ~25%.
+- **Resolution rule:** YES if (midpoint of the initial FY28 revenue guidance range in Salesforce's Q4 FY27 release ÷ FY27 reported revenue) − 1 ≥ 10.0%. Use reported (not constant-currency) figures.
+- **Resolution source:** Salesforce Q4 FY27 earnings release (8-K, EDGAR)
+- **Sources used:** https://www.sec.gov/Archives/edgar/data/1108524/000110852426000187/crm-q2fy27xexhibit991.htm; https://query1.finance.yahoo.com/v8/finance/chart/CRM
+- **Confidence of evidence:** single-source
+
+### 33. ADBE — Adobe's share price return from 20-Nov-2026 to 30-Jun-2027 beats SPY's price return
+- **id:** `thesis:paper-call:US-ADBE:cold-valuation-beats-spy-to-jun27`
+- **Method:** valuation-temperature · **P(ours)** 0.52 · **P(base)** 0.48 · resolve by 2027-06-30
+- **Evidence:** Yahoo monthly closes: ADBE $217.71 on 20-Nov-2026 (52-wk $190.12–362.71; all-time high ~$670); SPY $689.81. Q3 FY26 release (Sep-2026): record revenue $6.76bn (+13%), non-GAAP EPS $6.13, GAAP EPS $4.62, ARR $27.50bn, AI-first ARR +150%; FY26 revenue target raised to $26.576–26.626bn; Q4 target $6.80–6.85bn; CEO succession under way ('Anil' named as successor) and an interim CFO. ≈9× annualised non-GAAP EPS / ≈12× GAAP — very cold vs its own 10-year history (typically 25–45×, from memory).
+- **Why our number differs from base:** Valuation-temperature test on a 'cold' quality name: double-digit growth at a single-digit-teens multiple is extreme for a software franchise, but the market is pricing AI disruption of creative tools, and cold-for-a-reason names often stay cold. Mean reversion is a weak 7-month force; we lean only slightly above the base.
+- **Base-rate reasoning:** A single US large cap beats SPY over ~7 months a bit under half the time (~48%; skewed single-stock returns).
+- **Resolution rule:** YES if (ADBE close on 30-Jun-2027 ÷ 217.71) > (SPY close on 30-Jun-2027 ÷ 689.81). Use the last trading day ≤30-Jun-2027; adjust for splits; dividends ignored.
+- **Resolution source:** Yahoo Finance / Nasdaq closes (ADBE, SPY)
+- **Sources used:** https://query1.finance.yahoo.com/v8/finance/chart/ADBE; https://query1.finance.yahoo.com/v8/finance/chart/SPY; https://www.sec.gov/Archives/edgar/data/796343/000079634326000147/adbeex991q326.htm
+- **Confidence of evidence:** verified
+
+### 34. COST — Costco's share price return from 20-Nov-2026 to 30-Jun-2027 beats SPY's price return
+- **id:** `thesis:paper-call:US-COST:hot-valuation-beats-spy-to-jun27`
+- **Method:** valuation-temperature · **P(ours)** 0.42 · **P(base)** 0.48 · resolve by 2027-06-30
+- **Evidence:** Yahoo monthly closes: COST $1,102.15 on 20-Nov-2026 — at its all-time high (52-wk $844–1,124) while SPY ($689.81) sits ~12% below its high. Q4 FY26 release (24-Sep-2026): FY26 net sales $297.2bn (+10.1%), comparable sales +8.4% (adjusted +6.6%), digital +20.9%; FY26 EPS $20.76 (Q4 $6.75 incl. a non-recurring $0.15 IEEPA tariff refund benefit) → ~53× trailing EPS.
+- **Why our number differs from base:** Valuation-temperature test on a 'hot' quality compounder: ~53× earnings at an all-time high while the index is in a drawdown means a lot of defensive premium is already in the price; if markets recover, high-multiple defensives tend to lag. But quality compounders have repeatedly defied this, so we shade only moderately below the base.
+- **Base-rate reasoning:** A single US large cap beats SPY over ~7 months a bit under half the time (~48%; skewed single-stock returns).
+- **Resolution rule:** YES if (COST close on 30-Jun-2027 ÷ 1,102.15) > (SPY close on 30-Jun-2027 ÷ 689.81). Use the last trading day ≤30-Jun-2027; adjust for splits; special and regular dividends ignored.
+- **Resolution source:** Yahoo Finance / Nasdaq closes (COST, SPY)
+- **Sources used:** https://query1.finance.yahoo.com/v8/finance/chart/COST; https://query1.finance.yahoo.com/v8/finance/chart/SPY; https://www.sec.gov/Archives/edgar/data/909832/000090983226000084/costex9918-k92426.htm
+- **Confidence of evidence:** verified
+
+### 35. SNOW — Snowflake's share price return from 20-Nov-2026 to 30-Jun-2027 beats SPY's price return
+- **id:** `thesis:paper-call:US-SNOW:hot-valuation-beats-spy-to-jun27`
+- **Method:** valuation-temperature · **P(ours)** 0.43 · **P(base)** 0.48 · resolve by 2027-06-30
+- **Evidence:** Yahoo monthly closes: SNOW $254.82 on 20-Nov-2026 (52-wk $118–385); SPY $689.81. SEC XBRL (10-Q): revenue $1.39bn (qtr to 30-Apr-2026) and $1.55bn (qtr to 31-Jul-2026, ≈$6.2bn run-rate); operating loss −$263m; SBC $402.5m in the April quarter vs FCF $232.8m; shares outstanding 352.5m (+1.7% QoQ) → market cap ≈$90bn ≈14–15× run-rate revenue, vs roughly 4× for CRM and ~3× for ADBE (our rough market-cap ÷ revenue); receivables +24% QoQ vs revenue +11%.
+- **Why our number differs from base:** Valuation-temperature test on a 'hot' growth name in a rising-rate tape (10-yr ~5%): long-duration, SBC-heavy equities are most rate-sensitive, and receivables outgrowing revenue is a small yellow flag. Q3 FY27 results due in early December add variance. We shade below the base.
+- **Base-rate reasoning:** A single US large cap beats SPY over ~7 months a bit under half the time (~48%; skewed single-stock returns).
+- **Resolution rule:** YES if (SNOW close on 30-Jun-2027 ÷ 254.82) > (SPY close on 30-Jun-2027 ÷ 689.81). Use the last trading day ≤30-Jun-2027; adjust for splits; dividends ignored.
+- **Resolution source:** Yahoo Finance / NYSE closes (SNOW, SPY)
+- **Sources used:** https://query1.finance.yahoo.com/v8/finance/chart/SNOW; https://query1.finance.yahoo.com/v8/finance/chart/SPY; https://data.sec.gov/api/xbrl/companyfacts/CIK0001640147.json
+- **Confidence of evidence:** single-source
 
 ## Method notes (what each call is testing)
 

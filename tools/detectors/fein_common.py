@@ -35,7 +35,9 @@ def setup_logging(name):
     fmt = logging.Formatter("%(asctime)s %(levelname)s %(message)s")
     log.setLevel(logging.INFO)
     log.handlers.clear()
-    fh = logging.FileHandler(os.path.join(DATA, "logs", f"{name}.log"))
+    # WatchedFileHandler reopens the file after logrotate moves it (see README)
+    from logging.handlers import WatchedFileHandler
+    fh = WatchedFileHandler(os.path.join(DATA, "logs", f"{name}.log"))
     fh.setFormatter(fmt)
     sh = logging.StreamHandler(sys.stderr)
     sh.setFormatter(fmt)
@@ -219,8 +221,15 @@ def db(path=None):
     p = path or DB_PATH
     if p != ":memory:":
         os.makedirs(os.path.dirname(p), exist_ok=True)
-    con = sqlite3.connect(p)
+    con = sqlite3.connect(p, timeout=60)
     con.row_factory = sqlite3.Row
+    if p != ":memory:":
+        # SD-card friendly: WAL = sequential appends, fewer fsyncs; NORMAL sync is safe with WAL.
+        con.execute("PRAGMA journal_mode=WAL")
+        con.execute("PRAGMA synchronous=NORMAL")
+        con.execute("PRAGMA wal_autocheckpoint=2000")
+    con.execute("PRAGMA cache_size=-8000")      # ~8 MB page cache cap (low memory)
+    con.execute("PRAGMA temp_store=FILE")
     con.executescript(SCHEMA)
     return con
 
@@ -232,5 +241,17 @@ def upsert(con, table, rows):
     sql = (f"INSERT OR REPLACE INTO {table}({','.join(cols)}) "
            f"VALUES({','.join('?' * len(cols))})")
     con.executemany(sql, [tuple(r.get(c) for c in cols) for r in rows])
-    con.commit()
-    return len(rows)
+    return len(rows)   # no commit here: callers commit once per dataset/day (batched writes)
+
+
+def single_instance(name):
+    """Take an exclusive lock so cron/systemd never runs two copies at once. Returns the handle
+    (keep it referenced) or None if another copy is running."""
+    import fcntl
+    os.makedirs(os.path.join(DATA, "logs"), exist_ok=True)
+    fh = open(os.path.join(DATA, "logs", f".{name}.lock"), "w")
+    try:
+        fcntl.flock(fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError:
+        return None
+    return fh

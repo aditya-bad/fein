@@ -77,11 +77,19 @@ def rule_pledges(con, frm, to):
         log.info("pledge rules: %d snapshot(s) so far - need 2 to compare (first run builds the baseline)", len(snaps))
         return out
     cur_d = snaps[0]
+    prev_syms = {r[0] for r in con.execute("SELECT symbol FROM pledges WHERE snapshot_date=?", (snaps[1],))}
+    if len(prev_syms) < 200:   # previous snapshot was a single-symbol/partial one: do not infer "new"
+        prev_syms = None
     for cur in con.execute("SELECT * FROM pledges WHERE snapshot_date=?", (cur_d,)):
         prev = con.execute("SELECT * FROM pledges WHERE symbol=? AND snapshot_date<? "
                            "ORDER BY snapshot_date DESC LIMIT 1", (cur["symbol"], cur_d)).fetchone()
         if not prev:
-            continue
+            # Company absent from the previous full snapshot but present now = a new promoter
+            # pledge disclosure (or a new listing). Compare from zero, but only if it is pledged.
+            if prev_syms is None or (cur["pledged_pct_of_promoter"] or 0) <= 0:
+                continue
+            prev = {"snapshot_date": snaps[1] + " (absent)", "pledged_pct_of_promoter": 0.0,
+                    "pledged_pct_of_equity": 0.0}
         out += pledge_compare(prev, cur)
     return out
 

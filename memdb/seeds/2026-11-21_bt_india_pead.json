@@ -1,0 +1,66 @@
+[
+ {
+  "type": "insight",
+  "id": "insight:bt-india-pead-2018-2025",
+  "title": "Backtest: post-earnings-announcement drift (PEAD) in Indian stocks (NSE Rs 500-50,000 cr, 2018-2025) - top-minus-bottom SUE quintile +4.2% over 63 trading days out of sample (t 4.0); long-only top quintile +2.4% vs size-matched controls gross, misses the 1%-cost rule by 0.06 pp",
+  "body": "Own pre-registered backtest (run 2026-11-21; research_notes/Backtests/india_pead.md). Seeded random sample of 700 current NSE EQ/BE equities -> 580 usable companies, 10,026 quarterly-result events (train 2018-21: 4,336; test 2022-25: 5,690). SUE = seasonal random walk on standalone basic EPS (split-adjusted), (EPS_q - EPS_q-4) / sd of previous 4-8 seasonal changes; event = earliest NSE results announcement/broadcast timestamp; entry = close of first trading day strictly after it; quintiles within each fiscal quarter; inference across 16+16 quarters with 5,000-draw bootstrap. H1 (T-B, 63d): train +4.84% (CI +2.61 to +7.07, t 4.06), TEST +4.24% (CI +2.20 to +6.18, t 3.99) - passes t>3 in both periods and out of sample; 21d test +1.73% (t 3.9), 126d test +6.18% (t 3.5). H2 (top quintile vs median-116 size-matched controls, 63d): train +1.81% (t 2.1), test +2.36% (CI +0.94 to +3.67, t 3.23); net 0.5% round trip +1.86% (CI +0.44 to +3.17); net 1% +1.36% (CI -0.06 to +2.67) -> fails pre-committed rule 2 by a hair, so NOT labelled an edge candidate (126d clears 1% cost: +2.69%, CI +0.61 to +4.73, but 126d was not primary). Bottom quintile is the stronger leg: -2.70%/-2.13% vs controls at 63d (t -4.4/-4.8). Quintile ladder monotone (test Q1..Q5 -2.13, -0.80, +0.17, +1.02, +2.36%). Controls calibrated (all events vs controls ~0). H3 (bigger in smallest mcap tertile) NOT supported: small-minus-large test -0.44% (CI -4.8 to +3.8); exploratory: middle tertile (median Rs 2,800-3,600 cr) strongest in both periods (test 63d T-B +5.9%, t 4.6). Announcement-window T-B +3.75%/+4.95% (t 9/18) confirms dating. Revenue SUE weaker (test 63d T-B +2.1%, t 1.9). Skew: top-quintile event-level median excess -1.0% vs all-event median -2.6% (mechanical vs equal-weight controls); median and winsorised T-B still +3.2%/+4.1%; random 10-name baskets fall below 1% cost 21% of the time, 30-name 3%. Exploratory: long-only effect in test only in >= Rs 1,000 cr (+2.74%, t 3.9) vs < Rs 1,000 cr +0.36%; top-SUE with positive announcement reaction +3.32% (t 4.0). 2025 63d T-B only +0.9% (possible decay or noise). Survivorship: 253 of 1,508 (16.8%) Q3FY19 NSE filers are gone from today's list (failures + mergers); failures cluster in bottom SUE, so T-B likely understated. Lesson: PEAD survives in India (unlike US large/mid caps, Martineau 2022) - usable as an avoid-after-big-miss filter and a top-SUE research-queue tilt held 3-6 months in diversified baskets; not a multibagger engine.",
+  "tickers": [],
+  "tags": ["india", "earnings", "pead", "anomaly", "base-rate", "process", "backtest"],
+  "date": "2026-11-21",
+  "data": {
+   "sample": {"symbols_fetched": 700, "usable_companies": 580, "events": 10026, "train_events": 4336, "test_events": 5690, "quarters_per_period": 16, "median_mcap_cr": 3197, "mcap_range_inr_cr": "500-50000", "median_controls_per_event": 116, "seed": 20261121, "sample_positions": "0-349,500-849"},
+   "T_minus_B_eps_quintile": {"train_21d": 0.0131, "train_63d": 0.0484, "train_63d_ci": [0.0261, 0.0707], "train_63d_t": 4.06, "train_126d": 0.0893, "test_21d": 0.0173, "test_21d_t": 3.89, "test_63d": 0.0424, "test_63d_ci": [0.0220, 0.0618], "test_63d_t": 3.99, "test_126d": 0.0618, "test_126d_t": 3.47},
+   "top_vs_controls_test": {"21d": 0.0118, "63d": 0.0236, "63d_ci": [0.0094, 0.0367], "63d_t": 3.23, "63d_net05": 0.0186, "63d_net05_ci": [0.0044, 0.0317], "63d_net10": 0.0136, "63d_net10_ci": [-0.0006, 0.0267], "126d": 0.0369, "126d_net10": 0.0269, "126d_net10_ci": [0.0061, 0.0473]},
+   "top_vs_controls_train": {"63d": 0.0181, "63d_ci": [0.0034, 0.0356], "126d": 0.0350},
+   "bottom_vs_controls_63d": {"train": -0.0270, "train_t": -4.44, "test": -0.0213, "test_t": -4.84},
+   "ladder_test_63d_vs_controls": [-0.0213, -0.0080, 0.0017, 0.0102, 0.0236],
+   "tertiles_63d_TB": {"train": [0.0513, 0.0673, 0.0179], "test": [0.0235, 0.0590, 0.0279], "small_minus_large_test": -0.0044, "small_minus_large_test_ci": [-0.048, 0.038]},
+   "announcement_TB": {"train": 0.0375, "test": 0.0495},
+   "exploratory_test": {"rev_sue_TB63": 0.0206, "decile_TB63": 0.0359, "open_entry_TB63": 0.0377, "median_TB63": 0.0324, "winsorised_TB63": 0.0410, "top_ge_1000cr_x63": 0.0274, "top_lt_1000cr_x63": 0.0036, "top_ann_up_x63": 0.0332, "top_ann_down_x63": 0.0116, "top_event_median_x63": -0.0103, "all_event_median_x63": -0.0259, "top_hit": 0.472},
+   "by_year_TB63": {"2018": 0.023, "2019": 0.069, "2020": 0.076, "2021": 0.025, "2022": 0.035, "2023": 0.079, "2024": 0.046, "2025": 0.009},
+   "basket_test_63d": {"n10_p5": -0.0045, "n10_below_cost": 0.21, "n15_p5": 0.0033, "n30_p5": 0.0113, "n30_below_cost": 0.03},
+   "survivorship": {"q3fy19_filers": 1508, "gone_from_current_list": 253, "share": 0.168, "bias_direction": "T-B likely understated; long-only roughly neutral"},
+   "verdict": "H1 supported (train and test, t~4); H2 supported gross, fails 1%-net CI rule by 0.06 pp -> not an edge candidate under rule 2 (borderline); H3 not supported"
+  },
+  "sources": [
+   "https://www.nseindia.com/api/corporates-financial-results",
+   "https://www.nseindia.com/api/integrated-filing-results",
+   "https://www.nseindia.com/api/corporate-announcements",
+   "https://query1.finance.yahoo.com/v8/finance/chart/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {"to": "insight:lit-pead-post-earnings-drift", "rel": "tests"},
+   {"to": "insight:lit-harvey-liu-zhu-multiple-testing", "rel": "uses"},
+   {"to": "insight:lit-inattention-premium-synthesis", "rel": "supports"},
+   {"to": "insight:bt-india-promoter-buying-2021-2024", "rel": "similar_to"}
+  ]
+ },
+ {
+  "type": "strategy",
+  "id": "strategy:india-pead-sue-rule",
+  "title": "Tested rule: after NSE quarterly results, favour top-SUE-quintile stocks (Rs 500-50,000 cr) and avoid/exit bottom-quintile ones; hold 3-6 months in a diversified basket",
+  "body": "Rule as pre-registered and tested 2026-11-21 (events 2018-2025). Signal: standalone basic EPS (split-adjusted) seasonal-random-walk SUE = (EPS_q - EPS_q-4) / sd of the previous 4-8 seasonal changes, ranked into quintiles among that fiscal quarter's results. Event = earliest NSE results announcement timestamp; enter at close of the first trading day strictly after it (sacrifices the day-0/1 reaction). Universe NSE Rs 500-50,000 cr at entry, >= 250 days listed. Benchmark = equal-weight mean of all same-sample stocks with mcap x0.5-x2 on the entry date. Result (insight:bt-india-pead-2018-2025): T-B 63d +4.2% test (t 4.0) and +4.8% train; long-only top quintile +2.36%/quarter vs controls gross (test), +1.36% net of 1% round trip with CI -0.06 to +2.67 -> NOT awarded 'edge candidate' under the pre-committed rule (borderline); 126d +3.7% gross. Bottom quintile -2.1% to -2.7% vs controls (t ~ -4.5) in both periods. Status: anomaly real; long-only use = (1) avoid/exit after big negative SUE (most robust leg, free); (2) tilt research queue toward top-SUE names, ideally >= Rs 1,000 cr with positive announcement reaction (exploratory), hold 3-6 months, >= ~30 names to collect the average (single names lag peers ~53% of the time). Not a stand-alone multibagger method. Next pre-registered tests: consolidated EPS from FY2020, full universe, confirmed-reaction filter, and 2026 quarters as fresh out-of-sample (2025 T-B only +0.9%).",
+  "tickers": [],
+  "tags": ["india", "earnings", "pead", "process", "backtest", "anomaly"],
+  "date": "2026-11-21",
+  "data": {
+   "signal": "standalone EPS SUE quintile (seasonal random walk, 4-8 prior changes)",
+   "entry": "close of first NSE trading day after results announcement",
+   "universe": "NSE Rs 500-50,000 cr",
+   "holding": "63 trading days primary (21/126 secondary)",
+   "status": "anomaly confirmed out of sample; long-only fails 1%-net CI rule by 0.06 pp (borderline); use as filter/tilt",
+   "evidence_id": "insight:bt-india-pead-2018-2025",
+   "next_test": "consolidated EPS FY2020+, full universe, top-SUE + positive announcement reaction, 2026 out-of-sample"
+  },
+  "sources": [
+   "https://www.nseindia.com/api/corporates-financial-results"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {"to": "insight:bt-india-pead-2018-2025", "rel": "about"},
+   {"to": "insight:lit-pead-post-earnings-drift", "rel": "tests"},
+   {"to": "strategy:india-promoter-buying-rule", "rel": "similar_to"}
+  ]
+ }
+]
