@@ -1,0 +1,61 @@
+[
+ {
+  "type": "insight",
+  "id": "insight:bt-us-insider-clusters-2021-2024",
+  "title": "Backtest: US insider-buying clusters ($300M-$10B, 2021-2024) showed no excess return vs size-matched controls",
+  "body": "Own backtest (run 2026-11-20). Full population of Form 4 purchases from SEC Insider Transactions Data Sets; rule = >=2 distinct directors/officers buying (code P, not 10b5-1, price>=$1, common stock) within 30 days; dated on the filing day the 2nd buy became public, entry next trading day; one event per issuer per 365 days; mcap $300M-$10B (cover-page shares x insider price); SPACs/funds dropped, biotech separate. 849 usable non-biotech events (signals 2021-2024). Versus 5 size-matched random controls per event on the same date: 12m mean excess 0.0% (95% month-clustered bootstrap CI -4.8% to +5.0%), median -3.9%, hit rate 44.9%; 6m -0.3% (CI -3.3% to +2.6%). Versus IWM +1.7% 12m mean (CI -2.7% to +6.4%) but controls also beat IWM by +1.7%, so that is a size/survivor effect; versus SPY -7.9%. No subset was clean: $300M-$1B +4.8% 12m (CI -2.2 to +12.3), banks +4.0% at 6m (CI -2.5 to +10.0), >=3 insiders and CEO/CFO buys were worse, 2021 signals only year significantly positive (+6.3%). Survivorship: ~19% of eligible events lacked Yahoo data (SEC audit of 189: 162 acquired, 23 bankrupt); generous bound adds only ~+2%/yr. Lesson: the plain public cluster rule is not a standalone edge in this period; CMP-sized (~10%/yr) effect not reproduced without the opportunistic/routine filter. Use as a research-queue trigger only.",
+  "tickers": [],
+  "tags": ["us", "alt-data", "base-rate", "governance", "process", "backtest"],
+  "date": "2026-11-20",
+  "data": {
+   "sample": {"cluster_events_all_sizes": 3339, "usable_ex_biotech": 849, "biotech": 106, "signal_years": "2021-2024", "mcap_range_usd": "300M-10B", "median_mcap_usd_m": 1006, "median_cluster_buy_usd": 238000},
+   "vs_matched_controls": {"1m_mean": 0.006, "3m_mean": -0.010, "6m_mean": -0.003, "6m_ci": [-0.033, 0.026], "12m_mean": 0.000, "12m_ci": [-0.048, 0.050], "12m_median": -0.039, "12m_hit": 0.449},
+   "vs_IWM": {"6m_mean": 0.008, "12m_mean": 0.017, "12m_ci": [-0.027, 0.064], "12m_median": -0.027, "12m_hit": 0.465, "controls_vs_IWM_12m": 0.017},
+   "vs_SPY": {"12m_mean": -0.079, "12m_median": -0.133},
+   "subsets_12m_vs_controls": {"mcap_300M_1B": 0.048, "mcap_1B_10B": -0.044, "banks": 0.013, "ge3_insiders": -0.044, "ceo_cfo": -0.015, "buy_ge_250k": 0.026, "y2021": 0.063, "y2022": -0.020, "y2023": -0.006, "y2024": -0.029, "biotech": 0.107},
+   "survivorship": {"eligible_events_missing_prices": 221, "audited_non_bio": 189, "acquired": 162, "bankrupt": 23, "other": 4, "bound_12m_excess_if_missing_included": 0.021},
+   "ci_method": "95% bootstrap, resampling event-months, 2000 draws",
+   "lesson": "Public cluster screen = no standalone edge; at most a reason to research. Next test must pre-register opportunistic-only (CMP) + buy-size filter out of sample.",
+   "report": "research_notes/Backtests/insider_clusters_us.md",
+   "scripts": "tools/backtests/insider_clusters/"
+  },
+  "sources": [
+   "https://www.sec.gov/files/structureddata/data/insider-transactions-data-sets/2021q1_form345.zip",
+   "https://data.sec.gov/api/xbrl/frames/dei/EntityCommonStockSharesOutstanding/shares/CY2022Q1I.json",
+   "https://query1.finance.yahoo.com/v8/finance/chart/IWM"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {"to": "insight:us-insider-buying-evidence", "rel": "contradicts"},
+   {"to": "strategy:us-insider-cluster-buy-rule", "rel": "about"},
+   {"to": "insight:spiva-us-2025", "rel": "similar_to"}
+  ]
+ },
+ {
+  "type": "strategy",
+  "id": "strategy:us-insider-cluster-buy-rule",
+  "title": "Tested rule: buy US $300M-$10B stocks after >=2 insiders make open-market purchases within 30 days (hold 6-12m)",
+  "body": "Rule as tested (2026-11-20 backtest, signals 2021-2024). Trigger: Form 4 code P purchases of common stock by >=2 distinct directors or officers with trade dates within 30 days; exclude 10b5-1 trades (checkbox or footnote), 10%-owner-only filers, option exercises/grants, price < $1, preferred/warrants/units. Signal date = filing date of the second insider's Form 4 (no look-ahead); enter at next trading-day close; one signal per issuer per 365 days. Universe: market cap $300M-$10B, ex SPACs/funds, listed >= 180 days; biotech/pharma handled separately (binary events). Hold 6 or 12 months; compare with 5 random same-size firms on the same date and with IWM. Result: no reliable excess return vs matched controls (12m mean 0.0%, CI -4.8% to +5.0%, hit 44.9%; see insight:bt-us-insider-clusters-2021-2024). Status: REJECTED as a standalone strategy for 2021-2024; keep only as a research-queue trigger. Untested refinements worth a pre-registered out-of-sample test: Cohen-Malloy-Pomorski opportunistic-only buyers (no same-month trade in prior 3 years), buy size >= 10% of the insider's existing stake, sub-$1B or bank issuers, poorly covered names; analogous test on India SEBI PIT Reg 7 disclosures.",
+  "tickers": [],
+  "tags": ["us", "alt-data", "process", "governance", "backtest"],
+  "date": "2026-11-20",
+  "data": {
+   "trigger": ">=2 distinct D/O open-market buys (code P) within 30 days, non-10b5-1",
+   "entry": "next trading day after 2nd insider's filing date",
+   "universe": "US $300M-$10B, ex SPAC/fund, listed >=180d, biotech separate",
+   "holding": "6-12 months",
+   "status": "rejected-standalone (2021-2024)",
+   "evidence_id": "insight:bt-us-insider-clusters-2021-2024",
+   "next_test": "CMP opportunistic filter + buy-size filter, build 2017-2020, test 2021-2024"
+  },
+  "sources": [
+   "https://www.sec.gov/files/structureddata/data/insider-transactions-data-sets/2021q1_form345.zip",
+   "https://www.nber.org/papers/w16454"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {"to": "insight:us-insider-buying-evidence", "rel": "about"},
+   {"to": "insight:bt-us-insider-clusters-2021-2024", "rel": "about"}
+  ]
+ }
+]

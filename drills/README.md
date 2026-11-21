@@ -29,3 +29,9 @@ v2 anonymisation: generic sector words, all money multiplied by a hidden per-pac
 | D014 | India | set 2 (v2) | packets/D014.md | sealed/D014.md |
 | D015 | US | set 2 (v2) | packets/D015.md | sealed/D015.md |
 | D016 | India | set 2 (v2) | packets/D016.md | sealed/D016.md |
+| D017 | India | set 2 (v2) | packets/D017.md | sealed/D017.md |
+| D018 | US | set 2 (v2) | packets/D018.md | sealed/D018.md |
+| D019 | India | set 2 (v2) | packets/D019.md | sealed/D019.md |
+| D020 | US | set 2 (v2) | packets/D020.md | sealed/D020.md |
+
+Set 2 build notes: India data from screener.in (annual P&L/BS/CF/ratios as currently displayed — may include later restatements; yearly shareholding; price-chart API). US data from SEC EDGAR companyfacts, using the value as first filed on or before T where the tagging allowed it, plus Yahoo Finance weekly prices. Each packet's money values carry their own hidden factor; compare ratios, not levels, across packets. Pledge data was mostly unavailable.
