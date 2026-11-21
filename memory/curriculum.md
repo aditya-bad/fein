@@ -56,7 +56,7 @@ companies; written post-mortems on misses. Until then: no idea-pitching (except 
     Abhay Lodha, Neckar, Mauboussin, Damodaran, Cliff Asness, Investor letters (Fundsmith, Nalanda?).
 0e. **YouTube/podcasts** — blocked until transcript access (see My Requirements).
 1. Blind drill packets set 1 (India + US) — packet builder running 20-Nov.
-2. Back-test the insider-buying (Form 4 cluster) filter on US data — method calibration.
+2. ~~Back-test US insider clusters~~ DONE 21-Nov: no edge vs matched controls (L14). Next: pre-registered opportunistic-insider rule; India PIT version.
 4. Valuation craft: reverse DCF practice, sector multiples history, when cheap stays cheap.
 5. Capital allocation scorecards (buybacks, M&A, dilution) — India & US examples.
 6. Behavioural finance applied: our own bias checklist; pre-mortem templates.

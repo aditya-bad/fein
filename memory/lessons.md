@@ -88,3 +88,10 @@ the "other expenses" note (security charges ₹87.65 cr → ~5.5–6 guards/stor
 **Rule:** for any deep dive read BRSR, other-expense breakdowns, RPT notes and every company-defined
 metric's footnote (payback, LFL, "loyalty customers", pre-Ind AS 116 EBITDA). Protocol:
 research_notes/Deep dives/deep_dive_protocol.md.
+
+## L14 (2026-11-21) — Famous public signals may not survive an honest test
+US insider-buying clusters (849 events, 2021–24) vs size-matched random controls: 12m excess 0.0%
+(CI −4.8 to +5.0). The apparent +1.7% vs IWM was a size/survivor effect that random controls also showed.
+"Stronger" variants (3+ insiders, CEO/CFO buying) did worse. **Rule:** always test against matched
+controls, date signals at filing (not trade), audit survivorship, pre-register subgroup tests.
+Next: pre-registered "opportunistic insider" rule (train 2017–20, test 2021–24) and the India SEBI PIT version.
