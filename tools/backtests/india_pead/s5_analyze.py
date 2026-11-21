@@ -15,7 +15,7 @@ for line in open(os.path.join(S, "events.tsv")):
     if hdr is None: hdr = p; continue
     r = dict(zip(hdr, p))
     for k in hdr:
-        if k in ("sym", "qe", "event", "entry", "src"): continue
+        if k in ("sym", "qe", "event", "entry", "src", "ev_src"): continue
         r[k] = float(r[k]) if r[k] != "" else None
     r["period"] = "train" if r["event"][:4] <= "2021" else "test"
     rows.append(r)

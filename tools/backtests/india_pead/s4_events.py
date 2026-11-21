@@ -52,10 +52,25 @@ for fn in sorted(glob.glob(os.path.join(S, "results", "*.json"))):
     if j["status"] != "ok": continue
     px = load_px(sym)
     if not px: funnel["no_prices"] += 1; continue
+    ann = []   # D8: exchange announcement timestamps (s3b_announce.py)
+    af = os.path.join(S, "ann", sym + ".json")
+    if os.path.exists(af):
+        for t, _ in json.load(open(af)):
+            try: ann.append(dt.datetime.strptime(t, "%d-%b-%Y %H:%M:%S"))
+            except Exception: pass
+    else:
+        funnel["no_ann_file"] += 1
+    ann.sort()
     qs = []
     for q in j["quarters"]:
         qe = dt.date.fromisoformat(q["qe"]); ev = dt.datetime.strptime(q["event"], "%Y-%m-%d %H:%M:%S")
         if qe.month not in (3, 6, 9, 12): continue
+        c = [t for t in ann if qe < t.date() <= ev.date()]
+        if c:
+            q["ev_src"] = "ann" if c[0].date() < ev.date() else "ann_same"
+            ev = c[0]
+        else:
+            q["ev_src"] = "feed"
         qs.append(dict(q, qe=qe, ev=ev))
     # unit sanity for detail rows (lakh) vs xbrl rows (rupee) using implied shares
     xs = [q["pdup"] / q["face"] for q in qs if q.get("src") == "xbrl" and q.get("pdup") and q.get("face")]
@@ -135,7 +150,8 @@ for sym, v in data.items():
         ib = bisect.bisect_left(d, ev) - 1        # last close before filing date
         rec = {"sym": sym, "qe": str(q["qe"]), "event": q["ev"].strftime("%Y-%m-%d %H:%M"), "entry": str(d[i0]),
                "mcap_cr": round(mc, 1), "sue_eps": s_eps, "sue_rev": s_rev, "n_prev": n_eps,
-               "ann_ret": px["c"][i0] / px["c"][ib] - 1 if ib >= 0 else None, "src": q.get("src")}
+               "ann_ret": px["c"][i0] / px["c"][ib] - 1 if ib >= 0 else None, "src": q.get("src"),
+               "ev_src": q.get("ev_src")}
         for h in H:
             j1 = i0 + h
             if j1 >= len(d) or (d[j1] - d[i0]).days > h * 1.7 + 15:
@@ -155,7 +171,7 @@ for sym, v in data.items():
             rec[f"c{h}"] = sum(cr) / len(cr) if len(cr) >= 5 else None
         rows.append(rec); funnel["events_kept"] += 1
 
-cols = ["sym", "qe", "event", "entry", "mcap_cr", "sue_eps", "sue_rev", "n_prev", "ann_ret", "src"] + \
+cols = ["sym", "qe", "event", "entry", "mcap_cr", "sue_eps", "sue_rev", "n_prev", "ann_ret", "src", "ev_src"] + \
        [f"{p}{h}" for h in H for p in ("r", "ro", "c", "nc")]
 with open(os.path.join(S, "events.tsv"), "w") as f:
     f.write("\t".join(cols) + "\n")

@@ -108,3 +108,10 @@ truncated price history, and bound the effect under stated assumptions.
   shuffled-list positions **0–349 and 500–849** (700 symbols; two fetch processes ran on the two slices).
   Data collection stops when both slices are done; no T−B number was looked at before that. A usage-limit
   pause interrupted the fetch at ~290 companies; it was resumed with this rule written down first.
+- **D8 (2026-11-21, before analysis): event date refined with exchange announcements.** A spot-check of 8
+  random events against NSE corporate announcements found the results-feed date was **one day late in 4/8**
+  (late-evening filings get next-day XBRL/filing stamps) and one (YESBANK Sep-2020) dated to a revision weeks
+  later. Fix: event = earliest "Financial Result Updates" / results "Outcome of Board Meeting" announcement
+  timestamp after quarter-end and not after the feed date; else the feed date. Entry rule unchanged
+  (close of first trading day strictly after the event date). The old dating was conservative (late), the
+  new one is what the pre-registration meant ("results filing/broadcast timestamp on NSE").
