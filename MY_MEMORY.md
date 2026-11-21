@@ -110,6 +110,8 @@ India, small size by itself has not).
 - **Indian post-earnings drift: REAL.** Stocks with the biggest earnings surprise beat the biggest disappointments
   by ~4.2% over the next 3 months, and it held in a fresh 2022–25 test. After trading costs, buying only the winners
   is borderline. **The clearest use: don't hold (or don't buy) a stock right after a big earnings miss.**
+  **Confirmed again on fresh 2026 data (21 Nov):** big misses kept falling (~−2.7% vs similar stocks over 3 months);
+  big beats were only slightly ahead after costs — not reliable. A live tracker starts with the Jan–Feb 2027 results.
 - **Blind historical drills don't work for an AI** (it recognised 19/20 companies). So we test skill with
   dated predictions about the future instead: 42+ open, scored from Jan 2027.
 

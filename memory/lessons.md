@@ -127,3 +127,12 @@ Jal Jeevan payment delays. **Rule:** always report credibility as sector-adjuste
 category, ≥5 promises per category). Precise ≠ more reliable; volunteered opening-remark guidance delivered
 better at KEC/KPIL. n=3 → provisional. Also: KEC Power Grid bribery-inquiry question (Jul-2025) + ~15 months
 without PGCIL orders — single-source governance flag, verify independently.
+
+## L19 (2026-11-21) — Indian PEAD replicated on fresh 2026 data: the edge is the AVOID leg
+PEAD v2 (pre-registered; 1,555 cos, 4,272 fresh events, 79% consolidated EPS): bottom SUE quintile −2.73% vs
+size-matched controls at 63d (t −3.6, CI excludes 0) — confirmed in two independent periods; quintile 2 equally
+weak. Long-only top quintile +2.41% gross / +1.41% net (CI touches 0) — not proven, again. "Positive
+announcement-day reaction" filter did not replicate; v1's "mid-cap strongest" reversed (noise).
+**Rule (stage 2/3):** treat the bottom two earnings-surprise quintiles as an avoid/exit flag for at least
+63 trading days. Don't treat a positive surprise alone as a buy reason. Exploratory subgroups don't survive
+fresh data — only pre-registered results count. Live tracker logs from Q3 FY27; verdict after 4 live quarters.

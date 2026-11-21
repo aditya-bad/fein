@@ -3,6 +3,7 @@
 Standard library only (runs on a Raspberry Pi). All state lives in research_notes/Backtests/india_pead_live/:
   universe.csv        sym, shares (latest known), listed  -- control universe (bootstrap, refreshed by `update`)
   eps_history.csv     sym, qe, basis(C|S), eps_raw, event_ts, shares   -- reported EPS per quarter (append/update)
+  announcements.csv  sym, ts -- every results-announcement timestamp seen (event dating)
   sue_cutpoints.json  fixed quintile breakpoints of SUE from the 2022-26 backtest (ex-ante provisional quintile)
   predictions.csv     one row per (sym, qe) result: SUE, provisional and final quintile, prediction, outcomes
   scorecard.md        latest scored summary (written by `score`)
@@ -73,7 +74,7 @@ def prices(sym, max_age_days=1):
     d, c = [], []
     for t, x in zip(ts, cl):
         if x is None or x <= 0: continue
-        dd = (dt.datetime.utcfromtimestamp(t) + dt.timedelta(hours=5, minutes=30)).date()
+        dd = (dt.datetime.fromtimestamp(t, dt.timezone.utc) + dt.timedelta(hours=5, minutes=30)).date()
         if d and dd <= d[-1]: continue
         d.append(dd); c.append(x)
     return {"d": d, "c": c, "sp": sp}
@@ -167,18 +168,30 @@ def update(days, first_qe):
     hk = {(r["sym"], r["qe"], r["basis"]) for r in hist}
     ann = results_announcements(days)
     print(len(ann), "companies announced results in the last", days, "days")
+    # persistent log of every results-announcement timestamp seen (event date = earliest one after quarter-end)
+    af = os.path.join(LIVE, "announcements.csv")
+    seen = {(r["sym"], r["ts"]) for r in rcsv(af)}
+    for sym_, ts_ in ann.items(): seen.add((sym_, ts_.strftime("%Y-%m-%d %H:%M:%S")))
+    wcsv(af, [{"sym": a_, "ts": b_} for a_, b_ in sorted(seen)], ["sym", "ts"])
+    ann_all = {}
+    for a_, b_ in seen: ann_all.setdefault(a_, []).append(dt.datetime.fromisoformat(b_))
     # retry companies whose filing is known but whose entry close was not yet available on an earlier run
     recent = dt.datetime.now() - dt.timedelta(days=20)
     for r in hist:
         if (r["qe"] >= str(first_qe) and (r["sym"], r["qe"]) not in have and r["sym"] not in ann
                 and dt.datetime.fromisoformat(r["event_ts"]) > recent):
             ann[r["sym"]] = dt.datetime.fromisoformat(r["event_ts"])
-    for sym, ts in sorted(ann.items()):
+    def save():
+        wcsv(hf, hist, ["sym", "qe", "basis", "eps_raw", "event_ts", "shares"])
+        wcsv(os.path.join(LIVE, "universe.csv"), list(uni.values()), ["sym", "shares"])
+        wcsv(pf, preds, PRED_COLS)
+    for n_done, (sym, ts) in enumerate(sorted(ann.items())):
+        if n_done and n_done % 20 == 0: save()   # checkpoint (a Pi may lose power)
         integ = F.api("integrated-filing-results", index="equities", symbol=sym, type="Integrated Filing- Financials")
         new = []
         for x in (integ or {}).get("data", []) if isinstance(integ, dict) else []:
             b = {"Consolidated": "C", "Standalone": "S"}.get(x.get("consolidated")); qe = F.pdt(x.get("qe_Date"))
-            if not b or not qe or not x.get("xbrl") or qe.date() < first_qe - dt.timedelta(days=800): continue
+            if not b or not qe or not x.get("xbrl") or qe.date() < first_qe: continue   # history comes from bootstrap; only new quarters are fetched
             if (sym, str(qe.date()), b) in hk: continue
             cands = [d for d in (F.pdt(x.get("broadcast_Date")), F.pdt(x.get("creation_Date")), F.xbrl_date(x["xbrl"])) if d]
             r = F.fetch_one(str(qe.date()), {"xbrl": x["xbrl"], "x": None})
@@ -194,7 +207,8 @@ def update(days, first_qe):
             if not px: continue
             mine = [r for r in hist if r["sym"] == sym]
             fe = min(dt.datetime.fromisoformat(r["event_ts"]) for r in mine if r["qe"] == qe_s)
-            ev = ts if qe < ts.date() <= fe.date() else fe            # earliest announcement, v1 D8 rule
+            c_ = sorted(t_ for t_ in ann_all.get(sym, []) if qe < t_.date() <= fe.date())
+            ev = c_[0] if c_ else fe                                 # earliest announcement, v1 D8 rule
             s, n, b = sue_for(mine, sym, qe, px["sp"])
             i0 = bisect.bisect_right(px["d"], ev.date())
             if s is None or i0 >= len(px["d"]) or i0 < 250: continue   # entry close not yet available -> retry later
@@ -211,10 +225,8 @@ def update(days, first_qe):
                           "entry_date": str(px["d"][i0]), "entry_close": round(px["c"][i0], 2), "mcap_cr": round(mc, 1),
                           "sue": round(s, 4), "n_prev": n, "ann_ret": round(ar, 5) if ar is not None else "",
                           "q5_prov": q5, "ann_up": int(ar is not None and ar > 0), "prediction": pred, "status": "open"})
-            have.add((sym, qe_s)); print("logged", sym, qe_s, "SUE", round(s, 2), "Q", q5)
-    wcsv(hf, hist, ["sym", "qe", "basis", "eps_raw", "event_ts", "shares"])
-    wcsv(os.path.join(LIVE, "universe.csv"), list(uni.values()), ["sym", "shares"])
-    wcsv(pf, preds, PRED_COLS)
+            have.add((sym, qe_s)); print("logged", sym, qe_s, "SUE", round(s, 2), "Q", q5, flush=True)
+    save()
 
 
 # ---------------------------------------------------------------- finalize

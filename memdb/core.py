@@ -116,8 +116,14 @@ def _index_record(con: sqlite3.Connection, r: dict) -> None:
          r.get("created", ""), r.get("updated", ""), r.get("version", 1)))
     con.executemany("INSERT INTO rec_tickers VALUES(?,?)", [(rid, t.upper()) for t in tick])
     con.executemany("INSERT INTO rec_tags VALUES(?,?)", [(rid, t.lower()) for t in tags])
-    con.executemany("INSERT INTO links VALUES(?,?,?)",
-                    [(rid, l["to"], l.get("rel", "related")) for l in r.get("links") or []])
+    links = []
+    for l in r.get("links") or []:
+        if isinstance(l, str):
+            to, _, rel = l.rpartition(":") if l.count(":") >= 2 else (l, "", "related")
+            links.append((rid, to or l, rel or "related"))
+        else:
+            links.append((rid, l["to"], l.get("rel", "related")))
+    con.executemany("INSERT INTO links VALUES(?,?,?)", links)
     data_txt = " ".join(f"{k} {v}" for k, v in (r.get("data") or {}).items())
     con.execute("INSERT INTO fts(rowid, id, title, tags, tickers, body) VALUES(?,?,?,?,?,?)",
                 (cur.lastrowid, rid, r.get("title", ""), " ".join(tags), " ".join(tick),
@@ -208,6 +214,16 @@ def _row(row) -> dict:
 def put(con, rec: dict, merge: bool = True, commit: bool = True) -> dict:
     """Create or update a record. With merge, unspecified fields keep old values;
     list fields (tickers/tags/sources/links) are unioned; data dict is merged."""
+    # accept links as "target_id:rel" strings as well as {"to","rel"} dicts
+    norm = []
+    for l in rec.get("links") or []:
+        if isinstance(l, str):
+            to, _, rel = l.rpartition(":") if l.count(":") >= 2 else (l, "", "related")
+            norm.append({"to": to or l, "rel": rel or "related"})
+        else:
+            norm.append(l)
+    if norm:
+        rec["links"] = norm
     if rec.get("type") not in TYPES:
         raise ValueError(f"type must be one of {sorted(TYPES)}")
     rid = rec.get("id") or f"{rec['type']}:{slug(rec.get('title', ''))}"

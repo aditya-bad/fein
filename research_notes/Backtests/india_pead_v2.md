@@ -186,4 +186,39 @@ t −2.75. The verdicts do not change. H3 holds on the CI rule, although its mon
   but small long-only edge of about +2.4% per quarter gross. It is **not separable from zero once a 1% round trip is
   paid**, at 3–4 years' or 3 quarters' worth of data.
 
-*(Stage 2, the 2022–25 re-run with consolidated EPS, is added below when pass B completes.)*
+*(Stage 2, the 2022–25 re-run with consolidated EPS, is **PENDING**. The pass-B fetch of quarters Jun-2019 → Sep-2022 was still running at hand-off, so its numbers are not yet in this report. When pass B completes, run `v2_events.py V1 V2` then `v2_analyze.py V2` and add the RERUN block. H1 is already "not supported" because the fresh half failed, so the re-run cannot change the H1 verdict.)*
+
+## How to run the live tracker (laptop or Raspberry Pi)
+
+Python 3.8+, standard library only. State is in `research_notes/Backtests/india_pead_live/` (git-tracked except
+`.pxcache/`).
+
+1. **Once (already done 2026-11-21 from the v2 caches):**
+   `python3 tools/backtests/india_pead/live_tracker.py bootstrap <V1DIR> <V2DIR>`. This writes `universe.csv` (1,555
+   names with shares), `eps_history.csv` (reported EPS per quarter and basis, 2019–Sep-2026), `sue_cutpoints.json`
+   (fixed provisional quintile cuts) and an empty `predictions.csv`.
+2. **Every weekday evening after about 20:00 IST** (results land through the evening):
+   `python3 tools/backtests/india_pead/live_tracker.py update`. It reads the last 4 days of NSE result announcements
+   (all companies, one call per day) and pulls each announcer's new integrated-filing XBRL (consolidated and
+   standalone). It logs a row once the entry close exists, which is the close of the first trading day after the
+   filing, so a row usually appears one run after the result. Expect about 1.5 s per company on result-heavy days
+   (about 10–25 min on peak days). It checkpoints every 20 companies and is safe to re-run.
+3. **Weekly (Saturday):** `live_tracker.py finalize` assigns in-quarter quintiles once a season closes.
+   `live_tracker.py score` fills 21d and 63d outcomes vs size-matched controls (one Yahoo call per universe stock,
+   cached 3 days, about 30 min) and rewrites `scorecard.md`.
+4. **Pi crontab** (`crontab -e`; Pi clock in IST; repo at `~/fein`):
+   ```
+   15 20 * * 1-5  cd ~/fein && python3 tools/backtests/india_pead/live_tracker.py update   >> ~/pead_live.log 2>&1
+   30 21 * * 6    cd ~/fein && python3 tools/backtests/india_pead/live_tracker.py finalize >> ~/pead_live.log 2>&1 && python3 tools/backtests/india_pead/live_tracker.py score >> ~/pead_live.log 2>&1
+   45 22 * * 6    cd ~/fein && git add research_notes/Backtests/india_pead_live && git commit -qm "PEAD live: weekly update" && git push -q
+   ```
+   The first logged quarter is Q3 FY27 (31-Dec-2026), so rows start appearing about mid-January 2027. Earlier quarters
+   are ignored unless `--first-qe` is passed. That is for testing only: 149 Sep-2026 rows were logged in a scratch
+   directory on 2026-11-21 to check the code. Their SUE and basis matched `v2_events.py` exactly. 7 of 149 entered
+   later than the backtest because their result-day announcement fell before the test window. The tracker now keeps
+   `announcements.csv` permanently, so daily runs catch it.
+5. **Caveats.** NSE endpoints change without notice. If `update` prints 0 companies on a results-season weekday,
+   check `tools/nse_fetch.py` first. Yahoo symbol changes (renames) silently drop a name. New listings have no EPS
+   history and enter after 8 quarters. The provisional quintile uses fixed cut points, so its bucket sizes will not be
+   exactly 20%.
+
