@@ -1,0 +1,6382 @@
+{
+ "n_episodes": 106,
+ "missing_records": [],
+ "unknown_ids": [],
+ "by_label": {
+  "T-fraud": 19,
+  "T-lev": 15,
+  "T-bust": 9,
+  "W": 54,
+  "FA": 9
+ },
+ "rules": {
+  "H1a": {
+   "T": {
+    "Y": 1,
+    "N": 42,
+    "U": 0,
+    "NA": 0
+   },
+   "W": {
+    "Y": 0,
+    "N": 63,
+    "U": 0,
+    "NA": 0
+   }
+  },
+  "H1b": {
+   "T": {
+    "Y": 3,
+    "N": 39,
+    "U": 1,
+    "NA": 0
+   },
+   "W": {
+    "Y": 0,
+    "N": 63,
+    "U": 0,
+    "NA": 0
+   }
+  },
+  "H1c": {
+   "T": {
+    "Y": 2,
+    "N": 41,
+    "U": 0,
+    "NA": 0
+   },
+   "W": {
+    "Y": 0,
+    "N": 63,
+    "U": 0,
+    "NA": 0
+   }
+  },
+  "H2": {
+   "T": {
+    "Y": 0,
+    "N": 41,
+    "U": 2,
+    "NA": 0
+   },
+   "W": {
+    "Y": 0,
+    "N": 63,
+    "U": 0,
+    "NA": 0
+   }
+  },
+  "H2b": {
+   "T": {
+    "Y": 3,
+    "N": 40,
+    "U": 0,
+    "NA": 0
+   },
+   "W": {
+    "Y": 1,
+    "N": 61,
+    "U": 1,
+    "NA": 0
+   }
+  },
+  "H3": {
+   "T": {
+    "Y": 0,
+    "N": 43,
+    "U": 0,
+    "NA": 0
+   },
+   "W": {
+    "Y": 0,
+    "N": 62,
+    "U": 1,
+    "NA": 0
+   }
+  },
+  "H4": {
+   "T": {
+    "Y": 1,
+    "N": 42,
+    "U": 0,
+    "NA": 0
+   },
+   "W": {
+    "Y": 0,
+    "N": 63,
+    "U": 0,
+    "NA": 0
+   }
+  },
+  "H5": {
+   "T": {
+    "Y": 1,
+    "N": 39,
+    "U": 3,
+    "NA": 0
+   },
+   "W": {
+    "Y": 0,
+    "N": 63,
+    "U": 0,
+    "NA": 0
+   }
+  },
+  "G1": {
+   "T": {
+    "Y": 8,
+    "N": 12,
+    "U": 7,
+    "NA": 16
+   },
+   "W": {
+    "Y": 2,
+    "N": 11,
+    "U": 21,
+    "NA": 29
+   }
+  },
+  "G3": {
+   "T": {
+    "Y": 1,
+    "N": 41,
+    "U": 1,
+    "NA": 0
+   },
+   "W": {
+    "Y": 3,
+    "N": 60,
+    "U": 0,
+    "NA": 0
+   }
+  },
+  "G4": {
+   "T": {
+    "Y": 7,
+    "N": 34,
+    "U": 2,
+    "NA": 0
+   },
+   "W": {
+    "Y": 4,
+    "N": 53,
+    "U": 6,
+    "NA": 0
+   }
+  },
+  "F1_cfo_pat_lt_0.7": {
+   "T": {
+    "Y": 6,
+    "N": 14,
+    "U": 17,
+    "NA": 6
+   },
+   "W": {
+    "Y": 8,
+    "N": 16,
+    "U": 37,
+    "NA": 2
+   }
+  },
+  "F1b_cfo_pat_lt_0.3": {
+   "T": {
+    "Y": 3,
+    "N": 17,
+    "U": 17,
+    "NA": 6
+   },
+   "W": {
+    "Y": 5,
+    "N": 19,
+    "U": 37,
+    "NA": 2
+   }
+  },
+  "G2_debt_up_neg_cfo": {
+   "T": {
+    "Y": 2,
+    "N": 19,
+    "U": 16,
+    "NA": 6
+   },
+   "W": {
+    "Y": 4,
+    "N": 20,
+    "U": 37,
+    "NA": 2
+   }
+  },
+  "G5_neg_fcf": {
+   "T": {
+    "Y": 9,
+    "N": 14,
+    "U": 14,
+    "NA": 6
+   },
+   "W": {
+    "Y": 15,
+    "N": 15,
+    "U": 31,
+    "NA": 2
+   }
+  },
+  "G6_debtor_days": {
+   "T": {
+    "Y": 3,
+    "N": 20,
+    "U": 14,
+    "NA": 6
+   },
+   "W": {
+    "Y": 3,
+    "N": 25,
+    "U": 33,
+    "NA": 2
+   }
+  },
+  "F2_other_income": {
+   "T": {
+    "Y": 6,
+    "N": 11,
+    "U": 20,
+    "NA": 6
+   },
+   "W": {
+    "Y": 6,
+    "N": 9,
+    "U": 46,
+    "NA": 2
+   }
+  }
+ },
+ "combos": {
+  "HARD_current (H1a,H1b,H1c,H2,H3,H4,H5)": {
+   "T": {
+    "Y": 8,
+    "N": 31,
+    "U": 4,
+    "NA": 0
+   },
+   "W": {
+    "Y": 0,
+    "N": 62,
+    "U": 1,
+    "NA": 0
+   }
+  },
+  "HARD_current (H1a,H1b,H1c,H2,H3,H4,H5) | traps by sub": {
+   "fraud": {
+    "Y": 8,
+    "N": 8,
+    "U": 3,
+    "NA": 0
+   },
+   "lev": {
+    "Y": 0,
+    "N": 15,
+    "U": 0,
+    "NA": 0
+   },
+   "bust": {
+    "Y": 0,
+    "N": 8,
+    "U": 1,
+    "NA": 0
+   }
+  },
+  "HARD + H2b broad": {
+   "T": {
+    "Y": 11,
+    "N": 29,
+    "U": 3,
+    "NA": 0
+   },
+   "W": {
+    "Y": 1,
+    "N": 60,
+    "U": 2,
+    "NA": 0
+   }
+  },
+  "HARD + H2b broad | traps by sub": {
+   "fraud": {
+    "Y": 9,
+    "N": 7,
+    "U": 3,
+    "NA": 0
+   },
+   "lev": {
+    "Y": 0,
+    "N": 15,
+    "U": 0,
+    "NA": 0
+   },
+   "bust": {
+    "Y": 2,
+    "N": 7,
+    "U": 0,
+    "NA": 0
+   }
+  },
+  "GRADED any (G1,G3,G4 + mechanical)": {
+   "T": {
+    "Y": 22,
+    "N": 6,
+    "U": 15,
+    "NA": 0
+   },
+   "W": {
+    "Y": 21,
+    "N": 3,
+    "U": 39,
+    "NA": 0
+   }
+  },
+  "GRADED any (G1,G3,G4 + mechanical) | traps by sub": {
+   "fraud": {
+    "Y": 9,
+    "N": 2,
+    "U": 8,
+    "NA": 0
+   },
+   "lev": {
+    "Y": 6,
+    "N": 4,
+    "U": 5,
+    "NA": 0
+   },
+   "bust": {
+    "Y": 7,
+    "N": 0,
+    "U": 2,
+    "NA": 0
+   }
+  },
+  "mech cash only (F1b CFO/PAT<0.3 or G2)": {
+   "T": {
+    "Y": 4,
+    "N": 15,
+    "U": 18,
+    "NA": 6
+   },
+   "W": {
+    "Y": 7,
+    "N": 15,
+    "U": 39,
+    "NA": 2
+   }
+  },
+  "mech cash only (F1b CFO/PAT<0.3 or G2) | traps by sub": {
+   "fraud": {
+    "Y": 3,
+    "N": 6,
+    "U": 7,
+    "NA": 3
+   },
+   "lev": {
+    "Y": 1,
+    "N": 4,
+    "U": 7,
+    "NA": 3
+   },
+   "bust": {
+    "Y": 0,
+    "N": 5,
+    "U": 4,
+    "NA": 0
+   }
+  },
+  "pledge only (G1)": {
+   "T": {
+    "Y": 8,
+    "N": 12,
+    "U": 7,
+    "NA": 16
+   },
+   "W": {
+    "Y": 2,
+    "N": 11,
+    "U": 21,
+    "NA": 29
+   }
+  },
+  "pledge only (G1) | traps by sub": {
+   "fraud": {
+    "Y": 5,
+    "N": 5,
+    "U": 4,
+    "NA": 5
+   },
+   "lev": {
+    "Y": 3,
+    "N": 3,
+    "U": 3,
+    "NA": 6
+   },
+   "bust": {
+    "Y": 0,
+    "N": 4,
+    "U": 0,
+    "NA": 5
+   }
+  }
+ },
+ "rules_by_trap_sub": {
+  "H1a": {
+   "fraud": {
+    "Y": 1,
+    "N": 18,
+    "U": 0,
+    "NA": 0
+   },
+   "lev": {
+    "Y": 0,
+    "N": 15,
+    "U": 0,
+    "NA": 0
+   },
+   "bust": {
+    "Y": 0,
+    "N": 9,
+    "U": 0,
+    "NA": 0
+   }
+  },
+  "H1b": {
+   "fraud": {
+    "Y": 3,
+    "N": 15,
+    "U": 1,
+    "NA": 0
+   },
+   "lev": {
+    "Y": 0,
+    "N": 15,
+    "U": 0,
+    "NA": 0
+   },
+   "bust": {
+    "Y": 0,
+    "N": 9,
+    "U": 0,
+    "NA": 0
+   }
+  },
+  "H1c": {
+   "fraud": {
+    "Y": 2,
+    "N": 17,
+    "U": 0,
+    "NA": 0
+   },
+   "lev": {
+    "Y": 0,
+    "N": 15,
+    "U": 0,
+    "NA": 0
+   },
+   "bust": {
+    "Y": 0,
+    "N": 9,
+    "U": 0,
+    "NA": 0
+   }
+  },
+  "H2": {
+   "fraud": {
+    "Y": 0,
+    "N": 17,
+    "U": 2,
+    "NA": 0
+   },
+   "lev": {
+    "Y": 0,
+    "N": 15,
+    "U": 0,
+    "NA": 0
+   },
+   "bust": {
+    "Y": 0,
+    "N": 9,
+    "U": 0,
+    "NA": 0
+   }
+  },
+  "H2b": {
+   "fraud": {
+    "Y": 1,
+    "N": 18,
+    "U": 0,
+    "NA": 0
+   },
+   "lev": {
+    "Y": 0,
+    "N": 15,
+    "U": 0,
+    "NA": 0
+   },
+   "bust": {
+    "Y": 2,
+    "N": 7,
+    "U": 0,
+    "NA": 0
+   }
+  },
+  "H3": {
+   "fraud": {
+    "Y": 0,
+    "N": 19,
+    "U": 0,
+    "NA": 0
+   },
+   "lev": {
+    "Y": 0,
+    "N": 15,
+    "U": 0,
+    "NA": 0
+   },
+   "bust": {
+    "Y": 0,
+    "N": 9,
+    "U": 0,
+    "NA": 0
+   }
+  },
+  "H4": {
+   "fraud": {
+    "Y": 1,
+    "N": 18,
+    "U": 0,
+    "NA": 0
+   },
+   "lev": {
+    "Y": 0,
+    "N": 15,
+    "U": 0,
+    "NA": 0
+   },
+   "bust": {
+    "Y": 0,
+    "N": 9,
+    "U": 0,
+    "NA": 0
+   }
+  },
+  "H5": {
+   "fraud": {
+    "Y": 1,
+    "N": 16,
+    "U": 2,
+    "NA": 0
+   },
+   "lev": {
+    "Y": 0,
+    "N": 15,
+    "U": 0,
+    "NA": 0
+   },
+   "bust": {
+    "Y": 0,
+    "N": 8,
+    "U": 1,
+    "NA": 0
+   }
+  },
+  "G1": {
+   "fraud": {
+    "Y": 5,
+    "N": 5,
+    "U": 4,
+    "NA": 5
+   },
+   "lev": {
+    "Y": 3,
+    "N": 3,
+    "U": 3,
+    "NA": 6
+   },
+   "bust": {
+    "Y": 0,
+    "N": 4,
+    "U": 0,
+    "NA": 5
+   }
+  },
+  "G3": {
+   "fraud": {
+    "Y": 1,
+    "N": 17,
+    "U": 1,
+    "NA": 0
+   },
+   "lev": {
+    "Y": 0,
+    "N": 15,
+    "U": 0,
+    "NA": 0
+   },
+   "bust": {
+    "Y": 0,
+    "N": 9,
+    "U": 0,
+    "NA": 0
+   }
+  },
+  "G4": {
+   "fraud": {
+    "Y": 0,
+    "N": 19,
+    "U": 0,
+    "NA": 0
+   },
+   "lev": {
+    "Y": 1,
+    "N": 13,
+    "U": 1,
+    "NA": 0
+   },
+   "bust": {
+    "Y": 6,
+    "N": 2,
+    "U": 1,
+    "NA": 0
+   }
+  },
+  "F1_cfo_pat_lt_0.7": {
+   "fraud": {
+    "Y": 4,
+    "N": 5,
+    "U": 7,
+    "NA": 3
+   },
+   "lev": {
+    "Y": 1,
+    "N": 4,
+    "U": 7,
+    "NA": 3
+   },
+   "bust": {
+    "Y": 1,
+    "N": 5,
+    "U": 3,
+    "NA": 0
+   }
+  },
+  "F1b_cfo_pat_lt_0.3": {
+   "fraud": {
+    "Y": 3,
+    "N": 6,
+    "U": 7,
+    "NA": 3
+   },
+   "lev": {
+    "Y": 0,
+    "N": 5,
+    "U": 7,
+    "NA": 3
+   },
+   "bust": {
+    "Y": 0,
+    "N": 6,
+    "U": 3,
+    "NA": 0
+   }
+  },
+  "G2_debt_up_neg_cfo": {
+   "fraud": {
+    "Y": 1,
+    "N": 8,
+    "U": 7,
+    "NA": 3
+   },
+   "lev": {
+    "Y": 1,
+    "N": 6,
+    "U": 5,
+    "NA": 3
+   },
+   "bust": {
+    "Y": 0,
+    "N": 5,
+    "U": 4,
+    "NA": 0
+   }
+  },
+  "G5_neg_fcf": {
+   "fraud": {
+    "Y": 5,
+    "N": 4,
+    "U": 7,
+    "NA": 3
+   },
+   "lev": {
+    "Y": 4,
+    "N": 4,
+    "U": 4,
+    "NA": 3
+   },
+   "bust": {
+    "Y": 0,
+    "N": 6,
+    "U": 3,
+    "NA": 0
+   }
+  },
+  "G6_debtor_days": {
+   "fraud": {
+    "Y": 2,
+    "N": 7,
+    "U": 7,
+    "NA": 3
+   },
+   "lev": {
+    "Y": 1,
+    "N": 7,
+    "U": 4,
+    "NA": 3
+   },
+   "bust": {
+    "Y": 0,
+    "N": 6,
+    "U": 3,
+    "NA": 0
+   }
+  },
+  "F2_other_income": {
+   "fraud": {
+    "Y": 1,
+    "N": 7,
+    "U": 8,
+    "NA": 3
+   },
+   "lev": {
+    "Y": 5,
+    "N": 1,
+    "U": 6,
+    "NA": 3
+   },
+   "bust": {
+    "Y": 0,
+    "N": 3,
+    "U": 6,
+    "NA": 0
+   }
+  }
+ },
+ "graded_count_dist": {
+  "T": {
+   "0": 21,
+   "1": 11,
+   "2": 3,
+   "3": 6,
+   "4": 1,
+   "6": 1
+  },
+  "W": {
+   "0": 42,
+   "1": 5,
+   "2": 9,
+   "3": 2,
+   "4": 4,
+   "5": 1
+  }
+ },
+ "episodes": [
+  {
+   "id": "satyam-2009",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "IN",
+   "key": null,
+   "T": "2008-06-30",
+   "lender": false,
+   "outcome": "Rs 544 -> Rs 6-7 (-98%)",
+   "final": {
+    "H1a": "Y",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "H1a": "FY08 accounts: ~Rs 5,000 cr cash earning far below FD rates while carrying debt (CLSA's Sep-2008 note used the same public FY08 numbers)",
+    "G1": "pledge disclosure only mandatory from Jan-2009"
+   },
+   "later": {
+    "H5": "16-Dec-2008 Maytas related-party deal (3 weeks before the confession, after ~60% of the fall)",
+    "H2b": "World Bank debarment / director exits Dec-2008"
+   },
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 1,
+   "note": "",
+   "records": [
+    "case_study:satyam-2009",
+    "case_study:hidden-trap-satyam-cash"
+   ]
+  },
+  {
+   "id": "vakrangee",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "IN",
+   "key": "VAKRANGEE",
+   "T": "2018-01-15",
+   "lender": false,
+   "outcome": "Rs 515 -> ~Rs 5 (-99%)",
+   "final": {
+    "H1a": "N",
+    "H1b": "Y",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "H1b": "OPM 24-26% and ROCE ~40% (FY15-17) in a rural kiosk franchise; no comparable earns that",
+    "G1": "BSE SHP 26 Dec 2017 (filed 2017-12-28): 0.0% of promoter holding pledged"
+   },
+   "later": {
+    "H2": "PwC resigned Apr-2018"
+   },
+   "metrics": {
+    "n_years": 3,
+    "first_fy": 2015,
+    "last_fy": 2017,
+    "sum_cfo": 940.0,
+    "sum_pat": 1248.0,
+    "sum_fcf": 961.0,
+    "cfo_pat": 0.753,
+    "pat_nonpos": false,
+    "debt_start": 416.0,
+    "debt_end": 144.0,
+    "sum_cfo_3y": 940.0,
+    "debt_growth": 0.35,
+    "equity": 2054.0,
+    "de": 0.07,
+    "oi_pbt": 0.006,
+    "oi_pbt_3y": 0.009,
+    "debtor_days": 75.0,
+    "debtor_days_d2": -82.0,
+    "sales_cagr": 0.2,
+    "eqcap_growth": null
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 0,
+   "n_hard_Y": 1,
+   "note": "",
+   "records": [
+    "case_study:vakrangee-manpasand",
+    "case_study:hidden-trap-vakrangee-roce-debt-free"
+   ]
+  },
+  {
+   "id": "manpasand",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "IN",
+   "key": "MANPASAND",
+   "T": "2018-04-30",
+   "lender": false,
+   "outcome": "suspended / ~-100%",
+   "final": {
+    "H1a": "N",
+    "H1b": "Y",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "H1b": "growth 33-44% faster than category leader Frooti; publicly questioned by a fund manager Dec-2016 (judgment call)",
+    "G1": "BSE SHP March 2018 (filed 2018-04-05): 0.0% of promoter holding pledged"
+   },
+   "later": {
+    "H2": "Deloitte resigned May-2018 citing denied revenue/capex data; next auditor quit 2019"
+   },
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2013,
+    "last_fy": 2017,
+    "sum_cfo": 315.0,
+    "sum_pat": 195.0,
+    "sum_fcf": -453.0,
+    "cfo_pat": 1.615,
+    "pat_nonpos": false,
+    "debt_start": 75.0,
+    "debt_end": 0.0,
+    "sum_cfo_3y": 281.0,
+    "debt_growth": 0.0,
+    "equity": 1153.0,
+    "de": 0.0,
+    "oi_pbt": 0.217,
+    "oi_pbt_3y": 0.156,
+    "debtor_days": 39.0,
+    "debtor_days_d2": -22.0,
+    "sales_cagr": 0.314,
+    "eqcap_growth": 28.5
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 1,
+   "n_hard_Y": 1,
+   "note": "",
+   "records": [
+    "case_study:vakrangee-manpasand",
+    "case_study:hidden-trap-manpasand-growth"
+   ]
+  },
+  {
+   "id": "cox-and-kings-2019",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "IN",
+   "key": "COXKINGS",
+   "T": "2018-01-15",
+   "lender": false,
+   "outcome": "Rs 250-400 -> Rs 2-3 (-99%)",
+   "final": {
+    "H1a": "N",
+    "H1b": "Y",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "Y",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "H1b": "advance-paid travel business carrying heavy debt + large receivables/advances in FY15-17 accounts (WC sign contradicts model; judgment)",
+    "G1": "BSE SHP December 2017 (filed 2018-01-11): 54.2% of promoter holding pledged"
+   },
+   "later": {
+    "H5": "PwC lender audit (2019-20) found Rs 4,367 cr siphoned"
+   },
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2013,
+    "last_fy": 2017,
+    "sum_cfo": 2522.0,
+    "sum_pat": 933.0,
+    "sum_fcf": 1377.0,
+    "cfo_pat": 2.703,
+    "pat_nonpos": false,
+    "debt_start": 5584.0,
+    "debt_end": 3674.0,
+    "sum_cfo_3y": 1509.0,
+    "debt_growth": 0.66,
+    "equity": 2599.0,
+    "de": 1.41,
+    "oi_pbt": 0.102,
+    "oi_pbt_3y": -0.623,
+    "debtor_days": 93.0,
+    "debtor_days_d2": -75.0,
+    "sales_cagr": 0.411,
+    "eqcap_growth": 1.29
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 1,
+   "n_hard_Y": 1,
+   "note": "",
+   "records": [
+    "case_study:cox-and-kings-2019",
+    "case_study:hidden-trap-cox-and-kings-brand"
+   ]
+  },
+  {
+   "id": "ricoh-india-2016",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "IN",
+   "key": "517496",
+   "T": "2015-08-01",
+   "lender": false,
+   "outcome": ">Rs 1,000 -> suspended (-90%+)",
+   "final": {
+    "H1a": "N",
+    "H1b": "U",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "Y",
+    "F1b_cfo_pat_lt_0.3": "Y",
+    "G2_debt_up_neg_cfo": "Y",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "H1b": "revenue surge far above parent; not dated precisely enough to call pre-T"
+   },
+   "later": {
+    "H2b": "Q2 FY16 results delayed + auditor refused to sign (Nov-2015)"
+   },
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2010,
+    "last_fy": 2014,
+    "sum_cfo": -193.0,
+    "sum_pat": 46.0,
+    "sum_fcf": -281.0,
+    "cfo_pat": -4.196,
+    "pat_nonpos": false,
+    "debt_start": 0.0,
+    "debt_end": 357.0,
+    "sum_cfo_3y": -219.0,
+    "debt_growth": 99.0,
+    "equity": 140.0,
+    "de": 2.55,
+    "oi_pbt": 0.067,
+    "oi_pbt_3y": 0.214,
+    "debtor_days": 111.0,
+    "debtor_days_d2": 29.0,
+    "sales_cagr": 0.421,
+    "eqcap_growth": 1.0
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 4,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:ricoh-india-2016",
+    "case_study:hidden-trap-ricoh-india-mnc-growth"
+   ]
+  },
+  {
+   "id": "gitanjali-gems",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "IN",
+   "key": "532715",
+   "T": "2018-01-15",
+   "lender": false,
+   "outcome": "-61% in 7 days Feb-2018, then delisted",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "U",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "Y",
+    "G1": "Y",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "Y",
+    "F1b_cfo_pat_lt_0.3": "Y",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "Y",
+    "F2_other_income": "Y"
+   },
+   "ev": {
+    "H2": "Mar-2017 auditor warning of default to LIC (nature of opinion not established)",
+    "H5": "FY17 annual report: group-company receivables ~33% of total receivables",
+    "G1": "BSE SHP September 2017 (filed 2017-10-17): 79.1% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2013,
+    "last_fy": 2017,
+    "sum_cfo": -1181.0,
+    "sum_pat": 990.0,
+    "sum_fcf": -1347.0,
+    "cfo_pat": -1.193,
+    "pat_nonpos": false,
+    "debt_start": 8484.0,
+    "debt_end": 8254.0,
+    "sum_cfo_3y": 1801.0,
+    "debt_growth": 0.97,
+    "equity": 6563.0,
+    "de": 1.26,
+    "oi_pbt": 1.609,
+    "oi_pbt_3y": 1.334,
+    "debtor_days": 283.0,
+    "debtor_days_d2": -32.0,
+    "sales_cagr": 0.002,
+    "eqcap_growth": 1.29
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 6,
+   "n_hard_Y": 1,
+   "note": "",
+   "records": [
+    "case_study:hidden-trap-gitanjali-receivables"
+   ]
+  },
+  {
+   "id": "rajesh-exports",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "IN",
+   "key": "RAJESHEXPO",
+   "T": "2022-08-01",
+   "lender": false,
+   "outcome": "~Rs 947 -> Rs 48 (-95%); SEBI interim order Jun-2026 (allegations)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "Y",
+    "H2": "U",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "Y",
+    "F1b_cfo_pat_lt_0.3": "Y",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "H1c": "0.4-1.1% operating margin on Rs 1.6-2.6 lakh cr pass-through gold revenue (FY15-22): profit not verifiable",
+    "H2": "frequent auditor changes noted, dates not established",
+    "G1": "BSE SHP June 2022 (filed 2022-07-21): 0.0% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2017,
+    "last_fy": 2021,
+    "sum_cfo": -4594.0,
+    "sum_pat": 5853.0,
+    "sum_fcf": -5050.0,
+    "cfo_pat": -0.785,
+    "pat_nonpos": false,
+    "debt_start": 8717.0,
+    "debt_end": 1021.0,
+    "sum_cfo_3y": -4198.0,
+    "debt_growth": 0.12,
+    "equity": 11222.0,
+    "de": 0.09,
+    "oi_pbt": 0.003,
+    "oi_pbt_3y": 0.022,
+    "debtor_days": 15.0,
+    "debtor_days_d2": 2.0,
+    "sales_cagr": 0.016,
+    "eqcap_growth": 1.0
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 3,
+   "n_hard_Y": 1,
+   "note": "",
+   "records": [
+    "case_study:hidden-trap-rajesh-exports-low-pe"
+   ]
+  },
+  {
+   "id": "reliance-capital-adag",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "IN",
+   "key": "RELCAPITAL",
+   "T": "2018-01-15",
+   "lender": true,
+   "outcome": "equity wiped (IBC 2025)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "U",
+    "G1": "Y",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "NA",
+    "F1b_cfo_pat_lt_0.3": "NA",
+    "G2_debt_up_neg_cfo": "NA",
+    "G5_neg_fcf": "NA",
+    "G6_debtor_days": "NA",
+    "F2_other_income": "NA"
+   },
+   "ev": {
+    "H5": "GPCL loans to group shells jumped in FY18-19 (FY18 data public only after T)",
+    "G1": "BSE SHP September 2017 (filed 2017-10-14): 34.2% of promoter holding pledged"
+   },
+   "later": {
+    "H2": "PwC resigned 2019 citing unresolved concerns",
+    "H5": "GPCL loans Rs 900 -> 7,900 cr"
+   },
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2013,
+    "last_fy": 2017,
+    "sum_cfo": -3088.0,
+    "sum_pat": 5362.0,
+    "sum_fcf": -3747.0,
+    "cfo_pat": -0.576,
+    "pat_nonpos": false,
+    "debt_start": 25577.0,
+    "debt_end": 39261.0,
+    "sum_cfo_3y": -4850.0,
+    "debt_growth": 1.54,
+    "equity": 15334.0,
+    "de": 2.56,
+    "oi_pbt": 0.086,
+    "oi_pbt_3y": 0.058,
+    "debtor_days": 19.0,
+    "debtor_days_d2": 5.0,
+    "sales_cagr": 0.238,
+    "eqcap_growth": 1.04
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 1,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:reliance-capital-adag"
+   ]
+  },
+  {
+   "id": "gensol-2025",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "IN",
+   "key": "GENSOL",
+   "T": "2024-06-30",
+   "lender": false,
+   "outcome": "~Rs 900-1,100 -> ~Rs 100 (-90%)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "Y",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "G1": "BSE SHP March 2024 (filed 2024-04-10): 63.1% of promoter holding pledged"
+   },
+   "later": {
+    "H5": "SEBI interim order 15-Apr-2025 (EV-loan diversion)",
+    "H3": "rating downgrades Mar-2025"
+   },
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2019,
+    "last_fy": 2023,
+    "sum_cfo": 56.0,
+    "sum_pat": 46.0,
+    "sum_fcf": -442.0,
+    "cfo_pat": 1.217,
+    "pat_nonpos": false,
+    "debt_start": 11.0,
+    "debt_end": 598.0,
+    "sum_cfo_3y": 71.0,
+    "debt_growth": 54.36,
+    "equity": 207.0,
+    "de": 2.89,
+    "oi_pbt": 0.152,
+    "oi_pbt_3y": 0.157,
+    "debtor_days": 67.0,
+    "debtor_days_d2": -35.0,
+    "sales_cagr": 0.48,
+    "eqcap_growth": 1.5
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 2,
+   "n_hard_Y": 0,
+   "note": "worked mini-run in the forensic course used FY24 data (public May-2024, before T)",
+   "records": [
+    "case_study:gensol-2025"
+   ]
+  },
+  {
+   "id": "brightcom",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "IN",
+   "key": "BCG",
+   "T": "2022-01-10",
+   "lender": false,
+   "outcome": "SEBI found ~Rs 1,280 cr inflated profit FY19-20; stock -90%+",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "U",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "Y",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "Y",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "G3": "preferential allotments 2021-22 not in the record",
+    "G1": "BSE SHP December 2021 (filed 2022-01-05): 9.9% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2017,
+    "last_fy": 2021,
+    "sum_cfo": 1525.0,
+    "sum_pat": 2203.0,
+    "sum_fcf": 240.0,
+    "cfo_pat": 0.692,
+    "pat_nonpos": false,
+    "debt_start": 77.0,
+    "debt_end": 0.0,
+    "sum_cfo_3y": 1059.0,
+    "debt_growth": 0.0,
+    "equity": 3260.0,
+    "de": 0.0,
+    "oi_pbt": 0.032,
+    "oi_pbt_3y": 0.017,
+    "debtor_days": 143.0,
+    "debtor_days_d2": 17.0,
+    "sales_cagr": 0.039,
+    "eqcap_growth": 1.07
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 2,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:brightcom"
+   ]
+  },
+  {
+   "id": "dhfl-2019",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "IN",
+   "key": null,
+   "T": "2018-09-01",
+   "lender": true,
+   "outcome": "Rs 690 -> equity wiped",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "NA",
+    "F1b_cfo_pat_lt_0.3": "NA",
+    "G2_debt_up_neg_cfo": "NA",
+    "G5_neg_fcf": "NA",
+    "G6_debtor_days": "NA",
+    "F2_other_income": "NA"
+   },
+   "ev": {},
+   "later": {
+    "H5": "Cobrapost Jan-2019 (Rs 31,000 cr to promoter-linked shells)"
+   },
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "ALM mismatch (15-20y loans on short CP) is not in our rule set",
+   "records": [
+    "case_study:dhfl-2019",
+    "case_study:hidden-trap-dhfl-growth"
+   ]
+  },
+  {
+   "id": "yes-bank-2020",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "IN",
+   "key": "YESBANK",
+   "T": "2018-08-20",
+   "lender": true,
+   "outcome": "Rs 393-404 -> Rs 5.6 (-98%)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "Y",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "NA",
+    "F1b_cfo_pat_lt_0.3": "NA",
+    "G2_debt_up_neg_cfo": "NA",
+    "G5_neg_fcf": "NA",
+    "G6_debtor_days": "NA",
+    "F2_other_income": "NA"
+   },
+   "ev": {
+    "H2b": "RBI-assessed NPA divergence Rs 4,177 cr (FY16) / Rs 6,355 cr (FY17), disclosed 2017",
+    "G1": "BSE SHP June 2018 (filed 2018-08-02): 3.6% of promoter holding pledged"
+   },
+   "later": {
+    "H2b": "RBI refused CEO extension Sep-2018"
+   },
+   "metrics": {
+    "n_years": 3,
+    "first_fy": 2015,
+    "last_fy": 2017,
+    "sum_cfo": 1763.0,
+    "sum_pat": 7867.0,
+    "sum_fcf": 1002.0,
+    "cfo_pat": 0.224,
+    "pat_nonpos": false,
+    "debt_start": null,
+    "debt_end": null,
+    "sum_cfo_3y": 1763.0,
+    "debt_growth": null,
+    "equity": 22039.0,
+    "de": null,
+    "oi_pbt": 0.835,
+    "oi_pbt_3y": 0.768,
+    "debtor_days": null,
+    "debtor_days_d2": null,
+    "sales_cagr": 0.191,
+    "eqcap_growth": null
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:yes-bank-2020",
+    "case_study:hidden-trap-yes-bank-roe"
+   ]
+  },
+  {
+   "id": "zee-essel-pledges-2019",
+   "label": "T",
+   "sub": "lev",
+   "mkt": "IN",
+   "key": "ZEEL",
+   "T": "2018-01-15",
+   "lender": false,
+   "outcome": "~Rs 600 -> ~Rs 120 (Mar-2020), -80%",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "Y",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "Y",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "Y"
+   },
+   "ev": {
+    "G1": "BSE SHP December 2017 (filed 2018-01-12): 45.7% of promoter holding pledged"
+   },
+   "later": {
+    "H5": "letter of comfort / FD for group loans surfaced 2019"
+   },
+   "metrics": {
+    "n_years": 3,
+    "first_fy": 2015,
+    "last_fy": 2017,
+    "sum_cfo": 2153.0,
+    "sum_pat": 4016.0,
+    "sum_fcf": 1546.0,
+    "cfo_pat": 0.536,
+    "pat_nonpos": false,
+    "debt_start": 2021.0,
+    "debt_end": 2203.0,
+    "sum_cfo_3y": 2153.0,
+    "debt_growth": 1.09,
+    "equity": 6690.0,
+    "de": 0.33,
+    "oi_pbt": 0.493,
+    "oi_pbt_3y": 0.323,
+    "debtor_days": 70.0,
+    "debtor_days_d2": -10.0,
+    "sales_cagr": 0.148,
+    "eqcap_growth": null
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 3,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:zee-essel-pledges-2019"
+   ]
+  },
+  {
+   "id": "future-group-2020",
+   "label": "T",
+   "sub": "lev",
+   "mkt": "IN",
+   "key": "FRETAIL",
+   "T": "2018-08-31",
+   "lender": false,
+   "outcome": "~Rs 550-600 -> Rs 2-5 (-99%)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "Y",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "Y"
+   },
+   "ev": {
+    "G1": "BSE SHP June 2018 (filed 2018-07-20): 44.0% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 4,
+    "first_fy": 2014,
+    "last_fy": 2017,
+    "sum_cfo": -529.0,
+    "sum_pat": -311.0,
+    "sum_fcf": -1032.0,
+    "cfo_pat": null,
+    "pat_nonpos": true,
+    "debt_start": 183.0,
+    "debt_end": 1079.0,
+    "sum_cfo_3y": 175.0,
+    "debt_growth": 5.9,
+    "equity": 2553.0,
+    "de": 0.42,
+    "oi_pbt": 0.065,
+    "oi_pbt_3y": 24.0,
+    "debtor_days": 5.0,
+    "debtor_days_d2": 5.0,
+    "sales_cagr": 0.939,
+    "eqcap_growth": 0.07
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 3,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:future-group-2020"
+   ]
+  },
+  {
+   "id": "pc-jeweller-2018",
+   "label": "T",
+   "sub": "lev",
+   "mkt": "IN",
+   "key": "PCJEWELLER",
+   "T": "2018-01-15",
+   "lender": false,
+   "outcome": "~Rs 600 -> teens (-95%+)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "G1": "BSE SHP December 2017 (filed 2018-01-03): 0.0% of promoter holding pledged"
+   },
+   "later": {
+    "H5": "promoter share 'gifts' Apr-2018; buyback withdrawn Jul-2018"
+   },
+   "metrics": {
+    "n_years": 3,
+    "first_fy": 2015,
+    "last_fy": 2017,
+    "sum_cfo": 1143.0,
+    "sum_pat": 1197.0,
+    "sum_fcf": 1092.0,
+    "cfo_pat": 0.955,
+    "pat_nonpos": false,
+    "debt_start": 682.0,
+    "debt_end": 803.0,
+    "sum_cfo_3y": 1143.0,
+    "debt_growth": 1.18,
+    "equity": 3352.0,
+    "de": 0.24,
+    "oi_pbt": 0.175,
+    "oi_pbt_3y": 0.127,
+    "debtor_days": 66.0,
+    "debtor_days_d2": 21.0,
+    "sales_cagr": 0.154,
+    "eqcap_growth": null
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:pc-jeweller-2018",
+    "case_study:hidden-trap-pc-jeweller-inventory"
+   ]
+  },
+  {
+   "id": "adani-hindenburg-2023",
+   "label": "T",
+   "sub": "lev",
+   "mkt": "IN",
+   "key": "ADANIENT",
+   "T": "2023-01-23",
+   "lender": false,
+   "outcome": "ADANIENT -70% (3,400 -> 1,017); allegations later closed by SEBI (RPT)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "Y",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "Y"
+   },
+   "ev": {
+    "G4": "'very high P/E/P/B on capital-intensive businesses' (record)",
+    "G1": "BSE SHP December 2022 (filed 2023-01-20): 2.7% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2018,
+    "last_fy": 2022,
+    "sum_cfo": 14060.0,
+    "sum_pat": 3974.0,
+    "sum_fcf": -12725.0,
+    "cfo_pat": 3.538,
+    "pat_nonpos": false,
+    "debt_start": 11243.0,
+    "debt_end": 41604.0,
+    "sum_cfo_3y": 7882.0,
+    "debt_growth": 3.7,
+    "equity": 22257.0,
+    "de": 1.87,
+    "oi_pbt": 1.063,
+    "oi_pbt_3y": 0.753,
+    "debtor_days": 72.0,
+    "debtor_days_d2": -39.0,
+    "sales_cagr": 0.179,
+    "eqcap_growth": 1.0
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 3,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:adani-hindenburg-2023"
+   ]
+  },
+  {
+   "id": "jet-airways-2019",
+   "label": "T",
+   "sub": "lev",
+   "mkt": "IN",
+   "key": "JETAIRWAYS",
+   "T": "2018-01-15",
+   "lender": false,
+   "outcome": "~Rs 900 -> ~Rs 30 (-97%), liquidated",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "Y"
+   },
+   "ev": {
+    "G1": "BSE SHP September 2017 (filed 2017-10-17): 0.0% of promoter holding pledged"
+   },
+   "later": {
+    "H2b": "Q1 FY19 results deferred Aug-2018"
+   },
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2013,
+    "last_fy": 2017,
+    "sum_cfo": 7153.0,
+    "sum_pat": -4296.0,
+    "sum_fcf": 10536.0,
+    "cfo_pat": null,
+    "pat_nonpos": true,
+    "debt_start": 10577.0,
+    "debt_end": 9078.0,
+    "sum_cfo_3y": 4261.0,
+    "debt_growth": 0.86,
+    "equity": -6505.0,
+    "de": null,
+    "oi_pbt": 0.998,
+    "oi_pbt_3y": 3.875,
+    "debtor_days": 21.0,
+    "debtor_days_d2": -3.0,
+    "sales_cagr": 0.04,
+    "eqcap_growth": 1.0
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 1,
+   "n_hard_Y": 0,
+   "note": "negative net worth for years: not in our rule set",
+   "records": [
+    "case_study:jet-airways-2019"
+   ]
+  },
+  {
+   "id": "kingfisher-ub-2012",
+   "label": "T",
+   "sub": "lev",
+   "mkt": "IN",
+   "key": "KFA",
+   "T": "2008-06-30",
+   "lender": false,
+   "outcome": "equity ~-99%",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {
+    "n_years": 0
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "losses every year; negative net worth",
+   "records": [
+    "case_study:kingfisher-ub-2012"
+   ]
+  },
+  {
+   "id": "ilfs-2018",
+   "label": "T",
+   "sub": "lev",
+   "mkt": "IN",
+   "key": "IL&FSTRANS",
+   "T": "2018-01-15",
+   "lender": false,
+   "outcome": "ITNL -90%+",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "Y",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "Y"
+   },
+   "ev": {
+    "G1": "BSE SHP September 2017 (filed 2017-10-09): 98.2% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2013,
+    "last_fy": 2017,
+    "sum_cfo": 9951.0,
+    "sum_pat": 1656.0,
+    "sum_fcf": -6134.0,
+    "cfo_pat": 6.009,
+    "pat_nonpos": false,
+    "debt_start": 19193.0,
+    "debt_end": 31185.0,
+    "sum_cfo_3y": 6207.0,
+    "debt_growth": 1.62,
+    "equity": 4185.0,
+    "de": 7.45,
+    "oi_pbt": 2.608,
+    "oi_pbt_3y": 1.437,
+    "debtor_days": 45.0,
+    "debtor_days_d2": -14.0,
+    "sales_cagr": 0.05,
+    "eqcap_growth": 1.7
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 3,
+   "n_hard_Y": 0,
+   "note": "interest cover <1x not in our rule set",
+   "records": [
+    "case_study:ilfs-2018"
+   ]
+  },
+  {
+   "id": "unitech-2008",
+   "label": "T",
+   "sub": "lev",
+   "mkt": "IN",
+   "key": null,
+   "T": "2008-01-15",
+   "lender": false,
+   "outcome": "Rs 547 -> Rs 7 (-99%)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:unitech-2008"
+   ]
+  },
+  {
+   "id": "suzlon",
+   "label": "T",
+   "sub": "lev",
+   "mkt": "IN",
+   "key": null,
+   "T": "2008-01-15",
+   "lender": false,
+   "outcome": "Rs 431 -> Rs 1.5 (-99.6%)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:suzlon"
+   ]
+  },
+  {
+   "id": "paytm-ipo-2021",
+   "label": "T",
+   "sub": "lev",
+   "mkt": "IN",
+   "key": "PAYTM",
+   "T": "2021-11-18",
+   "lender": false,
+   "outcome": "Rs 2,150 -> ~Rs 440 (-79%) by Nov-2022",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "U",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "Y",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "Y",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "loss-making: P/E undefined; ~50x sales"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2015,
+    "last_fy": 2021,
+    "sum_cfo": -10674.0,
+    "sum_pat": -10781.0,
+    "sum_fcf": -11371.0,
+    "cfo_pat": null,
+    "pat_nonpos": true,
+    "debt_start": 15.0,
+    "debt_end": 612.0,
+    "sum_cfo_3y": -8935.0,
+    "debt_growth": 40.8,
+    "equity": 6534.0,
+    "de": 0.09,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 61.0,
+    "debtor_days_d2": 32.0,
+    "sales_cagr": 0.716,
+    "eqcap_growth": 1.3
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 3,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:paytm-ipo-2021"
+   ]
+  },
+  {
+   "id": "sme-ipo-manipulation-2024-25",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "IN",
+   "key": null,
+   "T": "2023-06-30",
+   "lender": false,
+   "outcome": "multiple SEBI orders; issues collapsed",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "Y",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "H4": "circular: H4 was written from this very case set"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 1,
+   "note": "basket, not a single company",
+   "records": [
+    "case_study:sme-ipo-manipulation-2024-25"
+   ]
+  },
+  {
+   "id": "wirecard-2020",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "GL",
+   "key": null,
+   "T": "2018-09-04",
+   "lender": false,
+   "outcome": "EUR 190 -> EUR 1-3 (-99%)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "Y",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "H1c": "~half of profits via Asian third-party acquirers it did not control; FT 2015 / Zatarra 2016"
+   },
+   "later": {
+    "H1a": "trustee-held EUR 1.9 bn cash (KPMG Apr-2020; EY Jun-2020)"
+   },
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 1,
+   "note": "",
+   "records": [
+    "case_study:wirecard-2020",
+    "case_study:hidden-trap-wirecard-margins-cash"
+   ]
+  },
+  {
+   "id": "luckin-coffee-2020",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "GL",
+   "key": "LK",
+   "T": "2020-01-15",
+   "lender": false,
+   "outcome": "$50 -> ~$1.4 (-97%)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "Y",
+    "G3": "Y",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G1": "chairman/founders pledged most shares for margin loans (IPO/follow-on filings)",
+    "G3": "follow-on + convertible within months of the May-2019 IPO"
+   },
+   "later": {
+    "H1b": "Muddy Waters store-video report 31-Jan-2020"
+   },
+   "metrics": {
+    "n_years": 0
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 2,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:luckin-coffee-2020",
+    "case_study:hidden-trap-luckin-growth"
+   ]
+  },
+  {
+   "id": "evergrande-2021",
+   "label": "T",
+   "sub": "lev",
+   "mkt": "GL",
+   "key": null,
+   "T": "2018-01-15",
+   "lender": false,
+   "outcome": "HK$30 -> HK$0.16, delisted (-99.5%)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:evergrande-2021"
+   ]
+  },
+  {
+   "id": "credit-suisse-2023",
+   "label": "T",
+   "sub": "lev",
+   "mkt": "GL",
+   "key": null,
+   "T": "2021-01-04",
+   "lender": true,
+   "outcome": "-94% to the UBS rescue",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "NA",
+    "F1b_cfo_pat_lt_0.3": "NA",
+    "G2_debt_up_neg_cfo": "NA",
+    "G5_neg_fcf": "NA",
+    "G6_debtor_days": "NA",
+    "F2_other_income": "NA"
+   },
+   "ev": {},
+   "later": {
+    "H2b": "material weakness (PwC) Mar-2023"
+   },
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "serial scandals = culture flag, not in our rule set",
+   "records": [
+    "case_study:credit-suisse-2023"
+   ]
+  },
+  {
+   "id": "svb-2023",
+   "label": "T",
+   "sub": "lev",
+   "mkt": "US",
+   "key": "SIVB",
+   "T": "2021-11-15",
+   "lender": true,
+   "outcome": "$760 -> 0",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "NA",
+    "F1b_cfo_pat_lt_0.3": "NA",
+    "G2_debt_up_neg_cfo": "NA",
+    "G5_neg_fcf": "NA",
+    "G6_debtor_days": "NA",
+    "F2_other_income": "NA"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2016,
+    "last_fy": 2020,
+    "sum_cfo": 4628.187,
+    "sum_pat": 4399.792,
+    "sum_fcf": 4326.127,
+    "cfo_pat": 1.052,
+    "pat_nonpos": false,
+    "debt_start": 695.492,
+    "debt_end": 844.0,
+    "sum_cfo_3y": 3509.562,
+    "debt_growth": 1.21,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": null,
+    "debtor_days_d2": null,
+    "sales_cagr": null,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:svb-2023"
+   ]
+  },
+  {
+   "id": "lehman-2008",
+   "label": "T",
+   "sub": "lev",
+   "mkt": "US",
+   "key": null,
+   "T": "2007-02-01",
+   "lender": true,
+   "outcome": "$86 -> ~0",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "NA",
+    "F1b_cfo_pat_lt_0.3": "NA",
+    "G2_debt_up_neg_cfo": "NA",
+    "G5_neg_fcf": "NA",
+    "G6_debtor_days": "NA",
+    "F2_other_income": "NA"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:lehman-2008"
+   ]
+  },
+  {
+   "id": "ge-2017-2018",
+   "label": "T",
+   "sub": "lev",
+   "mkt": "US",
+   "key": "GE",
+   "T": "2016-07-01",
+   "lender": false,
+   "outcome": "$32 -> $6.7 (-79%)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2011,
+    "last_fy": 2015,
+    "sum_cfo": 140800.0,
+    "sum_pat": 49956.0,
+    "sum_fcf": 91847.0,
+    "cfo_pat": 2.818,
+    "pat_nonpos": false,
+    "debt_start": null,
+    "debt_end": null,
+    "sum_cfo_3y": 76110.0,
+    "debt_growth": null,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 84.0,
+    "debtor_days_d2": 15.099999999999994,
+    "sales_cagr": 0.016,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:ge-2017-2018",
+    "case_study:hidden-trap-ge-smooth-earnings"
+   ]
+  },
+  {
+   "id": "valeant-2015",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "US",
+   "key": "BHC",
+   "T": "2015-08-05",
+   "lender": false,
+   "outcome": "$262 -> ~$8 (-97%)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {
+    "H5": "undisclosed Philidor channel revealed Oct-2015"
+   },
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2010,
+    "last_fy": 2014,
+    "sum_cfo": 4914.264,
+    "sum_pat": 426.625,
+    "sum_fcf": 4324.026,
+    "cfo_pat": 11.519,
+    "pat_nonpos": false,
+    "debt_start": 6539.761,
+    "debt_end": 15228.0,
+    "sum_cfo_3y": 4010.6,
+    "debt_growth": 2.33,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 92.3,
+    "debtor_days_d2": 11.599999999999994,
+    "sales_cagr": 0.623,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:valeant-2015",
+    "case_study:hidden-trap-valeant-eps-growth"
+   ]
+  },
+  {
+   "id": "worldcom-2002",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "US",
+   "key": null,
+   "T": "1999-06-30",
+   "lender": false,
+   "outcome": "$64 -> ~0",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:worldcom-2002"
+   ]
+  },
+  {
+   "id": "enron-2001",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "US",
+   "key": null,
+   "T": "2000-08-23",
+   "lender": false,
+   "outcome": "$90 -> <$1",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "U",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "H5": "LJM/CFO-run SPEs were footnoted in the 1999 10-K but the record does not date the disclosure"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:enron-2001"
+   ]
+  },
+  {
+   "id": "nikola-2020",
+   "label": "T",
+   "sub": "fraud",
+   "mkt": "US",
+   "key": null,
+   "T": "2020-06-08",
+   "lender": false,
+   "outcome": "$94 -> ~0",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "pre-revenue SPAC mega-cap: a pump pattern our H4 (SME/Telegram) does not cover",
+   "records": [
+    "case_study:nikola-2020"
+   ]
+  },
+  {
+   "id": "super-micro-bust",
+   "label": "T",
+   "sub": "bust",
+   "mkt": "US",
+   "key": "SMCI",
+   "T": "2024-03-08",
+   "lender": false,
+   "outcome": "-86% (Mar-Nov 2024)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "Y",
+    "H3": "N",
+    "H4": "N",
+    "H5": "U",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "Y",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "H2b": "SEC 8-K item 4.02 non-reliance 15-Nov-2018; 2018 Nasdaq delisting for late filings; 2020 SEC settlement",
+    "H5": "related-party suppliers disclosed; leakage not established"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2019,
+    "last_fy": 2023,
+    "sum_cfo": 577.9540000000001,
+    "sum_pat": 1193.252,
+    "sum_fcf": 368.77600000000007,
+    "cfo_pat": 0.484,
+    "pat_nonpos": false,
+    "debt_start": 5.697,
+    "debt_end": 120.179,
+    "sum_cfo_3y": 345.73400000000004,
+    "debt_growth": 21.1,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 58.8,
+    "debtor_days_d2": 11.199999999999996,
+    "sales_cagr": 0.194,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 1,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:super-micro-2023-2026"
+   ]
+  },
+  {
+   "id": "enphase-bust",
+   "label": "T",
+   "sub": "bust",
+   "mkt": "US",
+   "key": "ENPH",
+   "T": "2022-12-05",
+   "lender": false,
+   "outcome": "-90%",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "Y",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E ~100 at the peak (record)"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2017,
+    "last_fy": 2021,
+    "sum_cfo": 695.119,
+    "sum_pat": 383.773,
+    "sum_fcf": 599.2429999999999,
+    "cfo_pat": 1.811,
+    "pat_nonpos": false,
+    "debt_start": 81.628,
+    "debt_end": 951.594,
+    "sum_cfo_3y": 707.4290000000001,
+    "debt_growth": 11.66,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 88.1,
+    "debtor_days_d2": 3.0999999999999943,
+    "sales_cagr": 0.482,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 1,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:enphase-2016-2025"
+   ]
+  },
+  {
+   "id": "celsius-bust",
+   "label": "T",
+   "sub": "bust",
+   "mkt": "US",
+   "key": "CELH",
+   "T": "2024-05-01",
+   "lender": false,
+   "outcome": "-73% to -79%",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "Y",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "Y",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "H2b": "8-K 4.02 non-reliance 1-Mar-2022 (restatement; stock-comp, unrelated to the bust)",
+    "G4": "P/E near 100 [unverified]"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2019,
+    "last_fy": 2023,
+    "sum_cfo": 157.242988,
+    "sum_pat": 61.95125999999998,
+    "sum_fcf": 127.74401399999999,
+    "cfo_pat": 2.538,
+    "pat_nonpos": false,
+    "debt_start": null,
+    "debt_end": null,
+    "sum_cfo_3y": 152.814,
+    "debt_growth": null,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 50.9,
+    "debtor_days_d2": 5.899999999999999,
+    "sales_cagr": 1.046,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 1,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:celsius-2020-2025"
+   ]
+  },
+  {
+   "id": "novo-bust",
+   "label": "T",
+   "sub": "bust",
+   "mkt": "GL",
+   "key": null,
+   "T": "2024-06-25",
+   "lender": false,
+   "outcome": "-73%",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E ~40-45"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:novo-nordisk-glp1-2016-2026"
+   ]
+  },
+  {
+   "id": "kpit-bust",
+   "label": "T",
+   "sub": "bust",
+   "mkt": "IN",
+   "key": "KPITTECH",
+   "T": "2024-07-15",
+   "lender": false,
+   "outcome": "-74%",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "Y",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "G4": "P/E 86",
+    "G1": "BSE SHP June 2024 (filed 2024-07-12): 0.0% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2019,
+    "last_fy": 2023,
+    "sum_cfo": 2105.0,
+    "sum_pat": 1013.0,
+    "sum_fcf": 1755.0,
+    "cfo_pat": 2.078,
+    "pat_nonpos": false,
+    "debt_start": 204.0,
+    "debt_end": 287.0,
+    "sum_cfo_3y": 1565.0,
+    "debt_growth": 1.41,
+    "equity": 1651.0,
+    "de": 0.17,
+    "oi_pbt": 0.087,
+    "oi_pbt_3y": 0.107,
+    "debtor_days": 64.0,
+    "debtor_days_d2": 9.0,
+    "sales_cagr": 0.514,
+    "eqcap_growth": 1.0
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 1,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:kpit-technologies-2020-2024"
+   ]
+  },
+  {
+   "id": "tata-elxsi-bust",
+   "label": "T",
+   "sub": "bust",
+   "mkt": "IN",
+   "key": "TATAELXSI_sa",
+   "T": "2022-08-15",
+   "lender": false,
+   "outcome": "-70%",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "Y",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "G4": "P/E 103",
+    "G1": "BSE SHP June 2022 (filed 2022-07-13): 0.0% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2017,
+    "last_fy": 2021,
+    "sum_cfo": 1249.0,
+    "sum_pat": 1329.0,
+    "sum_fcf": 1119.0,
+    "cfo_pat": 0.94,
+    "pat_nonpos": false,
+    "debt_start": 0.0,
+    "debt_end": 73.0,
+    "sum_cfo_3y": 908.0,
+    "debt_growth": 1.0,
+    "equity": 1352.0,
+    "de": 0.05,
+    "oi_pbt": 0.078,
+    "oi_pbt_3y": 0.109,
+    "debtor_days": 98.0,
+    "debtor_days_d2": 17.0,
+    "sales_cagr": 0.102,
+    "eqcap_growth": 1.0
+   },
+   "mech_src": "standalone",
+   "n_graded_Y": 1,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:tata-elxsi-2009-2022"
+   ]
+  },
+  {
+   "id": "alkyl-amines-bust",
+   "label": "T",
+   "sub": "bust",
+   "mkt": "IN",
+   "key": "ALKYLAMINE",
+   "T": "2021-07-15",
+   "lender": false,
+   "outcome": "-71%",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "Y",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "G4": "P/E 76",
+    "G1": "BSE SHP March 2021 (filed 2021-04-20): 0.0% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2016,
+    "last_fy": 2020,
+    "sum_cfo": 598.0,
+    "sum_pat": 455.0,
+    "sum_fcf": 218.0,
+    "cfo_pat": 1.314,
+    "pat_nonpos": false,
+    "debt_start": 120.0,
+    "debt_end": 87.0,
+    "sum_cfo_3y": 434.0,
+    "debt_growth": 0.72,
+    "equity": 536.0,
+    "de": 0.16,
+    "oi_pbt": 0.106,
+    "oi_pbt_3y": 0.076,
+    "debtor_days": 60.0,
+    "debtor_days_d2": -13.0,
+    "sales_cagr": 0.197,
+    "eqcap_growth": 1.0
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 1,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:alkyl-amines-2009-2021"
+   ]
+  },
+  {
+   "id": "symphony-bust",
+   "label": "T",
+   "sub": "bust",
+   "mkt": "IN",
+   "key": "SYMPHONY",
+   "T": "2018-01-15",
+   "lender": false,
+   "outcome": "-77%",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "Y",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E 84",
+    "G1": "BSE SHP September 2017 (filed 2017-10-09): 0.0% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 2
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 1,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:symphony-2009-2018"
+   ]
+  },
+  {
+   "id": "amazon-dotcom-bust",
+   "label": "T",
+   "sub": "bust",
+   "mkt": "US",
+   "key": null,
+   "T": "1999-12-10",
+   "lender": false,
+   "outcome": "-94%, peak regained 2009",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "U",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "loss-making"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:amazon-drawdown"
+   ]
+  },
+  {
+   "id": "nvidia",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": "NVDA",
+   "T": "2016-01-04",
+   "lender": false,
+   "outcome": "~300x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2010,
+    "last_fy": 2014,
+    "sum_cfo": 4150.125,
+    "sum_pat": 2467.772,
+    "sum_fcf": 1348.328,
+    "cfo_pat": 1.682,
+    "pat_nonpos": false,
+    "debt_start": null,
+    "debt_end": 1384.0,
+    "sum_cfo_3y": 2565.172,
+    "debt_growth": null,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 37.0,
+    "debtor_days_d2": -1.7000000000000028,
+    "sales_cagr": 0.072,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:nvidia"
+   ]
+  },
+  {
+   "id": "radico-khaitan",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": "RADICO",
+   "T": "2017-03-31",
+   "lender": false,
+   "outcome": "~38x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E ~18",
+    "G1": "BSE SHP December 2016 (filed 2017-01-18): 6.6% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 2
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:radico-khaitan"
+   ]
+  },
+  {
+   "id": "palantir-2022-2026",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": "PLTR",
+   "T": "2022-12-28",
+   "lender": false,
+   "outcome": "~35x peak",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "loss/first profit; P/S 8.5"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 4,
+    "first_fy": 2018,
+    "last_fy": 2021,
+    "sum_cfo": -166.984,
+    "sum_pat": -2846.443,
+    "sum_fcf": -217.947,
+    "cfo_pat": null,
+    "pat_nonpos": true,
+    "debt_start": null,
+    "debt_end": 0.0,
+    "sum_cfo_3y": -127.97200000000001,
+    "debt_growth": null,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 45.2,
+    "debtor_days_d2": 20.500000000000004,
+    "sales_cagr": 0.373,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 1,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:palantir-2022-2026"
+   ]
+  },
+  {
+   "id": "hermes-lvmh-2009-2025",
+   "label": "W",
+   "sub": "",
+   "mkt": "GL",
+   "key": null,
+   "T": "2009-03-09",
+   "lender": false,
+   "outcome": "~22-30x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:hermes-lvmh-2009-2025"
+   ]
+  },
+  {
+   "id": "costco-2009-2026",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": "COST",
+   "T": "2009-03-09",
+   "lender": false,
+   "outcome": "~29x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E ~15 at T"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 1
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:costco-2009-2026",
+    "case_study:false-alarm-costco-thin-margins-high-pe"
+   ]
+  },
+  {
+   "id": "tsmc-2012-2026",
+   "label": "W",
+   "sub": "",
+   "mkt": "GL",
+   "key": null,
+   "T": "2012-01-03",
+   "lender": false,
+   "outcome": "~24x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "~12-15x"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:tsmc-2012-2026"
+   ]
+  },
+  {
+   "id": "super-micro-2023-2026",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": "SMCI",
+   "T": "2023-01-03",
+   "lender": false,
+   "outcome": "~17-30x to Mar-2024 (then -86%)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "Y",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "Y",
+    "F1b_cfo_pat_lt_0.3": "Y",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "H2b": "8-K 4.02 non-reliance Nov-2018 (within 5y); 2018 delisting; 2020 SEC accounting settlement",
+    "G4": "P/E ~10 at T"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2018,
+    "last_fy": 2022,
+    "sum_cfo": -1.2790000000000212,
+    "sum_pat": 599.419,
+    "sum_fcf": -198.488,
+    "cfo_pat": -0.002,
+    "pat_nonpos": false,
+    "debt_start": 0.0,
+    "debt_end": 147.618,
+    "sum_cfo_3y": -348.18,
+    "debt_growth": 1.0,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 58.6,
+    "debtor_days_d2": 14.5,
+    "sales_cagr": 0.115,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 3,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:super-micro-2023-2026"
+   ]
+  },
+  {
+   "id": "constellation-software-2006-2026",
+   "label": "W",
+   "sub": "",
+   "mkt": "GL",
+   "key": null,
+   "T": "2006-05-18",
+   "lender": false,
+   "outcome": "~300x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:constellation-software-2006-2026"
+   ]
+  },
+  {
+   "id": "axon-2017-2025",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": "AXON",
+   "T": "2017-04-05",
+   "lender": false,
+   "outcome": "~35x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2012,
+    "last_fy": 2016,
+    "sum_cfo": 161.955,
+    "sum_pat": 90.13,
+    "sum_fcf": 145.373,
+    "cfo_pat": 1.797,
+    "pat_nonpos": false,
+    "debt_start": null,
+    "debt_end": null,
+    "sum_cfo_3y": 103.012,
+    "debt_growth": null,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": null,
+    "debtor_days_d2": null,
+    "sales_cagr": 0.236,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:axon-2017-2025"
+   ]
+  },
+  {
+   "id": "novo-nordisk-glp1-2016-2026",
+   "label": "W",
+   "sub": "",
+   "mkt": "GL",
+   "key": null,
+   "T": "2021-01-04",
+   "lender": false,
+   "outcome": "~4x (2021-24)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:novo-nordisk-glp1-2016-2026"
+   ]
+  },
+  {
+   "id": "booking-priceline-2002-2025",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": null,
+   "T": "2002-10-01",
+   "lender": false,
+   "outcome": "~800x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:booking-priceline-2002-2025"
+   ]
+  },
+  {
+   "id": "eli-lilly-2018-2025",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": "LLY",
+   "T": "2018-01-02",
+   "lender": false,
+   "outcome": "~10-13x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "N",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "~20x"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2012,
+    "last_fy": 2016,
+    "sum_cfo": 23313.8,
+    "sum_pat": 16309.9,
+    "sum_fcf": null,
+    "cfo_pat": 1.429,
+    "pat_nonpos": false,
+    "debt_start": 4200.3,
+    "debt_end": 8367.8,
+    "sum_cfo_3y": 12274.0,
+    "debt_growth": 1.99,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 69.3,
+    "debtor_days_d2": 9.099999999999994,
+    "sales_cagr": -0.016,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:eli-lilly-2018-2025"
+   ]
+  },
+  {
+   "id": "netflix-2002-2025",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": "NFLX",
+   "T": "2012-09-28",
+   "lender": false,
+   "outcome": "~150x from the 2012 low",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2007,
+    "last_fy": 2011,
+    "sum_cfo": 1480.637,
+    "sum_pat": 652.473,
+    "sum_fcf": 1263.1399999999999,
+    "cfo_pat": 2.269,
+    "pat_nonpos": false,
+    "debt_start": 0.0,
+    "debt_end": null,
+    "sum_cfo_3y": 919.1759999999999,
+    "debt_growth": null,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": null,
+    "debtor_days_d2": null,
+    "sales_cagr": 0.277,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:netflix-2002-2025"
+   ]
+  },
+  {
+   "id": "amd-2014-2025",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": "AMD",
+   "T": "2015-10-01",
+   "lender": false,
+   "outcome": "~140x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2010,
+    "last_fy": 2014,
+    "sum_cfo": -614.0,
+    "sum_pat": -707.0,
+    "sum_fcf": -1324.0,
+    "cfo_pat": null,
+    "pat_nonpos": true,
+    "debt_start": 2065.0,
+    "debt_end": 2025.0,
+    "sum_cfo_3y": -584.0,
+    "debt_growth": 0.98,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 54.2,
+    "debtor_days_d2": 11.800000000000004,
+    "sales_cagr": -0.04,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 1,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:amd-2014-2025"
+   ]
+  },
+  {
+   "id": "shopify-2015-2025",
+   "label": "W",
+   "sub": "",
+   "mkt": "GL",
+   "key": null,
+   "T": "2015-05-21",
+   "lender": false,
+   "outcome": "~100x to 2021",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:shopify-2015-2025"
+   ]
+  },
+  {
+   "id": "enphase-2016-2025",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": "ENPH",
+   "T": "2017-06-30",
+   "lender": false,
+   "outcome": "~400x to 2022",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "Y",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2012,
+    "last_fy": 2016,
+    "sum_cfo": -75.408,
+    "sum_pat": -161.727,
+    "sum_fcf": -132.596,
+    "cfo_pat": null,
+    "pat_nonpos": true,
+    "debt_start": 8.677,
+    "debt_end": 20.768,
+    "sum_cfo_3y": -29.891000000000002,
+    "debt_growth": 2.39,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 69.0,
+    "debtor_days_d2": 21.1,
+    "sales_cagr": 0.105,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 2,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:enphase-2016-2025"
+   ]
+  },
+  {
+   "id": "meta-2022-trough-rebound",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": "META",
+   "T": "2022-11-04",
+   "lender": false,
+   "outcome": "~9x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E ~9"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2017,
+    "last_fy": 2021,
+    "sum_cfo": 186234.0,
+    "sum_pat": 125047.0,
+    "sum_fcf": 116631.0,
+    "cfo_pat": 1.489,
+    "pat_nonpos": false,
+    "debt_start": null,
+    "debt_end": 0.0,
+    "sum_cfo_3y": 132744.0,
+    "debt_growth": null,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 43.5,
+    "debtor_days_d2": -5.600000000000001,
+    "sales_cagr": 0.305,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:meta-2022-trough-rebound"
+   ]
+  },
+  {
+   "id": "mercadolibre-2007-2025",
+   "label": "W",
+   "sub": "",
+   "mkt": "GL",
+   "key": null,
+   "T": "2007-08-10",
+   "lender": false,
+   "outcome": "~130x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:mercadolibre-2007-2025"
+   ]
+  },
+  {
+   "id": "microsoft-nadella-2014-2025",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": "MSFT",
+   "T": "2014-02-04",
+   "lender": false,
+   "outcome": "~15x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E ~13-15"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2009,
+    "last_fy": 2013,
+    "sum_cfo": 130563.0,
+    "sum_pat": 95320.0,
+    "sum_fcf": 116550.0,
+    "cfo_pat": 1.37,
+    "pat_nonpos": false,
+    "debt_start": 4939.0,
+    "debt_end": 12601.0,
+    "sum_cfo_3y": 87453.0,
+    "debt_growth": 2.55,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 82.0,
+    "debtor_days_d2": 3.799999999999997,
+    "sales_cagr": 0.074,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:microsoft-nadella-2014-2025"
+   ]
+  },
+  {
+   "id": "celsius-2020-2025",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": "CELH",
+   "T": "2020-03-16",
+   "lender": false,
+   "outcome": "~60-70x to 2024",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "U",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "H2b": "8-K 4.01 auditor change May-2017; reason not read"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 4,
+    "first_fy": 2015,
+    "last_fy": 2018,
+    "sum_cfo": -23.183112,
+    "sum_pat": -24.66465,
+    "sum_fcf": -23.384305,
+    "cfo_pat": null,
+    "pat_nonpos": true,
+    "debt_start": null,
+    "debt_end": null,
+    "sum_cfo_3y": -22.427957,
+    "debt_growth": null,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 90.1,
+    "debtor_days_d2": null,
+    "sales_cagr": null,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 1,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:celsius-2020-2025"
+   ]
+  },
+  {
+   "id": "tesla-2010-2024",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": "TSLA",
+   "T": "2019-06-03",
+   "lender": false,
+   "outcome": "~35x to 2021",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "Y",
+    "G4": "U",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G3": "repeated equity raises incl. May-2019 raise",
+    "G4": "loss-making"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2014,
+    "last_fy": 2018,
+    "sum_cfo": 1331.335,
+    "sum_pat": -4795.617,
+    "sum_fcf": -8070.202,
+    "cfo_pat": null,
+    "pat_nonpos": true,
+    "debt_start": null,
+    "debt_end": 8411.0,
+    "sum_cfo_3y": 1913.171,
+    "debt_growth": null,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 16.1,
+    "debtor_days_d2": -9.899999999999999,
+    "sales_cagr": 0.609,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 2,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:tesla-2010-2024",
+    "case_study:false-alarm-tesla-losses-dilution"
+   ]
+  },
+  {
+   "id": "monster-beverage-2002-2024",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": null,
+   "T": "2003-01-02",
+   "lender": false,
+   "outcome": "~1,000x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:monster-beverage-2002-2024"
+   ]
+  },
+  {
+   "id": "apple-2016-2023-buffett",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": "AAPL",
+   "T": "2016-05-12",
+   "lender": false,
+   "outcome": "~8x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E ~10-11"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2011,
+    "last_fy": 2015,
+    "sum_cfo": 283030.0,
+    "sum_pat": 197596.0,
+    "sum_fcf": 241492.0,
+    "cfo_pat": 1.432,
+    "pat_nonpos": false,
+    "debt_start": 0.0,
+    "debt_end": 53329.0,
+    "sum_cfo_3y": 194645.0,
+    "debt_growth": 99.0,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 26.3,
+    "debtor_days_d2": -1.6999999999999993,
+    "sales_cagr": 0.212,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:apple-2016-2023-buffett"
+   ]
+  },
+  {
+   "id": "apple-2003-2012",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": null,
+   "T": "2003-04-17",
+   "lender": false,
+   "outcome": "~110x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:apple-2003-2012"
+   ]
+  },
+  {
+   "id": "dominos-2008-2021",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": "DPZ",
+   "T": "2010-01-04",
+   "lender": false,
+   "outcome": "~65x from 2010",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "~10x"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 0
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:dominos-2008-2021"
+   ]
+  },
+  {
+   "id": "amazon-1997-2021-compounding",
+   "label": "W",
+   "sub": "",
+   "mkt": "US",
+   "key": null,
+   "T": "1997-05-15",
+   "lender": false,
+   "outcome": "~2,500x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "U",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "no profits"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:amazon-1997-2021-compounding",
+    "case_study:false-alarm-amazon-no-profits-capex"
+   ]
+  },
+  {
+   "id": "asml-2012-2024",
+   "label": "W",
+   "sub": "",
+   "mkt": "GL",
+   "key": null,
+   "T": "2012-07-10",
+   "lender": false,
+   "outcome": "~22x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "~20x"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:asml-2012-2024"
+   ]
+  },
+  {
+   "id": "bse-ltd-2020-2026",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": "BSE",
+   "T": "2020-03-31",
+   "lender": false,
+   "outcome": "~91x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "Y",
+    "F1b_cfo_pat_lt_0.3": "Y",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "Y"
+   },
+   "ev": {
+    "G4": "P/E 14"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2015,
+    "last_fy": 2019,
+    "sum_cfo": 68.0,
+    "sum_pat": 1520.0,
+    "sum_fcf": -248.0,
+    "cfo_pat": 0.045,
+    "pat_nonpos": false,
+    "debt_start": 1.0,
+    "debt_end": 0.0,
+    "sum_cfo_3y": 265.0,
+    "debt_growth": 0.0,
+    "equity": 2928.0,
+    "de": 0.0,
+    "oi_pbt": 0.251,
+    "oi_pbt_3y": 0.575,
+    "debtor_days": 27.0,
+    "debtor_days_d2": -17.0,
+    "sales_cagr": 0.028,
+    "eqcap_growth": 0.91
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 4,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:bse-ltd-2020-2026"
+   ]
+  },
+  {
+   "id": "kaynes-technology-2022-2026",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": "KAYNES",
+   "T": "2022-11-21",
+   "lender": false,
+   "outcome": "~10x (then -62%)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "Y",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "G4": "IPO P/E 104"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2018,
+    "last_fy": 2022,
+    "sum_cfo": 95.0,
+    "sum_pat": 86.0,
+    "sum_fcf": -14.0,
+    "cfo_pat": 1.105,
+    "pat_nonpos": false,
+    "debt_start": 156.0,
+    "debt_end": 189.0,
+    "sum_cfo_3y": 94.0,
+    "debt_growth": 1.21,
+    "equity": 202.0,
+    "de": 0.94,
+    "oi_pbt": 0.068,
+    "oi_pbt_3y": 0.111,
+    "debtor_days": 102.0,
+    "debtor_days_d2": 9.0,
+    "sales_cagr": 0.176,
+    "eqcap_growth": 6.57
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 2,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:kaynes-technology-2022-2026",
+    "case_study:kaynes-2025"
+   ]
+  },
+  {
+   "id": "suzlon-turnaround-2020-2024",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": "SUZLON",
+   "T": "2020-03-31",
+   "lender": false,
+   "outcome": "~49x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "U",
+    "H4": "N",
+    "H5": "N",
+    "G1": "Y",
+    "G3": "N",
+    "G4": "U",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "Y",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "H3": "2019-20 lender restructuring / D ratings; 'not cooperating' status not established",
+    "G4": "loss-making",
+    "G1": "BSE SHP December 2019 (filed 2020-01-21): 76.3% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2015,
+    "last_fy": 2019,
+    "sum_cfo": 3140.0,
+    "sum_pat": -9619.0,
+    "sum_fcf": 770.0,
+    "cfo_pat": null,
+    "pat_nonpos": true,
+    "debt_start": 11414.0,
+    "debt_end": 11552.0,
+    "sum_cfo_3y": 2760.0,
+    "debt_growth": 1.01,
+    "equity": -8498.0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 137.0,
+    "debtor_days_d2": 33.0,
+    "sales_cagr": -0.292,
+    "eqcap_growth": 1.06
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 2,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:suzlon-turnaround-2020-2024"
+   ]
+  },
+  {
+   "id": "hal-2020-2024",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": "HAL",
+   "T": "2020-05-31",
+   "lender": false,
+   "outcome": "~22x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "Y",
+    "F1b_cfo_pat_lt_0.3": "Y",
+    "G2_debt_up_neg_cfo": "Y",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "Y",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "G4": "P/E 6.3",
+    "G1": "BSE SHP March 2020 (filed 2020-05-02): 0.0% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2015,
+    "last_fy": 2019,
+    "sum_cfo": -8852.0,
+    "sum_pat": 11346.0,
+    "sum_fcf": -13001.0,
+    "cfo_pat": -0.78,
+    "pat_nonpos": false,
+    "debt_start": 80.0,
+    "debt_end": 4116.0,
+    "sum_cfo_3y": -8852.0,
+    "debt_growth": 51.45,
+    "equity": 12082.0,
+    "de": 0.34,
+    "oi_pbt": 0.101,
+    "oi_pbt_3y": 0.209,
+    "debtor_days": 227.0,
+    "debtor_days_d2": 141.0,
+    "sales_cagr": 0.058,
+    "eqcap_growth": 0.92
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 5,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:hal-2020-2024",
+    "case_study:false-alarm-hal-receivable-days"
+   ]
+  },
+  {
+   "id": "dixon-technologies-2019-2025",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": "DIXON",
+   "T": "2019-08-31",
+   "lender": false,
+   "outcome": "~47x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "G4": "P/E 39.5",
+    "G1": "BSE SHP June 2019 (filed 2019-07-09): 0.0% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 4,
+    "first_fy": 2015,
+    "last_fy": 2018,
+    "sum_cfo": 207.0,
+    "sum_pat": 165.0,
+    "sum_fcf": 49.0,
+    "cfo_pat": 1.255,
+    "pat_nonpos": false,
+    "debt_start": 82.0,
+    "debt_end": 45.0,
+    "sum_cfo_3y": 163.0,
+    "debt_growth": 0.55,
+    "equity": 315.0,
+    "de": 0.14,
+    "oi_pbt": 0.045,
+    "oi_pbt_3y": 0.137,
+    "debtor_days": 38.0,
+    "debtor_days_d2": 15.0,
+    "sales_cagr": 0.333,
+    "eqcap_growth": 3.67
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:dixon-technologies-2019-2025"
+   ]
+  },
+  {
+   "id": "cdsl-2019-2024",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": "CDSL",
+   "T": "2019-08-31",
+   "lender": false,
+   "outcome": "~21x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "Y",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "Y"
+   },
+   "ev": {
+    "G4": "P/E 16.7"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 4,
+    "first_fy": 2015,
+    "last_fy": 2018,
+    "sum_cfo": 193.0,
+    "sum_pat": 325.0,
+    "sum_fcf": 107.0,
+    "cfo_pat": 0.594,
+    "pat_nonpos": false,
+    "debt_start": 0.0,
+    "debt_end": 0.0,
+    "sum_cfo_3y": 150.0,
+    "debt_growth": 1.0,
+    "equity": 598.0,
+    "de": 0.0,
+    "oi_pbt": 0.27,
+    "oi_pbt_3y": 0.388,
+    "debtor_days": 37.0,
+    "debtor_days_d2": -2.0,
+    "sales_cagr": 0.214,
+    "eqcap_growth": 1.0
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 2,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:cdsl-2019-2024"
+   ]
+  },
+  {
+   "id": "cochin-shipyard",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": "COCHINSHIP",
+   "T": "2020-05-31",
+   "lender": false,
+   "outcome": "~25x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "Y"
+   },
+   "ev": {
+    "G4": "P/E 5.5",
+    "G1": "BSE SHP March 2020 (filed 2020-04-06): 0.0% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2015,
+    "last_fy": 2019,
+    "sum_cfo": 1095.0,
+    "sum_pat": 1557.0,
+    "sum_fcf": 577.0,
+    "cfo_pat": 0.703,
+    "pat_nonpos": false,
+    "debt_start": 123.0,
+    "debt_end": 123.0,
+    "sum_cfo_3y": 392.0,
+    "debt_growth": 1.0,
+    "equity": 3329.0,
+    "de": 0.04,
+    "oi_pbt": 0.302,
+    "oi_pbt_3y": 0.308,
+    "debtor_days": 48.0,
+    "debtor_days_d2": -6.0,
+    "sales_cagr": 0.17,
+    "eqcap_growth": 1.17
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 1,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:indian-shipyards-2020-2025"
+   ]
+  },
+  {
+   "id": "mazagon-dock",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": "MAZDOCK",
+   "T": "2020-10-12",
+   "lender": false,
+   "outcome": "~42x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "Y",
+    "F1b_cfo_pat_lt_0.3": "Y",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "Y"
+   },
+   "ev": {
+    "G4": "P/E 7.1"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2016,
+    "last_fy": 2020,
+    "sum_cfo": 203.0,
+    "sum_pat": 2680.0,
+    "sum_fcf": -529.0,
+    "cfo_pat": 0.076,
+    "pat_nonpos": false,
+    "debt_start": 0.0,
+    "debt_end": 0.0,
+    "sum_cfo_3y": 460.0,
+    "debt_growth": 1.0,
+    "equity": 3060.0,
+    "de": 0.0,
+    "oi_pbt": 0.751,
+    "oi_pbt_3y": 0.802,
+    "debtor_days": 107.0,
+    "debtor_days_d2": 16.0,
+    "sales_cagr": 0.046,
+    "eqcap_growth": 0.81
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 4,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:indian-shipyards-2020-2025"
+   ]
+  },
+  {
+   "id": "trent-2020-2024",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": "TRENT",
+   "T": "2020-05-31",
+   "lender": false,
+   "outcome": "~19x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "Y",
+    "F1_cfo_pat_lt_0.7": "Y",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "Y"
+   },
+   "ev": {
+    "G4": "trailing P/E 155 (COVID-depressed EPS)",
+    "G1": "BSE SHP March 2020 (filed 2020-04-22): 0.0% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2015,
+    "last_fy": 2019,
+    "sum_cfo": 299.0,
+    "sum_pat": 451.0,
+    "sum_fcf": -357.0,
+    "cfo_pat": 0.663,
+    "pat_nonpos": false,
+    "debt_start": 400.0,
+    "debt_end": 494.0,
+    "sum_cfo_3y": 200.0,
+    "debt_growth": 1.24,
+    "equity": 1646.0,
+    "de": 0.3,
+    "oi_pbt": 0.179,
+    "oi_pbt_3y": 0.312,
+    "debtor_days": 2.0,
+    "debtor_days_d2": 1.0,
+    "sales_cagr": 0.036,
+    "eqcap_growth": 1.0
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 4,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:trent-2020-2024",
+    "case_study:false-alarm-trent-150x-pe-and-lease-debt"
+   ]
+  },
+  {
+   "id": "kpit-technologies-2020-2024",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": "KPITTECH",
+   "T": "2020-03-31",
+   "lender": false,
+   "outcome": "~42x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E 8.5",
+    "G1": "BSE SHP June 2019 (filed 2019-07-16): 12.2% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 2
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:kpit-technologies-2020-2024"
+   ]
+  },
+  {
+   "id": "polycab-2019-2026",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": "POLYCAB",
+   "T": "2019-04-16",
+   "lender": false,
+   "outcome": "~16x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "G4": "P/E 26.9"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 4,
+    "first_fy": 2015,
+    "last_fy": 2018,
+    "sum_cfo": 1029.0,
+    "sum_pat": 941.0,
+    "sum_fcf": 119.0,
+    "cfo_pat": 1.094,
+    "pat_nonpos": false,
+    "debt_start": 546.0,
+    "debt_end": 800.0,
+    "sum_cfo_3y": 879.0,
+    "debt_growth": 1.47,
+    "equity": 2347.0,
+    "de": 0.34,
+    "oi_pbt": 0.115,
+    "oi_pbt_3y": 0.144,
+    "debtor_days": 70.0,
+    "debtor_days_d2": -25.0,
+    "sales_cagr": 0.129,
+    "eqcap_growth": 1.0
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:polycab-2019-2026"
+   ]
+  },
+  {
+   "id": "alkyl-amines-2009-2021",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": "ALKYLAMINE",
+   "T": "2019-01-15",
+   "lender": false,
+   "outcome": "14x (2019-21 leg; ~560x from 2009)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "G4": "P/E 18.6",
+    "G1": "BSE SHP September 2018 (filed 2018-10-19): 0.0% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2014,
+    "last_fy": 2018,
+    "sum_cfo": 374.0,
+    "sum_pat": 256.0,
+    "sum_fcf": 73.0,
+    "cfo_pat": 1.461,
+    "pat_nonpos": false,
+    "debt_start": 135.0,
+    "debt_end": 181.0,
+    "sum_cfo_3y": 266.0,
+    "debt_growth": 1.34,
+    "equity": 309.0,
+    "de": 0.59,
+    "oi_pbt": 0.041,
+    "oi_pbt_3y": 0.041,
+    "debtor_days": 73.0,
+    "debtor_days_d2": 5.0,
+    "sales_cagr": 0.084,
+    "eqcap_growth": 1.0
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:alkyl-amines-2009-2021"
+   ]
+  },
+  {
+   "id": "deepak-nitrite-2009-2021",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": "DEEPAKNTR",
+   "T": "2018-06-30",
+   "lender": false,
+   "outcome": "12x (2018-21 leg)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "Y",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "G4": "P/E ~69 (EPS about to rise 20x)",
+    "G1": "BSE SHP March 2018 (filed 2018-04-21): 0.0% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 3,
+    "first_fy": 2015,
+    "last_fy": 2017,
+    "sum_cfo": 324.0,
+    "sum_pat": 212.0,
+    "sum_fcf": -93.0,
+    "cfo_pat": 1.528,
+    "pat_nonpos": false,
+    "debt_start": 545.0,
+    "debt_end": 724.0,
+    "sum_cfo_3y": 324.0,
+    "debt_growth": 1.33,
+    "equity": 715.0,
+    "de": 1.01,
+    "oi_pbt": 0.593,
+    "oi_pbt_3y": 0.278,
+    "debtor_days": 96.0,
+    "debtor_days_d2": 10.0,
+    "sales_cagr": 0.016,
+    "eqcap_growth": null
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 2,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:deepak-nitrite-2009-2021"
+   ]
+  },
+  {
+   "id": "symphony-2009-2018",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": null,
+   "T": "2012-01-02",
+   "lender": false,
+   "outcome": "19x (2012-18)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E 15"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:symphony-2009-2018"
+   ]
+  },
+  {
+   "id": "garware-technical-fibres-2013-2024",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": null,
+   "T": "2013-01-01",
+   "lender": false,
+   "outcome": "~94x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E 4.9"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:garware-technical-fibres-2013-2024"
+   ]
+  },
+  {
+   "id": "avanti-feeds-2009-2017",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": null,
+   "T": "2011-01-03",
+   "lender": false,
+   "outcome": "~400x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E 12.6"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:avanti-feeds-2009-2017"
+   ]
+  },
+  {
+   "id": "apl-apollo-2009-2026",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": null,
+   "T": "2009-03-31",
+   "lender": false,
+   "outcome": "~670x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E 5"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:apl-apollo-2009-2026",
+    "case_study:false-alarm-apl-apollo-low-margins"
+   ]
+  },
+  {
+   "id": "caplin-point-2009-2026",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": "CAPLIPOINT",
+   "T": "2020-03-31",
+   "lender": false,
+   "outcome": "~12x (2020-26 leg; ~1,800x from 2009)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "Y",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "Y",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "G4": "P/E ~10-13",
+    "G1": "BSE SHP December 2019 (filed 2020-01-06): 0.0% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 4,
+    "first_fy": 2016,
+    "last_fy": 2019,
+    "sum_cfo": 259.0,
+    "sum_pat": 464.0,
+    "sum_fcf": 113.0,
+    "cfo_pat": 0.558,
+    "pat_nonpos": false,
+    "debt_start": 2.0,
+    "debt_end": 36.0,
+    "sum_cfo_3y": 217.0,
+    "debt_growth": 18.0,
+    "equity": 597.0,
+    "de": 0.06,
+    "oi_pbt": 0.084,
+    "oi_pbt_3y": 0.078,
+    "debtor_days": 90.0,
+    "debtor_days_d2": 60.0,
+    "sales_cagr": 0.395,
+    "eqcap_growth": 1.0
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 2,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:caplin-point-2009-2026"
+   ]
+  },
+  {
+   "id": "titan-2009-2026",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": null,
+   "T": "2009-03-31",
+   "lender": false,
+   "outcome": "~130x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E 20.8"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "the false-alarm record computed CFO/PAT over FY15-26 = hindsight relative to T",
+   "records": [
+    "case_study:titan-2009-2026",
+    "case_study:false-alarm-titan-negative-cfo-gold-loans"
+   ]
+  },
+  {
+   "id": "balkrishna-industries-2009-2024",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": null,
+   "T": "2009-03-31",
+   "lender": false,
+   "outcome": "~266x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E 2.2"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:balkrishna-industries-2009-2024"
+   ]
+  },
+  {
+   "id": "bajaj-finance-2009-2021",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": null,
+   "T": "2009-03-31",
+   "lender": true,
+   "outcome": "~1,570x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "NA",
+    "F1b_cfo_pat_lt_0.3": "NA",
+    "G2_debt_up_neg_cfo": "NA",
+    "G5_neg_fcf": "NA",
+    "G6_debtor_days": "NA",
+    "F2_other_income": "NA"
+   },
+   "ev": {
+    "G4": "P/E 9"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:bajaj-finance-2009-2021",
+    "case_study:false-alarm-bajaj-finance-negative-cfo-qips"
+   ]
+  },
+  {
+   "id": "astral-2009-2024",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": null,
+   "T": "2009-03-31",
+   "lender": false,
+   "outcome": "~1,590x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E 7.9"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:astral-2009-2024"
+   ]
+  },
+  {
+   "id": "tata-elxsi-2009-2022",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": "TATAELXSI_sa",
+   "T": "2020-03-31",
+   "lender": false,
+   "outcome": "17x (2020-22 leg)",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "G4": "P/E 15",
+    "G1": "BSE SHP December 2019 (filed 2020-01-17): 0.0% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2015,
+    "last_fy": 2019,
+    "sum_cfo": 820.0,
+    "sum_pat": 963.0,
+    "sum_fcf": 681.0,
+    "cfo_pat": 0.852,
+    "pat_nonpos": false,
+    "debt_start": 0.0,
+    "debt_end": 0.0,
+    "sum_cfo_3y": 556.0,
+    "debt_growth": 1.0,
+    "equity": 942.0,
+    "de": 0.0,
+    "oi_pbt": 0.099,
+    "oi_pbt_3y": 0.098,
+    "debtor_days": 81.0,
+    "debtor_days_d2": 9.0,
+    "sales_cagr": 0.171,
+    "eqcap_growth": 2.0
+   },
+   "mech_src": "standalone",
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:tata-elxsi-2009-2022"
+   ]
+  },
+  {
+   "id": "la-opala-2009-2015",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": null,
+   "T": "2009-03-31",
+   "lender": false,
+   "outcome": "~198x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E 17.5"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:la-opala-2009-2015"
+   ]
+  },
+  {
+   "id": "pidilite-2008-2026",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": null,
+   "T": "2008-10-31",
+   "lender": false,
+   "outcome": "~80x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E 15.7"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:pidilite-2008-2026"
+   ]
+  },
+  {
+   "id": "eicher-motors",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": null,
+   "T": "2008-10-31",
+   "lender": false,
+   "outcome": "~196x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E 12.8"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:eicher-motors"
+   ]
+  },
+  {
+   "id": "page-industries-2007-2022",
+   "label": "W",
+   "sub": "",
+   "mkt": "IN",
+   "key": null,
+   "T": "2007-03-31",
+   "lender": false,
+   "outcome": "~197x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E 26.6"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:page-industries-2007-2022"
+   ]
+  },
+  {
+   "id": "false-alarm-info-edge-losses-low-roce",
+   "label": "FA",
+   "sub": "",
+   "mkt": "IN",
+   "key": null,
+   "T": "2006-11-21",
+   "lender": false,
+   "outcome": "~40x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:false-alarm-info-edge-losses-low-roce"
+   ]
+  },
+  {
+   "id": "false-alarm-eternal-zomato-losses-dilution",
+   "label": "FA",
+   "sub": "",
+   "mkt": "IN",
+   "key": "ETERNAL",
+   "T": "2022-07-27",
+   "lender": false,
+   "outcome": "~7.8x from 2022 low",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "Y",
+    "G4": "U",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "Y",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G3": "Blinkit share-swap approved Jun-2022; IPO + pre-IPO raises 2021",
+    "G4": "loss-making",
+    "G1": "BSE SHP June 2022 (filed 2022-07-20): 0.0% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2017,
+    "last_fy": 2021,
+    "sum_cfo": -3162.0,
+    "sum_pat": -4904.0,
+    "sum_fcf": -3193.0,
+    "cfo_pat": null,
+    "pat_nonpos": true,
+    "debt_start": 186.0,
+    "debt_end": 527.0,
+    "sum_cfo_3y": -3162.0,
+    "debt_growth": 2.83,
+    "equity": 7644.0,
+    "de": 0.07,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": 24.0,
+    "debtor_days_d2": 4.0,
+    "sales_cagr": 0.689,
+    "eqcap_growth": null
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 3,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:false-alarm-eternal-zomato-losses-dilution"
+   ]
+  },
+  {
+   "id": "false-alarm-consumer-franchises-long-high-pe",
+   "label": "FA",
+   "sub": "",
+   "mkt": "IN",
+   "key": null,
+   "T": "2005-01-03",
+   "lender": false,
+   "outcome": "Asian Paints ~90x, Pidilite ~148x, Page ~197x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "U",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E 40-60 for years; value at the 2005 start not given"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:false-alarm-consumer-franchises-long-high-pe"
+   ]
+  },
+  {
+   "id": "false-alarm-reliance-jio-debt",
+   "label": "FA",
+   "sub": "",
+   "mkt": "IN",
+   "key": null,
+   "T": "2016-06-30",
+   "lender": false,
+   "outcome": "~5.9x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:false-alarm-reliance-jio-debt"
+   ]
+  },
+  {
+   "id": "false-alarm-bharti-airtel-losses-debt",
+   "label": "FA",
+   "sub": "",
+   "mkt": "IN",
+   "key": "BHARTIARTL",
+   "T": "2019-12-31",
+   "lender": false,
+   "outcome": "~4.8x from Dec-2019",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "N",
+    "G3": "Y",
+    "G4": "U",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "N",
+    "G6_debtor_days": "N",
+    "F2_other_income": "Y"
+   },
+   "ev": {
+    "G3": "~Rs 25,000 cr rights May-2019 (+ QIP/FCCB Jan-2020)",
+    "G4": "loss after the AGR provision",
+    "G1": "BSE SHP September 2019 (filed 2019-10-19): 0.0% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2015,
+    "last_fy": 2019,
+    "sum_cfo": 134205.0,
+    "sum_pat": 20054.0,
+    "sum_fcf": 9050.0,
+    "cfo_pat": 6.692,
+    "pat_nonpos": false,
+    "debt_start": 100646.0,
+    "debt_end": 125428.0,
+    "sum_cfo_3y": 78204.0,
+    "debt_growth": 1.25,
+    "equity": 71423.0,
+    "de": 1.76,
+    "oi_pbt": null,
+    "oi_pbt_3y": 0.858,
+    "debtor_days": 19.0,
+    "debtor_days_d2": 1.0,
+    "sales_cagr": -0.042,
+    "eqcap_growth": 1.0
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 2,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:false-alarm-bharti-airtel-losses-debt"
+   ]
+  },
+  {
+   "id": "false-alarm-hdfc-bank-expensive-bank",
+   "label": "FA",
+   "sub": "",
+   "mkt": "IN",
+   "key": null,
+   "T": "2005-01-03",
+   "lender": true,
+   "outcome": "~35x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "NA",
+    "F1b_cfo_pat_lt_0.3": "NA",
+    "G2_debt_up_neg_cfo": "NA",
+    "G5_neg_fcf": "NA",
+    "G6_debtor_days": "NA",
+    "F2_other_income": "NA"
+   },
+   "ev": {
+    "G4": "P/E 23-38, median 26"
+   },
+   "later": {},
+   "metrics": {},
+   "mech_src": null,
+   "n_graded_Y": 0,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:false-alarm-hdfc-bank-expensive-bank"
+   ]
+  },
+  {
+   "id": "false-alarm-netflix-negative-fcf",
+   "label": "FA",
+   "sub": "",
+   "mkt": "US",
+   "key": "NFLX",
+   "T": "2019-12-31",
+   "lender": false,
+   "outcome": "~3.7x to 2025",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "NA",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "Y",
+    "F1b_cfo_pat_lt_0.3": "Y",
+    "G2_debt_up_neg_cfo": "Y",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {},
+   "later": {},
+   "metrics": {
+    "n_years": 5,
+    "first_fy": 2014,
+    "last_fy": 2018,
+    "sum_cfo": -6673.367,
+    "sum_pat": 2346.2889999999998,
+    "sum_fcf": -7289.242,
+    "cfo_pat": -2.844,
+    "pat_nonpos": false,
+    "debt_start": 2371.362,
+    "debt_end": 10360.058,
+    "sum_cfo_3y": -5940.411,
+    "debt_growth": 4.37,
+    "equity": 0,
+    "de": null,
+    "oi_pbt": null,
+    "oi_pbt_3y": null,
+    "debtor_days": null,
+    "debtor_days_d2": null,
+    "sales_cagr": 0.301,
+    "eqcap_growth": null
+   },
+   "mech_src": "sec",
+   "n_graded_Y": 4,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:false-alarm-netflix-negative-fcf"
+   ]
+  },
+  {
+   "id": "false-alarm-apollo-hospitals-promoter-pledge",
+   "label": "FA",
+   "sub": "",
+   "mkt": "IN",
+   "key": "APOLLOHOSP",
+   "T": "2019-07-31",
+   "lender": false,
+   "outcome": "~7x",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "Y",
+    "G3": "N",
+    "G4": "N",
+    "F1_cfo_pat_lt_0.7": "N",
+    "F1b_cfo_pat_lt_0.3": "N",
+    "G2_debt_up_neg_cfo": "N",
+    "G5_neg_fcf": "Y",
+    "G6_debtor_days": "N",
+    "F2_other_income": "N"
+   },
+   "ev": {
+    "G1": "BSE SHP June 2019 (filed 2019-07-20): 71.3% of promoter holding pledged"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 4,
+    "first_fy": 2015,
+    "last_fy": 2018,
+    "sum_cfo": 2227.0,
+    "sum_pat": 761.0,
+    "sum_fcf": -919.0,
+    "cfo_pat": 2.926,
+    "pat_nonpos": false,
+    "debt_start": 1992.0,
+    "debt_end": 3427.0,
+    "sum_cfo_3y": 1757.0,
+    "debt_growth": 1.72,
+    "equity": 3252.0,
+    "de": 1.05,
+    "oi_pbt": 0.14,
+    "oi_pbt_3y": 0.243,
+    "debtor_days": 37.0,
+    "debtor_days_d2": 1.0,
+    "sales_cagr": 0.171,
+    "eqcap_growth": 1.0
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 2,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:false-alarm-apollo-hospitals-promoter-pledge"
+   ]
+  },
+  {
+   "id": "false-alarm-dmart-permanent-high-pe",
+   "label": "FA",
+   "sub": "",
+   "mkt": "IN",
+   "key": "DMART",
+   "T": "2017-03-21",
+   "lender": false,
+   "outcome": "~11.7x from IPO",
+   "final": {
+    "H1a": "N",
+    "H1b": "N",
+    "H1c": "N",
+    "H2": "N",
+    "H2b": "N",
+    "H3": "N",
+    "H4": "N",
+    "H5": "N",
+    "G1": "U",
+    "G3": "N",
+    "G4": "Y",
+    "F1_cfo_pat_lt_0.7": "U",
+    "F1b_cfo_pat_lt_0.3": "U",
+    "G2_debt_up_neg_cfo": "U",
+    "G5_neg_fcf": "U",
+    "G6_debtor_days": "U",
+    "F2_other_income": "U"
+   },
+   "ev": {
+    "G4": "P/E never below 66 since listing"
+   },
+   "later": {},
+   "metrics": {
+    "n_years": 2
+   },
+   "mech_src": "consolidated",
+   "n_graded_Y": 1,
+   "n_hard_Y": 0,
+   "note": "",
+   "records": [
+    "case_study:false-alarm-dmart-permanent-high-pe"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,369 @@
+{
+ "505537:2018-01-15": {
+  "qtr": "December 2017",
+  "filed": "2018-01-12",
+  "xbrlurl": "/XBRL1/505537_1212018185254_SHP.xml",
+  "pledge_pct_of_promoter": 45.67,
+  "promoter_shares": 413670212.0,
+  "total_shares": 960453620.0,
+  "promoter_pct": 43.07,
+  "status": "ok"
+ },
+ "505537:2020-04-30": {
+  "qtr": "March 2020",
+  "filed": "2020-04-28",
+  "xbrlurl": "/XBRL1/505537_284202016134_SHP.xml",
+  "pledge_pct_of_promoter": 16.38,
+  "promoter_shares": 45819874.0,
+  "total_shares": 960483235.0,
+  "promoter_pct": 4.77,
+  "status": "ok"
+ },
+ "511431:2018-01-15": {
+  "qtr": "26 Dec 2017",
+  "filed": "2017-12-28",
+  "xbrlurl": "/XBRL1/511431_2812201714566_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 441980270.0,
+  "total_shares": 1058803090.0,
+  "promoter_pct": 41.74,
+  "status": "ok"
+ },
+ "539207:2018-04-30": {
+  "qtr": "March 2018",
+  "filed": "2018-04-05",
+  "xbrlurl": "/XBRL1/539207_542018103522_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 50506000.0,
+  "total_shares": 114462396.0,
+  "promoter_pct": 44.12,
+  "status": "ok"
+ },
+ "532368:2022-01-10": {
+  "qtr": "December 2021",
+  "filed": "2022-01-05",
+  "xbrlurl": "/XBRL1/532368_412022231455_SHP.xml",
+  "pledge_pct_of_promoter": 9.89,
+  "promoter_shares": 233284604.0,
+  "total_shares": 1041633124.0,
+  "promoter_pct": 22.4,
+  "status": "ok"
+ },
+ "542851:2024-06-30": {
+  "qtr": "March 2024",
+  "filed": "2024-04-10",
+  "xbrlurl": "/XBRL1/542851_1042024164724_SHP.xml",
+  "pledge_pct_of_promoter": 63.06,
+  "promoter_shares": 23717306.0,
+  "total_shares": 37872897.0,
+  "promoter_pct": 62.62,
+  "status": "ok"
+ },
+ "512599:2023-01-23": {
+  "qtr": "December 2022",
+  "filed": "2023-01-20",
+  "xbrlurl": "/XBRL1/512599_2012023122058_SHP.xml",
+  "pledge_pct_of_promoter": 2.66,
+  "promoter_shares": 827949621.0,
+  "total_shares": 1140001121.0,
+  "promoter_pct": 72.63,
+  "status": "ok"
+ },
+ "540064:2018-08-31": {
+  "qtr": "June 2018",
+  "filed": "2018-07-20",
+  "xbrlurl": "/XBRL1/540064_2072018134113_SHP.xml",
+  "pledge_pct_of_promoter": 43.95,
+  "promoter_shares": 233740436.0,
+  "total_shares": 502503917.0,
+  "promoter_pct": 46.52,
+  "status": "ok"
+ },
+ "500111:2018-01-15": {
+  "qtr": "September 2017",
+  "filed": "2017-10-14",
+  "xbrlurl": "/XBRL1/500111_13102017202749_SHP.xml",
+  "pledge_pct_of_promoter": 34.18,
+  "promoter_shares": 131382303.0,
+  "total_shares": 252689630.0,
+  "promoter_pct": 51.99,
+  "status": "ok"
+ },
+ "532648:2018-08-20": {
+  "qtr": "June 2018",
+  "filed": "2018-08-02",
+  "xbrlurl": "/XBRL1/532648_187201817837_SHP.xml",
+  "pledge_pct_of_promoter": 3.62,
+  "promoter_shares": 460712250.0,
+  "total_shares": 2305713095.0,
+  "promoter_pct": 19.98,
+  "status": "ok"
+ },
+ "533144:2018-01-15": {
+  "qtr": "December 2017",
+  "filed": "2018-01-11",
+  "xbrlurl": "/XBRL1/533144_1112018175334_SHP.xml",
+  "pledge_pct_of_promoter": 54.24,
+  "promoter_shares": 88815131.0,
+  "total_shares": 176564890.0,
+  "promoter_pct": 50.3,
+  "status": "ok"
+ },
+ "511072:2018-09-01": {
+  "qtr": "June 2018",
+  "filed": "2018-07-19",
+  "xbrlurl": "/XBRL1/511072_1872018195620_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 123049714.0,
+  "total_shares": 313658847.0,
+  "promoter_pct": 39.23,
+  "status": "ok"
+ },
+ "532617:2018-01-15": {
+  "qtr": "September 2017",
+  "filed": "2017-10-17",
+  "xbrlurl": "/XBRL1/532617_17102017124638_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 57934665.0,
+  "total_shares": 113597383.0,
+  "promoter_pct": 51.0,
+  "status": "ok"
+ },
+ "534809:2018-01-15": {
+  "qtr": "December 2017",
+  "filed": "2018-01-03",
+  "xbrlurl": "/XBRL1/534809_31201817447_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 238584482.0,
+  "total_shares": 394355200.0,
+  "promoter_pct": 60.5,
+  "status": "ok"
+ },
+ "517496:2015-08-01": {
+  "status": "no_prior_shp"
+ },
+ "531500:2022-08-01": {
+  "qtr": "June 2022",
+  "filed": "2022-07-21",
+  "xbrlurl": "/XBRL1/531500_21720221526_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 159583474.0,
+  "total_shares": 295259959.0,
+  "promoter_pct": 54.05,
+  "status": "ok"
+ },
+ "532715:2018-01-15": {
+  "qtr": "September 2017",
+  "filed": "2017-10-17",
+  "xbrlurl": "/XBRL1/532715_17102017162459_SHP.xml",
+  "pledge_pct_of_promoter": 79.13,
+  "promoter_shares": 36821761.0,
+  "total_shares": 118616005.0,
+  "promoter_pct": 31.04,
+  "status": "ok"
+ },
+ "533177:2018-01-15": {
+  "qtr": "September 2017",
+  "filed": "2017-10-09",
+  "xbrlurl": "/XBRL1/533177_910201717152_SHP.xml",
+  "pledge_pct_of_promoter": 98.23,
+  "promoter_shares": 240849000.0,
+  "total_shares": 328960027.0,
+  "promoter_pct": 73.22,
+  "status": "ok"
+ },
+ "543396:2021-11-18": {
+  "status": "no_prior_shp"
+ },
+ "542651:2024-07-15": {
+  "qtr": "June 2024",
+  "filed": "2024-07-12",
+  "xbrlurl": "/XBRL1/542651_1272024104318_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 108214805.0,
+  "total_shares": 274143808.0,
+  "promoter_pct": 39.47,
+  "status": "ok"
+ },
+ "500408:2022-08-15": {
+  "qtr": "June 2022",
+  "filed": "2022-07-13",
+  "xbrlurl": "/XBRL1/500408_1372022175227_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 27348919.0,
+  "total_shares": 62276440.0,
+  "promoter_pct": 43.92,
+  "status": "ok"
+ },
+ "506767:2021-07-15": {
+  "qtr": "March 2021",
+  "filed": "2021-04-20",
+  "xbrlurl": "/XBRL1/506767_20420211983_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 15132788.0,
+  "total_shares": 20412711.0,
+  "promoter_pct": 74.13,
+  "status": "ok"
+ },
+ "517385:2018-01-15": {
+  "qtr": "September 2017",
+  "filed": "2017-10-09",
+  "xbrlurl": "/XBRL1/517385_7102017175729_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 52467740.0,
+  "total_shares": 69957000.0,
+  "promoter_pct": 75.0,
+  "status": "ok"
+ },
+ "532497:2017-03-31": {
+  "qtr": "December 2016",
+  "filed": "2017-01-18",
+  "xbrlurl": "/XBRL1/532497_1812017111424_SHP.xml",
+  "pledge_pct_of_promoter": 6.6,
+  "promoter_shares": 53829818.0,
+  "total_shares": 133038765.0,
+  "promoter_pct": 40.46,
+  "status": "ok"
+ },
+ "543664:2022-11-21": {
+  "status": "no_prior_shp"
+ },
+ "532667:2020-03-31": {
+  "qtr": "December 2019",
+  "filed": "2020-01-21",
+  "xbrlurl": "/XBRL1/532667_2112020141551_SHP.xml",
+  "pledge_pct_of_promoter": 76.34,
+  "promoter_shares": 1052784456.0,
+  "total_shares": 5319774121.0,
+  "promoter_pct": 19.79,
+  "status": "ok"
+ },
+ "541154:2020-05-31": {
+  "qtr": "March 2020",
+  "filed": "2020-05-02",
+  "xbrlurl": "/XBRL1/541154_152020142032_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 300855180.0,
+  "total_shares": 334387500.0,
+  "promoter_pct": 89.97,
+  "status": "ok"
+ },
+ "540699:2019-08-31": {
+  "qtr": "June 2019",
+  "filed": "2019-07-09",
+  "xbrlurl": "/XBRL1/540699_97201917284_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 4407943.0,
+  "total_shares": 11325091.0,
+  "promoter_pct": 38.92,
+  "status": "ok"
+ },
+ "540678:2020-05-31": {
+  "qtr": "March 2020",
+  "filed": "2020-04-06",
+  "xbrlurl": "/XBRL1/540678_542020213912_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 95843464.0,
+  "total_shares": 131540390.0,
+  "promoter_pct": 72.86,
+  "status": "ok"
+ },
+ "543237:2020-10-12": {
+  "status": "no_prior_shp"
+ },
+ "500251:2020-05-31": {
+  "qtr": "March 2020",
+  "filed": "2020-04-22",
+  "xbrlurl": "/XBRL1/500251_2242020191529_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 131550881.0,
+  "total_shares": 355487461.0,
+  "promoter_pct": 37.01,
+  "status": "ok"
+ },
+ "542652:2019-04-16": {
+  "status": "no_prior_shp"
+ },
+ "506767:2019-01-15": {
+  "qtr": "September 2018",
+  "filed": "2018-10-19",
+  "xbrlurl": "/XBRL1/506767_19102018151332_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 15132788.0,
+  "total_shares": 20396392.0,
+  "promoter_pct": 74.19,
+  "status": "ok"
+ },
+ "506401:2018-06-30": {
+  "qtr": "March 2018",
+  "filed": "2018-04-21",
+  "xbrlurl": "/XBRL1/506401_2042018162412_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 60898467.0,
+  "total_shares": 136393041.0,
+  "promoter_pct": 44.65,
+  "status": "ok"
+ },
+ "500408:2020-03-31": {
+  "qtr": "December 2019",
+  "filed": "2020-01-17",
+  "xbrlurl": "/XBRL1/500408_1712020152836_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 27730264.0,
+  "total_shares": 62276440.0,
+  "promoter_pct": 44.53,
+  "status": "ok"
+ },
+ "524742:2020-03-31": {
+  "qtr": "December 2019",
+  "filed": "2020-01-06",
+  "xbrlurl": "/XBRL1/524742_61202015227_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 52214192.0,
+  "total_shares": 75642750.0,
+  "promoter_pct": 69.03,
+  "status": "ok"
+ },
+ "543320:2022-07-27": {
+  "qtr": "June 2022",
+  "filed": "2022-07-20",
+  "xbrlurl": "/XBRL1/543320_2072022201928_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": null,
+  "total_shares": 7873654676.0,
+  "status": "parse_fail"
+ },
+ "532454:2019-12-31": {
+  "qtr": "September 2019",
+  "filed": "2019-10-19",
+  "xbrlurl": "/XBRL1/532454_1910201919716_SHP.xml",
+  "pledge_pct_of_promoter": null,
+  "promoter_shares": 3217581205.0,
+  "total_shares": 5131961850.0,
+  "promoter_pct": 62.7,
+  "status": "ok"
+ },
+ "508869:2019-07-31": {
+  "qtr": "June 2019",
+  "filed": "2019-07-20",
+  "xbrlurl": "/XBRL1/508869_207201914823_SHP.xml",
+  "pledge_pct_of_promoter": 71.26,
+  "promoter_shares": 47852663.0,
+  "total_shares": 139125159.0,
+  "promoter_pct": 34.4,
+  "status": "ok"
+ },
+ "540376:2017-03-21": {
+  "status": "no_prior_shp"
+ },
+ "542651:2020-03-31": {
+  "qtr": "June 2019",
+  "filed": "2019-07-16",
+  "xbrlurl": "/XBRL1/542651_167201917255_SHP.xml",
+  "pledge_pct_of_promoter": 12.18,
+  "promoter_shares": 114038596.0,
+  "total_shares": 274143808.0,
+  "promoter_pct": 41.6,
+  "status": "ok"
+ }
+}
