@@ -35,6 +35,14 @@ Last updated: 2026-11-19
 - Prices: Yahoo v8 chart API (adjusted) works; Nasdaq API (browser UA, 10y, unadjusted); Stooq blocked.
 - Scheduled tasks (create_trigger) blocked by auto-mode classifier — user must add a permission rule.
 
+## Change detectors (21-Nov-2026) — tools/detectors/ (ready for the Raspberry Pi)
+- collect.py (NSE+BSE announcements, PIT, SAST, pledge snapshot, bulk/block → SQLite WAL) and detect.py
+  (pledge changes/crossings, invocations, insider buy/sell & clusters, auditor/CFO/CEO/CS exits, rating
+  downgrades/non-cooperation, default keywords, insolvency, big deals) → $FEIN_DATA/alerts/. --selftest passes.
+- Live test 18–20 Nov: 72 alerts; peak memory 39.5 MB. Pledge rules need ≥2 daily snapshots.
+- **NSE PIT insider feed has no records after 30-Apr-2026** (BSE insider endpoint empty too) — insider rules
+  dormant until it resumes; SAST promoter trades still captured.
+
 ## Blocked / missing
 - screener.in custom raw queries need login → ask user for a Screener account (paid w/ export ideal).
 - YouTube: yt-dlp blocked ("confirm you're not a bot"); youtubetotranscript 403 → need a
