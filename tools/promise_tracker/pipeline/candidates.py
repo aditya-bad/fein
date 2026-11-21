@@ -36,13 +36,22 @@ FUTURE_STRONG = re.compile(
     r"going to|plan(?:s|ned|ning)? to|intend\w*|aim(?:s|ed|ing)? (?:to|at|for)|look(?:ing)? (?:at|to|for)ward|"
     r"looking at (?:a |an )?(?:growth|margin|revenue|\d)|on track|confident (?:of|that)|should (?:be|see|reach|grow|come|"
     r"cross|start|get|improve|happen|go)|would (?:be|see|reach|grow|come|start|cross|get|improve)|likely to|"
-    r"set to|poised to|in the pipeline|committed to|visibility)\b", re.I)
+    r"set to|poised to|in the pipeline|committed to|visibility|(?:I'm|I am|we're|we are|we'll be|we can|I can|you can) "
+    r"(?:\w+ )?look(?:ing)? at|could be|may see|might see|(?:I|we)'d like to|would like to|(?:my|our|the) goal|hoping|hope to|"
+    r"scheduled|to start from|endeavou?r|we (?:do )?believe|(?:don't |do not )?want to|aspiration|road ?map|"
+    r"work(?:ing)? towards|should be (?:possible|able)|we can (?:do|achieve|reach|see|deliver|easily)|reasonable expectation|"
+    r"would not be surprised|indication|sustainable|ensure|we see (?:a |an )?(?:growth|margin|revenue|potential)|"
+    r"(?:will|would|should) (?:\w+ )?(?:be|come|happen|start))\b", re.I)
 FUTURE_WEAK = re.compile(
     r"\b(will|would|should|could|hopefully|hope|going forward|in future|in the future|coming (?:year|quarter|years|"
     r"quarters|months)|next (?:year|quarter|fiscal|financial year|few|two|three|\d|half|month|12|18|24)|"
     r"by (?:the )?end of|over the next|within (?:the next|\d|a |one|two|three|six|twelve)|from next|"
     r"remaining (?:quarters?|part|months)|rest of the year|second half|H2|sustain\w*|maintain\w*|"
-    r"long[\s-]term|medium[\s-]term|near[\s-]term|short[\s-]term|aspiration)\b", re.I)
+    r"long[\s-]term|medium[\s-]term|near[\s-]term|short[\s-]term|aspiration|remains?|continue[sd]?|possibly|probably|"
+    r"maybe|full year|for the year|this year|year after|may|might|can)\b", re.I)
+QUAL = re.compile(r"\b(flat|flattish|in line|sequential\w*|turnaround|normali[sz]\w*|recover\w*|neutral|better than|similar|"
+                  r"healthier|higher|lower|improv\w*|range[\s-]bound|peak|highest|best|stable|strong|robust|sustain\w*|"
+                  r"breakeven|break even|positive|negative|reduc\w*|increas\w*|expan\w*|grow\w*|decline|de-?grow\w*)\b", re.I)
 PAST = re.compile(
     r"\b(we (?:have )?(?:reported|achieved|delivered|recorded|posted|clocked|registered|completed|secured|received|"
     r"booked|saw|had|did|grew|were|was)|stood at|came in at|was at|were at|during the (?:quarter|year|period|first half)|"
@@ -62,7 +71,7 @@ TIMELINE = re.compile(
     r"(?:\s?(?:to|-)\s?(?:\d+|two|three|four|five))? (?:years?|quarters?|months?)|"
     r"by (?:the )?end of|(?:January|February|March|April|May|June|July|August|September|October|November|December)"
     r"(?:\s+20\d\d)?|20[2-4]\d|calendar (?:year )?20\d\d|year[\s-]end|end of (?:the )?(?:year|quarter)|"
-    r"going forward|long[\s-]term|medium[\s-]term)\b", re.I)
+    r"going forward|long[\s-]term|medium[\s-]term|quarter [1-4]|full year|year after|for the year)\b", re.I)
 CATEGORIES = [  # (category, regex) — first match wins, order matters
     ("order_book", r"order ?book|backlog|unexecuted"),
     ("order_inflow", r"order (?:inflow|intake|win|booking)s?|inflows?|orders?\b|bid(?:s|ding)? pipeline|L1\b"),
@@ -217,9 +226,9 @@ def extract_deadlines(s, call):
 
     for m in re.finditer(r"\bQ([1-4])\s?(?:FY)?\s?['’]?\s?(\d{2,4})\b", sl, re.I):
         add(C.quarter_end(m.group(1), _fy(m.group(2))), "quarter", m.group(0))
-    for m in re.finditer(r"\b(?:Q([1-4])|(first|second|third|fourth|1st|2nd|3rd|4th) quarter)\b(?!\s?(?:FY)?\s?['’]?\s?\d)", sl, re.I):
-        q = int(m.group(1)) if m.group(1) else {"first": 1, "1st": 1, "second": 2, "2nd": 2, "third": 3, "3rd": 3,
-                                                "fourth": 4, "4th": 4}[m.group(2).lower()]
+    for m in re.finditer(r"\b(?:Q([1-4])|quarter ([1-4])|(first|second|third|fourth|1st|2nd|3rd|4th) quarter)\b(?!\s?(?:FY)?\s?['’]?\s?\d\d)", sl, re.I):
+        q = int(m.group(1) or m.group(2)) if (m.group(1) or m.group(2)) else {"first": 1, "1st": 1, "second": 2, "2nd": 2, "third": 3, "3rd": 3,
+                                                "fourth": 4, "4th": 4}[m.group(3).lower()]
         fy = cfy
         if C.quarter_end(q, fy) < call - dt.timedelta(days=60):
             fy += 1
@@ -316,7 +325,7 @@ def category_of(s):
     return "other"
 
 
-def score_sentence(s, call):
+def score_sentence(s, call, context=None):
     fs = len(FUTURE_STRONG.findall(s))
     fw = len(FUTURE_WEAK.findall(s))
     nums = extract_numbers(s)
@@ -324,16 +333,23 @@ def score_sentence(s, call):
     tl = bool(TIMELINE.search(s))
     met = METRIC_ANY.findall(s)
     past = len(PAST.findall(s))
-    f = 2 * fs + fw
-    score = f + 1.5 * bool(nums) + 1.5 * bool(dls or tl) + 1.0 * bool(met) - 1.0 * past
-    sig = {"future_strong": fs, "future_weak": fw, "numbers": len(nums), "timeline": bool(dls or tl),
-           "metric": bool(met), "past": past}
+    fut_dated = any(d["date"] and dt.date.fromisoformat(d["date"]) > call + dt.timedelta(days=20) for d in dls)
+    qual = QUAL.findall(s)
+    met_ctx = METRIC_ANY.findall(context or "") if not met else []
+    f = 2 * fs + fw + 2 * fut_dated
+    pen = past if fs == 0 else 0
+    score = f + 1.5 * bool(nums) + 0.5 * bool(qual) + 1.5 * bool(dls or tl) + 1.0 * bool(met) \
+        + 0.5 * bool(met_ctx) - 1.0 * pen
+    sig = {"future_strong": fs, "future_weak": fw, "future_dated": fut_dated, "numbers": len(nums),
+           "qualitative": len(qual), "timeline": bool(dls or tl), "metric": bool(met),
+           "metric_from_context": bool(met_ctx), "past": past}
     tier = None
-    if f >= 1 and met and (nums or dls or tl) and score >= 4:
+    if f >= 1 and (met or met_ctx) and (nums or fut_dated or (qual and (dls or tl))) and score >= 4 and pen < 2:
         tier = "A"
-    elif (fs >= 1 or fw >= 2) and met and score >= 3:
+    elif f >= 1 and (nums or qual or dls or tl or met) and (met or met_ctx or nums) and score >= 3:
         tier = "B"
-    return tier, score, sig, nums, dls, sorted({x.lower() if isinstance(x, str) else x for x in met})[:8]
+    metric_terms = sorted({x.lower() for x in (met or met_ctx) if isinstance(x, str)})[:8]
+    return tier, score, sig, nums, dls, metric_terms
 
 
 def extract_call(doc, min_tier="B"):
@@ -348,12 +364,15 @@ def extract_call(doc, min_tier="B"):
             q = turns[t["question_i"]]["text"][:500]
         sents = sentences(t["text"])
         for j, s in enumerate(sents):
-            if len(s.split()) < 6 or s.rstrip().endswith("?"):
+            if len(s.split()) < 5:
                 continue
-            tier, score, sig, nums, dls, met = score_sentence(s, call)
-            if tier is None or (min_tier == "A" and tier != "A"):
+            if s.rstrip().endswith("?") and not (j + 1 < len(sents) and re.match(
+                    r"(the answer is yes|yes|absolutely|definitely|certainly)", sents[j + 1], re.I)):
                 continue
             ctx = " ".join(sents[max(0, j - 1): j + 2])
+            tier, score, sig, nums, dls, met = score_sentence(s, call, ctx + " " + (q or "")[-300:])
+            if tier is None or (min_tier == "A" and tier != "A"):
+                continue
             pd = primary_deadline(dls)
             out.append({
                 "id": f"cand:{doc['symbol']}:{doc['call_date']}:{t['i']:03d}-{j:02d}",

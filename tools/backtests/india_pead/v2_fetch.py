@@ -12,7 +12,7 @@ Per symbol:
   v1 standalone rows (V1/results/SYM.json) are reused and never re-fetched.
 Passes: A = quarters ended 2022-12-31 .. 2026-09-30 (fresh test); B = 2019-06-30 .. 2022-09-30 (2022-25 re-run).
 Rates: NSE API host >= 1.0 s; NSE archive host >= 0.3 s (one thread); Yahoo >= 1.1 s. Resumable (per-symbol JSON).
-Usage: python3 v2_fetch.py V1DIR V2DIR --pass A|B [--limit N] [--start I]  (two processes on two slices is fine)"""
+Usage: python3 v2_fetch.py V1DIR V2DIR --pass A|B [--limit N] [--start I] [--stop J]  (two processes on two slices is fine)"""
 import argparse, concurrent.futures as cf, csv, datetime as dt, gzip, json, os, random, re, sys, threading, time
 import urllib.error, urllib.parse, urllib.request
 
@@ -208,14 +208,14 @@ def fetch_one(qe, rec):
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("v1"); ap.add_argument("v2")
     ap.add_argument("--pass", dest="p", required=True, choices=["A", "B"]); ap.add_argument("--limit", type=int, default=10 ** 9)
-    ap.add_argument("--start", type=int, default=0)
+    ap.add_argument("--start", type=int, default=0); ap.add_argument("--stop", type=int, default=10 ** 9)
     a = ap.parse_args()
     R = os.path.join(a.v2, "results"); L = os.path.join(a.v2, "lists"); os.makedirs(R, exist_ok=True); os.makedirs(L, exist_ok=True)
     lo, hi = PASS_RANGE[a.p]
     syms = universe(a.v1)[:a.limit]
     ex = cf.ThreadPoolExecutor(2)   # both workers share the archive/api rate locks
     for i, sym in enumerate(syms):
-        if i < a.start: continue
+        if i < a.start or i >= a.stop: continue
         t0 = time.time()
         fn = os.path.join(R, sym + ".json")
         j = json.load(open(fn)) if os.path.exists(fn) else {"symbol": sym, "passes": [], "q": {}}

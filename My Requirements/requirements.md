@@ -165,10 +165,11 @@ Also tell me how I'll reach the wrapper: over Remote Control on the Pi (simplest
 - [ ] **No inbound ports open to the internet.** Nothing on the Pi needs to accept connections from outside.
   Remote Control and git work over outbound connections only. Keep the router's port forwarding off for the Pi.
 - [ ] **Separate user account** on the Pi for this work (e.g. `fein`), not `pi`/root. Run cron jobs and Claude as that user.
-- [ ] **SSH keys only** (disable password login: `PasswordAuthentication no` in `/etc/ssh/sshd_config`), or turn SSH off if
-  you use the Pi only via screen and keyboard.
+- [ ] **SSH: Claude does NOT need it.** Remote Control connects outward from the Pi. SSH is only for *you* to manage the Pi
+  from another computer. If you don't need that, turn it off (`sudo systemctl disable --now ssh`), which is safest. If you do,
+  allow keys only (`PasswordAuthentication no` in `/etc/ssh/sshd_config`).
 - [ ] **Firewall:** `sudo apt install ufw && sudo ufw default deny incoming && sudo ufw default allow outgoing && sudo ufw enable`
-  (add `sudo ufw allow from <your-LAN-subnet> to any port 22` only if you use SSH on the LAN).
+  (add `sudo ufw allow from <your-LAN-subnet> to any port 22` only if you keep SSH for yourself on the LAN).
 - [ ] **Kite wrapper binds to `127.0.0.1` only** (not `0.0.0.0`), and is read-only (no order/funds/holdings endpoints).
   If you want it reachable from your laptop, use a private network like Tailscale rather than opening ports.
 - [ ] **Secrets in files with `chmod 600`** under `~/fein-data/secrets/`, owned by the `fein` user. That covers the Kite API key/secret/access
