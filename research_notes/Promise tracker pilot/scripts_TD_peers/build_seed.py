@@ -83,7 +83,8 @@ def build(D):
                  "tags": ["india", "promise-tracker", "sector-power-td", "governance", "process", "td-peer-calibration"],
                  "date": AS_OF.isoformat(), "data": summary,
                  "sources": sorted({u for _, u in D.CALLS.values()} | {D.SCREENER}), "confidence": "single-source",
-                 "links": [{"to": f"company:{T}", "rel": "about"}, {"to": "analysis:SKIPPER:credibility-2026-11", "rel": "compares_to"}]})
+                 "links": [{"to": f"company:{T}", "rel": "about"}, {"to": "analysis:SKIPPER:credibility-2026-11", "rel": "similar_to"},
+                           {"to": "theme:sector-capital-goods-epc-td", "rel": "part_of"}, {"to": "insight:td-epc-promise-credibility-base-rate", "rel": "part_of"}]})
     return recs, summary
 
 if __name__ == "__main__":

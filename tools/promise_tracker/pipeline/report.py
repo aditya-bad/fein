@@ -45,7 +45,8 @@ EXEC_CATS = {"capacity_commissioning", "customer_win", "m&a", "new_product", "ap
 SHORT_WORDS = re.compile(r"lower than (expected|anticipated|guided)|below (our )?(expect|guid|target)|short of|"
                          r"\bmiss(ed)?\b|delay\w*|slipp\w*|could not|couldn't|did not (meet|achieve|reach)|"
                          r"unfortunately|disappoint\w*|not (been )?able to|fell short|shortfall|revis\w+ (down|our)|"
-                         r"lower(ed)? (our )?guidance|cut (our )?guidance|not as (high|strong)|softer than", re.I)
+                         r"lower(ed)? (our )?guidance|cut (our )?guidance|not as (high|strong)|softer than|adverse(ly)? impact|"
+                         r"lower[\s-]than|took longer|taking longer|pushed (out|back)|deferred|postpone\w*", re.I)
 
 
 def norm_status(s):

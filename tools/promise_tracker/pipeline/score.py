@@ -129,8 +129,6 @@ def infer_measure(p):
     if re.search(r"free cash flow|\bfcf\b", tl):
         return "fcf_cr", "inferred"
     if re.search(r"capex|capital expenditure", tl):
-        if not DERIVED_CAPEX[0]:
-            return None, "capex: screener has no capex line (use --derived-capex or a CSV)"
         return ("capex_pct_revenue" if re.search(r"% of (revenue|top ?line|sales)|/revenue", tl) else "capex_cr"), "inferred"
     if re.search(r"dividend", tl) and "%" in tl:
         return "dividend_payout_pct", "inferred"
@@ -270,6 +268,11 @@ def actual_for(fin, measure, kind, end):
         if measure in ("capex_cr", "capex_pct_revenue"):
             if kind != "FY":
                 return None, "capex derived only annually"
+            given = fin["FY"].get(end, {}).get("capex")
+            if given is not None:
+                if measure == "capex_pct_revenue":
+                    return 100 * given / pv("sales"), f"capex {given:g} (CSV) / sales"
+                return given, "capex from CSV"
             b1, b0 = fin["BS"].get(end, {}), fin["BS"].get(year_ago(end), {})
             dep = fin["FY"].get(end, {}).get("depreciation")
             try:
@@ -337,9 +340,15 @@ def score_one(p, fin, as_of):
         else:
             au.update(status="not-auto-scorable", measure_basis=why + "; % target on amount measure")
             return au
+    has_capex = bool(fin) and any("capex" in r for r in fin.get("FY", {}).values())
+    if measure in ("capex_cr", "capex_pct_revenue") and not DERIVED_CAPEX[0] and not has_capex:
+        au.update(status="not-auto-scorable", measure_basis="capex: screener has no capex line (use --derived-capex or a CSV)")
+        return au
     lo = hi if lo is None else lo
     hi = lo if hi is None else hi
     kind, end, label, notes = resolve_period(p, measure)
+    per_q = measure == "revenue_abs_cr" and kind in ("H", "FY") and re.search(
+        r"per quarter|/qtr|quarterly|run[\s-]?rate|a quarter", " ".join(str(p.get(k) or "") for k in ("metric", "target", "title")), re.I)
     au.update(period=label, period_end=end.isoformat(), target_used=[lo, hi], comparator=comp or "~", notes=notes)
     if end > as_of:
         au["status"] = "pending"
@@ -353,6 +362,9 @@ def score_one(p, fin, as_of):
         au["status"] = "awaiting-data"
         return au
     v, det = actual_for(fin, measure, kind, end)
+    if v is not None and per_q:
+        nq = 2 if kind == "H" else 4
+        v, det = v / nq, det + f" / {nq} quarters (per-quarter target)"
     if v is None:
         au.update(status="not-auto-scorable", measure_basis=why + f"; {det}")
         return au
@@ -574,6 +586,22 @@ def main(argv=None):
     link_chains(promises)
     for p in promises:
         apply_chain_rule(p)
+    # 'stopped mentioning' suggestion (pilot lesson 5: >= 4 later calls without a restatement)
+    man = C.load_json(os.path.join(C.sym_dir(root, sym), "manifest.json"), []) or []
+    call_dates = sorted({m["call_date"] for m in man} | {p["said_on"] for p in promises})
+    later_by_chain = defaultdict(list)
+    for p in promises:
+        later_by_chain[p["chain"]["chain_key"] or p["id"]].append(p["said_on"])
+    for p in promises:
+        if p["auto_status_final"] in ("delivered", "partly", "missed", "moved-goalpost", "withdrawn"):
+            continue
+        if (p.get("status") or "pending") != "pending" or int(p.get("materiality") or 2) < 2:
+            continue  # already judged by a human/LLM, or minor
+        last = max(later_by_chain[p["chain"]["chain_key"] or p["id"]])
+        n_after = sum(1 for d in call_dates if d > last)
+        if n_after >= 4:
+            p["suggested_status"] = "silently-dropped?"
+            p["suggestion_basis"] = f"not restated in the {n_after} calls after {last} (check: maybe hit, or immaterial)"
     out = a.out or os.path.join(C.sym_dir(root, sym), "scored.jsonl")
     C.write_jsonl(out, promises)
     from collections import Counter

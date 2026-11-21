@@ -118,3 +118,12 @@ Bottom quintile (big misses) is the strongest leg (≈ −2.1 to −2.7%, t ≈ 
 **Use:** a timing/filter layer, not a multibagger method — avoid/exit after big earnings misses; tilt research
 toward top surprises; ~30-name baskets. Exploratory (needs fresh pre-registration): mid-cap tertile strongest;
 "price rose on results" filter; 2025 weak (decay or noise). Weakness: standalone EPS, price-only, sample not universe.
+
+## L18 (2026-11-21) — A credibility score means nothing without a peer base rate
+T&D/EPC peers scored identically: KPIL 76.7%, Skipper 41.3%, KEC 19.8% weighted delivery. Skipper is the
+sector median (sector-adjusted −2.6 pts), so its 20-Nov downgrade "for weak credibility" (L8) over-weighted
+an absolute number. Sector-wide: order-inflow shortfalls, 1–2 qtr date slips, silent downward re-statements,
+Jal Jeevan payment delays. **Rule:** always report credibility as sector-adjusted (company − peer median, by
+category, ≥5 promises per category). Precise ≠ more reliable; volunteered opening-remark guidance delivered
+better at KEC/KPIL. n=3 → provisional. Also: KEC Power Grid bribery-inquiry question (Jul-2025) + ~15 months
+without PGCIL orders — single-source governance flag, verify independently.

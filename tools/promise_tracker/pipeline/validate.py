@@ -67,6 +67,13 @@ def nearest_call(said_on, calls):
     return best if abs((C.dt.date.fromisoformat(best) - d).days) <= 5 else None
 
 
+def _fy_or_none(d):
+    try:
+        return C.fy_of(C.dt.date.fromisoformat(str(d)[:10]))
+    except ValueError:
+        return None
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("symbol")
@@ -75,6 +82,7 @@ def main(argv=None):
     p.add_argument("--scored")
     p.add_argument("--out")
     p.add_argument("--show-misses", action="store_true")
+    p.add_argument("--llm", help="scored.jsonl produced from the LLM promises (score.py --promises)")
     a = p.parse_args(argv)
     sym = a.symbol.upper()
     root = C.cache_root(a.cache)
@@ -184,6 +192,45 @@ def main(argv=None):
             "confusion": Counter(f"{norm(m)} -> {norm(x)}" for _, m, x, _, _ in rows).most_common(),
             "disagreements": [{"id": pid, "manual": m, "auto": x, "actual": act, "measure": me}
                               for pid, m, x, act, me in rows if norm(m) != norm(x)],
+        }
+    if a.llm:
+        L = C.read_jsonl(a.llm)
+        mstat = {r["id"]: r["data"]["status"] for r in man}
+        used = set()
+        pairs = []
+        for r in man:
+            d = r["data"]
+            parts = quote_parts(d["quote"])
+            hit = [x for x in L if abs((C.dt.date.fromisoformat(x["said_on"]) - C.dt.date.fromisoformat(d["said_on"])).days) <= 5
+                   and any(covers(q, x["quote"]) or covers(x["quote"], q) for q in parts)]
+            if hit:
+                pairs.append((r, hit[0]))
+                used.update(h["id"] for h in hit)
+        def norm(s):
+            return {"partially_delivered": "partly", "moved_goalpost": "moved-goalpost"}.get(s, s)
+        agree = [(r["id"], norm(mstat[r["id"]]), x.get("auto_status_final")) for r, x in pairs
+                 if x.get("auto_status_final") not in (None, "not-auto-scorable")]
+        res_ag = [t for t in agree if t[1] not in ("pending", "unverifiable") and t[2] not in ("pending", "awaiting-data")]
+        fields = Counter()
+        for r, x in pairs:
+            d = r["data"]
+            fields["category"] += d.get("category") == x.get("category")
+            fields["deadline_same_fy"] += bool(_fy_or_none(d.get("deadline")) is not None and
+                                               _fy_or_none(d.get("deadline")) == _fy_or_none(x.get("deadline")))
+            fields["volunteered"] += (d.get("volunteered") in (True, "volunteered")) == bool(x.get("volunteered"))
+            fields["specificity"] += bool(d.get("specificity") == x.get("specificity") or
+                                          {3: "precise", 2: "range", 1: "vague"}.get(d.get("specificity_score")) == x.get("specificity"))
+        res["llm"] = {
+            "n_llm_promises": len(L), "manual_matched": len(pairs),
+            "recall_vs_manual": round(len(pairs) / len(man), 3),
+            "precision_lower_bound": round(len(used) / max(1, len(L)), 3),
+            "field_agreement_on_matched": {k: f"{v}/{len(pairs)}" for k, v in fields.items()},
+            "auto_scored_matched": len(agree),
+            "auto_resolved_both": len(res_ag),
+            "auto_exact_agreement": f"{sum(m == x for _, m, x in res_ag)}/{len(res_ag)}",
+            "auto_confusion": Counter(f"{m} -> {x}" for _, m, x in res_ag).most_common(),
+            "auto_disagreements": [t for t in res_ag if t[1] != t[2]],
+            "llm_unmatched_sample": [x["title"] for x in L if x["id"] not in used][:25],
         }
     print(json.dumps({k: v for k, v in res.items() if k != "unlocated_ids"}, indent=1, ensure_ascii=False))
     if a.show_misses:

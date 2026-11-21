@@ -281,6 +281,13 @@ add(said_on="2025-07-29", slug="non-td-growth-uptick-q3-q4fy26", speaker=VK, cat
     specificity="vague", volunteered=False, materiality=2,
     status="missed", evidence="Non-T&D revenue FY25 ~41% of 21,847 = ~8,960 cr -> FY26 32% of 23,506 = ~7,520 cr, ~-16% (derived from T&D shares). Only cables grew.",
     delivery_ratio=0.0, explanation_for_miss="labour, work fronts, water, railway run-down (Q4FY26 opening)", admitted_unprompted=True, confidence="single-source")
+add(said_on="2025-07-29", slug="pgcil-matter-no-impact-on-td-growth", speaker=VK, category="order_inflow",
+    title="PGCIL matter (bribery inquiry raised by analyst) will not hurt T&D growth",
+    quote="So even in the unlikely, say, that PGCIL takes something against us or something, I don't think it's going to impact our T&D growth in any manner",
+    metric="T&D growth / India T&D order intake", target="no impact", deadline="2026-03-31", deadline_precision="vague",
+    specificity="vague", volunteered=False, materiality=2,
+    status="partly", evidence="T&D revenue grew +24% in FY26 (no revenue impact). But KEC received no PGCIL orders for ~15 months ('orders & L1 of over INR3,000 crores from PGCIL after a break of 15 months', Nov-26) and India T&D intake fell to ~INR 6,400 cr (derived) from ~7,200. The analyst's question (Jul-25) referred to 'this bribery case with Power Grid officials, which is under inquiry'; management gave no outcome. Governance item - single-source (transcript only).",
+    delivery_ratio=0.5, explanation_for_miss="TBCB shift to private developers (volunteered); the PGCIL gap itself was never explained", admitted_unprompted=False)
 add(said_on="2025-07-29", slug="renewables-3000-4000cr-2-3yrs", speaker=VK, category="revenue_growth",
     title="Renewables revenue INR 3,000-4,000 cr in 2-3 years",
     quote="in the next 2 to 3 years, we are expecting this business to be -- from INR3,000 crores to INR4,000 crores",
