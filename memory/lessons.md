@@ -80,3 +80,11 @@ company-supplied data, cash eventually arrived, governance clean/improving; trap
 only via company data. Also: buying at ~2× a stock's own median P/E gave flat 4–6 yrs even with earnings growth.
 **Rule:** hard disqualifiers stay; soft flags are graded with a written override (insight:flag-override-template).
 Pledge rule changed to graded; four 19-Nov downgrades (4–6% pledges) reverted to "open question".
+
+## L13 (2026-11-21) — Depth lives in the boring filings
+VMM practice deep dive: the sustainability report (BRSR: 66% of staff at minimum wage, 84% attrition),
+the "other expenses" note (security charges ₹87.65 cr → ~5.5–6 guards/store) and related-party notes
+(promoter-PE vehicle as transporter, 28% of transport cost) revealed cost drivers no broker note had.
+**Rule:** for any deep dive read BRSR, other-expense breakdowns, RPT notes and every company-defined
+metric's footnote (payback, LFL, "loyalty customers", pre-Ind AS 116 EBITDA). Protocol:
+research_notes/Deep dives/deep_dive_protocol.md.

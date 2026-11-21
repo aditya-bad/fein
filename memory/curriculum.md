@@ -49,8 +49,7 @@ companies; written post-mortems on misses. Until then: no idea-pitching (except 
 0a. **False alarms vs real traps:** cases where our red flags fired but the stock compounded (high P/E,
     negative FCF, high debtor days, pledges, dilution) and where green flags hid disasters — learn the
     distinguishing context. (agent started 20-Nov)
-0b. **Deep-dive protocol at "security-guard depth":** unit/store economics, cost structure, ground checks,
-    worked on 1–2 real businesses as practice (e.g., a value retailer, a manufacturer).
+0b. Deep-dive protocol — v1 DONE 21-Nov (VMM practice). Next: practise it on a manufacturer and a US company.
 0c. **Academic literature sweep** via OpenAlex/Semantic Scholar (free APIs): top-cited papers on
     anomalies, analyst behaviour, management signals, India-specific market studies.
 0d. **Blogs / long-form practitioners:** Valuepickr threads, Marcellus, Safal Niveshak, Fundoo Professor,

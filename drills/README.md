@@ -27,3 +27,5 @@ v2 anonymisation: generic sector words, all money multiplied by a hidden per-pac
 | D012 | US | set 2 (v2) | packets/D012.md | sealed/D012.md |
 | D013 | India | set 2 (v2) | packets/D013.md | sealed/D013.md |
 | D014 | India | set 2 (v2) | packets/D014.md | sealed/D014.md |
+| D015 | US | set 2 (v2) | packets/D015.md | sealed/D015.md |
+| D016 | India | set 2 (v2) | packets/D016.md | sealed/D016.md |

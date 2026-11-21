@@ -1,0 +1,389 @@
+[
+ {
+  "type": "strategy",
+  "id": "strategy:deep-dive-protocol",
+  "title": "Deep-dive protocol at 'security-guard depth' (7 layers, sector-agnostic)",
+  "body": "Purpose: rebuild a business from its smallest operating unit (store, plant, branch, truck) and express each major cost in physical terms (people x wage, sq ft x rent, kWh x tariff), so the one or two micro-drivers that move margins before the P&L (wage notifications, tariff orders, related-party contracts) are named. Rule zero: write the edge question first (what consensus knows, which variable matters most, which layer reveals it); a method test gives no verdict (L9). Layers and time share for a 3-4 day dive: L1 map/peers 5%; L2 re-derived financials (leases, goodwill, ESOP, one-offs) 15%; L3 unit economics (revenue per unit and per sq ft, unit P&L, capex per unit, payback triangulated two ways) 20%; L4 cost lines >=3% of sales mapped to quantity x price with an external-input sensitivity in bps 20%; L5 governance, ownership and supply, incentives and strike prices, related-party table by year as share of each cost line (never skipped) 10%; L6 scuttlebutt with counts tied to model numbers 20%; L7 override table for good- and bad-looking flags 10%. Highest-yield Indian sources: annual-report notes (other expenses, Ind AS 24), BRSR (minimum-wage share, attrition, median pay), DRHP risk factors and KPIs, transcripts, broker analyst-meet notes, state wage gazettes. US: 10-K notes, DEF 14A, Form 4/144, BLS OES, FDD Item 19. Every estimate is tagged [EST], shows its method and a range, and stays unverified until a second route or a ground check agrees. Full text: research_notes/Deep dives/deep_dive_protocol.md.",
+  "tags": [
+   "process",
+   "checklist",
+   "india",
+   "us",
+   "deep-dive",
+   "scuttlebutt",
+   "alt-data",
+   "template"
+  ],
+  "date": "2026-11-20",
+  "data": {
+   "layers": [
+    "map",
+    "re-derived financials",
+    "unit economics",
+    "physical cost drivers",
+    "governance/RPT/ownership",
+    "ground truth",
+    "override synthesis"
+   ],
+   "time_share_pct": [
+    5,
+    15,
+    20,
+    20,
+    10,
+    20,
+    10
+   ],
+   "never_skip": "related-party table by year",
+   "one_day_version": "L1-L2 + top-3 L4 costs + L5 RPT table",
+   "practice_case": "analysis:vmm-deep-dive-practice-2026-11"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_30532_VMM_2025_2026_A_25227289_24082026123820.pdf",
+   "https://nsearchives.nseindia.com/corporate/VMMP2024_24082026124747_Disclosure_BRSR_VMM.pdf",
+   "https://nsearchives.nseindia.com/corporate/VMML_17102024173420.pdf"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:flag-override-template",
+    "rel": "part_of"
+   },
+   {
+    "to": "strategy:fisher-scuttlebutt",
+    "rel": "similar_to"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:brsr-minimum-wage-exposure",
+  "title": "BRSR '% of employees at minimum wage' + state wage gazettes = a leading margin indicator",
+  "body": "BRSR (Principle 5) discloses how many employees are paid exactly the statutory minimum wage, plus median pay and attrition. Multiply the count at minimum wage by CTC (wage x ~1.29 statutory load: PF 12-13%, ESI 3.25%, bonus 8.33%, leave/gratuity) and add outsourced lines that are also wage-indexed (security, manpower, housekeeping in the 'other expenses' note). That gives the cost pool that moves with state wage notifications, which are dated, public and come before results. Worked case: VMM FY26 had 21,913 employees with 66% at minimum wage (89% of women). The wage-linked pool is about Rs 490 cr (~3.8% of sales). Haryana raised unskilled wages 35% (Rs 11,275 -> 15,220/month) and UP about 9-21% from 1-Apr-2026, so a ~15% blended step = ~55-60 bps of margin. In Q2 FY27 employee cost rose ~25% vs revenue +14%, and the CFO cited 'significant increase in minimum wages'. Use for retail, QSR, security services, staffing, hospitals, BPO and warehousing.",
+  "tickers": [
+   "VMM"
+  ],
+  "tags": [
+   "alt-data",
+   "process",
+   "india",
+   "margins",
+   "labour",
+   "sector-retail",
+   "deep-dive"
+  ],
+  "date": "2026-11-20",
+  "data": {
+   "vmm_fy26_employees": 21913,
+   "pct_at_min_wage": 66,
+   "attrition_pct": 84,
+   "wage_linked_pool_cr_est": 490,
+   "haryana_step_pct": 35,
+   "margin_sensitivity_bps_est": "55-60"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.com/corporate/VMMP2024_24082026124747_Disclosure_BRSR_VMM.pdf",
+   "https://nsearchives.nseindia.in/annual_reports/AR_30532_VMM_2025_2026_A_25227289_24082026123820.pdf",
+   "https://nsearchives.nseindia.in/corporate/VMMP2024_26102026130822_Disclosure_Transcript_VMM_Oct_2026.pdf",
+   "https://www.scconline.com/blog/post/2026/04/18/uttar-pradesh-revises-minimum-wages-2026/",
+   "https://www.angelone.in/news/personal-finance/haryana-minimum-wage-hike-2026-workers-get-35-salary-increase-across-categories"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "strategy:deep-dive-protocol",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:cost-line-divided-by-wage-headcount",
+  "title": "Outsourced cost line / statutory wage = ground-checkable headcount (the 'security-guard' ratio)",
+  "body": "When staff are on agency contracts (BRSR shows zero 'other than permanent'), estimate headcount as: cost line / (state minimum wage x ~1.29 statutory load x ~1.10 agency margin). VMM FY26: security charges Rs 87.65 cr (AR note 24) / 745.5 average stores = ~Rs 98k per store per month. Divided by ~Rs 16-17.5k billed per guard, that is ~5.5-6 guard-equivalents per store (for example 2 shifts x 3 posts). That is a number a store visit can confirm or refute, and it converts the next wage notification into rupees (security alone ~Rs 10-20 cr more in FY27). Same method: housekeeping per sq ft, drivers per truck, nurses per bed, guards per ATM. The ratio matters only because it links a public input (the wage) to a model line and a physical count.",
+  "tickers": [
+   "VMM"
+  ],
+  "tags": [
+   "process",
+   "alt-data",
+   "india",
+   "estimation",
+   "deep-dive",
+   "scuttlebutt"
+  ],
+  "date": "2026-11-20",
+  "data": {
+   "security_charges_fy26_cr": 87.65,
+   "per_store_month_rs": 98000,
+   "guards_per_store_est": "5.5-6",
+   "confidence_note": "guards per store is an estimate pending ground count"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_30532_VMM_2025_2026_A_25227289_24082026123820.pdf",
+   "https://nsearchives.nseindia.com/corporate/VMMP2024_24082026124747_Disclosure_BRSR_VMM.pdf",
+   "https://www.scconline.com/blog/post/2026/04/18/uttar-pradesh-revises-minimum-wages-2026/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "strategy:deep-dive-protocol",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:density-beats-margin-percent",
+  "title": "Gross profit per sq ft (density x margin) beats margin %: VMM 28% GM earns less per sq ft than DMart's 15%",
+  "body": "Compare retailers on gross profit per unit of capacity, not gross-margin %. FY26: VMM revenue ~Rs 10,063 per sq ft (Rs 1,29,063 mn / average 12.83 mn sq ft) x 28.4% GM = ~Rs 2,860 GP per sq ft. DMart ~Rs 33,422 per sq ft x ~15% = ~Rs 5,000 per sq ft, which is ~75% more despite half the margin. Then layer occupancy: DMart owns most stores (capex), while VMM leases all of them (lease cash Rs 689 cr = 5.3% of sales, ~Rs 45/sq ft/month). Peer V2 Retail shows the rollout risk: sales per sq ft per month fell from Rs 933 to Rs 700 YoY in Q2 FY27 after adding 139 stores in FY26. Generalises to hospitals (EBITDA per bed), hotels (RevPAR), plants (EBITDA per tonne) and telecom (ARPU x subs per site).",
+  "tickers": [
+   "VMM",
+   "DMART",
+   "V2RETAIL"
+  ],
+  "tags": [
+   "process",
+   "sector-retail",
+   "india",
+   "unit-economics",
+   "deep-dive",
+   "margins"
+  ],
+  "date": "2026-11-20",
+  "data": {
+   "vmm_rev_per_sqft": 10063,
+   "vmm_gp_per_sqft": 2860,
+   "dmart_rev_per_sqft": 33422,
+   "dmart_gp_per_sqft_est": 5000,
+   "v2_sales_sqft_month_q2fy27": 700,
+   "v2_prior": 933
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_30532_VMM_2025_2026_A_25227289_24082026123820.pdf",
+   "https://www.screener.in/company/VMM/consolidated/",
+   "https://scanx.trade/stock-market-news/companies/dmart-reports-strong-fy26-financial-performance-with-revenue-growth-of-15-9/39272599",
+   "https://nsearchives.nseindia.com/corporate/V2RETAIL_06112026144709_Concall_Transcript_V2_Retail_Ltd_Q2H1FY27_06Nov2026.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "strategy:deep-dive-protocol",
+    "rel": "part_of"
+   },
+   {
+    "to": "case_study:false-alarm-dmart-permanent-high-pe",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:rpt-share-by-cost-line",
+  "title": "Related-party share of each cost line, by year: the governance check no screen shows",
+  "body": "Take the Ind AS 24 related-party note each year, map each transaction to its expense line, and compute RPT / line. Flag a rising share or a near-monopoly (>50% of a line). VMM: the PE promoter vehicle Samayat Services LLP is also its transporter and warehouse operator (DRHP risk factor 16). Transport paid to Samayat: Rs 14.3 cr FY22 (13.8% of transport) -> Rs 25.6 cr FY24 (16.2%) -> Rs 72.1 cr FY26 (28.1% of Rs 256 cr). Warehousing: Rs 31.2 cr FY26 (47% of rent and warehousing, down from 62% in FY22). Rishay/Rishanth LLPs add admin and QC fees (~Rs 7 cr). About Rs 103 cr a year (~8% of pre-Ind AS EBITDA) goes to the controlling shareholder's entities. This is a soft flag, not a hard disqualifier (no sign of diversion; audit-committee approved). Open questions: rates vs third parties, contract fate when the PE stake falls, and the entity's MCA filings. Always ask what happens to RPT contracts at a sponsor exit.",
+  "tickers": [
+   "VMM"
+  ],
+  "tags": [
+   "governance",
+   "redflag",
+   "process",
+   "india",
+   "related-party",
+   "deep-dive"
+  ],
+  "date": "2026-11-20",
+  "data": {
+   "transport_rpt_share": {
+    "FY22": 0.138,
+    "FY23": 0.159,
+    "FY24": 0.162,
+    "FY26": 0.281
+   },
+   "warehousing_rpt_share": {
+    "FY22": 0.619,
+    "FY24": 0.549,
+    "FY26": 0.466
+   },
+   "fy26_total_rpt_cr": 103,
+   "verdict": "soft flag, open"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_30532_VMM_2025_2026_A_25227289_24082026123820.pdf",
+   "https://nsearchives.nseindia.com/corporate/VMML_17102024173420.pdf"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "strategy:deep-dive-protocol",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:flag-override-template",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:disqualifiers",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:kpi-definition-audit",
+  "title": "Audit every company-defined KPI's footnote (SSSG, payback, 'operating EBITDA', 'customers')",
+  "body": "Three of four VMM headline KPIs had a definitional catch. (1) Payback '19 months' = capex of FY23 stores / EBITDA those stores generated up to FY24. That is cumulative, and it does not say whether rent is included; Ind AS 116 EBITDA excludes rent (~5.3% of sales), which would flatter payback by ~35%. (2) SSSG counts stores open at least 15 months but excludes stores 'temporarily closed for refurbishment, area reduction, or any one-off reason', so ask how many are excluded. (3) '18.1 cr loyalty customers' counts anyone who ever gave a phone number at checkout; the useful figure is '95% of revenue from loyalty members'. (4) Reported EBITDA margin 14.6% vs pre-Ind AS pre-ESOP 9.8%. Method: copy the footnote verbatim, list exclusions, track the excluded count over time, re-derive from audited lines. Same for ARR, order book, GMV, 'active users'.",
+  "tickers": [
+   "VMM"
+  ],
+  "tags": [
+   "process",
+   "redflag",
+   "accounting",
+   "india",
+   "us",
+   "deep-dive",
+   "checklist"
+  ],
+  "date": "2026-11-20",
+  "data": {
+   "payback_claim_months": 19,
+   "payback_definition": "capex FY23 stores / cumulative EBITDA to FY24; rent treatment unstated",
+   "ebitda_reported_pct": 14.6,
+   "ebitda_pre_indas_pct": 9.8
+  },
+  "sources": [
+   "https://nsearchives.nseindia.com/corporate/VMML_17102024173420.pdf",
+   "https://nsearchives.nseindia.in/corporate/VMMP2024_21102026131308_Disclosure_Investor_Presentation_VMM_Oct_2026.pdf",
+   "https://nsearchives.nseindia.in/annual_reports/AR_30532_VMM_2025_2026_A_25227289_24082026123820.pdf"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "strategy:deep-dive-protocol",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:screen-distortions-leases-goodwill",
+  "title": "Screen distortions: lease liabilities shown as 'Borrowings', and PE-buyout goodwill crushing ROE",
+  "body": "Two benign-looking-bad items recur for asset-light companies from PE buyouts. (1) screener.in 'Borrowings' includes Ind AS 116 lease liabilities. VMM shows Rs 1,988 cr of borrowings, which is exactly its lease liability (AR note 33); bank interest is ~Rs 1.8 cr and bank debt is nil. (2) Goodwill from the 2018 Kedaara/Partners buyout is Rs 4,284 cr = 37% of assets and 58% of equity, so reported ROE is ~12% while return on tangible equity is ~27%. Also check attrition-distorted pay. BRSR median annual pay for women (Rs 1.02 lakh, ~Rs 8.5k/month) sits below every state minimum, but 89% are recorded at minimum wage and attrition is 84%, so part-year tenure is the likely cause. Status: open, likely benign, pending staff interviews. Rule: before treating a ratio as a flag, re-derive it from the notes.",
+  "tickers": [
+   "VMM"
+  ],
+  "tags": [
+   "false-alarm",
+   "flag-judgment",
+   "accounting",
+   "leases",
+   "india",
+   "process"
+  ],
+  "date": "2026-11-20",
+  "data": {
+   "lease_liability_cr": 1988,
+   "goodwill_cr": 4284,
+   "rote_est_pct": 27,
+   "reported_roe_pct": 12.2
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_30532_VMM_2025_2026_A_25227289_24082026123820.pdf",
+   "https://www.screener.in/company/VMM/consolidated/",
+   "https://nsearchives.nseindia.com/corporate/VMMP2024_24082026124747_Disclosure_BRSR_VMM.pdf",
+   "https://www.hdfcsec.com/hsl.docs//Vishal%20Mega%20Mart%20-%20Update%20-%20Sep26%20-%20HSIE-202609251422114474305.pdf"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "strategy:deep-dive-protocol",
+    "rel": "part_of"
+   },
+   {
+    "to": "case_study:false-alarm-trent-150x-pe-and-lease-debt",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:flag-override-template",
+    "rel": "illustrates"
+   }
+  ]
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:vmm-deep-dive-practice-2026-11",
+  "title": "Vishal Mega Mart: practice deep dive at security-guard depth (method test, NO verdict)",
+  "body": "Test material for the deep-dive protocol (L9). No buy/sell/watchlist view. FY26: revenue Rs 12,906 cr (+20%), GM 28.4%, pre-Ind AS pre-ESOP EBITDA 9.8%, PAT Rs 839 cr, SSSG 11.0%. 795 stores (844 by Sep-26), 13.45 mn sq ft, all leased, 52% in Tier III. Per average store: revenue ~Rs 17.3 cr, ~Rs 10,063 per sq ft, lease cash ~Rs 45/sq ft/month, security ~Rs 98k/month (~5.5-6 guards, estimated). Mix: apparel 44% (100% own brand), GM 29%, FMCG 27%; own brands 74%. 66% of 21,913 employees at minimum wage, attrition 84%; April-2026 state hikes (Haryana +35%) pushed Q2 FY27 employee cost +25% vs revenue +14%. Q2 FY27 SSSG 5.4% (~9% festive-adjusted). No bank debt (screener 'borrowings' = leases). Goodwill 58% of equity (ROTE ~27%). PE promoter Samayat sold from 96.6% to 40% (~Rs 25,855 cr across IPO OFS and two blocks); the same entity is paid ~Rs 103 cr a year for transport and warehousing (28% of transport). CEO redesignated 'Founder', reappointed to 2031, granted 4.68 cr options at Rs 102.6 (Aug-2026). The COO and an independent director left in H2 2026. About 8 soft flags open (see the override table). Ground-check list for 3 stores is written. Full file: research_notes/Deep dives/VMM_practice.md.",
+  "tickers": [
+   "VMM",
+   "DMART",
+   "V2RETAIL"
+  ],
+  "tags": [
+   "practice",
+   "deep-dive",
+   "sector-retail",
+   "india",
+   "method-test",
+   "governance"
+  ],
+  "date": "2026-11-20",
+  "data": {
+   "verdict": "none (practice)",
+   "fy26": {
+    "revenue_cr": 12906,
+    "gm_pct": 28.4,
+    "pre_indas_ebitda_pct": 9.8,
+    "pat_cr": 839,
+    "sssg_pct": 11.0,
+    "stores": 795,
+    "area_mn_sqft": 13.45
+   },
+   "per_store_est": {
+    "revenue_cr": 17.3,
+    "rev_per_sqft": 10063,
+    "lease_rs_sqft_month": 44.8,
+    "security_rs_month": 98000,
+    "guards": "5.5-6"
+   },
+   "capex_per_store_cr_est": "2.5-3.2",
+   "payback_months_est": "15-23 at mature density",
+   "open_soft_flags": 8,
+   "price_context": {
+    "cmp": 91.5,
+    "date": "2026-11-20",
+    "pe": 47.7
+   }
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_30532_VMM_2025_2026_A_25227289_24082026123820.pdf",
+   "https://nsearchives.nseindia.com/corporate/VMMP2024_24082026124747_Disclosure_BRSR_VMM.pdf",
+   "https://nsearchives.nseindia.com/corporate/VMML_17102024173420.pdf",
+   "https://nsearchives.nseindia.in/corporate/VMMP2024_21102026131308_Disclosure_Investor_Presentation_VMM_Oct_2026.pdf",
+   "https://nsearchives.nseindia.in/corporate/VMMP2024_26102026130822_Disclosure_Transcript_VMM_Oct_2026.pdf",
+   "https://www.hdfcsec.com/hsl.docs//Vishal%20Mega%20Mart%20-%20Update%20-%20Sep26%20-%20HSIE-202609251422114474305.pdf",
+   "https://www.screener.in/company/VMM/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "strategy:deep-dive-protocol",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:brsr-minimum-wage-exposure",
+    "rel": "illustrates"
+   },
+   {
+    "to": "insight:rpt-share-by-cost-line",
+    "rel": "illustrates"
+   },
+   {
+    "to": "theme:sector-retail-qsr",
+    "rel": "part_of"
+   }
+  ]
+ }
+]
