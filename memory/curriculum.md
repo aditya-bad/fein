@@ -55,8 +55,8 @@ capex commissioning, pledge changes, rating actions, earnings vs consensus). Che
     negative FCF, high debtor days, pledges, dilution) and where green flags hid disasters — learn the
     distinguishing context. (agent started 20-Nov)
 0b. Deep-dive protocol — v1 DONE 21-Nov (VMM practice). Next: practise it on a manufacturer and a US company.
-0c. **Academic literature sweep** via OpenAlex/Semantic Scholar (free APIs): top-cited papers on
-    anomalies, analyst behaviour, management signals, India-specific market studies.
+0c. Literature sweep v1 DONE 21-Nov (36 records). Follow-ups: own tests of Indian post-earnings drift and
+    accruals (no academic study found); customer–supplier lag in India; Friday/low-attention drift.
 0d. **Blogs / long-form practitioners:** Valuepickr threads, Marcellus, Safal Niveshak, Fundoo Professor,
     Abhay Lodha, Neckar, Mauboussin, Damodaran, Cliff Asness, Investor letters (Fundsmith, Nalanda?).
 0e. **YouTube/podcasts** — blocked until transcript access (see My Requirements).

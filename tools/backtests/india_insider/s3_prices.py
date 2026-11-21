@@ -5,7 +5,7 @@ import json, os, sys, time, urllib.parse, urllib.request
 S = sys.argv[1]
 syms = open(sys.argv[2] if len(sys.argv) > 2 else os.path.join(S, "universe.txt")).read().split()
 P = os.path.join(S, "prices"); os.makedirs(P, exist_ok=True)
-UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
+UA = {"User-Agent": "Mozilla/5.0"}  # long browser UA strings got HTTP 429 (2026-11-21)
 def fetch(t):
     u = ("https://query1.finance.yahoo.com/v8/finance/chart/" + urllib.parse.quote(t) +
          "?period1=1546300800&period2=1795000000&interval=1d&events=split")

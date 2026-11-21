@@ -1,0 +1,1394 @@
+[
+ {
+  "id": "insight:lit-hou-xue-zhang-replicating-anomalies",
+  "title": "Hou-Xue-Zhang 'Replicating Anomalies' (RFS 2020): most of 452 published anomalies fail once microcaps are tamed",
+  "tags": [
+   "us",
+   "base-rate",
+   "factor",
+   "research",
+   "myth",
+   "quant"
+  ],
+  "body": "Hou, Xue and Zhang (Review of Financial Studies 33(5), 2020; NBER w23394; ~890 Semantic Scholar citations) rebuilt 452 published US cross-sectional anomalies (1967-2014) using NYSE breakpoints and value-weighted returns, so that tiny illiquid stocks cannot drive the result. 65% (about 296) failed the ordinary |t| >= 1.96 hurdle; with the multiple-testing hurdle of t >= 2.78 the failure rate rose to 82%. Trading-friction anomalies (short-term reversal, idiosyncratic volatility, liquidity, max return) were the weakest; 96% failed. What survived were mostly value-versus-growth, profitability, investment (asset growth) and momentum effects, and even those shrink once their q-factor model is applied. Replicated? The paper is itself the replication, but it is disputed: Chen-Zimmermann and Jensen-Kelly-Pedersen argue the failures come mainly from value-weighting, which mutes effects that live in small firms. Use for us: when we read a screen or newsletter citing 'an academic anomaly', ask whether it holds in value-weighted, non-microcap tests. Our Indian small-cap universe is exactly where anomalies look strongest and are hardest to trade (impact cost, circuit limits), so haircut any paper result before relying on it.",
+  "data": {
+   "n_anomalies": 452,
+   "fail_t196": "65%",
+   "fail_t278": "82%",
+   "friction_fail": "96%",
+   "sample": "US 1967-2014",
+   "survivors": "value, profitability, investment, momentum"
+  },
+  "sources": [
+   "https://doi.org/10.1093/rfs/hhy131",
+   "https://www.nber.org/papers/w23394"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:weak-factor-folklore",
+    "rel": "about"
+   },
+   {
+    "to": "insight:us-factor-premia-by-decade",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-replication-crisis-rebuttal-jkp-chen-zimmermann",
+  "title": "Counterpoint: Jensen-Kelly-Pedersen and Chen-Zimmermann find most factors DO replicate (13 themes, 93 countries)",
+  "tags": [
+   "global",
+   "us",
+   "base-rate",
+   "factor",
+   "research",
+   "quant"
+  ],
+  "body": "Jensen, Kelly and Pedersen, 'Is There a Replication Crisis in Finance?' (Journal of Finance 78(5), 2023; ~590 Crossref citations) took 153 factors and applied a Bayesian model with shrinkage toward zero. Most factors replicate (their headline replication rate is around 80%). They cluster into 13 themes; most themes are significant parts of the efficient portfolio, and they also work out of sample in a new dataset covering 93 countries, India included. Large numbers of related factors strengthen rather than weaken the evidence, because they corroborate each other. Chen and Zimmermann, 'Open Source Cross-Sectional Asset Pricing' (Critical Finance Review 2022; ~230 citations), reproduced 319 predictors with public code: 98% of the 161 predictors that were clearly significant in the original papers had t > 1.96 again, and the slope of reproduced on original t-stats was 0.90 (R2 83%). How to read both camps: the result in a paper usually is real in-sample (Chen-Zimmermann, equal-weighted), but the investable size, after value-weighting, costs and post-publication decay, is much smaller (HXZ, McLean-Pontiff). Use for us: trust themes (value, profitability/quality, investment, momentum, low risk) rather than single exotic signals, and expect perhaps half the paper return at best. JKP's global data is free at jkpfactors.com and includes India; it is a second source to cross-check our IIMA factor numbers.",
+  "data": {
+   "jkp_factors": 153,
+   "jkp_themes": 13,
+   "jkp_countries": 93,
+   "cz_predictors": 319,
+   "cz_replicate_clear": "98% of 161",
+   "cz_slope": 0.9
+  },
+  "sources": [
+   "https://doi.org/10.1111/jofi.13249",
+   "https://www.nber.org/papers/w28432",
+   "https://doi.org/10.2139/ssrn.3604626",
+   "https://www.openassetpricing.com/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:lit-hou-xue-zhang-replicating-anomalies",
+    "rel": "contradicts"
+   },
+   {
+    "to": "insight:iima-factor-premiums-india",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-mclean-pontiff-post-publication-decay",
+  "title": "McLean-Pontiff (JF 2016): anomaly returns fall ~26% out-of-sample and ~58% after publication",
+  "tags": [
+   "us",
+   "base-rate",
+   "factor",
+   "research",
+   "edge"
+  ],
+  "body": "McLean and Pontiff, 'Does Academic Research Destroy Stock Return Predictability?' (Journal of Finance 71(1), 2016; ~920 Semantic Scholar citations) studied 97 published US return predictors. Compared with the original sample period, average long-short returns were about 26% lower in the window after the sample ended but before publication, which is their estimate of statistical bias or data-mining. They were about 58% lower after publication. That implies roughly 32% of the decay comes from investors trading on the published result. The decay was larger for predictors with bigger in-sample returns, and smaller for predictors concentrated in stocks that are costly to arbitrage (small, illiquid, high idiosyncratic risk). After publication, trading volume, variance and short interest in the anomaly stocks rose. Replicated: yes. Similar decay appears in international samples, and Chen-Zimmermann find about a 50% post-publication drop. Use for us: (1) budget about half the published premium for any known anomaly; (2) the most durable residual edges sit where arbitrage is expensive, which is partly Indian small and micro caps, but those also carry the impact and governance costs; (3) the most durable edge is information nobody has published, such as our promise tracker and filing diffs, not another public screen.",
+  "data": {
+   "n_predictors": 97,
+   "decay_out_of_sample": "-26%",
+   "decay_post_publication": "-58%",
+   "implied_publication_effect": "~32%"
+  },
+  "sources": [
+   "https://doi.org/10.1111/jofi.12365",
+   "https://papers.ssrn.com/abstract=2156623"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:us-factor-premia-by-decade",
+    "rel": "about"
+   },
+   {
+    "to": "insight:weak-factor-folklore",
+    "rel": "about"
+   },
+   {
+    "to": "insight:investor-edge-taxonomy",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-harvey-liu-zhu-multiple-testing",
+  "title": "Harvey-Liu-Zhu (RFS 2016): after 300+ tested factors, a new one needs t > 3.0, not 2.0",
+  "tags": [
+   "global",
+   "base-rate",
+   "research",
+   "process",
+   "quant",
+   "statistics"
+  ],
+  "body": "Harvey, Liu and Zhu, '... and the Cross-Section of Expected Returns' (Review of Financial Studies 29(1), 2016; ~2,200 Crossref citations) catalogued 316 factors published by 2012 and argued that the standard t > 2 threshold is meaningless when hundreds of researchers mine the same CRSP/Compustat data. Using multiple-testing corrections (Bonferroni, Holm, BHY), a newly proposed factor today should clear t > 3.0. Under their framework many historically 'significant' factors are likely false positives; they estimate a large share of claimed findings in finance are false. Harvey's later presidential address ('The Scientific Outlook in Financial Economics', JF 2017) adds p-hacking and publication bias warnings and recommends Bayesian 'minimum Bayes factor' reasoning. Replicated? It is a methods paper. JKP (2023) dispute how pessimistic it is but accept the logic. Use for us: this applies directly to our own backtests. Every time we test a screen on Indian data (for example 20 variants of a promoter-buying rule), we are multiple-testing. Rules: write the hypothesis and parameter choice down before testing; count every variant tried; demand t > 3 or an out-of-sample hold-out period (for example, build on 2005-2018 and test on 2019-2026); prefer signals with an economic story given in advance.",
+  "data": {
+   "factors_catalogued": 316,
+   "new_threshold_t": 3.0,
+   "methods": "Bonferroni, Holm, BHY"
+  },
+  "sources": [
+   "https://doi.org/10.1093/rfs/hhv059",
+   "https://www.nber.org/papers/w20592"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:luck-vs-skill",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-profitability-quality-premium",
+  "title": "Profitability/quality premium: Novy-Marx gross profitability (2013) and AQR Quality-Minus-Junk (2019)",
+  "tags": [
+   "us",
+   "global",
+   "factor",
+   "quality",
+   "base-rate",
+   "research",
+   "valuation"
+  ],
+  "body": "Novy-Marx, 'The Other Side of Value: The Gross Profitability Premium' (Journal of Financial Economics 108(1), 2013; ~1,800 citations): gross profits divided by total assets predicts US returns about as strongly as book-to-market, 1963-2010. The value-weighted long-short spread is roughly 0.3% per month, and the effect is negatively correlated with value, so combining the two (cheap AND profitable) roughly doubles the Sharpe ratio of either alone. Asness, Frazzini and Pedersen, 'Quality Minus Junk' (Review of Accounting Studies 24, 2019; ~190 citations on S2 for the journal version, far more for the SSRN version) define quality as profitable, growing, safe (low leverage and volatility) and well-run (high payout). High-quality stocks earn significant risk-adjusted returns in the US (from 1957) and in 24 countries. Quality stocks are priced at a premium, but not a large enough one, so investors underpay for quality. Replicated: yes. Profitability is one of the factors HXZ found survives, it is in the Fama-French five-factor model, and our own Ken French computation shows RMW was the steadiest premium after 2007 (2.6% a year vs 2.7% before). India: Nifty200 Quality 30 and the IIMA data also show a quality premium, though shorter samples. Use for us: high ROCE with cash conversion is a base-rate tailwind, not merely a 'story', and the valuation discipline should be 'cheap relative to quality', not 'cheap on P/B'.",
+  "data": {
+   "novy_marx_spread": "~0.3%/month VW 1963-2010",
+   "qmj_countries": 24,
+   "pairs_with": "value (negative correlation)"
+  },
+  "sources": [
+   "https://doi.org/10.1016/j.jfineco.2013.01.003",
+   "https://doi.org/10.1007/s11142-018-9470-2",
+   "https://papers.ssrn.com/abstract=2312432"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:us-factor-premia-by-decade",
+    "rel": "about"
+   },
+   {
+    "to": "insight:nse-factor-indices-quality-lowvol-momentum",
+    "rel": "about"
+   },
+   {
+    "to": "strategy:marcellus-cc",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-sloan-accruals-anomaly-and-demise",
+  "title": "Sloan accruals anomaly (TAR 1996): ~10%/yr in 1962-91, then largely disappeared in the US after ~2001",
+  "tags": [
+   "us",
+   "accounting",
+   "forensic",
+   "factor",
+   "base-rate",
+   "research",
+   "redflag"
+  ],
+  "body": "Sloan, 'Do Stock Prices Fully Reflect Information in Accruals and Cash Flows About Future Earnings?' (The Accounting Review 71(3), 1996; ~4,070 Semantic Scholar citations): the accrual part of earnings is less persistent than the cash part, but investors price earnings as if both were equally persistent. A long lowest-accrual / short highest-accrual decile hedge earned about 10.4% a year in abnormal returns (US 1962-1991), with much of it around later earnings announcements. Green, Hand and Soliman, 'Going, Going, Gone? The Apparent Demise of the Accruals Anomaly' (Management Science 57(5), 2011; ~230 citations) show the hedge return collapsed to roughly zero after about 2001-2003, coinciding with heavy hedge-fund trading on it. Replicated: strongly so in-sample and internationally (Pincus et al. 2007 found it in common-law countries), but the US decay is a textbook McLean-Pontiff case. Use for us: the forensic logic is still valid as a QUALITY and blow-up filter even if the US trading premium is gone. Indian filings are much less mined by quant funds, but untested here, so the premium may survive. Flag companies where profit after tax persistently exceeds CFO, receivable days are rising, and contract assets are swelling. That pairs with our existing Beneish (TATA term) and capitalisation checks. A simple backtest on Indian accruals (CMIE/screener data) is a worthwhile own-research project.",
+  "data": {
+   "sloan_hedge": "~10.4%/yr 1962-1991",
+   "demise": "~zero after 2001-03 (GHS 2011)"
+  },
+  "sources": [
+   "https://www.jstor.org/stable/248290",
+   "https://doi.org/10.1287/mnsc.1110.1320"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:beneish-m-score",
+    "rel": "about"
+   },
+   {
+    "to": "insight:capitalisation-moves-costs-out-of-cfo",
+    "rel": "about"
+   },
+   {
+    "to": "insight:lit-mclean-pontiff-post-publication-decay",
+    "rel": "illustrates"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-asset-growth-and-share-issuance",
+  "title": "Asset growth (Cooper-Gulen-Schill 2008) and net share issuance (Pontiff-Woodgate 2008; Loughran-Ritter 1995): fast balance-sheet expanders and diluters underperform",
+  "tags": [
+   "us",
+   "global",
+   "factor",
+   "capital-allocation",
+   "dilution",
+   "base-rate",
+   "research",
+   "ipo"
+  ],
+  "body": "Cooper, Gulen and Schill, 'Asset Growth and the Cross-Section of Stock Returns' (Journal of Finance 63(4), 2008; ~1,400 citations), US 1968-2003: firms in the lowest decile of annual total-asset growth beat the highest decile by about 20% a year equal-weighted (smaller but still significant value-weighted). Asset growth beat size, B/M and momentum as a predictor, and the effect survives as the 'investment' factor (CMA) in Fama-French 5 and HXZ's q-model. Pontiff and Woodgate, 'Share Issuance and Cross-sectional Returns' (JF 2008; ~590 citations): net share issuance over the prior year predicts returns more strongly than size, B/M or momentum post-1970; buyback firms do well, issuers poorly. Loughran and Ritter, 'The New Issues Puzzle' (JF 1995; ~3,700 citations): over five years after the offer, US IPO firms returned about 5% a year and seasoned (SEO) issuers about 7%, versus 12% and 15% for size-matched non-issuers. Replicated: yes, internationally (Watanabe et al.; Titman-Wei-Xie), though CMA has been flat in the US since 2007 (our Ken French computation). Use for us: in India, QIPs, preferential allotments, warrants to promoters, rights issues and acquisition sprees after a rerating are dilution and asset-growth signals that usually come near peaks (matches our cycle-top signals). Treat a large equity raise at a high P/E as a negative base rate unless the use of cash has visible high returns.",
+  "data": {
+   "cgs_spread": "~20%/yr EW 1968-2003",
+   "lr_ipo_5yr": "5%/yr vs 12% matched",
+   "lr_seo_5yr": "7%/yr vs 15% matched"
+  },
+  "sources": [
+   "https://doi.org/10.1111/j.1540-6261.2008.01370.x",
+   "https://papers.ssrn.com/abstract=760967",
+   "https://doi.org/10.1111/j.1540-6261.2008.01335.x",
+   "https://doi.org/10.1111/j.1540-6261.1995.tb05166.x"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:india-cycle-top-bottom-signals",
+    "rel": "about"
+   },
+   {
+    "to": "insight:us-ipo-long-run-returns",
+    "rel": "about"
+   },
+   {
+    "to": "insight:us-redflag-sbc-dilution",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-pead-post-earnings-drift",
+  "title": "Post-earnings-announcement drift (Bernard-Thomas 1989): real, long-lived, now mostly a small-cap effect in the US",
+  "tags": [
+   "us",
+   "global",
+   "factor",
+   "base-rate",
+   "research",
+   "earnings"
+  ],
+  "body": "Bernard and Thomas, 'Post-Earnings-Announcement Drift: Delayed Price Response or Risk Premium?' (Journal of Accounting Research 27, 1989; ~2,300 citations), US 1974-1986: buying the top decile of standardized unexpected earnings (SUE) and shorting the bottom decile earned about 4% abnormal over the 60 trading days after the announcement, with predictable reactions around the next quarters' announcements. Prices underreact to the fact that earnings surprises are autocorrelated. The drift was larger in small firms, and risk did not explain it. Replicated: one of the most replicated anomalies (Ball-Brown 1968 first saw it), found internationally, and it survives in HXZ in some forms. Decay: Martineau, 'Rest in Peace Post-Earnings Announcement Drift' (Critical Finance Review 2022) shows the drift in US large and mid caps has essentially vanished since about 2006 as prices react fully on the day; it survives in microcaps. Related information-flow anomalies: analyst revision momentum and earnings momentum. India: Indian quarterly results are scattered over 45 days, analyst coverage is thin below the top ~300 names, and results arrive in PDFs on exchange sites, which are all conditions for underreaction. This is untested by us. Use for us: after a genuine beat backed by cash flow and a raised order book in an under-covered Indian small cap, the move is often not over on day 1. Measure our own post-result drift on the promise-tracker names before relying on it.",
+  "data": {
+   "bt_60day": "~4% abnormal top-bottom SUE decile",
+   "sample": "US 1974-86",
+   "decay": "gone in US large caps post-2006 (Martineau 2022)"
+  },
+  "sources": [
+   "https://doi.org/10.2307/2491062",
+   "https://doi.org/10.1561/104.00000122"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:weak-factor-folklore",
+    "rel": "about"
+   },
+   {
+    "to": "insight:lit-mclean-pontiff-post-publication-decay",
+    "rel": "illustrates"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-momentum-and-momentum-crashes",
+  "title": "Momentum (Jegadeesh-Titman 1993) works on average but crashes in rebounds (Daniel-Moskowitz 2016: -91% in 1932, -73% in 2009)",
+  "tags": [
+   "us",
+   "india",
+   "global",
+   "factor",
+   "momentum",
+   "base-rate",
+   "research",
+   "risk"
+  ],
+  "body": "Jegadeesh and Titman, 'Returns to Buying Winners and Selling Losers' (Journal of Finance 48(1), 1993; ~11,500 citations), US 1965-1989: buying the past 3-12 month winners and selling the losers earned about 1% a month over the next 3-12 months, with partial reversal after 12 months. Momentum has been replicated in nearly every market and asset class (Asness-Moskowitz-Pedersen 2013), India included: IIMA WML about 10.6% CAGR 1994-2025. Daniel and Moskowitz, 'Momentum Crashes' (Journal of Financial Economics 122(2), 2016; ~960 Crossref citations): the losses are concentrated in 'panic states', after a market decline and when volatility is high, at the moment the market rebounds. The past losers (beaten-down, high-beta stocks) then rally violently. The US winner-minus-loser portfolio lost about 91% in July-August 1932 and about 73% in March-May 2009. Momentum returns are negatively skewed. A dynamic strategy that scales exposure by forecast mean and variance roughly doubles the Sharpe ratio. Replicated: yes; IIMA India crashes in 2000, 1998 and 2009 match the pattern. Use for us: (1) momentum indices (Nifty200 Momentum 30) and 'buy what is going up' are reasonable tilts but are short a crash put right after bear markets; (2) after a 30%+ market fall, the best near-term returns usually come from the junk, and momentum portfolios lag badly; (3) do not lever momentum.",
+  "data": {
+   "jt_return": "~1%/month 1965-89",
+   "dm_1932": "-91% (Jul-Aug)",
+   "dm_2009": "-73% (Mar-May)",
+   "india_wml_cagr": "10.6% 1994-2025 (IIMA, our computation)"
+  },
+  "sources": [
+   "https://doi.org/10.1111/j.1540-6261.1993.tb04702.x",
+   "https://doi.org/10.1016/j.jfineco.2015.12.002",
+   "https://www.nber.org/papers/w20439"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:iima-factor-premiums-india",
+    "rel": "about"
+   },
+   {
+    "to": "insight:nse-factor-indices-quality-lowvol-momentum",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-analyst-forecast-bias",
+  "title": "Analyst forecasts are biased by career incentives: optimism rewarded (Hong-Kubik 2003) and the 'walk-down to beatable' (Richardson-Teoh-Wysocki 2004)",
+  "tags": [
+   "us",
+   "analysts",
+   "base-rate",
+   "research",
+   "process",
+   "myth"
+  ],
+  "body": "Hong and Kubik, 'Analyzing the Analysts: Career Concerns and Biased Earnings Forecasts' (Journal of Finance 58(1), 2003; ~1,475 S2 citations), US 1983-2000: analysts with relatively accurate forecasts are more likely to move to a higher-status brokerage. Controlling for accuracy, analysts who are optimistic relative to consensus are ALSO more likely to be promoted, especially for stocks their employer underwrites. Accuracy matters less for stocks covered for underwriting clients. Richardson, Teoh and Wysocki, 'The Walk-down to Beatable Analyst Forecasts' (Contemporary Accounting Research 21(4), 2004; ~860 citations): analysts start a fiscal year optimistic and walk forecasts down until the final pre-announcement forecast is slightly beatable. The pattern strengthened in the 1990s and is strongest when the firm or insiders are about to sell stock after the announcement. Replicated: yes. Long-horizon optimism bias is documented globally, including India (consensus FY+2 EPS for Indian large caps is typically cut through the year). Use for us: (1) treat consensus FY+2 estimates as an upper bound and expect cuts; (2) 'beat consensus' is a game, so measure delivery against what management said a year ago (our promise tracker), not against the walked-down consensus; (3) brokers with banking ties to an Indian IPO or QIP issuer are not independent, so check the relationship before weighting their initiation note.",
+  "data": {
+   "hk_period": "1983-2000",
+   "rtw": "forecasts start optimistic, end slightly beatable; stronger before equity/insider sales"
+  },
+  "sources": [
+   "https://doi.org/10.1111/1540-6261.00526",
+   "https://doi.org/10.1506/KHNW-PJYL-ADUB-0RP6",
+   "https://papers.ssrn.com/abstract=281196"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:management-forecast-credibility",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-analyst-recommendation-value",
+  "title": "Analyst recommendations carry information (Womack 1996) but gross alpha is eaten by turnover (Barber-Lehavy-McNichols-Trueman 2001)",
+  "tags": [
+   "us",
+   "analysts",
+   "base-rate",
+   "research",
+   "costs"
+  ],
+  "body": "Womack, 'Do Brokerage Analysts' Recommendations Have Investment Value?' (Journal of Finance 51(1), 1996; ~1,900 citations), 14 large US brokers 1989-91: new buy recommendations saw about +3% in the 3-day window, with mean drift of about +2.4% over the next month. New sells (rarer and costlier for the analyst) saw about -4.7% at the announcement and drift of about -9% over six months. Sell calls carry more information than buys. Barber, Lehavy, McNichols and Trueman, 'Can Investors Profit from the Prophets?' (Journal of Finance 56(2), 2001; ~870 citations), consensus recommendations 1985-96: buying the most highly rated stocks and shorting the least favourable earned over 4% a year in gross abnormal returns, but the strategy needed very high turnover. After realistic costs the abnormal returns were not reliably different from zero, and the edge required daily rebalancing. Replicated: yes; Jegadeesh et al. (2004) find that changes and revisions are more informative than levels. Use for us: (1) recommendation LEVELS are noise; the rare downgrade to sell from a respected analyst, or a sharp estimate revision, is the informative event; (2) the residual value of research is in the analyst's facts and channel checks, not their rating; (3) in India, sell ratings are rare, so a broker initiating with a 'reduce' on a promoter-favoured stock is a strong signal to investigate.",
+  "data": {
+   "womack_buy": "+3% 3-day, +2.4% 1 month drift",
+   "womack_sell": "-4.7% 3-day, ~-9% 6 months drift",
+   "blmt_gross": ">4%/yr, ~0 net of costs"
+  },
+  "sources": [
+   "https://doi.org/10.1111/j.1540-6261.1996.tb05205.x",
+   "https://doi.org/10.1111/0022-1082.00336",
+   "https://papers.ssrn.com/abstract=137400"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:lit-analyst-forecast-bias",
+    "rel": "similar_to"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-earnings-call-qa-information",
+  "title": "Earnings calls: the Q&A carries more information than the prepared remarks (Matsumoto-Pronk-Roelofsen 2011)",
+  "tags": [
+   "us",
+   "india",
+   "concall",
+   "process",
+   "research",
+   "alt-data"
+  ],
+  "body": "Matsumoto, Pronk and Roelofsen, 'What Makes Conference Calls Useful? The Information Content of Managers' Presentations and Analysts' Discussion Sessions' (The Accounting Review 86(4), 2011; ~700 Crossref citations), more than 10,000 US call transcripts. Both the presentation and the Q&A contain incremental information beyond the press release, but the discussion (Q&A) segment is relatively more informative, and more so with higher analyst following. When performance is poor, managers disclose more in the presentation, but even more information comes out in the Q&A. Related: Mayew-Venkatachalam (vocal stress) and Larcker-Zakolyukina (deception cues), already summarised in insight:text-tone-research-summary. Hollander, Pronk and Roelofsen (2010) find that managers who refuse to answer questions ('silence') see negative price reactions. Replicated: consistent with later US and European studies. For India, Jain-Khizer-Thirumalai find tone in calls moves prices but does not predict operating performance (insight:india-concall-tone-cheap-talk). Use for us: when reading Indian concalls, score the Q&A rather than the opening speech. Note which questions are deflected ('we will not give guidance', 'let us take it offline'), which numbers are given only when pushed, and whether the same question recurs each quarter, which signals a persistent problem. Store dodged questions in the promise tracker as negative evidence.",
+  "data": {
+   "n_transcripts": ">10,000",
+   "finding": "Q&A more informative than presentation; more so with analyst following and poor performance"
+  },
+  "sources": [
+   "https://doi.org/10.2308/accr-10034"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:text-tone-research-summary",
+    "rel": "about"
+   },
+   {
+    "to": "insight:india-concall-tone-cheap-talk",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-limited-attention-friday-distraction",
+  "title": "Limited attention: Friday announcements (DellaVigna-Pollet 2009) and busy news days (Hirshleifer-Lim-Teoh 2009) get under-priced, then drift",
+  "tags": [
+   "us",
+   "attention",
+   "base-rate",
+   "research",
+   "earnings",
+   "alt-data"
+  ],
+  "body": "DellaVigna and Pollet, 'Investor Inattention and Friday Earnings Announcements' (Journal of Finance 64(2), 2009; ~1,680 citations), US 1984-2006: earnings news released on Fridays produces about 15% smaller immediate (day 0-1) price responses and about 70% more delayed drift (days 2-75) than news released on other weekdays. Weekend distraction slows the incorporation of information. Managers time bad news for Fridays. Hirshleifer, Lim and Teoh, 'Driven to Distraction: Extraneous Events and Underreaction to Earnings News' (Journal of Finance 64(5), 2009; ~1,500 citations): when many firms announce on the same day, the immediate reaction to each surprise is weaker and the post-announcement drift is stronger. Investors have limited attention. Replicated: yes; later work finds the Friday effect has weakened in the US as machine reading spread. Use for us: in India, results season is crowded into the last two weeks before the 45-day deadline, with hundreds of small caps reporting on the same evening and many late on Saturdays or near midnight. These are exactly the distraction conditions. Practical rules: (1) review late-evening and weekend filings of small caps on our watchlist promptly; (2) treat a deliberately late or Saturday-night release of bad news as a soft governance flag; (3) test whether drift after big surprises is larger on peak-announcement days in our own data.",
+  "data": {
+   "dp_immediate": "-15% vs other days",
+   "dp_drift": "+70%",
+   "hlt": "more same-day announcements -> weaker reaction, stronger drift"
+  },
+  "sources": [
+   "https://doi.org/10.1111/j.1540-6261.2009.01447.x",
+   "https://doi.org/10.1111/j.1540-6261.2009.01501.x",
+   "https://papers.ssrn.com/abstract=980958"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:lit-pead-post-earnings-drift",
+    "rel": "about"
+   },
+   {
+    "to": "insight:lazy-prices-filing-changes",
+    "rel": "similar_to"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-economic-links-customer-supplier",
+  "title": "Economic links (Cohen-Frazzini 2008): customer news reaches supplier prices with a lag; ~1.5%/month long-short",
+  "tags": [
+   "us",
+   "attention",
+   "alt-data",
+   "research",
+   "process",
+   "edge"
+  ],
+  "body": "Cohen and Frazzini, 'Economic Links and Predictable Returns' (Journal of Finance 63(4), 2008; ~1,360 citations), US 1980-2004, using mandatory disclosures of major customers (more than 10% of sales). When a major customer's stock moves, the supplier's stock follows over the next month: a long-short portfolio buying suppliers whose customers had the best returns the prior month and shorting those whose customers had the worst earned about 1.5% a month (~18% a year), unexplained by standard factors. The lag is larger when fewer mutual funds hold both firms, which is consistent with investors' limited attention. Replicated: yes; Menzly-Ozbas (2010) find industry-level supply-chain momentum, and later papers find it across countries, though it has weakened in US large caps. Use for us: this is a scuttlebutt-friendly structural edge. Indian annual reports and DRHPs often name major customers (auto ancillaries -> Maruti/M&M/Tata Motors, EMS -> Dixon clients, capital goods -> PSU utilities, CDMOs -> innovator pharma). Map supplier-customer links for watchlist names. When a big customer reports strong volumes, guidance or capex, or a US customer reports, check whether the Indian small-cap supplier has repriced. Monthly Vahan, SIAM and customer releases are leading data for suppliers; link insight:vahan-vs-siam-channel-check.",
+  "data": {
+   "long_short": "~1.5%/month",
+   "sample": "US 1980-2004",
+   "mechanism": "limited attention, few common holders"
+  },
+  "sources": [
+   "https://doi.org/10.1111/j.1540-6261.2008.01379.x"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:vahan-vs-siam-channel-check",
+    "rel": "about"
+   },
+   {
+    "to": "strategy:fisher-scuttlebutt",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-news-vs-no-news-momentum-frog-in-pan",
+  "title": "News vs no-news moves (Chan 2003) and 'frog in the pan' (Da-Gurun-Warachka 2014): drift follows news and gradual moves; big no-news moves reverse",
+  "tags": [
+   "us",
+   "momentum",
+   "attention",
+   "base-rate",
+   "research"
+  ],
+  "body": "Chan, 'Stock Price Reaction to News and No-News: Drift and Reversal After Headlines' (Journal of Financial Economics 70(2), 2003; ~920 citations), US 1980-2000: stocks with large monthly moves accompanied by public news (headlines) continue in the same direction, especially after bad news, whose drift is strong and lasts up to 12 months. Stocks with equally large moves and NO identifiable news tend to reverse the next month. Investors underreact to information and overreact to price moves without information. Da, Gurun and Warachka, 'Frog in the Pan: Continuous Information and Momentum' (Review of Financial Studies 27(7), 2014; ~260 SSRN-version citations): investors pay less attention to information that arrives continuously in small amounts than to the same cumulative news in a few big jumps. Momentum is concentrated in stocks whose past return came from many small daily moves, while 'discrete', jumpy momentum is weak and tends to reverse. Replicated: the news/no-news split is confirmed with machine-read news (Tetlock 2010; Jiang-Li-Wang 2021). Use for us: (1) when a watchlist stock moves 20%+, first ask 'what was the news?'. A move with a filing, order or results behind it is more likely to continue; a move on no news (operator activity, bulk deals, social media) is more likely to reverse, which is useful for Indian small caps with circuit-to-circuit rallies; (2) a slow, steady rerating with no headline is the frog-in-the-pan pattern and the more durable kind of momentum.",
+  "data": {
+   "chan": "news -> drift (esp. bad news, up to 12m); no-news extremes -> reversal",
+   "dgw": "continuous-information momentum strong; discrete weak"
+  },
+  "sources": [
+   "https://doi.org/10.1016/S0304-405X(03)00146-6",
+   "https://doi.org/10.1093/rfs/hhu003",
+   "https://papers.ssrn.com/abstract=1777988"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:lit-momentum-and-momentum-crashes",
+    "rel": "about"
+   },
+   {
+    "to": "insight:peak-hype-reversals",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-inattention-premium-synthesis",
+  "title": "Synthesis: an 'inattention premium' runs through Lazy Prices, PEAD, Friday/distraction and supplier-link studies",
+  "tags": [
+   "global",
+   "india",
+   "attention",
+   "edge",
+   "process",
+   "research",
+   "alt-data"
+  ],
+  "body": "Across this literature sweep, the most consistent result is that prices underreact to information that is public but costly to process. Lazy Prices (Cohen-Malloy-Nguyen 2020): filing text changes predicted returns for up to 18 months, with no announcement reaction (insight:lazy-prices-filing-changes). PEAD (Bernard-Thomas 1989): earnings surprises drift for 60+ days, more in small and under-covered firms. Friday and busy-day news (DellaVigna-Pollet, Hirshleifer-Lim-Teoh 2009): drift is around 70% larger when attention is low. Customer-supplier links (Cohen-Frazzini 2008): about 1.5% a month when few investors hold both firms. Frog in the pan (Da-Gurun-Warachka 2014): gradual information is underweighted. Effect sizes decay in US large caps once machines read the data (Martineau 2022 on PEAD; McLean-Pontiff decay). The common mechanism is limited attention plus processing cost, which is exactly what an individual with patience and structured note-taking can supply for a small universe, while quant funds avoid it for capacity reasons. Implications for FEIN: (1) our edge should be reading what others skip in Indian small and mid caps (AR diffs, CARO notes, related-party notes, concall Q&A, customer disclosures, exchange pledge/PIT feeds), not trading speed; (2) the edge is strongest where coverage is thinnest, but so is governance risk, so pair every 'under-followed' signal with the disqualifier checklist; (3) measure the drift ourselves on our own records before trusting it.",
+  "data": {
+   "components": [
+    "lazy prices",
+    "PEAD",
+    "Friday/distraction",
+    "economic links",
+    "frog in the pan"
+   ],
+   "mechanism": "limited attention + processing cost"
+  },
+  "sources": [
+   "https://www.nber.org/papers/w25084",
+   "https://doi.org/10.1111/j.1540-6261.2009.01447.x",
+   "https://doi.org/10.1111/j.1540-6261.2008.01379.x",
+   "https://doi.org/10.1561/104.00000122"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:lazy-prices-filing-changes",
+    "rel": "about"
+   },
+   {
+    "to": "insight:lit-pead-post-earnings-drift",
+    "rel": "about"
+   },
+   {
+    "to": "insight:lit-limited-attention-friday-distraction",
+    "rel": "about"
+   },
+   {
+    "to": "insight:lit-economic-links-customer-supplier",
+    "rel": "about"
+   },
+   {
+    "to": "insight:investor-edge-taxonomy",
+    "rel": "about"
+   },
+   {
+    "to": "insight:disqualifiers",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-insider-trading-returns-extension",
+  "title": "Insider trading returns, extended: Jeng-Metrick-Zeckhauser (2003) ~6%/yr on purchases, sales ~0; what transfers to India",
+  "tags": [
+   "us",
+   "india",
+   "governance",
+   "alt-data",
+   "base-rate",
+   "research",
+   "insider"
+  ],
+  "body": "This extends insight:us-insider-buying-evidence (Lakonishok-Lee 2001; Cohen-Malloy-Pomorski 2012). Jeng, Metrick and Zeckhauser, 'Estimating the Returns to Insider Trading: A Performance-Evaluation Perspective' (Review of Economics and Statistics 85(2), 2003; ~570 citations), US 1975-1996: a value-weighted portfolio that holds the stocks insiders buy for six months earns abnormal returns of about 6% a year. About a quarter of that accrues in the first five days and about half in the first month after the trade. The portfolio of insider SALES earns no significant abnormal return. Seyhun (1986, 1998) earlier found that top executives' and large trades are more informative than small trades by peripheral insiders. Replicated: yes, across US data (and the UK, Germany and other markets); the purchase/sale asymmetry is robust, since insiders sell for liquidity and diversification but buy for one reason. India: rigorous academic evidence on SEBI PIT (Reg 7) disclosures is thin and we found no high-citation study, so treat the transfer as a hypothesis. Indian promoter buying differs from US insider buying: promoters may creep up via SAST to consolidate control, buy before a delisting or open offer, or support a pledged stock's price. Use for us: weight open-market promoter or KMP purchases that are large relative to holdings, made by several insiders, not ESOP or inter-se transfers, and not linked to pledge top-ups; then check the after-trade holding in the NSE PIT feed. Build our own dataset and measure 6- and 12-month excess returns before treating it as an edge.",
+  "data": {
+   "jmz_purchases": "~6%/yr abnormal, 1975-96",
+   "jmz_timing": "~1/4 in 5 days, ~1/2 in first month",
+   "jmz_sales": "~0",
+   "india_evidence": "thin - hypothesis"
+  },
+  "sources": [
+   "https://doi.org/10.1162/003465303765299936",
+   "https://papers.ssrn.com/abstract=146029"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:us-insider-buying-evidence",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:ownership-disclosure-early-signals",
+    "rel": "about"
+   },
+   {
+    "to": "insight:sebi-pit-scuttlebutt-limits",
+    "rel": "about"
+   },
+   {
+    "to": "insight:us-redflag-insider-selling-clusters",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-ceo-overconfidence",
+  "title": "CEO overconfidence (Malmendier-Tate 2005, 2008): overconfident CEOs over-invest from cash and are 65% more likely to acquire; the market punishes their deals",
+  "tags": [
+   "us",
+   "governance",
+   "capital-allocation",
+   "acquisitions",
+   "behavior",
+   "research",
+   "redflag"
+  ],
+  "body": "Malmendier and Tate measure overconfidence by revealed behaviour: a CEO who keeps highly in-the-money options until expiry ('Longholder'), or is described as 'confident/optimistic' in the press, believes their own firm is undervalued. 'CEO Overconfidence and Corporate Investment' (Journal of Finance 60(6), 2005; Forbes 500 firms 1980-1994): investment by overconfident CEOs is much more sensitive to internal cash flow, especially in equity-dependent firms, because they see external equity as too expensive and over-invest when cash is plentiful. 'Who Makes Acquisitions? CEO Overconfidence and the Market's Reaction' (Journal of Financial Economics 89(1), 2008; ~2,980 S2 citations): overconfident CEOs are about 65% more likely to complete a merger, especially diversifying deals financed with cash. The announcement reaction to their bids averages about -90 basis points, versus about -12 for other CEOs. Replicated: yes; many follow-ups (Hirshleifer-Low-Teoh 2012 find that overconfident CEOs also innovate more). Use for us: in India, the founder-promoter with unchecked confidence is common, and the warning signs are diversification into unrelated businesses, cash-funded acquisitions abroad, capex announced at cycle peaks, and refusal to cut capex when returns fall. Pair with Buffett's institutional imperative. Score capital allocation by what was DONE with cash in past cycles, not by how persuasive the CEO sounds. Note the upside: the same trait drives innovation and turnarounds, so it is a sizing and leverage risk, not an automatic exclusion.",
+  "data": {
+   "mt2008_acquire_more": "+65%",
+   "mt2008_car": "-90bp vs -12bp",
+   "measure": "Longholder options / press portrayal"
+  },
+  "sources": [
+   "https://doi.org/10.1111/j.1540-6261.2005.00813.x",
+   "https://doi.org/10.1016/j.jfineco.2007.07.002",
+   "https://www.nber.org/papers/w10807"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:buffett-institutional-imperative",
+    "rel": "about"
+   },
+   {
+    "to": "insight:lit-ma-acquirer-returns",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-rnd-intangibles-mispricing",
+  "title": "R&D and intangibles are mispriced: R&D-intensive cheap stocks outperform (Chan-Lakonishok-Sougiannis 2001), R&D increases drift up (Eberhart et al. 2004), and intangibles broke P/B value (Lev-Srivastava 2022)",
+  "tags": [
+   "us",
+   "global",
+   "valuation",
+   "accounting",
+   "value-trap",
+   "research",
+   "intangibles"
+  ],
+  "body": "Chan, Lakonishok and Sougiannis, 'The Stock Market Valuation of Research and Development Expenditures' (Journal of Finance 56(6), 2001; ~1,900 citations), US 1975-1995: on average R&D-intensive firms earn normal returns, so the market does not systematically undervalue R&D. However, firms with high R&D relative to market value (R&D-intensive and out of favour, typically after poor past returns) earn large excess returns, and R&D intensity is associated with higher return volatility. Eberhart, Maxwell and Siddique, 'An Examination of Long-Term Abnormal Stock Returns and Operating Performance Following R&D Increases' (Journal of Finance 59(2), 2004; ~740 Crossref citations): firms that unexpectedly and significantly raise R&D see positive long-run abnormal stock returns and better operating performance over five years, so the market underreacts to R&D investment. Lev and Srivastava, 'Explaining the Recent Failure of Value Investing' (Critical Finance Review 2022): book value ignores expensed intangibles, so 'cheap' P/B portfolios are full of weak old-economy firms and 'expensive' ones hold intangible-rich winners. Adjusting book value for capitalised R&D and SG&A recovers part of the value premium. Replicated: CLS and Eberhart broadly confirmed; Lev-Srivastava is plausible but debated (Arnott et al. add other causes). Use for us: for Indian pharma, specialty chemicals, IT and consumer brands, capitalise R&D and brand spend mentally before calling a stock expensive. Treat a deliberate R&D step-up during a weak year (a cheap stock with rising R&D) as a potential positive, the opposite of the capitalisation red flag. Check the expense line and pipeline, not the capitalised asset.",
+  "data": {
+   "cls_sample": "US 1975-95",
+   "cls": "high R&D/MV firms earn excess returns; average R&D firms do not",
+   "eberhart": "positive 5-year abnormal returns after R&D increases"
+  },
+  "sources": [
+   "https://doi.org/10.1111/0022-1082.00411",
+   "https://www.nber.org/papers/w7223",
+   "https://doi.org/10.1111/j.1540-6261.2004.00644.x",
+   "https://doi.org/10.1561/104.00000115"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:capitalised-rnd-intangibles-goodwill",
+    "rel": "about"
+   },
+   {
+    "to": "insight:value-trap-patterns",
+    "rel": "about"
+   },
+   {
+    "to": "insight:us-factor-premia-by-decade",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-buyback-announcement-returns",
+  "title": "Open-market buybacks: +3.5% on announcement and +12% over 4 years, +45% for value stocks (Ikenberry-Lakonishok-Vermaelen 1995); persistence debated after 2000s",
+  "tags": [
+   "us",
+   "global",
+   "buyback",
+   "capital-allocation",
+   "base-rate",
+   "research"
+  ],
+  "body": "Ikenberry, Lakonishok and Vermaelen, 'Market Underreaction to Open Market Share Repurchases' (Journal of Financial Economics 39(2-3), 1995; ~1,900 citations), 1,239 US repurchase announcements 1980-1990: the average announcement return was about +3.5%, followed by an average four-year buy-and-hold abnormal return of about +12.1%. For high book-to-market (value) repurchasers the four-year abnormal return was about +45.3%; for glamour stocks it was roughly nil. The market underreacts to the undervaluation signal. Peyer and Vermaelen, 'The Nature and Persistence of Buyback Anomalies' (Review of Financial Studies 22(4), 2009; ~380 citations): the anomaly still existed through 2004, was strongest after large price declines and analyst downgrades, and is consistent with overreaction to bad news. Fu, Huang and Lin (SSRN 2011; later Management Science) report that long-run buyback and SEO anomalies weakened markedly after the early 2000s; single-source, so treat as unverified. Replicated: announcement effects are robust worldwide; long-run drift is sample-dependent. Use for us: in India, buybacks have mostly been tender offers by cash-rich IT, PSU and MNC firms, and taxation changed three times in 2024-26 (insight:india-dividend-buyback-tax), so US results transfer loosely. The informative case is a promoter-backed buyback (or promoter not tendering) in a beaten-down, cheap, cash-generative firm. Routine buybacks by richly valued large caps carry little signal. Buffett's rule (price-dependent repurchase) is the right filter.",
+  "data": {
+   "ilv_announce": "+3.5%",
+   "ilv_4yr_bhar": "+12.1%",
+   "ilv_value_4yr": "+45.3%",
+   "sample": "US 1980-90, 1,239 announcements"
+  },
+  "sources": [
+   "https://doi.org/10.1016/0304-405X(95)00826-Z",
+   "https://doi.org/10.1093/rfs/hhn024",
+   "https://doi.org/10.2139/ssrn.1936187"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:buffett-japan-trading-houses-buybacks",
+    "rel": "about"
+   },
+   {
+    "to": "insight:india-dividend-buyback-tax",
+    "rel": "about"
+   },
+   {
+    "to": "insight:lit-asset-growth-and-share-issuance",
+    "rel": "similar_to"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-ma-acquirer-returns",
+  "title": "Acquirers: small ones gain, large ones destroy value ($240bn in 1998-2001), and stock-financed deals underperform for years (Moeller-Schlingemann-Stulz; Loughran-Vijh)",
+  "tags": [
+   "us",
+   "global",
+   "acquisitions",
+   "capital-allocation",
+   "base-rate",
+   "research",
+   "redflag"
+  ],
+  "body": "Moeller, Schlingemann and Stulz, 'Firm Size and the Gains from Acquisitions' (Journal of Financial Economics 73(2), 2004; ~2,490 citations), 12,023 US deals 1980-2001: the announcement return for small acquirers is about 2 percentage points higher than for large acquirers, regardless of payment or target type. Large acquirers' shareholders lose money in aggregate. 'Wealth Destruction on a Massive Scale?' (Journal of Finance 60(2), 2005; ~1,570 citations): in 1998-2001, acquiring-firm shareholders lost about $240 billion in announcement windows, driven by a few very large loss deals by firms with high valuations. Loughran and Vijh, 'Do Long-Term Shareholders Benefit From Corporate Acquisitions?' (Journal of Finance 52(5), 1997; ~1,410 citations), 947 deals 1970-89: in the five years after, stock mergers earned about -25% excess returns, while cash tender offers earned about +62%. Paying with overvalued stock is a signal that management thinks its shares are expensive. Replicated: the size effect and the payment-method effect are robust; overall average announcement returns are near zero, with heavy losses in big deals at market peaks. Use for us: (1) in India, treat large overseas cash acquisitions (Tata Steel-Corus 2007, Suzlon-REpower, Bharti-Zain) and stock- or QIP-funded roll-ups at high P/E as negative-base-rate events; (2) small bolt-on deals in the same industry by disciplined acquirers are the exception; (3) check deal size relative to the acquirer's market cap and whether deals cluster near cycle highs.",
+  "data": {
+   "mss2004_size_gap": "~+2pp small vs large",
+   "mss2005_loss": "$240bn 1998-2001",
+   "lv_stock_5yr": "-25%",
+   "lv_cash_tender_5yr": "+62%"
+  },
+  "sources": [
+   "https://doi.org/10.1016/j.jfineco.2003.07.002",
+   "https://doi.org/10.1111/j.1540-6261.2005.00745.x",
+   "https://doi.org/10.1111/j.1540-6261.1997.tb02741.x"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:buffett-conglomerate-chain-letter-2014",
+    "rel": "about"
+   },
+   {
+    "to": "insight:lit-ceo-overconfidence",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-dividend-initiations-omissions",
+  "title": "Dividend initiations +3.4% and omissions -7%, with drift in the same direction for a year (Michaely-Thaler-Womack 1995)",
+  "tags": [
+   "us",
+   "dividends",
+   "capital-allocation",
+   "base-rate",
+   "research"
+  ],
+  "body": "Michaely, Thaler and Womack, 'Price Reactions to Dividend Initiations and Omissions: Overreaction or Drift?' (Journal of Finance 50(2), 1995; ~720 Crossref citations), US NYSE/AMEX 1964-1988: firms initiating a dividend gained about +3.4% in the 3-day window, and firms omitting one lost about -7.0%. Reactions to omissions are roughly twice as large. After the event, prices kept drifting in the same direction: about +7.5% in the year after initiations and about -11% after omissions (longer-horizon drift continued for omitters). The market underreacts to these management signals, consistent with PEAD. Replicated: the announcement asymmetry is robust; the drift has been confirmed in some later samples and weakened in others (Boehme-Sorescu 2002 find the initiation drift weaker with better methods). Use for us: in India, the first dividend of a turnaround company, a promoter-led shift to a payout policy, or a dividend cut or skip by a habitual payer are event signals to log. A first dividend after years of losses is a credible 'cash is real' signal because it costs money to fake. A skipped dividend at a high-pledge promoter group is a liquidity warning (links to group contagion).",
+  "data": {
+   "initiation_3day": "+3.4%",
+   "omission_3day": "-7.0%",
+   "initiation_1yr_drift": "~+7.5%",
+   "omission_1yr_drift": "~-11%",
+   "sample": "US 1964-88"
+  },
+  "sources": [
+   "https://doi.org/10.1111/j.1540-6261.1995.tb04796.x",
+   "https://www.nber.org/papers/w4778"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:lit-pead-post-earnings-drift",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:group-contagion-pledge-cycles",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-executive-turnover-performance",
+  "title": "Executive turnover: forced CEO exits follow poor performance and precede operating improvement; outside successors improve more (Denis-Denis 1995; Huson-Malatesta-Parrino 2004)",
+  "tags": [
+   "us",
+   "governance",
+   "turnaround",
+   "base-rate",
+   "research"
+  ],
+  "body": "Denis and Denis, 'Performance Changes Following Top Management Dismissals' (Journal of Finance 50(4), 1995; ~1,070 citations), US 1985-1988: forced resignations of top managers are preceded by significant declines in operating performance and followed by large improvements, while normal retirements are not. Few forced dismissals come from internal board monitoring; most follow outside pressure (blockholders, takeovers, financial distress). Post-dismissal improvement comes with downsizing and restructuring. Huson, Malatesta and Parrino, 'Managerial Succession and Firm Performance' (Journal of Financial Economics 74(2), 2004; ~860 citations), US 1971-1994: operating performance improves after CEO turnover relative to peers, and more so when the successor is an outsider. Announcement returns for outside successors are positive. Replicated: broadly yes, with the caveat that improvement partly reflects mean reversion from a trough. Use for us: in India, true forced CEO changes are rare because promoters are the CEO. The analogues are (1) a promoter handing over to a professional CEO (often positive if real authority is given; check board composition and the related-party ledger); (2) a sudden unexplained CFO or KMP exit (a red flag; link to auditor exits); (3) a lender- or regulator-forced change. Wait for the 'first proof print' (insight:turnaround-new-ceo) rather than buying the announcement.",
+  "data": {
+   "dd1995": "forced exits preceded by declines, followed by improvements",
+   "hmp2004": "outside successors improve more",
+   "sample": "US 1971-94"
+  },
+  "sources": [
+   "https://doi.org/10.1111/j.1540-6261.1995.tb04049.x",
+   "https://doi.org/10.1016/j.jfineco.2003.08.002"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:turnaround-new-ceo",
+    "rel": "about"
+   },
+   {
+    "to": "insight:auditor-exit-signal",
+    "rel": "about"
+   },
+   {
+    "to": "insight:succession-disputes-governance",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-agarwalla-jacob-varma-india-four-factor",
+  "title": "Agarwalla-Jacob-Varma (IIMA WP 2013/14): India momentum 21.9%/yr, value 15.3%/yr, size ~0 (arithmetic, 1994-2013), the source of the IIMA factor library",
+  "tags": [
+   "india",
+   "factor",
+   "momentum",
+   "value",
+   "size",
+   "base-rate",
+   "research",
+   "quant"
+  ],
+  "body": "Agarwalla, Jacob and Varma, 'Four Factor Model in Indian Equities Market' (IIM Ahmedabad Working Paper 2013-09-05, revised Sep 2014; ~114 S2 citations) built Fama-French plus momentum factors for India from CMIE Prowess, Oct 1993-Dec 2013. Differences from earlier Indian studies: a wider firm universe, exclusion of illiquid stocks so portfolios are investible, a size cut-off suited to India's skewed size distribution, a correction for survivorship bias (many listed companies 'vanished'), and a 6-month gap for accounting data because AGMs are late. Results (average annual, arithmetic): momentum (WML) 21.9%, value (HML) 15.3%, size (SMB) about 0%, market risk premium 11.5%. Their monthly-updated data library is what our insight:iima-factor-premiums-india computed from, and the long-run picture is the same: 1994-2025 CAGR of WML 10.6%, HML 6.5%, SMB -3.8%. The gap between 21.9% arithmetic and 10.6% compounded is volatility drag plus the weaker 2014-25 decade, so quote CAGRs, not arithmetic means. Replicated: yes. The JKP global factor database independently includes India, and NSE momentum/value indices show the same signs, but momentum crashes (2000, 2009) and decade-long value droughts are real. Use for us: in India, momentum and value are documented premia and size is not, after excluding illiquid micro-caps. A 'small is beautiful' thesis needs a business reason, not a factor reason.",
+  "data": {
+   "period": "1994-01..2013-12",
+   "wml_avg_annual": "21.9%",
+   "hml_avg_annual": "15.3%",
+   "smb": "~0%",
+   "mrp": "11.5%",
+   "note": "arithmetic means; survivorship-adjusted; illiquid excluded"
+  },
+  "sources": [
+   "https://faculty.iima.ac.in/~iffm/Indian-Fama-French-Momentum/four-factors-India-90s-onwards-IIM-WP-Version.pdf",
+   "https://doi.org/10.2139/ssrn.2334482",
+   "https://faculty.iima.ac.in/iffm/Indian-Fama-French-Momentum/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:iima-factor-premiums-india",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:lit-replication-crisis-rebuttal-jkp-chen-zimmermann",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-india-promoter-pledging-crash-risk",
+  "title": "India: promoter share pledging predicts higher stock-price crash risk and weaker performance (Kalia 2024, BSE 500, 2011-2020)",
+  "tags": [
+   "india",
+   "pledge",
+   "governance",
+   "redflag",
+   "base-rate",
+   "research"
+  ],
+  "body": "Kalia, 'The Effects of Promoter Share Pledging on Stock Price Crash Risk and Financial Performance' (Journal of Advances in Management Research, 2024; Emerald; low citations as it is recent): 257 S&P BSE 500 companies, 2011-2020, with panel fixed-effects and an IV-2SLS design to address the fact that weak firms may pledge more. Higher promoter pledging was significantly associated with higher FUTURE stock-price crash risk (negative skewness, down-to-up volatility) and with weaker future financial performance (ROA/Tobin's q), robust to alternative proxies. The mechanism: pledging promoters have incentives to hide bad news to avoid margin calls, so bad news accumulates and is released in a crash, and the margin-call spiral (falling price -> top-up or invocation -> forced selling) amplifies it. A companion paper by the same author (Asian Journal of Economics and Banking, 2024) links pledging to lower dividend payouts in family firms. Replicated: in China, a large literature (for example Dou et al.; Li-Zhou-Yan) finds the same crash-risk link; Indian academic evidence is thin and single-author, but it matches our case record (Zee/Essel, ADAG, Future Group, CG Power, Jet). Use for us: keep pledge as a hard disqualifier above a threshold and as a sizing penalty below it. Rising pledge, pledges to NBFCs rather than banks, and pledges across several group companies are the worst versions; track them via the NSE pledge feed.",
+  "data": {
+   "sample": "257 BSE 500 firms, 2011-2020",
+   "method": "panel FE + IV-2SLS",
+   "finding": "pledge -> higher crash risk, lower performance"
+  },
+  "sources": [
+   "https://doi.org/10.1108/jamr-01-2023-0003",
+   "https://doi.org/10.1108/ajeb-01-2024-0009"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:promoter-pledge-group-contagion",
+    "rel": "about"
+   },
+   {
+    "to": "insight:group-contagion-pledge-cycles",
+    "rel": "about"
+   },
+   {
+    "to": "insight:disqualifiers",
+    "rel": "about"
+   },
+   {
+    "to": "insight:ownership-disclosure-early-signals",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-india-business-groups-tunnelling",
+  "title": "Indian business groups: tunnelling is measurable (Bertrand-Mehta-Mullainathan 2002), yet affiliation with the most diversified groups added value in the 1990s (Khanna-Palepu 2000)",
+  "tags": [
+   "india",
+   "governance",
+   "business-group",
+   "related-party",
+   "redflag",
+   "research"
+  ],
+  "body": "Bertrand, Mehta and Mullainathan, 'Ferreting Out Tunneling: An Application to Indian Business Groups' (Quarterly Journal of Economics 117(1), 2002; ~1,730 S2 citations), Indian firms 1989-1999 from CMIE Prowess. Tunnelling, moving resources from firms where the promoter has low cash-flow rights to firms where they have high rights, is illegal and hard to observe, so they measured it by how firms respond to industry earnings shocks. Group firms where the controlling family has low ownership respond significantly less to positive shocks to their own industry, and firms where the family has high ownership respond to shocks hitting OTHER group firms. Money leaks out of the low-ownership affiliates, and the effect is economically significant and concentrated in non-operating profit lines. Khanna and Palepu, 'Is Group Affiliation Profitable in Emerging Markets?' (Journal of Finance 55(2), 2000; ~2,700 citations), 1993 data on about 1,300 firms: affiliates of the most diversified groups outperformed unaffiliated firms (Tobin's q and ROA), because groups substituted for missing capital, labour and managerial markets in pre-reform India. Moderately diversified groups underperformed. Replicated: both are canonical; later work (Siegel-Choudhury 2012; Gopalan-Nanda-Seru 2007 on intra-group loans) confirms tunnelling and internal capital markets in India. Use for us: check the promoter's economic stake in the listed company versus private entities. A listed company where the promoter owns less, and which trades heavily with promoter private firms (royalties, ICDs, purchases, guarantees), is where value leaks. Link to the related-party tests and the 'cash cow funds the sick sibling' record.",
+  "data": {
+   "bmm_sample": "Indian firms 1989-99, CMIE Prowess",
+   "bmm_method": "sensitivity to own vs other-group industry shocks",
+   "kp_sample": "~1,300 firms 1993"
+  },
+  "sources": [
+   "https://doi.org/10.1162/003355302753399463",
+   "https://papers.ssrn.com/abstract=246001",
+   "https://doi.org/10.1111/0022-1082.00229"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:clean-cash-cow-funds-sick-sibling",
+    "rel": "about"
+   },
+   {
+    "to": "insight:related-party-revenue-tests",
+    "rel": "about"
+   },
+   {
+    "to": "insight:india-promoter-loans-icd-rpt-approvals",
+    "rel": "about"
+   },
+   {
+    "to": "insight:group-holdco-discount",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-india-ipo-underpricing-group-grading",
+  "title": "Indian IPO underpricing: very high historically, highest for business-group IPOs (Marisetty-Subrahmanyam 2010, 2,713 IPOs); IPO grading cut underpricing (Deb-Marisetty 2010)",
+  "tags": [
+   "india",
+   "ipo",
+   "base-rate",
+   "research",
+   "business-group",
+   "behavior"
+  ],
+  "body": "Marisetty and Subrahmanyam, 'Group Affiliation and the Performance of IPOs in the Indian Stock Market' (Journal of Financial Markets 13(1), 2010; ~110 citations): 2,713 Indian IPOs, 1990-2004, across three regulatory regimes. Indian underpricing was extreme in that era: average initial returns exceeded 100% in several years (as high as 689% in 1999). IPOs of private Indian business-group firms averaged about 140% initial returns and were MORE underpriced than stand-alone IPOs. The authors reject 'group certification' and attribute the extra underpricing to investor overreaction (it rises with oversubscription), while group affiliates had higher long-run survival because groups support affiliates to protect reputation. Deb and Marisetty, 'Information Content of IPO Grading' (Journal of Banking & Finance 34(9), 2010; ~120 S2 citations) studied SEBI's mandatory IPO grading (introduced 2007, made optional in 2014): higher-graded IPOs had lower underpricing and lower post-listing volatility, and grading raised retail demand for high-grade issues, which they read as reduced information asymmetry. Replicated: high Indian underpricing is confirmed in Ritter's international tables, and the post-2021 data show listing pops still common but long-run returns weak (insight:indian-ipo-long-run-returns). Use for us: listing-day gains are a lottery-ticket transfer from oversubscription and are not evidence of quality. Group brand does not certify an IPO. The long-run base rate favours waiting until 1-2 results after listing, then buying only on proof.",
+  "data": {
+   "ms_sample": "2,713 IPOs 1990-2004",
+   "ms_group_avg_ir": "~140% (private Indian groups)",
+   "ms_peak": "689% avg 1999",
+   "deb_marisetty": "higher grade -> lower underpricing, more retail demand"
+  },
+  "sources": [
+   "https://doi.org/10.1016/j.finmar.2009.09.001",
+   "http://archive.nyu.edu/bitstream/2451/26310/2/07-15.pdf",
+   "https://doi.org/10.1016/j.jbankfin.2010.02.018"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:indian-ipo-long-run-returns",
+    "rel": "about"
+   },
+   {
+    "to": "insight:india-mb-ipo-entry",
+    "rel": "about"
+   },
+   {
+    "to": "insight:india-2021-new-age-ipo-vintage",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-india-retail-investor-behaviour",
+  "title": "Indian retail investors: experience improves behaviour (Campbell-Ramadorai-Ranish 2014), IPO-lottery winners hold what they're given (Anagol et al.), F&O losses are the extreme case",
+  "tags": [
+   "india",
+   "behavior",
+   "retail",
+   "fo",
+   "base-rate",
+   "research"
+  ],
+  "body": "Campbell, Ramadorai and Ranish, 'Getting Better or Feeling Better? How Equity Investors Respond to Investment Experience' (NBER w20000, 2014; ~55 citations), a large representative sample of Indian retail equity accounts from depository (NSDL) data, many of them new investors. Years of experience and the investor's own returns both change behaviour. Experienced investors diversify more, turn over less and behave more as theory recommends, but strong recent returns weaken this: high trading profits raise turnover. There are style-chasing and disposition effects. Portfolios of stocks held by experienced, low-turnover investors earned high returns. Anagol, Balasubramaniam and Ramadorai, 'Endowment Effects in the Field: Evidence from India's IPO Lotteries' (Review of Economic Studies 85(4), 2018; ~60 citations): oversubscribed Indian IPOs allocate shares to retail applicants by lottery, a natural experiment. Randomly chosen winners were much more likely to still hold the stock long after, compared with losers who could have bought it on the market. This is the endowment effect and inertia, at real stakes. Their 'Learning from Noise' (Journal of Financial Economics 2021) shows that randomly higher IPO gains made investors apply for more IPOs and trade more afterwards, so people learn from luck. SEBI's F&O studies (insight:sebi-fo-losses: 87-93% of individuals lose) are the extreme form of the overconfidence and turnover penalty seen in Barber-Odean. Replicated: the experience-learning and endowment results match US and Finnish evidence. Use for us: (1) we are vulnerable to 'feeling better' after a hot streak, so lock trading frequency rules in advance; (2) holdings we received rather than chose (IPO allotments, inherited, bonus or demerger shares) must be re-underwritten as if buying fresh; (3) a stock held mostly by experienced, low-turnover owners (long-only funds, families) is a mild positive.",
+  "data": {
+   "crr_data": "NSDL retail accounts",
+   "crr_finding": "experience -> better behaviour; high profits -> more turnover",
+   "anagol": "IPO lottery winners keep shares (endowment)",
+   "fo": "87-93% individuals lose (SEBI)"
+  },
+  "sources": [
+   "https://www.nber.org/papers/w20000",
+   "https://doi.org/10.2139/ssrn.2702555",
+   "https://doi.org/10.1093/restud/rdy014",
+   "https://doi.org/10.1016/j.jfineco.2021.02.003"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:sebi-fo-losses",
+    "rel": "about"
+   },
+   {
+    "to": "insight:behavior-gap",
+    "rel": "about"
+   },
+   {
+    "to": "insight:lit-barber-odean-overconfidence-disposition",
+    "rel": "similar_to"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-india-mutual-fund-persistence",
+  "title": "Indian active equity funds: only short-horizon persistence, partly driven by losers staying losers (Deb 2019, IIMB Review)",
+  "tags": [
+   "india",
+   "mutual-funds",
+   "active-vs-passive",
+   "luck-vs-skill",
+   "base-rate",
+   "research"
+  ],
+  "body": "Deb, 'Persistence in Performance of Actively Managed Equity Mutual Funds: New Indian Evidence' (IIMB Management Review 31(2), 2019; ~24 S2 citations, open access). After controlling for market, size, value, momentum and expenses, Indian active equity funds show persistence only over SHORT horizons. Larger, older and high-expense funds are more persistent, but much of the persistence comes from the poor performers staying poor rather than winners staying winners. This matches the US evidence (Carhart 1997: persistence is mostly in the bottom decile and explained by expenses and momentum) and S&P's SPIVA India scorecards (insight:spiva-india-2025: 76-79% of large and mid/small-cap funds lagged over 10 years), whose persistence tables show very few top-quartile Indian funds remaining top-quartile over several years. An earlier SSRN paper by Guha Deb, Chakrabarti and Banerjee (2014) reports similar weak persistence in Indian equity funds. Replicated: consistent across datasets, though Indian studies are small and low-citation. Use for us: (1) do not choose funds, or benchmark ourselves, on 1-3 year past rankings; (2) the reliable predictor is cost, so avoid high-TER regular plans; (3) since even professionals rarely persist, our own stock-picking record must be judged against a Nifty LargeMidcap index fund over 5+ years, using the luck-vs-skill math, before we scale it.",
+  "data": {
+   "finding": "short-horizon persistence only; driven partly by poor performers",
+   "controls": "market, size, value, momentum, expenses"
+  },
+  "sources": [
+   "https://doi.org/10.1016/j.iimb.2019.03.014",
+   "https://doi.org/10.2139/ssrn.2441547"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:spiva-india-2025",
+    "rel": "about"
+   },
+   {
+    "to": "insight:luck-vs-skill",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-price-limits-circuit-filters",
+  "title": "Price limits/circuit filters: delayed price discovery and volatility spill-over (Kim-Rhee 1997); later work finds limits curb transient volatility (Deb-Kalev-Marisetty)",
+  "tags": [
+   "india",
+   "global",
+   "market-structure",
+   "liquidity",
+   "research",
+   "risk"
+  ],
+  "body": "Kim and Rhee, 'Price Limit Performance: Evidence from the Tokyo Stock Exchange' (Journal of Finance 52(2), 1997; ~380 citations), Tokyo 1989-1992: compared with stocks that came close to the limit without hitting it, stocks that hit their daily limit showed higher volatility on following days (volatility spill-over), continued price moves in the same direction (delayed price discovery) and higher volume after the limit (trading interference). Limits postpone rather than prevent the move. Deb, Kalev and Marisetty, 'Are Price Limits Really Bad for Equity Markets?' (Journal of Banking & Finance 34(10), 2010; ~55 Crossref citations) and 'Price Limits and Volatility' (Pacific-Basin Finance Journal 2017; Tokyo 2001-05 with propensity-score matching) find the costs overstated by Kim-Rhee's method: lower-limit hits show little volatility spill-over, and limits curb TRANSITORY volatility, though permanent volatility still spills over. Replicated: mixed; the magnet effect (prices accelerate toward the limit) is documented in China and Taiwan. India context: NSE/BSE apply stock-level bands (2/5/10/20%), with tighter bands and ASM/GSM surveillance on small and speculative stocks, so many Indian small caps hit consecutive circuits. Use for us: (1) a stock on lower-circuit can trap us for days, so position size must assume we cannot exit (liquidity is a survival variable); (2) a string of upper circuits on no news is the classic operator pattern (insight:lit-news-vs-no-news-momentum-frog-in-pan) and tends to reverse; (3) news-driven circuit hits keep moving after the band lifts.",
+  "data": {
+   "kim_rhee": "spill-over, delayed discovery, trading interference (TSE 1989-92)",
+   "dkm": "limits curb transitory volatility; permanent spills over",
+   "india_bands": "2/5/10/20% + ASM/GSM"
+  },
+  "sources": [
+   "https://doi.org/10.1111/j.1540-6261.1997.tb04827.x",
+   "https://doi.org/10.1016/j.jbankfin.2010.04.001",
+   "https://doi.org/10.1016/j.pacfin.2016.12.002"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:avoid-ruin",
+    "rel": "about"
+   },
+   {
+    "to": "insight:smallcap-drawdown-durations",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-barber-odean-overconfidence-disposition",
+  "title": "Barber-Odean: heavy traders earn 11.4% vs 17.9% market; men trade 45% more; investors sell winners too early (Odean 1998 disposition effect)",
+  "tags": [
+   "us",
+   "behavior",
+   "base-rate",
+   "research",
+   "process",
+   "costs"
+  ],
+  "body": "Barber and Odean, 'Trading Is Hazardous to Your Wealth' (Journal of Finance 55(2), 2000; ~3,000 S2 citations), 66,465 households at a US discount broker, 1991-1996: the average household earned 16.4% a year against 17.9% for the market. The 20% of households that traded most (about 258% annual turnover) earned 11.4% net. Gross stock-picking was not bad; trading costs and turnover destroyed the returns, and overconfidence explains the trading. 'Boys Will Be Boys' (Quarterly Journal of Economics 116(1), 2001): men traded about 45% more than women, which cut men's net returns by about 2.65 percentage points a year versus 1.72 for women (single men worst). Odean, 'Are Investors Reluctant to Realize Their Losses?' (Journal of Finance 53(5), 1998; ~3,460 citations), 10,000 accounts 1987-93: investors realised gains about 1.5 times as readily as losses (PGR 0.148 vs PLR 0.098). The winners they sold went on to beat the losers they kept by about 3.4 percentage points over the next year, so the disposition effect costs money and is not rational rebalancing. Replicated: yes, worldwide; Taiwan (Barber-Lee-Liu-Odean), Finland (Grinblatt-Keloharju), India (Campbell-Ramadorai-Ranish; SEBI F&O studies). Use for us: this extends insight:day-trader-studies. Our process rules: (1) a written thesis plus a kill-criterion for every position, so sells are driven by the thesis breaking and not by our purchase price; (2) review losers first each quarter (disposition check); (3) cap turnover; (4) record every trade in the decision log so we can measure our own gap.",
+  "data": {
+   "bo2000_avg": "16.4% vs 17.9% market",
+   "bo2000_heavy": "11.4% (turnover ~258%)",
+   "bo2001_men": "trade +45%, -2.65pp/yr vs -1.72 women",
+   "odean1998_pgr_plr": "0.148 vs 0.098",
+   "odean1998_cost": "sold winners beat kept losers by 3.4pp next year"
+  },
+  "sources": [
+   "https://doi.org/10.1111/0022-1082.00226",
+   "https://doi.org/10.1162/003355301556400",
+   "https://doi.org/10.1111/0022-1082.00072"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:day-trader-studies",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:behavior-gap",
+    "rel": "about"
+   },
+   {
+    "to": "insight:sebi-fo-losses",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-superforecasting-tetlock-calibration",
+  "title": "Superforecasting (Tetlock; Mellers et al. 2014): training, teaming and tracking beat experts; foxes beat hedgehogs; calibration can be learned",
+  "tags": [
+   "global",
+   "process",
+   "forecasting",
+   "calibration",
+   "research",
+   "luck-vs-skill"
+  ],
+  "body": "Tetlock, 'Expert Political Judgment' (2005): about 28,000 predictions by 284 experts over two decades. Experts barely beat simple extrapolation and were often worse than chance on long horizons. 'Foxes' (eclectic, self-critical, probabilistic) beat 'hedgehogs' (one big theory), and the most famous hedgehogs were the worst calibrated. Mellers et al., 'Psychological Strategies for Winning a Geopolitical Forecasting Tournament' (Psychological Science 25(5), 2014; ~280 S2 citations): in the IARPA tournament (thousands of forecasters, hundreds of questions, 2011-2013), the Good Judgment Project beat the competing teams by a wide margin. Three interventions improved Brier-score accuracy: an hour of training in probabilistic reasoning (use base rates, avoid biases), about 10% better; working in teams that share reasoning; and 'tracking', placing the top 2% ('superforecasters') together, who improved further and stayed top year after year. Skill persisted, so it was not luck. Superforecaster habits: start from the base rate (outside view), then adjust; update often in small steps; use fine-grained probabilities (60% vs 65% mattered; Friedman et al. 2018); keep score. Replicated: the tournament results are robust across years; later work (Karvetski et al.) shows forecast rationales predict accuracy. Use for us: write every thesis as dated, explicit probabilities ('P(revenue CAGR >20% FY26-29) = 35%'), score them with Brier scores in the decision log, and review calibration yearly. Foxes over hedgehogs: avoid one-theme convictions (for example 'defence will re-rate forever').",
+  "data": {
+   "tetlock_2005": "~28,000 forecasts, 284 experts",
+   "gjp_training_gain": "~10% Brier",
+   "superforecasters": "top 2%, persistent",
+   "method": "base rate -> adjust -> frequent small updates -> score"
+  },
+  "sources": [
+   "https://doi.org/10.1177/0956797614524255",
+   "https://doi.org/10.1093/isq/sqx078",
+   "https://press.princeton.edu/books/paperback/9780691178288/expert-political-judgment"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:luck-vs-skill",
+    "rel": "about"
+   },
+   {
+    "to": "insight:lit-base-rate-neglect-outside-view",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-managerial-miscalibration",
+  "title": "Executives are miscalibrated: CFOs' 80% intervals contained the realised market return only 36% of the time (Ben-David-Graham-Harvey 2013)",
+  "tags": [
+   "us",
+   "behavior",
+   "calibration",
+   "governance",
+   "capital-allocation",
+   "research"
+  ],
+  "body": "Ben-David, Graham and Harvey, 'Managerial Miscalibration' (Quarterly Journal of Economics 128(4), 2013; ~745 Crossref citations): the Duke CFO Survey, more than 13,300 probability distributions for one-year S&P 500 returns given by US CFOs over 10 years (2001-2011). Realised returns fell inside the executives' own 80% confidence intervals only 36% of the time, so their intervals were far too narrow. They widened the lower bound in times of high uncertainty, but miscalibration was worst in exactly those periods. Executives who were miscalibrated about the market were similarly miscalibrated about their own firm's prospects, and firms with miscalibrated CFOs invested more and used more debt. Replicated: overprecision is the most robust overconfidence form in psychology (Moore-Healy 2008; Alpert-Raiffa 1982: '98% intervals' miss 40%+ of the time). Use for us: (1) management guidance ranges in Indian concalls ('15-20% growth', 'margins 18-20%') are probably far too narrow; the base-rate width is much wider, so haircut and widen; (2) our own valuation ranges and scenario bands are equally likely to be too narrow, so set 80% bands and then test how often outcomes land inside them; (3) aggressive capex plus debt alongside very confident guidance is the miscalibration combination that ends badly in cyclicals.",
+  "data": {
+   "n_distributions": ">13,300",
+   "hit_rate_80pct_interval": "36%",
+   "period": "2001-2011 (Duke CFO survey)",
+   "linked_policies": "more investment, more debt"
+  },
+  "sources": [
+   "https://doi.org/10.1093/qje/qjt023",
+   "https://www.nber.org/papers/w16215"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:lit-ceo-overconfidence",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:management-forecast-credibility",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-base-rate-neglect-outside-view",
+  "title": "Base-rate neglect (Kahneman-Tversky 1973) and the outside view (Lovallo-Kahneman 2003): start every estimate from a reference class",
+  "tags": [
+   "global",
+   "behavior",
+   "base-rate",
+   "process",
+   "research",
+   "forecasting"
+  ],
+  "body": "Kahneman and Tversky, 'On the Psychology of Prediction' (Psychological Review 80(4), 1973; ~3,900 Crossref citations). In the 'Tom W.' and engineer/lawyer experiments, people predicted almost entirely from how representative a description seemed and largely ignored prior probabilities. Told a sample was 70% lawyers or 30% lawyers, subjects gave nearly the same answers for a stereotype-matching description. They also made predictions that were not regressive enough: extreme inputs produced extreme forecasts even when the inputs were unreliable. Lovallo and Kahneman, 'Delusions of Success: How Optimism Undermines Executives' Decisions' (Harvard Business Review, July 2003; ~700 citations): executives plan from the 'inside view' (the details of this project) and so routinely overestimate benefits and underestimate costs and time. The remedy is 'reference class forecasting': pick a class of similar past cases, take its outcome distribution, and adjust modestly. Flyvbjerg's megaproject data (9 in 10 over budget) are the large-scale replication. Replicated: base-rate neglect is among the most replicated findings in judgment research, though it weakens when base rates are presented as frequencies (Gigerenzer). Use for us: this is why memdb stores base rates. For each thesis, first retrieve the reference class from the knowledge base: Indian IPOs (40-50% below issue), turnarounds, capex-heavy cyclicals, multibagger starting P/E, small-cap drawdown durations, the 4% of stocks that create all wealth. Then adjust only with specific, verified evidence, and regress a company's recent extreme growth toward the class mean.",
+  "data": {
+   "kt1973": "predictions follow representativeness, ignore priors, insufficiently regressive",
+   "remedy": "reference class forecasting"
+  },
+  "sources": [
+   "https://doi.org/10.1037/h0034747",
+   "https://hbr.org/2003/07/delusions-of-success-how-optimism-undermines-executives-decisions"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:bessembinder",
+    "rel": "about"
+   },
+   {
+    "to": "insight:indian-ipo-long-run-returns",
+    "rel": "about"
+   },
+   {
+    "to": "insight:india-mb-twin-engine-base-rate",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-clinical-vs-actuarial-judgment",
+  "title": "Mechanical rules beat or match expert intuition in ~94% of studies (Dawes-Faust-Meehl 1989; Grove et al. 2000 meta-analysis of 136 studies)",
+  "tags": [
+   "global",
+   "process",
+   "checklist",
+   "research",
+   "quant",
+   "behavior"
+  ],
+  "body": "Dawes, Faust and Meehl, 'Clinical Versus Actuarial Judgment' (Science 243, 1989; ~1,800 S2 citations) reviewed nearly 100 comparative studies across medicine, psychiatry, parole, admissions and finance. In virtually all of them a simple statistical (actuarial) formula predicted as well as or better than expert judgment, even when experts had MORE information, including the formula's output. Experts add noise: they are inconsistent, overweight vivid cues and ignore base rates. Grove, Zald, Lebow, Snitz and Nelson, 'Clinical Versus Mechanical Prediction: A Meta-Analysis' (Psychological Assessment 12(1), 2000; ~1,700 citations), 136 studies: mechanical prediction was about 10% more accurate on average. It was substantially better in roughly a third to half of studies and comparable in most of the rest; clinicians were clearly better in only about 6-16%. Giving clinicians interview data did not help them. Dawes (1979) showed even equal-weighted 'improper' linear models beat intuition. Replicated: yes, decades of follow-ups; Kahneman's 'Noise' (2021) builds on it. Use for us: (1) codify the parts of stock selection that can be scored (quality, balance sheet, governance flags, valuation vs history, base-rate class) into a fixed, equal-weighted scorecard applied identically to every name; (2) let judgment add value only on variables the model cannot see (management credibility from the promise tracker, scuttlebutt); (3) when gut and scorecard disagree, write down why and track who was right.",
+  "data": {
+   "dfm1989": "~100 studies; actuarial >= clinical in virtually all",
+   "grove2000_n": 136,
+   "grove2000": "mechanical ~10% more accurate; clinical clearly better in ~6-16%"
+  },
+  "sources": [
+   "https://doi.org/10.1126/science.2648573",
+   "https://doi.org/10.1037/1040-3590.12.1.19"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:forensic-redflag-checklist",
+    "rel": "about"
+   },
+   {
+    "to": "insight:piotroski-f-score",
+    "rel": "about"
+   },
+   {
+    "to": "insight:lit-noise-and-checklists",
+    "rel": "about"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ },
+ {
+  "id": "insight:lit-noise-and-checklists",
+  "title": "Noise and checklists: underwriters disagreed by 55% vs 10% expected (Kahneman-Sibony-Sunstein 2021); a 19-item checklist cut surgical deaths from 1.5% to 0.8% (Haynes 2009)",
+  "tags": [
+   "global",
+   "process",
+   "checklist",
+   "research",
+   "behavior"
+  ],
+  "body": "Kahneman, Sibony and Sunstein, 'Noise: A Flaw in Human Judgment' (2021): separate bias (systematic error) from noise (unwanted variability between judges, or within one judge over time). In a 'noise audit' at an insurer, executives expected about a 10% difference between two underwriters pricing the same case; the median difference was about 55%. Similar variability appears in sentencing, medicine, patent examination and investment valuation. Remedies, termed 'decision hygiene': structure the judgment into independent sub-assessments (the 'mediating assessments protocol'), score each separately before forming a holistic view, aggregate independent judges, use relative rather than absolute scales, and delay intuition until the end. Haynes et al., 'A Surgical Safety Checklist to Reduce Morbidity and Mortality in a Global Population' (New England Journal of Medicine 360, 2009; ~5,400 citations): the WHO 19-item checklist in 8 hospitals in 8 countries (nearly 7,700 patients) cut deaths from 1.5% to 0.8% and inpatient complications from 11% to 7%. That is evidence that checklists catch routine omissions experts already know about. Replicated: checklist results replicated in many systems (with weaker effects where compliance is poor). Noise-audit findings come from consulting studies and are less peer-reviewed. Use for us: (1) run every candidate through the same written checklist (disqualifiers, forensic flags, base-rate class, valuation), scored before reading bullish sell-side notes; (2) score sub-components independently and combine mechanically; (3) periodically re-score an old name blind to detect our own noise; (4) checklists are for avoiding omissions, not for generating ideas.",
+  "data": {
+   "noise_audit": "expected ~10%, actual median ~55% (insurer)",
+   "haynes_deaths": "1.5% -> 0.8%",
+   "haynes_complications": "11% -> 7%",
+   "haynes_n": "~7,700 patients, 8 hospitals"
+  },
+  "sources": [
+   "https://doi.org/10.1056/NEJMsa0810119",
+   "https://www.hachettebookgroup.com/titles/daniel-kahneman/noise/9780316451390/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "insight:buffett-1993-five-factor-checklist",
+    "rel": "about"
+   },
+   {
+    "to": "insight:disqualifiers",
+    "rel": "about"
+   },
+   {
+    "to": "insight:lit-clinical-vs-actuarial-judgment",
+    "rel": "similar_to"
+   }
+  ],
+  "type": "insight",
+  "date": "2026-11-20"
+ }
+]

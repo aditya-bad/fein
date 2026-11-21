@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Step 2: parse PIT rows -> qualifying open-market buys -> events (pre-registered rule) + share estimates.
 Usage: python3 s2_events.py OUTDIR
-Writes: buys.tsv, events.tsv, shares.tsv (implied total shares per symbol per PIT row), universe.txt"""
+Writes: buys.tsv, events.tsv, shares.tsv (implied total shares per symbol per PIT row),
+        tradepx.tsv (unadjusted single-day trade prices), universe.txt"""
 import collections, datetime as dt, glob, json, os, sys
 
 S = sys.argv[1]
@@ -35,6 +36,15 @@ for r in rows:
     if n and p and p >= 1.0 and d:
         sh.write(f"{r['symbol']}\t{d}\t{n / p * 100:.0f}\n")
 sh.close()
+# unadjusted trade prices (single-day market trades) -> used to map share counts onto Yahoo's adjusted basis
+tp = open(os.path.join(S, "tradepx.tsv"), "w")
+for r in rows:
+    if r.get("acqMode") not in ("Market Sale", "Market Purchase") or r.get("secType") != "Equity Shares": continue
+    if r.get("acqfromDt") != r.get("acqtoDt"): continue
+    q, v, d = num(r.get("secAcq")), num(r.get("secVal")), pdate(r.get("acqtoDt") or "")
+    if q and v and q >= 10 and v > 0 and d:
+        tp.write(f"{r['symbol']}\t{d}\t{v / q:.4f}\n")
+tp.close()
 open(os.path.join(S, "universe.txt"), "w").write("\n".join(sorted(universe)))
 
 buys, drop = [], collections.Counter()
