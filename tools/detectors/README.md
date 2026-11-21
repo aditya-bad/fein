@@ -172,11 +172,14 @@ The scripts reopen their log file if it is moved, so plain logrotate works.
 
 ## Known limits (checked November 2026)
 
-- NSE's all-market PIT feed (`corporates-pit` with dates) has returned nothing since about
-  May 2026. `collect.py` falls back to per-symbol PIT calls for up to 25 companies a day that filed
-  promoter SAST disclosures or insider-trading announcements, and `sast_promoter_open_market` covers
-  promoter trades from SAST. Insider coverage is therefore partial: smaller insiders in companies
-  without a same-day SAST filing can be missed.
+- **Insider (PIT) data is stale at the source.** NSE's PIT feed has no records dated after
+  30-Apr-2026, both the all-market query and per-symbol queries (checked 21-Nov-2026), and BSE's
+  insider endpoint returned nothing. So `insider_buy`, `insider_sell` and the PIT half of
+  `insider_cluster` cannot fire until NSE resumes; `collect.py` logs a warning every day while it is
+  stale. Promoter open-market trades still arrive through SAST Reg 29 (`sast_promoter_open_market`,
+  and clusters built from SAST rows), but SAST has no rupee value, covers promoters only (not
+  directors or KMP), and only applies to trades above the SAST reporting thresholds. The code keeps
+  calling PIT (all-market, then per-symbol for up to 25 companies a day) so it recovers by itself.
 - About 80 of about 1,500 companies in the pledge snapshot are not matched to an NSE symbol (mostly
   BSE-only or delisted names). They are logged and skipped.
 - Announcement rules are keyword rules on the exchange's one-line text. They catch most events,

@@ -170,6 +170,10 @@ def fetch_insider(con, day):
             except Exception as e:
                 log.warning("insider %s: %s", s, e)
     C.upsert(con, "insider_trades", rows)
+    latest = con.execute("SELECT max(date) FROM insider_trades").fetchone()[0]
+    if latest and latest < (dt.date.fromisoformat(day) - dt.timedelta(days=30)).isoformat():
+        log.warning("insider: newest PIT record in the DB is %s - NSE's PIT feed looks stale, so the insider_buy/"
+                    "insider_sell rules cannot fire; sast_promoter_open_market is the working stand-in", latest)
     return len(rows)
 
 
@@ -337,7 +341,7 @@ def selftest():
         except Exception as e:
             print(f"  FAIL {name:24s} {e}")
     print(f"selftest: {ok}/{len(checks)} sources answered (0 rows can be normal on holidays; "
-          "PIT all-market has been empty since ~May-2026)")
+          "NSE PIT has no records after 30-Apr-2026, checked 21-Nov-2026)")
     return 0 if ok else 1
 
 
