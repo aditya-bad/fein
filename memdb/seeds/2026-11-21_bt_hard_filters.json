@@ -1,0 +1,749 @@
+[
+ {
+  "type": "insight",
+  "id": "insight:bt-hard-filters-2026-summary",
+  "title": "Hard-filter back-test (21-Nov-2026): judgment fraud signals caught 8/39 known traps with 0/62 winners rejected; no mechanical rule (CFO/PAT, pledge, auditor exit, debt+neg CFO) earned hard status; solvency is an uncovered gap",
+  "body": "Part A: 131 case_study records -> 106 point-in-time episodes (43 traps: 19 fraud, 15 leverage, 9 busts; 63 winners incl. 9 false alarms); flags counted only if public before T (else unknown). Current hard set: traps 8 Y / 31 N / 4 U, winners 0 / 62 / 1; all 8 catches were fraud cases via judgment signals (H1a Satyam, H1b Vakrangee/Manpasand/Cox&Kings, H1c Wirecard/Rajesh Exports, H5 Gitanjali, H4 SME basket). Leverage blow-ups 0/15, busts 0/9. Graded flags fired on 22/28 known traps AND 21/24 known winners; '3+ graded flags' hit 8 traps and 7 winners (HAL, BSE, Mazagon, Trent, Netflix-2019, SMCI, Eternal). In-sample caveat: the hard rules were written from these traps. Part B: 580-co PEAD sample, snapshot 30-Sep-2020, 495 priced: base rates 5y loss>50% 1.8%, >3x 54.5%; ANY(R1-R4) flagged 139: loss50 2.9% vs 1.4% (p 0.28), x3 64% vs 51% (p 0.009). Survivor-only, bull-market, success-conditioned sample -> cannot see delisted traps. Verdict: keep judgment fraud signals hard; make auditor exit a hard EXIT trigger; keep pledge graded; demote cash-flow tests to questions; move P/E to stage 5; add solvency flags (untested).",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "hard-filters",
+   "stage-2",
+   "redflag",
+   "method-test",
+   "india",
+   "calibration"
+  ],
+  "date": "2026-11-21",
+  "data": {
+   "partA": {
+    "episodes": 106,
+    "traps": 43,
+    "winners": 63,
+    "hard_current": {
+     "traps": [
+      8,
+      31,
+      4
+     ],
+     "winners": [
+      0,
+      62,
+      1
+     ]
+    },
+    "hard_plus_H2b": {
+     "traps": [
+      11,
+      29,
+      3
+     ],
+     "winners": [
+      1,
+      60,
+      2
+     ]
+    },
+    "graded_any": {
+     "traps": [
+      22,
+      6,
+      15
+     ],
+     "winners": [
+      21,
+      3,
+      39
+     ]
+    }
+   },
+   "partB": {
+    "n": 495,
+    "base_loss50_5y": 0.018,
+    "base_x3_5y": 0.545,
+    "ANY": {
+     "flagged": 139,
+     "loss50": 0.029,
+     "loss50_unflagged": 0.014,
+     "p": 0.276,
+     "x3": 0.64,
+     "x3_unflagged": 0.508,
+     "p_x3": 0.009
+    }
+   },
+   "stage": 2,
+   "unlocks": "calibrated stage-2 gate; nightly detector set; re-test on point-in-time universe with dead companies"
+  },
+  "sources": [
+   "research_notes/Backtests/hard_filters_test.md",
+   "research_notes/Backtests/hard_filters_outputs/partA_cases.json",
+   "research_notes/Backtests/hard_filters_outputs/partB_summary.json"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:flag-override-template",
+    "rel": "related"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-hard-filters-h1-fraud-signals",
+  "title": "H1 judgment fraud signals (fake cash / implausible economics / unverifiable profits): 6 of 39 known traps caught pre-T, 0 winners rejected; a blind ratio proxy does NOT reproduce H1b",
+  "body": "H1a 1/43 (Satyam FY08: Rs 5,000 cr cash earning far below FD rates while borrowing). H1b 3/42 (Vakrangee ROCE ~40% in a kiosk franchise; Manpasand outgrowing Frooti; Cox & Kings debt+receivables in an advance-paid model). H1c 2/43 (Wirecard third-party acquirers; Rajesh Exports ~1% margin on Rs 2 lakh cr). Winners 0/63, but winners' records list no 'tells', so H1b/H1c were not seriously searched on winners (outcome-aware coding). Blind proxy (ROCE>40% 3y or OPM +10pp in 3y) fired on 9/22 traps but 5/28 winners (Caplin, Tata Elxsi, CDSL, Palantir, Tesla) and missed Vakrangee. Verdict KEEP HARD; H1b requires a written peer + bottom-up unit-economics comparison, not a threshold.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "hard-filters",
+   "stage-2",
+   "redflag",
+   "method-test",
+   "india"
+  ],
+  "date": "2026-11-21",
+  "data": {
+   "H1a": [
+    1,
+    43,
+    0,
+    63
+   ],
+   "H1b": [
+    3,
+    42,
+    0,
+    63
+   ],
+   "H1c": [
+    2,
+    43,
+    0,
+    63
+   ],
+   "H1b_proxy": [
+    9,
+    22,
+    5,
+    28
+   ],
+   "verdict": "keep hard; H1b needs written unit-economics check"
+  },
+  "sources": [
+   "research_notes/Backtests/hard_filters_test.md",
+   "research_notes/Backtests/hard_filters_outputs/partA_cases.json",
+   "research_notes/Backtests/hard_filters_outputs/partB_summary.json"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:flag-override-template",
+    "rel": "related"
+   },
+   {
+    "to": "insight:bt-hard-filters-2026-summary",
+    "rel": "part_of"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-hard-filters-h2-auditor-exit",
+  "title": "Auditor exit over disagreement (H2) fired BEFORE the peak in 0 of 41 traps: it is an exit trigger, not an entry screen; any-resignation rule (R3) showed no 5y loss lift in the 2020 universe",
+  "body": "Part A: every auditor exit in the case set (Vakrangee PwC Apr-2018, Manpasand Deloitte May-2018, Reliance Capital PwC 2019, Ricoh 2015, SMCI EY Oct-2024) came after T, usually mid-collapse. Part B R3 (any statutory-auditor resignation announced 2015 -> Sep-2020, NSE feed): 31 of 486 flagged; 5y loss>50% 3.2% vs 1.3% (p 0.37); >3x 58% vs 54%; to-date loss>50% 12.9% vs 3.3% (4 of 31, p 0.027, exploratory). Flagged winners include CG Power (~31x after 2020 fraud discovery + takeover) and Ramky (~19x). Verdict: KEEP as non-overridable EXIT / no-new-money trigger until a new auditor signs clean; do not expect it to protect entries.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "hard-filters",
+   "stage-2",
+   "redflag",
+   "method-test",
+   "india",
+   "auditor"
+  ],
+  "date": "2026-11-21",
+  "data": {
+   "partA": [
+    0,
+    41,
+    0,
+    63
+   ],
+   "partB_R3": {
+    "flagged": 31,
+    "loss50_5y": [
+     0.032,
+     0.013,
+     0.37
+    ],
+    "x3_5y": [
+     0.58,
+     0.54,
+     0.71
+    ],
+    "loss50_now": [
+     0.129,
+     0.033,
+     0.027
+    ]
+   },
+   "verdict": "hard exit trigger"
+  },
+  "sources": [
+   "research_notes/Backtests/hard_filters_test.md",
+   "research_notes/Backtests/hard_filters_outputs/partA_cases.json",
+   "research_notes/Backtests/hard_filters_outputs/partB_summary.json"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:flag-override-template",
+    "rel": "related"
+   },
+   {
+    "to": "insight:bt-hard-filters-2026-summary",
+    "rel": "part_of"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-hard-filters-h2b-restatement-regulator",
+  "title": "Broad accounting-trouble flag (restatement / SEC 8-K 4.02 / RBI NPA divergence / delayed results / any auditor exit within 5y) added 3 trap catches (Yes Bank, SMCI and Celsius peaks) for 1 winner lost (SMCI Jan-2023)",
+  "body": "Part A H2b: traps 3/43, winners 1/62 (+1 unknown: Celsius 2017 auditor change). Yes Bank's RBI divergence (Rs 4,177 cr FY16, Rs 6,355 cr FY17, disclosed 2017) was public a year before the Aug-2018 peak. SMCI's Nov-2018 4.02 non-reliance flagged both its Mar-2024 peak (-86% after) and the Jan-2023 start of a 17-30x run. Verdict: ADD as a strong GRADED flag; RBI divergence for banks near-hard.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "hard-filters",
+   "stage-2",
+   "redflag",
+   "method-test",
+   "india",
+   "auditor",
+   "us"
+  ],
+  "date": "2026-11-21",
+  "data": {
+   "traps": [
+    3,
+    40,
+    0
+   ],
+   "winners": [
+    1,
+    61,
+    1
+   ],
+   "verdict": "add graded"
+  },
+  "sources": [
+   "research_notes/Backtests/hard_filters_test.md",
+   "research_notes/Backtests/hard_filters_outputs/partA_cases.json",
+   "research_notes/Backtests/hard_filters_outputs/partB_summary.json"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:flag-override-template",
+    "rel": "related"
+   },
+   {
+    "to": "insight:bt-hard-filters-2026-summary",
+    "rel": "part_of"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-hard-filters-pledge",
+  "title": "Promoter pledge >25% is the best graded flag pre-T (traps 8/20 vs winners 2/13) but in the 2020 universe pledged firms tripled MORE often; pledge >50% in firms >= Rs 400 cr: 10% vs 1.4% >50% losses (p 0.05, n=2)",
+  "body": "Part A (BSE SHP XBRL filed before T): Gitanjali 79%, IL&FS Transportation 98%, Gensol 63%, Cox & Kings 54%, Zee 46%, Future 44%, Reliance Capital 34%, Luckin founders' margin loans; winners flagged: Apollo 71% (2019), Suzlon 76% (Dec-2019, then ~49x). Part B (Mar-2020 SHP, 452 firms): >25% flagged 68: loss50 2.9% vs 1.6% (p 0.34), x3 69% vs 51% (p 0.006); >50% flagged 44: loss50 4.5% vs 1.5%, x3 70%. Restricted to mcap >= Rs 400 cr at T0: >50% pledge loss50 10% (2/20, Sadbhav Engg/Infra) vs 1.4% (p 0.053). Verdict: KEEP GRADED (escalate at >50% or rising); never hard.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "hard-filters",
+   "stage-2",
+   "redflag",
+   "method-test",
+   "india",
+   "pledge"
+  ],
+  "date": "2026-11-21",
+  "data": {
+   "partA": [
+    8,
+    20,
+    2,
+    13
+   ],
+   "partB_gt25": {
+    "n": 68,
+    "loss50": [
+     0.029,
+     0.016,
+     0.34
+    ],
+    "x3": [
+     0.69,
+     0.51,
+     0.0055
+    ]
+   },
+   "partB_gt50_mcap400": {
+    "n": 20,
+    "loss50": [
+     0.1,
+     0.014,
+     0.053
+    ]
+   },
+   "verdict": "keep graded"
+  },
+  "sources": [
+   "research_notes/Backtests/hard_filters_test.md",
+   "research_notes/Backtests/hard_filters_outputs/partA_cases.json",
+   "research_notes/Backtests/hard_filters_outputs/partB_summary.json"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:flag-override-template",
+    "rel": "related"
+   },
+   {
+    "to": "insight:bt-hard-filters-2026-summary",
+    "rel": "part_of"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-hard-filters-cash-conversion",
+  "title": "CFO/PAT and negative-FCF tests flag winners at least as often as traps (F1 CFO/PAT<0.7: traps 6/20 vs winners 8/24; FCF<0: 9/23 vs 15/30) and the best frauds pass them; demote to questions",
+  "body": "Winners failing: HAL (sovereign receivables), BSE and Mazagon (client money/advances), Trent (store build), Netflix-2019 (content), SMCI-2023 (inventory), BSE CFO/PAT 0.05. Frauds passing: Vakrangee 0.75, Cox & Kings 2.7 (fabricated cash), PC Jeweller 0.96, Valeant 11.5. Part B R1 CFO/PAT 5y<0.3: 42 flagged, loss50 2.4% vs 0.9% (p 0.37), x3 60% vs 52%; R1b <0.7: loss50 1.3% vs 1.0%. Verdict: DROP as filters; keep 'what is the working capital made of?' as a mandatory question (L12).",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "hard-filters",
+   "stage-2",
+   "redflag",
+   "method-test",
+   "india",
+   "forensic"
+  ],
+  "date": "2026-11-21",
+  "data": {
+   "F1": [
+    6,
+    20,
+    8,
+    24
+   ],
+   "F1b": [
+    3,
+    20,
+    5,
+    24
+   ],
+   "G5": [
+    9,
+    23,
+    15,
+    30
+   ],
+   "partB_R1": {
+    "n": 42,
+    "loss50": [
+     0.024,
+     0.009,
+     0.37
+    ],
+    "x3": [
+     0.6,
+     0.52,
+     0.41
+    ]
+   },
+   "verdict": "demote to question"
+  },
+  "sources": [
+   "research_notes/Backtests/hard_filters_test.md",
+   "research_notes/Backtests/hard_filters_outputs/partA_cases.json",
+   "research_notes/Backtests/hard_filters_outputs/partB_summary.json"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:flag-override-template",
+    "rel": "related"
+   },
+   {
+    "to": "insight:bt-hard-filters-2026-summary",
+    "rel": "part_of"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-hard-filters-debt-neg-cfo",
+  "title": "Debt-funded growth with negative CFO (borrowings >=1.5x in 3y and sum CFO<0): traps 2/21 vs winners 4/24; in the 2020 universe 0 of 27 flagged firms lost >50% and 70% tripled",
+  "body": "Winners flagged pre-T: HAL, Enphase-2017, SMCI-2023, Netflix-2019, Eternal-2022 (+ Ricoh among traps). Part B R4: 27 flagged of 445; loss50 0% vs 1.7%; x3 70% vs 54% (p 0.11). Verdict: DROP as a filter; replace with explicit solvency flags (negative net worth, interest cover <1.5x for 2y, short funding of long assets, payouts > FCF while borrowing) - untested.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "hard-filters",
+   "stage-2",
+   "redflag",
+   "method-test",
+   "india",
+   "debt"
+  ],
+  "date": "2026-11-21",
+  "data": {
+   "partA": [
+    2,
+    21,
+    4,
+    24
+   ],
+   "partB_R4": {
+    "n": 27,
+    "loss50": [
+     0.0,
+     0.017,
+     1.0
+    ],
+    "x3": [
+     0.7,
+     0.54,
+     0.11
+    ]
+   },
+   "verdict": "drop; build solvency set"
+  },
+  "sources": [
+   "research_notes/Backtests/hard_filters_test.md",
+   "research_notes/Backtests/hard_filters_outputs/partA_cases.json",
+   "research_notes/Backtests/hard_filters_outputs/partB_summary.json"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:flag-override-template",
+    "rel": "related"
+   },
+   {
+    "to": "insight:bt-hard-filters-2026-summary",
+    "rel": "part_of"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-hard-filters-other-income",
+  "title": "Other income >30% of PBT: traps 6/17 vs winners 6/15 (fires on exchanges and PSU cash piles); 2020 universe loss50 2.7% vs 0.7% (p 0.15) but x3 61% vs 48%",
+  "body": "Part A F2 winners flagged: BSE, CDSL, Cochin, Mazagon, Trent, Bharti. Part B R5 111 flagged of 385. Verdict: keep as the starting point for the fake-cash yield test (H1a), not as a flag.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "hard-filters",
+   "stage-2",
+   "redflag",
+   "method-test",
+   "india"
+  ],
+  "date": "2026-11-21",
+  "data": {
+   "partA": [
+    6,
+    17,
+    6,
+    15
+   ],
+   "partB_R5": {
+    "n": 111,
+    "loss50": [
+     0.027,
+     0.007,
+     0.147
+    ],
+    "x3": [
+     0.61,
+     0.48,
+     0.024
+    ]
+   },
+   "verdict": "question, feeds H1a"
+  },
+  "sources": [
+   "research_notes/Backtests/hard_filters_test.md",
+   "research_notes/Backtests/hard_filters_outputs/partA_cases.json",
+   "research_notes/Backtests/hard_filters_outputs/partB_summary.json"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:flag-override-template",
+    "rel": "related"
+   },
+   {
+    "to": "insight:bt-hard-filters-2026-summary",
+    "rel": "part_of"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-hard-filters-pe-gt-50",
+  "title": "Trailing P/E >50 caught 7 of 9 busts at their peaks but also stood at the start of Trent (155x -> 19x), Deepak Nitrite (~69x -> 12x), Kaynes (104x -> 10x) and DMart; it is a stage-5 valuation input, not a stage-2 filter",
+  "body": "Part A G4: traps 7/41 (all busts: Enphase, Celsius, KPIT, Tata Elxsi, Alkyl, Symphony, Adani), winners 4/57. Verdict: MOVE to stage 5 (P/E vs own median, reverse DCF; L12 '2x own median = flat 4-6 yrs').",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "hard-filters",
+   "stage-2",
+   "redflag",
+   "method-test",
+   "india",
+   "valuation"
+  ],
+  "date": "2026-11-21",
+  "data": {
+   "traps": [
+    7,
+    41
+   ],
+   "winners": [
+    4,
+    57
+   ],
+   "verdict": "move to stage 5"
+  },
+  "sources": [
+   "research_notes/Backtests/hard_filters_test.md",
+   "research_notes/Backtests/hard_filters_outputs/partA_cases.json",
+   "research_notes/Backtests/hard_filters_outputs/partB_summary.json"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:flag-override-template",
+    "rel": "related"
+   },
+   {
+    "to": "insight:bt-hard-filters-2026-summary",
+    "rel": "part_of"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-hard-filters-solvency-gap",
+  "title": "No hard or graded rule caught any of 15 leverage blow-ups pre-T (Jet, IL&FS, Adani Ent., Future, Zee, Unitech, Suzlon-2008, Kingfisher, SVB, Lehman, Evergrande, GE, Credit Suisse, Paytm, PC Jeweller) except pledge on 3",
+  "body": "Hard set 0/15. Missing tests visible in records: negative net worth (Jet, Kingfisher), interest cover <1x (IL&FS), ALM mismatch (DHFL, SVB), payouts from borrowed money (Evergrande, GE), group holdco debt (Zee, Future). Proposal: a graded solvency set, pre-registered and back-tested on a point-in-time universe with dead companies before use.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "hard-filters",
+   "stage-2",
+   "redflag",
+   "method-test",
+   "india",
+   "debt",
+   "leverage"
+  ],
+  "date": "2026-11-21",
+  "data": {
+   "lev_traps_caught_by_hard": [
+    0,
+    15
+   ],
+   "verdict": "build + test solvency flags"
+  },
+  "sources": [
+   "research_notes/Backtests/hard_filters_test.md",
+   "research_notes/Backtests/hard_filters_outputs/partA_cases.json",
+   "research_notes/Backtests/hard_filters_outputs/partB_summary.json"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:flag-override-template",
+    "rel": "related"
+   },
+   {
+    "to": "insight:bt-hard-filters-2026-summary",
+    "rel": "part_of"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-hard-filters-h3-h4-h5",
+  "title": "Rating 'not cooperating' (H3) never fired pre-T; SME pump (H4) only on its own source cases; RPT leakage (H5) fired pre-T once (Gitanjali group receivables ~33%) - usually surfaces after the peak",
+  "body": "H3 0/43 traps, 0/62 winners (+1 unknown, Suzlon 2020). H4 1/43 (circular). H5 1/40 (+3 unknown: Reliance Capital, Enron, SMCI). Later H5 evidence: Satyam Maytas (Dec-2008), Cox & Kings PwC audit, Valeant/Philidor, Gensol SEBI order. Verdict: KEEP all three (cheap, detectors exist); extend H4 to pre-revenue SPAC/IPO hype (Nikola).",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "hard-filters",
+   "stage-2",
+   "redflag",
+   "method-test",
+   "india"
+  ],
+  "date": "2026-11-21",
+  "data": {
+   "H3": [
+    0,
+    43,
+    0,
+    62
+   ],
+   "H4": [
+    1,
+    43,
+    0,
+    63
+   ],
+   "H5": [
+    1,
+    40,
+    0,
+    63
+   ],
+   "verdict": "keep"
+  },
+  "sources": [
+   "research_notes/Backtests/hard_filters_test.md",
+   "research_notes/Backtests/hard_filters_outputs/partA_cases.json",
+   "research_notes/Backtests/hard_filters_outputs/partB_summary.json"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:flag-override-template",
+    "rel": "related"
+   },
+   {
+    "to": "insight:bt-hard-filters-2026-summary",
+    "rel": "part_of"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:disqualifiers-v2-proposal",
+  "title": "PROPOSAL (not adopted): disqualifiers v2 after the 21-Nov-2026 back-test - hard at entry = judgment fraud signals; auditor exit = hard EXIT trigger; pledge and accounting-trouble events graded; cash-flow tests become questions; P/E moves to stage 5; add solvency set",
+  "body": "Proposed replacement for insight:disqualifiers (which stays in force until the user agrees). HARD AT ENTRY (no override): H1a fake-cash signals (cash yield vs FD rate; big cash + big debt; trustee/escrow cash); H1b economics implausible for the business - only after a written peer + bottom-up unit-economics comparison; H1c profits outsiders cannot verify (profit in partners/segments nobody audits; <2% margin on pass-through revenue); H4 pump patterns incl. pre-revenue SPAC/IPO hype; H5 related-party cash leakage to promoter entities; H2 auditor exit citing disagreement/denied information or a qualified/adverse opinion; H3 rating 'issuer not cooperating' (unproven, cheap). HARD AT EXIT (sell / no new money until a new auditor signs clean): H2 and the strongest accounting-trouble events (RBI NPA divergence, SEC 8-K 4.02, results delayed past the deadline). GRADED (override template): promoter pledge >25% (escalate >50% or rising); accounting-trouble events within 5y (restatement, any mid-term auditor exit, regulator-found misstatement); dilution (price x purpose x buyer); debtor days judged by counterparty; NEW solvency set (negative net worth, interest cover <1.5x for 2y, short funding of long assets / ALM gap, payouts > FCF while borrowing, group holdco debt) - untested. QUESTIONS, NOT FLAGS: CFO/PAT, negative FCF, debt with negative CFO, other-income share (it starts the H1a test). MOVED TO STAGE 5: P/E >50 / >2x own median. EVIDENCE: insight:bt-hard-filters-2026-summary (Part A 106 episodes in-sample; Part B 495-firm survivor-only 2020 snapshot). WHAT WOULD CHANGE IT: a point-in-time universe with dead companies at several snapshot dates showing a mechanical rule with flagged->loss>50% >= 2x base and flagged->x3 not above base.",
+  "tickers": [],
+  "tags": [
+   "redflag",
+   "checklist",
+   "governance",
+   "proposal",
+   "stage-2",
+   "hard-filters"
+  ],
+  "date": "2026-11-21",
+  "status": "proposed",
+  "data": {
+   "supersedes_if_adopted": "insight:disqualifiers",
+   "hard_entry": [
+    "H1a",
+    "H1b(with written unit-economics check)",
+    "H1c",
+    "H4(+SPAC hype)",
+    "H5",
+    "H2",
+    "H3"
+   ],
+   "hard_exit": [
+    "H2",
+    "RBI divergence",
+    "8-K 4.02",
+    "delayed results"
+   ],
+   "graded": [
+    "pledge>25% (escalate >50%/rising)",
+    "accounting-trouble events 5y",
+    "dilution",
+    "debtor days by counterparty",
+    "solvency set (new, untested)"
+   ],
+   "questions_only": [
+    "CFO/PAT",
+    "negative FCF",
+    "debt+negative CFO",
+    "other income share"
+   ],
+   "moved_to_stage5": [
+    "P/E>50",
+    "P/E>2x own median"
+   ]
+  },
+  "sources": [
+   "research_notes/Backtests/hard_filters_test.md",
+   "research_notes/Backtests/hard_filters_outputs/partA_cases.json",
+   "research_notes/Backtests/hard_filters_outputs/partB_summary.json"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers",
+    "rel": "proposes_revision_of"
+   },
+   {
+    "to": "insight:bt-hard-filters-2026-summary",
+    "rel": "based_on"
+   },
+   {
+    "to": "insight:flag-override-template",
+    "rel": "related"
+   }
+  ],
+  "confidence": "single-source"
+ }
+]

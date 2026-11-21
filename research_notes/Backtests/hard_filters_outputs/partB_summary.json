@@ -1,0 +1,3415 @@
+{
+ "T0": "2020-09-30",
+ "T5": "2025-09-30",
+ "funnel": {
+  "universe": 580,
+  "price_at_T0": 495,
+  "no_price_at_T0 (listed after T0 or gaps)": 85,
+  "truncated_series (stopped trading before Nov-2026)": 0,
+  "with_fundamentals": 464,
+  "lenders": 19,
+  "with_pledge": 452,
+  "with_auditor_feed": 486
+ },
+ "base_rates": {
+  "r5": {
+   "n": 495,
+   "loss50": 0.018,
+   "x3": 0.545,
+   "median": 3.29
+  },
+  "rnow": {
+   "n": 495,
+   "loss50": 0.042,
+   "x3": 0.495,
+   "median": 2.976
+  },
+  "mcap_ge400": {
+   "n": 304,
+   "loss50": 0.02,
+   "x3": 0.444
+  },
+  "mcap_lt400": {
+   "n": 148,
+   "loss50": 0.014,
+   "x3": 0.723
+  }
+ },
+ "rules": {
+  "R1": {
+   "r5": {
+    "n_known": 382,
+    "n_unknown": 113,
+    "n_flagged": 42,
+    "n_unflagged": 340,
+    "loss50": {
+     "flagged": [
+      1,
+      42,
+      0.024,
+      [
+       0.004,
+       0.123
+      ]
+     ],
+     "unflagged": [
+      3,
+      340,
+      0.009,
+      [
+       0.003,
+       0.026
+      ]
+     ],
+     "base_rate_known": [
+      4,
+      382,
+      0.01
+     ],
+     "fisher_p": 0.3737,
+     "lift": 2.27
+    },
+    "x3": {
+     "flagged": [
+      25,
+      42,
+      0.595,
+      [
+       0.445,
+       0.73
+      ]
+     ],
+     "unflagged": [
+      176,
+      340,
+      0.518,
+      [
+       0.465,
+       0.57
+      ]
+     ],
+     "base_rate_known": [
+      201,
+      382,
+      0.526
+     ],
+     "fisher_p": 0.4134,
+     "lift": 1.13
+    },
+    "median_ratio": {
+     "flagged": 4.525045698036444,
+     "unflagged": 3.0867201240985422
+    }
+   },
+   "rnow": {
+    "n_known": 382,
+    "n_unknown": 113,
+    "n_flagged": 42,
+    "n_unflagged": 340,
+    "loss50": {
+     "flagged": [
+      2,
+      42,
+      0.048,
+      [
+       0.013,
+       0.158
+      ]
+     ],
+     "unflagged": [
+      10,
+      340,
+      0.029,
+      [
+       0.016,
+       0.053
+      ]
+     ],
+     "base_rate_known": [
+      12,
+      382,
+      0.031
+     ],
+     "fisher_p": 0.6295,
+     "lift": 1.52
+    },
+    "x3": {
+     "flagged": [
+      26,
+      42,
+      0.619,
+      [
+       0.468,
+       0.75
+      ]
+     ],
+     "unflagged": [
+      163,
+      340,
+      0.479,
+      [
+       0.427,
+       0.532
+      ]
+     ],
+     "base_rate_known": [
+      189,
+      382,
+      0.495
+     ],
+     "fisher_p": 0.1025,
+     "lift": 1.25
+    },
+    "median_ratio": {
+     "flagged": 4.359947616415679,
+     "unflagged": 2.7643170949297735
+    }
+   },
+   "mcap_ge400": {
+    "n_known": 258,
+    "n_unknown": 46,
+    "n_flagged": 21,
+    "n_unflagged": 237,
+    "loss50": {
+     "flagged": [
+      0,
+      21,
+      0.0,
+      [
+       0.0,
+       0.155
+      ]
+     ],
+     "unflagged": [
+      3,
+      237,
+      0.013,
+      [
+       0.004,
+       0.037
+      ]
+     ],
+     "base_rate_known": [
+      3,
+      258,
+      0.012
+     ],
+     "fisher_p": 1.0,
+     "lift": 0.0
+    },
+    "x3": {
+     "flagged": [
+      12,
+      21,
+      0.571,
+      [
+       0.365,
+       0.755
+      ]
+     ],
+     "unflagged": [
+      103,
+      237,
+      0.435,
+      [
+       0.373,
+       0.498
+      ]
+     ],
+     "base_rate_known": [
+      115,
+      258,
+      0.446
+     ],
+     "fisher_p": 0.2572,
+     "lift": 1.28
+    },
+    "median_ratio": {
+     "flagged": 4.16674348589755,
+     "unflagged": 2.468644645856377
+    }
+   },
+   "mcap_lt400": {
+    "n_known": 89,
+    "n_unknown": 59,
+    "n_flagged": 13,
+    "n_unflagged": 76,
+    "loss50": {
+     "flagged": [
+      1,
+      13,
+      0.077,
+      [
+       0.014,
+       0.333
+      ]
+     ],
+     "unflagged": [
+      0,
+      76,
+      0.0,
+      [
+       0.0,
+       0.048
+      ]
+     ],
+     "base_rate_known": [
+      1,
+      89,
+      0.011
+     ],
+     "fisher_p": 0.1461,
+     "lift": 6.85
+    },
+    "x3": {
+     "flagged": [
+      9,
+      13,
+      0.692,
+      [
+       0.424,
+       0.873
+      ]
+     ],
+     "unflagged": [
+      54,
+      76,
+      0.711,
+      [
+       0.6,
+       0.8
+      ]
+     ],
+     "base_rate_known": [
+      63,
+      89,
+      0.708
+     ],
+     "fisher_p": 1.0,
+     "lift": 0.98
+    },
+    "median_ratio": {
+     "flagged": 5.280613968200931,
+     "unflagged": 5.264835897723227
+    }
+   }
+  },
+  "R1b": {
+   "r5": {
+    "n_known": 382,
+    "n_unknown": 113,
+    "n_flagged": 77,
+    "n_unflagged": 305,
+    "loss50": {
+     "flagged": [
+      1,
+      77,
+      0.013,
+      [
+       0.002,
+       0.07
+      ]
+     ],
+     "unflagged": [
+      3,
+      305,
+      0.01,
+      [
+       0.003,
+       0.029
+      ]
+     ],
+     "base_rate_known": [
+      4,
+      382,
+      0.01
+     ],
+     "fisher_p": 1.0,
+     "lift": 1.24
+    },
+    "x3": {
+     "flagged": [
+      44,
+      77,
+      0.571,
+      [
+       0.46,
+       0.676
+      ]
+     ],
+     "unflagged": [
+      157,
+      305,
+      0.515,
+      [
+       0.459,
+       0.57
+      ]
+     ],
+     "base_rate_known": [
+      201,
+      382,
+      0.526
+     ],
+     "fisher_p": 0.4437,
+     "lift": 1.09
+    },
+    "median_ratio": {
+     "flagged": 4.070673524590589,
+     "unflagged": 3.058585337535229
+    }
+   },
+   "rnow": {
+    "n_known": 382,
+    "n_unknown": 113,
+    "n_flagged": 77,
+    "n_unflagged": 305,
+    "loss50": {
+     "flagged": [
+      4,
+      77,
+      0.052,
+      [
+       0.02,
+       0.126
+      ]
+     ],
+     "unflagged": [
+      8,
+      305,
+      0.026,
+      [
+       0.013,
+       0.051
+      ]
+     ],
+     "base_rate_known": [
+      12,
+      382,
+      0.031
+     ],
+     "fisher_p": 0.271,
+     "lift": 1.65
+    },
+    "x3": {
+     "flagged": [
+      46,
+      77,
+      0.597,
+      [
+       0.486,
+       0.7
+      ]
+     ],
+     "unflagged": [
+      143,
+      305,
+      0.469,
+      [
+       0.414,
+       0.525
+      ]
+     ],
+     "base_rate_known": [
+      189,
+      382,
+      0.495
+     ],
+     "fisher_p": 0.0553,
+     "lift": 1.21
+    },
+    "median_ratio": {
+     "flagged": 3.6595355563399306,
+     "unflagged": 2.715749564982587
+    }
+   },
+   "mcap_ge400": {
+    "n_known": 258,
+    "n_unknown": 46,
+    "n_flagged": 42,
+    "n_unflagged": 216,
+    "loss50": {
+     "flagged": [
+      0,
+      42,
+      0.0,
+      [
+       0.0,
+       0.084
+      ]
+     ],
+     "unflagged": [
+      3,
+      216,
+      0.014,
+      [
+       0.005,
+       0.04
+      ]
+     ],
+     "base_rate_known": [
+      3,
+      258,
+      0.012
+     ],
+     "fisher_p": 1.0,
+     "lift": 0.0
+    },
+    "x3": {
+     "flagged": [
+      21,
+      42,
+      0.5,
+      [
+       0.355,
+       0.645
+      ]
+     ],
+     "unflagged": [
+      94,
+      216,
+      0.435,
+      [
+       0.371,
+       0.502
+      ]
+     ],
+     "base_rate_known": [
+      115,
+      258,
+      0.446
+     ],
+     "fisher_p": 0.4986,
+     "lift": 1.12
+    },
+    "median_ratio": {
+     "flagged": 3.914103281267237,
+     "unflagged": 2.57415876019475
+    }
+   },
+   "mcap_lt400": {
+    "n_known": 89,
+    "n_unknown": 59,
+    "n_flagged": 20,
+    "n_unflagged": 69,
+    "loss50": {
+     "flagged": [
+      1,
+      20,
+      0.05,
+      [
+       0.009,
+       0.236
+      ]
+     ],
+     "unflagged": [
+      0,
+      69,
+      0.0,
+      [
+       0.0,
+       0.053
+      ]
+     ],
+     "base_rate_known": [
+      1,
+      89,
+      0.011
+     ],
+     "fisher_p": 0.2247,
+     "lift": 4.45
+    },
+    "x3": {
+     "flagged": [
+      13,
+      20,
+      0.65,
+      [
+       0.433,
+       0.819
+      ]
+     ],
+     "unflagged": [
+      50,
+      69,
+      0.725,
+      [
+       0.61,
+       0.816
+      ]
+     ],
+     "base_rate_known": [
+      63,
+      89,
+      0.708
+     ],
+     "fisher_p": 0.5803,
+     "lift": 0.92
+    },
+    "median_ratio": {
+     "flagged": 5.264835897723227,
+     "unflagged": 5.344502149209361
+    }
+   }
+  },
+  "R2": {
+   "r5": {
+    "n_known": 452,
+    "n_unknown": 43,
+    "n_flagged": 68,
+    "n_unflagged": 384,
+    "loss50": {
+     "flagged": [
+      2,
+      68,
+      0.029,
+      [
+       0.008,
+       0.101
+      ]
+     ],
+     "unflagged": [
+      6,
+      384,
+      0.016,
+      [
+       0.007,
+       0.034
+      ]
+     ],
+     "base_rate_known": [
+      8,
+      452,
+      0.018
+     ],
+     "fisher_p": 0.3444,
+     "lift": 1.66
+    },
+    "x3": {
+     "flagged": [
+      47,
+      68,
+      0.691,
+      [
+       0.574,
+       0.788
+      ]
+     ],
+     "unflagged": [
+      195,
+      384,
+      0.508,
+      [
+       0.458,
+       0.557
+      ]
+     ],
+     "base_rate_known": [
+      242,
+      452,
+      0.535
+     ],
+     "fisher_p": 0.0055,
+     "lift": 1.29
+    },
+    "median_ratio": {
+     "flagged": 4.400000186994967,
+     "unflagged": 3.0357142857142856
+    }
+   },
+   "rnow": {
+    "n_known": 452,
+    "n_unknown": 43,
+    "n_flagged": 68,
+    "n_unflagged": 384,
+    "loss50": {
+     "flagged": [
+      3,
+      68,
+      0.044,
+      [
+       0.015,
+       0.122
+      ]
+     ],
+     "unflagged": [
+      14,
+      384,
+      0.036,
+      [
+       0.022,
+       0.06
+      ]
+     ],
+     "base_rate_known": [
+      17,
+      452,
+      0.038
+     ],
+     "fisher_p": 0.7298,
+     "lift": 1.17
+    },
+    "x3": {
+     "flagged": [
+      39,
+      68,
+      0.574,
+      [
+       0.455,
+       0.684
+      ]
+     ],
+     "unflagged": [
+      180,
+      384,
+      0.469,
+      [
+       0.419,
+       0.519
+      ]
+     ],
+     "base_rate_known": [
+      219,
+      452,
+      0.485
+     ],
+     "fisher_p": 0.1162,
+     "lift": 1.18
+    },
+    "median_ratio": {
+     "flagged": 3.5926643734599017,
+     "unflagged": 2.752045666417417
+    }
+   },
+   "mcap_ge400": {
+    "n_known": 304,
+    "n_unknown": 0,
+    "n_flagged": 32,
+    "n_unflagged": 272,
+    "loss50": {
+     "flagged": [
+      2,
+      32,
+      0.062,
+      [
+       0.017,
+       0.201
+      ]
+     ],
+     "unflagged": [
+      4,
+      272,
+      0.015,
+      [
+       0.006,
+       0.037
+      ]
+     ],
+     "base_rate_known": [
+      6,
+      304,
+      0.02
+     ],
+     "fisher_p": 0.1232,
+     "lift": 3.17
+    },
+    "x3": {
+     "flagged": [
+      19,
+      32,
+      0.594,
+      [
+       0.423,
+       0.745
+      ]
+     ],
+     "unflagged": [
+      116,
+      272,
+      0.426,
+      [
+       0.369,
+       0.486
+      ]
+     ],
+     "base_rate_known": [
+      135,
+      304,
+      0.444
+     ],
+     "fisher_p": 0.0902,
+     "lift": 1.34
+    },
+    "median_ratio": {
+     "flagged": 3.3251397612404374,
+     "unflagged": 2.443988029770147
+    }
+   },
+   "mcap_lt400": {
+    "n_known": 148,
+    "n_unknown": 0,
+    "n_flagged": 36,
+    "n_unflagged": 112,
+    "loss50": {
+     "flagged": [
+      0,
+      36,
+      0.0,
+      [
+       0.0,
+       0.096
+      ]
+     ],
+     "unflagged": [
+      2,
+      112,
+      0.018,
+      [
+       0.005,
+       0.063
+      ]
+     ],
+     "base_rate_known": [
+      2,
+      148,
+      0.014
+     ],
+     "fisher_p": 1.0,
+     "lift": 0.0
+    },
+    "x3": {
+     "flagged": [
+      28,
+      36,
+      0.778,
+      [
+       0.619,
+       0.883
+      ]
+     ],
+     "unflagged": [
+      79,
+      112,
+      0.705,
+      [
+       0.615,
+       0.782
+      ]
+     ],
+     "base_rate_known": [
+      107,
+      148,
+      0.723
+     ],
+     "fisher_p": 0.5216,
+     "lift": 1.08
+    },
+    "median_ratio": {
+     "flagged": 5.995454545454545,
+     "unflagged": 4.802140653393033
+    }
+   }
+  },
+  "R2b": {
+   "r5": {
+    "n_known": 452,
+    "n_unknown": 43,
+    "n_flagged": 44,
+    "n_unflagged": 408,
+    "loss50": {
+     "flagged": [
+      2,
+      44,
+      0.045,
+      [
+       0.013,
+       0.151
+      ]
+     ],
+     "unflagged": [
+      6,
+      408,
+      0.015,
+      [
+       0.007,
+       0.032
+      ]
+     ],
+     "base_rate_known": [
+      8,
+      452,
+      0.018
+     ],
+     "fisher_p": 0.178,
+     "lift": 2.57
+    },
+    "x3": {
+     "flagged": [
+      31,
+      44,
+      0.705,
+      [
+       0.558,
+       0.818
+      ]
+     ],
+     "unflagged": [
+      211,
+      408,
+      0.517,
+      [
+       0.469,
+       0.565
+      ]
+     ],
+     "base_rate_known": [
+      242,
+      452,
+      0.535
+     ],
+     "fisher_p": 0.025,
+     "lift": 1.32
+    },
+    "median_ratio": {
+     "flagged": 5.16000002906436,
+     "unflagged": 3.099233538945895
+    }
+   },
+   "rnow": {
+    "n_known": 452,
+    "n_unknown": 43,
+    "n_flagged": 44,
+    "n_unflagged": 408,
+    "loss50": {
+     "flagged": [
+      2,
+      44,
+      0.045,
+      [
+       0.013,
+       0.151
+      ]
+     ],
+     "unflagged": [
+      15,
+      408,
+      0.037,
+      [
+       0.022,
+       0.06
+      ]
+     ],
+     "base_rate_known": [
+      17,
+      452,
+      0.038
+     ],
+     "fisher_p": 0.6764,
+     "lift": 1.21
+    },
+    "x3": {
+     "flagged": [
+      27,
+      44,
+      0.614,
+      [
+       0.466,
+       0.743
+      ]
+     ],
+     "unflagged": [
+      192,
+      408,
+      0.471,
+      [
+       0.423,
+       0.519
+      ]
+     ],
+     "base_rate_known": [
+      219,
+      452,
+      0.485
+     ],
+     "fisher_p": 0.0814,
+     "lift": 1.27
+    },
+    "median_ratio": {
+     "flagged": 4.337700842009322,
+     "unflagged": 2.7643170949297735
+    }
+   },
+   "mcap_ge400": {
+    "n_known": 304,
+    "n_unknown": 0,
+    "n_flagged": 20,
+    "n_unflagged": 284,
+    "loss50": {
+     "flagged": [
+      2,
+      20,
+      0.1,
+      [
+       0.028,
+       0.301
+      ]
+     ],
+     "unflagged": [
+      4,
+      284,
+      0.014,
+      [
+       0.005,
+       0.036
+      ]
+     ],
+     "base_rate_known": [
+      6,
+      304,
+      0.02
+     ],
+     "fisher_p": 0.0527,
+     "lift": 5.07
+    },
+    "x3": {
+     "flagged": [
+      12,
+      20,
+      0.6,
+      [
+       0.387,
+       0.781
+      ]
+     ],
+     "unflagged": [
+      123,
+      284,
+      0.433,
+      [
+       0.377,
+       0.491
+      ]
+     ],
+     "base_rate_known": [
+      135,
+      304,
+      0.444
+     ],
+     "fisher_p": 0.167,
+     "lift": 1.35
+    },
+    "median_ratio": {
+     "flagged": 3.6073200537275967,
+     "unflagged": 2.5060938096822616
+    }
+   },
+   "mcap_lt400": {
+    "n_known": 148,
+    "n_unknown": 0,
+    "n_flagged": 24,
+    "n_unflagged": 124,
+    "loss50": {
+     "flagged": [
+      0,
+      24,
+      0.0,
+      [
+       0.0,
+       0.138
+      ]
+     ],
+     "unflagged": [
+      2,
+      124,
+      0.016,
+      [
+       0.004,
+       0.057
+      ]
+     ],
+     "base_rate_known": [
+      2,
+      148,
+      0.014
+     ],
+     "fisher_p": 1.0,
+     "lift": 0.0
+    },
+    "x3": {
+     "flagged": [
+      19,
+      24,
+      0.792,
+      [
+       0.595,
+       0.908
+      ]
+     ],
+     "unflagged": [
+      88,
+      124,
+      0.71,
+      [
+       0.624,
+       0.782
+      ]
+     ],
+     "base_rate_known": [
+      107,
+      148,
+      0.723
+     ],
+     "fisher_p": 0.4671,
+     "lift": 1.1
+    },
+    "median_ratio": {
+     "flagged": 7.158912919561976,
+     "unflagged": 4.616544037206274
+    }
+   }
+  },
+  "R3": {
+   "r5": {
+    "n_known": 486,
+    "n_unknown": 9,
+    "n_flagged": 31,
+    "n_unflagged": 455,
+    "loss50": {
+     "flagged": [
+      1,
+      31,
+      0.032,
+      [
+       0.006,
+       0.162
+      ]
+     ],
+     "unflagged": [
+      6,
+      455,
+      0.013,
+      [
+       0.006,
+       0.028
+      ]
+     ],
+     "base_rate_known": [
+      7,
+      486,
+      0.014
+     ],
+     "fisher_p": 0.3715,
+     "lift": 2.24
+    },
+    "x3": {
+     "flagged": [
+      18,
+      31,
+      0.581,
+      [
+       0.408,
+       0.736
+      ]
+     ],
+     "unflagged": [
+      247,
+      455,
+      0.543,
+      [
+       0.497,
+       0.588
+      ]
+     ],
+     "base_rate_known": [
+      265,
+      486,
+      0.545
+     ],
+     "fisher_p": 0.7136,
+     "lift": 1.06
+    },
+    "median_ratio": {
+     "flagged": 3.5750491551135855,
+     "unflagged": 3.2898946340460524
+    }
+   },
+   "rnow": {
+    "n_known": 486,
+    "n_unknown": 9,
+    "n_flagged": 31,
+    "n_unflagged": 455,
+    "loss50": {
+     "flagged": [
+      4,
+      31,
+      0.129,
+      [
+       0.051,
+       0.289
+      ]
+     ],
+     "unflagged": [
+      15,
+      455,
+      0.033,
+      [
+       0.02,
+       0.054
+      ]
+     ],
+     "base_rate_known": [
+      19,
+      486,
+      0.039
+     ],
+     "fisher_p": 0.0268,
+     "lift": 3.3
+    },
+    "x3": {
+     "flagged": [
+      14,
+      31,
+      0.452,
+      [
+       0.292,
+       0.622
+      ]
+     ],
+     "unflagged": [
+      227,
+      455,
+      0.499,
+      [
+       0.453,
+       0.545
+      ]
+     ],
+     "base_rate_known": [
+      241,
+      486,
+      0.496
+     ],
+     "fisher_p": 0.7114,
+     "lift": 0.91
+    },
+    "median_ratio": {
+     "flagged": 2.2837525403436967,
+     "unflagged": 2.992789354806397
+    }
+   },
+   "mcap_ge400": {
+    "n_known": 303,
+    "n_unknown": 1,
+    "n_flagged": 12,
+    "n_unflagged": 291,
+    "loss50": {
+     "flagged": [
+      0,
+      12,
+      0.0,
+      [
+       0.0,
+       0.243
+      ]
+     ],
+     "unflagged": [
+      5,
+      291,
+      0.017,
+      [
+       0.007,
+       0.04
+      ]
+     ],
+     "base_rate_known": [
+      5,
+      303,
+      0.017
+     ],
+     "fisher_p": 1.0,
+     "lift": 0.0
+    },
+    "x3": {
+     "flagged": [
+      6,
+      12,
+      0.5,
+      [
+       0.254,
+       0.746
+      ]
+     ],
+     "unflagged": [
+      129,
+      291,
+      0.443,
+      [
+       0.387,
+       0.501
+      ]
+     ],
+     "base_rate_known": [
+      135,
+      303,
+      0.446
+     ],
+     "fisher_p": 0.7717,
+     "lift": 1.12
+    },
+    "median_ratio": {
+     "flagged": 3.1117235040383244,
+     "unflagged": 2.6351070152723284
+    }
+   },
+   "mcap_lt400": {
+    "n_known": 142,
+    "n_unknown": 6,
+    "n_flagged": 16,
+    "n_unflagged": 126,
+    "loss50": {
+     "flagged": [
+      1,
+      16,
+      0.062,
+      [
+       0.011,
+       0.283
+      ]
+     ],
+     "unflagged": [
+      1,
+      126,
+      0.008,
+      [
+       0.001,
+       0.044
+      ]
+     ],
+     "base_rate_known": [
+      2,
+      142,
+      0.014
+     ],
+     "fisher_p": 0.2134,
+     "lift": 4.44
+    },
+    "x3": {
+     "flagged": [
+      11,
+      16,
+      0.688,
+      [
+       0.444,
+       0.858
+      ]
+     ],
+     "unflagged": [
+      92,
+      126,
+      0.73,
+      [
+       0.647,
+       0.8
+      ]
+     ],
+     "base_rate_known": [
+      103,
+      142,
+      0.725
+     ],
+     "fisher_p": 0.7684,
+     "lift": 0.95
+    },
+    "median_ratio": {
+     "flagged": 6.371428571428571,
+     "unflagged": 4.834730710537261
+    }
+   }
+  },
+  "R4": {
+   "r5": {
+    "n_known": 445,
+    "n_unknown": 50,
+    "n_flagged": 27,
+    "n_unflagged": 418,
+    "loss50": {
+     "flagged": [
+      0,
+      27,
+      0.0,
+      [
+       0.0,
+       0.125
+      ]
+     ],
+     "unflagged": [
+      7,
+      418,
+      0.017,
+      [
+       0.008,
+       0.034
+      ]
+     ],
+     "base_rate_known": [
+      7,
+      445,
+      0.016
+     ],
+     "fisher_p": 1.0,
+     "lift": 0.0
+    },
+    "x3": {
+     "flagged": [
+      19,
+      27,
+      0.704,
+      [
+       0.515,
+       0.841
+      ]
+     ],
+     "unflagged": [
+      227,
+      418,
+      0.543,
+      [
+       0.495,
+       0.59
+      ]
+     ],
+     "base_rate_known": [
+      246,
+      445,
+      0.553
+     ],
+     "fisher_p": 0.114,
+     "lift": 1.27
+    },
+    "median_ratio": {
+     "flagged": 5.280613968200931,
+     "unflagged": 3.2869998931884767
+    }
+   },
+   "rnow": {
+    "n_known": 445,
+    "n_unknown": 50,
+    "n_flagged": 27,
+    "n_unflagged": 418,
+    "loss50": {
+     "flagged": [
+      0,
+      27,
+      0.0,
+      [
+       0.0,
+       0.125
+      ]
+     ],
+     "unflagged": [
+      16,
+      418,
+      0.038,
+      [
+       0.024,
+       0.061
+      ]
+     ],
+     "base_rate_known": [
+      16,
+      445,
+      0.036
+     ],
+     "fisher_p": 0.6132,
+     "lift": 0.0
+    },
+    "x3": {
+     "flagged": [
+      18,
+      27,
+      0.667,
+      [
+       0.478,
+       0.814
+      ]
+     ],
+     "unflagged": [
+      203,
+      418,
+      0.486,
+      [
+       0.438,
+       0.533
+      ]
+     ],
+     "base_rate_known": [
+      221,
+      445,
+      0.497
+     ],
+     "fisher_p": 0.0761,
+     "lift": 1.34
+    },
+    "median_ratio": {
+     "flagged": 4.9961710154433625,
+     "unflagged": 2.904687862774532
+    }
+   },
+   "mcap_ge400": {
+    "n_known": 276,
+    "n_unknown": 28,
+    "n_flagged": 18,
+    "n_unflagged": 258,
+    "loss50": {
+     "flagged": [
+      0,
+      18,
+      0.0,
+      [
+       0.0,
+       0.176
+      ]
+     ],
+     "unflagged": [
+      5,
+      258,
+      0.019,
+      [
+       0.008,
+       0.045
+      ]
+     ],
+     "base_rate_known": [
+      5,
+      276,
+      0.018
+     ],
+     "fisher_p": 1.0,
+     "lift": 0.0
+    },
+    "x3": {
+     "flagged": [
+      11,
+      18,
+      0.611,
+      [
+       0.386,
+       0.797
+      ]
+     ],
+     "unflagged": [
+      116,
+      258,
+      0.45,
+      [
+       0.39,
+       0.511
+      ]
+     ],
+     "base_rate_known": [
+      127,
+      276,
+      0.46
+     ],
+     "fisher_p": 0.2244,
+     "lift": 1.33
+    },
+    "median_ratio": {
+     "flagged": 4.16674348589755,
+     "unflagged": 2.6487398873730963
+    }
+   },
+   "mcap_lt400": {
+    "n_known": 134,
+    "n_unknown": 14,
+    "n_flagged": 8,
+    "n_unflagged": 126,
+    "loss50": {
+     "flagged": [
+      0,
+      8,
+      0.0,
+      [
+       0.0,
+       0.324
+      ]
+     ],
+     "unflagged": [
+      2,
+      126,
+      0.016,
+      [
+       0.004,
+       0.056
+      ]
+     ],
+     "base_rate_known": [
+      2,
+      134,
+      0.015
+     ],
+     "fisher_p": 1.0,
+     "lift": 0.0
+    },
+    "x3": {
+     "flagged": [
+      7,
+      8,
+      0.875,
+      [
+       0.529,
+       0.978
+      ]
+     ],
+     "unflagged": [
+      89,
+      126,
+      0.706,
+      [
+       0.622,
+       0.779
+      ]
+     ],
+     "base_rate_known": [
+      96,
+      134,
+      0.716
+     ],
+     "fisher_p": 0.4398,
+     "lift": 1.22
+    },
+    "median_ratio": {
+     "flagged": 7.750683135454977,
+     "unflagged": 4.882089554575723
+    }
+   }
+  },
+  "R5": {
+   "r5": {
+    "n_known": 385,
+    "n_unknown": 110,
+    "n_flagged": 111,
+    "n_unflagged": 274,
+    "loss50": {
+     "flagged": [
+      3,
+      111,
+      0.027,
+      [
+       0.009,
+       0.076
+      ]
+     ],
+     "unflagged": [
+      2,
+      274,
+      0.007,
+      [
+       0.002,
+       0.026
+      ]
+     ],
+     "base_rate_known": [
+      5,
+      385,
+      0.013
+     ],
+     "fisher_p": 0.1466,
+     "lift": 2.08
+    },
+    "x3": {
+     "flagged": [
+      68,
+      111,
+      0.613,
+      [
+       0.52,
+       0.698
+      ]
+     ],
+     "unflagged": [
+      132,
+      274,
+      0.482,
+      [
+       0.423,
+       0.541
+      ]
+     ],
+     "base_rate_known": [
+      200,
+      385,
+      0.519
+     ],
+     "fisher_p": 0.0242,
+     "lift": 1.18
+    },
+    "median_ratio": {
+     "flagged": 3.8459870085195123,
+     "unflagged": 2.913052109702343
+    }
+   },
+   "rnow": {
+    "n_known": 385,
+    "n_unknown": 110,
+    "n_flagged": 111,
+    "n_unflagged": 274,
+    "loss50": {
+     "flagged": [
+      5,
+      111,
+      0.045,
+      [
+       0.019,
+       0.101
+      ]
+     ],
+     "unflagged": [
+      8,
+      274,
+      0.029,
+      [
+       0.015,
+       0.057
+      ]
+     ],
+     "base_rate_known": [
+      13,
+      385,
+      0.034
+     ],
+     "fisher_p": 0.5334,
+     "lift": 1.33
+    },
+    "x3": {
+     "flagged": [
+      62,
+      111,
+      0.559,
+      [
+       0.466,
+       0.647
+      ]
+     ],
+     "unflagged": [
+      124,
+      274,
+      0.453,
+      [
+       0.395,
+       0.512
+      ]
+     ],
+     "base_rate_known": [
+      186,
+      385,
+      0.483
+     ],
+     "fisher_p": 0.0715,
+     "lift": 1.16
+    },
+    "median_ratio": {
+     "flagged": 3.5464307032478777,
+     "unflagged": 2.569736126754707
+    }
+   },
+   "mcap_ge400": {
+    "n_known": 259,
+    "n_unknown": 45,
+    "n_flagged": 52,
+    "n_unflagged": 207,
+    "loss50": {
+     "flagged": [
+      2,
+      52,
+      0.038,
+      [
+       0.011,
+       0.13
+      ]
+     ],
+     "unflagged": [
+      2,
+      207,
+      0.01,
+      [
+       0.003,
+       0.035
+      ]
+     ],
+     "base_rate_known": [
+      4,
+      259,
+      0.015
+     ],
+     "fisher_p": 0.1808,
+     "lift": 2.49
+    },
+    "x3": {
+     "flagged": [
+      28,
+      52,
+      0.538,
+      [
+       0.405,
+       0.667
+      ]
+     ],
+     "unflagged": [
+      86,
+      207,
+      0.415,
+      [
+       0.35,
+       0.484
+      ]
+     ],
+     "base_rate_known": [
+      114,
+      259,
+      0.44
+     ],
+     "fisher_p": 0.1202,
+     "lift": 1.22
+    },
+    "median_ratio": {
+     "flagged": 3.168444654144166,
+     "unflagged": 2.441847132415803
+    }
+   },
+   "mcap_lt400": {
+    "n_known": 91,
+    "n_unknown": 57,
+    "n_flagged": 47,
+    "n_unflagged": 44,
+    "loss50": {
+     "flagged": [
+      1,
+      47,
+      0.021,
+      [
+       0.004,
+       0.111
+      ]
+     ],
+     "unflagged": [
+      0,
+      44,
+      0.0,
+      [
+       0.0,
+       0.08
+      ]
+     ],
+     "base_rate_known": [
+      1,
+      91,
+      0.011
+     ],
+     "fisher_p": 1.0,
+     "lift": 1.94
+    },
+    "x3": {
+     "flagged": [
+      32,
+      47,
+      0.681,
+      [
+       0.538,
+       0.796
+      ]
+     ],
+     "unflagged": [
+      31,
+      44,
+      0.705,
+      [
+       0.558,
+       0.818
+      ]
+     ],
+     "base_rate_known": [
+      63,
+      91,
+      0.692
+     ],
+     "fisher_p": 0.8244,
+     "lift": 0.98
+    },
+    "median_ratio": {
+     "flagged": 5.6709005285833864,
+     "unflagged": 4.882089554575723
+    }
+   }
+  },
+  "ANY_known": {
+   "r5": {
+    "n_known": 495,
+    "n_unknown": 0,
+    "n_flagged": 139,
+    "n_unflagged": 356,
+    "loss50": {
+     "flagged": [
+      4,
+      139,
+      0.029,
+      [
+       0.011,
+       0.072
+      ]
+     ],
+     "unflagged": [
+      5,
+      356,
+      0.014,
+      [
+       0.006,
+       0.032
+      ]
+     ],
+     "base_rate_known": [
+      9,
+      495,
+      0.018
+     ],
+     "fisher_p": 0.2761,
+     "lift": 1.58
+    },
+    "x3": {
+     "flagged": [
+      89,
+      139,
+      0.64,
+      [
+       0.558,
+       0.715
+      ]
+     ],
+     "unflagged": [
+      181,
+      356,
+      0.508,
+      [
+       0.457,
+       0.56
+      ]
+     ],
+     "base_rate_known": [
+      270,
+      495,
+      0.545
+     ],
+     "fisher_p": 0.009,
+     "lift": 1.17
+    },
+    "median_ratio": {
+     "flagged": 4.123441854399767,
+     "unflagged": 3.064606744625886
+    }
+   },
+   "rnow": {
+    "n_known": 495,
+    "n_unknown": 0,
+    "n_flagged": 139,
+    "n_unflagged": 356,
+    "loss50": {
+     "flagged": [
+      8,
+      139,
+      0.058,
+      [
+       0.029,
+       0.109
+      ]
+     ],
+     "unflagged": [
+      13,
+      356,
+      0.037,
+      [
+       0.021,
+       0.061
+      ]
+     ],
+     "base_rate_known": [
+      21,
+      495,
+      0.042
+     ],
+     "fisher_p": 0.3231,
+     "lift": 1.36
+    },
+    "x3": {
+     "flagged": [
+      78,
+      139,
+      0.561,
+      [
+       0.478,
+       0.641
+      ]
+     ],
+     "unflagged": [
+      167,
+      356,
+      0.469,
+      [
+       0.418,
+       0.521
+      ]
+     ],
+     "base_rate_known": [
+      245,
+      495,
+      0.495
+     ],
+     "fisher_p": 0.0721,
+     "lift": 1.13
+    },
+    "median_ratio": {
+     "flagged": 3.5473832930513867,
+     "unflagged": 2.752045666417417
+    }
+   },
+   "mcap_ge400": {
+    "n_known": 304,
+    "n_unknown": 0,
+    "n_flagged": 69,
+    "n_unflagged": 235,
+    "loss50": {
+     "flagged": [
+      2,
+      69,
+      0.029,
+      [
+       0.008,
+       0.1
+      ]
+     ],
+     "unflagged": [
+      4,
+      235,
+      0.017,
+      [
+       0.007,
+       0.043
+      ]
+     ],
+     "base_rate_known": [
+      6,
+      304,
+      0.02
+     ],
+     "fisher_p": 0.6215,
+     "lift": 1.47
+    },
+    "x3": {
+     "flagged": [
+      39,
+      69,
+      0.565,
+      [
+       0.448,
+       0.676
+      ]
+     ],
+     "unflagged": [
+      96,
+      235,
+      0.409,
+      [
+       0.348,
+       0.472
+      ]
+     ],
+     "base_rate_known": [
+      135,
+      304,
+      0.444
+     ],
+     "fisher_p": 0.0272,
+     "lift": 1.27
+    },
+    "median_ratio": {
+     "flagged": 3.1717134540484513,
+     "unflagged": 2.406502335065938
+    }
+   },
+   "mcap_lt400": {
+    "n_known": 148,
+    "n_unknown": 0,
+    "n_flagged": 61,
+    "n_unflagged": 87,
+    "loss50": {
+     "flagged": [
+      2,
+      61,
+      0.033,
+      [
+       0.009,
+       0.112
+      ]
+     ],
+     "unflagged": [
+      0,
+      87,
+      0.0,
+      [
+       0.0,
+       0.042
+      ]
+     ],
+     "base_rate_known": [
+      2,
+      148,
+      0.014
+     ],
+     "fisher_p": 0.1682,
+     "lift": 2.43
+    },
+    "x3": {
+     "flagged": [
+      45,
+      61,
+      0.738,
+      [
+       0.616,
+       0.832
+      ]
+     ],
+     "unflagged": [
+      62,
+      87,
+      0.713,
+      [
+       0.61,
+       0.797
+      ]
+     ],
+     "base_rate_known": [
+      107,
+      148,
+      0.723
+     ],
+     "fisher_p": 0.8524,
+     "lift": 1.02
+    },
+    "median_ratio": {
+     "flagged": 5.377924346793219,
+     "unflagged": 4.580500102041959
+    }
+   }
+  }
+ },
+ "mcap_split": {
+  "n_ge400": 304,
+  "n_lt400": 148,
+  "n_no_mcap": 43
+ },
+ "flagged_names": {
+  "R1": [
+   [
+    "JHS",
+    0.48
+   ],
+   [
+    "KSHITIJPOL",
+    0.78
+   ],
+   [
+    "GLOBE",
+    0.86
+   ],
+   [
+    "MCL",
+    0.92
+   ],
+   [
+    "MITTAL",
+    1.0
+   ],
+   [
+    "MAHEPC",
+    1.01
+   ],
+   [
+    "SWSOLAR",
+    1.07
+   ],
+   [
+    "ISFT",
+    1.29
+   ],
+   [
+    "KANANIIND",
+    1.29
+   ],
+   [
+    "MOTILALOFS",
+    1.41
+   ],
+   [
+    "BFINVEST",
+    1.62
+   ],
+   [
+    "NIACL",
+    1.87
+   ],
+   [
+    "UNICHEMLAB",
+    1.93
+   ],
+   [
+    "SHEMAROO",
+    1.95
+   ],
+   [
+    "CENTRUM",
+    2.05
+   ],
+   [
+    "ITDC",
+    2.51
+   ],
+   [
+    "TEXINFRA",
+    2.8
+   ],
+   [
+    "MODIRUBBER",
+    3.93
+   ],
+   [
+    "MGEL",
+    4.07
+   ],
+   [
+    "OBEROIRLTY",
+    4.09
+   ],
+   [
+    "ASHOKLEY",
+    4.17
+   ],
+   [
+    "SILINV",
+    4.53
+   ],
+   [
+    "PILANIINVS",
+    4.98
+   ],
+   [
+    "BIL",
+    5.28
+   ],
+   [
+    "UNIVCABLES",
+    5.56
+   ],
+   [
+    "GEECEE",
+    5.61
+   ],
+   [
+    "THOMASCOOK",
+    5.74
+   ],
+   [
+    "M&M",
+    5.91
+   ],
+   [
+    "ARVSMART",
+    7.46
+   ],
+   [
+    "TEMBO",
+    7.67
+   ],
+   [
+    "GLOBAL",
+    8.0
+   ],
+   [
+    "PCJEWELLER",
+    8.81
+   ],
+   [
+    "BBL",
+    9.6
+   ],
+   [
+    "BDL",
+    10.06
+   ],
+   [
+    "SAFARI",
+    11.21
+   ],
+   [
+    "POWERMECH",
+    13.48
+   ],
+   [
+    "ZENTEC",
+    17.79
+   ],
+   [
+    "FACT",
+    19.89
+   ],
+   [
+    "RVNL",
+    21.07
+   ],
+   [
+    "LANDSMILL",
+    21.65
+   ],
+   [
+    "DSSL",
+    29.36
+   ],
+   [
+    "LLOYDSENGG",
+    81.3
+   ]
+  ],
+  "R2": [
+   [
+    "SADBHIN",
+    0.23
+   ],
+   [
+    "SADBHAV",
+    0.24
+   ],
+   [
+    "NATHBIOGEN",
+    0.61
+   ],
+   [
+    "GAYAPROJ",
+    0.63
+   ],
+   [
+    "SEJALLTD",
+    0.68
+   ],
+   [
+    "CROMPTON",
+    1.05
+   ],
+   [
+    "SWSOLAR",
+    1.07
+   ],
+   [
+    "GRANULES",
+    1.37
+   ],
+   [
+    "EMAMILTD",
+    1.67
+   ],
+   [
+    "NIPPOBATRY",
+    1.74
+   ],
+   [
+    "CENTRUM",
+    2.05
+   ],
+   [
+    "ZEEMEDIA",
+    2.09
+   ],
+   [
+    "ANDHRAPAP",
+    2.21
+   ],
+   [
+    "GTLINFRA",
+    2.31
+   ],
+   [
+    "HLVLTD",
+    2.36
+   ],
+   [
+    "KMSUGAR",
+    2.56
+   ],
+   [
+    "MFSL",
+    2.57
+   ],
+   [
+    "SAKHTISUG",
+    2.58
+   ],
+   [
+    "EVEREADY",
+    2.65
+   ],
+   [
+    "STEELXIND",
+    2.69
+   ],
+   [
+    "LAURUSLABS",
+    2.99
+   ],
+   [
+    "AHLUCONT",
+    3.06
+   ],
+   [
+    "BALRAMCHIN",
+    3.06
+   ],
+   [
+    "UTTAMSUGAR",
+    3.11
+   ],
+   [
+    "PATELENG",
+    3.17
+   ],
+   [
+    "CINELINE",
+    3.3
+   ],
+   [
+    "SEPC",
+    3.32
+   ],
+   [
+    "RENUKA",
+    3.33
+   ],
+   [
+    "ZUARI",
+    3.36
+   ],
+   [
+    "ADANIENSOL",
+    3.61
+   ],
+   [
+    "CHAMBLFERT",
+    3.65
+   ],
+   [
+    "MARALOVER",
+    4.12
+   ],
+   [
+    "BAFNAPH",
+    4.22
+   ],
+   [
+    "DBCORP",
+    4.39
+   ],
+   [
+    "RTNPOWER",
+    4.4
+   ],
+   [
+    "SUMEETINDS",
+    4.61
+   ],
+   [
+    "ELECTCAST",
+    4.9
+   ],
+   [
+    "MAGNUM",
+    5.15
+   ],
+   [
+    "HCC",
+    5.16
+   ],
+   [
+    "BCG",
+    5.26
+   ],
+   [
+    "EKC",
+    5.34
+   ],
+   [
+    "RELIGARE",
+    5.58
+   ],
+   [
+    "WOCKPHARMA",
+    5.58
+   ],
+   [
+    "LEMONTREE",
+    5.96
+   ],
+   [
+    "ASIANHOTNR",
+    6.0
+   ],
+   [
+    "VISACHROME",
+    7.02
+   ],
+   [
+    "NITCO",
+    7.16
+   ],
+   [
+    "20MICRONS",
+    7.46
+   ],
+   [
+    "WANBURY",
+    7.57
+   ],
+   [
+    "PENINLAND",
+    7.66
+   ],
+   [
+    "BLKASHYAP",
+    9.06
+   ],
+   [
+    "LOKESHMACH",
+    9.25
+   ],
+   [
+    "JSWENERGY",
+    9.7
+   ],
+   [
+    "DEEPAKFERT",
+    10.45
+   ],
+   [
+    "RELINFRA",
+    10.76
+   ],
+   [
+    "OPTIEMUS",
+    11.1
+   ],
+   [
+    "WSI",
+    16.09
+   ],
+   [
+    "RPOWER",
+    16.13
+   ],
+   [
+    "JSL",
+    16.9
+   ],
+   [
+    "RAMKY",
+    18.88
+   ],
+   [
+    "WINDMACHIN",
+    21.2
+   ],
+   [
+    "DBREALTY",
+    24.69
+   ],
+   [
+    "SPMLINFRA",
+    27.55
+   ],
+   [
+    "TI",
+    27.86
+   ],
+   [
+    "AURIONPRO",
+    34.28
+   ],
+   [
+    "EASTSILK",
+    35.86
+   ],
+   [
+    "ELECON",
+    45.34
+   ],
+   [
+    "CCCL",
+    129.85
+   ]
+  ],
+  "R2b": [
+   [
+    "SADBHIN",
+    0.23
+   ],
+   [
+    "SADBHAV",
+    0.24
+   ],
+   [
+    "GAYAPROJ",
+    0.63
+   ],
+   [
+    "CROMPTON",
+    1.05
+   ],
+   [
+    "EMAMILTD",
+    1.67
+   ],
+   [
+    "NIPPOBATRY",
+    1.74
+   ],
+   [
+    "ZEEMEDIA",
+    2.09
+   ],
+   [
+    "ANDHRAPAP",
+    2.21
+   ],
+   [
+    "GTLINFRA",
+    2.31
+   ],
+   [
+    "HLVLTD",
+    2.36
+   ],
+   [
+    "MFSL",
+    2.57
+   ],
+   [
+    "SAKHTISUG",
+    2.58
+   ],
+   [
+    "EVEREADY",
+    2.65
+   ],
+   [
+    "BALRAMCHIN",
+    3.06
+   ],
+   [
+    "PATELENG",
+    3.17
+   ],
+   [
+    "CINELINE",
+    3.3
+   ],
+   [
+    "SEPC",
+    3.32
+   ],
+   [
+    "ADANIENSOL",
+    3.61
+   ],
+   [
+    "BAFNAPH",
+    4.22
+   ],
+   [
+    "RTNPOWER",
+    4.4
+   ],
+   [
+    "ELECTCAST",
+    4.9
+   ],
+   [
+    "MAGNUM",
+    5.15
+   ],
+   [
+    "HCC",
+    5.16
+   ],
+   [
+    "BCG",
+    5.26
+   ],
+   [
+    "RELIGARE",
+    5.58
+   ],
+   [
+    "ASIANHOTNR",
+    6.0
+   ],
+   [
+    "VISACHROME",
+    7.02
+   ],
+   [
+    "NITCO",
+    7.16
+   ],
+   [
+    "20MICRONS",
+    7.46
+   ],
+   [
+    "WANBURY",
+    7.57
+   ],
+   [
+    "BLKASHYAP",
+    9.06
+   ],
+   [
+    "LOKESHMACH",
+    9.25
+   ],
+   [
+    "JSWENERGY",
+    9.7
+   ],
+   [
+    "DEEPAKFERT",
+    10.45
+   ],
+   [
+    "RELINFRA",
+    10.76
+   ],
+   [
+    "RPOWER",
+    16.13
+   ],
+   [
+    "JSL",
+    16.9
+   ],
+   [
+    "WINDMACHIN",
+    21.2
+   ],
+   [
+    "DBREALTY",
+    24.69
+   ],
+   [
+    "SPMLINFRA",
+    27.55
+   ],
+   [
+    "TI",
+    27.86
+   ],
+   [
+    "AURIONPRO",
+    34.28
+   ],
+   [
+    "EASTSILK",
+    35.86
+   ],
+   [
+    "CCCL",
+    129.85
+   ]
+  ],
+  "R3": [
+   [
+    "SECURKLOUD",
+    0.4
+   ],
+   [
+    "CAPTRUST",
+    0.65
+   ],
+   [
+    "ALANKIT",
+    0.75
+   ],
+   [
+    "KSHITIJPOL",
+    0.78
+   ],
+   [
+    "MITTAL",
+    1.0
+   ],
+   [
+    "REPRO",
+    1.1
+   ],
+   [
+    "RUPA",
+    1.13
+   ],
+   [
+    "HESTERBIO",
+    1.15
+   ],
+   [
+    "ISFT",
+    1.29
+   ],
+   [
+    "NEXTMEDIA",
+    1.38
+   ],
+   [
+    "IGPL",
+    1.45
+   ],
+   [
+    "SASKEN",
+    2.21
+   ],
+   [
+    "SBILIFE",
+    2.23
+   ],
+   [
+    "VSTTILLERS",
+    3.11
+   ],
+   [
+    "DEVIT",
+    3.19
+   ],
+   [
+    "AEGISLOG",
+    3.58
+   ],
+   [
+    "NDTV",
+    3.59
+   ],
+   [
+    "GUFICBIO",
+    3.95
+   ],
+   [
+    "IFGLEXPOR",
+    4.29
+   ],
+   [
+    "SUMEETINDS",
+    4.61
+   ],
+   [
+    "PRAJIND",
+    4.81
+   ],
+   [
+    "ORIENTHOT",
+    6.24
+   ],
+   [
+    "KAUSHALYA",
+    6.37
+   ],
+   [
+    "KEYFINSERV",
+    6.8
+   ],
+   [
+    "WANBURY",
+    7.57
+   ],
+   [
+    "RAMKY",
+    18.88
+   ],
+   [
+    "WINDMACHIN",
+    21.2
+   ],
+   [
+    "LANDSMILL",
+    21.65
+   ],
+   [
+    "TI",
+    27.86
+   ],
+   [
+    "CGPOWER",
+    31.25
+   ],
+   [
+    "AURIONPRO",
+    34.28
+   ]
+  ],
+  "R4": [
+   [
+    "SWSOLAR",
+    1.07
+   ],
+   [
+    "BAJAJELEC",
+    1.17
+   ],
+   [
+    "ISFT",
+    1.29
+   ],
+   [
+    "NETWORK18",
+    1.56
+   ],
+   [
+    "UNICHEMLAB",
+    1.93
+   ],
+   [
+    "CENTRUM",
+    2.05
+   ],
+   [
+    "ORISSAMINE",
+    2.1
+   ],
+   [
+    "INDIANHUME",
+    2.21
+   ],
+   [
+    "NFL",
+    3.01
+   ],
+   [
+    "MGEL",
+    4.07
+   ],
+   [
+    "OBEROIRLTY",
+    4.09
+   ],
+   [
+    "ASHOKLEY",
+    4.17
+   ],
+   [
+    "PILANIINVS",
+    4.98
+   ],
+   [
+    "BIL",
+    5.28
+   ],
+   [
+    "21STCENMGM",
+    5.38
+   ],
+   [
+    "UNIVCABLES",
+    5.56
+   ],
+   [
+    "M&M",
+    5.91
+   ],
+   [
+    "ARVSMART",
+    7.46
+   ],
+   [
+    "TVSMOTOR",
+    7.53
+   ],
+   [
+    "JINDRILL",
+    7.75
+   ],
+   [
+    "PCJEWELLER",
+    8.81
+   ],
+   [
+    "SAFARI",
+    11.21
+   ],
+   [
+    "ARROWGREEN",
+    11.34
+   ],
+   [
+    "POWERMECH",
+    13.48
+   ],
+   [
+    "RVNL",
+    21.07
+   ],
+   [
+    "DSSL",
+    29.36
+   ],
+   [
+    "THOMASCOTT",
+    73.3
+   ]
+  ],
+  "R5": [
+   [
+    "SADBHIN",
+    0.23
+   ],
+   [
+    "SADBHAV",
+    0.24
+   ],
+   [
+    "JHS",
+    0.48
+   ],
+   [
+    "ABFRL",
+    0.63
+   ],
+   [
+    "TASTYBITE",
+    0.83
+   ],
+   [
+    "GLOBE",
+    0.86
+   ],
+   [
+    "BASML",
+    0.91
+   ],
+   [
+    "MITTAL",
+    1.0
+   ],
+   [
+    "SWSOLAR",
+    1.07
+   ],
+   [
+    "KIRIINDUS",
+    1.1
+   ],
+   [
+    "REPRO",
+    1.1
+   ],
+   [
+    "THEINVEST",
+    1.12
+   ],
+   [
+    "SEMAC",
+    1.15
+   ],
+   [
+    "UNIVPHOTO",
+    1.25
+   ],
+   [
+    "ISFT",
+    1.29
+   ],
+   [
+    "KANANIIND",
+    1.29
+   ],
+   [
+    "SUTLEJTEX",
+    1.34
+   ],
+   [
+    "ICICIGI",
+    1.51
+   ],
+   [
+    "BFINVEST",
+    1.62
+   ],
+   [
+    "CAMLINFINE",
+    1.7
+   ],
+   [
+    "HMVL",
+    1.72
+   ],
+   [
+    "RESPONIND",
+    1.77
+   ],
+   [
+    "ALBERTDAVD",
+    1.87
+   ],
+   [
+    "NIACL",
+    1.87
+   ],
+   [
+    "RAMCOIND",
+    1.93
+   ],
+   [
+    "UNICHEMLAB",
+    1.93
+   ],
+   [
+    "RAYMOND",
+    1.99
+   ],
+   [
+    "AIRAN",
+    2.0
+   ],
+   [
+    "GOCLCORP",
+    2.12
+   ],
+   [
+    "KHADIM",
+    2.21
+   ],
+   [
+    "SASKEN",
+    2.21
+   ],
+   [
+    "GODREJPROP",
+    2.29
+   ],
+   [
+    "RANASUG",
+    2.3
+   ],
+   [
+    "ASPINWALL",
+    2.33
+   ],
+   [
+    "BILVYAPAR",
+    2.33
+   ],
+   [
+    "HLVLTD",
+    2.36
+   ],
+   [
+    "ICRA",
+    2.4
+   ],
+   [
+    "IFBAGRO",
+    2.47
+   ],
+   [
+    "ITDC",
+    2.51
+   ],
+   [
+    "KMSUGAR",
+    2.56
+   ],
+   [
+    "EVEREADY",
+    2.65
+   ],
+   [
+    "TEXINFRA",
+    2.8
+   ],
+   [
+    "MURUDCERA",
+    2.86
+   ],
+   [
+    "VSTTILLERS",
+    3.11
+   ],
+   [
+    "ASHIMASYN",
+    3.14
+   ],
+   [
+    "MHRIL",
+    3.15
+   ],
+   [
+    "PATELENG",
+    3.17
+   ],
+   [
+    "SHOPERSTOP",
+    3.17
+   ],
+   [
+    "CINELINE",
+    3.3
+   ],
+   [
+    "CESC",
+    3.35
+   ],
+   [
+    "SWANCORP",
+    3.65
+   ],
+   [
+    "CYBERTECH",
+    3.79
+   ],
+   [
+    "NITIRAJ",
+    3.8
+   ],
+   [
+    "BANSWRAS",
+    3.81
+   ],
+   [
+    "GRASIM",
+    3.81
+   ],
+   [
+    "THEMISMED",
+    3.85
+   ],
+   [
+    "DENORA",
+    3.87
+   ],
+   [
+    "EDELWEISS",
+    3.87
+   ],
+   [
+    "MODIRUBBER",
+    3.93
+   ],
+   [
+    "MGEL",
+    4.07
+   ],
+   [
+    "GEEKAYWIRE",
+    4.38
+   ],
+   [
+    "SCI",
+    4.43
+   ],
+   [
+    "MAHLIFE",
+    4.61
+   ],
+   [
+    "PRAJIND",
+    4.81
+   ],
+   [
+    "DLF",
+    4.84
+   ],
+   [
+    "SPIC",
+    5.12
+   ],
+   [
+    "ABREL",
+    5.17
+   ],
+   [
+    "SOUTHWEST",
+    5.23
+   ],
+   [
+    "NHPC",
+    5.27
+   ],
+   [
+    "EKC",
+    5.34
+   ],
+   [
+    "UNIVCABLES",
+    5.56
+   ],
+   [
+    "HITECHGEAR",
+    5.67
+   ],
+   [
+    "SURANAT&P",
+    5.73
+   ],
+   [
+    "THOMASCOOK",
+    5.74
+   ],
+   [
+    "M&M",
+    5.91
+   ],
+   [
+    "LEMONTREE",
+    5.96
+   ],
+   [
+    "ORIENTHOT",
+    6.24
+   ],
+   [
+    "KAUSHALYA",
+    6.37
+   ],
+   [
+    "NLCINDIA",
+    6.69
+   ],
+   [
+    "BBTCL",
+    6.73
+   ],
+   [
+    "KEYFINSERV",
+    6.8
+   ],
+   [
+    "NITCO",
+    7.16
+   ],
+   [
+    "WANBURY",
+    7.57
+   ],
+   [
+    "FLUOROCHEM",
+    7.6
+   ],
+   [
+    "OMINFRAL",
+    7.65
+   ],
+   [
+    "VSSL",
+    7.86
+   ],
+   [
+    "ROHLTD",
+    8.32
+   ],
+   [
+    "OIL",
+    8.89
+   ],
+   [
+    "CENTUM",
+    8.99
+   ],
+   [
+    "CUMMINSIND",
+    9.52
+   ],
+   [
+    "BBL",
+    9.6
+   ],
+   [
+    "JSWENERGY",
+    9.7
+   ],
+   [
+    "MAXHEALTH",
+    9.71
+   ],
+   [
+    "DYNAMATECH",
+    9.73
+   ],
+   [
+    "NSIL",
+    10.09
+   ],
+   [
+    "DEEPAKFERT",
+    10.45
+   ],
+   [
+    "RELINFRA",
+    10.76
+   ],
+   [
+    "GOKEX",
+    10.96
+   ],
+   [
+    "TALBROAUTO",
+    13.85
+   ],
+   [
+    "KIRLOSBROS",
+    17.3
+   ],
+   [
+    "FACT",
+    19.89
+   ],
+   [
+    "RVNL",
+    21.07
+   ],
+   [
+    "LANDSMILL",
+    21.65
+   ],
+   [
+    "PREMEXPLN",
+    23.52
+   ],
+   [
+    "SPMLINFRA",
+    27.55
+   ],
+   [
+    "GOKULAGRO",
+    29.33
+   ],
+   [
+    "AURIONPRO",
+    34.28
+   ],
+   [
+    "IZMO",
+    35.28
+   ],
+   [
+    "ELECON",
+    45.34
+   ],
+   [
+    "LLOYDSENGG",
+    81.3
+   ],
+   [
+    "TARIL",
+    108.13
+   ]
+  ]
+ }
+}

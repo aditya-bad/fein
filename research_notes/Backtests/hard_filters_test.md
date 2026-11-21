@@ -111,8 +111,8 @@ would have stopped as many winners as traps.
    ROCE ~40% in a kiosk franchise; Manpasand outgrowing Frooti; Cox & Kings' debt and receivables in an
    advance-paid business), H1c profits nobody outside can audit (Wirecard's third-party acquirers; Rajesh
    Exports' ~1% margin on Rs 2 lakh cr of gold), H5 group receivables (Gitanjali, ~33% of receivables), H4 SME
-   pumps (circular). Leverage blow-ups (Jet, IL&FS, DHFL, Future, Zee, Suzlon-2008, Unitech, SVB, Lehman, Evergrande,
-   GE…) pass the hard set every time: **no hard rule addresses solvency**.
+   pumps (circular). Leverage blow-ups (Jet, IL&FS, Future, Zee, Suzlon-2008, Unitech, SVB, Lehman, Evergrande,
+   GE…) pass the hard set every time, as does DHFL (a fraud whose tell was ALM mismatch): **no hard rule addresses solvency**.
 2. **H2 (auditor exit over disagreement) never fired before T: 0 of 41.** In every case it is in the record
    (Vakrangee, Manpasand, Reliance Capital, Ricoh, Super Micro, Byju's) the auditor left *after* the peak, usually
    mid-collapse. It's a sell signal, not a buy-side screen. Keep it as a non-overridable exit trigger, not as an
@@ -141,3 +141,133 @@ would have stopped as many winners as traps.
    it fires mostly on loss-to-profit recoveries (Paytm, Jet, Future, IL&FS) and on winners (Caplin, Tata Elxsi, CDSL,
    Palantir, Tesla), and misses Vakrangee (ROCE 3y avg just under 40). "Too good for the business" needs a peer and
    unit-economics comparison, not a threshold.
+
+# RESULTS — Part B (580-company universe, snapshot 30-Sep-2020), written after the run
+
+**Funnel.** 580 companies → 495 with a price on T0 (85 listed later or had gaps) → fundamentals for 465
+(19 lenders), pledge for 452, NSE auditor feed for 486. **0 of 495 stopped trading before Nov-2026**: the
+sample was drawn from the *current* NSE list, so every firm that was delisted, merged away or suspended is
+missing. Market cap at T0 (BSE SHP shares × unadjusted close): 304 firms ≥ Rs 400 cr, 148 below, 43 unknown.
+
+**5-year (30-Sep-2020 → 30-Sep-2025)** — base rates: loss50 1.8%, x3 54.5% (n = 495)
+
+| Rule | known / flagged | flagged → >50% loss | unflagged → >50% loss | Fisher p | flagged → >3x | unflagged → >3x | Fisher p | median ratio flagged / unflagged |
+|---|---|---|---|---|---|---|---|---|
+| R1 CFO/PAT 5y < 0.3 | 382 / 42 | 1 (2.4%, CI 0.004–0.123) | 0.9% | 0.3737 | 25 (60%) | 52% | 0.4134 | 4.53 / 3.09 |
+| R1b CFO/PAT 5y < 0.7 | 382 / 77 | 1 (1.3%, CI 0.002–0.07) | 1.0% | 1.0 | 44 (57%) | 52% | 0.4437 | 4.07 / 3.06 |
+| R2 pledge > 25% | 452 / 68 | 2 (2.9%, CI 0.008–0.101) | 1.6% | 0.3444 | 47 (69%) | 51% | 0.0055 | 4.4 / 3.04 |
+| R2b pledge > 50% | 452 / 44 | 2 (4.5%, CI 0.013–0.151) | 1.5% | 0.178 | 31 (70%) | 52% | 0.025 | 5.16 / 3.1 |
+| R3 auditor resignation before T0 | 486 / 31 | 1 (3.2%, CI 0.006–0.162) | 1.3% | 0.3715 | 18 (58%) | 54% | 0.7136 | 3.58 / 3.29 |
+| R4 debt ≥1.5x + Σ3y CFO < 0 | 445 / 27 | 0 (0.0%, CI 0.0–0.125) | 1.7% | 1.0 | 19 (70%) | 54% | 0.114 | 5.28 / 3.29 |
+| R5 other income > 30% PBT | 385 / 111 | 3 (2.7%, CI 0.009–0.076) | 0.7% | 0.1466 | 68 (61%) | 48% | 0.0242 | 3.85 / 2.91 |
+| **ANY of R1–R4** | 495 / 139 | 4 (2.9%, CI 0.011–0.072) | 1.4% | 0.2761 | 89 (64%) | 51% | 0.009 | 4.12 / 3.06 |
+
+**to date (→ 18-Nov-2026)** — base rates: loss50 4.2%, x3 49.5% (n = 495)
+
+| Rule | known / flagged | flagged → >50% loss | unflagged → >50% loss | Fisher p | flagged → >3x | unflagged → >3x | Fisher p | median ratio flagged / unflagged |
+|---|---|---|---|---|---|---|---|---|
+| R1 CFO/PAT 5y < 0.3 | 382 / 42 | 2 (4.8%, CI 0.013–0.158) | 2.9% | 0.6295 | 26 (62%) | 48% | 0.1025 | 4.36 / 2.76 |
+| R1b CFO/PAT 5y < 0.7 | 382 / 77 | 4 (5.2%, CI 0.02–0.126) | 2.6% | 0.271 | 46 (60%) | 47% | 0.0553 | 3.66 / 2.72 |
+| R2 pledge > 25% | 452 / 68 | 3 (4.4%, CI 0.015–0.122) | 3.6% | 0.7298 | 39 (57%) | 47% | 0.1162 | 3.59 / 2.75 |
+| R2b pledge > 50% | 452 / 44 | 2 (4.5%, CI 0.013–0.151) | 3.7% | 0.6764 | 27 (61%) | 47% | 0.0814 | 4.34 / 2.76 |
+| R3 auditor resignation before T0 | 486 / 31 | 4 (12.9%, CI 0.051–0.289) | 3.3% | 0.0268 | 14 (45%) | 50% | 0.7114 | 2.28 / 2.99 |
+| R4 debt ≥1.5x + Σ3y CFO < 0 | 445 / 27 | 0 (0.0%, CI 0.0–0.125) | 3.8% | 0.6132 | 18 (67%) | 49% | 0.0761 | 5.0 / 2.9 |
+| R5 other income > 30% PBT | 385 / 111 | 5 (4.5%, CI 0.019–0.101) | 2.9% | 0.5334 | 62 (56%) | 45% | 0.0715 | 3.55 / 2.57 |
+| **ANY of R1–R4** | 495 / 139 | 8 (5.8%, CI 0.029–0.109) | 3.7% | 0.3231 | 78 (56%) | 47% | 0.0721 | 3.55 / 2.75 |
+
+**5-year, only firms with mcap ≥ Rs 400 cr at T0** — base rates: loss50 2.0%, x3 44.4% (n = 304)
+
+| Rule | known / flagged | flagged → >50% loss | unflagged → >50% loss | Fisher p | flagged → >3x | unflagged → >3x | Fisher p | median ratio flagged / unflagged |
+|---|---|---|---|---|---|---|---|---|
+| R1 CFO/PAT 5y < 0.3 | 258 / 21 | 0 (0.0%, CI 0.0–0.155) | 1.3% | 1.0 | 12 (57%) | 44% | 0.2572 | 4.17 / 2.47 |
+| R1b CFO/PAT 5y < 0.7 | 258 / 42 | 0 (0.0%, CI 0.0–0.084) | 1.4% | 1.0 | 21 (50%) | 44% | 0.4986 | 3.91 / 2.57 |
+| R2 pledge > 25% | 304 / 32 | 2 (6.2%, CI 0.017–0.201) | 1.5% | 0.1232 | 19 (59%) | 43% | 0.0902 | 3.33 / 2.44 |
+| R2b pledge > 50% | 304 / 20 | 2 (10.0%, CI 0.028–0.301) | 1.4% | 0.0527 | 12 (60%) | 43% | 0.167 | 3.61 / 2.51 |
+| R3 auditor resignation before T0 | 303 / 12 | 0 (0.0%, CI 0.0–0.243) | 1.7% | 1.0 | 6 (50%) | 44% | 0.7717 | 3.11 / 2.64 |
+| R4 debt ≥1.5x + Σ3y CFO < 0 | 276 / 18 | 0 (0.0%, CI 0.0–0.176) | 1.9% | 1.0 | 11 (61%) | 45% | 0.2244 | 4.17 / 2.65 |
+| R5 other income > 30% PBT | 259 / 52 | 2 (3.8%, CI 0.011–0.13) | 1.0% | 0.1808 | 28 (54%) | 42% | 0.1202 | 3.17 / 2.44 |
+| **ANY of R1–R4** | 304 / 69 | 2 (2.9%, CI 0.008–0.1) | 1.7% | 0.6215 | 39 (56%) | 41% | 0.0272 | 3.17 / 2.41 |
+
+## What Part B says
+1. **No rule passes the pre-registered bar.** For every rule P(flagged → >3x) is *at or above* the base rate
+   (ANY: 64% vs 51% unflagged, p = 0.009), so by decision rule 2 none qualifies as a hard filter on this sample,
+   and none reaches 2x base loss rate with p < 0.05 at 5 years. The R3 auditor rule is the closest on the
+   *to-date* horizon (4 of 31 flagged firms down >50% vs 3.3%, p = 0.027), but to-date wasn't the primary
+   horizon and n = 4.
+2. **The test can barely see losers.** Base rate of a >50% 5-year loss is **1.8% (9 of 495)**. Two reasons, both
+   biases stated in advance: survivors only (the Gensols, Cox & Kings and DHFLs of 2020 aren't in a list drawn in
+   2023), and Sep-2020 was close to the COVID low before a five-year small-cap bull run (median stock 3.3x).
+3. **A second selection bias favours flagged firms:** the PEAD sample kept only firms whose mcap reached Rs 400 cr
+   *at some point in 2018–2025*. A tiny, pledged, cash-poor firm in 2020 got in only if it later grew. Firms
+   under Rs 400 cr at T0 tripled 72% of the time vs 44% for firms already above it. Restricting to mcap ≥ Rs 400 cr
+   at T0 shrinks the "flagged firms do better" effect (ANY x3 57% vs 41%, p = 0.027) but doesn't reverse it, and
+   pledge > 50% then shows the only material loss lift: **10% vs 1.4% (2 of 20), p = 0.053** — Sadbhav
+   Engineering/Sadbhav Infra (pledges 56% / 82%, −76%).
+4. **Names behind the numbers.** Of the 9 >50% 5-year losers, ANY fired on 4: Sadbhav Engineering and Sadbhav
+   Infra (pledge 56% / 82%), JHS (cash conversion), SecureKloud (auditor resignation 2019). Den, Radio City, Take
+   Solutions and Valiant Organics fired nothing (GVP Tech had no data). On the to-date horizon ZEEL (−63%) fired
+   nothing at T0 because its pledge had already been invoked down to 16% of a 4.8% promoter stake — the damage
+   was done. Flagged *winners* include CG Power (auditor exit
+   in 2020 mid-fraud discovery, then a Murugappa takeover: ~31x), Ramky (auditor exit 2015, ~19x), Aurionpro and
+   TI. A flag at a distressed low often marks a *bottom*, after the bad news was public and priced.
+5. **What Part B can't tell us:** whether the rules would have saved us from the delisted traps (they aren't in
+   the data), and how they behave from a market peak. A fair Part B needs a point-in-time universe that keeps
+   dead companies (stage 1: Screener login + delisted-company lists) and several snapshot dates (2017-12, 2019-06,
+   2021-12, 2023-12).
+
+# VERDICT (both parts) and proposed revision
+
+Evidence quality: Part A is in-sample and mostly judgment-coded. Part B is out-of-sample but survivor-only, one
+snapshot, at a market low. **Neither part supports making any mechanical rule a no-override disqualifier.**
+Part A supports keeping the *judgment* fraud signals hard: they had 100% precision on 106 episodes, though
+they caught only 8 of 39 known traps and their coding is outcome-aware.
+
+| Rule | Part A (pre-T) | Part B (2020 → 2025) | Verdict |
+|---|---|---|---|
+| H1a fake-cash signal | 1/43 traps, 0 winners | not tested | **KEEP hard.** Add the mechanical test: interest income / avg cash vs FD rate; big cash + big debt |
+| H1b economics implausible for the business | 3 traps, 0 winners (judgment); blind proxy fires on 5/28 winners | not tested | **KEEP hard, but ADJUST:** fires only after a written peer + bottom-up unit-economics comparison (revenue per outlet × outlets etc.); a ratio threshold alone is not the rule |
+| H1c profits not verifiable by outsiders | 2 traps, 0 winners | not tested | **KEEP hard**; make "OPM < 2% on pass-through revenue" and "profit in a segment/partner we can't audit" explicit |
+| H2 auditor exit over disagreement | 0/41 before T: always came after the peak | R3 (any resignation): no 5y lift, to-date 13% vs 3% (p 0.03, n 4) | **KEEP as a non-overridable EXIT / no-new-buy trigger** (it fires mid-collapse); note it almost never helps at entry |
+| H2b broad (restatement, regulator-found misstatement, delayed results, any auditor exit within 5y) | +3 traps (Yes Bank, SMCI and Celsius peaks), cost 1 winner (SMCI 2023) | R3 ≈ this; flagged winners incl. CG Power 31x | **ADD as GRADED** (strong graded flag; RBI divergence for banks should be near-hard) |
+| H3 rating not cooperating | 0 fires | not tested | **KEEP** (cheap, detector exists); unproven |
+| H4 SME/pump pattern | only its own source cases | not tested | **KEEP**; extend to pre-revenue SPAC/IPO hype (Nikola) |
+| H5 RPT cash leakage | 1 trap pre-T (Gitanjali); usually surfaces after T | not tested | **KEEP hard** |
+| G1 pledge > 25% | 8/20 traps vs 2/13 winners (best graded flag) | x3 69% vs 51%; >50% & mcap ≥ 400 cr: loss 10% vs 1.4% (p 0.05) | **KEEP graded**; raise attention level at >50% or rising; never hard (Apollo, Suzlon-2020) |
+| G3 dilution | 1 trap, 3 winners | not tested | **KEEP graded** (judge price × purpose × buyer) |
+| G4 P/E > 50 | 7/9 busts, 4 winners | not tested | **MOVE to stage 5** (valuation temperature, P/E vs own median) — not a stage-2 filter |
+| F1 / F1b CFO/PAT | traps 6/20 vs winners 8/24; frauds pass it | R1: no loss lift, x3 60% vs 52% | **DROP as a filter; keep as a question** ("what is the working capital made of?") |
+| G2 debt + negative CFO | 2 traps vs 4 winners | R4: 0 losers in 27, x3 70% | **DROP as a filter; ADJUST** to a solvency rule (see below) |
+| G5 negative FCF | 9 traps vs 15 winners | not tested separately | **DROP as a flag** (description only) |
+| G6 debtor days | 3 vs 3 | not tested | **KEEP graded only with counterparty** (sovereign vs related/unknown, per L12) |
+| F2 other income > 30% PBT | 6 vs 6 (fires on exchanges, PSU cash piles) | R5: loss 2.7% vs 0.7% (p 0.15), x3 61% vs 48% | **KEEP as a question** (it's where the H1a cash-yield test starts), not a flag |
+
+**Gap found: solvency.** 15 of 15 leverage blow-ups (Jet, IL&FS, Adani Enterprises, Future, Zee, Unitech, Suzlon-2008,
+Kingfisher, SVB, Lehman, Evergrande, GE, Credit Suisse, Paytm, PC Jeweller) passed every hard rule. Proposed new
+GRADED solvency flags, to be back-tested before use: negative net worth; interest cover < 1.5x for 2 years;
+short-term funding of long assets (lenders: ALM 1-year gap, CP share); dividends or buybacks exceeding FCF while
+borrowing; group-level promoter debt (pledge + holdco loans).
+
+**Proposed revised filter set (separate record insight:disqualifiers-v2-proposal; insight:disqualifiers is
+unchanged until the user agrees):**
+- **HARD at entry (no override):** H1a fake-cash signals · H1b implausible economics *after a written peer/unit-
+  economics check* · H1c unverifiable profits · H4 pump patterns (incl. pre-revenue SPAC/IPO hype) · H5 RPT cash
+  leakage · H2 auditor exit citing disagreement/denied information or qualified/adverse opinion · H3 rating "not
+  cooperating" (unproven, cheap).
+- **HARD at exit (sell / no new money until a new auditor signs clean):** H2 and the strongest H2b events (RBI NPA
+  divergence, 8-K 4.02 non-reliance, results delayed past the deadline).
+- **GRADED (override template):** pledge (>25%; escalate >50% or rising), H2b events, dilution, debtor days with
+  counterparty, the new solvency set.
+- **QUESTIONS, not flags (description only):** CFO/PAT, negative FCF, debt with negative CFO, other-income share.
+- **Moved to stage 5:** P/E > 50 / > 2x own median.
+
+**What would change this verdict:** a point-in-time universe with dead companies showing flagged → >50% loss at
+≥ 2x base rate (with x3 not above base) at peak-ish snapshots — that would promote pledge > 50% or the
+auditor rule to hard. Re-run with the full Screener universe on the Pi (stage 1) at 4 snapshot dates.
+
+## Files
+- Scripts: `tools/backtests/hard_filters/` — `b1_fetch.py` (screener / BSE SHP / NSE announcements), `a1_pledge.py`
+  (pledge at T), `a2_episodes.py` (hand-coded pre-T episode table, with evidence), `a3_cases.py` (merge + matrices),
+  `a4_tables.py`, `b2_analyze.py` (Part B), `b3_tables.py`, `hfcommon.py` (screener parser, metrics, rule defs).
+- Outputs: `research_notes/Backtests/hard_filters_outputs/` — `partA_cases.json` (every episode, flags, evidence,
+  metrics), `partA_pledge_at_T.json`, `partB_summary.json`, `partB_flags.csv` (per-company flags and outcomes).
+- Raw caches (scratchpad, not in git): screener pages, BSE SHP XBRL values, NSE announcement extracts.

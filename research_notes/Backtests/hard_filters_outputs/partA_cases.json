@@ -247,6 +247,20 @@
     "U": 46,
     "NA": 2
    }
+  },
+  "H1b_proxy": {
+   "T": {
+    "Y": 9,
+    "N": 13,
+    "U": 15,
+    "NA": 6
+   },
+   "W": {
+    "Y": 5,
+    "N": 23,
+    "U": 33,
+    "NA": 2
+   }
   }
  },
  "combos": {
@@ -761,6 +775,26 @@
     "U": 6,
     "NA": 0
    }
+  },
+  "H1b_proxy": {
+   "fraud": {
+    "Y": 2,
+    "N": 7,
+    "U": 7,
+    "NA": 3
+   },
+   "lev": {
+    "Y": 4,
+    "N": 3,
+    "U": 5,
+    "NA": 3
+   },
+   "bust": {
+    "Y": 3,
+    "N": 3,
+    "U": 3,
+    "NA": 0
+   }
   }
  },
  "graded_count_dist": {
@@ -808,7 +842,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "H1a": "FY08 accounts: ~Rs 5,000 cr cash earning far below FD rates while carrying debt (CLSA's Sep-2008 note used the same public FY08 numbers)",
@@ -854,7 +889,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "N"
    },
    "ev": {
     "H1b": "OPM 24-26% and ROCE ~40% (FY15-17) in a rural kiosk franchise; no comparable earns that",
@@ -883,6 +919,9 @@
     "debtor_days": 75.0,
     "debtor_days_d2": -82.0,
     "sales_cagr": 0.2,
+    "roce_3y": 39.7,
+    "opm_last": 23.6,
+    "opm_step_3y": null,
     "eqcap_growth": null
    },
    "mech_src": "consolidated",
@@ -920,7 +959,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "N"
    },
    "ev": {
     "H1b": "growth 33-44% faster than category leader Frooti; publicly questioned by a fund manager Dec-2016 (judgment call)",
@@ -949,6 +989,9 @@
     "debtor_days": 39.0,
     "debtor_days_d2": -22.0,
     "sales_cagr": 0.314,
+    "roce_3y": 13.7,
+    "opm_last": 20.0,
+    "opm_step_3y": 4.1,
     "eqcap_growth": 28.5
    },
    "mech_src": "consolidated",
@@ -986,7 +1029,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "N"
    },
    "ev": {
     "H1b": "advance-paid travel business carrying heavy debt + large receivables/advances in FY15-17 accounts (WC sign contradicts model; judgment)",
@@ -1015,6 +1059,9 @@
     "debtor_days": 93.0,
     "debtor_days_d2": -75.0,
     "sales_cagr": 0.411,
+    "roce_3y": 10.0,
+    "opm_last": 9.4,
+    "opm_step_3y": -38.8,
     "eqcap_growth": 1.29
    },
    "mech_src": "consolidated",
@@ -1052,7 +1099,8 @@
     "G2_debt_up_neg_cfo": "Y",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "N"
    },
    "ev": {
     "H1b": "revenue surge far above parent; not dated precisely enough to call pre-T"
@@ -1080,6 +1128,9 @@
     "debtor_days": 111.0,
     "debtor_days_d2": 29.0,
     "sales_cagr": 0.421,
+    "roce_3y": 7.0,
+    "opm_last": 7.2,
+    "opm_step_3y": -2.2,
     "eqcap_growth": 1.0
    },
    "mech_src": "consolidated",
@@ -1117,7 +1168,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "Y",
-    "F2_other_income": "Y"
+    "F2_other_income": "Y",
+    "H1b_proxy": "N"
    },
    "ev": {
     "H2": "Mar-2017 auditor warning of default to LIC (nature of opinion not established)",
@@ -1145,6 +1197,9 @@
     "debtor_days": 283.0,
     "debtor_days_d2": -32.0,
     "sales_cagr": 0.002,
+    "roce_3y": 7.0,
+    "opm_last": 4.2,
+    "opm_step_3y": -2.7,
     "eqcap_growth": 1.29
    },
    "mech_src": "consolidated",
@@ -1181,7 +1236,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "N"
    },
    "ev": {
     "H1c": "0.4-1.1% operating margin on Rs 1.6-2.6 lakh cr pass-through gold revenue (FY15-22): profit not verifiable",
@@ -1209,6 +1265,9 @@
     "debtor_days": 15.0,
     "debtor_days_d2": 2.0,
     "sales_cagr": 0.016,
+    "roce_3y": 10.7,
+    "opm_last": 0.4,
+    "opm_step_3y": -0.6,
     "eqcap_growth": 1.0
    },
    "mech_src": "consolidated",
@@ -1245,7 +1304,8 @@
     "G2_debt_up_neg_cfo": "NA",
     "G5_neg_fcf": "NA",
     "G6_debtor_days": "NA",
-    "F2_other_income": "NA"
+    "F2_other_income": "NA",
+    "H1b_proxy": "NA"
    },
    "ev": {
     "H5": "GPCL loans to group shells jumped in FY18-19 (FY18 data public only after T)",
@@ -1275,6 +1335,9 @@
     "debtor_days": 19.0,
     "debtor_days_d2": 5.0,
     "sales_cagr": 0.238,
+    "roce_3y": 10.0,
+    "opm_last": 26.3,
+    "opm_step_3y": -18.4,
     "eqcap_growth": 1.04
    },
    "mech_src": "consolidated",
@@ -1311,7 +1374,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "Y"
    },
    "ev": {
     "G1": "BSE SHP March 2024 (filed 2024-04-10): 63.1% of promoter holding pledged"
@@ -1340,6 +1404,9 @@
     "debtor_days": 67.0,
     "debtor_days_d2": -35.0,
     "sales_cagr": 0.48,
+    "roce_3y": 15.7,
+    "opm_last": 19.6,
+    "opm_step_3y": 14.7,
     "eqcap_growth": 1.5
    },
    "mech_src": "consolidated",
@@ -1376,7 +1443,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "Y",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G3": "preferential allotments 2021-22 not in the record",
@@ -1403,6 +1471,9 @@
     "debtor_days": 143.0,
     "debtor_days_d2": 17.0,
     "sales_cagr": 0.039,
+    "roce_3y": 21.3,
+    "opm_last": 30.3,
+    "opm_step_3y": 0.8,
     "eqcap_growth": 1.07
    },
    "mech_src": "consolidated",
@@ -1439,7 +1510,8 @@
     "G2_debt_up_neg_cfo": "NA",
     "G5_neg_fcf": "NA",
     "G6_debtor_days": "NA",
-    "F2_other_income": "NA"
+    "F2_other_income": "NA",
+    "H1b_proxy": "NA"
    },
    "ev": {},
    "later": {
@@ -1481,7 +1553,8 @@
     "G2_debt_up_neg_cfo": "NA",
     "G5_neg_fcf": "NA",
     "G6_debtor_days": "NA",
-    "F2_other_income": "NA"
+    "F2_other_income": "NA",
+    "H1b_proxy": "NA"
    },
    "ev": {
     "H2b": "RBI-assessed NPA divergence Rs 4,177 cr (FY16) / Rs 6,355 cr (FY17), disclosed 2017",
@@ -1510,6 +1583,9 @@
     "debtor_days": null,
     "debtor_days_d2": null,
     "sales_cagr": 0.191,
+    "roce_3y": null,
+    "opm_last": 6.1,
+    "opm_step_3y": null,
     "eqcap_growth": null
    },
    "mech_src": "consolidated",
@@ -1547,7 +1623,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "Y"
+    "F2_other_income": "Y",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G1": "BSE SHP December 2017 (filed 2018-01-12): 45.7% of promoter holding pledged"
@@ -1575,6 +1652,9 @@
     "debtor_days": 70.0,
     "debtor_days_d2": -10.0,
     "sales_cagr": 0.148,
+    "roce_3y": 25.7,
+    "opm_last": 26.8,
+    "opm_step_3y": null,
     "eqcap_growth": null
    },
    "mech_src": "consolidated",
@@ -1611,7 +1691,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "Y"
+    "F2_other_income": "Y",
+    "H1b_proxy": "Y"
    },
    "ev": {
     "G1": "BSE SHP June 2018 (filed 2018-07-20): 44.0% of promoter holding pledged"
@@ -1637,6 +1718,9 @@
     "debtor_days": 5.0,
     "debtor_days_d2": 5.0,
     "sales_cagr": 0.939,
+    "roce_3y": -87.3,
+    "opm_last": 3.4,
+    "opm_step_3y": 28.5,
     "eqcap_growth": 0.07
    },
    "mech_src": "consolidated",
@@ -1673,7 +1757,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G1": "BSE SHP December 2017 (filed 2018-01-03): 0.0% of promoter holding pledged"
@@ -1701,6 +1786,9 @@
     "debtor_days": 66.0,
     "debtor_days_d2": 21.0,
     "sales_cagr": 0.154,
+    "roce_3y": 25.3,
+    "opm_last": 9.0,
+    "opm_step_3y": null,
     "eqcap_growth": null
    },
    "mech_src": "consolidated",
@@ -1738,7 +1826,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "Y"
+    "F2_other_income": "Y",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G4": "'very high P/E/P/B on capital-intensive businesses' (record)",
@@ -1765,6 +1854,9 @@
     "debtor_days": 72.0,
     "debtor_days_d2": -39.0,
     "sales_cagr": 0.179,
+    "roce_3y": 8.0,
+    "opm_last": 5.4,
+    "opm_step_3y": 0.5,
     "eqcap_growth": 1.0
    },
    "mech_src": "consolidated",
@@ -1801,7 +1893,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "Y"
+    "F2_other_income": "Y",
+    "H1b_proxy": "Y"
    },
    "ev": {
     "G1": "BSE SHP September 2017 (filed 2017-10-17): 0.0% of promoter holding pledged"
@@ -1829,6 +1922,9 @@
     "debtor_days": 21.0,
     "debtor_days_d2": -3.0,
     "sales_cagr": 0.04,
+    "roce_3y": 27.0,
+    "opm_last": 6.8,
+    "opm_step_3y": 20.6,
     "eqcap_growth": 1.0
    },
    "mech_src": "consolidated",
@@ -1865,7 +1961,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {},
    "later": {},
@@ -1906,7 +2003,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "Y"
+    "F2_other_income": "Y",
+    "H1b_proxy": "Y"
    },
    "ev": {
     "G1": "BSE SHP September 2017 (filed 2017-10-09): 98.2% of promoter holding pledged"
@@ -1932,6 +2030,9 @@
     "debtor_days": 45.0,
     "debtor_days_d2": -14.0,
     "sales_cagr": 0.05,
+    "roce_3y": 9.3,
+    "opm_last": 40.5,
+    "opm_step_3y": 11.6,
     "eqcap_growth": 1.7
    },
    "mech_src": "consolidated",
@@ -1968,7 +2069,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {},
    "later": {},
@@ -2007,7 +2109,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {},
    "later": {},
@@ -2046,7 +2149,8 @@
     "G2_debt_up_neg_cfo": "Y",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "Y",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "Y"
    },
    "ev": {
     "G4": "loss-making: P/E undefined; ~50x sales"
@@ -2072,6 +2176,9 @@
     "debtor_days": 61.0,
     "debtor_days_d2": 32.0,
     "sales_cagr": 0.716,
+    "roce_3y": -27.5,
+    "opm_last": -65.6,
+    "opm_step_3y": 129.5,
     "eqcap_growth": 1.3
    },
    "mech_src": "consolidated",
@@ -2108,7 +2215,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "H4": "circular: H4 was written from this very case set"
@@ -2149,7 +2257,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "H1c": "~half of profits via Asian third-party acquirers it did not control; FT 2015 / Zatarra 2016"
@@ -2193,7 +2302,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G1": "chairman/founders pledged most shares for margin loans (IPO/follow-on filings)",
@@ -2240,7 +2350,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {},
    "later": {},
@@ -2279,7 +2390,8 @@
     "G2_debt_up_neg_cfo": "NA",
     "G5_neg_fcf": "NA",
     "G6_debtor_days": "NA",
-    "F2_other_income": "NA"
+    "F2_other_income": "NA",
+    "H1b_proxy": "NA"
    },
    "ev": {},
    "later": {
@@ -2320,7 +2432,8 @@
     "G2_debt_up_neg_cfo": "NA",
     "G5_neg_fcf": "NA",
     "G6_debtor_days": "NA",
-    "F2_other_income": "NA"
+    "F2_other_income": "NA",
+    "H1b_proxy": "NA"
    },
    "ev": {},
    "later": {},
@@ -2344,6 +2457,9 @@
     "debtor_days": null,
     "debtor_days_d2": null,
     "sales_cagr": null,
+    "roce_3y": null,
+    "opm_last": null,
+    "opm_step_3y": null,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -2380,7 +2496,8 @@
     "G2_debt_up_neg_cfo": "NA",
     "G5_neg_fcf": "NA",
     "G6_debtor_days": "NA",
-    "F2_other_income": "NA"
+    "F2_other_income": "NA",
+    "H1b_proxy": "NA"
    },
    "ev": {},
    "later": {},
@@ -2419,7 +2536,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {},
    "later": {},
@@ -2443,6 +2561,9 @@
     "debtor_days": 84.0,
     "debtor_days_d2": 15.099999999999994,
     "sales_cagr": 0.016,
+    "roce_3y": null,
+    "opm_last": null,
+    "opm_step_3y": null,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -2480,7 +2601,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "Y"
    },
    "ev": {},
    "later": {
@@ -2506,6 +2628,9 @@
     "debtor_days": 92.3,
     "debtor_days_d2": 11.599999999999994,
     "sales_cagr": 0.623,
+    "roce_3y": null,
+    "opm_last": 24.4,
+    "opm_step_3y": 12.0,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -2543,7 +2668,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {},
    "later": {},
@@ -2582,7 +2708,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "H5": "LJM/CFO-run SPEs were footnoted in the 1999 10-K but the record does not date the disclosure"
@@ -2623,7 +2750,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {},
    "later": {},
@@ -2662,7 +2790,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "N"
    },
    "ev": {
     "H2b": "SEC 8-K item 4.02 non-reliance 15-Nov-2018; 2018 Nasdaq delisting for late filings; 2020 SEC settlement",
@@ -2689,6 +2818,9 @@
     "debtor_days": 58.8,
     "debtor_days_d2": 11.199999999999996,
     "sales_cagr": 0.194,
+    "roce_3y": null,
+    "opm_last": 10.7,
+    "opm_step_3y": 8.1,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -2725,7 +2857,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "Y"
    },
    "ev": {
     "G4": "P/E ~100 at the peak (record)"
@@ -2751,6 +2884,9 @@
     "debtor_days": 88.1,
     "debtor_days_d2": 3.0999999999999943,
     "sales_cagr": 0.482,
+    "roce_3y": null,
+    "opm_last": 15.6,
+    "opm_step_3y": 15.1,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -2787,7 +2923,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "Y"
    },
    "ev": {
     "H2b": "8-K 4.02 non-reliance 1-Mar-2022 (restatement; stock-comp, unrelated to the bust)",
@@ -2814,6 +2951,9 @@
     "debtor_days": 50.9,
     "debtor_days_d2": 5.899999999999999,
     "sales_cagr": 1.046,
+    "roce_3y": null,
+    "opm_last": 20.2,
+    "opm_step_3y": 14.2,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -2850,7 +2990,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "P/E ~40-45"
@@ -2891,7 +3032,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G4": "P/E 86",
@@ -2918,6 +3060,9 @@
     "debtor_days": 64.0,
     "debtor_days_d2": 9.0,
     "sales_cagr": 0.514,
+    "roce_3y": 22.7,
+    "opm_last": 18.8,
+    "opm_step_3y": 5.4,
     "eqcap_growth": 1.0
    },
    "mech_src": "consolidated",
@@ -2954,7 +3099,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "Y"
    },
    "ev": {
     "G4": "P/E 103",
@@ -2981,6 +3127,9 @@
     "debtor_days": 98.0,
     "debtor_days_d2": 17.0,
     "sales_cagr": 0.102,
+    "roce_3y": 42.0,
+    "opm_last": 28.7,
+    "opm_step_3y": 3.7,
     "eqcap_growth": 1.0
    },
    "mech_src": "standalone",
@@ -3017,7 +3166,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G4": "P/E 76",
@@ -3044,6 +3194,9 @@
     "debtor_days": 60.0,
     "debtor_days_d2": -13.0,
     "sales_cagr": 0.197,
+    "roce_3y": 31.3,
+    "opm_last": 25.9,
+    "opm_step_3y": 6.9,
     "eqcap_growth": 1.0
    },
    "mech_src": "consolidated",
@@ -3080,7 +3233,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "P/E 84",
@@ -3124,7 +3278,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "loss-making"
@@ -3165,7 +3320,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "N"
    },
    "ev": {},
    "later": {},
@@ -3189,6 +3345,9 @@
     "debtor_days": 37.0,
     "debtor_days_d2": -1.7000000000000028,
     "sales_cagr": 0.072,
+    "roce_3y": null,
+    "opm_last": 16.2,
+    "opm_step_3y": -0.0,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -3225,7 +3384,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "P/E ~18",
@@ -3269,7 +3429,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "Y"
    },
    "ev": {
     "G4": "loss/first profit; P/S 8.5"
@@ -3295,6 +3456,9 @@
     "debtor_days": 45.2,
     "debtor_days_d2": 20.500000000000004,
     "sales_cagr": 0.373,
+    "roce_3y": null,
+    "opm_last": -26.7,
+    "opm_step_3y": 78.0,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -3331,7 +3495,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {},
    "later": {},
@@ -3370,7 +3535,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "P/E ~15 at T"
@@ -3414,7 +3580,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "~12-15x"
@@ -3455,7 +3622,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "N"
    },
    "ev": {
     "H2b": "8-K 4.02 non-reliance Nov-2018 (within 5y); 2018 delisting; 2020 SEC accounting settlement",
@@ -3482,6 +3650,9 @@
     "debtor_days": 58.6,
     "debtor_days_d2": 14.5,
     "sales_cagr": 0.115,
+    "roce_3y": null,
+    "opm_last": 6.5,
+    "opm_step_3y": 3.7,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -3518,7 +3689,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {},
    "later": {},
@@ -3557,7 +3729,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "N"
    },
    "ev": {},
    "later": {},
@@ -3581,6 +3754,9 @@
     "debtor_days": null,
     "debtor_days_d2": null,
     "sales_cagr": 0.236,
+    "roce_3y": null,
+    "opm_last": 11.9,
+    "opm_step_3y": -8.4,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -3617,7 +3793,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {},
    "later": {},
@@ -3656,7 +3833,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {},
    "later": {},
@@ -3695,7 +3873,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "N",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "~20x"
@@ -3721,6 +3900,9 @@
     "debtor_days": 69.3,
     "debtor_days_d2": 9.099999999999994,
     "sales_cagr": -0.016,
+    "roce_3y": null,
+    "opm_last": null,
+    "opm_step_3y": null,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -3757,7 +3939,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "N"
    },
    "ev": {},
    "later": {},
@@ -3781,6 +3964,9 @@
     "debtor_days": null,
     "debtor_days_d2": null,
     "sales_cagr": 0.277,
+    "roce_3y": null,
+    "opm_last": 11.7,
+    "opm_step_3y": 2.8,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -3817,7 +4003,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "N"
    },
    "ev": {},
    "later": {},
@@ -3841,6 +4028,9 @@
     "debtor_days": 54.2,
     "debtor_days_d2": 11.800000000000004,
     "sales_cagr": -0.04,
+    "roce_3y": null,
+    "opm_last": -2.8,
+    "opm_step_3y": -8.4,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -3877,7 +4067,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {},
    "later": {},
@@ -3916,7 +4107,8 @@
     "G2_debt_up_neg_cfo": "Y",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {},
    "later": {},
@@ -3940,6 +4132,9 @@
     "debtor_days": 69.0,
     "debtor_days_d2": 21.1,
     "sales_cagr": 0.105,
+    "roce_3y": null,
+    "opm_last": -19.4,
+    "opm_step_3y": null,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -3976,7 +4171,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G4": "P/E ~9"
@@ -4002,6 +4198,9 @@
     "debtor_days": 43.5,
     "debtor_days_d2": -5.600000000000001,
     "sales_cagr": 0.305,
+    "roce_3y": null,
+    "opm_last": 39.6,
+    "opm_step_3y": -5.0,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -4038,7 +4237,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {},
    "later": {},
@@ -4077,7 +4277,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G4": "P/E ~13-15"
@@ -4103,6 +4304,9 @@
     "debtor_days": 82.0,
     "debtor_days_d2": 3.799999999999997,
     "sales_cagr": 0.074,
+    "roce_3y": null,
+    "opm_last": 34.4,
+    "opm_step_3y": -4.2,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -4139,7 +4343,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "H2b": "8-K 4.01 auditor change May-2017; reason not read"
@@ -4165,6 +4370,9 @@
     "debtor_days": 90.1,
     "debtor_days_d2": null,
     "sales_cagr": null,
+    "roce_3y": null,
+    "opm_last": -20.2,
+    "opm_step_3y": null,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -4201,7 +4409,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "Y"
    },
    "ev": {
     "G3": "repeated equity raises incl. May-2019 raise",
@@ -4228,6 +4437,9 @@
     "debtor_days": 16.1,
     "debtor_days_d2": -9.899999999999999,
     "sales_cagr": 0.609,
+    "roce_3y": null,
+    "opm_last": -1.8,
+    "opm_step_3y": 15.9,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -4265,7 +4477,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {},
    "later": {},
@@ -4304,7 +4517,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G4": "P/E ~10-11"
@@ -4330,6 +4544,9 @@
     "debtor_days": 26.3,
     "debtor_days_d2": -1.6999999999999993,
     "sales_cagr": 0.212,
+    "roce_3y": null,
+    "opm_last": 30.5,
+    "opm_step_3y": -4.8,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -4366,7 +4583,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {},
    "later": {},
@@ -4405,7 +4623,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "~10x"
@@ -4448,7 +4667,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "no profits"
@@ -4490,7 +4710,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "~20x"
@@ -4531,7 +4752,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "Y"
+    "F2_other_income": "Y",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G4": "P/E 14"
@@ -4557,6 +4779,9 @@
     "debtor_days": 27.0,
     "debtor_days_d2": -17.0,
     "sales_cagr": 0.028,
+    "roce_3y": 14.3,
+    "opm_last": 33.6,
+    "opm_step_3y": -4.7,
     "eqcap_growth": 0.91
    },
    "mech_src": "consolidated",
@@ -4593,7 +4818,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G4": "IPO P/E 104"
@@ -4619,6 +4845,9 @@
     "debtor_days": 102.0,
     "debtor_days_d2": 9.0,
     "sales_cagr": 0.176,
+    "roce_3y": 17.3,
+    "opm_last": 13.5,
+    "opm_step_3y": 3.6,
     "eqcap_growth": 6.57
    },
    "mech_src": "consolidated",
@@ -4656,7 +4885,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "Y",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "N"
    },
    "ev": {
     "H3": "2019-20 lender restructuring / D ratings; 'not cooperating' status not established",
@@ -4684,6 +4914,9 @@
     "debtor_days": 137.0,
     "debtor_days_d2": 33.0,
     "sales_cagr": -0.292,
+    "roce_3y": 20.0,
+    "opm_last": -0.5,
+    "opm_step_3y": 2.5,
     "eqcap_growth": 1.06
    },
    "mech_src": "consolidated",
@@ -4720,7 +4953,8 @@
     "G2_debt_up_neg_cfo": "Y",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "Y",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G4": "P/E 6.3",
@@ -4747,6 +4981,9 @@
     "debtor_days": 227.0,
     "debtor_days_d2": 141.0,
     "sales_cagr": 0.058,
+    "roce_3y": 28.3,
+    "opm_last": 22.7,
+    "opm_step_3y": 8.0,
     "eqcap_growth": 0.92
    },
    "mech_src": "consolidated",
@@ -4784,7 +5021,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G4": "P/E 39.5",
@@ -4811,6 +5049,9 @@
     "debtor_days": 38.0,
     "debtor_days_d2": 15.0,
     "sales_cagr": 0.333,
+    "roce_3y": 33.3,
+    "opm_last": 4.0,
+    "opm_step_3y": 1.3,
     "eqcap_growth": 3.67
    },
    "mech_src": "consolidated",
@@ -4847,7 +5088,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "Y"
+    "F2_other_income": "Y",
+    "H1b_proxy": "Y"
    },
    "ev": {
     "G4": "P/E 16.7"
@@ -4873,6 +5115,9 @@
     "debtor_days": 37.0,
     "debtor_days_d2": -2.0,
     "sales_cagr": 0.214,
+    "roce_3y": 22.7,
+    "opm_last": 58.5,
+    "opm_step_3y": 15.7,
     "eqcap_growth": 1.0
    },
    "mech_src": "consolidated",
@@ -4909,7 +5154,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "Y"
+    "F2_other_income": "Y",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G4": "P/E 5.5",
@@ -4936,6 +5182,9 @@
     "debtor_days": 48.0,
     "debtor_days_d2": -6.0,
     "sales_cagr": 0.17,
+    "roce_3y": 23.5,
+    "opm_last": 19.3,
+    "opm_step_3y": -0.5,
     "eqcap_growth": 1.17
    },
    "mech_src": "consolidated",
@@ -4972,7 +5221,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "Y"
+    "F2_other_income": "Y",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G4": "P/E 7.1"
@@ -4998,6 +5248,9 @@
     "debtor_days": 107.0,
     "debtor_days_d2": 16.0,
     "sales_cagr": 0.046,
+    "roce_3y": 24.7,
+    "opm_last": 5.4,
+    "opm_step_3y": 1.7,
     "eqcap_growth": 0.81
    },
    "mech_src": "consolidated",
@@ -5034,7 +5287,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "Y"
+    "F2_other_income": "Y",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G4": "trailing P/E 155 (COVID-depressed EPS)",
@@ -5061,6 +5315,9 @@
     "debtor_days": 2.0,
     "debtor_days_d2": 1.0,
     "sales_cagr": 0.036,
+    "roce_3y": 10.0,
+    "opm_last": 9.2,
+    "opm_step_3y": 3.8,
     "eqcap_growth": 1.0
    },
    "mech_src": "consolidated",
@@ -5098,7 +5355,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "P/E 8.5",
@@ -5142,7 +5400,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G4": "P/E 26.9"
@@ -5168,6 +5427,9 @@
     "debtor_days": 70.0,
     "debtor_days_d2": -25.0,
     "sales_cagr": 0.129,
+    "roce_3y": 18.3,
+    "opm_last": 10.8,
+    "opm_step_3y": 1.4,
     "eqcap_growth": 1.0
    },
    "mech_src": "consolidated",
@@ -5204,7 +5466,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G4": "P/E 18.6",
@@ -5231,6 +5494,9 @@
     "debtor_days": 73.0,
     "debtor_days_d2": 5.0,
     "sales_cagr": 0.084,
+    "roce_3y": 24.7,
+    "opm_last": 19.2,
+    "opm_step_3y": 0.9,
     "eqcap_growth": 1.0
    },
    "mech_src": "consolidated",
@@ -5267,7 +5533,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G4": "P/E ~69 (EPS about to rise 20x)",
@@ -5294,6 +5561,9 @@
     "debtor_days": 96.0,
     "debtor_days_d2": 10.0,
     "sales_cagr": 0.016,
+    "roce_3y": 11.0,
+    "opm_last": 10.1,
+    "opm_step_3y": null,
     "eqcap_growth": null
    },
    "mech_src": "consolidated",
@@ -5330,7 +5600,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "P/E 15"
@@ -5371,7 +5642,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "P/E 4.9"
@@ -5412,7 +5684,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "P/E 12.6"
@@ -5453,7 +5726,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "P/E 5"
@@ -5495,7 +5769,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "Y",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "Y"
    },
    "ev": {
     "G4": "P/E ~10-13",
@@ -5522,6 +5797,9 @@
     "debtor_days": 90.0,
     "debtor_days_d2": 60.0,
     "sales_cagr": 0.395,
+    "roce_3y": 58.7,
+    "opm_last": 35.7,
+    "opm_step_3y": 9.0,
     "eqcap_growth": 1.0
    },
    "mech_src": "consolidated",
@@ -5558,7 +5836,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "P/E 20.8"
@@ -5600,7 +5879,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "P/E 2.2"
@@ -5641,7 +5921,8 @@
     "G2_debt_up_neg_cfo": "NA",
     "G5_neg_fcf": "NA",
     "G6_debtor_days": "NA",
-    "F2_other_income": "NA"
+    "F2_other_income": "NA",
+    "H1b_proxy": "NA"
    },
    "ev": {
     "G4": "P/E 9"
@@ -5683,7 +5964,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "P/E 7.9"
@@ -5724,7 +6006,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "Y"
    },
    "ev": {
     "G4": "P/E 15",
@@ -5751,6 +6034,9 @@
     "debtor_days": 81.0,
     "debtor_days_d2": 9.0,
     "sales_cagr": 0.171,
+    "roce_3y": 54.7,
+    "opm_last": 26.0,
+    "opm_step_3y": 3.0,
     "eqcap_growth": 2.0
    },
    "mech_src": "standalone",
@@ -5787,7 +6073,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "P/E 17.5"
@@ -5828,7 +6115,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "P/E 15.7"
@@ -5869,7 +6157,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "P/E 12.8"
@@ -5910,7 +6199,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "P/E 26.6"
@@ -5951,7 +6241,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {},
    "later": {},
@@ -5990,7 +6281,8 @@
     "G2_debt_up_neg_cfo": "Y",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G3": "Blinkit share-swap approved Jun-2022; IPO + pre-IPO raises 2021",
@@ -6018,6 +6310,9 @@
     "debtor_days": 24.0,
     "debtor_days_d2": 4.0,
     "sales_cagr": 0.689,
+    "roce_3y": -87.3,
+    "opm_last": -23.4,
+    "opm_step_3y": -3.7,
     "eqcap_growth": null
    },
    "mech_src": "consolidated",
@@ -6054,7 +6349,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "P/E 40-60 for years; value at the 2005 start not given"
@@ -6095,7 +6391,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {},
    "later": {},
@@ -6134,7 +6431,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "N",
     "G6_debtor_days": "N",
-    "F2_other_income": "Y"
+    "F2_other_income": "Y",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G3": "~Rs 25,000 cr rights May-2019 (+ QIP/FCCB Jan-2020)",
@@ -6162,6 +6460,9 @@
     "debtor_days": 19.0,
     "debtor_days_d2": 1.0,
     "sales_cagr": -0.042,
+    "roce_3y": 6.7,
+    "opm_last": 31.9,
+    "opm_step_3y": -3.3,
     "eqcap_growth": 1.0
    },
    "mech_src": "consolidated",
@@ -6198,7 +6499,8 @@
     "G2_debt_up_neg_cfo": "NA",
     "G5_neg_fcf": "NA",
     "G6_debtor_days": "NA",
-    "F2_other_income": "NA"
+    "F2_other_income": "NA",
+    "H1b_proxy": "NA"
    },
    "ev": {
     "G4": "P/E 23-38, median 26"
@@ -6239,7 +6541,8 @@
     "G2_debt_up_neg_cfo": "Y",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "N"
    },
    "ev": {},
    "later": {},
@@ -6263,6 +6566,9 @@
     "debtor_days": null,
     "debtor_days_d2": null,
     "sales_cagr": 0.301,
+    "roce_3y": null,
+    "opm_last": 10.2,
+    "opm_step_3y": 5.7,
     "eqcap_growth": null
    },
    "mech_src": "sec",
@@ -6299,7 +6605,8 @@
     "G2_debt_up_neg_cfo": "N",
     "G5_neg_fcf": "Y",
     "G6_debtor_days": "N",
-    "F2_other_income": "N"
+    "F2_other_income": "N",
+    "H1b_proxy": "N"
    },
    "ev": {
     "G1": "BSE SHP June 2019 (filed 2019-07-20): 71.3% of promoter holding pledged"
@@ -6325,6 +6632,9 @@
     "debtor_days": 37.0,
     "debtor_days_d2": 1.0,
     "sales_cagr": 0.171,
+    "roce_3y": 8.0,
+    "opm_last": 9.7,
+    "opm_step_3y": -4.7,
     "eqcap_growth": 1.0
    },
    "mech_src": "consolidated",
@@ -6361,7 +6671,8 @@
     "G2_debt_up_neg_cfo": "U",
     "G5_neg_fcf": "U",
     "G6_debtor_days": "U",
-    "F2_other_income": "U"
+    "F2_other_income": "U",
+    "H1b_proxy": "U"
    },
    "ev": {
     "G4": "P/E never below 66 since listing"

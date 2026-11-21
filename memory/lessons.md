@@ -136,3 +136,13 @@ announcement-day reaction" filter did not replicate; v1's "mid-cap strongest" re
 **Rule (stage 2/3):** treat the bottom two earnings-surprise quintiles as an avoid/exit flag for at least
 63 trading days. Don't treat a positive surprise alone as a buy reason. Exploratory subgroups don't survive
 fresh data — only pre-registered results count. Live tracker logs from Q3 FY27; verdict after 4 live quarters.
+
+## L20 (2026-11-21) — Our hard filters catch frauds, not leverage blow-ups; mechanical cash-flow rules hit winners too
+Stage-2 test (106 case episodes, in-sample + 495-firm 2020 snapshot): current hard set caught 8/39 known traps,
+rejected 0/62 winners — all 8 were frauds caught by *judgment* signals (fake cash, unverifiable profits, implausible
+economics). Leverage blow-ups caught 0/15; post-run crashes 0/9. Auditor exit never fired before a peak (0/41) → it's
+an EXIT trigger, not an entry screen. CFO/PAT<0.7 and negative FCF fired on winners as often as traps (HAL, BSE,
+Trent, Netflix). Pledge >25% of promoter holding = best graded flag (8/20 traps vs 2/13 winners). P/E>50 belongs
+in valuation. Universe test is survivorship-biased (no delisted firms) → can't see losers well.
+**Adopted (provisional):** insight:disqualifiers-v2-proposal as the working rule set; solvency flags (negative
+net worth, interest cover <1.5x, short-term funding of long assets, payouts > FCF while borrowing) are UNTESTED.
