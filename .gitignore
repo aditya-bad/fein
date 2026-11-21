@@ -1,2 +1,6 @@
 memory/.index/
 __pycache__/
+secrets/
+*.token
+*cookies*.txt
+.env

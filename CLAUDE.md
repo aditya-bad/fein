@@ -43,6 +43,10 @@ Cite record ids. If memdb has nothing, say so, then research.
 - `python3 -m memdb types` lists record types; `stats`, `compact`, `rebuild` for upkeep.
 Same id = update (fields merge, version increments, old versions stay in the JSONL).
 
+## Roadmap rule
+Read `memory/roadmap.md`. Every task must name which of the 7 stages (universe → hard filters → signals →
+deep dive → valuation → decision → scorekeeping) it builds and what it unlocks next. No random analysis.
+
 ## Hard rules (learned the hard way — see memory/lessons.md)
 - **Edge before stocks.** Don't jump to producing stock lists. First ask: what is our
   advantage on this question that the market doesn't have? Public screens = no edge.

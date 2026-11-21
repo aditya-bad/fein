@@ -107,3 +107,35 @@ Fiscal-quarter cross-sections announced in 2026: quarters ended **Dec-2025** (fi
 ## Deviation log (append-only, dated)
 
 *(empty at pre-registration)*
+- **2026-11-21 D1 (clarification, before any statistic).** The period label is set from the event date and the fiscal
+  quarter together. An event dated 2026 whose fiscal quarter is *not* one of the four fresh quarters (a late filer for
+  Sep-2025 or earlier) belongs to neither period and is counted in `counts.other`. Re-run = events dated 2022–2025.
+- **D2 (clarification, before any statistic).** H4 tertile drift is computed as in v1. Events are split by mcap tertile
+  within each fiscal quarter, then ranked into SUE quintiles within each (quarter, tertile) cell of ≥ 15 events. The
+  H4 rows show top-vs-controls and T−B per tertile.
+- **D3 (operational).** Pass A ran as two processes on two halves of the ordered list (each with its own rate gaps:
+  API 1.0 s, archive 0.3 s, Yahoo 1.1 s), and the all-company announcements feed ran alongside at 1.5 s/call. A smoke
+  test of the event and analysis code ran on partial pass-A data with all output discarded. Only structural counts
+  were looked at (events per quarter and EPS basis, event-date source), never a return.
+
+## Live forward test (pre-registered 2026-11-21; first quarter Q3 FY27 = quarter ending 31-Dec-2026, filed Jan–Feb 2027)
+
+Script: `tools/backtests/india_pead/live_tracker.py` (standard library only; runs on a laptop or a Raspberry Pi).
+State: `research_notes/Backtests/india_pead_live/`.
+- **What gets logged, at announcement, before any outcome exists.** For every result in the universe (₹500–50,000 cr
+  at entry) the tracker logs the SUE (same formula and consolidated-first rule as v2), the entry date and close (first
+  trading day after the filing), the announcement-window return, and a **provisional quintile**. The provisional
+  quintile uses **fixed SUE cut points** taken from the 2022–26 backtest (`sue_cutpoints.json`), so it is known on the
+  day and is tradeable. It also logs a prediction text: Q5 "will beat size-matched controls over 63 trading days", Q1
+  "will lag", otherwise "no call".
+- **Final quintile.** After the filing season closes (quarter-end + 50 days; Mar quarter + 65), `finalize` ranks the
+  quarter's logged results into in-quarter quintiles (the backtest definition) and mcap tertiles.
+- **Scoring.** `score` fills 21d and 63d returns vs size-matched controls (universe stocks with mcap ×0.5–×2 on the
+  entry date, ≥ 5) once the windows close, and writes `scorecard.md`. Rows are never edited after logging except for
+  the `q5_final`, `tertile_final`, outcome and `status` columns.
+- **Decision rule for the live test (fixed now).** The verdict is judged after **four live quarters** (Q3 FY27–Q2
+  FY28, 63d windows closing about Feb 2028). The primary test is final top quintile, 63d, net of 1%, > 0 with
+  week-clustered t > 3 or 95% CI excluding zero. Secondary tests are the bottom quintile ≤ −1% (avoid leg) and the
+  H2 filter contrast. A second primary row reports the provisional (fixed-cut) quintile, because that is the version
+  a person could actually trade on the day. Until then every live number is "interim". No rule changes after the first
+  live row is logged; any change gets a new dated entry here, and the old rule is still reported.

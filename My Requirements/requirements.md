@@ -5,7 +5,7 @@
 
 ## High impact
 
-- [ ] **1. Make our branch the GitHub default branch.**
+- [x] **1. Make our branch the GitHub default branch.** ✅ Done by user 21-Nov-2026; PR #1 closed.
   GitHub → `aditya-bad/fein` → Settings → General → Default branch → `claude/focused-brahmagupta-g3hraq`.
   *Why:* new sessions then load the memory automatically. Without this, a new session starts blank.
   After this I'll close PR #1.
@@ -153,3 +153,36 @@ Also tell me how I'll reach the wrapper: over Remote Control on the Pi (simplest
    - collect concall/transcript links for the promise tracker.
 4. Sessions expire every few weeks. When a script reports "login expired", repeat step 2.
 5. If free screens turn out to be capped (no paging/export), I'll tell you before suggesting premium.
+
+
+---
+
+# List 3 — network & security checklist for the Raspberry Pi (21 Nov 2026)
+
+*You said you're setting up the network and security. This is what I'd recommend, ordered by importance.*
+
+## Must do
+- [ ] **No inbound ports open to the internet.** Nothing on the Pi needs to accept connections from outside.
+  Remote Control and git work over outbound connections only. Keep the router's port forwarding off for the Pi.
+- [ ] **Separate user account** on the Pi for this work (e.g. `fein`), not `pi`/root. Run cron jobs and Claude as that user.
+- [ ] **SSH keys only** (disable password login: `PasswordAuthentication no` in `/etc/ssh/sshd_config`), or turn SSH off if
+  you use the Pi only via screen and keyboard.
+- [ ] **Firewall:** `sudo apt install ufw && sudo ufw default deny incoming && sudo ufw default allow outgoing && sudo ufw enable`
+  (add `sudo ufw allow from <your-LAN-subnet> to any port 22` only if you use SSH on the LAN).
+- [ ] **Kite wrapper binds to `127.0.0.1` only** (not `0.0.0.0`), and is read-only (no order/funds/holdings endpoints).
+  If you want it reachable from your laptop, use a private network like Tailscale rather than opening ports.
+- [ ] **Secrets in files with `chmod 600`** under `~/fein-data/secrets/`, owned by the `fein` user. That covers the Kite API key/secret/access
+  token, Screener cookies and the GitHub token. **Never commit them.** I'll add `secrets/` to `.gitignore` patterns.
+- [ ] **GitHub access:** a *fine-grained* token limited to `aditya-bad/fein`, with contents read/write only and an expiry date.
+- [ ] **Automatic security updates:** `sudo apt install unattended-upgrades && sudo dpkg-reconfigure unattended-upgrades`.
+
+## Should do
+- [ ] **Remote Control folder scope:** share only `~/fein-lab`, never your home folder. Claude can only act inside what you share.
+- [ ] **Back up `~/fein-data`** (SQLite DB, raw filings) weekly to another drive or cloud. The repo holds code and memory, but not the raw data.
+- [ ] **Kite token refresh:** Kite access tokens expire daily, so your wrapper should refresh them on the Pi. If you do that by hand, tell me what time it's ready.
+- [ ] **Gemini CLI account:** use an account without sensitive email/drive data, since it will process public filings only.
+- [ ] **Monitoring:** I'll write job failures to `~/fein-data/logs/`. Optionally set up an email or Telegram alert on failure, which you'd configure yourself.
+
+## Nice to have
+- [ ] UPS or stable power. SD cards corrupt on power loss, which is another reason to prefer an SSD.
+- [ ] Tailscale (or similar) if you want to reach the Pi from your phone or laptop without exposing it.
