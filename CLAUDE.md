@@ -43,6 +43,9 @@ Cite record ids. If memdb has nothing, say so, then research.
 - `python3 -m memdb types` lists record types; `stats`, `compact`, `rebuild` for upkeep.
 Same id = update (fields merge, version increments, old versions stay in the JSONL).
 
+## Work-pacing rule
+Run at most 2 subagents at a time, as a pipeline: finish one task, then start the next (lesson L23).
+
 ## Roadmap rule
 Read `memory/roadmap.md`. Every task must name which of the 7 stages (universe → hard filters → signals →
 deep dive → valuation → decision → scorekeeping) it builds and what it unlocks next. No random analysis.
