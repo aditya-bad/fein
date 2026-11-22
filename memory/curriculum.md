@@ -1,7 +1,7 @@
 # Curriculum and learning loop (the engine of "never stop")
 
 Last updated: 2026-11-20. Every session/cycle: pick the top unfinished items, do them, ingest to memdb,
-update this file, log in session_log.md, commit and push. Respect usage limits: ≤2 parallel agents (L23 — pipeline, not swarm),
+update this file, log in session_log.md, commit and push. Respect usage limits: 2–3 parallel agents by default (L23 — pipeline, not swarm; judgment, not a hard cap),
 save in stages.
 
 ## The loop (each cycle)

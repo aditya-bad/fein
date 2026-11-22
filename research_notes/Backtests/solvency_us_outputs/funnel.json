@@ -1,0 +1,29 @@
+{
+ "2015-06-30": {
+  "ok": 1683,
+  "float outside $300M-$20B": 894,
+  "no 10-K filed in 15m before T": 744,
+  "float/assets scaling check": 91,
+  "excluded SIC (fin/REIT/utility/none)": 1349,
+  "no public float on T-10-K": 51,
+  "no total assets": 31
+ },
+ "2017-06-30": {
+  "ok": 1514,
+  "no 10-K filed in 15m before T": 808,
+  "float outside $300M-$20B": 1039,
+  "excluded SIC (fin/REIT/utility/none)": 1349,
+  "float/assets scaling check": 76,
+  "no total assets": 21,
+  "no public float on T-10-K": 36
+ },
+ "2019-06-30": {
+  "no 10-K filed in 15m before T": 843,
+  "float outside $300M-$20B": 899,
+  "ok": 1624,
+  "excluded SIC (fin/REIT/utility/none)": 1349,
+  "float/assets scaling check": 92,
+  "no public float on T-10-K": 26,
+  "no total assets": 10
+ }
+}

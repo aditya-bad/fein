@@ -165,6 +165,5 @@ windows, write-offs and one-offs before trusting headline asset-quality and grow
 
 ## L23 (2026-11-22) — Run work as a pipeline, not a swarm (user observation, confirmed)
 Running 4–6 agents in parallel hit the 5-hour usage limit roughly daily, leaving several tasks half-done;
-each resume re-reads large transcripts/files, wasting budget. **Rule:** max 2 concurrent agents (prefer 1 heavy +
-1 light); size each task to finish within one usage window; save in stages; start the next task only when one
+each resume re-reads large transcripts/files, wasting budget. **Rule (user: "not a hard rule, your decision"):** default 2–3 concurrent agents (prefer heavy + light mix), adjust to task size and remaining budget; size each task to finish within one usage window; save in stages; start the next task only when one
 finishes; give agents precise file paths so they read less.
