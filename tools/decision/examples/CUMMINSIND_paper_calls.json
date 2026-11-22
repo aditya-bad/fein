@@ -1,0 +1,232 @@
+[
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:CUMMINSIND:card-2026-11-21-5y-ge3x",
+  "title": "Paper call: Cummins India 5-year outcome ≥3.0x from 2026-11-21 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell; PRACTICE EXAMPLE built from test inputs). Probability 0.02 (base rate 0.444, class india_survivors_2020_25_mcap_ge400) that: YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-21 (entry INR 4,100) to the last close on or before 2031-11-21 is ≥ 3.0. Model: worksheet scenarios bear 30%→0.83x, base 48%→1.35x, bull 21%→2.03x with σ=0.30; reverse DCF base-case IRR 7.3%; card rule output: size 0: blocked by Stage 2 hard filters (INCOMPLETE: 1 of 7 rules unchecked (H3 rating 'issuer not cooperating') → size 0 until checked); Stage 4 soft flags (8 open, no variant view → NO POSITION); Expected value vs hurdle (EV 1.33x vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "CUMMINSIND"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india",
+   "practice-example"
+  ],
+  "date": "2026-11-21",
+  "status": "open",
+  "data": {
+   "probability": 0.0222,
+   "base_rate_probability": 0.444,
+   "base_rate_reasoning": "India, random NSE sample, mcap >= Rs 400 cr at T0, 5 yrs from 30-Sep-2020. Survivors only (firms delisted before mid-2023 absent -> loss rates understated); T0 was six months after the Mar-2020 low and 2020-25 was a strong small/mid-cap bull market (-> x3 overstated). One snapshot. Treat as an upper bound for P(>=3x) and a lower bound for P(<=0.5x).",
+   "method": "decision-card-v1",
+   "made_on": "2026-11-21",
+   "resolve_by": "2031-11-21",
+   "entry_date": "2026-11-21",
+   "entry_price": 4100.0,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-21 (entry INR 4,100) to the last close on or before 2031-11-21 is ≥ 3.0.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": true,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/CUMMINSIND_practice.md"
+  ],
+  "confidence": "unverified"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:CUMMINSIND:card-2026-11-21-5y-le0p5x",
+  "title": "Paper call: Cummins India 5-year outcome ≤0.5x from 2026-11-21 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell; PRACTICE EXAMPLE built from test inputs). Probability 0.02 (base rate 0.020, class india_survivors_2020_25_mcap_ge400) that: YES if the total-return multiple from 2026-11-21 (entry INR 4,100) to the last close on or before 2031-11-21 is ≤ 0.5, or the stock is delisted/suspended below that level. Model: worksheet scenarios bear 30%→0.83x, base 48%→1.35x, bull 21%→2.03x with σ=0.30; reverse DCF base-case IRR 7.3%; card rule output: size 0: blocked by Stage 2 hard filters (INCOMPLETE: 1 of 7 rules unchecked (H3 rating 'issuer not cooperating') → size 0 until checked); Stage 4 soft flags (8 open, no variant view → NO POSITION); Expected value vs hurdle (EV 1.33x vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "CUMMINSIND"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india",
+   "practice-example"
+  ],
+  "date": "2026-11-21",
+  "status": "open",
+  "data": {
+   "probability": 0.0244,
+   "base_rate_probability": 0.02,
+   "base_rate_reasoning": "India, random NSE sample, mcap >= Rs 400 cr at T0, 5 yrs from 30-Sep-2020. Survivors only (firms delisted before mid-2023 absent -> loss rates understated); T0 was six months after the Mar-2020 low and 2020-25 was a strong small/mid-cap bull market (-> x3 overstated). One snapshot. Treat as an upper bound for P(>=3x) and a lower bound for P(<=0.5x).",
+   "method": "decision-card-v1",
+   "made_on": "2026-11-21",
+   "resolve_by": "2031-11-21",
+   "entry_date": "2026-11-21",
+   "entry_price": 4100.0,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple from 2026-11-21 (entry INR 4,100) to the last close on or before 2031-11-21 is ≤ 0.5, or the stock is delisted/suspended below that level.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": true,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/CUMMINSIND_practice.md"
+  ],
+  "confidence": "unverified"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:CUMMINSIND:card-2026-11-21-5y-blowup",
+  "title": "Paper call: Cummins India 5-year outcome blow-up from 2026-11-21 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell; PRACTICE EXAMPLE built from test inputs). Probability 0.01 (base rate n/a, class india_survivors_2020_25_mcap_ge400) that: YES if between 2026-11-21 and 2031-11-21: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples). Model: worksheet scenarios bear 30%→0.83x, base 48%→1.35x, bull 21%→2.03x with σ=0.30; reverse DCF base-case IRR 7.3%; card rule output: size 0: blocked by Stage 2 hard filters (INCOMPLETE: 1 of 7 rules unchecked (H3 rating 'issuer not cooperating') → size 0 until checked); Stage 4 soft flags (8 open, no variant view → NO POSITION); Expected value vs hurdle (EV 1.33x vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "CUMMINSIND"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india",
+   "practice-example"
+  ],
+  "date": "2026-11-21",
+  "status": "open",
+  "data": {
+   "probability": 0.01,
+   "base_rate_probability": null,
+   "base_rate_reasoning": "India, random NSE sample, mcap >= Rs 400 cr at T0, 5 yrs from 30-Sep-2020. Survivors only (firms delisted before mid-2023 absent -> loss rates understated); T0 was six months after the Mar-2020 low and 2020-25 was a strong small/mid-cap bull market (-> x3 overstated). One snapshot. Treat as an upper bound for P(>=3x) and a lower bound for P(<=0.5x).",
+   "method": "decision-card-v1",
+   "made_on": "2026-11-21",
+   "resolve_by": "2031-11-21",
+   "entry_date": "2026-11-21",
+   "entry_price": 4100.0,
+   "currency": "INR",
+   "resolution_rule": "YES if between 2026-11-21 and 2031-11-21: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples).",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": true,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/CUMMINSIND_practice.md"
+  ],
+  "confidence": "unverified"
+ },
+ {
+  "type": "decision",
+  "id": "decision:card:CUMMINSIND:2026-11-21",
+  "title": "Decision card CUMMINSIND 2026-11-21 (practice, no verdict)",
+  "body": "Decision card v1 for Cummins India. Rule output: size 0: blocked by Stage 2 hard filters (INCOMPLETE: 1 of 7 rules unchecked (H3 rating 'issuer not cooperating') → size 0 until checked); Stage 4 soft flags (8 open, no variant view → NO POSITION); Expected value vs hurdle (EV 1.33x vs hurdle 1.76x → below hurdle → size 0). Thesis: TEST THESIS (illustrative): data-centre gensets and the CPCB IV+ price step keep revenue growing ~12% with core NOPAT margin ~14-15%, while cash keeps flowing out ~100% as dividends. Variant view: none Open soft flags: 8. P(≥3x) 2% vs base 44%; P(≤0.5x) 2% vs base 2.0%; EV 5-yr multiple 1.33x vs hurdle 1.76x. Review 2027-02-15.",
+  "tickers": [
+   "CUMMINSIND"
+  ],
+  "tags": [
+   "decision-card",
+   "stage-6",
+   "india",
+   "practice-example"
+  ],
+  "date": "2026-11-21",
+  "data": {
+   "gates": [
+    {
+     "gate": "Stage 2 hard filters",
+     "result": "INCOMPLETE: 1 of 7 rules unchecked (H3 rating 'issuer not cooperating') → size 0 until checked",
+     "blocks": true
+    },
+    {
+     "gate": "Stage 3 PEAD avoid flag",
+     "result": "unknown (no live quintile): does not block, noted",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 4 soft flags",
+     "result": "8 open, no variant view → NO POSITION",
+     "blocks": true
+    },
+    {
+     "gate": "Outside-view check",
+     "result": "model departs from base rate with no variant view → shrink",
+     "blocks": false
+    },
+    {
+     "gate": "Expected value vs hurdle",
+     "result": "EV 1.33x vs hurdle 1.76x → below hurdle → size 0",
+     "blocks": true
+    }
+   ],
+   "size_after_gates": 0.0,
+   "rule_size": 0.0,
+   "kelly_f_star": 0.0,
+   "open_soft_flags": 8,
+   "review_date": "2027-02-15",
+   "kill_criteria": [
+    {
+     "if": "Royalty rate or eligible base raised at renewal",
+     "measure": "FY28 AGM-notice RPT annex",
+     "by": "2027-07-31"
+    },
+    {
+     "if": "Standalone OPM below 17% in both Q3 and Q4 FY27 (pass-through failed)",
+     "measure": "screener / results filings",
+     "by": "2027-05-31"
+    },
+    {
+     "if": "Parent take (royalty + support) above 3% of sales in FY27",
+     "measure": "AR27 RPT note",
+     "by": "2027-08-31"
+    },
+    {
+     "if": "Payout above 100% of FCF or a capex spike above 2x D&A without a stated plan",
+     "measure": "AR27 cash flow",
+     "by": "2027-08-31"
+    }
+   ],
+   "override_log": [
+    {
+     "date": "2026-11-21",
+     "flag": "Other income 23% of PBT",
+     "decision": "use core PBT Rs 2,384 cr; treasury income held flat in the EPS path; rent/JV dividends valued separately",
+     "why": "AR26 n.27 split: rent 186, JV/associate dividends 217, interest 189, MF 75"
+    },
+    {
+     "date": "2026-11-21",
+     "flag": "Labour-code exceptional Rs 94 cr",
+     "decision": "cleared as one-off; ~80 bps recurring tracked",
+     "why": "Q2 results note 6 (regulatory catch-up)"
+    }
+   ],
+   "paper_calls": [
+    "thesis:paper-call:CUMMINSIND:card-2026-11-21-5y-ge3x",
+    "thesis:paper-call:CUMMINSIND:card-2026-11-21-5y-le0p5x",
+    "thesis:paper-call:CUMMINSIND:card-2026-11-21-5y-blowup"
+   ],
+   "practice": true
+  },
+  "sources": [
+   "research_notes/Deep dives/CUMMINSIND_practice.md"
+  ],
+  "confidence": "unverified",
+  "links": [
+   {
+    "to": "thesis:paper-call:CUMMINSIND:card-2026-11-21-5y-ge3x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:CUMMINSIND:card-2026-11-21-5y-le0p5x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:CUMMINSIND:card-2026-11-21-5y-blowup",
+    "rel": "about"
+   }
+  ]
+ }
+]

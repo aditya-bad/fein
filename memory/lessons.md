@@ -146,3 +146,10 @@ Trent, Netflix). Pledge >25% of promoter holding = best graded flag (8/20 traps 
 in valuation. Universe test is survivorship-biased (no delisted firms) → can't see losers well.
 **Adopted (provisional):** insight:disqualifiers-v2-proposal as the working rule set; solvency flags (negative
 net worth, interest cover <1.5x, short-term funding of long assets, payouts > FCF while borrowing) are UNTESTED.
+
+## L21 (2026-11-22) — In India, the exit multiple is the hidden bet
+Valuation worksheet on 3 practice names: at 12–13% cost of equity a DCF can justify only ~12–17x P/E in year 5, so
+48–52x compounders look 65–70% overvalued and need ~30%/yr growth for 10 years. Scenario exit P/Es (25–50x) were
+2–3× what the DCF justifies. **Rule:** judge Indian compounders on the return the price offers in the base case vs
+the index hurdle, and state the exit multiple explicitly as a bet. Practice paper calls from templates are NOT
+added to the stage-7 scoreboard (live cards only).

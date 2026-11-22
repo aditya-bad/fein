@@ -89,3 +89,9 @@ Unlocks: a calibrated solvency gate for stage 2 (and the Pi detector set), and t
   why results are shown per snapshot; (6) 8-K item codes exist in submissions metadata from 2004 — fine for these windows.
 
 ---
+## Stage log
+- 2026-11-21: pre-registration above written; scripts in `tools/backtests/solvency_us/` (s1 candidates from float
+  frames → s2 SEC submissions + reduced companyfacts → s3 flags → s4 EDGAR events → s5 tickers + Yahoo → s6 analysis).
+  4,843 candidate CIKs. Fetch interrupted by a usage limit at 1,162 firms; resumed 2026-11-22 from cache.
+  Implementation notes fixed before outcomes: the float fact is taken from the T-10-K's own accession (some filers
+  tag the float with a wrong date, e.g. Sanmina FY2015); S4 requires payouts > 0 (otherwise every cash burner fires).

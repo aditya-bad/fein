@@ -1,0 +1,232 @@
+[
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:VMM:card-2026-11-21-5y-ge3x",
+  "title": "Paper call: Vishal Mega Mart 5-year outcome ≥3.0x from 2026-11-20 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell; PRACTICE EXAMPLE built from test inputs). Probability 0.06 (base rate 0.444, class india_survivors_2020_25_mcap_ge400) that: YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-20 (entry INR 91.50) to the last close on or before 2031-11-20 is ≥ 3.0. Model: worksheet scenarios bear 30%→0.73x, base 45%→1.51x, bull 23%→2.44x with σ=0.30; reverse DCF base-case IRR 8.2%; card rule output: size 0: blocked by Stage 2 hard filters (INCOMPLETE: 2 of 7 rules unchecked (H3 rating 'issuer not cooperating', H5 related-party cash leakage to promoter entities) → size 0 until checked); Stage 4 soft flags (8 open, no variant view → NO POSITION); Expected value vs hurdle (EV 1.46x vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "VMM"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india",
+   "practice-example"
+  ],
+  "date": "2026-11-21",
+  "status": "open",
+  "data": {
+   "probability": 0.0611,
+   "base_rate_probability": 0.444,
+   "base_rate_reasoning": "India, random NSE sample, mcap >= Rs 400 cr at T0, 5 yrs from 30-Sep-2020. Survivors only (firms delisted before mid-2023 absent -> loss rates understated); T0 was six months after the Mar-2020 low and 2020-25 was a strong small/mid-cap bull market (-> x3 overstated). One snapshot. Treat as an upper bound for P(>=3x) and a lower bound for P(<=0.5x).",
+   "method": "decision-card-v1",
+   "made_on": "2026-11-21",
+   "resolve_by": "2031-11-20",
+   "entry_date": "2026-11-20",
+   "entry_price": 91.5,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-20 (entry INR 91.50) to the last close on or before 2031-11-20 is ≥ 3.0.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": true,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/VMM_practice.md"
+  ],
+  "confidence": "unverified"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:VMM:card-2026-11-21-5y-le0p5x",
+  "title": "Paper call: Vishal Mega Mart 5-year outcome ≤0.5x from 2026-11-20 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell; PRACTICE EXAMPLE built from test inputs). Probability 0.05 (base rate 0.020, class india_survivors_2020_25_mcap_ge400) that: YES if the total-return multiple from 2026-11-20 (entry INR 91.50) to the last close on or before 2031-11-20 is ≤ 0.5, or the stock is delisted/suspended below that level. Model: worksheet scenarios bear 30%→0.73x, base 45%→1.51x, bull 23%→2.44x with σ=0.30; reverse DCF base-case IRR 8.2%; card rule output: size 0: blocked by Stage 2 hard filters (INCOMPLETE: 2 of 7 rules unchecked (H3 rating 'issuer not cooperating', H5 related-party cash leakage to promoter entities) → size 0 until checked); Stage 4 soft flags (8 open, no variant view → NO POSITION); Expected value vs hurdle (EV 1.46x vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "VMM"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india",
+   "practice-example"
+  ],
+  "date": "2026-11-21",
+  "status": "open",
+  "data": {
+   "probability": 0.0505,
+   "base_rate_probability": 0.02,
+   "base_rate_reasoning": "India, random NSE sample, mcap >= Rs 400 cr at T0, 5 yrs from 30-Sep-2020. Survivors only (firms delisted before mid-2023 absent -> loss rates understated); T0 was six months after the Mar-2020 low and 2020-25 was a strong small/mid-cap bull market (-> x3 overstated). One snapshot. Treat as an upper bound for P(>=3x) and a lower bound for P(<=0.5x).",
+   "method": "decision-card-v1",
+   "made_on": "2026-11-21",
+   "resolve_by": "2031-11-20",
+   "entry_date": "2026-11-20",
+   "entry_price": 91.5,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple from 2026-11-20 (entry INR 91.50) to the last close on or before 2031-11-20 is ≤ 0.5, or the stock is delisted/suspended below that level.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": true,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/VMM_practice.md"
+  ],
+  "confidence": "unverified"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:VMM:card-2026-11-21-5y-blowup",
+  "title": "Paper call: Vishal Mega Mart 5-year outcome blow-up from 2026-11-20 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell; PRACTICE EXAMPLE built from test inputs). Probability 0.02 (base rate n/a, class india_survivors_2020_25_mcap_ge400) that: YES if between 2026-11-20 and 2031-11-20: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples). Model: worksheet scenarios bear 30%→0.73x, base 45%→1.51x, bull 23%→2.44x with σ=0.30; reverse DCF base-case IRR 8.2%; card rule output: size 0: blocked by Stage 2 hard filters (INCOMPLETE: 2 of 7 rules unchecked (H3 rating 'issuer not cooperating', H5 related-party cash leakage to promoter entities) → size 0 until checked); Stage 4 soft flags (8 open, no variant view → NO POSITION); Expected value vs hurdle (EV 1.46x vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "VMM"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india",
+   "practice-example"
+  ],
+  "date": "2026-11-21",
+  "status": "open",
+  "data": {
+   "probability": 0.02,
+   "base_rate_probability": null,
+   "base_rate_reasoning": "India, random NSE sample, mcap >= Rs 400 cr at T0, 5 yrs from 30-Sep-2020. Survivors only (firms delisted before mid-2023 absent -> loss rates understated); T0 was six months after the Mar-2020 low and 2020-25 was a strong small/mid-cap bull market (-> x3 overstated). One snapshot. Treat as an upper bound for P(>=3x) and a lower bound for P(<=0.5x).",
+   "method": "decision-card-v1",
+   "made_on": "2026-11-21",
+   "resolve_by": "2031-11-20",
+   "entry_date": "2026-11-20",
+   "entry_price": 91.5,
+   "currency": "INR",
+   "resolution_rule": "YES if between 2026-11-20 and 2031-11-20: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples).",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": true,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/VMM_practice.md"
+  ],
+  "confidence": "unverified"
+ },
+ {
+  "type": "decision",
+  "id": "decision:card:VMM:2026-11-21",
+  "title": "Decision card VMM 2026-11-21 (practice, no verdict)",
+  "body": "Decision card v1 for Vishal Mega Mart. Rule output: size 0: blocked by Stage 2 hard filters (INCOMPLETE: 2 of 7 rules unchecked (H3 rating 'issuer not cooperating', H5 related-party cash leakage to promoter entities) → size 0 until checked); Stage 4 soft flags (8 open, no variant view → NO POSITION); Expected value vs hurdle (EV 1.46x vs hurdle 1.76x → below hurdle → size 0). Thesis: TEST THESIS (illustrative): a value retailer for Tier II/III India keeps adding ~100+ stores a year at network-average density, so revenue compounds ~18% while pre-Ind AS EBITDA margin holds near 10%. Variant view: none Open soft flags: 8. P(≥3x) 6% vs base 44%; P(≤0.5x) 5% vs base 2.0%; EV 5-yr multiple 1.46x vs hurdle 1.76x. Review 2027-02-15.",
+  "tickers": [
+   "VMM"
+  ],
+  "tags": [
+   "decision-card",
+   "stage-6",
+   "india",
+   "practice-example"
+  ],
+  "date": "2026-11-21",
+  "data": {
+   "gates": [
+    {
+     "gate": "Stage 2 hard filters",
+     "result": "INCOMPLETE: 2 of 7 rules unchecked (H3 rating 'issuer not cooperating', H5 related-party cash leakage to promoter entities) → size 0 until checked",
+     "blocks": true
+    },
+    {
+     "gate": "Stage 3 PEAD avoid flag",
+     "result": "unknown (no live quintile): does not block, noted",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 4 soft flags",
+     "result": "8 open, no variant view → NO POSITION",
+     "blocks": true
+    },
+    {
+     "gate": "Outside-view check",
+     "result": "model departs from base rate with no variant view → shrink",
+     "blocks": false
+    },
+    {
+     "gate": "Expected value vs hurdle",
+     "result": "EV 1.46x vs hurdle 1.76x → below hurdle → size 0",
+     "blocks": true
+    }
+   ],
+   "size_after_gates": 0.0,
+   "rule_size": 0.0,
+   "kelly_f_star": 0.0,
+   "open_soft_flags": 8,
+   "review_date": "2027-02-15",
+   "kill_criteria": [
+    {
+     "if": "SSSG below 8% for 4 straight quarters",
+     "measure": "company SSSG (definition unchanged) in quarterly presentations",
+     "by": "2027-11-30"
+    },
+    {
+     "if": "Pre-Ind AS EBITDA margin below 8.5% for FY27",
+     "measure": "AR27: EBITDA - Ind AS 116 impact",
+     "by": "2027-08-31"
+    },
+    {
+     "if": "Revenue per sq ft falls YoY two quarters running (V2-style density dilution)",
+     "measure": "revenue / average retail area from PPTs",
+     "by": "2027-05-31"
+    },
+    {
+     "if": "Management (not the PE fund) sells shares, or the RPT logistics share rises again",
+     "measure": "SAST/insider filings; AR27 RPT note",
+     "by": "2027-08-31"
+    }
+   ],
+   "override_log": [
+    {
+     "date": "2026-11-20",
+     "flag": "Borrowings Rs 1,988 cr",
+     "decision": "cleared",
+     "why": "AR26 n.33: equals lease liabilities exactly; HSIE: total debt nil since FY24"
+    },
+    {
+     "date": "2026-11-20",
+     "flag": "EBITDA 14.6%",
+     "decision": "use pre-Ind AS 9.8% in all valuation",
+     "why": "Rent is a real cost; AR26 Ind AS 116 impact Rs 613 cr"
+    }
+   ],
+   "paper_calls": [
+    "thesis:paper-call:VMM:card-2026-11-21-5y-ge3x",
+    "thesis:paper-call:VMM:card-2026-11-21-5y-le0p5x",
+    "thesis:paper-call:VMM:card-2026-11-21-5y-blowup"
+   ],
+   "practice": true
+  },
+  "sources": [
+   "research_notes/Deep dives/VMM_practice.md"
+  ],
+  "confidence": "unverified",
+  "links": [
+   {
+    "to": "thesis:paper-call:VMM:card-2026-11-21-5y-ge3x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:VMM:card-2026-11-21-5y-le0p5x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:VMM:card-2026-11-21-5y-blowup",
+    "rel": "about"
+   }
+  ]
+ }
+]

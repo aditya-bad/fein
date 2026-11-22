@@ -1,0 +1,18 @@
+# FICTIONAL card used only to unit-test the sizing path. Not a real stock.
+{
+ "worksheet": "../../valuation/examples/SYNTHETIC.json",
+ "decision_date": "2026-11-21", "practice": true,
+ "thesis": "Fictional: unit test of the sizing path.",
+ "variant_view": "Fictional variant view, present so the soft-flag gate is satisfied.",
+ "stage2": {"source": "fictional", "hard": [
+   {"rule": "H1a", "status": "pass"}, {"rule": "H1b", "status": "pass"}, {"rule": "H1c", "status": "pass"},
+   {"rule": "H2", "status": "pass"}, {"rule": "H3", "status": "pass"}, {"rule": "H4", "status": "pass"}, {"rule": "H5", "status": "pass"}]},
+ "stage3": {"pead": {"applicable": true, "quintile": 4, "event_date": "2026-11-01"},
+            "credibility": {"score": 0.70, "peer_median": 0.55, "n": 12, "category": "near-term"}},
+ "stage4": {"soft_flags": [{"flag": "fictional flag A", "status": "open"}, {"flag": "fictional flag B", "status": "open"}]},
+ "base_rate_class": "india_survivors_2020_25_mcap_ge400",
+ "sizing": {"tier": "satellite", "kelly_fraction": 0.25, "portfolio_value": 1.0, "adv_value": 2.0, "adv_pct": 0.10, "days_to_exit": 5},
+ "kill_criteria": [{"if": "fictional", "measure": "fictional", "by": "2027-06-30"}],
+ "pre_mortem": ["fictional"],
+ "review_date": "2027-02-15"
+}

@@ -1,0 +1,57 @@
+[
+ {
+  "type": "strategy",
+  "id": "strategy:valuation-worksheet-v1",
+  "title": "Standard valuation worksheet v1 (stage 5): reverse DCF, scenario DCF, twin engine, temperature, sensitivity",
+  "body": "Every deep dive ends with tools/valuation/worksheet.py (standard library only; runs on the Pi). Input: one JSON of company figures (price, shares, net debt, base-year revenue/EBIT/PAT/FCF, economic NOPAT margin, ROIIC, cost of equity default India 12.5% / US 9.5%, terminal growth 5% / 3%, 10 years) plus bear/base/bull scenarios (growth yr1->yrN, end margin, ROIIC, exit P/E, probability) and a blow-up probability. Model: value-driver DCF, FCF = NOPAT x (1 - g/ROIIC), linear fades, TV = NOPAT(1+tg)(1 - tg/ROIC)/(r - tg). Outputs one Markdown section: (a) reverse DCF - revenue CAGR implied by price, year-1 growth fading to terminal, margin needed, IRR the price offers on the base case, feasibility flag when reinvestment > 100% of NOPAT; (b) scenario DCF -> probability-weighted value, bear downside, 5-yr multiples using stated exit P/E next to the DCF-consistent P/E at year 5 (gap flagged), and P(>=2x/3x/5x), P(<=0.5x), P(blow-up), EV and median 5-yr multiple via lognormal spread per scenario; (c) twin-engine EPS CAGR needed for 2x/3x/5x at each exit P/E and the re-rating share; (d) temperature vs own P/E history (n>=5), sector median and Nifty bands; (e) CoE x growth and TG x margin sensitivity. Rules: use economic margins (pre-Ind AS 116, core ex other income, after SBC, adjusted for one-offs); leases out of net debt when rent is in the margin; every input source-tagged or [EST] with method. Guide: research_notes/Templates/valuation_and_decision.md.",
+  "tags": ["process", "valuation", "template", "stage-5", "reverse-dcf", "twin-engine", "valuation-temperature", "india", "us", "tool"],
+  "date": "2026-11-21",
+  "data": {"path": "tools/valuation/worksheet.py", "version": "1.0", "defaults": {"india": {"coe": 0.125, "tg": 0.05, "hurdle": 0.12}, "us": {"coe": 0.095, "tg": 0.03, "hurdle": 0.08}}, "temp_bands": "<0.7 cold, 0.7-0.9 cool, 0.9-1.1 normal, 1.1-1.5 warm, 1.5-2 hot, >=2 very hot", "min_history_points": 5, "worked_examples": ["VMM", "CUMMINSIND", "US-FIVE"], "practice_only": true},
+  "sources": ["tools/valuation/README.md", "research_notes/Templates/valuation_and_decision.md"],
+  "confidence": "verified",
+  "links": [
+   {"to": "insight:twin-engine", "rel": "about"},
+   {"to": "insight:flag-high-pe-context", "rel": "about"},
+   {"to": "insight:india-valuation-forward-returns", "rel": "about"},
+   {"to": "insight:india-mb-twin-engine-base-rate", "rel": "about"},
+   {"to": "strategy:decision-card-v1", "rel": "part_of"}
+  ]
+ },
+ {
+  "type": "strategy",
+  "id": "strategy:decision-card-v1",
+  "title": "Decision card v1 (stage 6): gates from stages 2-5, probabilities vs base rates, written sizing rule, auto paper calls",
+  "body": "tools/decision/decision_card.py fills tools/decision/decision_card.md from one card JSON that points at the worksheet input. Fields: one-line thesis; variant view; what the price implies; stage-2 hard rules (pass/fail/unknown) and graded flags; stage-3 signals (PEAD avoid flag = SUE quintile 1-2 within ~63 trading days, L19; promise credibility shown sector-adjusted only with a peer median, L18; detector alerts); stage-4 soft flags and override log; P(>=3x/5y), P(<=0.5x), P(blow-up) beside a base-rate class from tools/decision/base_rates.json (null = n/a, never borrowed); EV of the 5-yr multiple vs the index hurdle; position size; dated kill criteria; pre-mortem; review date; gate log. Blocking gates (size 0): any hard rule failed (no override) or unknown (incomplete); PEAD avoid flag active; >=3 open soft flags without a written variant view; EV below hurdle; kill criteria missing/undated. Informational: outside-view check when model P is >2x or <0.5x the base rate. Sizing rule: min(0.25 x Kelly f*, tier cap at cost core 5% / satellite 4% / speculative 2%, liquidity cap adv_pct x ADV x days_to_exit / portfolio); f* maximises E[ln(1+f(M/H-1))] over scenario outcomes vs the hurdle multiple H. Emits three 5-yr paper calls (>=3x, <=0.5x, blow-up) and a decision record in memdb seed format with entry price, resolve_by and a mechanical resolution rule. Phase A: all sizes are paper sizes; practice cards say 'no verdict' and are tagged practice-example.",
+  "tags": ["process", "decision", "template", "stage-6", "stage-7", "position-sizing", "kill-criteria", "pre-mortem", "base-rate", "paper-call", "tool"],
+  "date": "2026-11-21",
+  "data": {"path": "tools/decision/decision_card.py", "version": "1.0", "gates_blocking": ["hard filter fail/unknown", "PEAD quintile 1-2 within 92 calendar days", ">=3 open soft flags and no variant view", "EV 5-yr multiple < hurdle", "kill criteria missing/undated"], "kelly_fraction_default": 0.25, "tier_caps": {"core": 0.05, "satellite": 0.04, "speculative": 0.02}, "paper_call_id_pattern": "thesis:paper-call:<T>:card-<date>-5y-{ge3x|le0p5x|blowup}", "worked_examples_rule_output": {"VMM": "size 0 (stage 2 incomplete; 8 open flags no variant view; EV 1.46x < 1.76x)", "CUMMINSIND": "size 0 (stage 2 incomplete; 8 open flags no variant view; EV 1.33x < 1.76x)", "US-FIVE": "size 0 (6 open flags no variant view; EV 1.19x < 1.47x)"}, "practice_calls_ingested": false},
+  "sources": ["tools/decision/README.md", "research_notes/Templates/valuation_and_decision.md"],
+  "confidence": "verified",
+  "links": [
+   {"to": "strategy:position-sizing", "rel": "about"},
+   {"to": "strategy:thorp-kelly", "rel": "about"},
+   {"to": "insight:flag-override-template", "rel": "about"},
+   {"to": "insight:disqualifiers", "rel": "about"},
+   {"to": "insight:lit-base-rate-neglect-outside-view", "rel": "about"},
+   {"to": "strategy:valuation-worksheet-v1", "rel": "part_of"}
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:india-coe-dcf-calls-compounders-overvalued",
+  "title": "At India CoE 12-13% a DCF calls almost every 40-50x compounder 60-70% overvalued; read the implied IRR and the exit-multiple gap instead",
+  "body": "Worksheet v1 on three practice companies (test material, no verdict). With cost of equity 12.5%, terminal growth 5% and terminal ROIC 25-30%, the terminal value is worth ~11-15x NOPAT ((1 - tg/ROIC)/(r - tg) ~ 0.8/0.075 ~ 10.7x at 25% ROIC), so DCF-consistent P/Es at year 5 came out at 12-17x while VMM and Cummins trade at 48-52x: probability-weighted DCF values were -65% and -69% vs price. The informative outputs were (1) the reverse DCF: the price needs ~30% revenue CAGR for 10 years at today's margins, and the path needs reinvestment above 100% of NOPAT at the assumed ROIIC (feasibility flag); (2) the IRR the price offers if the base case happens: 7-8% vs a 12.5% hurdle; (3) the exit-multiple gap: every Indian scenario's stated exit P/E (25-50) was 2-3x its DCF-consistent P/E, i.e., the 5-year return depends on the market continuing to pay high multiples. Rule: for Indian high-P/E names, report implied IRR and the exit-multiple gap, never 'DCF value -65%' as a target; the decision gate uses the 5-year multiple vs the index hurdle. Caveat: the base-rate class used alongside (2020-25 NSE survivors, x3 44%) is bull- and survivor-biased.",
+  "tickers": ["VMM", "CUMMINSIND", "US-FIVE"],
+  "tags": ["valuation", "process", "india", "reverse-dcf", "twin-engine", "method-test", "base-rate", "stage-5"],
+  "date": "2026-11-21",
+  "data": {"implied_irr": {"VMM": 0.082, "CUMMINSIND": 0.073, "US-FIVE": 0.079}, "implied_revenue_cagr_10y": {"VMM": 0.30, "CUMMINSIND": 0.312, "US-FIVE": 0.171}, "dcf_pe5_base": {"VMM": 15.1, "CUMMINSIND": 13.3, "US-FIVE": 17.7}, "exit_pe_base_used": {"VMM": 35, "CUMMINSIND": 40, "US-FIVE": 20}, "practice": true},
+  "sources": ["research_notes/Templates/valuation_and_decision.md", "tools/valuation/examples/VMM_worksheet.md", "tools/valuation/examples/CUMMINSIND_worksheet.md", "tools/valuation/examples/FIVE_worksheet.md"],
+  "confidence": "single-source",
+  "links": [
+   {"to": "strategy:valuation-worksheet-v1", "rel": "illustrates"},
+   {"to": "insight:flag-high-pe-context", "rel": "about"},
+   {"to": "analysis:cumminsind-deep-dive-practice-2026-11", "rel": "about"},
+   {"to": "analysis:five-deep-dive-practice-2026-11", "rel": "about"}
+  ]
+ }
+]

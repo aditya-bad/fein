@@ -1,0 +1,63 @@
+# TEST MATERIAL (L9). Flags and evidence copied from research_notes/Deep dives/FIVE_practice.md; no verdict.
+# The worksheet price ($220) is an estimate from a 13F, not a quote. The open paper call
+# thesis:paper-call:US-FIVE:fy2026-comps-11pct-plus is NOT changed by this card.
+{
+ "worksheet": "../../valuation/examples/FIVE.json",
+ "decision_date": "2026-11-21", "practice": true, "analyst": "Claude",
+ "deep_dive": "research_notes/Deep dives/FIVE_practice.md",
+ "thesis": "TEST THESIS (illustrative): ~150 net new stores a year plus traffic-led comps keep revenue growing mid-teens while operating margin returns toward the FY16-21 range (11-13%).",
+ "variant_view": null,
+ "stage2": {
+  "source": "FIVE practice deep dive §5, §8 (10-K FY25, 8-Ks, DEF 14A not yet read). US version of the hard rules.",
+  "hard": [
+   {"rule": "H1a fake-cash signal", "status": "pass", "evidence": "Cash $932M with interest income consistent; zero funded debt"},
+   {"rule": "H1b economics implausible", "status": "pass", "evidence": "Store model triangulated; capex gap is a definitional flag, not implausibility"},
+   {"rule": "H1c profits unverifiable by outsiders", "status": "pass", "evidence": "Store counts, prices and traffic observable"},
+   {"rule": "H2 auditor exit / restatement (8-K 4.01/4.02)", "status": "pass", "evidence": "No auditor change, no non-reliance, no going-concern language [practice file §8.2]"},
+   {"rule": "H3 rating 'issuer not cooperating'", "status": "pass", "evidence": "n/a in the US form; no funded debt"},
+   {"rule": "H4 pump pattern", "status": "pass", "evidence": "S&P MidCap-size, widely held"},
+   {"rule": "H5 related-party cash leakage", "status": "pass", "evidence": "No controlling holder; Item 404 not yet read in DEF 14A (management-as-related-party read via 8-K 5.02 only)"}
+  ],
+  "graded": []
+ },
+ "stage3": {
+  "pead": {"applicable": false, "note": "PEAD avoid leg is tested on India only (L17, L19); no US test on file."},
+  "credibility": {"score": 0.75, "peer_median": null, "n": 3, "category": "long-range (prior team, 65-84% delivered)", "note": "Near-term guides beaten 5/5 by the new team; no US retail peer base rate yet."},
+  "detectors": [
+   {"name": "Form 4 cluster sale", "date": "2026-09", "detail": "5 insiders sold $6M+ at $241-255 (L14: weak signal)", "severity": "low"},
+   {"name": "8-K 5.02 executive turnover", "date": "2024-2026", "detail": "CEO, 2 CFOs, CMO and other senior exits in 18 months", "severity": "med"},
+   {"name": "8-K 8.01 cyber incident", "date": "2026-07-22", "detail": "Disclosed incident", "severity": "low"}
+  ]
+ },
+ "stage4": {
+  "soft_flags": [
+   {"flag": "New-store investment vs capex gap ($0.4M vs ~$0.65M gross)", "status": "open", "changes_mind": "Tenant allowance disclosed >= $0.4M/store or a cohort payback table", "review": "FY26 10-K"},
+   {"flag": "Comp durability (2-yr stack ~+30%)", "status": "open", "changes_mind": "FY27 comps positive with transactions positive", "review": "Q1 FY27"},
+   {"flag": "Tariff regime and vendor pass-through", "status": "open", "changes_mind": "Merchandise margin holds in FY27 at new tariff rates", "review": "FY27"},
+   {"flag": "Insider cluster selling", "status": "open", "changes_mind": "CEO/CFO sell outside 10b5-1, or an insider buys at scale", "review": "each quarter"},
+   {"flag": "Executive turnover", "status": "open", "changes_mind": "4+ quarters with a stable team", "review": "2027-09"},
+   {"flag": "Class action in discovery", "status": "open", "changes_mind": "Dismissal or settlement < ~1% of market cap", "review": "-"},
+   {"flag": "GAAP EPS/GM include $163.6M tariff refund", "status": "adjusted", "changes_mind": "-", "review": "4 quarters"},
+   {"flag": "FY25 FCF $412M is a cyclical high", "status": "adjusted", "changes_mind": "-", "review": "-"}
+  ],
+  "override_log": [
+   {"date": "2026-11-21", "flag": "Vanguard 13G/A shows 0%", "decision": "closed as false alarm", "why": "Jan-2026 realignment; 13F still shows 5.34M shares"},
+   {"date": "2026-11-21", "flag": "Q2 FY26 GAAP EPS $3.99", "decision": "use adjusted EPS (forward guide midpoint $10.07)", "why": "Ex-99.1 reconciliation: $163.6M IEEPA refund in COGS"}
+  ]
+ },
+ "base_rate_class": "us_ipo_3y_ritter",
+ "sizing": {"tier": "satellite", "kelly_fraction": 0.25, "portfolio_value": null, "adv_value": null, "adv_pct": 0.10, "days_to_exit": 5},
+ "kill_criteria": [
+  {"if": "Comparable sales negative with transactions negative in any FY27 quarter", "measure": "8-K 2.02 Ex-99.1", "by": "2027-12-15"},
+  {"if": "FY26 10-K raises the $0.4M new-store investment or drops the payback sentence", "measure": "10-K Item 1/7 text diff", "by": "2027-04-15"},
+  {"if": "Adjusted operating margin below 8% for FY2026", "measure": "Q4 FY26 release reconciliation", "by": "2027-03-31"},
+  {"if": "CEO or CFO sells outside a 10b5-1 plan", "measure": "Form 4 (box checked on the form itself)", "by": "2027-11-30"}
+ ],
+ "pre_mortem": [
+  "The +14-23% comps were a pricing-reset and trend spike; traffic turned negative in FY27 and operating deleverage hit a fixed lease base of $2.0B.",
+  "Replacement tariffs were higher than IEEPA and the domestic-vendor 60% passed them through; merchandise margin fell 200 bps.",
+  "New stores cost ~$1M all-in, not $0.4M; ROIIC was ~12%, so growth destroyed value at a 9.5% cost of equity.",
+  "Another executive change reset strategy and guidance credibility."
+ ],
+ "review_date": "2027-03-31"
+}

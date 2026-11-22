@@ -1,0 +1,20 @@
+# FICTIONAL company used only to unit-test the sizing path (all gates clear). Not a real stock; all numbers invented.
+{
+ "company": "Synthetic Test Co (fictional)", "ticker": "SYNTH", "market": "india", "practice": true,
+ "currency": "INR", "units": "INR cr", "as_of": "2026-11-21",
+ "price": 100.0, "shares": 10.0, "net_debt": -50.0,
+ "base": {"fy": "FY26", "revenue": 1000.0, "ebitda": 160.0, "ebit": 140.0, "pat": 100.0, "fcf": 70.0},
+ "tax_rate": 0.25, "roiic": 0.30, "years": 10,
+ "base_case": {"name": "base", "growth": 0.20, "growth_end": 0.08, "margin_end": 0.12, "exit_pe": 14},
+ "scenarios": [
+  {"name": "bear", "prob": 0.25, "growth": 0.08, "growth_end": 0.05, "margin_end": 0.08, "exit_pe": 8},
+  {"name": "base", "prob": 0.50, "growth": 0.20, "growth_end": 0.08, "margin_end": 0.12, "exit_pe": 14},
+  {"name": "bull", "prob": 0.22, "growth": 0.28, "growth_end": 0.10, "margin_end": 0.14, "exit_pe": 20}
+ ],
+ "blowup": {"prob": 0.03, "multiple": 0.1},
+ "twin_engine": {"targets": [2, 3, 5], "horizon": 5, "hist_eps_cagr": 0.18},
+ "pe_history": [{"date": "FY20", "pe": 14}, {"date": "FY21", "pe": 18}, {"date": "FY22", "pe": 16}, {"date": "FY23", "pe": 12}, {"date": "FY24", "pe": 15}, {"date": "FY25", "pe": 13}],
+ "sector_pes": {"Peer X": 18, "Peer Y": 22, "Peer Z": 15},
+ "market_pe": {"index": "Nifty 50", "pe": 20.6, "as_of": "2026-11"},
+ "notes": ["Fictional inputs for a unit test of the template."]
+}
