@@ -5,6 +5,7 @@ and funnel.json."""
 import collections, datetime as dt, json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import common as K
+import s2_fetch as S2
 
 SS, F = K.SS, K.F
 
@@ -121,7 +122,10 @@ def main():
             if not s["elig"].get(sn):
                 fun[key + ("no_annual_at_T",)] += 1
                 continue
-            z = (s.get("size") or {}).get(sn)
+            if not os.path.exists(os.path.join(d, "chart.json")):
+                fun[key + ("chart_not_fetched",)] += 1
+                continue
+            z = S2.mcap_at(K.jload(os.path.join(d, "chart.json"), {}), T)
             if not z:
                 fun[key + ("chart_not_fetched",)] += 1
                 continue
@@ -131,7 +135,7 @@ def main():
             if not (K.MCAP_LO <= z["mcap"] <= K.MCAP_HI):
                 fun[key + ("out_of_size_band",)] += 1
                 continue
-            if s.get("sched") != "ok":
+            if s.get("sched") != "ok" and not os.path.exists(os.path.join(d, "borrowings.json")):
                 fun[key + ("schedules_missing",)] += 1
                 continue
             if page is None:

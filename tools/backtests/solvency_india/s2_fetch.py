@@ -51,6 +51,8 @@ def mcap_at(chart, T):
     px = [(dt.date.fromisoformat(a), float(b)) for a, b, *_ in ds.get("Price", []) if b not in (None, "")]
     mcs = {a: c for a, c, *_ in ds.get("Market Cap to Sales", [])}
     sales = [(dt.date.fromisoformat(a), float(b)) for a, b, *_ in ds.get("Sales", []) if b not in (None, "")]
+    if not px:
+        return {"status": "no_price_history"}
     before = [(d, p) for d, p in px if d <= T]
     if not before or (T - before[-1][0]).days > 31:
         return {"status": "not_trading_at_T"}

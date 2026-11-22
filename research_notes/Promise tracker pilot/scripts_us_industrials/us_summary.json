@@ -1,0 +1,419 @@
+{
+ "as_of": "2026-11-22",
+ "companies": [
+  "US-WTS",
+  "US-AOS",
+  "US-SSD",
+  "US-LECO"
+ ],
+ "category_map": {
+  "capacity_commissioning": "capacity",
+  "capex": "capacity",
+  "customer_win": "other",
+  "new_product": "other",
+  "m&a": "other",
+  "working_capital": "other",
+  "dividend_payout": "other",
+  "debt_reduction": "other",
+  "order_book": "other",
+  "deal_wins": "other",
+  "people": "other",
+  "client_concentration": "other",
+  "segment_margin": "margin",
+  "eps": "other",
+  "cash_flow": "other",
+  "capital_return": "other",
+  "cost_savings": "other",
+  "price_cost": "other"
+ },
+ "categories": [
+  "revenue_growth",
+  "margin",
+  "capacity",
+  "other"
+ ],
+ "overall": {
+  "US-WTS": {
+   "n": 12,
+   "D": 100.0,
+   "S": 100.0
+  },
+  "US-AOS": {
+   "n": 18,
+   "D": 65.9,
+   "S": 58.5
+  },
+  "US-SSD": {
+   "n": 7,
+   "D": 79.4,
+   "S": 58.8
+  },
+  "US-LECO": {
+   "n": 6,
+   "D": 88.5,
+   "S": 76.9
+  }
+ },
+ "by_category": {
+  "US-WTS": {
+   "revenue_growth": {
+    "n": 6,
+    "D": 100.0,
+    "S": 100.0
+   },
+   "margin": {
+    "n": 5,
+    "D": 100.0,
+    "S": 100.0
+   },
+   "other": {
+    "n": 1,
+    "D": 100.0,
+    "S": 100.0
+   }
+  },
+  "US-AOS": {
+   "revenue_growth": {
+    "n": 7,
+    "D": 43.3,
+    "S": 33.3
+   },
+   "margin": {
+    "n": 4,
+    "D": 75.0,
+    "S": 75.0
+   },
+   "capacity": {
+    "n": 1,
+    "D": 50.0,
+    "S": 0.0
+   },
+   "other": {
+    "n": 6,
+    "D": 86.7,
+    "S": 86.7
+   }
+  },
+  "US-SSD": {
+   "margin": {
+    "n": 2,
+    "D": 100.0,
+    "S": 100.0
+   },
+   "capacity": {
+    "n": 3,
+    "D": 50.0,
+    "S": 0.0
+   },
+   "other": {
+    "n": 2,
+    "D": 100.0,
+    "S": 100.0
+   }
+  },
+  "US-LECO": {
+   "revenue_growth": {
+    "n": 1,
+    "D": 100.0,
+    "S": 100.0
+   },
+   "margin": {
+    "n": 3,
+    "D": 100.0,
+    "S": 100.0
+   },
+   "other": {
+    "n": 2,
+    "D": 75.0,
+    "S": 50.0
+   }
+  }
+ },
+ "sector_median_D_pct": {
+  "revenue_growth": 100.0,
+  "margin": 100.0,
+  "capacity": 50.0,
+  "other": 93.35
+ },
+ "sector_pooled": {
+  "revenue_growth": {
+   "n": 14,
+   "D": 70.7,
+   "S": 65.5
+  },
+  "margin": {
+   "n": 14,
+   "D": 92.9,
+   "S": 92.9
+  },
+  "capacity": {
+   "n": 4,
+   "D": 50.0,
+   "S": 0.0
+  },
+  "other": {
+   "n": 11,
+   "D": 88.3,
+   "S": 83.3
+  }
+ },
+ "sac": {
+  "US-WTS": {
+   "sac_pts": 15.3,
+   "n_scored": 12,
+   "shrink_weight": 0.375,
+   "components": {
+    "revenue_growth": {
+     "n": 6,
+     "own": 100.0,
+     "peer_median": 71.65,
+     "gap": 28.3
+    },
+    "margin": {
+     "n": 5,
+     "own": 100.0,
+     "peer_median": 100.0,
+     "gap": 0.0
+    },
+    "pooled:other": {
+     "n": 1,
+     "own": 100.0,
+     "peer_median": 86.7,
+     "gap": 13.3
+    }
+   }
+  },
+  "US-AOS": {
+   "sac_pts": -35.3,
+   "n_scored": 18,
+   "shrink_weight": 0.474,
+   "components": {
+    "revenue_growth": {
+     "n": 7,
+     "own": 43.3,
+     "peer_median": 100.0,
+     "gap": -56.7
+    },
+    "other": {
+     "n": 6,
+     "own": 86.7,
+     "peer_median": 100.0,
+     "gap": -13.3
+    },
+    "pooled:margin+capacity": {
+     "n": 5,
+     "own": 68.2,
+     "peer_median": 100.0,
+     "gap": -31.8
+    }
+   }
+  },
+  "US-SSD": {
+   "sac_pts": -7.0,
+   "n_scored": 7,
+   "shrink_weight": 0.259,
+   "components": {
+    "pooled:margin+capacity+other": {
+     "n": 7,
+     "own": 79.4,
+     "peer_median": 86.4,
+     "gap": -7.0
+    }
+   }
+  },
+  "US-LECO": {
+   "sac_pts": -11.5,
+   "n_scored": 6,
+   "shrink_weight": 0.231,
+   "components": {
+    "pooled:revenue_growth+margin+other": {
+     "n": 6,
+     "own": 88.5,
+     "peer_median": 100.0,
+     "gap": -11.5
+    }
+   }
+  }
+ },
+ "base_rates_leave_one_out": {
+  "US-WTS": {
+   "_all": {
+    "n": 31,
+    "p0_pct": 62.0
+   },
+   "revenue_growth": {
+    "n": 8,
+    "p0_pct": 41.2,
+    "fallback_all": false
+   },
+   "margin": {
+    "n": 9,
+    "p0_pct": 88.2,
+    "fallback_all": false
+   },
+   "capacity": {
+    "n": 4,
+    "p0_pct": 62.0,
+    "fallback_all": true
+   },
+   "other": {
+    "n": 10,
+    "p0_pct": 81.5,
+    "fallback_all": false
+   }
+  },
+  "US-AOS": {
+   "_all": {
+    "n": 25,
+    "p0_pct": 82.1
+   },
+   "revenue_growth": {
+    "n": 7,
+    "p0_pct": 82.1,
+    "fallback_all": true
+   },
+   "margin": {
+    "n": 10,
+    "p0_pct": 100.0,
+    "fallback_all": false
+   },
+   "capacity": {
+    "n": 3,
+    "p0_pct": 82.1,
+    "fallback_all": true
+   },
+   "other": {
+    "n": 5,
+    "p0_pct": 82.1,
+    "fallback_all": true
+   }
+  },
+  "US-SSD": {
+   "_all": {
+    "n": 36,
+    "p0_pct": 75.0
+   },
+   "revenue_growth": {
+    "n": 14,
+    "p0_pct": 65.5,
+    "fallback_all": false
+   },
+   "margin": {
+    "n": 12,
+    "p0_pct": 91.7,
+    "fallback_all": false
+   },
+   "capacity": {
+    "n": 1,
+    "p0_pct": 75.0,
+    "fallback_all": true
+   },
+   "other": {
+    "n": 9,
+    "p0_pct": 79.2,
+    "fallback_all": false
+   }
+  },
+  "US-LECO": {
+   "_all": {
+    "n": 37,
+    "p0_pct": 71.4
+   },
+   "revenue_growth": {
+    "n": 13,
+    "p0_pct": 63.0,
+    "fallback_all": false
+   },
+   "margin": {
+    "n": 11,
+    "p0_pct": 91.3,
+    "fallback_all": false
+   },
+   "capacity": {
+    "n": 4,
+    "p0_pct": 71.4,
+    "fallback_all": true
+   },
+   "other": {
+    "n": 9,
+    "p0_pct": 91.7,
+    "fallback_all": false
+   }
+  }
+ },
+ "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+ "example_p": {
+  "US-WTS": {
+   "revenue_growth": [
+    0.47,
+    0.41
+   ],
+   "margin": [
+    0.94,
+    0.88
+   ],
+   "capacity": [
+    0.68,
+    0.62
+   ],
+   "other": [
+    0.87,
+    0.81
+   ]
+  },
+  "US-AOS": {
+   "revenue_growth": [
+    0.65,
+    0.82
+   ],
+   "margin": [
+    0.83,
+    1.0
+   ],
+   "capacity": [
+    0.65,
+    0.82
+   ],
+   "other": [
+    0.65,
+    0.82
+   ]
+  },
+  "US-SSD": {
+   "revenue_growth": [
+    0.64,
+    0.66
+   ],
+   "margin": [
+    0.9,
+    0.92
+   ],
+   "capacity": [
+    0.73,
+    0.75
+   ],
+   "other": [
+    0.77,
+    0.79
+   ]
+  },
+  "US-LECO": {
+   "revenue_growth": [
+    0.6,
+    0.63
+   ],
+   "margin": [
+    0.89,
+    0.91
+   ],
+   "capacity": [
+    0.69,
+    0.71
+   ],
+   "other": [
+    0.89,
+    0.92
+   ]
+  }
+ }
+}

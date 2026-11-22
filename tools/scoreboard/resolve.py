@@ -190,7 +190,12 @@ SEC_TAGS = {
                                                 "SalesRevenueNet", "RevenueFromContractWithCustomerIncludingAssessedTax")],
     "nii": [("us-gaap", "InterestIncomeExpenseNet", "USD")],
     "eps_diluted": [("us-gaap", "EarningsPerShareDiluted", "USD/shares")],
+    # 2026-11-22 (US industrials credibility calls): GAAP operating income and capex, plus op_margin_pct below
+    "operating_income": [("us-gaap", "OperatingIncomeLoss", "USD")],
+    "capex": [("us-gaap", t, "USD") for t in ("PaymentsToAcquirePropertyPlantAndEquipment", "PaymentsToAcquireProductiveAssets")],
 }
+# ratio metrics (percent) built from two SEC_TAGS metrics for the same period, each fetched as first reported
+SEC_RATIOS = {"op_margin_pct": ("operating_income", "revenue")}
 
 
 def _dur(p):
@@ -199,7 +204,14 @@ def _dur(p):
 
 def sec_value(facts, metric, period, fy_end):
     """-> (value, evidence list) from 10-K/10-Q XBRL, or None if the fiscal year's 10-K is not filed yet.
-    period: FY | Q4 (FY minus 9-month YTD unless a 3-month Q4 fact is tagged) | FY_growth (pct)."""
+    period: FY | Q4 (FY minus 9-month YTD unless a 3-month Q4 fact is tagged) | FY_growth (pct).
+    op_margin_pct = 100 x operating_income / revenue (both from the same rules; None unless both exist)."""
+    if metric in SEC_RATIOS:
+        num, den = SEC_RATIOS[metric]
+        a, b = sec_value(facts, num, period, fy_end), sec_value(facts, den, period, fy_end)
+        if not a or not b or not b[0]:
+            return None
+        return 100 * a[0] / b[0], a[1] + b[1]
     fy_end = C.d(fy_end)
     base = metric.replace("_growth_pct", "")
     for tax, tag, unit in SEC_TAGS[base]:

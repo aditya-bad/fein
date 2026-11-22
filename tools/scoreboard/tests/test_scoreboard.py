@@ -258,6 +258,21 @@ class TestSec(unittest.TestCase):
         g, _ = R.sec_value(self.FACTS, "revenue_growth_pct", "FY", "2027-01-31")
         self.assertAlmostEqual(g, 100 * (140 / 90 - 1))
 
+    def test_op_margin_and_capex(self):
+        f = {"cik": 1, "facts": {"us-gaap": {
+            "Revenues": self.FACTS["facts"]["us-gaap"]["Revenues"],
+            "OperatingIncomeLoss": {"units": {"USD": [fact(28.0, "2026-01-26", "2027-01-31", "10-K", "2027-02-26", "k1")]}},
+            "PaymentsToAcquireProductiveAssets": {"units": {"USD": [fact(9.0, "2026-01-26", "2027-01-31", "10-K", "2027-02-26", "k1")]}}}}}
+        m, e = R.sec_value(f, "op_margin_pct", "FY", "2027-01-31")
+        self.assertAlmostEqual(m, 20.0)
+        self.assertEqual(len(e), 2)
+        self.assertEqual(R.sec_value(f, "capex", "FY", "2027-01-31")[0], 9.0)
+        self.assertIsNone(R.sec_value(self.FACTS, "op_margin_pct", "FY", "2027-01-31"))   # no operating income tagged
+        sp = {"type": "a", "kind": "sec_fact", "metric": "capex", "period": "FY", "fy_end": "2027-01-31",
+              "op": "between", "threshold": 8.0, "threshold_hi": 9.0, "check_from": "2027-02-20"}
+        r = R.evaluate(call(5, 0.6, 0.7, market="us", resolve_by="2027-03-10"), sp, Fake(facts=f), D(2027, 2, 27))
+        self.assertEqual((r["state"], r["outcome"]), ("resolved", 1))
+
     def test_waits_for_10k(self):
         facts = {"cik": 1, "facts": {"us-gaap": {"Revenues": {"units": {"USD": self.FACTS["facts"]["us-gaap"]["Revenues"]["units"]["USD"][:1]}}}}}
         self.assertIsNone(R.sec_value(facts, "revenue", "Q4", "2027-01-31"))
