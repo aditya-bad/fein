@@ -211,3 +211,12 @@ About half came from first 10-Ks after a de-SPAC (shell → new business); biote
 2022 filings. Risk-factor section ran backwards ("stale risk factors" did worst — new hypothesis, not a finding).
 **Use:** judgment flags only — first 10-K after de-SPAC/major change = look harder; big text change = read what
 changed. Next: pre-registered v2 on 2024–25 filings (Jaccard, ex de-SPAC, sector-matched controls).
+
+## L30 (2026-11-22) — Lazy Prices v2 on fresh 2024–25 data: retired as a rule
+Pre-registered, sector-and-size-matched, de-SPACs excluded (1,971 firm-years): big changers −1.4% (t −0.25) → not
+proven; "stale risk factors" +0.5% → rejected (v1's −11.5% was a biotech/sector-mix artefact). Changers show a
+lottery profile (median −10%, hit rate ~40%, a few +500–970% winners), not a slow drift.
+**Rule:** plain text-change is retired as a mechanical rule in the US; keep only judgment cues (first 10-K after a
+de-SPAC/transformation = look harder; big change = read the diff). Next text test: the Indian annual-report pilot.
+Meta-lesson: 1 of 6 signal tests so far survived fresh data (Indian PEAD avoid leg) — base rate for "published
+anomaly works for us" is low, as McLean–Pontiff predicted.

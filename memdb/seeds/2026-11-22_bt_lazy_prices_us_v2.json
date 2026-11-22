@@ -1,0 +1,277 @@
+[
+ {
+  "type": "insight",
+  "id": "insight:bt-lazy-prices-us-v2-2024-25",
+  "title": "Lazy Prices US v2 (pre-registered, fresh 10-Ks filed 2024-01 to 2025-06, ex de-SPAC, 2-digit-SIC+size controls): H1 full-text Jaccard changers -1.4% at 12m (t -0.25, CI -10.6 to +16.9) = NOT PROVEN; H2 'stale risk factors' (Item 1A Jaccard top quintile) +0.5% (t +0.13) = REJECTED. v1's -7% effect and stale-RF finding do not replicate",
+  "body": "Pre-registered in research_notes/Backtests/lazy_prices_us_v2.md s0 before sampling or any return. Seed 2026112202; 2,235 candidate CIKs (float $300M-$10B, frames CY2022Q4I-CY2025Q1I), 1,797 processed -> 2,000 eligible firm-years (2024 1,085 / 2025H1 915); 3,215 primary docs, 0 failures. Pre-registered exclusions: 2 stubs (<50k chars), 27 first-10-Ks-after-de-SPAC (v1 regex) -> 1,971 analysed; 1,675 with usable Yahoo prices. Controls: same filing-year group, other quintiles, mcap x0.5-2 on event entry date, 5 nearest in log mcap with same 2-digit SIC (80% of H1 events) else 1-digit (19%). 12m decision horizon; bootstrap by filing month (15 clusters, two Februaries = 2/3 of events). H1 jac_full Q1: mean -1.39% [-10.56, +16.92], median -10.5%, winsorised -4.0%, hit 39.7%, t -0.25 -> NOT PROVEN (avoid benefit after 0.5% cost +0.9%). H2 jac_1a Q5: +0.49% [-14.0, +4.4], t +0.13 -> REJECTED/NO SIGN. Secondary: v1's own measures reversed or vanished - cos_full Q1 +5.3%, cos_1a Q5 (v1 stale RF -11.5%) now +10.7% (t +2.1), so v1's stale-RF result was most likely a biotech/sector-mix artifact. Size-only controls H1 -1.1%; ex-biotech H1 -1.3%, H2 +2.3%; by year H1 2024 +1.3%, 2025 -4.2%. cos_7 Q1 -9.5% (t -2.1, all 2025) is one of 20+ secondary cells = noise. Pattern (hypothesis only, seen in v1 and v2): changers have low median (-10 to -14%) and hit rate (38-40% vs ~50% for non-changers) but a fat right tail (ASTS ~+970%, BE/UUUU/COGT ~+480-540%) -> 'lottery ticket', not steady drift; a mean-based avoid rule would discard winners. Survivorship: changers 18.5% missing prices vs 11.7% for non-changers; bankruptcies 7 vs 2 (same direction as v1, tiny counts); bounds H1 -2.5% (bk at 0: -1.7%), H2 +6.6% - no verdict change. Conclusion: retire plain US Lazy Prices as a mechanical rule/filter; keep 'first 10-K after de-SPAC/transformation = look harder' and 'big text change = read the diff' as stage-4 judgment cues only. Next text-change test belongs in India (annual-report PDFs, v1 s7 pilot).",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "lazy-prices",
+   "text-change",
+   "stage-3",
+   "signals",
+   "us",
+   "calibration",
+   "method-test",
+   "alt-data",
+   "pre-registered",
+   "fresh-data",
+   "replication-failure"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "n_firmyears_eligible": 2000,
+   "n_analysed": 1971,
+   "excluded": {
+    "stub_lt_50k": 2,
+    "despac": 27
+   },
+   "by_group": {
+    "2024": 1067,
+    "2025": 904
+   },
+   "price_usable": 1675,
+   "n_docs": 3215,
+   "H1": {
+    "n": 320,
+    "mean": -0.0139,
+    "ci": [
+     -0.1056,
+     0.1692
+    ],
+    "median": -0.1053,
+    "hit": 0.397,
+    "t": -0.25,
+    "measure": "jac_full",
+    "group": "Q1",
+    "verdict": "NOT PROVEN",
+    "tiers": {
+     "A_2digit": 259,
+     "B_1digit": 61,
+     "none": 2
+    }
+   },
+   "H2": {
+    "n": 290,
+    "mean": 0.0049,
+    "ci": [
+     -0.1401,
+     0.0443
+    ],
+    "median": -0.0478,
+    "hit": 0.462,
+    "t": 0.13,
+    "measure": "jac_1a",
+    "group": "Q5",
+    "verdict": "REJECTED / NO SIGN",
+    "tiers": {
+     "B_1digit": 77,
+     "A_2digit": 213,
+     "none": 2
+    }
+   },
+   "H1_3m_6m": {
+    "3m": 0.0273,
+    "6m": 0.0287
+   },
+   "secondary_12m": {
+    "jac_full_Q5": {
+     "n": 344,
+     "mean": 0.0669,
+     "ci": [
+      -0.1353,
+      0.141
+     ],
+     "median": 0.0066,
+     "hit": 0.512,
+     "t": 1.72
+    },
+    "cos_full_Q1": {
+     "n": 314,
+     "mean": 0.0528,
+     "ci": [
+      -0.0357,
+      0.1918
+     ],
+     "median": -0.048,
+     "hit": 0.443,
+     "t": 0.89
+    },
+    "cos_1a_Q5": {
+     "n": 295,
+     "mean": 0.107,
+     "ci": [
+      -0.0751,
+      0.1913
+     ],
+     "median": -0.0109,
+     "hit": 0.495,
+     "t": 2.1
+    },
+    "cos_1a_Q1": {
+     "n": 266,
+     "mean": -0.0526,
+     "ci": [
+      -0.1142,
+      0.0099
+     ],
+     "median": -0.1278,
+     "hit": 0.398,
+     "t": -1.29
+    },
+    "jac_1a_Q1": {
+     "n": 268,
+     "mean": -0.0298,
+     "ci": [
+      -0.115,
+      0.0532
+     ],
+     "median": -0.1026,
+     "hit": 0.399,
+     "t": -0.73
+    },
+    "cos_7_Q1": {
+     "n": 302,
+     "mean": -0.0952,
+     "ci": [
+      -0.3152,
+      0.0387
+     ],
+     "median": -0.1571,
+     "hit": 0.387,
+     "t": -2.13
+    },
+    "jac_7_Q1": {
+     "n": 296,
+     "mean": 0.034,
+     "ci": [
+      -0.0823,
+      0.274
+     ],
+     "median": -0.06,
+     "hit": 0.456,
+     "t": 0.58
+    },
+    "H1_size_only": {
+     "n": 322,
+     "mean": -0.011,
+     "ci": [
+      -0.0861,
+      0.2032
+     ],
+     "median": -0.1053,
+     "hit": 0.425,
+     "t": -0.2
+    },
+    "H1_vs_iwm": {
+     "n": 322,
+     "mean": 0.0062,
+     "ci": [
+      -0.1061,
+      0.2386
+     ],
+     "median": -0.1692,
+     "hit": 0.376,
+     "t": 0.12
+    }
+   },
+   "ex_biotech": {
+    "H1_mean": -0.0125,
+    "H1_t": -0.22,
+    "H2_mean": 0.0225,
+    "H2_t": 0.53
+   },
+   "surv_bound": {
+    "H1": -0.0249,
+    "H1_bk0": -0.0168,
+    "H2": 0.0663,
+    "H2_bk0": 0.0643
+   },
+   "bankrupt_8k103_by_jac_full_quintile": {
+    "Q1": 7,
+    "Q2": 2,
+    "Q3": 2,
+    "Q4": 3,
+    "Q5": 2
+   },
+   "seed": 2026112202,
+   "scripts": "tools/backtests/lazy_prices_us_v2/"
+  },
+  "sources": [
+   "https://data.sec.gov/api/xbrl/frames/dei/EntityPublicFloat/USD/CY2024Q2I.json",
+   "https://data.sec.gov/submissions/",
+   "https://www.sec.gov/Archives/edgar/data/",
+   "https://query1.finance.yahoo.com/v8/finance/chart/",
+   "https://www.nber.org/papers/w25084"
+  ],
+  "links": [
+   {
+    "to": "insight:bt-lazy-prices-us-2021-23",
+    "rel": "supersedes"
+   },
+   {
+    "to": "insight:lazy-prices-filing-changes",
+    "rel": "tests"
+   },
+   {
+    "to": "strategy:lazy-prices-text-change-flag",
+    "rel": "evidence_against"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "strategy",
+  "id": "strategy:lazy-prices-text-change-flag",
+  "title": "Text-change flag (status after pre-registered US v2, 2026-11-22): RETIRED as a mechanical US rule (v1 not proven, v2 fresh data -1.4%, t -0.25); 'stale risk factors' REJECTED. Keep only as stage-4 judgment cues: first 10-K after de-SPAC/transformation = look harder; big text change = read the diff (skewed: most lag, a few explode). Next test = India annual reports",
+  "body": "Evidence: insight:bt-lazy-prices-us-2021-23 (v1: -7.3%, t -2.5, ~half de-SPAC) and insight:bt-lazy-prices-us-v2-2024-25 (v2 pre-registered on fresh 2024-25 10-Ks, ex de-SPAC, 2-digit-SIC+size controls: H1 Jaccard changers -1.4%, t -0.25 = NOT PROVEN; H2 unchanged Item 1A +0.5% = REJECTED; v1's cos_1a Q5 now +10.7%). How to use: (1) never a hard filter, auto-exit or short; (2) flagged names (bottom-quintile Jaccard vs last year) go to the stage-4 queue to read what changed (CEO/CFO, auditor, litigation, going concern, new/deleted risk factors, dropped KPIs); remember changers' returns are skewed (median ~-10%, hit ~40%, fat right tail), so the flag means 'understand it', not 'avoid it'; (3) first 10-K after a de-SPAC or major transformation = graded red flag (base rate, not a text edge); (4) ~~unchanged boilerplate risk factors underperform~~ superseded 2026-11-22 (rejected in v2). Promotion path now: an Indian annual-report pilot (MD&A + directors' report + auditor/CARO, BRSR excluded, entry = exchange submission date), pre-registered the same way, where machine-reading is rarer.",
+  "tickers": [],
+  "tags": [
+   "strategy",
+   "lazy-prices",
+   "text-change",
+   "stage-3",
+   "stage-4",
+   "flag",
+   "us",
+   "india-next",
+   "retired-rule"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "status": "retired-as-rule; judgment-cue only",
+   "v1": {
+    "mean": -0.0726,
+    "t": -2.53,
+    "verdict": "NOT PROVEN"
+   },
+   "v2": {
+    "H1_mean": -0.0139,
+    "H1_t": -0.25,
+    "H1_verdict": "NOT PROVEN",
+    "H2_mean": 0.0049,
+    "H2_t": 0.13,
+    "H2_verdict": "REJECTED / NO SIGN"
+   }
+  },
+  "sources": [
+   "https://data.sec.gov/api/xbrl/frames/dei/EntityPublicFloat/USD/CY2024Q2I.json",
+   "https://data.sec.gov/submissions/",
+   "https://www.sec.gov/Archives/edgar/data/",
+   "https://query1.finance.yahoo.com/v8/finance/chart/",
+   "https://www.nber.org/papers/w25084"
+  ],
+  "links": [
+   {
+    "to": "insight:bt-lazy-prices-us-v2-2024-25",
+    "rel": "evidence_against"
+   },
+   {
+    "to": "insight:bt-lazy-prices-us-2021-23",
+    "rel": "evidence"
+   }
+  ],
+  "confidence": "single-source"
+ }
+]
