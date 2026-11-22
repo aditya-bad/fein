@@ -203,3 +203,11 @@ firms tripled about half as often (15% vs 28%) and lost >50% three times as ofte
 5.19× for liquidation/compulsory exit. The earlier result came from a COVID-low snapshot and a "later grew past
 ₹400 cr" sample. **Rule:** never draw a stage-2 conclusion from a survivors-only sample; promoter pledge is our
 strongest mechanical red flag (decision:adopt-disqualifiers-v3), partly because it tracks leverage.
+
+## L29 (2026-11-22) — Lazy Prices: right direction, not proven; watch for mechanical confounds
+US 10-K text-change test (3,164 firm-years, 2021–23): biggest changers −7.3% vs size-matched controls at 12m
+(t −2.53, CI touches 0) — NOT PROVEN by our bar; drift built slowly as in the paper (−0.6/−1.3/−7.3% at 3/6/12m).
+About half came from first 10-Ks after a de-SPAC (shell → new business); biotech mix distorted controls; mostly
+2022 filings. Risk-factor section ran backwards ("stale risk factors" did worst — new hypothesis, not a finding).
+**Use:** judgment flags only — first 10-K after de-SPAC/major change = look harder; big text change = read what
+changed. Next: pre-registered v2 on 2024–25 filings (Jaccard, ex de-SPAC, sector-matched controls).

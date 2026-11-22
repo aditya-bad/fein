@@ -1,0 +1,164 @@
+[
+ {
+  "type": "insight",
+  "id": "insight:bt-lazy-prices-us-2021-23",
+  "title": "Lazy Prices US out-of-sample replication (pre-registered; 10-Ks filed 2021-23, $300M-$10B float): changers -7.3% vs size-matched controls at 12m (t -2.5, CI -14.1 to +1.0) = NOT PROVEN; direction and slow 6-12m build-up replicate, but ~half the raw effect is first-10-Ks-after-de-SPAC; risk-factor section ran BACKWARDS (unchanged RF did worst)",
+  "body": "Pre-registered in research_notes/Backtests/lazy_prices_us.md before returns were computed. Seeded random sample: 3,164 firm-years (2021 949 / 2022 1,144 / 2023 1,071), ex-financials/REITs/utilities, 4,706 10-K primary documents, 0 download failures. Similarity = cosine of raw term-frequency vectors this year vs prior year (secondary: Jaccard; Item 1A and Item 7 separately). Quintiles within filing year; entry = first trading day after the filing date; 5 seeded size-matched controls; 95% bootstrap by filing month (32 months). PRIMARY (full-text cosine, bottom quintile, 12m): -7.26% mean, -14.3% median, hit 38.4%, t -2.53, CI [-14.1, +1.0] -> fails the rule (t<=-3 or CI below -0.5%). 3m -0.6%, 6m -1.3%: slow drift as in the paper. Jaccard full Q1 -8.7% (t -3.08, CI -15.4 to +0.7); Jaccard Q1-Q5 excess spread -11.6% [-19.5, -0.0]. Item 7 MD&A: no signal. Item 1A reversed: top-similarity (unchanged risk factors) -11.5% (t -5.1); this survives removing de-SPACs and biotech (-10.6%, t -4.5) but contradicts the paper and is a new hypothesis only. Exploratory (not pre-registered): 79/634 changers were first 10-Ks after a de-SPAC; without them primary is -3.2% [-9.9, +5.4]; without de-SPACs and biotech (sector-mix confound, controls not sector-matched) it is -7.2% (t -2.7), Jaccard -9.5% (t -3.6). Survivorship: 25% of firm-years lack usable prices; changers had 4x the later bankruptcies of non-changers (42 vs 11; 8-K 1.03), mergers were even; bounds put the primary at -4.5% to -7.4%, so the verdict is unchanged. Effect is mostly in 2022 filings (-15.7%); 2023 filings +1.5%. Use: long-only judgment flags only. (a) First 10-K after a de-SPAC or other transformation = avoid / look harder. (b) Bottom-quintile Jaccard = read the diff (CEO/CFO, litigation, going concern, new risk language). Not a hard filter. Next: v2 pre-registered on 10-Ks filed 2024 to mid-2025 with Jaccard primary, ex-de-SPAC, sector-matched controls, plus a separately registered stale-risk-factor test. India version is feasible as a pilot (NSE/BSE annual-report PDFs via pdftotext, MD&A plus auditor/CARO, exclude BRSR, entry = exchange submission date); a full run belongs on the Pi pipeline.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "lazy-prices",
+   "text-change",
+   "stage-3",
+   "signals",
+   "us",
+   "calibration",
+   "method-test",
+   "alt-data",
+   "pre-registered"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "n_firmyears": 3164,
+   "by_year": {
+    "2021": 949,
+    "2022": 1144,
+    "2023": 1071
+   },
+   "n_docs": 4706,
+   "price_usable": 2372,
+   "primary": {
+    "measure": "cos_full",
+    "group": "Q1",
+    "h": "12m",
+    "n": 419,
+    "mean": -0.0726,
+    "ci": [
+     -0.1414,
+     0.0098
+    ],
+    "median": -0.1431,
+    "hit": 0.384,
+    "t": -2.53,
+    "verdict": "NOT PROVEN"
+   },
+   "primary_3m_6m": {
+    "3m": -0.0062,
+    "6m": -0.0126
+   },
+   "jac_full_Q1_12m": {
+    "mean": -0.0866,
+    "ci": [
+     -0.1539,
+     0.0073
+    ],
+    "t": -3.08
+   },
+   "jac_full_spread_exc_12m": {
+    "diff": -0.1163,
+    "ci": [
+     -0.1949,
+     -0.0002
+    ]
+   },
+   "cos_1a_Q5_12m": {
+    "mean": -0.1149,
+    "ci": [
+     -0.1745,
+     -0.0662
+    ],
+    "t": -5.12,
+    "note": "reverse of paper; hypothesis only"
+   },
+   "exploratory": {
+    "ex_despac_cos_full_Q1_12m": -0.0322,
+    "ex_bio_cos_full_Q1_12m": -0.1008,
+    "ex_despac_ex_bio_cos_full_Q1_12m": -0.0715,
+    "ex_despac_ex_bio_jac_full_Q1_12m": -0.0948
+   },
+   "despac_in_Q1": 79,
+   "despac_total": 117,
+   "survivorship": {
+    "Q1": {
+     "merger": 125,
+     "bankrupt": 42,
+     "delist": 32,
+     "unexplained": 14
+    },
+    "Q5": {
+     "merger": 120,
+     "bankrupt": 11,
+     "delist": 9,
+     "unexplained": 2
+    },
+    "bound_primary": [
+     -0.074,
+     -0.045
+    ]
+   },
+   "cost_round_trip": 0.005,
+   "scripts": "tools/backtests/lazy_prices_us/"
+  },
+  "sources": [
+   "https://data.sec.gov/api/xbrl/frames/dei/EntityPublicFloat/USD/CY2020Q2I.json",
+   "https://data.sec.gov/submissions/",
+   "https://www.sec.gov/Archives/edgar/data/",
+   "https://query1.finance.yahoo.com/v8/finance/chart/",
+   "https://www.nber.org/papers/w25084"
+  ],
+  "links": [
+   {
+    "to": "insight:lazy-prices-filing-changes",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:lit-inattention-premium-synthesis",
+    "rel": "evidence_for"
+   },
+   {
+    "to": "strategy:lazy-prices-text-change-flag",
+    "rel": "supports"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "strategy",
+  "id": "strategy:lazy-prices-text-change-flag",
+  "title": "Text-change flag (status after US OOS test 2026-11-22): NOT an edge as a mechanical rule; use as a long-only look-harder flag. First 10-K after a de-SPAC or transformation = avoid; bottom-quintile Jaccard similarity vs last year = read the diff. Retest v2 on 2024-25 filings before any rule",
+  "body": "Signal: compare each annual filing with the prior year's (US 10-K; later Indian annual-report MD&A, auditor's report and CARO). Word-set Jaccard on the full text is preferred over raw term-frequency cosine, which stop-words dominate. Rank within the filing year. Evidence (insight:bt-lazy-prices-us-2021-23): bottom-quintile changers -7 to -9% vs size-matched controls at 12m, built slowly (3m about 0, 6m -1 to -5%). The pre-registered bar was not met, and about half the raw effect is de-SPAC transitions. How to use now: (1) do not auto-exit or hard-filter; (2) add flagged names to the stage-4 queue and read what changed (CEO/CFO, auditor, litigation, going concern, new or deleted risk factors, dropped KPIs); (3) the first 10-K after a de-SPAC or major transformation counts as a graded red flag; (4) the reverse finding (unchanged, boilerplate risk factors underperforming) is untested and not a rule. Shorting is out of scope. Promotion criteria: a v2 pre-registered fresh-data test (2024 to mid-2025 filings, Jaccard primary, ex-de-SPAC, sector-matched controls) with t <= -3 or a CI below -0.5% after costs; then an Indian pilot (200 firms, FY22 to FY24 annual reports, BRSR pages excluded, entry = exchange submission date).",
+  "tickers": [],
+  "tags": [
+   "strategy",
+   "lazy-prices",
+   "text-change",
+   "stage-3",
+   "stage-4",
+   "avoid-flag",
+   "us",
+   "india",
+   "alt-data"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "status": "not proven - judgment flag only",
+   "preferred_measure": "jaccard_full",
+   "horizon_months": 12,
+   "next_test": "v2 US 2024-25 filings; India pilot 200 firms"
+  },
+  "sources": [
+   "research_notes/Backtests/lazy_prices_us.md"
+  ],
+  "links": [
+   {
+    "to": "insight:bt-lazy-prices-us-2021-23",
+    "rel": "evidence_for"
+   },
+   {
+    "to": "insight:lazy-prices-filing-changes",
+    "rel": "derived_from"
+   }
+  ],
+  "confidence": "single-source"
+ }
+]
