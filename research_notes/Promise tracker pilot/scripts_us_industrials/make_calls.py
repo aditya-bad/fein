@@ -30,7 +30,6 @@ def k8_spec(tk, phrases, op, thr, check_from, note, frm="2027-01-15"):
     return {"type": "a", "auto": "assisted", "kind": "doc_scan", "source": "sec", "ticker": tk, "forms": ["8-K"], "items": ["2.02"],
             "from": frm, "phrases": phrases, "op": op, "threshold": thr, "note": note, "check_from": check_from}
 
-FY26 = r"Full[- ]Year 2026[^\n]{0,40}(?:Highlights|Results)?[\s\S]{0,500}?"
 C = []  # (ticker, slug, category, promise_id, title, evidence, rule, source, resolve_by, spec)
 def call(**k): C.append(k)
 
@@ -134,7 +133,7 @@ for k in C:
                  "links": [{"to": k["promise"], "rel": "tests"}, {"to": f"analysis:{T}:credibility-2026-11", "rel": "derived_from"},
                            {"to": "insight:us-industrials-promise-credibility-base-rate", "rel": "derived_from"}]})
     sp_ = dict(k["spec"])
-    if sp_.get("kind") == "doc_scan":   # the confirming document (next results call) arrives after the event date
+    if sp_.get("kind") == "doc_scan" and "deadline" in sp_:   # the confirming document (next results call) arrives after the event date
         sp_["event_deadline"] = sp_["deadline"]; sp_["deadline"] = k["by"]
     specs[cid] = sp_
 # transcript urls as sources

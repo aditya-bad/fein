@@ -85,6 +85,67 @@ IT_SEGMENT_RX = re.compile(r"vertical|\bbfsi\b|\bbfs\b|insurance|healthcare|hi[\
                            r"\bdxc\b|\bhp\b|top client|client [a-z0-9]|account|nagarro|cigniti|organic|ex-|excluding", re.I)
 
 
+# v1.3 (2026-11-22, US industrials: WTS, AOS, SSD, LECO). US companies (promise id 'promise:US-...', symbol 'US-...' or
+# market 'us') get their OWN vocabulary and never fall through to the India/screener measures. All are scored from a --csv
+# only (company-reported or SEC XBRL figures; field name = measure name, FY / Q rows as for IT).
+US_GROWTH = {"organic_growth_pct", "net_sales_growth_pct", "segment_sales_growth_pct"}
+US_PP = {"adj_op_margin_pct", "gaap_op_margin_pct", "adj_ebitda_margin_pct", "segment_margin_pct", "fcf_conversion_pct",
+         "cash_return_pct_fcf"}
+US_AMOUNT = {"adj_eps_usd", "gaap_eps_usd", "fcf_usd_mn", "capex_usd_mn", "buyback_usd_mn", "cost_savings_usd_mn",
+             "price_realisation_usd_mn"}
+US_MEASURES = US_GROWTH | US_PP | US_AMOUNT
+US_RX = [   # matched on the METRIC text first (then metric+target); order matters
+    (r"segment|division|americas|international|europe|apmea|rest of world|north america|boiler|water treatment|water heater|"
+     r"automation|harris|china|india|leonard", "_segment"),
+    (r"organic", "organic_growth_pct"),
+    (r"\beps\b|earnings per share|per share", "_eps"),
+    (r"(fcf|free cash flow|cash) conversion|fcf\s*/\s*net income", "fcf_conversion_pct"),
+    (r"(returned?|return of|dividends \+ buybacks).*(fcf|free cash flow)|/ ?fcf", "cash_return_pct_fcf"),
+    (r"free cash flow|\bfcf\b", "fcf_usd_mn"),
+    (r"capex|capital expenditure", "capex_usd_mn"),
+    (r"repurchase|buyback", "buyback_usd_mn"),
+    (r"savings|cost (programme|program|reduction)|operating expenses", "cost_savings_usd_mn"),
+    (r"price[\s/-]*cost|price (actions?|increases?|realis|realiz)", "price_realisation_usd_mn"),
+    (r"ebitda", "adj_ebitda_margin_pct"),
+    (r"adjusted operating|adj\.? operating|operating income margin|operating margin", "_opm"),
+    (r"(net )?sales growth|revenue growth|top[\s-]?line|net sales", "net_sales_growth_pct"),
+]
+
+
+def is_us(p):
+    return (str(p.get("id", "")).startswith("promise:US-") or str(p.get("symbol", "")).startswith("US-")
+            or str(p.get("market", "")).lower() == "us")
+
+
+def infer_us_measure(metric, text):
+    """US-company KPI. Segment / product-line / country figures -> segment_* (never the group measure).
+    Multi-year targets (2030, CAGR, 'average across the cycle') return None (judgment)."""
+    full = (metric + " " + text).lower()
+    if re.search(r"cagr|20[3-9]\d|across the cycle|\baverage\b.*20\d\d-20\d\d", full):
+        return None
+    seg = bool(re.search(US_RX[0][0], metric.lower()))
+    if seg and "%" not in full and re.search(r"\$|\bmn\b|million", full):
+        return None   # segment / acquired-business dollar amounts (e.g. 'Leonard Valve sales ~$70 mn'): judgment
+    for src in (metric, text):
+        tl = src.lower()
+        for rx, m in US_RX[1:]:
+            if re.search(rx, tl):
+                if m == "_eps":
+                    return "adj_eps_usd" if "adjust" in full or "continuing" in full else "gaap_eps_usd"
+                if m == "_opm":
+                    return "segment_margin_pct" if seg else ("gaap_op_margin_pct" if "gaap" in full else "adj_op_margin_pct")
+                if m in ("net_sales_growth_pct", "organic_growth_pct") and seg:
+                    return "segment_sales_growth_pct"
+                if m == "adj_ebitda_margin_pct" and seg:
+                    return "segment_margin_pct"
+                return m
+    if seg and re.search(r"margin", full):
+        return "segment_margin_pct"
+    if seg and re.search(r"sales|growth", full):
+        return "segment_sales_growth_pct"
+    return None
+
+
 def infer_it_measure(metric, text):
     """IT-services KPI from the metric text (fallback: metric+target). Vertical/geo/client-level growth,
     'organic'/'excluding X' variants and multi-year CAGRs are NOT the company-level measure (judgment)."""
@@ -105,8 +166,8 @@ LOWER_BETTER = {"finance_cost_pct_revenue", "debtor_days", "borrowings_cr",
                 "attrition_pct", "top5_client_share_pct", "top10_client_share_pct"}
 PP_MEASURES = {"ebitda_margin_pct", "ebitda_margin_incl_oi_pct", "finance_cost_pct_revenue", "roce_pct",
                "dividend_payout_pct"}
-GROWTH_MEASURES = {"revenue_growth_yoy_pct", "revenue_qoq_pct", "pat_growth_yoy_pct"} | set(BANK_GROWTH) | IT_GROWTH
-PP_MEASURES |= BANK_WIDE | IT_PP
+GROWTH_MEASURES = {"revenue_growth_yoy_pct", "revenue_qoq_pct", "pat_growth_yoy_pct"} | set(BANK_GROWTH) | IT_GROWTH | US_GROWTH
+PP_MEASURES |= BANK_WIDE | IT_PP | US_PP
 SEGMENT_RX = re.compile(r"segment|division|polymer|engineering|infra|export|aftermarket|small[\s-]ag|large ag|"
                         r"construction|mexico|fabrication|warehouse|order|utili[sz]ation|capacity|share of|mix|epc|"
                         r"substation|pipes|tonne|\busd\b|\$|normali[sz]ed|ex-fx|through[\s-]the[\s-]cycle|cagr|"
@@ -130,10 +191,33 @@ def flatten_seed(path):
     return out
 
 
-def parse_target(text):
-    """'+25% (FY24 base ...)' -> (25, 25, '%', '>='?) ; '0% to -3%' -> (-3, 0, '%', 'range')."""
+def _parse_us_target(t):
+    head = re.split(r"\(|;|\bvs\b|\bfrom\b", t)[0]
+    comp = ">=" if re.search(r">=|>|at least|or more|or higher|\+$", head) else "~"
+    m = re.search(r"\$\s*(\d{1,3}\.\d{2})\s*(?:-|to)\s*\$?\s*(\d{1,3}\.\d{2})(?!\s*(?:mn|bn|million|billion))", head)
+    if m:
+        a_, b_ = float(m.group(1)), float(m.group(2))
+        return min(a_, b_), max(a_, b_), "USD/share", "range"
+    m = re.search(r"\$\s*(\d{1,3}\.\d{2})(?!\d|\s*(?:mn|bn|million|billion))", head)
+    if m:
+        v = float(m.group(1)); return v, v, "USD/share", comp
+    for rx, lo, hi in ((r"low[\s-]single[\s-]digits?", 1, 3), (r"mid[\s-]single[\s-]digits?", 4, 6),
+                       (r"low[\s-]teens", 11, 13), (r"mid[\s-]teens", 14, 16)):
+        if re.search(rx, head, re.I):
+            return lo, hi, "%", "range"
+    return None
+
+
+def parse_target(text, us=False):
+    """'+25% (FY24 base ...)' -> (25, 25, '%', '>='?) ; '0% to -3%' -> (-3, 0, '%', 'range').
+    us=True (v1.3) adds per-share ranges ('$3.42 to $3.52' -> USD/share) and the US growth words ('low/mid single digit',
+    'low/mid teens'); India/IT parsing (us=False) is unchanged."""
     if not text:
         return None
+    if us:
+        r = _parse_us_target(str(text).replace("−", "-").replace("–", "-"))
+        if r:
+            return r
     t = str(text).replace("−", "-").replace("–", "-")
     head = re.split(r"\(|;|\bvs\b|\bfrom\b|\bon\b FY|\bbase\b", t)[0]
     comp = "~"
@@ -253,6 +337,9 @@ def infer_measure(p):
         return p["measure"], "given"
     text = " ".join(str(p.get(k) or "") for k in ("metric", "target"))
     metric = str(p.get("metric") or "")
+    if is_us(p):   # v1.3: US companies never fall through to the India / screener measures
+        um = infer_us_measure(metric, text)
+        return (um, "inferred (US)") if um else (None, "US company: no recognised US measure (judgment)")
     bm = infer_bank_measure(metric, text)
     if bm:
         return bm, "inferred (bank)"
@@ -424,7 +511,7 @@ def it_actual(fin, measure, kind, end):
         if s_ and o is not None and d is not None:
             return 100 * (o - d) / s_, f"(op {o:g} - dep {d:g}) / sales {s_:g} (screener-derived EBIT; company EBIT may differ)"
         return None, "sales/op_profit/depreciation missing"
-    return None, f"{measure} missing in CSV (company-defined IT KPI: not on screener)"
+    return None, f"{measure} missing in CSV (company-defined IT/US KPI: not on screener)"
 
 
 def actual_for(fin, measure, kind, end):
@@ -432,7 +519,7 @@ def actual_for(fin, measure, kind, end):
     pv = lambda f, k=kind, e=end: period_value(fin, k, e, f)  # noqa: E731
     if measure in BANK_MEASURES:
         return bank_actual(fin, measure, kind, end)
-    if measure in IT_MEASURES:
+    if measure in IT_MEASURES or measure in US_MEASURES:   # US (v1.3): CSV only, same lookup as the IT KPIs
         return it_actual(fin, measure, kind, end)
     try:
         if measure == "revenue_growth_yoy_pct":
@@ -530,7 +617,7 @@ def score_one(p, fin, as_of):
         return au
     lo, hi = p.get("target_low"), p.get("target_high")
     unit, comp = p.get("unit"), p.get("comparator")
-    parsed = parse_target(p.get("target")) if p.get("target") else None
+    parsed = parse_target(p.get("target"), us=is_us(p)) if p.get("target") else None
     if lo is None and hi is None and parsed:
         lo, hi, unit, comp = parsed
     elif parsed and not comp:
@@ -718,7 +805,7 @@ def _tgt(p):
         return au["target_used"]
     lo, hi = p.get("target_low"), p.get("target_high")
     if lo is None and p.get("target"):
-        t = parse_target(p["target"])
+        t = parse_target(p["target"], us=is_us(p))
         if t:
             lo, hi = t[0], t[1]
     return [lo, hi] if lo is not None else None

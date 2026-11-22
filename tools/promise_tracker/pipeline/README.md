@@ -1,4 +1,4 @@
-# Promise-tracker pipeline (v1.2, 2026-11-22; v1 2026-11-21)
+# Promise-tracker pipeline (v1.3, 2026-11-22; v1 2026-11-21)
 
 This pipeline turns the two manual pilots (UNIPARTS, SKIPPER; see `research_notes/Promise tracker pilot/`)
 into a repeatable process. It uses the Python standard library only, plus the `pdftotext` (poppler) and
@@ -13,6 +13,29 @@ fetch.py ──> turns.py ──> candidates.py ──> llm_extract.py ──> s
  date range   boilerplate                     (JSONL)           chains       memdb seed
 ```
 `run.py` chains all six stages. `validate.py` compares any stage with a manual ledger.
+
+## v1.3 changes (2026-11-22, first US sector: US-WTS, US-AOS, US-SSD, US-LECO)
+- **US gate in `score.py`.** A promise is US if its id starts `promise:US-`, or its `symbol` starts `US-`, or `market` is `us`. US
+  promises use only the US vocabulary below and **never fall through** to the India/screener measures (INR cr, OPM, debtor days).
+  If no US measure matches, the result is *not-auto-scorable* ("US company: no recognised US measure").
+  | Measure | Phrases it catches (metric text first) | Scored from |
+  |---|---|---|
+  | `organic_growth_pct` | "organic" | `--csv` only (company-reported) |
+  | `net_sales_growth_pct` | "net sales", "sales/revenue growth", "top line" | `--csv` (SEC XBRL or release) |
+  | `segment_sales_growth_pct`, `segment_margin_pct` | the metric names a segment, region, product line or country (Americas, International, Europe, APMEA, Rest of World, North America, boiler, water treatment/heater, automation, Harris, China, India, Leonard) | `--csv` only |
+  | `adj_op_margin_pct` / `gaap_op_margin_pct` | "adjusted operating", "operating (income) margin" (GAAP only when the text says "GAAP") | `--csv` only |
+  | `adj_ebitda_margin_pct` | "EBITDA" | `--csv` only |
+  | `adj_eps_usd` / `gaap_eps_usd` | "EPS", "per share" ("adjusted" or "continuing" -> adjusted) | `--csv` only |
+  | `fcf_conversion_pct`, `cash_return_pct_fcf`, `fcf_usd_mn` | "cash conversion", "FCF / net income"; "return ... of free cash flow"; "free cash flow" | `--csv` only |
+  | `capex_usd_mn`, `buyback_usd_mn`, `cost_savings_usd_mn`, `price_realisation_usd_mn` | "capex"; "repurchase/buyback"; "savings", "operating expenses"; "price/cost", "price actions" | `--csv` only |
+  - Multi-year targets (CAGR, a year 2030+, "across the cycle") and segment/acquired-business **dollar** amounts ("Leonard Valve ~$70 mn") return *not-auto-scorable* (judgment).
+  - Margins and ratios use the 0.3 / 1.5 pp thresholds and growth uses the growth thresholds (the sets join `PP_MEASURES` / `GROWTH_MEASURES`); amounts use the 95% / 80% ratio rule.
+- **`parse_target(text, us=False)`:** with `us=True` (passed automatically for US promises) it also parses per-share ranges ("$3.42 to $3.52" -> 3.42-3.52 USD/share; "$0.96") and the US growth words "low single digit" 1-3%, "mid single digit" 4-6%, "low teens" 11-13%, "mid teens" 14-16%. India/IT parsing is unchanged.
+  - **Known limit:** bp-expansion targets ("+50 to +110 bp") are still read by the bank bps rule as 0.50-1.10 *%* levels. Score these by hand on the expansion (clarification B), or give `target_low/high` explicitly.
+- **Scoring US ledgers:** the four 2026-11-22 ledgers were built by hand (`research_notes/Promise tracker pilot/scripts_us_industrials/promises_US-*.py`), not through `fetch.py` (which reads NSE). For a pipeline run on a US company, pass the Motley Fool HTML converted to text, or the 8-K Ex 99.1 press release, as `--local FILE@YYYY-MM-DD` (pdf_to_text is skipped for .txt only if you pre-place the .txt in the cache; simplest is to print the page to PDF). Supply company figures in the `--csv` (field = measure name).
+- **Regression check:** all 426 promises in the existing `memdb/seeds/*promises*.json` (India + IT, excluding the new US seed) give the same `infer_measure` and `parse_target` result as v1.2 (0 changed).
+- **Scoreboard (`tools/scoreboard/resolve.py`):** `sec_fact` gained `operating_income` (OperatingIncomeLoss), `capex` (PaymentsToAcquirePropertyPlantAndEquipment, else PaymentsToAcquireProductiveAssets) and the ratio `op_margin_pct` = 100 x operating income / revenue (both first-reported, same period rules). One new unit test.
+- **Data access notes (US):** fool.com quote pages (`/quote/nyse/<t>/`) list the transcript URLs. Several calls had no Fool page (WTS Q3-25, SSD Q2-26, LECO Q2-25 and Q2-26); guessed slugs 404. Use the 8-K Item 2.02 Exhibit 99.1 instead: `python3 tools/sec_fetch.py filings T --form 8-K --items 2.02`, then `doc T ACCESSION --file <ex99 name> --text` (the `--file` flag is needed; without it the 8-K cover document is downloaded). Lincoln Electric's releases carry almost no outlook; Watts, A. O. Smith and Simpson put the outlook in the release.
 
 ## v1.2 changes (2026-11-22, IT mid-caps: PERSISTENT, COFORGE, MPHASIS, KPITTECH)
 - **IT measures in `score.py`** (matched on the metric text, after the bank measures and before the segment filter):

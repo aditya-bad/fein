@@ -181,3 +181,10 @@ india-solvency-s3-excluded). Dead-company probe: IBBI CIRP export (9,263 admissi
 (3,023), NSE delisted.csv (stale to 2020), BSE delisted/suspended (no dates) are reachable; NCLT site is behind a
 CAPTCHA (don't automate). An insolvency *admission* is not a failure (Inox Wind, VA Tech Wabag survived) — use
 liquidation, delisting or confirmed price collapse as the failure outcome.
+
+## L26 (2026-11-22) — Credibility across 3 sectors and 2 markets: numbers get met, dates slip
+Auto components (India), IT mid-caps (India), US industrials: margin guidance met 81–98%, revenue/growth ~69–71%,
+capacity/plant/production dates weakest (43–50%) everywhere — the same as T&D (L18). Much "delivery" is
+conservative guiding (Watts raised at every call). US peer medians sit near 100%, so sector-adjusted scores are
+noisier there. **Rule:** weight a company's *execution-date* record most; treat beating its own soft guide as weak
+evidence of skill. 38 credibility-generated calls (India 27, US 11) will test whether the adjustment adds skill.

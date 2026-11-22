@@ -1,0 +1,717 @@
+[
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-WTS:fy26-reported-sales-growth-17pct-plus-cred",
+  "title": "Paper call: Watts Water FY2026 reported net sales growth is >=17.0%",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.47 (naive sector base rate 0.41) that: Watts Water FY2026 reported net sales growth is >=17.0%. Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/US_INDUSTRIALS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.41 (leave-one-out peer strict delivery rate, category 'revenue_growth', n=8); SAC +15.3 pts x weight 0.375 (N=12) -> p = 0.47. Evidence: Q3-2026 call (05-Nov-2026): FY2026 reported sales growth guide 17-18% incl. ~$128-131 mn acquisition sales (raised from 8-12% in Feb, 14-17% in Aug). FY2025 net sales $2,438.5 mn (XBRL). 9M-2026 reported growth ~+20%. Resolution: YES if FY2026 net sales / FY2025 net sales - 1 >= 17.0%, to one decimal, both from the FY2026 Form 10-K XBRL (revenue, as first reported; prior year = the comparative in the same filing). Source: SEC EDGAR XBRL companyfacts (FY2026 10-K). Resolve by 2027-03-15; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "US-WTS"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "us",
+   "sector-us-industrials",
+   "industrials",
+   "cat-revenue-growth"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.47,
+   "base_rate_probability": 0.41,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-03-15",
+   "resolution_rule": "YES if FY2026 net sales / FY2025 net sales - 1 >= 17.0%, to one decimal, both from the FY2026 Form 10-K XBRL (revenue, as first reported; prior year = the comparative in the same filing).",
+   "resolution_source": "SEC EDGAR XBRL companyfacts (FY2026 10-K)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'revenue_growth' promises among the other US industrials peers (strict: delivered only, specificity-weighted; n=8). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.41 (leave-one-out peer strict delivery rate, category 'revenue_growth', n=8); SAC +15.3 pts x weight 0.375 (N=12) -> p = 0.47",
+   "sector_adjusted_score": 15.3,
+   "sac_shrink_weight": 0.375,
+   "sac_n_scored": 12,
+   "promise_category": "revenue_growth",
+   "promise_id": "promise:US-WTS:2026-11-05:fy26-reported-growth-17-18pct",
+   "peer_set": [
+    "US-WTS",
+    "US-AOS",
+    "US-SSD",
+    "US-LECO"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://www.fool.com/earnings/call-transcripts/2026/11/05/watts-water-wts-q3-2026-earnings-call-transcript/",
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0000795403.json"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:US-WTS:2026-11-05:fy26-reported-growth-17-18pct",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:US-WTS:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:us-industrials-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-WTS:fy26-adj-op-margin-20-3pct-plus-cred",
+  "title": "Paper call: Watts Water FY2026 adjusted operating margin (company-reported) is >=20.3%",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.94 (naive sector base rate 0.88) that: Watts Water FY2026 adjusted operating margin (company-reported) is >=20.3%. Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/US_INDUSTRIALS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.88 (leave-one-out peer strict delivery rate, category 'margin', n=9); SAC +15.3 pts x weight 0.375 (N=12) -> p = 0.94. Evidence: Q3-2026 call: FY2026 adjusted operating margin 20.3-20.4% (+70 to +80 bp; Aug guide 19.8-20.4%). FY2025 19.6%. Q1-Q3 2026 20.1% / 21.0% / 20.9%. Resolution: YES if the FY2026 adjusted operating margin in Watts's Q4-2026 results release (8-K Item 2.02, Ex 99.1) is >= 20.3%, to one decimal. GAAP operating margin is NOT used. Source: Watts Q4-2026 8-K Ex 99.1 press release (SEC EDGAR). Resolve by 2027-03-15; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "US-WTS"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "us",
+   "sector-us-industrials",
+   "industrials",
+   "cat-margin"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.94,
+   "base_rate_probability": 0.88,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-03-15",
+   "resolution_rule": "YES if the FY2026 adjusted operating margin in Watts's Q4-2026 results release (8-K Item 2.02, Ex 99.1) is >= 20.3%, to one decimal. GAAP operating margin is NOT used.",
+   "resolution_source": "Watts Q4-2026 8-K Ex 99.1 press release (SEC EDGAR)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'margin' promises among the other US industrials peers (strict: delivered only, specificity-weighted; n=9). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.88 (leave-one-out peer strict delivery rate, category 'margin', n=9); SAC +15.3 pts x weight 0.375 (N=12) -> p = 0.94",
+   "sector_adjusted_score": 15.3,
+   "sac_shrink_weight": 0.375,
+   "sac_n_scored": 12,
+   "promise_category": "margin",
+   "promise_id": "promise:US-WTS:2026-11-05:fy26-adj-op-margin-20-3-20-4",
+   "peer_set": [
+    "US-WTS",
+    "US-AOS",
+    "US-SSD",
+    "US-LECO"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://www.fool.com/earnings/call-transcripts/2026/11/05/watts-water-wts-q3-2026-earnings-call-transcript/",
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0000795403.json"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:US-WTS:2026-11-05:fy26-adj-op-margin-20-3-20-4",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:US-WTS:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:us-industrials-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-WTS:fy26-organic-growth-11pct-plus-cred",
+  "title": "Paper call: Watts Water FY2026 organic sales growth (company-reported) is >=11.0%",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.47 (naive sector base rate 0.41) that: Watts Water FY2026 organic sales growth (company-reported) is >=11.0%. Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/US_INDUSTRIALS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.41 (leave-one-out peer strict delivery rate, category 'revenue_growth', n=8); SAC +15.3 pts x weight 0.375 (N=12) -> p = 0.47. Evidence: Q3-2026 call: 'We now anticipate organic sales growth of 11% to 12%' (Feb guide 2-6%, Aug 8-11%). Q1/Q2/Q3-2026 organic +12% / +12.2% / +12%; Q4 guide +9-12%. FY2025 +5%. Resolution: YES if the FY2026 organic sales growth Watts reports in its Q4-2026 results release is >= 11.0% (company definition; whole-percent figures count as stated, e.g. '11%' = YES). Source: Watts Q4-2026 8-K Ex 99.1 press release (SEC EDGAR). Resolve by 2027-03-15; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "US-WTS"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "us",
+   "sector-us-industrials",
+   "industrials",
+   "cat-revenue-growth"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.47,
+   "base_rate_probability": 0.41,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-03-15",
+   "resolution_rule": "YES if the FY2026 organic sales growth Watts reports in its Q4-2026 results release is >= 11.0% (company definition; whole-percent figures count as stated, e.g. '11%' = YES).",
+   "resolution_source": "Watts Q4-2026 8-K Ex 99.1 press release (SEC EDGAR)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'revenue_growth' promises among the other US industrials peers (strict: delivered only, specificity-weighted; n=8). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.41 (leave-one-out peer strict delivery rate, category 'revenue_growth', n=8); SAC +15.3 pts x weight 0.375 (N=12) -> p = 0.47",
+   "sector_adjusted_score": 15.3,
+   "sac_shrink_weight": 0.375,
+   "sac_n_scored": 12,
+   "promise_category": "revenue_growth",
+   "promise_id": "promise:US-WTS:2026-11-05:fy26-organic-11-12pct",
+   "peer_set": [
+    "US-WTS",
+    "US-AOS",
+    "US-SSD",
+    "US-LECO"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://www.fool.com/earnings/call-transcripts/2026/11/05/watts-water-wts-q3-2026-earnings-call-transcript/",
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0000795403.json"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:US-WTS:2026-11-05:fy26-organic-11-12pct",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:US-WTS:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:us-industrials-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-AOS:fy26-adj-eps-ex-china-3-42-plus-cred",
+  "title": "Paper call: A. O. Smith FY2026 adjusted EPS excluding China (continuing operations) is >=$3.42",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.65 (naive sector base rate 0.82) that: A. O. Smith FY2026 adjusted EPS excluding China (continuing operations) is >=$3.42. Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/US_INDUSTRIALS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.82 (leave-one-out peer strict delivery rate, category 'other', all-category fallback, n=5); SAC -35.3 pts x weight 0.474 (N=18) -> p = 0.65. Evidence: Q3-2026 call / release (29-Oct-2026): 'Adjusted EPS, excluding China, of between $3.42 and $3.52' (the fourth FY2026 guide: $3.85-4.15 Jan, $3.70-4.00 Apr, $3.70-3.85 Jul, all incl. China). Excludes water-treatment restructuring. Resolution: YES if A. O. Smith's FY2026 adjusted EPS from continuing operations (China excluded, as defined in its Q4-2026 release) is >= $3.42. If the company reports only a figure that includes China, the call goes to review (void if no ex-China figure is published by 2027-03-31). Source: A. O. Smith Q4-2026 8-K Ex 99.1 press release (SEC EDGAR). Resolve by 2027-03-31; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "US-AOS"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "us",
+   "sector-us-industrials",
+   "industrials",
+   "cat-other"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.65,
+   "base_rate_probability": 0.82,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-03-31",
+   "resolution_rule": "YES if A. O. Smith's FY2026 adjusted EPS from continuing operations (China excluded, as defined in its Q4-2026 release) is >= $3.42. If the company reports only a figure that includes China, the call goes to review (void if no ex-China figure is published by 2027-03-31).",
+   "resolution_source": "A. O. Smith Q4-2026 8-K Ex 99.1 press release (SEC EDGAR)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'other' promises among the other US industrials peers (strict: delivered only, specificity-weighted; n=5, too few in category so all-category peer rate used). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.82 (leave-one-out peer strict delivery rate, category 'other', all-category fallback, n=5); SAC -35.3 pts x weight 0.474 (N=18) -> p = 0.65",
+   "sector_adjusted_score": -35.3,
+   "sac_shrink_weight": 0.474,
+   "sac_n_scored": 18,
+   "promise_category": "other",
+   "promise_id": "promise:US-AOS:2026-10-29:fy26-adj-eps-3-42-3-52-ex-china",
+   "peer_set": [
+    "US-WTS",
+    "US-AOS",
+    "US-SSD",
+    "US-LECO"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://www.fool.com/earnings/call-transcripts/2026/10/29/a-o-smith-aos-q3-2026-earnings-call-transcript/",
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0000091142.json"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:US-AOS:2026-10-29:fy26-adj-eps-3-42-3-52-ex-china",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:US-AOS:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:us-industrials-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-AOS:fy26-sales-growth-ex-china-3-5pct-plus-cred",
+  "title": "Paper call: A. O. Smith FY2026 net sales growth, continuing operations (China excluded), is >=3.5% ('approximately 4%')",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.65 (naive sector base rate 0.82) that: A. O. Smith FY2026 net sales growth, continuing operations (China excluded), is >=3.5% ('approximately 4%'). Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/US_INDUSTRIALS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.82 (leave-one-out peer strict delivery rate, category 'revenue_growth', all-category fallback, n=7); SAC -35.3 pts x weight 0.474 (N=18) -> p = 0.65. Evidence: Q3-2026 release: 'Net sales growth, excluding China, of approximately 4%'; table: 2025 ex-China $3,155 mn, 2026 outlook $3,270-3,290 mn (+3.6% to +4.3%). Includes Leonard Valve (~$55 mn). Resolution: YES if FY2026 net sales / FY2025 net sales - 1 >= 3.5% (one decimal), both from the FY2026 Form 10-K XBRL with China in discontinued operations (prior year = recast comparative in the same filing). If the 10-K comparative differs from ~$3,155 mn by more than 2% (China not excluded), the call goes to review and is resolved on the company's ex-China net sales. Source: SEC EDGAR XBRL companyfacts (FY2026 10-K). Resolve by 2027-03-31; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "US-AOS"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "us",
+   "sector-us-industrials",
+   "industrials",
+   "cat-revenue-growth"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.65,
+   "base_rate_probability": 0.82,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-03-31",
+   "resolution_rule": "YES if FY2026 net sales / FY2025 net sales - 1 >= 3.5% (one decimal), both from the FY2026 Form 10-K XBRL with China in discontinued operations (prior year = recast comparative in the same filing). If the 10-K comparative differs from ~$3,155 mn by more than 2% (China not excluded), the call goes to review and is resolved on the company's ex-China net sales.",
+   "resolution_source": "SEC EDGAR XBRL companyfacts (FY2026 10-K)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'revenue_growth' promises among the other US industrials peers (strict: delivered only, specificity-weighted; n=7, too few in category so all-category peer rate used). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.82 (leave-one-out peer strict delivery rate, category 'revenue_growth', all-category fallback, n=7); SAC -35.3 pts x weight 0.474 (N=18) -> p = 0.65",
+   "sector_adjusted_score": -35.3,
+   "sac_shrink_weight": 0.474,
+   "sac_n_scored": 18,
+   "promise_category": "revenue_growth",
+   "promise_id": "promise:US-AOS:2026-10-29:fy26-sales-growth-4pct-ex-china",
+   "peer_set": [
+    "US-WTS",
+    "US-AOS",
+    "US-SSD",
+    "US-LECO"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://www.fool.com/earnings/call-transcripts/2026/10/29/a-o-smith-aos-q3-2026-earnings-call-transcript/",
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0000091142.json"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:US-AOS:2026-10-29:fy26-sales-growth-4pct-ex-china",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:US-AOS:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:us-industrials-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-AOS:china-sale-closes-by-jun27-cred",
+  "title": "Paper call: A. O. Smith completes the sale of 81% of its China business to CPE by 30-Jun-2027",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.65 (naive sector base rate 0.82) that: A. O. Smith completes the sale of 81% of its China business to CPE by 30-Jun-2027. Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/US_INDUSTRIALS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.82 (leave-one-out peer strict delivery rate, category 'other', all-category fallback, n=5); SAC -35.3 pts x weight 0.474 (N=18) -> p = 0.65. Evidence: Q3-2026 call: 'We plan to close in the first half of 2027 subject to regulatory approvals and customary closing conditions' ($400 mn valuation for 81%; agreement 27-Oct-2026). Resolution: YES if A. O. Smith announces (8-K Item 2.01 / press release / 10-Q) that the sale of the majority interest in its China business closed on or before 30-Jun-2027. NO if not closed by then (terminated or still pending). Source: A. O. Smith 8-K filings (SEC EDGAR); Q2-2027 results release. Resolve by 2027-07-31; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "US-AOS"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "us",
+   "sector-us-industrials",
+   "industrials",
+   "cat-other"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.65,
+   "base_rate_probability": 0.82,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-07-31",
+   "resolution_rule": "YES if A. O. Smith announces (8-K Item 2.01 / press release / 10-Q) that the sale of the majority interest in its China business closed on or before 30-Jun-2027. NO if not closed by then (terminated or still pending).",
+   "resolution_source": "A. O. Smith 8-K filings (SEC EDGAR); Q2-2027 results release",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'other' promises among the other US industrials peers (strict: delivered only, specificity-weighted; n=5, too few in category so all-category peer rate used). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.82 (leave-one-out peer strict delivery rate, category 'other', all-category fallback, n=5); SAC -35.3 pts x weight 0.474 (N=18) -> p = 0.65",
+   "sector_adjusted_score": -35.3,
+   "sac_shrink_weight": 0.474,
+   "sac_n_scored": 18,
+   "promise_category": "other",
+   "promise_id": "promise:US-AOS:2026-10-29:china-sale-close-h1-2027",
+   "peer_set": [
+    "US-WTS",
+    "US-AOS",
+    "US-SSD",
+    "US-LECO"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://www.fool.com/earnings/call-transcripts/2026/10/29/a-o-smith-aos-q3-2026-earnings-call-transcript/",
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0000091142.json"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:US-AOS:2026-10-29:china-sale-close-h1-2027",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:US-AOS:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:us-industrials-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-SSD:fy26-op-margin-20pct-plus-cred",
+  "title": "Paper call: Simpson FY2026 GAAP consolidated operating margin is >=20.0%",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.90 (naive sector base rate 0.92) that: Simpson FY2026 GAAP consolidated operating margin is >=20.0%. Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/US_INDUSTRIALS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.92 (leave-one-out peer strict delivery rate, category 'margin', n=12); SAC -7.0 pts x weight 0.259 (N=7) -> p = 0.90. Evidence: Q3-2026 call (26-Oct-2026): FY2026 operating margin 20.0-20.5% incl. an ~$11 mn Q4 land-sale gain (Feb guide 19.5-20.5%, Jul 19.7-20.5%). FY2025 19.6% (XBRL 458.1/2,330). Resolution: YES if FY2026 OperatingIncomeLoss / revenue >= 20.0%, to one decimal, both from the FY2026 Form 10-K XBRL (as first reported). Source: SEC EDGAR XBRL companyfacts (FY2026 10-K). Resolve by 2027-03-15; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "US-SSD"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "us",
+   "sector-us-industrials",
+   "industrials",
+   "cat-margin"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.9,
+   "base_rate_probability": 0.92,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-03-15",
+   "resolution_rule": "YES if FY2026 OperatingIncomeLoss / revenue >= 20.0%, to one decimal, both from the FY2026 Form 10-K XBRL (as first reported).",
+   "resolution_source": "SEC EDGAR XBRL companyfacts (FY2026 10-K)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'margin' promises among the other US industrials peers (strict: delivered only, specificity-weighted; n=12). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.92 (leave-one-out peer strict delivery rate, category 'margin', n=12); SAC -7.0 pts x weight 0.259 (N=7) -> p = 0.90",
+   "sector_adjusted_score": -7.0,
+   "sac_shrink_weight": 0.259,
+   "sac_n_scored": 7,
+   "promise_category": "margin",
+   "promise_id": "promise:US-SSD:2026-10-26:fy26-op-margin-20-0-20-5",
+   "peer_set": [
+    "US-WTS",
+    "US-AOS",
+    "US-SSD",
+    "US-LECO"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://www.fool.com/earnings/call-transcripts/2026/10/26/simpson-manufacturing-ssd-q3-2026-earnings-call-transcript/",
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0000920371.json"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:US-SSD:2026-10-26:fy26-op-margin-20-0-20-5",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:US-SSD:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:us-industrials-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-SSD:fy26-capex-80-90mn-cred",
+  "title": "Paper call: Simpson FY2026 capital expenditures are within $80-90 mn",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.73 (naive sector base rate 0.75) that: Simpson FY2026 capital expenditures are within $80-90 mn. Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/US_INDUSTRIALS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.75 (leave-one-out peer strict delivery rate, category 'capacity', all-category fallback, n=1); SAC -7.0 pts x weight 0.259 (N=7) -> p = 0.73. Evidence: Q2-2026 release and Q3-2026 call: capex $80-90 mn (Feb guide $75-85 mn). FY2025 $161.0 mn (Gallatin/Columbus build-out), outside its last range by 0.6%. Resolution: YES if FY2026 PaymentsToAcquirePropertyPlantAndEquipment in the FY2026 Form 10-K XBRL is >= $80.0 mn and <= $90.0 mn. Source: SEC EDGAR XBRL companyfacts (FY2026 10-K). Resolve by 2027-03-15; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "US-SSD"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "us",
+   "sector-us-industrials",
+   "industrials",
+   "cat-capacity"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.73,
+   "base_rate_probability": 0.75,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-03-15",
+   "resolution_rule": "YES if FY2026 PaymentsToAcquirePropertyPlantAndEquipment in the FY2026 Form 10-K XBRL is >= $80.0 mn and <= $90.0 mn.",
+   "resolution_source": "SEC EDGAR XBRL companyfacts (FY2026 10-K)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'capacity' promises among the other US industrials peers (strict: delivered only, specificity-weighted; n=1, too few in category so all-category peer rate used). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.75 (leave-one-out peer strict delivery rate, category 'capacity', all-category fallback, n=1); SAC -7.0 pts x weight 0.259 (N=7) -> p = 0.73",
+   "sector_adjusted_score": -7.0,
+   "sac_shrink_weight": 0.259,
+   "sac_n_scored": 7,
+   "promise_category": "capacity",
+   "promise_id": "promise:US-SSD:2026-10-26:fy26-capex-80-90mn",
+   "peer_set": [
+    "US-WTS",
+    "US-AOS",
+    "US-SSD",
+    "US-LECO"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://www.fool.com/earnings/call-transcripts/2026/10/26/simpson-manufacturing-ssd-q3-2026-earnings-call-transcript/",
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0000920371.json"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:US-SSD:2026-10-26:fy26-capex-80-90mn",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:US-SSD:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:us-industrials-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-LECO:fy26-sales-growth-11pct-plus-cred",
+  "title": "Paper call: Lincoln Electric FY2026 net sales growth is >=11.0% ('low teens percent')",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.60 (naive sector base rate 0.63) that: Lincoln Electric FY2026 net sales growth is >=11.0% ('low teens percent'). Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/US_INDUSTRIALS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.63 (leave-one-out peer strict delivery rate, category 'revenue_growth', n=13); SAC -11.5 pts x weight 0.231 (N=6) -> p = 0.60. Evidence: Q3-2026 call (27-Oct-2026): 'We now expect net sales growth to be in the low teens percent range for the full year' (Feb: mid single digit; Apr: high single digit). FY2025 net sales $4,233 mn. Q1/Q3-2026 +12% / +15.1%. Resolution: YES if FY2026 net sales / FY2025 net sales - 1 >= 11.0%, to one decimal, from the FY2026 Form 10-K XBRL (as first reported; prior year = comparative in the same filing). Source: SEC EDGAR XBRL companyfacts (FY2026 10-K). Resolve by 2027-03-15; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "US-LECO"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "us",
+   "sector-us-industrials",
+   "industrials",
+   "cat-revenue-growth"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.6,
+   "base_rate_probability": 0.63,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-03-15",
+   "resolution_rule": "YES if FY2026 net sales / FY2025 net sales - 1 >= 11.0%, to one decimal, from the FY2026 Form 10-K XBRL (as first reported; prior year = comparative in the same filing).",
+   "resolution_source": "SEC EDGAR XBRL companyfacts (FY2026 10-K)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'revenue_growth' promises among the other US industrials peers (strict: delivered only, specificity-weighted; n=13). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.63 (leave-one-out peer strict delivery rate, category 'revenue_growth', n=13); SAC -11.5 pts x weight 0.231 (N=6) -> p = 0.60",
+   "sector_adjusted_score": -11.5,
+   "sac_shrink_weight": 0.231,
+   "sac_n_scored": 6,
+   "promise_category": "revenue_growth",
+   "promise_id": "promise:US-LECO:2026-10-27:fy26-sales-growth-low-teens",
+   "peer_set": [
+    "US-WTS",
+    "US-AOS",
+    "US-SSD",
+    "US-LECO"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://www.fool.com/earnings/call-transcripts/2026/10/27/lincoln-electric-leco-q3-2026-earnings-call-transcript/",
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0000059527.json"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:US-LECO:2026-10-27:fy26-sales-growth-low-teens",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:US-LECO:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:us-industrials-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-LECO:fy26-capex-140-150mn-cred",
+  "title": "Paper call: Lincoln Electric FY2026 capital expenditures are within $140-150 mn",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.69 (naive sector base rate 0.71) that: Lincoln Electric FY2026 capital expenditures are within $140-150 mn. Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/US_INDUSTRIALS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.71 (leave-one-out peer strict delivery rate, category 'capacity', all-category fallback, n=4); SAC -11.5 pts x weight 0.231 (N=6) -> p = 0.69. Evidence: Q3-2026 call: capex $140-150 mn, raised from the Feb-2026 $110-130 mn. FY2025 $127.0 mn (XBRL). Q3-2026 capex $41.2 mn. Resolution: YES if FY2026 capital expenditures in the FY2026 Form 10-K XBRL (PaymentsToAcquirePropertyPlantAndEquipment, else PaymentsToAcquireProductiveAssets) are >= $140.0 mn and <= $150.0 mn. Source: SEC EDGAR XBRL companyfacts (FY2026 10-K). Resolve by 2027-03-15; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "US-LECO"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "us",
+   "sector-us-industrials",
+   "industrials",
+   "cat-capacity"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.69,
+   "base_rate_probability": 0.71,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-03-15",
+   "resolution_rule": "YES if FY2026 capital expenditures in the FY2026 Form 10-K XBRL (PaymentsToAcquirePropertyPlantAndEquipment, else PaymentsToAcquireProductiveAssets) are >= $140.0 mn and <= $150.0 mn.",
+   "resolution_source": "SEC EDGAR XBRL companyfacts (FY2026 10-K)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'capacity' promises among the other US industrials peers (strict: delivered only, specificity-weighted; n=4, too few in category so all-category peer rate used). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.71 (leave-one-out peer strict delivery rate, category 'capacity', all-category fallback, n=4); SAC -11.5 pts x weight 0.231 (N=6) -> p = 0.69",
+   "sector_adjusted_score": -11.5,
+   "sac_shrink_weight": 0.231,
+   "sac_n_scored": 6,
+   "promise_category": "capacity",
+   "promise_id": "promise:US-LECO:2026-10-27:fy26-capex-140-150mn",
+   "peer_set": [
+    "US-WTS",
+    "US-AOS",
+    "US-SSD",
+    "US-LECO"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://www.fool.com/earnings/call-transcripts/2026/10/27/lincoln-electric-leco-q3-2026-earnings-call-transcript/",
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0000059527.json"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:US-LECO:2026-10-27:fy26-capex-140-150mn",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:US-LECO:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:us-industrials-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-LECO:fy26-adj-op-margin-above-17-6-cred",
+  "title": "Paper call: Lincoln Electric FY2026 adjusted operating income margin (company-reported) is >=17.7% (above FY2025's 17.6%)",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.89 (naive sector base rate 0.91) that: Lincoln Electric FY2026 adjusted operating income margin (company-reported) is >=17.7% (above FY2025's 17.6%). Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/US_INDUSTRIALS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.91 (leave-one-out peer strict delivery rate, category 'margin', n=11); SAC -11.5 pts x weight 0.231 (N=6) -> p = 0.89. Evidence: Q4-2025 call (12-Feb-2026): 'a modest improvement in our operating margin for the full year'; reiterated Apr-2026. FY2025 adjusted operating income margin 17.6% (Q4-2025 release). Q1-2026 16.9%, Q3-2026 18.0%. Resolution: YES if the FY2026 adjusted operating income margin in Lincoln's Q4-2026 results release (8-K Item 2.02, Ex 99.1) is >= 17.7%, to one decimal. GAAP operating margin is NOT used. Source: Lincoln Electric Q4-2026 8-K Ex 99.1 press release (SEC EDGAR). Resolve by 2027-03-15; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "US-LECO"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "us",
+   "sector-us-industrials",
+   "industrials",
+   "cat-margin"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.89,
+   "base_rate_probability": 0.91,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-03-15",
+   "resolution_rule": "YES if the FY2026 adjusted operating income margin in Lincoln's Q4-2026 results release (8-K Item 2.02, Ex 99.1) is >= 17.7%, to one decimal. GAAP operating margin is NOT used.",
+   "resolution_source": "Lincoln Electric Q4-2026 8-K Ex 99.1 press release (SEC EDGAR)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'margin' promises among the other US industrials peers (strict: delivered only, specificity-weighted; n=11). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.91 (leave-one-out peer strict delivery rate, category 'margin', n=11); SAC -11.5 pts x weight 0.231 (N=6) -> p = 0.89",
+   "sector_adjusted_score": -11.5,
+   "sac_shrink_weight": 0.231,
+   "sac_n_scored": 6,
+   "promise_category": "margin",
+   "promise_id": "promise:US-LECO:2026-02-12:fy26-modest-margin-improvement",
+   "peer_set": [
+    "US-WTS",
+    "US-AOS",
+    "US-SSD",
+    "US-LECO"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://www.fool.com/earnings/call-transcripts/2026/02/12/lincoln-electric-leco-earnings-call-transcript/",
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0000059527.json"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:US-LECO:2026-02-12:fy26-modest-margin-improvement",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:US-LECO:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:us-industrials-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ }
+]
