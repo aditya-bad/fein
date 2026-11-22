@@ -1,0 +1,218 @@
+period_end,period_type,field,value,source
+2025-03-31,BS,advances,234836.39,NSE integrated-filing XBRL
+2025-03-31,BS,deposits,283647.47,NSE integrated-filing XBRL
+2025-03-31,FY,credit_cost_pct,0.38,Q4FY25 call (FY25 38 bps vs 35-40 guided)
+2025-03-31,FY,roa_pct,1.24,Q4FY25 call
+2025-03-31,Q,advances,234836.39,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1429728_30042025075540_WEB.xml
+2025-03-31,Q,casa_ratio_pct,30.23,Q4FY25 call
+2025-03-31,Q,cet1_pct,15.04,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1429728_30042025075540_WEB.xml
+2025-03-31,Q,cost_income_xbrl_pct,56.6884,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1429728_30042025075540_WEB.xml
+2025-03-31,Q,deposits,283647.47,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1429728_30042025075540_WEB.xml
+2025-03-31,Q,employee_cost,783.84,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1429728_30042025075540_WEB.xml
+2025-03-31,Q,eps,4.2,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1429728_30042025075540_WEB.xml
+2025-03-31,Q,eps_diluted,4.16,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1429728_30042025075540_WEB.xml
+2025-03-31,Q,gnpa_pct,1.84,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1429728_30042025075540_WEB.xml
+2025-03-31,Q,interest_earned,6648.36,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1429728_30042025075540_WEB.xml
+2025-03-31,Q,interest_expended,4270.92,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1429728_30042025075540_WEB.xml
+2025-03-31,Q,net_profit,1030.23,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1429728_30042025075540_WEB.xml
+2025-03-31,Q,nii,2377.44,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1429728_30042025075540_WEB.xml
+2025-03-31,Q,nnpa_pct,0.44,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1429728_30042025075540_WEB.xml
+2025-03-31,Q,opex,1917.99,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1429728_30042025075540_WEB.xml
+2025-03-31,Q,other_income,1005.95,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1429728_30042025075540_WEB.xml
+2025-03-31,Q,prov_to_adv_pct,0.2352,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1429728_30042025075540_WEB.xml
+2025-03-31,Q,provisions,138.11,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1429728_30042025075540_WEB.xml
+2025-03-31,Q,roa_pct,1.24,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1429728_30042025075540_WEB.xml
+2025-06-30,Q,casa_ratio_pct,30.35,Q1FY26 call
+2025-06-30,Q,cet1_pct,14.69,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1501115_02082025053015_WEB.xml
+2025-06-30,Q,cost_income_pct,54.89,FBL investor presentation Q4FY26 slide 6
+2025-06-30,Q,cost_income_xbrl_pct,54.8877,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1501115_02082025053015_WEB.xml
+2025-06-30,Q,credit_cost_pct,0.65,FBL investor presentation Q4FY26 slide 6
+2025-06-30,Q,employee_cost,797.61,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1501115_02082025053015_WEB.xml
+2025-06-30,Q,eps,3.51,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1501115_02082025053015_WEB.xml
+2025-06-30,Q,eps_diluted,3.47,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1501115_02082025053015_WEB.xml
+2025-06-30,Q,gnpa_pct,1.91,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1501115_02082025053015_WEB.xml
+2025-06-30,Q,interest_earned,6686.63,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1501115_02082025053015_WEB.xml
+2025-06-30,Q,interest_expended,4349.8,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1501115_02082025053015_WEB.xml
+2025-06-30,Q,net_profit,861.75,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1501115_02082025053015_WEB.xml
+2025-06-30,Q,nii,2336.83,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1501115_02082025053015_WEB.xml
+2025-06-30,Q,nim_pct,2.94,"Q1FY26 call (Venkatraman V, 2-Aug-2025)"
+2025-06-30,Q,nnpa_pct,0.48,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1501115_02082025053015_WEB.xml
+2025-06-30,Q,opex,1893.52,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1501115_02082025053015_WEB.xml
+2025-06-30,Q,other_income,1112.98,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1501115_02082025053015_WEB.xml
+2025-06-30,Q,provisions,400.16,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1501115_02082025053015_WEB.xml
+2025-06-30,Q,roa_pct,1.0,"Q4FY26 call: ""Q1 it was 1% ROA"""
+2025-09-30,BS,advances,244657.06,NSE integrated-filing XBRL
+2025-09-30,BS,deposits,288919.58,NSE integrated-filing XBRL
+2025-09-30,Q,advances,244657.06,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1554019_19102025103142_WEB.xml
+2025-09-30,Q,casa,89591,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-09-30,Q,casa_ratio_pct,31.01,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-09-30,Q,cet1_pct,14.37,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1554019_19102025103142_WEB.xml
+2025-09-30,Q,cod_pct,5.57,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-09-30,Q,cof_pct,5.61,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-09-30,Q,cost_income_pct,54.04,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-09-30,Q,cost_income_xbrl_pct,54.0402,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1554019_19102025103142_WEB.xml
+2025-09-30,Q,credit_cost_pct,0.5,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-09-30,Q,deposits,288919.58,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1554019_19102025103142_WEB.xml
+2025-09-30,Q,employee_cost,803.44,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1554019_19102025103142_WEB.xml
+2025-09-30,Q,eps,3.89,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1554019_19102025103142_WEB.xml
+2025-09-30,Q,eps_diluted,3.85,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1554019_19102025103142_WEB.xml
+2025-09-30,Q,fee_income,886,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-09-30,Q,gnpa_pct,1.83,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-09-30,Q,interest_earned,6742.16,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1554019_19102025103142_WEB.xml
+2025-09-30,Q,interest_expended,4246.92,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1554019_19102025103142_WEB.xml
+2025-09-30,Q,net_profit,955.26,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1554019_19102025103142_WEB.xml
+2025-09-30,Q,nii,2495.24,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1554019_19102025103142_WEB.xml
+2025-09-30,Q,nim_pct,3.06,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-09-30,Q,nnpa_pct,0.48,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-09-30,Q,opex,1933.24,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1554019_19102025103142_WEB.xml
+2025-09-30,Q,other_income,1082.17,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1554019_19102025103142_WEB.xml
+2025-09-30,Q,pcr_pct,73.45,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-09-30,Q,prov_to_adv_pct,0.5936,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1554019_19102025103142_WEB.xml
+2025-09-30,Q,provisions,363.09,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1554019_19102025103142_WEB.xml
+2025-09-30,Q,roa_pct,1.09,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-09-30,Q,roe_pct,11.01,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-09-30,Q,slippage_pct,0.94,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-09-30,Q,yield_advances_pct,8.99,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-12-31,Q,casa,95498,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-12-31,Q,casa_ratio_pct,32.07,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-12-31,Q,cet1_pct,13.89,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1602764_16012026063804_WEB.xml
+2025-12-31,Q,cod_pct,5.48,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-12-31,Q,cof_pct,5.5,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-12-31,Q,cost_income_pct,53.92,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-12-31,Q,cost_income_xbrl_pct,53.9216,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1602764_16012026063804_WEB.xml
+2025-12-31,Q,credit_cost_pct,0.47,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-12-31,Q,deposits,297796,FBL investor presentation Q2FY27 slide 12
+2025-12-31,Q,employee_cost,848.65,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1602764_16012026063804_WEB.xml
+2025-12-31,Q,eps,4.23,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1602764_16012026063804_WEB.xml
+2025-12-31,Q,eps_diluted,4.19,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1602764_16012026063804_WEB.xml
+2025-12-31,Q,fee_income,896,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-12-31,Q,gnpa_pct,1.72,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-12-31,Q,interest_earned,6867.5,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1602764_16012026063804_WEB.xml
+2025-12-31,Q,interest_expended,4214.77,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1602764_16012026063804_WEB.xml
+2025-12-31,Q,net_profit,1041.21,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1602764_16012026063804_WEB.xml
+2025-12-31,Q,nii,2652.73,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1602764_16012026063804_WEB.xml
+2025-12-31,Q,nim_pct,3.18,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-12-31,Q,nnpa_pct,0.42,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-12-31,Q,opex,2023.69,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1602764_16012026063804_WEB.xml
+2025-12-31,Q,other_income,1100.29,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1602764_16012026063804_WEB.xml
+2025-12-31,Q,pcr_pct,75.14,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-12-31,Q,provisions,332.38,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1602764_16012026063804_WEB.xml
+2025-12-31,Q,roa_pct,1.15,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-12-31,Q,roe_pct,11.68,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-12-31,Q,slippage_pct,0.7,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2025-12-31,Q,yield_advances_pct,8.85,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-03-31,BS,advances,264594.37,NSE integrated-filing XBRL
+2026-03-31,BS,advances,264594.37,NSE integrated-filing XBRL
+2026-03-31,BS,deposits,313909.39,NSE integrated-filing XBRL
+2026-03-31,BS,deposits,313909.39,NSE integrated-filing XBRL
+2026-03-31,FY,cost_income_pct,53.9,FBL Q4FY26 deck: FY26 C/I excl one-off (reported 52.27)
+2026-03-31,FY,credit_cost_pct,0.54,FBL Q4FY26 deck: FY26 credit cost excl one-off (reported 0.73)
+2026-03-31,FY,nim_pct,3.1,FBL Q4FY26 deck slide 4: FY26 NIM excl one-off (reported 3.24)
+2026-03-31,FY,roa_pct,1.12,FBL Q4FY26 deck: FY26 RoA excl one-off (reported 1.15)
+2026-03-31,FY,roe_pct,11.17,FBL Q4FY26 deck: FY26 RoE excl one-off (reported 11.47)
+2026-03-31,Q,advances,264594.37,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1691762_13072026070423_WEB.xml
+2026-03-31,Q,advances,264594.37,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1661431_29042026070229_WEB.xml
+2026-03-31,Q,casa,103390,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-03-31,Q,casa_ratio_pct,32.94,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-03-31,Q,cet1_pct,15.93,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1691762_13072026070423_WEB.xml
+2026-03-31,Q,cet1_pct,15.93,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1661431_29042026070229_WEB.xml
+2026-03-31,Q,cod_pct,5.43,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-03-31,Q,cof_pct,5.46,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-03-31,Q,cost_income_pct,52.86,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-03-31,Q,cost_income_xbrl_pct,47.2755,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1691762_13072026070423_WEB.xml
+2026-03-31,Q,cost_income_xbrl_pct,47.2755,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1661431_29042026070229_WEB.xml
+2026-03-31,Q,credit_cost_pct,0.47,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-03-31,Q,deposits,313909.39,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1691762_13072026070423_WEB.xml
+2026-03-31,Q,deposits,313909.39,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1661431_29042026070229_WEB.xml
+2026-03-31,Q,employee_cost,775.7,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1691762_13072026070423_WEB.xml
+2026-03-31,Q,employee_cost,775.7,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1661431_29042026070229_WEB.xml
+2026-03-31,Q,eps,5.11,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1691762_13072026070423_WEB.xml
+2026-03-31,Q,eps,5.11,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1661431_29042026070229_WEB.xml
+2026-03-31,Q,eps_diluted,5.05,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1691762_13072026070423_WEB.xml
+2026-03-31,Q,eps_diluted,5.05,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1661431_29042026070229_WEB.xml
+2026-03-31,Q,fee_income,991,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-03-31,Q,gnpa_pct,1.62,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-03-31,Q,interest_earned,7399.09,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1691762_13072026070423_WEB.xml
+2026-03-31,Q,interest_earned,7399.09,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1661431_29042026070229_WEB.xml
+2026-03-31,Q,interest_expended,4226.48,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1691762_13072026070423_WEB.xml
+2026-03-31,Q,interest_expended,4226.48,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1661431_29042026070229_WEB.xml
+2026-03-31,Q,net_profit,1259.1,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1691762_13072026070423_WEB.xml
+2026-03-31,Q,net_profit,1259.1,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1661431_29042026070229_WEB.xml
+2026-03-31,Q,nii,3172.61,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1691762_13072026070423_WEB.xml
+2026-03-31,Q,nii,3172.61,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1661431_29042026070229_WEB.xml
+2026-03-31,Q,nim_pct,3.2,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-03-31,Q,nnpa_pct,0.2,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-03-31,Q,opex,2041.15,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1691762_13072026070423_WEB.xml
+2026-03-31,Q,opex,2041.15,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1661431_29042026070229_WEB.xml
+2026-03-31,Q,other_income,1144.95,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1691762_13072026070423_WEB.xml
+2026-03-31,Q,other_income,1144.95,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1661431_29042026070229_WEB.xml
+2026-03-31,Q,pcr_pct,87.07,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-03-31,Q,prov_to_adv_pct,1.1203,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1691762_13072026070423_WEB.xml
+2026-03-31,Q,prov_to_adv_pct,1.1203,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1661431_29042026070229_WEB.xml
+2026-03-31,Q,provisions,741.04,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1691762_13072026070423_WEB.xml
+2026-03-31,Q,provisions,741.04,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1661431_29042026070229_WEB.xml
+2026-03-31,Q,roa_pct,1.24,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-03-31,Q,roe_pct,12.47,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-03-31,Q,slippage_pct,0.74,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-03-31,Q,yield_advances_pct,8.77,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-06-30,Q,advances,277498,FBL investor presentation Q2FY27 slide 30 (Q1 integrated filing has no balance sheet)
+2026-06-30,Q,casa,103163,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-06-30,Q,casa_ratio_pct,32.23,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-06-30,Q,cet1_pct,15.89,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1695498_17072026054408_WEB.xml
+2026-06-30,Q,cod_pct,5.21,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-06-30,Q,cof_pct,5.25,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-06-30,Q,cost_income_pct,52.5,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-06-30,Q,cost_income_xbrl_pct,52.4987,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1695498_17072026054408_WEB.xml
+2026-06-30,Q,credit_cost_pct,0.41,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-06-30,Q,deposits,320118,FBL investor presentation Q2FY27 slide 30
+2026-06-30,Q,employee_cost,921.69,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1695498_17072026054408_WEB.xml
+2026-06-30,Q,eps,4.77,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1695498_17072026054408_WEB.xml
+2026-06-30,Q,eps_diluted,4.6,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1695498_17072026054408_WEB.xml
+2026-06-30,Q,fee_income,957,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-06-30,Q,gnpa_pct,1.52,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-06-30,Q,interest_earned,7238.31,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1695498_17072026054408_WEB.xml
+2026-06-30,Q,interest_expended,4292.42,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1695498_17072026054408_WEB.xml
+2026-06-30,Q,net_profit,1176.93,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1695498_17072026054408_WEB.xml
+2026-06-30,Q,nii,2945.89,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1695498_17072026054408_WEB.xml
+2026-06-30,Q,nim_pct,3.33,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-06-30,Q,nnpa_pct,0.18,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-06-30,Q,opex,2096.94,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1695498_17072026054408_WEB.xml
+2026-06-30,Q,other_income,1048.38,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1695498_17072026054408_WEB.xml
+2026-06-30,Q,pcr_pct,87.37,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-06-30,Q,provisions,317.71,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1695498_17072026054408_WEB.xml
+2026-06-30,Q,roa_pct,1.22,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-06-30,Q,roe_pct,12.01,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-06-30,Q,slippage_pct,0.61,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-06-30,Q,yield_advances_pct,8.73,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-09-30,BS,advances,298225.64,NSE integrated-filing XBRL
+2026-09-30,BS,deposits,342693.56,NSE integrated-filing XBRL
+2026-09-30,Q,advances,298225.64,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml
+2026-09-30,Q,casa,109803,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-09-30,Q,casa_ratio_pct,32.04,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-09-30,Q,cet1_pct,15.76,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml
+2026-09-30,Q,cod_pct,5.18,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-09-30,Q,cof_pct,5.21,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-09-30,Q,cost_income_pct,52.08,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-09-30,Q,cost_income_xbrl_pct,52.0791,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml
+2026-09-30,Q,credit_cost_pct,0.31,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-09-30,Q,deposits,342693.56,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml
+2026-09-30,Q,employee_cost,1049.12,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml
+2026-09-30,Q,eps,5.61,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml
+2026-09-30,Q,eps_diluted,5.38,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml
+2026-09-30,Q,fee_income,1168,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-09-30,Q,gnpa_pct,1.32,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-09-30,Q,interest_earned,7720.98,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml
+2026-09-30,Q,interest_expended,4567.58,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml
+2026-09-30,Q,net_profit,1386.09,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml
+2026-09-30,Q,nii,3153.4,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml
+2026-09-30,Q,nim_pct,3.32,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-09-30,Q,nnpa_pct,0.17,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-09-30,Q,opex,2418.47,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml
+2026-09-30,Q,other_income,1490.44,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml
+2026-09-30,Q,pcr_pct,86.78,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-09-30,Q,prov_to_adv_pct,0.459,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml
+2026-09-30,Q,provisions,342.19,NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml
+2026-09-30,Q,roa_pct,1.32,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-09-30,Q,roe_pct,13.57,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-09-30,Q,slippage_pct,0.59,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"
+2026-09-30,Q,yield_advances_pct,8.7,"FBL investor presentation Q2FY27 (16-Oct-2026), slides 4-12"

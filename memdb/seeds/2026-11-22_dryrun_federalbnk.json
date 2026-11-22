@@ -1,0 +1,422 @@
+[
+ {
+  "type": "analysis",
+  "id": "analysis:federalbnk-dryrun-stages2-6-2026-11",
+  "title": "Federal Bank end-to-end dry run of stages 2-6 (first lender) - method test, NO verdict, practice card not on the scoreboard",
+  "body": "PRACTICE run (L9, L21) of the stock-selection machine on an Indian private bank to find what breaks. No buy/sell/watchlist verdict and none should be inferred. Research, not advice. Stage 2: all 9 hard rules PASS in bank form (no RBI divergence above threshold FY24-25; unmodified FY26 audit; May-2026 auditor change = RBI rotation; ratings CARE AA+/IND AA+/CRISIL AAA FD/S&P BBB- first rating; no promoter, AS-18 lending only to the 60.6% subsidiary Fedbank Financial). Graded flags fired: funding concentration (Kerala 58.8% of deposits per Ind-Ra; NR deposits 34.7%; FCNR(B) +239% via the 2026 special window; granular share 85%->81% in a quarter) and fraud value (Rs 207 cr FY26 vs 79 cr). Stage 3: Q2 FY27 SUE +2.91 -> provisional quintile 5 (not a buy reason, L19). Promise tracker on 6 calls: 29 promises, 9 resolved, MCS +0.93 but unusable (no bank peer base, conservative guidance; 3 unacknowledged goalpost changes: C/I ceiling 53.5->55->56%, CASA 36% '3 years' -> 'at some point'). Stage 4: good-but-misleading numbers dominate: retail +18% YoY is +4% ex Rs 9,438 cr FCNR-backed loans; GNPA 1.32% 'decadal low' with Q2 write-offs Rs 498 cr > slippage Rs 420 cr (~1.49% without); PCR 87% partly a buffer funded by Rs 456 cr IT-refund interest (76.6% excl); ROE 13.6% undiluted vs ~10% on book diluted for Blackstone's 27.3 cr warrants at Rs 227. Cost lines (Schedule 16 FY26, Rs cr): staff 3,225 (IBA bipartite applies; next settlement due Nov-2027), other 3,069 incl service charges 1,019 and card networks 510, DICGC ~380 (cross-foots 12 paise per Rs 100 of deposits), rent 354; PSL-shortfall deposits Rs 5,298 cr drag ~6 bps NIM [EST]. Per outlet: deposits Rs 206 cr, CASA 66 cr, opex 4.9 cr, PAT 2.5 cr [EST]. Stage 5 (new bank mode): price Rs 373.5 (20-Nov-2026), P/B 2.24x fully diluted (2.33x undiluted) needs ROE 21.8% forever at CoE 12.5%; implied CoE at today's diluted ROE ~7.3%; base-case IRR 10.0% vs 12% hurdle; P/B 1.63x own 10-yr median (1.38x) and 1.51x mid-size peer median -> HOT. Stage 6 practice card: size 0 (11 open soft flags without a variant view; EV 1.36x vs hurdle 1.76x).",
+  "tickers": [
+   "FEDERALBNK",
+   "KARURVYSYA",
+   "CUB",
+   "SOUTHBANK",
+   "AUBANK",
+   "IDFCFIRSTB",
+   "RBLBANK",
+   "BANDHANBNK",
+   "INDUSINDBK"
+  ],
+  "tags": [
+   "practice",
+   "method-test",
+   "dry-run",
+   "deep-dive",
+   "india",
+   "banks",
+   "sector-private-banks",
+   "stage-2",
+   "stage-3",
+   "stage-4",
+   "stage-5",
+   "stage-6",
+   "no-verdict"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "verdict": null,
+   "purpose": "end-to-end dry run #1 on a lender (stages 2-6)",
+   "price": 373.5,
+   "price_date": "2026-11-20",
+   "bvps_undiluted": 160.44,
+   "bvps_diluted": 167.06,
+   "pb_diluted": 2.24,
+   "pb_own_median_10y": 1.38,
+   "pb_peer_median": 1.48,
+   "roe_needed_forever_coe12p5": 0.218,
+   "coe_implied_at_current_roe": 0.073,
+   "irr_base": 0.1,
+   "q2fy27": {
+    "nim_pct": 3.32,
+    "cod_pct": 5.18,
+    "yield_adv_pct": 8.7,
+    "cost_income_pct": 52.08,
+    "credit_cost_pct": 0.31,
+    "gnpa_pct": 1.32,
+    "nnpa_pct": 0.17,
+    "pcr_pct": 86.78,
+    "casa_ratio_pct": 32.04,
+    "cet1_pct": 15.76,
+    "roa_pct": 1.32,
+    "roe_pct": 13.57,
+    "pat_cr": 1386,
+    "write_offs_cr": 498,
+    "fresh_slippage_cr": 420,
+    "fcnr_backed_loans_cr": 9438,
+    "fcnr_window_mobilised_cr": 14922
+   },
+   "fy26_opex_cr": {
+    "employees": 3225,
+    "other": 3069,
+    "insurance_dicgc": 380,
+    "rent": 354,
+    "depreciation": 282,
+    "postage_telecom": 253,
+    "total": 7892
+   },
+   "psl_shortfall_deposits_cr": {
+    "FY25": 8457,
+    "FY26": 5298
+   },
+   "outlets": {
+    "Mar-26": 1640,
+    "Sep-26": 1662
+   },
+   "employees": {
+    "FY25": 16111,
+    "FY26": 17681
+   },
+   "kerala_deposit_share_pct": 58.8,
+   "nr_deposit_share_pct": 34.7,
+   "sue_q2fy27": 2.91,
+   "pead_quintile": 5,
+   "promise_tracker": {
+    "calls": 6,
+    "promises": 29,
+    "resolved": 9,
+    "mcs": 0.93,
+    "usable": false,
+    "goalpost_flags": 3
+   },
+   "warrants": {
+    "count_cr": 27.297,
+    "price": 227,
+    "paid_cr": 1549,
+    "due_cr": 4647
+   },
+   "card_rule_output": "size 0 (practice)",
+   "open_soft_flags": 11,
+   "tools_fixed": 19
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/FEDERALBNK_16102026132852_FBL_Investor_Presentation_Q2.pdf",
+   "https://nsearchives.nseindia.in/corporate/FEDERALBNK_16102026133228_FBL_Press_Release_Q2.pdf",
+   "https://nsearchives.nseindia.in/corporate/FEDERALBNK_30072026210213_FBL_Notice_of_AGMAR_FY_25-26_S.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/FEDERALBNK_22092026155208_FBL_India_Ratings_220926_S.pdf",
+   "https://nsearchives.nseindia.in/corporate/FEDERALBNK_27102025204523_FBL_EGM_Notice_271025_S.pdf",
+   "https://www.federal.bank.in/financial-result",
+   "https://www.screener.in/company/FEDERALBNK/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "strategy:deep-dive-protocol",
+    "rel": "applies"
+   },
+   {
+    "to": "analysis:cumminsind-deep-dive-practice-2026-11",
+    "rel": "follows"
+   },
+   {
+    "to": "theme:sector-private-banks",
+    "rel": "sector"
+   },
+   {
+    "to": "insight:lender-blowup-signals",
+    "rel": "applies"
+   },
+   {
+    "to": "decision:adopt-disqualifiers-v2",
+    "rel": "applies"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:bank-valuation-pb-roe-implied-coe",
+  "title": "Banks: value on P/B vs ROE with dilution first; read the implied cost of equity, not 'RIM value -50%'",
+  "body": "A lender's revenue/EBIT/FCF/ROIIC are meaningless, so stage 5 needs P/B-ROE. Justified P/B = (ROE-g)/(CoE-g); the ROE the price needs forever = g + P/B x (CoE-g); the CoE the market is using = g + (ROE-g)/P/B. At an Indian 12.5% CoE, a bank at 2.24x diluted book needs ~22% ROE forever (FEDERALBNK, 20-Nov-2026), and the implied CoE at its ~10% diluted ROE is ~7%. As with P/E names (L21), the strict CoE makes the residual-income value look 50% below price; the useful outputs are the implied CoE, the base-case IRR vs the hurdle, and P/B vs its own 10-yr band. Always put pending warrants/QIPs into book and share count first: undiluted P/B and ROE flatter the bank. Tool: tools/valuation/bank.py ('mode': 'bank').",
+  "tickers": [
+   "FEDERALBNK"
+  ],
+  "tags": [
+   "process",
+   "method-gap",
+   "dry-run",
+   "banks",
+   "india",
+   "valuation",
+   "stage-5",
+   "technique"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "pb_diluted": 2.24,
+   "roe_needed": 0.218,
+   "implied_coe": 0.073,
+   "tool": "tools/valuation/bank.py"
+  },
+  "sources": [
+   "research_notes/Deep dives/FEDERALBNK_dryrun.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "analysis:federalbnk-dryrun-stages2-6-2026-11",
+    "rel": "from"
+   },
+   {
+    "to": "insight:twin-engine",
+    "rel": "extends"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:bank-good-but-misleading-checks",
+  "title": "Banks: re-derive the 'good' numbers - growth ex special funding windows, GNPA ex write-offs, PCR ex windfall buffers",
+  "body": "At Federal Bank (Q2 FY27) the headline numbers misled more than the ugly ones (10 vs 6 rows). Checks that should run on every lender: (1) growth ex special funding windows - Rs 9,438 cr loans against FCNR deposits turned +4% core retail growth into +18%; (2) the NPA walk - write-offs Rs 498 cr exceeded fresh slippage Rs 420 cr, so a 'decadal low' GNPA of 1.32% was ~1.49% before write-offs; (3) coverage bought with a windfall - a Rs 456 cr tax-refund interest gain funded a buffer that lifted PCR from 76.6% to 87%; (4) period-end vs average balances - period-end CASA 7.9% above average; (5) ROE on diluted book; (6) rate-cycle NIM (EBLR share x repo move) vs franchise NIM. Rating agencies and companies define credit cost and top-20 concentration differently; copy the definition.",
+  "tickers": [
+   "FEDERALBNK"
+  ],
+  "tags": [
+   "process",
+   "method-gap",
+   "dry-run",
+   "banks",
+   "india",
+   "redflag",
+   "flag-judgment",
+   "stage-4",
+   "technique"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "core_retail_growth_pct": 4,
+   "headline_retail_growth_pct": 18,
+   "gnpa_ex_writeoff_pct_est": 1.49,
+   "pcr_excl_one_off": 76.55
+  },
+  "sources": [
+   "research_notes/Deep dives/FEDERALBNK_dryrun.md"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "analysis:federalbnk-dryrun-stages2-6-2026-11",
+    "rel": "from"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:bank-cost-lines-physical",
+  "title": "Bank cost lines in physical terms: IBA wage settlement, DICGC premium, CRR and PSL-shortfall deposits are dated, public micro-drivers",
+  "body": "Security-guard depth for a bank: (a) staff cost = headcount x IBA bipartite scale where the settlement applies (Federal Bank's AR cites the Bipartite provisions; staff Rs 3,225 cr FY26 = 21% of income; the next settlement after Oct-2027 is a dated step - at ~17% on ~60% of staff cost it would be ~5% of PAT [EST]); (b) deposit insurance = ~12 paise per Rs 100 of assessable deposits (Rs 380 cr / 0.0012 = Rs 3.2 lakh cr, cross-foots deposits); (c) CRR = NDTL x CRR% idle; (d) PSL-shortfall deposits (RIDF/NABARD/SIDBI) earn far below loan yield - Rs 5,298 cr at FBL ~6 bps NIM [EST]; (e) card-network and outsourcing service charges scale with volumes (Rs 510 cr and Rs 1,019 cr). None of these was asked on six earnings calls.",
+  "tickers": [
+   "FEDERALBNK"
+  ],
+  "tags": [
+   "process",
+   "method-gap",
+   "dry-run",
+   "banks",
+   "india",
+   "cost-drivers",
+   "stage-4",
+   "technique"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "staff_cr": 3225,
+   "dicgc_cr": 380,
+   "psl_shortfall_cr": 5298,
+   "card_network_cr": 510,
+   "service_charges_cr": 1019
+  },
+  "sources": [
+   "research_notes/Deep dives/FEDERALBNK_dryrun.md"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "analysis:federalbnk-dryrun-stages2-6-2026-11",
+    "rel": "from"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:promise-tracker-bank-gaps",
+  "title": "Promise tracker on banks: cover-letter transcripts, bank KPI vocabulary, bps parsing, ceiling-based goalposts and conservative-guidance bias",
+  "body": "Dry run on FEDERALBNK found: (1) NSE carries only cover letters for many bank transcripts (website copies needed; fetch.py now flags them and takes --local PDF@DATE); (2) v1 had no bank measures and mapped 'net interest margin 3.2%' to finance cost (a false miss) - 20 bank measures added, scored from bank_kpis.py (NSE integrated-filing XBRL + deck KPIs) because screener's bank page lacks NIM/CASA/credit cost; (3) a pre-existing parser bug read '18-20%' as -20% (affected SKIPPER pending targets); (4) goalpost logic compared floors, missing a raised ceiling on lower-is-better metrics (C/I 53.5->55->56%) and 'by FY28' -> 'at some point'; (5) pending originals were pre-judged moved-goalpost; (6) bank guidance is conservative (NIM guided -5-10 bps, delivered +12), so MCS +0.93 rewards sandbagging: add a guidance-bias metric and a bank peer base before using it (L18); (7) management cited 'guidance we gave' that is in no earlier transcript - date promises from the first traceable statement.",
+  "tickers": [
+   "FEDERALBNK"
+  ],
+  "tags": [
+   "process",
+   "method-gap",
+   "dry-run",
+   "banks",
+   "india",
+   "promise-tracker",
+   "stage-3",
+   "tool"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "calls": 6,
+   "promises": 29,
+   "resolved": 9,
+   "mcs": 0.93,
+   "fixes": [
+    "cover-letter",
+    "quarter-lag",
+    "bank-measures",
+    "range-parse",
+    "ceiling-goalpost",
+    "pending-goalpost",
+    "bank_kpis.py",
+    "candour-slippage"
+   ]
+  },
+  "sources": [
+   "research_notes/Deep dives/FEDERALBNK_dryrun.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "analysis:federalbnk-dryrun-stages2-6-2026-11",
+    "rel": "from"
+   },
+   {
+    "to": "insight:td-epc-promise-credibility-base-rate",
+    "rel": "related"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:stage2-bank-form-checklist",
+  "title": "Stage 2 for lenders: run disqualifiers v2 in bank form (divergence note, AS-18 connected lending, frauds note, CET1/leverage, funding concentration, quarter-end vs average)",
+  "body": "v2 hard rules are written for operating companies (fake cash, debtor days). For a bank the same intent maps to: H1a audited cash/RBI balances and investment marks; H1b NIM/RoA/C-I inside the peer band with one-offs traced to external documents; H2 rotation vs resignation (RBI mandates rotation); H5 AS-18 connected lending; exit triggers = the AR 'Divergence in asset classification and provisioning' note, restatement, late results; graded = funding concentration (state, NRI, top-20 depositors, bulk share), fraud-note trend, solvency (CET1 vs floor, leverage ratio, LCR, CD ratio). Use BSE as well as NSE Reg-30 lists (BSE showed a GST order the NSE description hid). Federal Bank: 9/9 hard pass, 2 graded flags fired.",
+  "tickers": [
+   "FEDERALBNK"
+  ],
+  "tags": [
+   "process",
+   "method-gap",
+   "dry-run",
+   "banks",
+   "india",
+   "stage-2",
+   "hard-filters",
+   "checklist"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "hard_pass": 9,
+   "graded_fired": 2
+  },
+  "sources": [
+   "research_notes/Deep dives/FEDERALBNK_dryrun.md"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "analysis:federalbnk-dryrun-stages2-6-2026-11",
+    "rel": "from"
+   },
+   {
+    "to": "insight:lender-blowup-signals",
+    "rel": "extends"
+   },
+   {
+    "to": "decision:adopt-disqualifiers-v2",
+    "rel": "applies"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:pead-bank-eps-caveat",
+  "title": "PEAD on banks: reported EPS mixes treasury gains, provision buffers and subsidiary profits - check SUE on core earnings before acting on a quintile",
+  "body": "Federal Bank's SUE path (Q2 FY26 -1.11 quintile 1 -> Q2 FY27 +2.91 quintile 5) used reported consolidated EPS, which includes treasury income (Rs 238 cr in Q2 FY27 vs Rs 12-126 cr in prior quarters), one-offs (Rs 456 cr IT-refund interest in Q4 FY26, offset by a buffer provision) and a 60.6%-owned NBFC. The quintile happened to be robust (normalised EPS still a large beat), but for lenders the avoid-leg rule (L19) should be confirmed on (PPOP - normal credit cost) per share before it blocks a card. Untested: whether bank PEAD behaves like the full-sample result.",
+  "tickers": [
+   "FEDERALBNK"
+  ],
+  "tags": [
+   "process",
+   "method-gap",
+   "dry-run",
+   "banks",
+   "india",
+   "pead",
+   "stage-3",
+   "caveat"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "sue_q2fy27": 2.91,
+   "quintile": 5,
+   "treasury_q2fy27_cr": 238
+  },
+  "sources": [
+   "research_notes/Deep dives/FEDERALBNK_dryrun.md"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "analysis:federalbnk-dryrun-stages2-6-2026-11",
+    "rel": "from"
+   },
+   {
+    "to": "insight:bt-india-pead-v2-2026-oos",
+    "rel": "caveat"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:bank-base-rate-class-missing",
+  "title": "Stage 6 gap: no base-rate class for banks; build Nifty Bank / Bankex 5-yr outcome distributions including failures",
+  "body": "The decision card had to use the all-sector, survivors-only 2020-25 class (P(>=3x) 44%), which is wrong for a 9x-levered large bank (P(>=3x) model 3%). Stage-1 task: 5-year outcome distributions for listed Indian banks from several start dates (2008, 2013, 2016, 2020), including Yes Bank, Lakshmi Vilas, Dhanlaxmi-type episodes and delistings via merger, split by starting P/B band. Until then, card outside-view notes on banks are uninformative.",
+  "tickers": [
+   "FEDERALBNK"
+  ],
+  "tags": [
+   "process",
+   "method-gap",
+   "dry-run",
+   "banks",
+   "india",
+   "base-rates",
+   "stage-6",
+   "stage-1",
+   "todo"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "current_class": "india_survivors_2020_25_mcap_ge400"
+  },
+  "sources": [
+   "research_notes/Deep dives/FEDERALBNK_dryrun.md"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "analysis:federalbnk-dryrun-stages2-6-2026-11",
+    "rel": "from"
+   }
+  ]
+ }
+]

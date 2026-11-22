@@ -130,6 +130,75 @@ def _outcomes(sc, sigma):
     return out
 
 
+def _pe_stage5_lines(lines, wd, wres):
+    """Stage-5 bullet lines for the default (P/E, value-driver DCF) worksheet."""
+    rv, sc, tw, tp = wres["reverse"], wres["scenarios"], wres["twin"], wres["temperature"]
+    bc = wd["base_case"]
+    lines.append("- **Reverse DCF** (CoE %s, TG %s, ROIIC %s): revenue CAGR %s for %d years at a %s→%s NOPAT margin; "
+                 "or year-1 growth %s fading to %s. Base case IRR at today's price: %s."
+                 % (pct(wd["coe"]), pct(wd["terminal_growth"]), pct(wd["roiic"], 0),
+                    pct(rv["g_base_margin"]), wd["years"], pct(wd["nopat_margin"]), pct(bc["margin_end"]),
+                    pct(rv["g_fade_start"]), pct(wd["terminal_growth"]), pct(rv["implied_coe_base"])))
+    if rv.get("path") and rv["path"]["max_reinv_rate"] > 1:
+        lines.append("- Feasibility: the implied path needs reinvestment above 100%% of NOPAT (peak %s) at ROIIC %s."
+                     % (pct(rv["path"]["max_reinv_rate"], 0), pct(wd["roiic"], 0)))
+    if sc.get("pw_value") is not None:
+        lines.append("- **Scenario DCF:** probability-weighted value %s (%s vs price); bear %s (%s)."
+                     % (num(sc["pw_value"], 1), pct(sc["pw_vs_price"], 0), num(sc["bear_value"], 1),
+                        pct(sc["downside_bear"], 0)))
+    if tw:
+        row3 = [r for r in tw["table"] if r["target"] == 3]
+        if row3:
+            cells = "; ".join("exit P/E %s → EPS CAGR %s" % (num(c["exit_pe"]), pct(c["eps_cagr"], 0))
+                              for c in row3[0]["cells"])
+            lines.append("- **Twin engine, 3x in 5 yrs** from P/E %s: %s. Track record: %s %s."
+                         % (num(tw["pe0"]), cells, pct(tw.get("hist_eps_cagr")), tw.get("hist_eps_note", "")))
+    for r in tp["rows"][:1]:
+        lines.append("- **Temperature:** P/E %s; own history: %s; sector: %s%s."
+                     % (num(r["pe"]), r.get("own_band"),
+                        r.get("sector_band", "no peers given"),
+                        (" (%s of sector median)" % mult(r["vs_sector"])) if r.get("vs_sector") else ""))
+    if tp.get("market"):
+        lines.append("- **Market:** %s P/E %s: %s." % (tp["market"]["index"], num(tp["market"]["pe"]),
+                                                       tp["market"]["note"]))
+
+
+def _bank_stage5_lines(wd, wres):
+    """Stage-5 bullet lines for the bank-mode (P/B-ROE, residual income) worksheet (v1.1)."""
+    rv, sc, tw, tp, sn = wres["reverse"], wres["scenarios"], wres["twin"], wres["temperature"], wres["snapshot"]
+    bc = wd["base_case"]
+    out = ["- **Reverse P/B** (CoE %s, g %s): P/B %s fully diluted (%s undiluted) needs ROE **%s forever**; "
+           "today's ROE on diluted book %s means the market is using a CoE of **%s**. Justified P/B on the base "
+           "case's long-run ROE %s: %s. Base-case IRR at today's price: %s."
+           % (pct(wd["coe"]), pct(wd["terminal_growth"]), mult(sn["pb"]), mult(sn["pb_undiluted"]),
+              pct(rv["roe_implied_gordon"]), pct(rv.get("roe_now")), pct(rv.get("coe_implied_at_current_roe")),
+              pct(bc["roe_end"]), mult(rv["justified_pb_base"]), pct(rv["irr_base"]))]
+    if sc.get("pw_value") is not None:
+        out.append("- **Residual-income scenarios:** probability-weighted value %s (%s vs price); bear %s (%s). "
+                   "Exit P/B used vs RIM-consistent P/B at year 5: %s."
+                   % (num(sc["pw_value"], 1), pct(sc["pw_vs_price"], 0), num(sc["bear_value"], 1),
+                      pct(sc["downside_bear"], 0), "; ".join("%s %s vs %s" % (x["name"], mult(x["exit_pb"]), mult(x["rim_pb5"]))
+                                                            for x in sc["scenarios"])))
+    row3 = [r for r in (tw or {}).get("table", []) if r["target"] == 3]
+    if row3:
+        out.append("- **Twin engine on book, 3x in 5 yrs** from P/B %s: %s."
+                   % (mult(tw["pb0"]), "; ".join("exit P/B %s → BVPS CAGR %s" % (mult(c["exit_pb"]), pct(c["bv_cagr"], 0))
+                                                 for c in row3[0]["cells"])))
+    for r in tp["rows"][:1]:
+        out.append("- **Temperature:** P/B %s; own history: %s (%s of own median %s); sector: %s%s. P/E %s."
+                   % (mult(r["pb"]), r.get("own_band"), mult(r.get("vs_own")), mult(tp.get("own_median")),
+                      r.get("sector_band", "no peers given"),
+                      (" (%s of peer median)" % mult(r["vs_sector"])) if r.get("vs_sector") else "", num(tp.get("pe"))))
+    st = wres.get("stress")
+    if st:
+        r2 = [r for r in st["rows"] if abs(r["loss_rate"] - 0.02) < 1e-9]
+        out.append("- **Book stress:** leverage %s; an extra 2%% loan loss (post-tax) is %s of book."
+                   % (mult(st["leverage"]), pct(r2[0]["pct_of_book"], 0) if r2 else "n/a"))
+    if tp.get("market"):
+        out.append("- **Market:** %s P/E %s: %s." % (tp["market"]["index"], num(tp["market"]["pe"]), tp["market"]["note"]))
+    return out
+
+
 # ----------------------------------------------------------------------------- assemble
 
 def build(card, card_path):
@@ -167,33 +236,10 @@ def build(card, card_path):
     rv, sc, tw, tp = wres["reverse"], wres["scenarios"], wres["twin"], wres["temperature"]
     bc = wd["base_case"]
     lines = []
-    lines.append("- **Reverse DCF** (CoE %s, TG %s, ROIIC %s): revenue CAGR %s for %d years at a %s→%s NOPAT margin; "
-                 "or year-1 growth %s fading to %s. Base case IRR at today's price: %s."
-                 % (pct(wd["coe"]), pct(wd["terminal_growth"]), pct(wd["roiic"], 0),
-                    pct(rv["g_base_margin"]), wd["years"], pct(wd["nopat_margin"]), pct(bc["margin_end"]),
-                    pct(rv["g_fade_start"]), pct(wd["terminal_growth"]), pct(rv["implied_coe_base"])))
-    if rv.get("path") and rv["path"]["max_reinv_rate"] > 1:
-        lines.append("- Feasibility: the implied path needs reinvestment above 100%% of NOPAT (peak %s) at ROIIC %s."
-                     % (pct(rv["path"]["max_reinv_rate"], 0), pct(wd["roiic"], 0)))
-    if sc.get("pw_value") is not None:
-        lines.append("- **Scenario DCF:** probability-weighted value %s (%s vs price); bear %s (%s)."
-                     % (num(sc["pw_value"], 1), pct(sc["pw_vs_price"], 0), num(sc["bear_value"], 1),
-                        pct(sc["downside_bear"], 0)))
-    if tw:
-        row3 = [r for r in tw["table"] if r["target"] == 3]
-        if row3:
-            cells = "; ".join("exit P/E %s → EPS CAGR %s" % (num(c["exit_pe"]), pct(c["eps_cagr"], 0))
-                              for c in row3[0]["cells"])
-            lines.append("- **Twin engine, 3x in 5 yrs** from P/E %s: %s. Track record: %s %s."
-                         % (num(tw["pe0"]), cells, pct(tw.get("hist_eps_cagr")), tw.get("hist_eps_note", "")))
-    for r in tp["rows"][:1]:
-        lines.append("- **Temperature:** P/E %s; own history: %s; sector: %s%s."
-                     % (num(r["pe"]), r.get("own_band"),
-                        r.get("sector_band", "no peers given"),
-                        (" (%s of sector median)" % mult(r["vs_sector"])) if r.get("vs_sector") else ""))
-    if tp.get("market"):
-        lines.append("- **Market:** %s P/E %s: %s." % (tp["market"]["index"], num(tp["market"]["pe"]),
-                                                       tp["market"]["note"]))
+    if wres.get("mode") == "bank":   # v1.1 (FEDERALBNK dry run): P/B-ROE / residual-income worksheet
+        lines += _bank_stage5_lines(wd, wres)
+    else:
+        _pe_stage5_lines(lines, wd, wres)
     lines.append("- Full worksheet: `%s` (re-run `python3 tools/valuation/worksheet.py <input>`)."
                  % os.path.relpath(wpath, os.path.join(HERE, "..", "..")))
     F["price_implies"] = "\n".join(lines)
@@ -457,7 +503,7 @@ def build(card, card_path):
                      % ("; PRACTICE EXAMPLE built from test inputs" if practice else "", p,
                         "%.3f" % b if b is not None else "n/a", cls_name, rule,
                         ", ".join("%s %s→%s" % (r["name"], pct(r["prob"], 0), mult(r["mult5"])) for r in sc["scenarios"]),
-                        wd["dispersion"], pct(rv["implied_coe_base"]), head)),
+                        wd["dispersion"], pct(rv.get("implied_coe_base", rv.get("irr_base"))), head)),
             "tickers": [tick], "tags": tags, "date": slug_date, "status": "open",
             "data": {"probability": round(p, 4), "base_rate_probability": b,
                      "base_rate_reasoning": (cls["label"] + ". " + cls["caveats"]) if cls else "no class chosen",

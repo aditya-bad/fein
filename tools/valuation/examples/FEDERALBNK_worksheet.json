@@ -1,0 +1,653 @@
+{
+ "mode": "bank",
+ "input": {
+  "mode": "bank",
+  "company": "The Federal Bank Ltd",
+  "ticker": "FEDERALBNK",
+  "market": "india",
+  "practice": true,
+  "currency": "INR",
+  "units": "INR cr",
+  "as_of": "2026-11-20",
+  "price": 373.5,
+  "shares": 247.27,
+  "book_value": 41222.0,
+  "book_adjustments": [
+   {
+    "name": "Blackstone warrant subscription money (25%) carried in reserves",
+    "amount": 1549
+   }
+  ],
+  "dilution": [
+   {
+    "name": "Asia II Topco XIII (Blackstone) warrants @ Rs 227, 75% still due on exercise by ~2027",
+    "shares": 27.297,
+    "cash_in": 4647.4
+   }
+  ],
+  "base": {
+   "fy": "TTM to Sep-2026",
+   "pat": 4863.0,
+   "pat_normalised": 4645.0,
+   "roe_reported": 0.1357,
+   "dps": 1.2,
+   "pe_trailing": null,
+   "loans": 298226.0,
+   "assets": 426927.0,
+   "net_npa": 492.0,
+   "cet1": 0.1576,
+   "eps": 16.917546536910844
+  },
+  "coe": 0.125,
+  "terminal_growth": 0.05,
+  "hurdle_cagr": 0.12,
+  "years": 10,
+  "dispersion": 0.3,
+  "payout": 0.08,
+  "base_case": {
+   "roe_start": 0.12,
+   "roe_end": 0.14,
+   "exit_pb": 1.8,
+   "name": "base",
+   "payout": 0.08,
+   "prob": 0.0
+  },
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.35,
+    "roe_start": 0.105,
+    "roe_end": 0.11,
+    "exit_pb": 1.3,
+    "payout": 0.08
+   },
+   {
+    "name": "base",
+    "prob": 0.45,
+    "roe_start": 0.12,
+    "roe_end": 0.14,
+    "exit_pb": 1.8,
+    "payout": 0.08
+   },
+   {
+    "name": "bull",
+    "prob": 0.18,
+    "roe_start": 0.135,
+    "roe_end": 0.16,
+    "exit_pb": 2.6,
+    "payout": 0.08
+   }
+  ],
+  "blowup": {
+   "prob": 0.02,
+   "multiple": 0.3,
+   "note": "Gulf-remittance / Kerala deposit shock plus an asset-quality or governance event (RBI action, divergence) at ~10x leverage"
+  },
+  "stress_loss_rates": [
+   0.01,
+   0.02,
+   0.03,
+   0.05
+  ],
+  "pb_history": [
+   {
+    "date": "Mar-2017",
+    "pb": 2.08
+   },
+   {
+    "date": "Mar-2018",
+    "pb": 1.59
+   },
+   {
+    "date": "Mar-2019",
+    "pb": 1.39
+   },
+   {
+    "date": "Mar-2020",
+    "pb": 0.67
+   },
+   {
+    "date": "Mar-2021",
+    "pb": 0.99
+   },
+   {
+    "date": "Mar-2022",
+    "pb": 1.08
+   },
+   {
+    "date": "Mar-2023",
+    "pb": 1.33
+   },
+   {
+    "date": "Mar-2024",
+    "pb": 1.36
+   },
+   {
+    "date": "Mar-2025",
+    "pb": 1.44
+   },
+   {
+    "date": "Mar-2026",
+    "pb": 1.83
+   }
+  ],
+  "sector_pbs": {
+   "KARURVYSYA": 2.37,
+   "CUB": 2.2,
+   "SOUTHBANK": 1.27,
+   "RBLBANK": 1.43,
+   "AUBANK": 3.44,
+   "IDFCFIRSTB": 1.53,
+   "BANDHANBNK": 1.08,
+   "INDUSINDBK": 1.16
+  },
+  "market_pe": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)"
+  },
+  "notes": [
+   "Price Rs 373.5 = NSE close 20-Nov-2026 (Yahoo chart API); screener 'Current Price' Rs 374 and BSE LTP Rs 373.00 on 21/22-Nov agree (3 sources).",
+   "Shares 247.27 cr = paid-up Rs 494.54 cr / FV 2 (NSE integrated-filing XBRL Q2FY27). Book Rs 41,222 cr = capital 495 + reserves 39,178 + share-warrant money 1,549 (deck slide 30; XBRL capital+reserves 41,221.5).",
+   "Dilution: EGM notice 27-Oct-2025: 27,29,74,043 warrants at Rs 227, 25% (Rs 1,549 cr) paid, 75% (Rs 4,647 cr) on exercise within 18 months. Diluted BVPS = (41,222 + 4,647) / 274.57.",
+   "PAT TTM 4,863 = Q3FY26 1,041 + Q4FY26 1,259 + Q1FY27 1,177 + Q2FY27 1,386 (XBRL/screener). Normalised 4,645 [EST]: Q4 excl one-off 1,145 (deck) and Q2 less ~Rs 104 cr post-tax treasury income above a ~Rs 100 cr/qtr run-rate.",
+   "ROE paths are on DILUTED book: H1FY27 annualised normalised PAT ~4,900 / diluted book ~45,900 = ~10.7% if the warrant cash sat idle; RoA 1.32% x leverage 9.3x (post-issue) = ~12.3%. Base 12% -> 14% assumes RoA 1.35-1.45% and gradual deployment [EST].",
+   "pb_history: March-end price (Yahoo monthly) / (equity capital + reserves) per share from screener standalone balance sheets; single-source computation, reserves include revaluation reserves.",
+   "sector_pbs: screener top-ratios price / book value, 21-22 Nov 2026 (single source; peer books not adjusted for pending dilution).",
+   "CoE 12.5% = India default for comparability (L21); an argument exists for 13-14% for a 10x-levered bank - see the sensitivity grid.",
+   "Scenario probabilities and exit P/Bs are illustrative [EST] for the practice run (no verdict)."
+  ],
+  "sources": [
+   "NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml",
+   "FBL investor presentation Q2FY27 (NSE, 16-Oct-2026)",
+   "FBL EGM notice 27-Oct-2025 (NSE)",
+   "screener.in FEDERALBNK standalone (fetched 22-Nov-2026)",
+   "Yahoo Finance chart API FEDERALBNK.NS"
+  ],
+  "_warnings": [
+   "fully diluted: +27.30 cr shares, +4647 cash to be received; BVPS 160.44 -> 167.06"
+  ],
+  "_book_undiluted": 39673.0,
+  "_shares_diluted": 274.567,
+  "_book_diluted": 45869.4,
+  "_bvps_undiluted": 160.4440490152465,
+  "_bvps": 167.06086310445173
+ },
+ "snapshot": {
+  "mcap": 92355.345,
+  "mcap_diluted": 102550.7745,
+  "pb": 2.2357121414276184,
+  "pb_undiluted": 2.327914324603635,
+  "bvps": 167.06086310445173,
+  "bvps_undiluted": 160.4440490152465,
+  "pe": 22.07766942949408,
+  "roe_reported": 0.1357,
+  "ev": null
+ },
+ "reverse": {
+  "pb": 2.2357121414276184,
+  "pb_undiluted": 2.327914324603635,
+  "roe_implied_gordon": 0.21767841060707138,
+  "roe_now": 0.10126576759233824,
+  "coe_implied_at_current_roe": 0.0729303972735964,
+  "roe_implied_10y_then_coe": 0.22446023907988533,
+  "irr_base": 0.10020542629865067,
+  "justified_pb_base": 1.2000000000000002,
+  "base": {
+   "rows": [
+    {
+     "t": 1,
+     "roe": 0.12,
+     "bvps_open": 167.06086310445173,
+     "eps": 20.047303572534208,
+     "dps": 1.6037842858027367,
+     "ri": -0.8353043155222594,
+     "bvps": 185.5043823911832
+    },
+    {
+     "t": 2,
+     "roe": 0.12222222222222222,
+     "bvps_open": 185.5043823911832,
+     "eps": 22.67275784781128,
+     "dps": 1.8138206278249025,
+     "ri": -0.5152899510866208,
+     "bvps": 206.3633196111696
+    },
+    {
+     "t": 3,
+     "roe": 0.12444444444444444,
+     "bvps_open": 206.3633196111696,
+     "eps": 25.680768662723327,
+     "dps": 2.0544614930178664,
+     "ri": -0.11464628867287274,
+     "bvps": 229.98962678087506
+    },
+    {
+     "t": 4,
+     "roe": 0.12666666666666668,
+     "bvps_open": 229.98962678087506,
+     "eps": 29.132019392244175,
+     "dps": 2.330561551379534,
+     "ri": 0.38331604463479424,
+     "bvps": 256.7910846217397
+    },
+    {
+     "t": 5,
+     "roe": 0.1288888888888889,
+     "bvps_open": 256.7910846217397,
+     "eps": 33.09751757346867,
+     "dps": 2.6478014058774937,
+     "ri": 0.9986319957512092,
+     "bvps": 287.2408007893309
+    },
+    {
+     "t": 6,
+     "roe": 0.13111111111111112,
+     "bvps_open": 287.2408007893309,
+     "eps": 37.6604605479345,
+     "dps": 3.01283684383476,
+     "ri": 1.7553604492681365,
+     "bvps": 321.88842449343065
+    },
+    {
+     "t": 7,
+     "roe": 0.13333333333333333,
+     "bvps_open": 321.88842449343065,
+     "eps": 42.918456599124085,
+     "dps": 3.4334765279299266,
+     "ri": 2.682403537445255,
+     "bvps": 361.37340456462476
+    },
+    {
+     "t": 8,
+     "roe": 0.13555555555555557,
+     "bvps_open": 361.37340456462476,
+     "eps": 48.98617261876025,
+     "dps": 3.91889380950082,
+     "ri": 3.814497048182155,
+     "bvps": 406.44068337388416
+    },
+    {
+     "t": 9,
+     "roe": 0.13777777777777778,
+     "bvps_open": 406.44068337388416,
+     "eps": 55.99849415373515,
+     "dps": 4.4798795322988125,
+     "ri": 5.1934087319996305,
+     "bvps": 457.9592979953205
+    },
+    {
+     "t": 10,
+     "roe": 0.14,
+     "bvps_open": 457.9592979953205,
+     "eps": 64.11430171934488,
+     "dps": 5.12914413754759,
+     "ri": 6.869389469929814,
+     "bvps": 516.9444555771179
+    }
+   ],
+   "value_ps": 205.9056729973872,
+   "pv_ri": 7.006599163366372,
+   "tv": 31.838210729569113,
+   "tv_share": 0.15462522360893435,
+   "bvps5": 287.2408007893309,
+   "eps5": 33.09751757346867,
+   "cum_div5": 10.450429363902533,
+   "rim_pb5": 1.2464361801610688,
+   "justified_pb_terminal": 1.2000000000000002
+  }
+ },
+ "scenarios": {
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.35,
+    "roe_start": 0.105,
+    "roe_end": 0.11,
+    "exit_pb": 1.3,
+    "exit_pb_is_rim": false,
+    "rim_pb5": 0.752554394486882,
+    "value_ps": 117.1476143294984,
+    "value_vs_price": -0.6863517688634582,
+    "bvps5": 266.15749804527786,
+    "eps5": 25.97564530165387,
+    "dist_ps_5y": 8.61709869050662,
+    "mult5": 0.949456080721199,
+    "tv_share": -0.2255401690538606,
+    "exit_pe": null,
+    "dcf_pe5": null
+   },
+   {
+    "name": "base",
+    "prob": 0.45,
+    "roe_start": 0.12,
+    "roe_end": 0.14,
+    "exit_pb": 1.8,
+    "exit_pb_is_rim": false,
+    "rim_pb5": 1.2464361801610688,
+    "value_ps": 205.9056729973872,
+    "value_vs_price": -0.4487130575705831,
+    "bvps5": 287.2408007893309,
+    "eps5": 33.09751757346867,
+    "dist_ps_5y": 10.450429363902533,
+    "mult5": 1.412272746411508,
+    "tv_share": 0.15462522360893435,
+    "exit_pe": null,
+    "dcf_pe5": null
+   },
+   {
+    "name": "bull",
+    "prob": 0.18,
+    "roe_start": 0.135,
+    "roe_end": 0.16,
+    "exit_pb": 2.6,
+    "exit_pb_is_rim": false,
+    "rim_pb5": 1.637837975659338,
+    "value_ps": 287.27040785071756,
+    "value_vs_price": -0.23086905528589674,
+    "bvps5": 306.85387110178743,
+    "eps5": 39.522110178343404,
+    "dist_ps_5y": 12.155913738898757,
+    "mult5": 2.1686103844807127,
+    "tv_share": 0.2982709321958713,
+    "exit_pe": null,
+    "dcf_pe5": null
+   }
+  ],
+  "blowup": {
+   "prob": 0.02,
+   "multiple": 0.3,
+   "note": "Gulf-remittance / Kerala deposit shock plus an asset-quality or governance event (RBI action, divergence) at ~10x leverage"
+  },
+  "pw_value": 187.60889127727785,
+  "pw_vs_price": -0.4977004249604341,
+  "bear_value": 117.1476143294984,
+  "downside_bear": -0.6863517688634582,
+  "p_value_below_price": 1.0,
+  "p_ge_3x": 0.02787051793606404,
+  "p_ge_2x": 0.16679629569671808,
+  "p_ge_5x": 0.0004881335064614556,
+  "p_le_half": 0.02581716623248785,
+  "p_blowup": 0.02,
+  "ev_mult5": 1.3641822333441265,
+  "ev_cagr5": 0.06408048359068075,
+  "median_mult5": 1.2965843924768694,
+  "hurdle_mult5": 1.7623416832000007
+ },
+ "twin": {
+  "pb0": 2.2357121414276184,
+  "exit_pbs": [
+   1.34,
+   1.38,
+   1.79,
+   2.24
+  ],
+  "table": [
+   {
+    "target": 2,
+    "cells": [
+     {
+      "exit_pb": 1.34,
+      "bv_cagr": 0.2725305475458337,
+      "rerating_share": -0.7385014456066761
+     },
+     {
+      "exit_pb": 1.38,
+      "bv_cagr": 0.26506651021584093,
+      "rerating_share": -0.6960661792862796
+     },
+     {
+      "exit_pb": 1.79,
+      "bv_cagr": 0.20093242260230837,
+      "rerating_share": -0.3207748588001922
+     },
+     {
+      "exit_pb": 2.24,
+      "bv_cagr": 0.1482582450154628,
+      "rerating_share": 0.0027642859931556662
+     }
+    ]
+   },
+   {
+    "target": 3,
+    "cells": [
+     {
+      "exit_pb": 1.34,
+      "bv_cagr": 0.38002345680020766,
+      "rerating_share": -0.46594253508878514
+     },
+     {
+      "exit_pb": 1.38,
+      "bv_cagr": 0.3719289190166646,
+      "rerating_share": -0.43916886296651825
+     },
+     {
+      "exit_pb": 1.79,
+      "bv_cagr": 0.3023773114282686,
+      "rerating_share": -0.2023864026147243
+     },
+     {
+      "exit_pb": 2.24,
+      "bv_cagr": 0.2452536527642799,
+      "rerating_share": 0.0017440702804627358
+     }
+    ]
+   },
+   {
+    "target": 5,
+    "cells": [
+     {
+      "exit_pb": 1.34,
+      "bv_cagr": 0.5284675336450704,
+      "rerating_share": -0.31805526072610835
+     },
+     {
+      "exit_pb": 1.38,
+      "bv_cagr": 0.5195022960318665,
+      "rerating_share": -0.29977938628631223
+     },
+     {
+      "exit_pb": 1.79,
+      "bv_cagr": 0.4424692763481468,
+      "rerating_share": -0.13815021210454545
+     },
+     {
+      "exit_pb": 2.24,
+      "bv_cagr": 0.37920103460870935,
+      "rerating_share": 0.0011905131770627733
+     }
+    ]
+   }
+  ],
+  "pe0": null
+ },
+ "temperature": {
+  "rows": [
+   {
+    "basis": "P/B (fully diluted)",
+    "pe": 2.2357121414276184,
+    "pb": 2.2357121414276184,
+    "vs_own": 1.6259724664928135,
+    "own_band": "HOT",
+    "pctile": 1.0,
+    "vs_sector": 1.5106163117754179,
+    "sector_band": "HOT"
+   }
+  ],
+  "own_median": 1.375,
+  "n_hist": 10,
+  "sector_median": 1.48,
+  "sector": {
+   "KARURVYSYA": 2.37,
+   "CUB": 2.2,
+   "SOUTHBANK": 1.27,
+   "RBLBANK": 1.43,
+   "AUBANK": 3.44,
+   "IDFCFIRSTB": 1.53,
+   "BANDHANBNK": 1.08,
+   "INDUSINDBK": 1.16
+  },
+  "pe": 22.07766942949408,
+  "market": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)",
+   "note": "around the long-run average"
+  }
+ },
+ "stress": {
+  "leverage": 9.307446794595089,
+  "rows": [
+   {
+    "loss_rate": 0.01,
+    "post_tax_loss": 2236.695,
+    "pct_of_book": 0.04876224672657589,
+    "bvps_after": 158.91460007939776
+   },
+   {
+    "loss_rate": 0.02,
+    "post_tax_loss": 4473.39,
+    "pct_of_book": 0.09752449345315178,
+    "bvps_after": 150.76833705434376
+   },
+   {
+    "loss_rate": 0.03,
+    "post_tax_loss": 6710.084999999999,
+    "pct_of_book": 0.14628674017972765,
+    "bvps_after": 142.62207402928976
+   },
+   {
+    "loss_rate": 0.05,
+    "post_tax_loss": 11183.475,
+    "pct_of_book": 0.24381123363287943,
+    "bvps_after": 126.32954797918177
+   }
+  ],
+  "net_npa_pct_book": 0.010726104985022694
+ },
+ "sensitivity": {
+  "coe_x_roe": {
+   "rows": [
+    [
+     0.105,
+     [
+      197.62545152310886,
+      259.42521937356923,
+      328.1428965132954,
+      404.3159878855664,
+      488.5137513115616
+     ]
+    ],
+    [
+     0.115,
+     [
+      155.33630763781423,
+      203.3129072612751,
+      256.6475819292888,
+      315.75633139412514,
+      381.0797217571397
+     ]
+    ],
+    [
+     0.125,
+     [
+      125.28159769397482,
+      163.46657338966347,
+      205.9056729973872,
+      252.9289321151378,
+      304.885869175017
+     ]
+    ],
+    [
+     0.135,
+     [
+      103.05790664104921,
+      134.02923233741248,
+      168.44215913208728,
+      206.56347544352298,
+      248.67571310544133
+     ]
+    ],
+    [
+     0.145,
+     [
+      86.12420119502528,
+      111.62128752283648,
+      139.9440152197497,
+      171.31124530521566,
+      205.95474914249502
+     ]
+    ]
+   ],
+   "cols": [
+    0.11000000000000001,
+    0.125,
+    0.14,
+    0.15500000000000003,
+    0.17
+   ]
+  },
+  "justified_pb": {
+   "rows": [
+    [
+     0.105,
+     [
+      1.0909090909090913,
+      1.3636363636363638,
+      1.6363636363636367,
+      1.9090909090909098,
+      2.181818181818182
+     ]
+    ],
+    [
+     0.115,
+     [
+      0.9230769230769232,
+      1.1538461538461537,
+      1.3846153846153848,
+      1.6153846153846156,
+      1.8461538461538463
+     ]
+    ],
+    [
+     0.125,
+     [
+      0.8000000000000002,
+      1.0,
+      1.2000000000000002,
+      1.4000000000000004,
+      1.6
+     ]
+    ],
+    [
+     0.135,
+     [
+      0.7058823529411765,
+      0.8823529411764705,
+      1.0588235294117647,
+      1.235294117647059,
+      1.411764705882353
+     ]
+    ],
+    [
+     0.145,
+     [
+      0.6315789473684212,
+      0.7894736842105264,
+      0.9473684210526319,
+      1.1052631578947372,
+      1.2631578947368425
+     ]
+    ]
+   ],
+   "cols": [
+    0.11000000000000001,
+    0.125,
+    0.14,
+    0.15500000000000003,
+    0.17
+   ]
+  }
+ },
+ "version": "1.1-bank (2026-11-22)"
+}

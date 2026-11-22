@@ -1,6 +1,8 @@
 # Deep-dive protocol (sector-agnostic) at "security-guard depth"
 
-**Version 1.2 · 2026-11-21.** Built from the Vishal Mega Mart practice run (`VMM_practice.md`, a retailer). Revised after the Cummins India practice run (`CUMMINSIND_practice.md`, a manufacturer and MNC subsidiary), then after the Five Below practice run (`FIVE_practice.md`, the first US filer). Links: `insight:flag-override-template`, `strategy:fisher-scuttlebutt`, lessons L9, L10, L12, L13. The changelog is at the bottom.
+**Version 1.3 · 2026-11-22.** Built from the Vishal Mega Mart practice run (`VMM_practice.md`, a retailer). Revised after the Cummins India practice run (`CUMMINSIND_practice.md`, a manufacturer and MNC subsidiary), then after the Five Below practice run (`FIVE_practice.md`, the first US filer), then after the Federal Bank end-to-end dry run (`FEDERALBNK_dryrun.md`, the first lender; stages 2→6). Links: `insight:flag-override-template`, `strategy:fisher-scuttlebutt`, `insight:lender-blowup-signals`, `decision:adopt-disqualifiers-v2`, `research_notes/Templates/valuation_and_decision.md`, lessons L9, L10, L12, L13, L18, L19, L21. The changelog is at the bottom.
+
+**Where a deep dive sits in the machine (v1.3).** Run in this order: **S2 checklist** (below) → stage-3 signals (PEAD quintile, credibility vs peers) → layers L1–L7 → **L8 valuation and decision** → paper calls. A deep dive is not finished until L8 has produced a worksheet and a card.
 
 **What "security-guard depth" means:** you can rebuild the business's economics from its smallest operating unit (a store, a plant, a branch, a truck, a salesperson). You can express every major cost line in physical terms: people × wage, square feet × rent, kWh × tariff, tonnes × freight. And you can name the one or two micro-drivers (a wage notification, a tariff order, a commodity, a related-party contract) that move margins before the P&L shows it.
 
@@ -23,7 +25,7 @@ Tip (v1.1): list the 5 most-asked questions from the last call's Q&A. The variab
 | Retailer / consumer service | Store (sq ft, bills, staff) | Rent, minimum wages, outsourced security/housekeeping, shrinkage |
 | **Manufacturer** | **(1) Plant** (capacity × utilisation), **(2) product node/platform** (price, mix, competition), **(3) channel account** (OEM, dealer, distributor concentration) | Materials basket and pass-through lag, plant utilisation, regulatory product transitions, warranty |
 | **MNC subsidiary / group company** | All of the above plus the **parent relationship** | Royalty, support/cost allocations, transfer-pricing formulas, purchases from and sales to group companies, dividends to the parent, renewal dates |
-| Lender | Branch / loan cohort | Cost of funds, credit cost by vintage, collection staff |
+| **Lender (bank / NBFC; v1.3, see the adaptation section)** | **(1) Branch** (deposits, CASA, sourcing per outlet), **(2) loan segment/cohort** (yield, slippage, LGD), **(3) liability pool** (CASA, retail TD, NRI/FCNR, bulk), **(4) balance-sheet "cost lines"** (CRR, PSL shortfall, DICGC) | IBA wage settlement, deposit repricing lag vs EBLR share, DICGC premium, CRR/PSL rules, special funding windows, write-offs vs slippage, collateral price (gold LTV) |
 | Platform / software | Cohort / account | CAC, retention, take rate |
 | **US widely held company (v1.2)** | Same unit as its business type, plus **management as the "related party"** | KPI definitions (payback, comps, "adjusted"), SBC and retention awards, 8-K Item 5.02 pay and perks, Form 4 clusters, guidance-beat pattern |
 
@@ -40,6 +42,7 @@ Tip (v1.1): list the 5 most-asked questions from the last call's Q&A. The variab
 | L5 | **Governance, ownership, incentives, related parties** | Who gets paid before minority shareholders? | 10% (**15% for MNC subsidiaries/group companies**, taken from L3) | RPT table by year and share of each cost line; promoter/PE supply; KMP incentives and strike prices; **for MNC subs, the parent-take table** (see below) |
 | L6 | **Customer, competitor, supplier ground truth** | Does reality match the disclosures? | 20% | Scuttlebutt list executed or scheduled; each observation tied to a model number |
 | L7 | **Flag override and synthesis** | Which numbers mislead, in either direction? | 10% | Override table filled; open-flag count; "what would change my mind" per flag |
+| **L8** | **Valuation and decision (v1.3)** | What does the price imply, and what does the written rule do with it? | **~20 min (outside the 3–4 day budget)** | `tools/valuation/worksheet.py` run (bank mode for lenders) and `tools/decision/decision_card.py` run; card shows every gate; paper calls written (practice: not ingested) |
 
 For a 1-day screen, do L1–L2 plus the L4 top-3 costs plus the L5 RPT table only. **L5's RPT table is never skipped.**
 
@@ -49,6 +52,87 @@ For a 1-day screen, do L1–L2 plus the L4 top-3 costs plus the L5 RPT table onl
 - Screener nets exceptional items into "Other income". Read the AR P&L.
 
 **L5 parent-take table (v1.1), for MNC subsidiaries and group companies.** By year: royalty (rate × eligible base); technical, support and cost-allocation fees; reimbursements paid and received; purchases from group companies (share of purchases) with the pricing formula; sales to group companies (share of revenue, share of exports) with the pricing formula; dividends to the parent; and stock-based pay in *parent* shares. Total it as % of sales and % of EBITDA. List every **agreement renewal date** (royalty agreements often run for 3 years) as a dated watch item. Read the **AGM/postal-ballot RPT annex**: SEBI's Jun-2025 "minimum information" standard makes companies disclose pricing formulas (e.g. "cost plus at least 11%"), royalty rates, uniform-rate confirmations and sunset clauses.
+
+**S2 checklist (v1.3, before L1; ~1 hour).** Fill every disqualifier-v2 rule as pass / fail / unknown with a dated
+source *before* starting the layers, so the card never shows "incomplete" (H3 was never checked in the first three
+practice runs). Hard at entry: H1a, H1b, H1c, H2, H3, H4, H5. Hard at exit: auditor exit on denied information,
+RBI divergence, US 8-K 4.02, results delayed past the deadline. Graded: pledge (>25%, escalate >50% or rising),
+accounting-trouble events in 5 years, dilution (price × purpose × buyer), debtor days by counterparty, solvency set.
+Questions only: CFO/PAT, negative FCF, other-income share. Sources: `nse_fetch.py announcements/pledge/shareholding/
+integrated`, `bse_fetch.py announcements` (catches Reg-30 items the NSE description hides), rating letters, the AR
+auditor's report and notes. Lenders: use the bank form of each rule (adaptation section).
+
+**L8 valuation and decision (v1.3; from `research_notes/Templates/valuation_and_decision.md` §5).**
+1. Collect the extra inputs the templates need: a **dated close from two sources**, **10 FY-end P/Es (P/B for
+   lenders)** for the own-history band, **3+ peer P/Es (P/Bs)**, **6-month ADV**, net cash/debt or (lenders) book
+   and pending dilution, and the explicit S2 statuses.
+2. Write the scenarios (growth/margin/ROIIC/exit P/E, or ROE path/exit P/B) and probabilities **before** reading the
+   price outputs; anchor on the base-rate class first.
+3. Run the worksheet; read (a) implied growth or ROE and the base-case IRR, (b) exit multiple vs the DCF/RIM-consistent
+   multiple (the hidden bet, L21), (c) re-rating share, (d) temperature vs own history and peers, (e) sensitivity.
+4. Fill the card from the deep dive: S2 statuses, PEAD quintile and event date, credibility **with peer median**,
+   detector alerts, the L7 override table, base-rate class, sizing tier, dated kill criteria, pre-mortem, review date.
+5. Run the card with `--calls`. Practice runs: paper calls tagged `practice-example`, **not ingested** (L21).
+6. Write the variant view or accept size 0: ≥3 open soft flags without one blocks the card.
+
+---
+
+## Bank / NBFC adaptation (v1.3, from the Federal Bank dry run)
+A lender's revenue, EBITDA, FCF and ROIIC are not meaningful (debt is raw material). Keep the 7 layers but swap the
+content as follows.
+
+**S2 in bank form.**
+| Rule | Bank form | Where |
+|---|---|---|
+| H1a fake cash | Cash/RBI balances and investments audited; HTM/AFS marks vs equity (SVB test) | XBRL balance sheet; AR investment schedule |
+| H1b/H1c | NIM, yield − CoD, RoA and C/I inside the peer band; every one-off traced to an external document (tax order, sale deed) | deck, Reg-30 |
+| H2 | Rotation (RBI mandates joint-auditor terms) vs resignation | Reg-30 "Change in Auditors" text |
+| H5 | AS-18 connected lending: loans/NCDs to group entities, KMP relatives; promoter-group "general purpose" loans | AR AS-18 note |
+| Exit triggers | **RBI divergence note** ("Divergence in asset classification and provisioning"), restatement, late results | AR notes (1.4.x in FBL's numbering) |
+| Solvency set | CET1 vs management floor and regulatory minimum; leverage ratio; LCR/NSFR; CD ratio; ALM 1-year gap | AR capital note, XBRL CET1 |
+| Lender signals | Funding concentration (state, NRI, top-20 depositors, bulk share), period-end vs average balances (window dressing), fraud note trend, restructured + SMA book, growth >30%/yr | `insight:lender-blowup-signals` |
+
+**Layers for a lender.**
+- **L2:** re-derive PPOP = NII + other income − opex; split other income into fees / treasury / one-offs; rebuild the
+  **NPA walk** (opening + slippage − recoveries − **write-offs** = closing); compute ratios on **average** balances;
+  separate company "excl one-off" figures and keep both. Read the integrated-filing XBRL (`nse_fetch.py integrated`;
+  Q1/Q3 filings carry no balance sheet for banks).
+- **L3 unit economics:** per outlet — deposits, CASA, advances, revenue, opex, staff, rent, PAT; liability value of a
+  mature branch (CASA × saving vs wholesale rate) vs its direct cost; new-branch break-even CASA; per employee —
+  loaded cost vs BRSR median, attrition.
+- **L4 cost lines in physical terms:** staff (headcount × **IBA bipartite scale**; settlement dates are dated,
+  public, leading); **DICGC premium** (≈ 12 paise per ₹100 of assessable deposits; cross-foot insurance ÷ 0.0012 ≈
+  deposits); outsourcing/service charges and card-network charges (scale with volumes); rent per outlet.
+  Balance-sheet cost lines that sit in NIM: **CRR** (NDTL × CRR% × opportunity rate), **PSL-shortfall deposits**
+  (RIDF/NABARD/SIDBI balance × (loan yield − RIDF rate)), SLR carry.
+- **L4 rate and funding mechanics:** EBLR/MCLR/fixed split × repo move = immediate yield change; deposit repricing lag
+  (~1 year for TDs); special windows (FCNR, TLTRO-type) that inflate both sides of the balance sheet — always
+  re-derive growth **ex** the window (loans against the new deposits).
+- **L4 asset quality:** slippage and GNPA by segment ÷ segment book; collateral price sensitivity (gold LTV, property);
+  vintage/cohort data if disclosed (rarely; say so); ECL/regulatory transitions dated with the guided impact.
+- **L5:** no promoter often — the related parties are management (pay mix, ESOP, variable-pay caps), the strategic
+  investor (warrants, board seat), subsidiaries (connected lending); the **CEO's RBI-approved term end** is a dated
+  watch item.
+- **L6 scuttlebutt:** branch counts and rate boards; a fixed gold-loan price basket vs PSU banks and NBFCs; gold
+  auction notices (public, dated); NRI exchange houses; RBI BSR (state deposits/credit), RBI card statistics, NPCI
+  bank performance, RBI Ombudsman complaints; fintech-partner apps and directions; union notices on wage talks.
+- **L7:** bad-but-benign vs good-but-misleading table is mandatory (at Federal Bank: 10 misleading-good vs 6 benign-bad).
+
+**Valuation (L8) for lenders:** `worksheet.py` with `"mode": "bank"` (`tools/valuation/bank.py`): P/B fully diluted for
+warrants/QIPs; ROE needed forever `g + P/B × (CoE − g)`; **implied CoE at today's ROE** `g + (ROE − g) ÷ P/B`;
+residual-income scenarios on an ROE path with an exit P/B and its RIM-consistent P/B; book stress (+1/2/3/5% loan
+loss as % of book); own 10-yr P/B band and peer P/Bs. Expect the same CoE dominance as L21: read the implied CoE,
+the base-case IRR and the P/B band.
+
+**Signals (stage 3) for lenders:** PEAD on reported EPS mixes treasury gains and provision buffers — before acting on
+a quintile 1–2 flag, recompute SUE on (PPOP − normal credit cost) per share. Promise tracker: pass website transcripts
+with `--local` (banks often file only a cover letter on NSE); build the KPI CSV with `bank_kpis.py` (+ `--manual` deck
+KPIs: NIM, CASA, credit cost, CoD, PCR, slippage); report credibility only against a bank peer median (L18) and add a
+guidance-bias column (actual − guide midpoint, bps).
+
+**NBFC differences (to test on the next lender run):** no CASA, so the liability unit is the borrowing mix (bank
+lines, NCDs, CP, securitisation, ECB) and its ALM; leverage limits and RBI scale-based regulation layer; co-lending
+and DLG/FLDG arrangements as off-balance-sheet risk; collection staff per ₹ cr of book as the physical cost driver.
 
 ---
 
@@ -177,6 +261,9 @@ For every flag, good or bad, fill: flag | context questions | clearing evidence 
 - [ ] Override table and open-flag count
 - [ ] "What the method taught" (for curriculum) plus open items
 - [ ] memdb seed: an analysis record (no verdict if practice), insight records for new techniques
+- [ ] **S2 checklist (v1.3):** every disqualifier-v2 rule pass/fail/unknown with a dated source, filled before L1
+- [ ] **L8 (v1.3):** worksheet run (bank mode for lenders) + decision card + paper calls; extra inputs collected (two-source dated close, 10 FY-end P/Es or P/Bs, 3+ peers, 6-month ADV, pending dilution)
+- [ ] **Lenders (v1.3):** NPA walk with write-offs; growth ex special funding windows; per-outlet table; Schedule-16 cost table incl. DICGC and the PSL-shortfall line; funding-concentration table (state, NRI, top-20, bulk, period-end vs average); bad-but-benign / good-but-misleading table
 
 ## Common traps seen so far
 - Screener's "Borrowings" includes lease liabilities, so asset-light retailers look indebted.
@@ -195,6 +282,13 @@ For every flag, good or bad, fill: flag | context questions | clearing evidence 
 - (v1.2) **FCF in a slowdown-of-openings year is flattered** (capex and working-capital timing). Normalise before using it.
 - (v1.2) **Tool notes:** use `sec_fetch.py doc T ACC --file NAME --text` for exhibits; `holdings13f` value can misparse (use shares); confirm the insider "non-10b5-1" flag on the form.
 - (v1.1) **Tool note:** `tools/nse_fetch.py transcripts SYMBOL --download DIR` ignores `--from/--to` and downloads everything. List first, then fetch only the URLs you need.
+- (v1.3) **"Decadal-low GNPA" can be write-off driven.** Rebuild the NPA walk: at Federal Bank Q2 FY27 write-offs (₹498 cr) exceeded fresh slippage (₹420 cr).
+- (v1.3) **Special funding windows inflate both sides.** FCNR-backed loans turned +4% core retail growth into +18% headline.
+- (v1.3) **PCR can be bought with a windfall.** A one-time tax-refund gain funded a buffer provision; PCR 76.6% → 87%.
+- (v1.3) **Undiluted P/B and ROE flatter a bank with warrants outstanding.** Put the dilution in the denominator first.
+- (v1.3) **Conservative guidance makes a credibility score look excellent.** Measure guidance bias, and compare with peers.
+- (v1.3) **Rating-agency and company KPI definitions differ** (credit cost 67 bp vs 41 bp; "top-20 group" vs "top-20 borrowers"). Copy the definition with the number.
+- (v1.3) **Tool notes:** `nse_fetch.py results` is stale after Dec-2024 (use `integrated`); bank websites may be behind a bot wall (Pillar 3, some transcripts) — fetch by hand and pass `--local`; pdftotext scrambles multi-series deck charts (prefer XBRL and press releases).
 
 ---
 
@@ -214,3 +308,10 @@ For every flag, good or bad, fill: flag | context questions | clearing evidence 
   - Added a "US widely held company" row to the unit table (management as the related party).
   - New techniques #19 (store model vs capex guidance), #20 (rent per new lease from the lease note), #21 (tariff cost from refunds and duty math), #22 (guidance implied-remainder and split promise tracking) and #23 (US payroll estimate).
   - One new deliverable line and six new traps/tool notes.
+- **v1.3 · 2026-11-22.** From the Federal Bank end-to-end dry run (stages 2→6; first lender):
+  - Added the **S2 checklist** step before L1 (every disqualifier-v2 rule with a dated source), so the card is never "incomplete".
+  - Added **L8 valuation and decision** (worksheet + card + paper calls) per `research_notes/Templates/valuation_and_decision.md` §5, with the extra inputs it needs (two-source close, 10 FY-end P/Es or P/Bs, peers, ADV, dilution).
+  - Added the **Bank / NBFC adaptation** section: S2 in bank form, lender units (branch, segment, liability pool, balance-sheet cost lines), physical cost drivers (IBA scale, DICGC, CRR, PSL shortfall), rate/funding mechanics, asset-quality walk, valuation in bank mode, signal caveats, NBFC differences to test next.
+  - Replaced the one-line "Lender" row in the unit table.
+  - Three deliverable lines; seven traps/tool notes.
+  - Tools changed with it: `tools/valuation/bank.py` (+ `worksheet.py` dispatch), `tools/decision/decision_card.py` (bank stage-5 text), `tools/promise_tracker/pipeline/` (bank measures, cover-letter handling, `--local`, quarter detection, range-parse and chain fixes, `bank_kpis.py`), `tools/nse_fetch.py integrated`.

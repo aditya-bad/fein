@@ -1,0 +1,253 @@
+[
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:FEDERALBNK:card-2026-11-22-5y-ge3x",
+  "title": "Paper call: The Federal Bank Ltd 5-year outcome ≥3.0x from 2026-11-20 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell; PRACTICE EXAMPLE built from test inputs). Probability 0.03 (base rate 0.444, class india_survivors_2020_25_mcap_ge400) that: YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-20 (entry INR 373.50) to the last close on or before 2031-11-20 is ≥ 3.0. Model: worksheet scenarios bear 35%→0.95x, base 45%→1.41x, bull 18%→2.17x with σ=0.30; reverse DCF base-case IRR 10.0%; card rule output: size 0: blocked by Stage 4 soft flags (11 open, no variant view → NO POSITION); Expected value vs hurdle (EV 1.36x vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "FEDERALBNK"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india",
+   "practice-example"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.0279,
+   "base_rate_probability": 0.444,
+   "base_rate_reasoning": "India, random NSE sample, mcap >= Rs 400 cr at T0, 5 yrs from 30-Sep-2020. Survivors only (firms delisted before mid-2023 absent -> loss rates understated); T0 was six months after the Mar-2020 low and 2020-25 was a strong small/mid-cap bull market (-> x3 overstated). One snapshot. Treat as an upper bound for P(>=3x) and a lower bound for P(<=0.5x).",
+   "method": "decision-card-v1",
+   "made_on": "2026-11-22",
+   "resolve_by": "2031-11-20",
+   "entry_date": "2026-11-20",
+   "entry_price": 373.5,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-20 (entry INR 373.50) to the last close on or before 2031-11-20 is ≥ 3.0.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": true,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml",
+   "FBL investor presentation Q2FY27 (NSE, 16-Oct-2026)",
+   "FBL EGM notice 27-Oct-2025 (NSE)",
+   "screener.in FEDERALBNK standalone (fetched 22-Nov-2026)",
+   "Yahoo Finance chart API FEDERALBNK.NS"
+  ],
+  "confidence": "unverified"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:FEDERALBNK:card-2026-11-22-5y-le0p5x",
+  "title": "Paper call: The Federal Bank Ltd 5-year outcome ≤0.5x from 2026-11-20 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell; PRACTICE EXAMPLE built from test inputs). Probability 0.03 (base rate 0.020, class india_survivors_2020_25_mcap_ge400) that: YES if the total-return multiple from 2026-11-20 (entry INR 373.50) to the last close on or before 2031-11-20 is ≤ 0.5, or the stock is delisted/suspended below that level. Model: worksheet scenarios bear 35%→0.95x, base 45%→1.41x, bull 18%→2.17x with σ=0.30; reverse DCF base-case IRR 10.0%; card rule output: size 0: blocked by Stage 4 soft flags (11 open, no variant view → NO POSITION); Expected value vs hurdle (EV 1.36x vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "FEDERALBNK"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india",
+   "practice-example"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.0258,
+   "base_rate_probability": 0.02,
+   "base_rate_reasoning": "India, random NSE sample, mcap >= Rs 400 cr at T0, 5 yrs from 30-Sep-2020. Survivors only (firms delisted before mid-2023 absent -> loss rates understated); T0 was six months after the Mar-2020 low and 2020-25 was a strong small/mid-cap bull market (-> x3 overstated). One snapshot. Treat as an upper bound for P(>=3x) and a lower bound for P(<=0.5x).",
+   "method": "decision-card-v1",
+   "made_on": "2026-11-22",
+   "resolve_by": "2031-11-20",
+   "entry_date": "2026-11-20",
+   "entry_price": 373.5,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple from 2026-11-20 (entry INR 373.50) to the last close on or before 2031-11-20 is ≤ 0.5, or the stock is delisted/suspended below that level.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": true,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml",
+   "FBL investor presentation Q2FY27 (NSE, 16-Oct-2026)",
+   "FBL EGM notice 27-Oct-2025 (NSE)",
+   "screener.in FEDERALBNK standalone (fetched 22-Nov-2026)",
+   "Yahoo Finance chart API FEDERALBNK.NS"
+  ],
+  "confidence": "unverified"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:FEDERALBNK:card-2026-11-22-5y-blowup",
+  "title": "Paper call: The Federal Bank Ltd 5-year outcome blow-up from 2026-11-20 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell; PRACTICE EXAMPLE built from test inputs). Probability 0.02 (base rate n/a, class india_survivors_2020_25_mcap_ge400) that: YES if between 2026-11-20 and 2031-11-20: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples). Model: worksheet scenarios bear 35%→0.95x, base 45%→1.41x, bull 18%→2.17x with σ=0.30; reverse DCF base-case IRR 10.0%; card rule output: size 0: blocked by Stage 4 soft flags (11 open, no variant view → NO POSITION); Expected value vs hurdle (EV 1.36x vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "FEDERALBNK"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india",
+   "practice-example"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.02,
+   "base_rate_probability": null,
+   "base_rate_reasoning": "India, random NSE sample, mcap >= Rs 400 cr at T0, 5 yrs from 30-Sep-2020. Survivors only (firms delisted before mid-2023 absent -> loss rates understated); T0 was six months after the Mar-2020 low and 2020-25 was a strong small/mid-cap bull market (-> x3 overstated). One snapshot. Treat as an upper bound for P(>=3x) and a lower bound for P(<=0.5x).",
+   "method": "decision-card-v1",
+   "made_on": "2026-11-22",
+   "resolve_by": "2031-11-20",
+   "entry_date": "2026-11-20",
+   "entry_price": 373.5,
+   "currency": "INR",
+   "resolution_rule": "YES if between 2026-11-20 and 2031-11-20: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples).",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": true,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml",
+   "FBL investor presentation Q2FY27 (NSE, 16-Oct-2026)",
+   "FBL EGM notice 27-Oct-2025 (NSE)",
+   "screener.in FEDERALBNK standalone (fetched 22-Nov-2026)",
+   "Yahoo Finance chart API FEDERALBNK.NS"
+  ],
+  "confidence": "unverified"
+ },
+ {
+  "type": "decision",
+  "id": "decision:card:FEDERALBNK:2026-11-22",
+  "title": "Decision card FEDERALBNK 2026-11-22 (practice, no verdict)",
+  "body": "Decision card v1 for The Federal Bank Ltd. Rule output: size 0: blocked by Stage 4 soft flags (11 open, no variant view → NO POSITION); Expected value vs hurdle (EV 1.36x vs hurdle 1.76x → below hurdle → size 0). Thesis: TEST THESIS (illustrative): a granular Kerala/NRI deposit franchise plus a mix shift to mid-yield secured loans lifts RoA from ~1.25% to ~1.4% and ROE on diluted book from ~10% to ~14%. Variant view: none Open soft flags: 11. P(≥3x) 3% vs base 44%; P(≤0.5x) 3% vs base 2.0%; EV 5-yr multiple 1.36x vs hurdle 1.76x. Review 2027-02-15.",
+  "tickers": [
+   "FEDERALBNK"
+  ],
+  "tags": [
+   "decision-card",
+   "stage-6",
+   "india",
+   "practice-example"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "gates": [
+    {
+     "gate": "Stage 2 hard filters",
+     "result": "passed (9 rules)",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 3 PEAD avoid flag",
+     "result": "clear",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 4 soft flags",
+     "result": "11 open, no variant view → NO POSITION",
+     "blocks": true
+    },
+    {
+     "gate": "Outside-view check",
+     "result": "model departs from base rate with no variant view → shrink",
+     "blocks": false
+    },
+    {
+     "gate": "Expected value vs hurdle",
+     "result": "EV 1.36x vs hurdle 1.76x → below hurdle → size 0",
+     "blocks": true
+    }
+   ],
+   "size_after_gates": 0.0,
+   "rule_size": 0.0,
+   "kelly_f_star": 0.0,
+   "open_soft_flags": 11,
+   "review_date": "2027-02-15",
+   "kill_criteria": [
+    {
+     "if": "Core retail growth (ex FCNR-backed loans) below 8% YoY in Q4 FY27",
+     "measure": "investor deck retail mix slide",
+     "by": "2027-05-15"
+    },
+    {
+     "if": "Gross slippage ratio above 1.0% annualised in any quarter of FY28",
+     "measure": "investor deck slippage slide",
+     "by": "2028-05-15"
+    },
+    {
+     "if": "FY27 cost-to-income above 54% (company definition)",
+     "measure": "Q4 FY27 deck",
+     "by": "2027-05-15"
+    },
+    {
+     "if": "An acquisition at > 2x book or into unsecured MFI/SFB without disclosed asset quality",
+     "measure": "Reg-30 filings",
+     "by": "2028-03-31"
+    },
+    {
+     "if": "RBI divergence disclosure appears, or an RBI direction on a fintech partnership",
+     "measure": "AR note 'Divergence'; Reg-30",
+     "by": "2027-08-31"
+    }
+   ],
+   "override_log": [
+    {
+     "date": "2026-11-22",
+     "flag": "Q4 FY26 one-offs",
+     "decision": "use company 'excl one-off' NIM 3.20 / C/I 52.86 / credit cost 47 bps / PAT 1,145 for trend and scoring",
+     "why": "IT orders on NSE (19-Feb, 26/27-Mar-2026) total Rs 1,499 cr refund incl. interest; Rs 456 cr interest booked; ~Rs 470 cr buffer provision"
+    },
+    {
+     "date": "2026-11-22",
+     "flag": "Q2 FY27 treasury",
+     "decision": "normalised PAT removes ~Rs 104 cr post-tax treasury above a Rs 100 cr/qtr run-rate",
+     "why": "Fee table slide 20: treasury 238 vs 12-126 in the prior four quarters"
+    }
+   ],
+   "paper_calls": [
+    "thesis:paper-call:FEDERALBNK:card-2026-11-22-5y-ge3x",
+    "thesis:paper-call:FEDERALBNK:card-2026-11-22-5y-le0p5x",
+    "thesis:paper-call:FEDERALBNK:card-2026-11-22-5y-blowup"
+   ],
+   "practice": true
+  },
+  "sources": [
+   "NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1740409_16102026072531_WEB.xml",
+   "FBL investor presentation Q2FY27 (NSE, 16-Oct-2026)",
+   "FBL EGM notice 27-Oct-2025 (NSE)",
+   "screener.in FEDERALBNK standalone (fetched 22-Nov-2026)",
+   "Yahoo Finance chart API FEDERALBNK.NS"
+  ],
+  "confidence": "unverified",
+  "links": [
+   {
+    "to": "thesis:paper-call:FEDERALBNK:card-2026-11-22-5y-ge3x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:FEDERALBNK:card-2026-11-22-5y-le0p5x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:FEDERALBNK:card-2026-11-22-5y-blowup",
+    "rel": "about"
+   }
+  ]
+ }
+]

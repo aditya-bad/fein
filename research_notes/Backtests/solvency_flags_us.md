@@ -95,3 +95,10 @@ Unlocks: a calibrated solvency gate for stage 2 (and the Pi detector set), and t
   4,843 candidate CIKs. Fetch interrupted by a usage limit at 1,162 firms; resumed 2026-11-22 from cache.
   Implementation notes fixed before outcomes: the float fact is taken from the T-10-K's own accession (some filers
   tag the float with a wrong date, e.g. Sanmina FY2015); S4 requires payouts > 0 (otherwise every cash burner fires).
+- 2026-11-22, **deviation found on audit of EDGAR events (before any flag-vs-outcome statistic was run):** the
+  pre-registered O_delist (8-K 3.01 + Form 25/15 + no merger) was dominated by *voluntary exchange transfers*
+  (Workday, Garmin, Xerox, Expeditors, Palo Alto… moving Nasdaq↔NYSE file exactly that pattern). Revised O_delist =
+  the 3.01 8-K text shows a substantive listing-rule failure (deficiency / minimum bid / not in compliance / late
+  filing / suspension; the item-heading boilerplate stripped; transfer language and pure governance-composition
+  notices excluded) **and** a Form 25/15 on or after that notice in the window **and** no merger evidence
+  (`s4b_item301_text.py`). Results under the as-registered definition are also reported (`O_fail_asreg`).

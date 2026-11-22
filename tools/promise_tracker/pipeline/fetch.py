@@ -111,6 +111,46 @@ def detect_call_date(text, filed):
     return filed - dt.timedelta(days=5), "assumed(filing-5d)"
 
 
+COVER_RX = re.compile(r"(has been |is being |been )?(made )?available on (the |our )?(Bank[’']?s?|Company[’']?s?|our)?\s*website|"
+                      r"uploaded on (the |our )?(Bank[’']?s?|Company[’']?s?)?\s*website|placed on (the )?website", re.I)
+
+
+def add_call(manifest, fn, url, filed, pdf, txt, text, source="nse"):
+    call_date, how = detect_call_date(text, filed)
+    q, fy = C.reported_quarter_for_call(call_date, text)
+    words = len(text.split())
+    # v1.1 (FEDERALBNK dry run): many banks file only a cover letter on NSE that says the transcript
+    # "has been made available on the Bank's website". That is NOT a scanned PDF; OCR will not help.
+    cover = words < 1500 and bool(COVER_RX.search(re.sub(r"\s+", " ", text)))   # -layout pads words with spaces
+    manifest[fn] = {"file": fn, "url": url, "filed": filed.isoformat(), "call_date": call_date.isoformat(),
+                    "call_date_source": how, "quarter": C.qlabel(q, fy), "pdf": pdf, "txt": txt,
+                    "words": words, "scanned_suspect": words < 1500 and not cover,
+                    "cover_letter_only": cover, "source": source,
+                    "skip": words < 1500}
+    flag = ("  <-- COVER LETTER ONLY: transcript is on the company website; download it and pass "
+            "--local PDF@FILED (skipped)") if cover else ("  <-- few words: scanned PDF? needs OCR (skipped)"
+                                                          if words < 1500 else "")
+    print(f"  {C.qlabel(q, fy)} call {call_date} ({how}) filed {filed} {words} words {fn}{flag}")
+
+
+def add_local(manifest, spec, pdir, tdir):
+    """--local PATH@YYYY-MM-DD : a transcript PDF fetched from the company website (untrusted data).
+    The date is the filing/publication date used to bound the call-date search."""
+    path, _, d = spec.rpartition("@")
+    if not path:
+        raise SystemExit("--local needs PATH@YYYY-MM-DD")
+    filed = dt.date.fromisoformat(d)
+    fn = "local_" + os.path.basename(path)
+    pdf = os.path.join(pdir, fn)
+    if not os.path.exists(pdf):
+        shutil.copyfile(path, pdf)
+    txt = os.path.join(tdir, fn[:-4] + ".txt")
+    if not os.path.exists(txt):
+        pdf_to_text(pdf, txt)
+    add_call(manifest, fn, "local:" + os.path.abspath(path), filed, pdf, txt,
+             open(txt, errors="replace").read(), source="local")
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("symbol")
@@ -118,6 +158,8 @@ def main(argv=None):
     p.add_argument("--until", help="YYYY-MM-DD (filing date, inclusive; default today)")
     p.add_argument("--cache")
     p.add_argument("--refresh", action="store_true", help="re-pull the announcement list")
+    p.add_argument("--local", action="append", metavar="PDF@YYYY-MM-DD",
+                   help="add a transcript PDF from the company website (repeatable); replaces an NSE cover letter")
     a = p.parse_args(argv)
     sym = a.symbol.upper()
     root = C.cache_root(a.cache)
@@ -149,15 +191,17 @@ def main(argv=None):
             pdf_to_text(pdf, txt)
         text = open(txt, errors="replace").read()
         filed = C.parse_nse_date(r["an_dt"])
-        call_date, how = detect_call_date(text, filed)
-        q, fy = C.reported_quarter_for_call(call_date)
-        words = len(text.split())
-        manifest[fn] = {"file": fn, "url": url, "filed": filed.isoformat(), "call_date": call_date.isoformat(),
-                        "call_date_source": how, "quarter": C.qlabel(q, fy), "pdf": pdf, "txt": txt,
-                        "words": words, "scanned_suspect": words < 1500}
-        flag = "  <-- few words: scanned PDF? needs OCR" if words < 1500 else ""
-        print(f"  {C.qlabel(q, fy)} call {call_date} ({how}) filed {filed} {words} words {fn}{flag}")
+        add_call(manifest, fn, url, filed, pdf, txt, text)
+    for spec in a.local or []:
+        add_local(manifest, spec, pdir, tdir)
+    # a local/website copy of a call replaces an NSE cover letter for the same quarter
+    good = {m["quarter"] for m in manifest.values() if not m.get("skip")}
+    for m in manifest.values():
+        if m.get("cover_letter_only") and m["quarter"] in good - {None}:
+            m["replaced_by_local"] = True
     out = sorted(manifest.values(), key=lambda m: m["call_date"])
+    for m in out:   # entries written by v1 lack the flags
+        m.setdefault("skip", m.get("words", 9999) < 1500)
     C.save_json(mpath, out)
     print("manifest:", mpath, len(out), "calls")
 

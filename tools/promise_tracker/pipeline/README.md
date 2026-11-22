@@ -14,6 +14,25 @@ fetch.py ──> turns.py ──> candidates.py ──> llm_extract.py ──> s
 ```
 `run.py` chains all six stages. `validate.py` compares any stage with a manual ledger.
 
+## v1.1 changes (2026-11-22, FEDERALBNK dry run: first bank)
+- **Cover-letter transcripts:** many banks file only a letter on NSE saying the transcript is on their website.
+  `fetch.py` now marks these `cover_letter_only` (not "scanned") and skips them; download the website PDF and pass
+  `--local PDF@YYYY-MM-DD` (repeatable, also on `run.py`); it replaces the cover letter for that quarter.
+- **Quarter labels:** 7-day lag (banks report in 12–20 days) and a quarter named in the transcript wins.
+- **Bank measures** in `score.py`: nim_pct, credit_cost_pct, gnpa_pct, nnpa_pct, slippage_pct, pcr_pct,
+  cost_income_pct, cod_pct, cof_pct, yield_advances_pct, casa_ratio_pct, roa_pct, roe_pct, cet1_pct, crar_pct,
+  cd_ratio_pct, loan/deposit/casa/fee growth. bps targets are parsed ("40-50 bps" → 0.40–0.50%); ratios use a
+  5-bp (tight) or 0.3-pp (wide) tolerance; segment growth and multi-year CAGRs are left to judgment.
+  v1 mapped "net interest margin 3.2%" to finance cost (a false miss).
+- **`bank_kpis.py`** builds the `--csv` from NSE integrated-filing XBRL (GNPA/NNPA %, CET1, RoA, NII, opex,
+  provisions, EPS) plus a `--manual` CSV of deck KPIs (company definitions). Screener's bank page lacks these.
+- **Bug fixes (all companies):** "18-20%" was parsed as −20% (dash read as a minus sign); chains now compare the
+  ceiling for lower-is-better measures and treat "by FY28" → "at some point" as a goalpost move; a *pending*
+  original target is no longer pre-judged moved-goalpost (flag `goalpost_flag`, resolve at its deadline). On the
+  19-Nov pilot seeds: SKIPPER auto moved-goalposts 12 → 9 and restatements 4 → 7, statuses otherwise unchanged;
+  UNIPARTS unchanged.
+- Candour heuristic no longer treats "slippage(s)" as an admission; bank categories added to the LLM prompt.
+
 ## Usage
 ```bash
 cd tools/promise_tracker/pipeline

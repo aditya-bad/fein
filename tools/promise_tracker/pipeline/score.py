@@ -46,10 +46,22 @@ import common as C  # noqa: E402
 import financials as F  # noqa: E402
 
 DERIVED_CAPEX = [False]
-LOWER_BETTER = {"finance_cost_pct_revenue", "debtor_days", "borrowings_cr"}
+# v1.1 (2026-11-22, FEDERALBNK dry run): bank/NBFC measures. Screener's bank page has no NIM, credit
+# cost, GNPA, CASA or loan book, so these are scored ONLY from a --csv built from the investor
+# presentation / results PDF (one row per number; see financials.py). Field name = measure name
+# for ratios; growth measures read the level fields advances / deposits / casa / fee_income.
+BANK_TIGHT = {"nim_pct", "credit_cost_pct", "gnpa_pct", "nnpa_pct", "roa_pct", "slippage_pct", "cod_pct",
+              "cof_pct", "yield_advances_pct"}                # 5 bps matters: delivered within 0.05 pp, partly 0.15 pp
+BANK_WIDE = {"roe_pct", "cost_income_pct", "casa_ratio_pct", "pcr_pct", "cet1_pct", "crar_pct", "cd_ratio_pct"}
+BANK_GROWTH = {"loan_growth_yoy_pct": "advances", "deposit_growth_yoy_pct": "deposits",
+               "casa_growth_yoy_pct": "casa", "fee_growth_yoy_pct": "fee_income"}
+BANK_MEASURES = BANK_TIGHT | BANK_WIDE | set(BANK_GROWTH)
+LOWER_BETTER = {"finance_cost_pct_revenue", "debtor_days", "borrowings_cr",
+                "credit_cost_pct", "gnpa_pct", "nnpa_pct", "slippage_pct", "cod_pct", "cof_pct", "cost_income_pct"}
 PP_MEASURES = {"ebitda_margin_pct", "ebitda_margin_incl_oi_pct", "finance_cost_pct_revenue", "roce_pct",
                "dividend_payout_pct"}
-GROWTH_MEASURES = {"revenue_growth_yoy_pct", "revenue_qoq_pct", "pat_growth_yoy_pct"}
+GROWTH_MEASURES = {"revenue_growth_yoy_pct", "revenue_qoq_pct", "pat_growth_yoy_pct"} | set(BANK_GROWTH)
+PP_MEASURES |= BANK_WIDE
 SEGMENT_RX = re.compile(r"segment|division|polymer|engineering|infra|export|aftermarket|small[\s-]ag|large ag|"
                         r"construction|mexico|fabrication|warehouse|order|utili[sz]ation|capacity|share of|mix|epc|"
                         r"substation|pipes|tonne|\busd\b|\$|normali[sz]ed|ex-fx|through[\s-]the[\s-]cycle|cagr|"
@@ -84,6 +96,21 @@ def parse_target(text):
         comp = ">="
     if re.search(r"(^|\s)(<|<=|≤|below|under|at most|max|less than|within)", head, re.I):
         comp = "<="
+    bps = re.findall(r"([+-]?\d+(?:\.\d+)?)\s*(?:bps|bp\b|basis points?)", head, re.I)
+    if bps and not re.search(r"\d\s*%", head):   # '40-50 bps' -> 0.40-0.50 %  (bank credit cost / NIM)
+        mr = re.search(r"(\d+(?:\.\d+)?)\s*(?:bps)?\s*(?:-|to)\s*(\d+(?:\.\d+)?)\s*(?:bps|bp\b|basis)", head, re.I)
+        vals = [float(mr.group(1)) / 100, float(mr.group(2)) / 100] if mr else [abs(float(x)) / 100 for x in bps[:1]]
+        rng = len(vals) == 2
+        lo, hi = (min(vals), max(vals)) if rng else (vals[0], vals[0])
+        if re.search(r"\b(up|down|improve|expan|compress|reduc|declin|fall|rise|increase|decrease)\w*", head, re.I):
+            return None   # a CHANGE in bps ('NIM up 5 bps') is not a level target: leave to judgment
+        return lo, hi, "%", ("range" if rng and comp == "~" else comp)
+    # v1.1: '18-20%' / '3.2-3.3%' / '3.2 to 3.3%' (no % on the first number). v1 read the dash as a
+    # minus sign and returned (-20, -20). A leading sign is kept only when spaced or explicit (+/-x% to -y%).
+    m = re.search(r"(?<![\d.])([+-]?\d+(?:\.\d+)?)\s*%?\s*(?:-|to)\s*([+-]?\d+(?:\.\d+)?)\s*%", head)
+    if m and not re.match(r"[+-]", m.group(2)) or (m and re.search(r"\bto\b", m.group(0))):
+        a_, b_ = float(m.group(1)), float(m.group(2))
+        return min(a_, b_), max(a_, b_), "%", ("range" if comp == "~" else comp)
     pcts = re.findall(r"([+-]?\d+(?:\.\d+)?)\s*%", head)
     if pcts:
         vals = [float(x) for x in pcts[:2]]
@@ -112,11 +139,64 @@ def parse_target(text):
     return None
 
 
+BANK_RX = [   # order matters: specific before generic. Matched on the METRIC text first.
+    (r"\bnim\b|net interest margin", "nim_pct"),
+    (r"credit cost|\bloan loss provision", "credit_cost_pct"),
+    (r"slippage", "slippage_pct"),
+    (r"\bgnpa\b|gross npa|gross non[\s-]performing", "gnpa_pct"),
+    (r"\bnnpa\b|net npa|net non[\s-]performing", "nnpa_pct"),
+    (r"\bpcr\b|provision coverage", "pcr_pct"),
+    (r"cost[\s-]to[\s-]income|cost[\s/]income|\bc/i\b", "cost_income_pct"),
+    (r"cost of deposits?|\bcod\b", "cod_pct"),
+    (r"cost of funds?|\bcof\b", "cof_pct"),
+    (r"yield on (advances|loans)", "yield_advances_pct"),
+    (r"\bcasa\b.*(growth|grow)", "casa_growth_yoy_pct"),
+    (r"\bcasa\b", "casa_ratio_pct"),
+    (r"\broa\b|return on (average )?assets", "roa_pct"),
+    (r"\broe\b|return on (average )?equity", "roe_pct"),
+    (r"\bcet[\s-]?1\b|common equity tier", "cet1_pct"),
+    (r"\bcrar\b|capital adequacy", "crar_pct"),
+    (r"\bcd ratio\b|credit[\s-]to[\s-]deposit|credit[\s-]deposit", "cd_ratio_pct"),
+    (r"(loan|advances?|credit|book) growth|grow (the )?(loan|advances|book)", "loan_growth_yoy_pct"),
+    (r"deposit growth|grow (the )?deposits", "deposit_growth_yoy_pct"),
+    (r"fee (income )?growth", "fee_growth_yoy_pct"),
+]
+
+
+BANK_SEGMENT_RX = re.compile(r"corporate|\bcib\b|retail|gold|\bsme\b|msme|business banking|\bbub\b|personal|card|\blap\b|"
+                             r"housing|home loan|vehicle|cv/ce|micro|mfi|agri|segment|commercial banking|wholesale|nri|\bnr\b|fcnr", re.I)
+
+
+def infer_bank_measure(metric, text):
+    """Segment growth ("corporate book growth") and multi-year CAGRs are NOT the bank-level measure.
+    Bank/NBFC KPI from the metric text (fallback: metric+target). Without this, 'net interest
+    margin ~3.2%' matched the 'interest + %' finance-cost rule and was scored as interest/revenue."""
+    for src in (metric, text):
+        tl = src.lower()
+        for rx, m in BANK_RX:
+            if re.search(rx, tl):
+                if m.endswith("growth_yoy_pct") and re.search(r"x of|\dx\b|times|multiple of|gdp|industry|system",
+                                                              text.lower()):
+                    return None   # relative-to-system growth: judgment item
+                if m.endswith("growth_yoy_pct") and (BANK_SEGMENT_RX.search(metric) or
+                                                     re.search(r"cagr|\d\s*(-|to)\s*\d\s*years|years\)", text.lower())):
+                    return None   # segment growth or multi-year CAGR: judgment / segment CSV
+                if m in ("casa_ratio_pct",) and re.search(r"nri|\bnr\b", metric.lower()):
+                    return None
+                return m
+        if src is metric and metric.strip():
+            continue
+    return None
+
+
 def infer_measure(p):
     if p.get("measure"):
         return p["measure"], "given"
     text = " ".join(str(p.get(k) or "") for k in ("metric", "target"))
     metric = str(p.get("metric") or "")
+    bm = infer_bank_measure(metric, text)
+    if bm:
+        return bm, "inferred (bank)"
     if SEGMENT_RX.search(metric) or SEGMENT_RX.search(str(p.get("target") or "")[:40]):
         return None, "segment/non-financial or company-defined metric"
     tl = text.lower()
@@ -228,9 +308,46 @@ def year_ago(d):
     return dt.date(d.year - 1, d.month, d.day if not (d.month == 2 and d.day == 29) else 28)
 
 
+def bank_actual(fin, measure, kind, end):
+    """Bank KPIs from the --csv. Ratios: the FY row if given, else the mean of the four quarterly
+    (annualised) values; Q -> the quarter row. Growth: level field at period end vs a year earlier
+    (Q rows first, then BS rows)."""
+    if measure in BANK_GROWTH:
+        fld = BANK_GROWTH[measure]
+        def lvl(d):
+            for k in ("Q", "BS", "FY"):
+                v = fin.get(k, {}).get(d, {}).get(fld)
+                if v is not None:
+                    return v
+            return None
+        if fld == "fee_income" and kind == "FY":
+            a, b = _sum_q(fin, end, 4, fld), _sum_q(fin, year_ago(end), 4, fld)
+        else:
+            a, b = lvl(end), lvl(year_ago(end))
+        return (100 * (a / b - 1), f"{fld} {a:g} vs {b:g} (CSV)") if a and b else (None, f"{fld} missing in CSV")
+    if kind == "Q":
+        v = fin.get("Q", {}).get(end, {}).get(measure)
+        return (v, f"{measure} Q (CSV)") if v is not None else (None, f"{measure} missing in CSV")
+    v = fin.get("FY", {}).get(end, {}).get(measure)
+    if v is not None:
+        return v, f"{measure} FY (CSV)"
+    if kind in ("FY", "H", "TTM"):
+        n = 2 if kind == "H" else 4
+        ds, d = [], end
+        for _ in range(n):
+            ds.append(d)
+            d = _prev_q(d)
+        vals = [fin.get("Q", {}).get(x, {}).get(measure) for x in ds]
+        if all(x is not None for x in vals):
+            return sum(vals) / n, f"mean of {n} quarterly {measure} (CSV; approximates the period ratio)"
+    return None, f"{measure} missing in CSV"
+
+
 def actual_for(fin, measure, kind, end):
     """-> (value, detail) or (None, reason)"""
     pv = lambda f, k=kind, e=end: period_value(fin, k, e, f)  # noqa: E731
+    if measure in BANK_MEASURES:
+        return bank_actual(fin, measure, kind, end)
     try:
         if measure == "revenue_growth_yoy_pct":
             a, b = pv("sales"), pv("sales", kind, year_ago(end))
@@ -297,6 +414,12 @@ def judge(measure, actual, lo, hi, comp):
         rel = (actual - tgt) / abs(tgt) * (-1 if lower_better else 1)
         st = "delivered" if rel >= -0.001 else "partly" if rel >= -0.025 else "missed"
         return st, round(rel, 3), "explicit floor/ceiling: delivered if met, partly within 2.5% relative"
+    if measure in BANK_TIGHT and comp not in (">=", "<="):
+        gap = actual - tgt if not lower_better else tgt - actual
+        if comp == "range" and lo is not None and hi is not None and lo <= actual <= hi:
+            gap = 0.0
+        st = "delivered" if gap >= -0.05 else "partly" if gap >= -0.15 else "missed"
+        return st, round(gap, 3), "bank ratio pp: delivered within 0.05pp (5 bps), partly within 0.15pp"
     if measure in GROWTH_MEASURES:
         gap = actual - tgt if not lower_better else tgt - actual
         td, tp = max(0.5, 0.05 * abs(tgt)), max(2.0, 0.20 * abs(tgt))
@@ -475,7 +598,7 @@ def link_chains(promises):
                 ch["change"] = change
                 if change == "same":
                     ch["restates"], ch["supersedes"] = prev["id"], None
-                elif change in ("lowered", "deadline_pushed", "lowered+deadline_pushed") \
+                elif any(x in change.split("+") for x in ("lowered", "deadline_pushed", "deadline_dropped")) \
                         and not p.get("acknowledges_revision"):
                     ch["goalpost_move"] = True
                     moves += 1
@@ -518,16 +641,22 @@ def _tgt(p):
 def compare(a, b):
     ta, tb = _tgt(a), _tgt(b)
     da, db = str(a.get("deadline"))[:10], str(b.get("deadline"))[:10]
-    lower_better = (a.get("auto", {}).get("measure") in LOWER_BETTER)
+    meas = a.get("auto", {}).get("measure")
+    lower_better = meas in LOWER_BETTER
     out = []
-    if ta and tb and ta[0] is not None and tb[0] is not None:
-        la, lb = ta[0], tb[0]
-        tol = max(0.5, 0.03 * abs(la))
+    # v1.1 (FEDERALBNK): for lower-is-better measures the binding number is the CEILING (cost-to-income
+    # 52.5-53.5 -> 53-55 -> 53-56 is a lowered bar); v1 compared the floors and saw "same".
+    ia = 1 if lower_better and ta and len(ta) > 1 and ta[1] is not None and tb and len(tb) > 1 and tb[1] is not None else 0
+    if ta and tb and ta[ia] is not None and tb[ia] is not None:
+        la, lb = ta[ia], tb[ia]
+        tol = 0.02 if meas in BANK_TIGHT else 0.25 if meas in BANK_WIDE else max(0.5, 0.03 * abs(la))   # bank ratios: bps / 25 bps
         if (lb < la - tol and not lower_better) or (lb > la + tol and lower_better):
             out.append("lowered")
         elif (lb > la + tol and not lower_better) or (lb < la - tol and lower_better):
             out.append("raised")
     vague = "vague" in (str(a.get("deadline_precision")), str(b.get("deadline_precision")))
+    if str(b.get("deadline_precision")) == "vague" and str(a.get("deadline_precision")) not in ("vague", "None", ""):
+        out.append("deadline_dropped")   # v1.1: "36% in 3 years" -> "36% at some point" is a goalpost move
     if b.get("restates_earlier") and "lowered" not in out:
         return "same"  # speaker says 'maintained'; only a lower number overrides that
     try:
@@ -548,7 +677,12 @@ def apply_chain_rule(p):
     moved goalpost, unless the original target was met anyway; an acknowledged cut = withdrawn."""
     st = p.get("auto", {}).get("status")
     final, basis = st, "numbers"
-    if p.get("superseded_by_goalpost") and st != "delivered":
+    if p.get("superseded_by_goalpost") and st in ("pending", "awaiting-data"):
+        # v1.1 (FEDERALBNK): the original target is not due yet, so "not met" is unknown. Keep it pending,
+        # flag the quiet revision, and resolve it at the ORIGINAL deadline against the ORIGINAL target.
+        final, basis = st, "goalpost moved before deadline (provisional flag) by " + ", ".join(p["superseded_by_goalpost"][:3])
+        p["goalpost_flag"] = True
+    elif p.get("superseded_by_goalpost") and st != "delivered":
         final, basis = "moved-goalpost", "chain: quietly lowered/re-dated by " + ", ".join(p["superseded_by_goalpost"][:3])
     elif p.get("withdrawn_by") and st != "delivered":
         final, basis = "withdrawn", "chain: acknowledged revision " + ", ".join(p["withdrawn_by"][:3])

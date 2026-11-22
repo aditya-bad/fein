@@ -46,5 +46,20 @@ The input is JSON. Lines that start with `#` or `//` are comments. `--json` dump
 - Use the **economic** margin: pre-Ind AS 116 for Indian retailers, core (ex other income) for cash-rich companies, and after SBC.
 - Every input needs a source tag or an `[EST]` with its method in `notes` (stock-research-analyst rule).
 
+## Bank / NBFC mode (v1.1, 2026-11-22)
+Lenders are valued on book and ROE, not revenue/EBIT/FCF. Put `"mode": "bank"` in the input
+(`worksheet.py --template --mode bank` prints the template); `bank.py` does the work and returns the same result
+keys, so `decision_card.py` reads it unchanged.
+- Book is **fully diluted** first (`dilution`: warrant/QIP shares and the cash still to come; `book_adjustments`:
+  money already in reserves, e.g. warrant subscriptions).
+- (a) ROE needed forever `g + P/B × (CoE − g)`; ROE needed for N years then only CoE; **implied CoE at today's ROE**
+  `g + (ROE − g) ÷ P/B`; justified P/B on the base case; base-case IRR.
+- (b) Residual-income scenarios: ROE fades linearly `roe_start → roe_end`; `B_t = B_(t-1)(1 + ROE_t(1 − payout))`;
+  `TV = (ROE_T − CoE)·B_N ÷ (CoE − g)`; 5-yr multiple = (BVPS₅ × exit P/B + dividends) ÷ price, next to the
+  RIM-consistent P/B at year 5 (`"exit_pb": "rim"` uses it).
+- (c) twin engine on book; (d) P/B vs own history (`pb_history`, n ≥ 5) and peers (`sector_pbs`); (e) book stress
+  (+1/2/3/5% loan loss as % of book, leverage); (f) CoE × long-run ROE grid and justified P/B.
+- Example: `examples/FEDERALBNK.json` (dry run, TEST MATERIAL).
+
 ## Examples (TEST MATERIAL, no verdict)
 `examples/VMM.json`, `examples/CUMMINSIND.json` and `examples/FIVE.json` take their figures from the three practice deep dives. Their outputs are `examples/*_worksheet.md` and `*_worksheet.json`. `examples/SYNTHETIC.json` is a **fictional** company that only exists to test the code path where every gate clears.

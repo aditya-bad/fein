@@ -50,13 +50,16 @@ def main(argv=None):
     ap.add_argument("--as-of")
     ap.add_argument("--roster")
     ap.add_argument("--tags", default="")
+    ap.add_argument("--local", action="append", default=[], metavar="PDF@YYYY-MM-DD",
+                    help="transcript PDF from the company website (banks often file only a cover letter on NSE)")
     a = ap.parse_args(argv)
     sym = a.symbol.upper()
     cache = C.cache_root(a.cache)
     out = a.out or C.sym_dir(cache, sym, "out")
     os.makedirs(out, exist_ok=True)
     co = ["--cache", cache]
-    fetch.main([sym, "--since", a.since] + co + (["--refresh"] if a.refresh_list else []))
+    fetch.main([sym, "--since", a.since] + co + (["--refresh"] if a.refresh_list else [])
+               + sum((["--local", x] for x in a.local), []))
     turns.main([sym] + co + (["--roster", a.roster] if a.roster else []))
     candidates.main([sym] + co + ["--emit-prompts", os.path.join(out, "prompts")])
     if a.no_llm:

@@ -103,14 +103,41 @@ def quarter_end_of(d):
     return quarter_end(q, fy)
 
 
-def reported_quarter_for_call(call_date):
-    """Earnings call held in month m discusses the quarter that ended before it."""
-    # the latest quarter that ended at least ~20 days before the call
-    d = call_date - dt.timedelta(days=20)
+def reported_quarter_for_call(call_date, text=None):
+    """Earnings call held in month m discusses the quarter that ended before it.
+    v1.1 (2026-11-22, FEDERALBNK dry run): banks report 12-20 days after quarter-end, so the old
+    20-day lag labelled a 16-Oct call as Q1. The lag is now 7 days, and a quarter named in the
+    transcript's first pages ("Q2 FY27", "quarter ended September 30, 2026") wins when it is
+    consistent with the call date (quarter-end before the call, at most ~100 days earlier)."""
+    if text:
+        hint = quarter_from_text(text, call_date)
+        if hint:
+            return hint
+    d = call_date - dt.timedelta(days=7)
     qe = quarter_end_of(d)
     if qe > d:
         qe = quarter_end_of(qe - dt.timedelta(days=92))
     return fq_of(qe)
+
+
+_QFY = re.compile(r"\bQ\s?([1-4])\s?[-' ]?\s?FY\s?'?(\d{2,4})\b", re.I)
+_QENDED = re.compile(r"(?:quarter|half[\s-]year|year)\s+ended\s+(?:on\s+)?(?:the\s+)?", re.I)
+
+
+def quarter_from_text(text, call_date):
+    """Most frequent 'QnFYyy' (or 'quarter ended <date>') in the first ~8k chars whose quarter-end
+    lies 0-100 days before the call; None if absent or inconsistent."""
+    head = text[:8000]
+    votes = {}
+    for m in _QFY.finditer(head):
+        q, fy = int(m.group(1)), int(m.group(2)) % 100
+        votes[(q, 2000 + fy)] = votes.get((q, 2000 + fy), 0) + 1
+    for pos, d in find_dates(head):
+        if _QENDED.search(head[max(0, pos - 40):pos]) and (d.month, d.day) in ((3, 31), (6, 30), (9, 30), (12, 31)):
+            k = fq_of(d)
+            votes[k] = votes.get(k, 0) + 1
+    ok = [(n, k) for k, n in votes.items() if 0 <= (call_date - quarter_end(*k)).days <= 100]
+    return max(ok)[1] if ok else None
 
 
 def qlabel(q, fy):

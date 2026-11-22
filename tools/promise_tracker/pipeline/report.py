@@ -41,9 +41,10 @@ SPEC_W = {"precise": 3, "range": 2, "vague": 1}
 SHORTFALL = {"partly", "missed", "moved-goalpost", "silently-dropped", "withdrawn"}
 ALIASES = {"partially_delivered": "partly", "moved_goalpost": "moved-goalpost", "silent_drop": "silently-dropped",
            "silently_dropped": "silently-dropped", "open": "pending"}
-EXEC_CATS = {"capacity_commissioning", "customer_win", "m&a", "new_product", "approval_regulatory"}
+# v1.1: "slipp\w*" removed - for banks "slippages" is a routine KPI, not an admission (FEDERALBNK dry run)
+EXEC_CATS = {"capacity_commissioning", "customer_win", "m&a", "new_product", "approval_regulatory", "network", "fundraise"}
 SHORT_WORDS = re.compile(r"lower than (expected|anticipated|guided)|below (our )?(expect|guid|target)|short of|"
-                         r"\bmiss(ed)?\b|delay\w*|slipp\w*|could not|couldn't|did not (meet|achieve|reach)|"
+                         r"\bmiss(ed)?\b|delay\w*|slipped|slipping|could not|couldn't|did not (meet|achieve|reach)|"
                          r"unfortunately|disappoint\w*|not (been )?able to|fell short|shortfall|revis\w+ (down|our)|"
                          r"lower(ed)? (our )?guidance|cut (our )?guidance|not as (high|strong)|softer than|adverse(ly)? impact|"
                          r"lower[\s-]than|took longer|taking longer|pushed (out|back)|deferred|postpone\w*", re.I)

@@ -21,6 +21,9 @@ python3 tools/decision/decision_card.py my_card.json -o card.md --calls paper_ca
 | `base_rates.json` | The reference classes shown next to every probability, each with its source and biases. `null` means no honest number on file |
 | `examples/` | Cards for VMM, CUMMINSIND and US-FIVE (TEST MATERIAL, no verdict), plus a fictional SYNTHETIC card that exercises the path where every gate clears |
 
+Bank/NBFC worksheets (`"mode": "bank"`, v1.1) are supported: the stage-5 block then reports reverse P/B, implied CoE,
+residual-income scenarios, P/B temperature and book stress. Example: `examples/FEDERALBNK_card.json` (practice).
+
 ## Card fields
 These come in this order: thesis in one line → variant view → what the price implies (stage 5) → stage 2 hard filters and graded
 flags → stage 3 signals (PEAD avoid flag, sector-adjusted credibility, detector alerts) → stage 4 soft flags and

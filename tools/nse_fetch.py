@@ -14,7 +14,8 @@ Usage:
   python3 tools/nse_fetch.py pledge [KPITTECH]                 # omit symbol = all cos
   python3 tools/nse_fetch.py sast KPITTECH
   python3 tools/nse_fetch.py insider KPITTECH                  # PIT Reg 7 disclosures
-  python3 tools/nse_fetch.py results KPITTECH                  # quarterly result filings
+  python3 tools/nse_fetch.py results KPITTECH                  # quarterly result filings (old feed; stale after Q3 FY25)
+  python3 tools/nse_fetch.py integrated KPITTECH               # integrated filings since Q3 FY25 (XBRL links)
   python3 tools/nse_fetch.py bulk --from 01-11-2026 --to 19-11-2026
   python3 tools/nse_fetch.py block --from 01-11-2026 --to 19-11-2026
 Options: --out FILE (write JSON), --raw (print full JSON instead of a summary).
@@ -83,6 +84,11 @@ COMMANDS = {
                              from_date=a.frm, to_date=a.to),
     "results": lambda a: api("corporates-financial-results", index="equities",
                              symbol=a.symbol, period="Quarterly"),
+    # 2026-11-22 (FEDERALBNK dry run): "results" stops at the Dec-2024 quarter for many symbols; filings since
+    # Q3 FY25 are "Integrated Filing- Financials" (XBRL incl. bank GNPA/NNPA %, CET1, RoA). Banks file a
+    # balance sheet only at Sep/Mar quarter-ends.
+    "integrated": lambda a: api("integrated-filing-results", index="equities", symbol=a.symbol,
+                                type="Integrated Filing- Financials"),
     "bulk": lambda a: api("historicalOR/bulk-block-short-deals", optionType="bulk_deals",
                           symbol=a.symbol, **{"from": a.frm, "to": a.to}),
     "block": lambda a: api("historicalOR/bulk-block-short-deals", optionType="block_deals",
@@ -112,7 +118,9 @@ def main():
     else:
         print(f"{a.cmd}: {len(rows) if hasattr(rows, '__len__') else '?'} rows")
         for r in (rows[:15] if isinstance(rows, list) else []):
-            if a.cmd in ("announcements", "transcripts"):
+            if a.cmd == "integrated":
+                print(r.get("qe_Date"), "|", r.get("consolidated"), "|", r.get("broadcast_Date"), "|", r.get("xbrl"))
+            elif a.cmd in ("announcements", "transcripts"):
                 print(r.get("an_dt"), "|", r.get("symbol"), "|", r.get("desc"), "|",
                       (r.get("attchmntText") or "")[:90], "|", r.get("attchmntFile"))
             else:

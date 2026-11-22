@@ -34,9 +34,10 @@ import argparse
 import datetime as _dt
 import json
 import math
+import os
 import sys
 
-VERSION = "1.0 (2026-11-21)"
+VERSION = "1.1 (2026-11-22; adds bank mode via bank.py)"
 
 MARKET_DEFAULTS = {
     # cost of equity, terminal growth, hurdle CAGR (what an index fund is assumed to earn)
@@ -101,10 +102,18 @@ TEMPLATE = {
 
 # ----------------------------------------------------------------------------- input
 
+def _bank():
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import bank  # noqa: E402  (v1.1: bank/NBFC mode, P/B-ROE + residual income)
+    return bank
+
+
 def load_input(path):
     with open(path, encoding="utf-8") as f:
         lines = [ln for ln in f if not ln.lstrip().startswith(("#", "//"))]
     d = json.loads("".join(lines))
+    if str(d.get("mode", "")).lower() in ("bank", "nbfc", "lender"):
+        return _bank().normalise(d, MARKET_DEFAULTS)
     return normalise(d)
 
 
@@ -544,6 +553,8 @@ def sensitivity(d):
 
 
 def run(d):
+    if d.get("mode") in ("bank", "nbfc", "lender"):
+        return _bank().run(d, _band, MIN_HISTORY_POINTS, NIFTY_BANDS)
     price = d["price"]
     b = d["base"]
     mcap = price * d["shares"]
@@ -581,6 +592,9 @@ def mult(x):
 
 
 def render(res, heading_level=2):
+    if res.get("mode") == "bank":
+        return _bank().render(res, heading_level, pct, num, mult,
+                              MARKET_DEFAULTS[res["input"]["market"]]["coe_range"])
     d = res["input"]
     H = "#" * heading_level
     h = "#" * (heading_level + 1)
@@ -804,10 +818,12 @@ def main(argv=None):
     ap.add_argument("-o", "--out", help="write the Markdown section to this file")
     ap.add_argument("--json", help="also write machine-readable results to this file")
     ap.add_argument("--template", action="store_true", help="print a blank input template")
+    ap.add_argument("--mode", choices=["default", "bank"], default="default",
+                    help="with --template: 'bank' prints the bank/NBFC (P/B-ROE, residual income) template")
     ap.add_argument("--level", type=int, default=2, help="Markdown heading level (default 2)")
     a = ap.parse_args(argv)
     if a.template:
-        print(json.dumps(TEMPLATE, indent=2))
+        print(json.dumps(_bank().TEMPLATE if a.mode == "bank" else TEMPLATE, indent=2))
         return 0
     if not a.input:
         ap.error("input file required (or --template)")

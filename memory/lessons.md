@@ -153,3 +153,12 @@ Valuation worksheet on 3 practice names: at 12–13% cost of equity a DCF can ju
 2–3× what the DCF justifies. **Rule:** judge Indian compounders on the return the price offers in the base case vs
 the index hurdle, and state the exit multiple explicitly as a bet. Practice paper calls from templates are NOT
 added to the stage-7 scoreboard (live cards only).
+
+## L22 (2026-11-22) — End-to-end dry runs find real bugs; for banks the flattering numbers mislead most
+Federal Bank dry run (stages 2→6, practice, no verdict): 19 gaps found, 14 fixed. Biggest: range parsing read
+"18–20%" as −20% (affected SKIPPER pending targets; re-scored: no status changed, goalpost moves 12→10);
+NIM scored as cost/revenue; bank transcripts on NSE are cover letters only; no bank valuation mode (added P/B–ROE).
+Good-but-misleading rows outnumbered bad-but-benign 10 to 6: retail loan growth 18% → 4% ex special FCNR window;
+GNPA "10-year low" helped by write-offs > slippages; PCR 87% → 76.6% ex one-off; ROE 13.6% → ~10% after warrants.
+**Rule:** run a full dry run whenever a new sector type enters the pipeline; for banks always strip special
+windows, write-offs and one-offs before trusting headline asset-quality and growth numbers.

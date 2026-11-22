@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Step 6: outcomes + per-flag statistics with CIK-clustered bootstrap; verdict per the pre-registered rule.
 Writes BASE/panel.jsonl, BASE/results.json and prints markdown tables."""
-import json, sys
+import json, re, sys
 from datetime import date, datetime, timezone, timedelta
 import numpy as np
 sys.path.insert(0, __file__.rsplit("/", 1)[0])
@@ -108,9 +108,19 @@ def main():
     U = [json.loads(l) for l in open(p("universe.jsonl"))]
     ev = {(e["cik"], e["T"]): e for e in map(json.loads, open(p("events.jsonl")))}
     tick = {int(k): v for k, v in json.load(open(p("tickers.json"))).items()}
+    c301 = json.load(open(p("item301_class.json")))
+    GOV = re.compile(r"audit committee|independent director|annual meeting|compensation committee|board", re.I)
     panel = []
     for r in U:
         r.update(ev[(r["cik"], r["T"])]); r.update(price_outcome(r, tick[r["cik"]]))
+        # Deviation (documented in report): as-registered O_delist was dominated by voluntary exchange transfers.
+        # Revised: a substantive listing-rule failure notice (text-classified; governance-composition notices excluded)
+        # followed by a Form 25/15 in the window, no merger evidence.
+        k3 = c301.get(f"{r['cik']}|{r['T']}")
+        subst = [d for d in (k3 or {}).get("docs", []) if d["cause"] and not d["transfer"] and not GOV.search(d["snip"])]
+        r["O_delist_asreg"] = r["O_delist"]
+        r["O_delist"] = int(bool(subst) and r["delist_date"] is not None and r["delist_date"] >= subst[0]["date"])
+        r["O_fail_asreg"] = int(r["O_bk"] or r["O_delist_asreg"] or r["O_px"])
         r["O_fail"] = int(r["O_bk"] or r["O_delist"] or r["O_px"]); r["O_strict"] = int(r["O_bk"] or r["O_delist"])
         r["sens_ok"] = r["px_status"] == "full" or r["O_strict"] == 1 or r["O_px"] == 1
         panel.append(r)
@@ -133,7 +143,7 @@ def main():
     res = {}
     sets = {"pooled": panel, **{Ts: [r for r in panel if r["T"] == Ts] for Ts in SNAPS}}
     for nm, rs in sets.items():
-        for oc in ["O_fail", "O_strict"]:
+        for oc in (["O_fail", "O_strict", "O_fail_asreg"] if nm == "pooled" else ["O_fail", "O_strict"]):
             for f in FLAGS:
                 res[f"{nm}|{oc}|{f}"] = boot_stats(rs, f, oc, B=2000 if nm == "pooled" else 1000)
     sens = [r for r in panel if r["sens_ok"]]
@@ -153,7 +163,7 @@ def main():
     hdr = ("| Flag | known / fired | fired&fail / all fail | precision | base | lift [95% CI] | RR vs unflagged | recall | >3x winners excluded | median size-matched excess R5 (flagged) |\n"
            "|---|---|---|---|---|---|---|---|---|---|")
     for nm in list(sets) + ["sens_priced"]:
-        for oc in (["O_fail", "O_strict"] if nm in sets else ["O_fail"]):
+        for oc in ((["O_fail", "O_strict", "O_fail_asreg"] if nm == "pooled" else ["O_fail", "O_strict"]) if nm in sets else ["O_fail"]):
             print(f"\n### {nm} — {oc}\n" + hdr)
             for f in FLAGS:
                 print(row(f, res.get(f"{nm}|{oc}|{f}")))

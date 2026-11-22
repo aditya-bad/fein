@@ -292,6 +292,16 @@ def process_symbol(symbol, root, extra=None):
     man = C.load_json(os.path.join(sdir, "manifest.json"), [])
     if not man:
         raise SystemExit("no manifest; run fetch.py first")
+    skipped = [m for m in man if m.get("skip")]
+    for m in skipped:   # v1.1: cover letters / scanned PDFs produced junk turns ("Re", "Sub") in v1
+        print(f"skip {m['quarter']} {m['file']}: " + ("cover letter only" if m.get("cover_letter_only") else "scanned/too short"))
+    man = [m for m in man if not m.get("skip")]
+    # one call per quarter: prefer a local (website) copy over anything else
+    byq = {}
+    for m in man:
+        if m["quarter"] not in byq or m.get("source") == "local":
+            byq[m["quarter"]] = m
+    man = sorted(byq.values(), key=lambda m: m["call_date"])
     texts = {m["file"]: open(m["txt"], errors="replace").read() for m in man}
     roster = []
     for m in man:
