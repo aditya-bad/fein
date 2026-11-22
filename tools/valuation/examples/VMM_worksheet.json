@@ -1,0 +1,676 @@
+{
+ "input": {
+  "company": "Vishal Mega Mart",
+  "ticker": "VMM",
+  "market": "india",
+  "practice": true,
+  "currency": "INR",
+  "units": "INR cr",
+  "as_of": "2026-11-20",
+  "price": 91.5,
+  "shares": 468.3,
+  "net_debt": 0.0,
+  "base": {
+   "fy": "FY26",
+   "revenue": 12906.3,
+   "ebitda": 1271.0,
+   "ebit": 1076.8,
+   "pat": 839.2,
+   "fcf": null,
+   "pe_trailing": 47.7,
+   "sbc": 50.1,
+   "eps": 1.7920136664531283,
+   "eps_normalised": null,
+   "eps_forward": null
+  },
+  "tax_rate": 0.254,
+  "roiic": 0.3,
+  "terminal_roic": 0.25,
+  "years": 10,
+  "coe": 0.125,
+  "terminal_growth": 0.05,
+  "payout_of_fcf": 0.0,
+  "dispersion": 0.3,
+  "base_case": {
+   "name": "base",
+   "growth": 0.18,
+   "growth_end": 0.08,
+   "margin_end": 0.07,
+   "exit_pe": 35.0,
+   "roiic": 0.3,
+   "prob": 0.0
+  },
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.3,
+    "growth": 0.12,
+    "growth_end": 0.06,
+    "margin_end": 0.05,
+    "roiic": 0.2,
+    "exit_pe": 25.0
+   },
+   {
+    "name": "base",
+    "prob": 0.45,
+    "growth": 0.18,
+    "growth_end": 0.08,
+    "margin_end": 0.07,
+    "exit_pe": 35.0,
+    "roiic": 0.3
+   },
+   {
+    "name": "bull",
+    "prob": 0.23,
+    "growth": 0.22,
+    "growth_end": 0.1,
+    "margin_end": 0.08,
+    "roiic": 0.35,
+    "exit_pe": 45.0
+   }
+  ],
+  "blowup": {
+   "prob": 0.02,
+   "multiple": 0.15,
+   "note": "same brand failed once on debt-funded expansion (2009 CDR); today no bank debt, so blow-up needs a governance or density collapse"
+  },
+  "twin_engine": {
+   "targets": [
+    2,
+    3,
+    5
+   ],
+   "horizon": 5,
+   "hist_eps_cagr": 0.3,
+   "hist_eps_note": "FY24-26 (2 years only; IPO Dec-2024) [practice file]"
+  },
+  "pe_history": [
+   {
+    "date": "IPO year (FY25)",
+    "pe": 76
+   },
+   {
+    "date": "2026-11-20",
+    "pe": 47.7
+   }
+  ],
+  "sector_pes": {
+   "DMart": 73.5,
+   "V2 Retail": 36.7
+  },
+  "market_pe": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)"
+  },
+  "notes": [
+   "Price, market cap, P/E 47.7 [SCR 20-Nov-2026]. Shares 468.3 cr [EST: mcap 42,852 / 91.5].",
+   "Revenue 12,906 cr, PAT 839 cr, D&A 673 cr incl. ROU 479 cr [AR26]. EBITDA is PRE-Ind AS 116: 1,271 cr (9.8%) [AR26/HSIE], because rent is a real operating cost (protocol trap).",
+   "EBIT 1,077 cr [EST: pre-Ind AS EBITDA 1,271 - non-ROU D&A 194]. Tax 25.4% [EST: 1 - PAT/PBT]. ESOP cost 50 cr is already inside employee cost.",
+   "Net debt 0: bank debt nil [AR26, HSIE]; lease liabilities 1,988 cr excluded because rent is inside the pre-Ind AS margin; cash balance not in the practice file (understates value slightly).",
+   "FCF not in the practice file (capex 322 cr [HSIE]; CFO not recorded) - left null, so P/FCF and the Gordon check are n/a.",
+   "ROIIC 30% [EST]: between RoTE ~27% and HSIE ex-goodwill ROIC 57%; new-state stores at lower density argue for the low end.",
+   "Own P/E history: 2 points only (listed Dec-2024) -> own-median test impossible (practice file override table)."
+  ],
+  "sources": [
+   "research_notes/Deep dives/VMM_practice.md"
+  ],
+  "_warnings": [],
+  "non_operating_value": 0.0,
+  "other_income_recurring_post_tax": 0.0,
+  "treasury_income_post_tax": 0.0,
+  "hurdle_cagr": 0.12,
+  "nopat_margin": 0.06224036323345963,
+  "_nopat_margin_method": "base.ebit x (1 - tax) / revenue",
+  "_eps_method": "base.pat / shares"
+ },
+ "snapshot": {
+  "mcap": 42849.450000000004,
+  "ev": 42849.450000000004,
+  "pe": 47.7,
+  "ev_ebitda": 33.713178599527936,
+  "p_fcf": null,
+  "fcf_yield": null,
+  "ev_sales": 3.320041375142373
+ },
+ "base": {
+  "rows": [
+   {
+    "t": 1,
+    "g": 0.18,
+    "revenue": 15229.433999999997,
+    "margin": 0.06301632691011366,
+    "nopat": 959.7029915999998,
+    "reinv_rate": 0.6,
+    "fcf": 383.8811966399999,
+    "eps": 2.140938990967119
+   },
+   {
+    "t": 2,
+    "g": 0.1688888888888889,
+    "revenue": 17801.516186666664,
+    "margin": 0.0637922905867677,
+    "nopat": 1135.5994934648888,
+    "reinv_rate": 0.562962962962963,
+    "fcf": 496.2990378846551,
+    "eps": 2.53333505778507
+   },
+   {
+    "t": 3,
+    "g": 0.15777777777777777,
+    "revenue": 20610.19985167407,
+    "margin": 0.06456825426342173,
+    "nopat": 1330.7646244428283,
+    "reinv_rate": 0.5259259259259259,
+    "fcf": 630.8810071432667,
+    "eps": 2.968716256181947
+   },
+   {
+    "t": 4,
+    "g": 0.14666666666666667,
+    "revenue": 23633.029163252937,
+    "margin": 0.06534421794007578,
+    "nopat": 1544.2818082277665,
+    "reinv_rate": 0.48888888888888893,
+    "fcf": 789.2995908719695,
+    "eps": 3.445037855684885
+   },
+   {
+    "t": 5,
+    "g": 0.13555555555555554,
+    "revenue": 26836.61756093833,
+    "margin": 0.06612018161672982,
+    "nopat": 1774.4420271079634,
+    "reinv_rate": 0.45185185185185184,
+    "fcf": 972.6571111554763,
+    "eps": 3.9584873198244312
+   },
+   {
+    "t": 6,
+    "g": 0.12444444444444444,
+    "revenue": 30176.28552407732,
+    "margin": 0.06689614529338385,
+    "nopat": 2018.6771808333121,
+    "reinv_rate": 0.4148148148148148,
+    "fcf": 1181.2999798950495,
+    "eps": 4.50333564076557
+   },
+   {
+    "t": 7,
+    "g": 0.11333333333333333,
+    "revenue": 33596.264550139414,
+    "margin": 0.06767210897003789,
+    "nopat": 2273.5300756232555,
+    "reinv_rate": 0.37777777777777777,
+    "fcf": 1414.640935943359,
+    "eps": 5.071870389737202
+   },
+   {
+    "t": 8,
+    "g": 0.10222222222222221,
+    "revenue": 37030.549370820336,
+    "margin": 0.06844807264669193,
+    "nopat": 2534.6697334808227,
+    "reinv_rate": 0.34074074074074073,
+    "fcf": 1671.0044909614312,
+    "eps": 5.654429869585217
+   },
+   {
+    "t": 9,
+    "g": 0.09111111111111111,
+    "revenue": 40404.443869050636,
+    "margin": 0.06922403632334596,
+    "nopat": 2796.958690015754,
+    "reinv_rate": 0.30370370370370375,
+    "fcf": 1947.51197675171,
+    "eps": 6.239553245109469
+   },
+   {
+    "t": 10,
+    "g": 0.08,
+    "revenue": 43636.79937857469,
+    "margin": 0.07,
+    "nopat": 3054.5759565002286,
+    "reinv_rate": 0.26666666666666666,
+    "fcf": 2240.022368100168,
+    "eps": 6.8142548511172345
+   }
+  ],
+  "pv_fcf": 5427.697200005174,
+  "pv_tv": 10535.222863550354,
+  "tv_share": 0.6599809321605895,
+  "pv_oi": 0.0,
+  "ev": 15962.920063555528,
+  "equity": 15962.920063555528,
+  "value_ps": 34.08695294374446,
+  "cum_dist_ps_5y": 0.0,
+  "value5_ps": 59.914781809457715,
+  "dcf_pe5": 15.135777121073382,
+  "max_reinv_rate": 0.6
+ },
+ "reverse": {
+  "g_flat_margin": 0.31916646957397465,
+  "g_base_margin": 0.2995896720886231,
+  "g_fade_start": 0.5369897747039794,
+  "m_needed_base_growth": 0.20489722824096682,
+  "implied_coe_base": 0.0823569327545166,
+  "gordon_g_on_fcf": null,
+  "path_case": "fade",
+  "path": {
+   "rows": [
+    {
+     "t": 1,
+     "g": 0.5369897747039794,
+     "revenue": 19836.851129261966,
+     "margin": 0.06301632691011366,
+     "nopat": 1250.0454956288295,
+     "reinv_rate": 1.7899659156799312,
+     "fcf": -987.4933345960018,
+     "eps": 2.788645201170777
+    },
+    {
+     "t": 2,
+     "g": 0.48287979973687056,
+     "revenue": 29415.665829970098,
+     "margin": 0.0637922905867677,
+     "nopat": 1876.4927024287058,
+     "reinv_rate": 1.6095993324562352,
+     "fcf": -1143.9086987595358,
+     "eps": 4.186145534669057
+    },
+    {
+     "t": 3,
+     "g": 0.4287698247697617,
+     "revenue": 42028.21571337224,
+     "margin": 0.06456825426342173,
+     "nopat": 2713.6885184189555,
+     "reinv_rate": 1.4292327492325392,
+     "fcf": -1164.8039833217442,
+     "eps": 6.053791234657787
+    },
+    {
+     "t": 4,
+     "g": 0.3746598498026529,
+     "revenue": 57774.50070001779,
+     "margin": 0.06534421794007578,
+     "nopat": 3775.229565121023,
+     "reinv_rate": 1.248866166008843,
+     "fcf": -939.5269076749004,
+     "eps": 8.42191411985116
+    },
+    {
+     "t": 5,
+     "g": 0.3205498748355441,
+     "revenue": 76294.10966809455,
+     "margin": 0.06612018161672982,
+     "nopat": 5044.580387541114,
+     "reinv_rate": 1.0684995827851471,
+     "fcf": -345.55165187270205,
+     "eps": 11.2536263190646
+    },
+    {
+     "t": 6,
+     "g": 0.26643989986843525,
+     "revenue": 96621.90460861307,
+     "margin": 0.06689614529338385,
+     "nopat": 6463.632969221255,
+     "reinv_rate": 0.8881329995614509,
+     "fcf": 723.0672322024948,
+     "eps": 14.41929843735871
+    },
+    {
+     "t": 7,
+     "g": 0.2123299249013264,
+     "revenue": 117137.62635798301,
+     "margin": 0.06767210897003789,
+     "nopat": 7926.950215389009,
+     "reinv_rate": 0.7077664163377547,
+     "fcf": 2316.5210689553373,
+     "eps": 17.68371771696531
+    },
+    {
+     "t": 8,
+     "g": 0.15821994993421762,
+     "revenue": 135671.13573575616,
+     "margin": 0.06844807264669193,
+     "nopat": 9286.42775490024,
+     "reinv_rate": 0.5273998331140588,
+     "fcf": 4388.767306740089,
+     "eps": 20.716487748067543
+    },
+    {
+     "t": 9,
+     "g": 0.10410997496710883,
+     "revenue": 149795.85428096497,
+     "margin": 0.06922403632334596,
+     "nopat": 10369.473657832157,
+     "reinv_rate": 0.34703324989036277,
+     "fcf": 6770.921514702156,
+     "eps": 23.13258441848469
+    },
+    {
+     "t": 10,
+     "g": 0.050000000000000044,
+     "revenue": 157285.64699501323,
+     "margin": 0.07,
+     "nopat": 11009.995289650928,
+     "reinv_rate": 0.16666666666666682,
+     "fcf": 9174.996074709105,
+     "eps": 24.56148247144632
+    }
+   ],
+   "pv_fcf": 4876.012229453614,
+   "pv_tv": 37973.439113954955,
+   "tv_share": 0.8862059588493733,
+   "pv_oi": 0.0,
+   "ev": 42849.45134340857,
+   "equity": 42849.45134340857,
+   "value_ps": 91.50000286869222,
+   "cum_dist_ps_5y": 0.0,
+   "value5_ps": 168.10174101956932,
+   "dcf_pe5": 14.937562013658717,
+   "max_reinv_rate": 1.7899659156799312
+  }
+ },
+ "scenarios": {
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.3,
+    "growth": 0.12,
+    "growth_end": 0.06,
+    "margin_end": 0.05,
+    "roiic": 0.2,
+    "exit_pe": 25.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 11.991179284082696,
+    "value_ps": 18.54145969970917,
+    "value_vs_price": -0.7973610961780419,
+    "eps5": 2.681597577419253,
+    "eps_cagr5": 0.08395301436985059,
+    "dist_ps_5y": 0.0,
+    "mult5": 0.7326769337211073,
+    "tv_share": 0.6058862875331273
+   },
+   {
+    "name": "base",
+    "prob": 0.45,
+    "growth": 0.18,
+    "growth_end": 0.08,
+    "margin_end": 0.07,
+    "roiic": 0.3,
+    "exit_pe": 35.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 15.135777121073382,
+    "value_ps": 34.08695294374446,
+    "value_vs_price": -0.6274649951503338,
+    "eps5": 3.9584873198244312,
+    "eps_cagr5": 0.17175708497272102,
+    "dist_ps_5y": 0.0,
+    "mult5": 1.514175477528471,
+    "tv_share": 0.6599809321605895
+   },
+   {
+    "name": "bull",
+    "prob": 0.23,
+    "growth": 0.22,
+    "growth_end": 0.1,
+    "margin_end": 0.08,
+    "roiic": 0.35,
+    "exit_pe": 45.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 17.09018857922827,
+    "value_ps": 47.83946495899297,
+    "value_vs_price": -0.477164317388055,
+    "eps5": 4.952218192286569,
+    "eps_cagr5": 0.22543898020653552,
+    "dist_ps_5y": 0.0,
+    "mult5": 2.435517143747493,
+    "tv_share": 0.6974046246974391
+   }
+  ],
+  "blowup": {
+   "prob": 0.02,
+   "multiple": 0.15,
+   "note": "same brand failed once on debt-funded expansion (2009 CDR); today no bank debt, so blow-up needs a governance or density collapse"
+  },
+  "pw_value": 32.179143675166145,
+  "pw_vs_price": -0.6483153696703153,
+  "bear_value": 18.54145969970917,
+  "downside_bear": -0.7973610961780419,
+  "p_value_below_price": 1.0,
+  "p_ge_3x": 0.06112125291712059,
+  "p_ge_2x": 0.250879782151853,
+  "p_ge_5x": 0.0019132346127479496,
+  "p_le_half": 0.05046761357146044,
+  "p_blowup": 0.02,
+  "ev_mult5": 1.4643509880660674,
+  "ev_cagr5": 0.07926734487063358,
+  "median_mult5": 1.3969873726131021,
+  "hurdle_mult5": 1.7623416832000007
+ },
+ "twin": {
+  "pe0": 47.7,
+  "eps0": 1.9182389937106916,
+  "horizon": 5.0,
+  "exit_pes": [
+   23.9,
+   35.8,
+   47.7,
+   55.1
+  ],
+  "table": [
+   {
+    "target": 2,
+    "cells": [
+     {
+      "exit_pe": 23.9,
+      "eps_cagr": 0.3189553528274802,
+      "rerating_share": -0.9969786480247631
+     },
+     {
+      "exit_pe": 35.8,
+      "eps_cagr": 0.2165587021251536,
+      "rerating_share": -0.4140296787412554
+     },
+     {
+      "exit_pe": 47.7,
+      "eps_cagr": 0.1486983549970351,
+      "rerating_share": 0.0
+     },
+     {
+      "exit_pe": 55.1,
+      "eps_cagr": 0.11603895856593871,
+      "rerating_share": 0.2080630525656461
+     }
+    ]
+   },
+   {
+    "target": 3,
+    "cells": [
+     {
+      "exit_pe": 23.9,
+      "eps_cagr": 0.430369847611503,
+      "rerating_share": -0.6290234927142685
+     },
+     {
+      "exit_pe": 35.8,
+      "eps_cagr": 0.3193235704596389,
+      "rerating_share": -0.26122364317948993
+     },
+     {
+      "exit_pe": 47.7,
+      "eps_cagr": 0.2457309396155174,
+      "rerating_share": 0.0
+     },
+     {
+      "exit_pe": 55.1,
+      "eps_cagr": 0.21031274612163853,
+      "rerating_share": 0.13127317048256829
+     }
+    ]
+   },
+   {
+    "target": 5,
+    "cells": [
+     {
+      "exit_pe": 23.9,
+      "eps_cagr": 0.5842295016116861,
+      "rerating_share": -0.4293753326039698
+     },
+     {
+      "exit_pe": 35.8,
+      "eps_cagr": 0.4612383824952597,
+      "rerating_share": -0.17831287698051657
+     },
+     {
+      "exit_pe": 47.7,
+      "eps_cagr": 0.3797296614612149,
+      "rerating_share": 0.0
+     },
+     {
+      "exit_pe": 55.1,
+      "eps_cagr": 0.34050166240873914,
+      "rerating_share": 0.08960787934121592
+     }
+    ]
+   }
+  ],
+  "hist_eps_cagr": 0.3,
+  "hist_eps_note": "FY24-26 (2 years only; IPO Dec-2024) [practice file]"
+ },
+ "temperature": {
+  "pes": {
+   "trailing (given)": 47.7
+  },
+  "n_hist": 2,
+  "own_median": 61.85,
+  "sector_median": 55.1,
+  "sector": {
+   "DMart": 73.5,
+   "V2 Retail": 36.7
+  },
+  "rows": [
+   {
+    "basis": "trailing (given)",
+    "pe": 47.7,
+    "vs_own": null,
+    "own_band": "INSUFFICIENT HISTORY (n=2 < 5)",
+    "vs_sector": 0.8656987295825772,
+    "sector_band": "COOL"
+   }
+  ],
+  "market": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)",
+   "note": "around the long-run average"
+  }
+ },
+ "sensitivity": {
+  "coe_x_growth": {
+   "rows": [
+    [
+     0.105,
+     [
+      37.048130975603435,
+      42.8543826748916,
+      49.652341138145516,
+      57.59820471332198,
+      66.86926871318236
+     ]
+    ],
+    [
+     0.115,
+     [
+      30.868887816615914,
+      35.3748243820265,
+      40.625461844493,
+      46.735877295062366,
+      53.83638470692871
+     ]
+    ],
+    [
+     0.125,
+     [
+      26.359632587788486,
+      29.93785701428944,
+      34.08695294374446,
+      38.8933481319917,
+      44.45466158604273
+     ]
+    ],
+    [
+     0.135,
+     [
+      22.929678482723812,
+      25.81931238470164,
+      29.152716345771,
+      32.995600751159714,
+      37.42197123605705
+     ]
+    ],
+    [
+     0.145,
+     [
+      20.23713419710321,
+      22.600192682866336,
+      25.311393505309432,
+      28.421046804964003,
+      31.98562919720762
+     ]
+    ]
+   ],
+   "cols": [
+    -0.06,
+    -0.03,
+    0.0,
+    0.03,
+    0.06
+   ]
+  },
+  "tg_x_margin": {
+   "rows": [
+    [
+     0.04,
+     [
+      24.2515002666588,
+      28.242890294329353,
+      32.23428032199991,
+      36.22567034967045,
+      40.21706037734101
+     ]
+    ],
+    [
+     0.05,
+     [
+      25.57483785361919,
+      29.83089539868182,
+      34.08695294374446,
+      38.343010488807074,
+      42.599068033869706
+     ]
+    ],
+    [
+     0.060000000000000005,
+     [
+      27.287697885720977,
+      31.886327437203967,
+      36.48495698868695,
+      41.08358654016993,
+      45.68221609165293
+     ]
+    ]
+   ],
+   "cols": [
+    0.05,
+    0.060000000000000005,
+    0.07,
+    0.08,
+    0.09000000000000001
+   ]
+  }
+ },
+ "version": "1.0 (2026-11-21)",
+ "generated": "2026-11-21"
+}

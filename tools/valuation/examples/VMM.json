@@ -1,0 +1,37 @@
+# Vishal Mega Mart - TEST MATERIAL for the template (L9). Figures from research_notes/Deep dives/VMM_practice.md.
+# Scenario assumptions are illustrative [EST] inputs chosen to exercise the worksheet, not research conclusions.
+{
+ "company": "Vishal Mega Mart", "ticker": "VMM", "market": "india", "practice": true,
+ "currency": "INR", "units": "INR cr", "as_of": "2026-11-20",
+ "price": 91.5,
+ "shares": 468.3,
+ "net_debt": 0.0,
+ "base": {"fy": "FY26", "revenue": 12906.3, "ebitda": 1271.0, "ebit": 1076.8, "pat": 839.2, "fcf": null,
+          "pe_trailing": 47.7, "sbc": 50.1},
+ "tax_rate": 0.254,
+ "roiic": 0.30, "terminal_roic": 0.25,
+ "years": 10, "coe": 0.125, "terminal_growth": 0.05,
+ "payout_of_fcf": 0.0,
+ "dispersion": 0.30,
+ "base_case": {"name": "base", "growth": 0.18, "growth_end": 0.08, "margin_end": 0.070, "exit_pe": 35},
+ "scenarios": [
+  {"name": "bear", "prob": 0.30, "growth": 0.12, "growth_end": 0.06, "margin_end": 0.050, "roiic": 0.20, "exit_pe": 25},
+  {"name": "base", "prob": 0.45, "growth": 0.18, "growth_end": 0.08, "margin_end": 0.070, "exit_pe": 35},
+  {"name": "bull", "prob": 0.23, "growth": 0.22, "growth_end": 0.10, "margin_end": 0.080, "roiic": 0.35, "exit_pe": 45}
+ ],
+ "blowup": {"prob": 0.02, "multiple": 0.15, "note": "same brand failed once on debt-funded expansion (2009 CDR); today no bank debt, so blow-up needs a governance or density collapse"},
+ "twin_engine": {"targets": [2, 3, 5], "horizon": 5, "hist_eps_cagr": 0.30, "hist_eps_note": "FY24-26 (2 years only; IPO Dec-2024) [practice file]"},
+ "pe_history": [{"date": "IPO year (FY25)", "pe": 76}, {"date": "2026-11-20", "pe": 47.7}],
+ "sector_pes": {"DMart": 73.5, "V2 Retail": 36.7},
+ "market_pe": {"index": "Nifty 50", "pe": 20.6, "as_of": "2026-11 (insight:india-valuation-forward-returns)"},
+ "notes": [
+  "Price, market cap, P/E 47.7 [SCR 20-Nov-2026]. Shares 468.3 cr [EST: mcap 42,852 / 91.5].",
+  "Revenue 12,906 cr, PAT 839 cr, D&A 673 cr incl. ROU 479 cr [AR26]. EBITDA is PRE-Ind AS 116: 1,271 cr (9.8%) [AR26/HSIE], because rent is a real operating cost (protocol trap).",
+  "EBIT 1,077 cr [EST: pre-Ind AS EBITDA 1,271 - non-ROU D&A 194]. Tax 25.4% [EST: 1 - PAT/PBT]. ESOP cost 50 cr is already inside employee cost.",
+  "Net debt 0: bank debt nil [AR26, HSIE]; lease liabilities 1,988 cr excluded because rent is inside the pre-Ind AS margin; cash balance not in the practice file (understates value slightly).",
+  "FCF not in the practice file (capex 322 cr [HSIE]; CFO not recorded) - left null, so P/FCF and the Gordon check are n/a.",
+  "ROIIC 30% [EST]: between RoTE ~27% and HSIE ex-goodwill ROIC 57%; new-state stores at lower density argue for the low end.",
+  "Own P/E history: 2 points only (listed Dec-2024) -> own-median test impossible (practice file override table)."
+ ],
+ "sources": ["research_notes/Deep dives/VMM_practice.md"]
+}

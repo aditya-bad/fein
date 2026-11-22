@@ -1,0 +1,41 @@
+# Cummins India - TEST MATERIAL for the template (L9). Figures from research_notes/Deep dives/CUMMINSIND_practice.md.
+# Scenario assumptions are illustrative [EST] inputs chosen to exercise the worksheet, not research conclusions.
+{
+ "company": "Cummins India", "ticker": "CUMMINSIND", "market": "india", "practice": true,
+ "currency": "INR", "units": "INR cr", "as_of": "2026-11-21",
+ "price": 4100.0,
+ "shares": 27.72,
+ "net_debt": -3900.0,
+ "other_income_recurring_post_tax": 302.0,
+ "treasury_income_post_tax": 198.0,
+ "base": {"fy": "FY26", "revenue": 12143.0, "ebitda": 2595.0, "ebit": 2396.0, "pat": 2330.0, "fcf": 1487.0,
+          "pe_trailing": 52.0},
+ "tax_rate": 0.25,
+ "roiic": 0.40, "terminal_roic": 0.30,
+ "years": 10, "coe": 0.125, "terminal_growth": 0.05,
+ "payout_of_fcf": 1.0,
+ "dispersion": 0.30,
+ "base_case": {"name": "base", "growth": 0.12, "growth_end": 0.07, "margin_end": 0.145, "exit_pe": 40},
+ "scenarios": [
+  {"name": "bear", "prob": 0.30, "growth": 0.07, "growth_end": 0.05, "margin_end": 0.120, "roiic": 0.30, "exit_pe": 30},
+  {"name": "base", "prob": 0.48, "growth": 0.12, "growth_end": 0.07, "margin_end": 0.145, "exit_pe": 40},
+  {"name": "bull", "prob": 0.21, "growth": 0.17, "growth_end": 0.08, "margin_end": 0.160, "roiic": 0.50, "exit_pe": 50}
+ ],
+ "blowup": {"prob": 0.01, "multiple": 0.25, "note": "51% MNC parent, net cash; blow-up needs parent extraction (royalty/allocations) far beyond today's ~9% of sales or loss of the HHP/DC allocation"},
+ "twin_engine": {"targets": [2, 3, 5], "horizon": 5, "hist_eps_cagr": 0.30, "hist_eps_note": "PAT FY21 618 -> FY26 2,330 cr, from a cyclical low (FY15 786 -> FY21 618 was negative) [SCR]"},
+ "pe_history": [],
+ "sector_pes": {"Kirloskar Oil Engines": 57.5},
+ "market_pe": {"index": "Nifty 50", "pe": 20.6, "as_of": "2026-11 (insight:india-valuation-forward-returns)"},
+ "notes": [
+  "Price 4,100, market cap 1,13,652 cr, P/E 52.0 [SCR 21-Nov-2026]; shares 27.72 cr [AR26].",
+  "FY26 standalone: revenue 12,143, EBITDA ~2,595 (21.4%), D&A 199, PAT 2,330, FCF 1,487 cr [AR26, SCR]. EBIT 2,396 = core (ex other income).",
+  "Margin path starts from FY26 core NOPAT margin 14.8%; Q2 FY27 OPM had fallen to ~15% EBITDA (lag/one-off true-up) - the bear case assumes part of that is structural.",
+  "Net cash ~3,900 cr [single-source: analyst on CC-Q2FY27 'INR 38-40 billion'; borrowings 37 cr are leases]. Treasury income is therefore NOT valued separately.",
+  "Treasury income ~198 cr post-tax [EST: interest 189 + MF gains 75 = 264 x 0.75] is held flat in the EPS path (the cash itself is in net debt).",
+  "Recurring non-treasury other income ~302 cr post-tax [EST: rent 186 + associate/JV dividends 217 = 403 pre-tax x 0.75], valued as a growing perpetuity.",
+  "payout_of_fcf 1.0: FY26 FCF 1,487 ~= dividends 1,483 cr [SCR, AR26].",
+  "ROIIC 40% [EST]: below the 58% core ROCE because part of the DC capital sits in sister companies (practice file: 'ROCE borrowed from the group').",
+  "No own P/E history in the practice file -> own-median test not run (add 10 FY-end P/Es before a live use)."
+ ],
+ "sources": ["research_notes/Deep dives/CUMMINSIND_practice.md"]
+}

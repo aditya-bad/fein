@@ -1,0 +1,36 @@
+# Five Below - TEST MATERIAL for the template (L9). Figures from research_notes/Deep dives/FIVE_practice.md.
+# Scenario assumptions are illustrative [EST] inputs chosen to exercise the worksheet, not research conclusions.
+{
+ "company": "Five Below", "ticker": "US-FIVE", "market": "us", "practice": true,
+ "currency": "USD", "units": "USD M", "as_of": "2026-09-30",
+ "price": 220.0,
+ "shares": 55.4,
+ "net_debt": -932.2,
+ "base": {"fy": "FY2025 (to 31-Jan-2026)", "revenue": 4764.1, "ebit": 457.4, "pat": 358.6, "eps": 6.47,
+          "fcf": 411.7, "eps_forward": 10.07, "sbc": 34.7},
+ "tax_rate": 0.253,
+ "roiic": 0.20, "terminal_roic": 0.18,
+ "years": 10, "coe": 0.095, "terminal_growth": 0.03,
+ "payout_of_fcf": 0.25,
+ "dispersion": 0.35,
+ "base_case": {"name": "base", "growth": 0.16, "growth_end": 0.05, "margin_end": 0.085, "exit_pe": 20},
+ "scenarios": [
+  {"name": "bear", "prob": 0.30, "growth": 0.08, "growth_end": 0.04, "margin_end": 0.060, "roiic": 0.15, "exit_pe": 14},
+  {"name": "base", "prob": 0.47, "growth": 0.16, "growth_end": 0.05, "margin_end": 0.085, "exit_pe": 20},
+  {"name": "bull", "prob": 0.21, "growth": 0.22, "growth_end": 0.07, "margin_end": 0.095, "roiic": 0.25, "exit_pe": 26}
+ ],
+ "blowup": {"prob": 0.02, "multiple": 0.15, "note": "no funded debt but $2.0B leases; blow-up needs a comp collapse plus a tariff shock with stores locked into 7-year leases"},
+ "twin_engine": {"targets": [2, 3, 5], "horizon": 5, "hist_eps_cagr": 0.129, "hist_eps_note": "diluted EPS 3.12 (FY ended Feb-2020) -> 6.47 (Jan-2026), 6 years [XBRL]"},
+ "pe_history": [],
+ "sector_pes": {},
+ "notes": [
+  "PRICE IS NOT A QUOTE: $220 = BlackRock 13F value / shares at 30-Sep-2026 [EST in practice file]. No valuation work was done in the practice run; a live card must use a dated close.",
+  "FY2025: net sales 4,764.1, operating income 457.4 (after SBC 34.7), net income 358.6, diluted EPS 6.47, diluted shares 55.4M, FCF 411.7 [10K25, XBRL].",
+  "FCF 411.7 is a cyclical high (capex halved, payables build); practice file normalises to ~250-300 - so P/FCF here flatters.",
+  "eps_forward 10.07 = midpoint of the FY2026 ADJUSTED EPS guide 9.83-10.31 [PR-Q2 FY26]; GAAP guide 12.10-12.58 carries the one-off $163.6M tariff refund and is not used.",
+  "Net cash 932.2 [10K25: cash 723.7 + ST investments 208.5]; ~1.2B at Q2 FY26 incl. the refund. Operating leases 2,032 excluded because occupancy is inside COGS (rent is in the margin).",
+  "ROIIC 20% [EST]: new-store investment ~$0.65M gross build-out + ~$0.14M DC capex per store + inventory, against ~$2M sales per new store.",
+  "No own P/E history or peer P/Es in the practice file -> temperature shows trailing vs forward only."
+ ],
+ "sources": ["research_notes/Deep dives/FIVE_practice.md"]
+}

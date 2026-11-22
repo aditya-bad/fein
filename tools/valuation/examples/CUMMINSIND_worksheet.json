@@ -1,0 +1,667 @@
+{
+ "input": {
+  "company": "Cummins India",
+  "ticker": "CUMMINSIND",
+  "market": "india",
+  "practice": true,
+  "currency": "INR",
+  "units": "INR cr",
+  "as_of": "2026-11-21",
+  "price": 4100.0,
+  "shares": 27.72,
+  "net_debt": -3900.0,
+  "other_income_recurring_post_tax": 302.0,
+  "treasury_income_post_tax": 198.0,
+  "base": {
+   "fy": "FY26",
+   "revenue": 12143.0,
+   "ebitda": 2595.0,
+   "ebit": 2396.0,
+   "pat": 2330.0,
+   "fcf": 1487.0,
+   "pe_trailing": 52.0,
+   "eps": 84.05483405483406,
+   "eps_normalised": null,
+   "eps_forward": null,
+   "sbc": null
+  },
+  "tax_rate": 0.25,
+  "roiic": 0.4,
+  "terminal_roic": 0.3,
+  "years": 10,
+  "coe": 0.125,
+  "terminal_growth": 0.05,
+  "payout_of_fcf": 1.0,
+  "dispersion": 0.3,
+  "base_case": {
+   "name": "base",
+   "growth": 0.12,
+   "growth_end": 0.07,
+   "margin_end": 0.145,
+   "exit_pe": 40.0,
+   "roiic": 0.4,
+   "prob": 0.0
+  },
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.3,
+    "growth": 0.07,
+    "growth_end": 0.05,
+    "margin_end": 0.12,
+    "roiic": 0.3,
+    "exit_pe": 30.0
+   },
+   {
+    "name": "base",
+    "prob": 0.48,
+    "growth": 0.12,
+    "growth_end": 0.07,
+    "margin_end": 0.145,
+    "exit_pe": 40.0,
+    "roiic": 0.4
+   },
+   {
+    "name": "bull",
+    "prob": 0.21,
+    "growth": 0.17,
+    "growth_end": 0.08,
+    "margin_end": 0.16,
+    "roiic": 0.5,
+    "exit_pe": 50.0
+   }
+  ],
+  "blowup": {
+   "prob": 0.01,
+   "multiple": 0.25,
+   "note": "51% MNC parent, net cash; blow-up needs parent extraction (royalty/allocations) far beyond today's ~9% of sales or loss of the HHP/DC allocation"
+  },
+  "twin_engine": {
+   "targets": [
+    2,
+    3,
+    5
+   ],
+   "horizon": 5,
+   "hist_eps_cagr": 0.3,
+   "hist_eps_note": "PAT FY21 618 -> FY26 2,330 cr, from a cyclical low (FY15 786 -> FY21 618 was negative) [SCR]"
+  },
+  "pe_history": [],
+  "sector_pes": {
+   "Kirloskar Oil Engines": 57.5
+  },
+  "market_pe": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)"
+  },
+  "notes": [
+   "Price 4,100, market cap 1,13,652 cr, P/E 52.0 [SCR 21-Nov-2026]; shares 27.72 cr [AR26].",
+   "FY26 standalone: revenue 12,143, EBITDA ~2,595 (21.4%), D&A 199, PAT 2,330, FCF 1,487 cr [AR26, SCR]. EBIT 2,396 = core (ex other income).",
+   "Margin path starts from FY26 core NOPAT margin 14.8%; Q2 FY27 OPM had fallen to ~15% EBITDA (lag/one-off true-up) - the bear case assumes part of that is structural.",
+   "Net cash ~3,900 cr [single-source: analyst on CC-Q2FY27 'INR 38-40 billion'; borrowings 37 cr are leases]. Treasury income is therefore NOT valued separately.",
+   "Treasury income ~198 cr post-tax [EST: interest 189 + MF gains 75 = 264 x 0.75] is held flat in the EPS path (the cash itself is in net debt).",
+   "Recurring non-treasury other income ~302 cr post-tax [EST: rent 186 + associate/JV dividends 217 = 403 pre-tax x 0.75], valued as a growing perpetuity.",
+   "payout_of_fcf 1.0: FY26 FCF 1,487 ~= dividends 1,483 cr [SCR, AR26].",
+   "ROIIC 40% [EST]: below the 58% core ROCE because part of the DC capital sits in sister companies (practice file: 'ROCE borrowed from the group').",
+   "No own P/E history in the practice file -> own-median test not run (add 10 FY-end P/Es before a live use)."
+  ],
+  "sources": [
+   "research_notes/Deep dives/CUMMINSIND_practice.md"
+  ],
+  "_warnings": [],
+  "non_operating_value": 0.0,
+  "hurdle_cagr": 0.12,
+  "nopat_margin": 0.14798649427653793,
+  "_nopat_margin_method": "base.ebit x (1 - tax) / revenue",
+  "_eps_method": "base.pat / shares"
+ },
+ "snapshot": {
+  "mcap": 113652.0,
+  "ev": 109752.0,
+  "pe": 52.0,
+  "ev_ebitda": 42.29364161849711,
+  "p_fcf": 76.43039677202421,
+  "fcf_yield": 0.013083799669165523,
+  "ev_sales": 9.038293667133328
+ },
+ "base": {
+  "rows": [
+   {
+    "t": 1,
+    "g": 0.12,
+    "revenue": 13600.160000000002,
+    "margin": 0.14768784484888414,
+    "nopat": 2008.5783200000003,
+    "reinv_rate": 0.3,
+    "fcf": 1406.004824,
+    "eps": 92.36082629603737
+   },
+   {
+    "t": 2,
+    "g": 0.11444444444444445,
+    "revenue": 15156.622755555556,
+    "margin": 0.14738919542123033,
+    "nopat": 2233.922433244444,
+    "reinv_rate": 0.2861111111111111,
+    "fcf": 1594.7724037328394,
+    "eps": 101.19889234131891
+   },
+   {
+    "t": 3,
+    "g": 0.10888888888888888,
+    "revenue": 16807.01056671605,
+    "margin": 0.14709054599357654,
+    "nopat": 2472.152360778074,
+    "reinv_rate": 0.2722222222222222,
+    "fcf": 1799.1775514551541,
+    "eps": 110.5381710692107
+   },
+   {
+    "t": 4,
+    "g": 0.10333333333333333,
+    "revenue": 18543.734991943373,
+    "margin": 0.14679189656592276,
+    "nopat": 2722.070028883234,
+    "reinv_rate": 0.2583333333333333,
+    "fcf": 2018.8686047550652,
+    "eps": 120.33621482862821
+   },
+   {
+    "t": 5,
+    "g": 0.09777777777777778,
+    "revenue": 20356.90019115561,
+    "margin": 0.14649324713826894,
+    "nopat": 2982.148410672033,
+    "reinv_rate": 0.24444444444444444,
+    "fcf": 2253.178799174425,
+    "eps": 130.53859502103106
+   },
+   {
+    "t": 6,
+    "g": 0.09222222222222222,
+    "revenue": 22234.258764339964,
+    "margin": 0.14619459771061516,
+    "nopat": 3250.5285154464004,
+    "reinv_rate": 0.23055555555555554,
+    "fcf": 2501.1011077184803,
+    "eps": 141.07879541496607
+   },
+   {
+    "t": 7,
+    "g": 0.08666666666666667,
+    "revenue": 24161.22785724943,
+    "margin": 0.14589594828296137,
+    "nopat": 3525.0252499141084,
+    "reinv_rate": 0.21666666666666667,
+    "fcf": 2761.269779099385,
+    "eps": 151.8784307264784
+   },
+   {
+    "t": 8,
+    "g": 0.0811111111111111,
+    "revenue": 26120.97189455966,
+    "margin": 0.1455972988553076,
+    "nopat": 3803.142951323293,
+    "reinv_rate": 0.20277777777777775,
+    "fcf": 3031.9500750827365,
+    "eps": 162.84781979051837
+   },
+   {
+    "t": 9,
+    "g": 0.07555555555555557,
+    "revenue": 28094.55643770417,
+    "margin": 0.14529864942765378,
+    "nopat": 4082.101106667412,
+    "reinv_rate": 0.1888888888888889,
+    "fcf": 3311.0375642969007,
+    "eps": 173.88693217253382
+   },
+   {
+    "t": 10,
+    "g": 0.07,
+    "revenue": 30061.175388343465,
+    "margin": 0.145,
+    "nopat": 4358.870431309802,
+    "reinv_rate": 0.17500000000000002,
+    "fcf": 3596.068105830587,
+    "eps": 184.88671458215055
+   }
+  ],
+  "pv_fcf": 12164.779112725599,
+  "pv_tv": 15660.135837030673,
+  "tv_share": 0.5628098366269344,
+  "pv_oi": 4228.000000000001,
+  "ev": 27824.914949756272,
+  "equity": 35952.914949756276,
+  "value_ps": 1297.0027038151616,
+  "cum_dist_ps_5y": 327.2728060287693,
+  "value5_ps": 1735.6853876961277,
+  "dcf_pe5": 13.296338813946111,
+  "max_reinv_rate": 0.3
+ },
+ "reverse": {
+  "g_flat_margin": 0.30876559829711936,
+  "g_base_margin": 0.3118912391662598,
+  "g_fade_start": 0.5624890995025635,
+  "m_needed_base_growth": null,
+  "implied_coe_base": 0.07337485008239746,
+  "gordon_g_on_fcf": 0.10996143438901824,
+  "path_case": "fade",
+  "path": {
+   "rows": [
+    {
+     "t": 1,
+     "g": 0.5624890995025635,
+     "revenue": 18973.30513525963,
+     "margin": 0.14768784484888414,
+     "nopat": 2802.126545086761,
+     "reinv_rate": 1.4062227487564087,
+     "fcf": -1138.287547508443,
+     "eps": 121.43817873358533
+    },
+    {
+     "t": 2,
+     "g": 0.5055458662245009,
+     "revenue": 28565.18111500623,
+     "margin": 0.14738919542123033,
+     "nopat": 4210.199061602491,
+     "reinv_rate": 1.2638646655612522,
+     "fcf": -1110.9227673360392,
+     "eps": 173.6140149768376
+    },
+    {
+     "t": 3,
+     "g": 0.4486026329464383,
+     "revenue": 41379.5965737899,
+     "margin": 0.14709054599357654,
+     "nopat": 6086.547453032686,
+     "reinv_rate": 1.1215065823660957,
+     "fcf": -739.5555794270659,
+     "eps": 242.97755738948197
+    },
+    {
+     "t": 4,
+     "g": 0.3916593996683757,
+     "revenue": 57586.30452640003,
+     "margin": 0.14679189656592276,
+     "nopat": 8453.202857653043,
+     "reinv_rate": 0.9791484991709393,
+     "fcf": 176.26196639457098,
+     "eps": 330.3375277423093
+    },
+    {
+     "t": 5,
+     "g": 0.3347161663903131,
+     "revenue": 76861.37161406179,
+     "margin": 0.14649324713826894,
+     "nopat": 11259.671907245083,
+     "reinv_rate": 0.8367904159757827,
+     "fcf": 1837.686368230635,
+     "eps": 433.8452629851916
+    },
+    {
+     "t": 6,
+     "g": 0.2777729331122505,
+     "revenue": 98211.3802503304,
+     "margin": 0.14619459771061516,
+     "nopat": 14357.973226301308,
+     "reinv_rate": 0.6944323327806262,
+     "fcf": 4387.332384759116,
+     "eps": 548.0800012998316
+    },
+    {
+     "t": 7,
+     "g": 0.22082969983418788,
+     "revenue": 119899.36987131216,
+     "margin": 0.14589594828296137,
+     "nopat": 17492.832265904617,
+     "reinv_rate": 0.5520742495854697,
+     "fcf": 7835.490019580834,
+     "eps": 663.6896030584513
+    },
+    {
+     "t": 8,
+     "g": 0.16388646655612527,
+     "revenue": 139549.25394182745,
+     "margin": 0.1455972988553076,
+     "nopat": 20317.994431203464,
+     "reinv_rate": 0.40971616639031316,
+     "fcf": 11993.383644111049,
+     "eps": 767.9883036996521
+    },
+    {
+     "t": 9,
+     "g": 0.10694323327806265,
+     "revenue": 154473.1023599079,
+     "margin": 0.14529864942765378,
+     "nopat": 22444.733145794336,
+     "reinv_rate": 0.26735808319515664,
+     "fcf": 16443.952314107966,
+     "eps": 846.7341601079592
+    },
+    {
+     "t": 10,
+     "g": 0.050000000000000044,
+     "revenue": 162196.7574779033,
+     "margin": 0.145,
+     "nopat": 23518.529834295976,
+     "reinv_rate": 0.1250000000000001,
+     "fcf": 20578.713605008976,
+     "eps": 886.9387782523811
+    }
+   ],
+   "pv_fcf": 21028.864197264953,
+   "pv_tv": 84495.14104544316,
+   "tv_share": 0.800719616840756,
+   "pv_oi": 4228.000000000001,
+   "ev": 105524.00524270811,
+   "equity": 113652.00524270811,
+   "value_ps": 4100.000189130885,
+   "cum_dist_ps_5y": 72.65325882486313,
+   "value5_ps": 7170.639791527735,
+   "dcf_pe5": 16.528104380322553,
+   "max_reinv_rate": 1.4062227487564087
+  }
+ },
+ "scenarios": {
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.3,
+    "growth": 0.07,
+    "growth_end": 0.05,
+    "margin_end": 0.12,
+    "roiic": 0.3,
+    "exit_pe": 30.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 11.65088478775886,
+    "value_ps": 978.757602983674,
+    "value_vs_price": -0.7612786334186161,
+    "eps5": 103.16189083535993,
+    "eps_cagr5": 0.041816711880105606,
+    "dist_ps_5y": 290.91400693965363,
+    "mult5": 0.8257977395123053,
+    "tv_share": 0.49326792759491583
+   },
+   {
+    "name": "base",
+    "prob": 0.48,
+    "growth": 0.12,
+    "growth_end": 0.07,
+    "margin_end": 0.145,
+    "roiic": 0.4,
+    "exit_pe": 40.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 13.296338813946111,
+    "value_ps": 1297.0027038151616,
+    "value_vs_price": -0.6836578771182533,
+    "eps5": 130.53859502103106,
+    "eps_cagr5": 0.0920317059102258,
+    "dist_ps_5y": 327.2728060287693,
+    "mult5": 1.3533699041146368,
+    "tv_share": 0.5628098366269344
+   },
+   {
+    "name": "bull",
+    "prob": 0.21,
+    "growth": 0.17,
+    "growth_end": 0.08,
+    "margin_end": 0.16,
+    "roiic": 0.5,
+    "exit_pe": 50.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 14.665130774930732,
+    "value_ps": 1654.397965705676,
+    "value_vs_price": -0.5964883010473961,
+    "eps5": 159.02962598454417,
+    "eps_cagr5": 0.13601239111878627,
+    "dist_ps_5y": 369.9293758593761,
+    "mult5": 2.0296123597772158,
+    "tv_share": 0.5987805166045
+   }
+  ],
+  "blowup": {
+   "prob": 0.01,
+   "multiple": 0.25,
+   "note": "51% MNC parent, net cash; blow-up needs parent extraction (royalty/allocations) far beyond today's ~9% of sales or loss of the HHP/DC allocation"
+  },
+  "pw_value": 1273.8621515245718,
+  "pw_vs_price": -0.6893019142622996,
+  "bear_value": 978.757602983674,
+  "downside_bear": -0.7612786334186161,
+  "p_value_below_price": 1.0,
+  "p_ge_3x": 0.022151303367632172,
+  "p_ge_2x": 0.15589553408654294,
+  "p_ge_5x": 0.0002817529294880861,
+  "p_le_half": 0.02438169238632753,
+  "p_blowup": 0.01,
+  "ev_mult5": 1.3260754713819325,
+  "ev_cagr5": 0.058068166922793374,
+  "median_mult5": 1.270875321051834,
+  "hurdle_mult5": 1.7623416832000007
+ },
+ "twin": {
+  "pe0": 52.00000000000001,
+  "eps0": 78.84615384615384,
+  "horizon": 5.0,
+  "exit_pes": [
+   26.0,
+   39.0,
+   52.0,
+   57.5
+  ],
+  "table": [
+   {
+    "target": 2,
+    "cells": [
+     {
+      "exit_pe": 26.0,
+      "eps_cagr": 0.3195079107728944,
+      "rerating_share": -1.0000000000000002
+     },
+     {
+      "exit_pe": 39.0,
+      "eps_cagr": 0.21672868378641152,
+      "rerating_share": -0.41503749927884404
+     },
+     {
+      "exit_pe": 52.0,
+      "eps_cagr": 0.1486983549970351,
+      "rerating_share": -1.6017132519074588e-16
+     },
+     {
+      "exit_pe": 57.5,
+      "eps_cagr": 0.12583073050368965,
+      "rerating_share": 0.14505033280328286
+     }
+    ]
+   },
+   {
+    "target": 3,
+    "cells": [
+     {
+      "exit_pe": 26.0,
+      "eps_cagr": 0.43096908110525556,
+      "rerating_share": -0.6309297535714574
+     },
+     {
+      "exit_pe": 39.0,
+      "eps_cagr": 0.3195079107728944,
+      "rerating_share": -0.261859507142915
+     },
+     {
+      "exit_pe": 52.0,
+      "eps_cagr": 0.2457309396155174,
+      "rerating_share": -1.0105685473181107e-16
+     },
+     {
+      "exit_pe": 57.5,
+      "eps_cagr": 0.22093164637813523,
+      "rerating_share": 0.09151657073103314
+     }
+    ]
+   },
+   {
+    "target": 5,
+    "cells": [
+     {
+      "exit_pe": 26.0,
+      "eps_cagr": 0.5848931924611136,
+      "rerating_share": -0.4306765580733931
+     },
+     {
+      "exit_pe": 39.0,
+      "eps_cagr": 0.4614425516219254,
+      "rerating_share": -0.17874692166080092
+     },
+     {
+      "exit_pe": 52.0,
+      "eps_cagr": 0.3797296614612149,
+      "rerating_share": -6.89820350352046e-17
+     },
+     {
+      "exit_pe": 57.5,
+      "eps_cagr": 0.35226279893514567,
+      "rerating_share": 0.06246977807911804
+     }
+    ]
+   }
+  ],
+  "hist_eps_cagr": 0.3,
+  "hist_eps_note": "PAT FY21 618 -> FY26 2,330 cr, from a cyclical low (FY15 786 -> FY21 618 was negative) [SCR]"
+ },
+ "temperature": {
+  "pes": {
+   "trailing (given)": 52.0
+  },
+  "n_hist": 0,
+  "own_median": null,
+  "sector_median": 57.5,
+  "sector": {
+   "Kirloskar Oil Engines": 57.5
+  },
+  "rows": [
+   {
+    "basis": "trailing (given)",
+    "pe": 52.0,
+    "vs_own": null,
+    "own_band": "INSUFFICIENT HISTORY (n=0 < 5)",
+    "vs_sector": 0.9043478260869565,
+    "sector_band": "NORMAL"
+   }
+  ],
+  "market": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)",
+   "note": "around the long-run average"
+  }
+ },
+ "sensitivity": {
+  "coe_x_growth": {
+   "rows": [
+    [
+     0.105,
+     [
+      1420.6698098906318,
+      1557.4423079768267,
+      1754.444715162662,
+      1985.9418282844454,
+      2257.5050554956756
+     ]
+    ],
+    [
+     0.115,
+     [
+      1224.9313978932557,
+      1334.1781668378549,
+      1490.0505519738178,
+      1672.452418983402,
+      1885.6046200982753
+     ]
+    ],
+    [
+     0.125,
+     [
+      1081.250732375221,
+      1170.6441965969725,
+      1297.0027038151616,
+      1444.2427043238806,
+      1615.6353125665541
+     ]
+    ],
+    [
+     0.135,
+     [
+      971.2685558432308,
+      1045.7513805841904,
+      1150.0644615407773,
+      1271.0945735734729,
+      1411.4188501192705
+     ]
+    ],
+    [
+     0.145,
+     [
+      884.354370781677,
+      947.2905354354036,
+      1034.629432908662,
+      1135.5232003290619,
+      1252.0271089036505
+     ]
+    ]
+   ],
+   "cols": [
+    -0.06,
+    -0.03,
+    0.0,
+    0.03,
+    0.06
+   ]
+  },
+  "tg_x_margin": {
+   "rows": [
+    [
+     0.04,
+     [
+      1123.064183919692,
+      1174.6896286938704,
+      1226.315073468049,
+      1277.9405182422279,
+      1329.5659630164062
+     ]
+    ],
+    [
+     0.05,
+     [
+      1186.6536407247263,
+      1241.8281722699437,
+      1297.0027038151616,
+      1352.177235360379,
+      1407.3517669055962
+     ]
+    ],
+    [
+     0.060000000000000005,
+     [
+      1269.3809372399414,
+      1329.1623304950542,
+      1388.9437237501668,
+      1448.7251170052798,
+      1508.506510260392
+     ]
+    ]
+   ],
+   "cols": [
+    0.12499999999999999,
+    0.13499999999999998,
+    0.145,
+    0.155,
+    0.16499999999999998
+   ]
+  }
+ },
+ "version": "1.0 (2026-11-21)",
+ "generated": "2026-11-21"
+}

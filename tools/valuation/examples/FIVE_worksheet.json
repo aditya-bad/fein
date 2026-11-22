@@ -1,0 +1,639 @@
+{
+ "input": {
+  "company": "Five Below",
+  "ticker": "US-FIVE",
+  "market": "us",
+  "practice": true,
+  "currency": "USD",
+  "units": "USD M",
+  "as_of": "2026-09-30",
+  "price": 220.0,
+  "shares": 55.4,
+  "net_debt": -932.2,
+  "base": {
+   "fy": "FY2025 (to 31-Jan-2026)",
+   "revenue": 4764.1,
+   "ebit": 457.4,
+   "pat": 358.6,
+   "eps": 6.47,
+   "fcf": 411.7,
+   "eps_forward": 10.07,
+   "sbc": 34.7,
+   "ebitda": null,
+   "eps_normalised": null,
+   "pe_trailing": null
+  },
+  "tax_rate": 0.253,
+  "roiic": 0.2,
+  "terminal_roic": 0.18,
+  "years": 10,
+  "coe": 0.095,
+  "terminal_growth": 0.03,
+  "payout_of_fcf": 0.25,
+  "dispersion": 0.35,
+  "base_case": {
+   "name": "base",
+   "growth": 0.16,
+   "growth_end": 0.05,
+   "margin_end": 0.085,
+   "exit_pe": 20.0,
+   "roiic": 0.2,
+   "prob": 0.0
+  },
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.3,
+    "growth": 0.08,
+    "growth_end": 0.04,
+    "margin_end": 0.06,
+    "roiic": 0.15,
+    "exit_pe": 14.0
+   },
+   {
+    "name": "base",
+    "prob": 0.47,
+    "growth": 0.16,
+    "growth_end": 0.05,
+    "margin_end": 0.085,
+    "exit_pe": 20.0,
+    "roiic": 0.2
+   },
+   {
+    "name": "bull",
+    "prob": 0.21,
+    "growth": 0.22,
+    "growth_end": 0.07,
+    "margin_end": 0.095,
+    "roiic": 0.25,
+    "exit_pe": 26.0
+   }
+  ],
+  "blowup": {
+   "prob": 0.02,
+   "multiple": 0.15,
+   "note": "no funded debt but $2.0B leases; blow-up needs a comp collapse plus a tariff shock with stores locked into 7-year leases"
+  },
+  "twin_engine": {
+   "targets": [
+    2,
+    3,
+    5
+   ],
+   "horizon": 5,
+   "hist_eps_cagr": 0.129,
+   "hist_eps_note": "diluted EPS 3.12 (FY ended Feb-2020) -> 6.47 (Jan-2026), 6 years [XBRL]"
+  },
+  "pe_history": [],
+  "sector_pes": {},
+  "notes": [
+   "PRICE IS NOT A QUOTE: $220 = BlackRock 13F value / shares at 30-Sep-2026 [EST in practice file]. No valuation work was done in the practice run; a live card must use a dated close.",
+   "FY2025: net sales 4,764.1, operating income 457.4 (after SBC 34.7), net income 358.6, diluted EPS 6.47, diluted shares 55.4M, FCF 411.7 [10K25, XBRL].",
+   "FCF 411.7 is a cyclical high (capex halved, payables build); practice file normalises to ~250-300 - so P/FCF here flatters.",
+   "eps_forward 10.07 = midpoint of the FY2026 ADJUSTED EPS guide 9.83-10.31 [PR-Q2 FY26]; GAAP guide 12.10-12.58 carries the one-off $163.6M tariff refund and is not used.",
+   "Net cash 932.2 [10K25: cash 723.7 + ST investments 208.5]; ~1.2B at Q2 FY26 incl. the refund. Operating leases 2,032 excluded because occupancy is inside COGS (rent is in the margin).",
+   "ROIIC 20% [EST]: new-store investment ~$0.65M gross build-out + ~$0.14M DC capex per store + inventory, against ~$2M sales per new store.",
+   "No own P/E history or peer P/Es in the practice file -> temperature shows trailing vs forward only."
+  ],
+  "sources": [
+   "research_notes/Deep dives/FIVE_practice.md"
+  ],
+  "_warnings": [],
+  "non_operating_value": 0.0,
+  "other_income_recurring_post_tax": 0.0,
+  "treasury_income_post_tax": 0.0,
+  "hurdle_cagr": 0.08,
+  "nopat_margin": 0.07171927541403413,
+  "_nopat_margin_method": "base.ebit x (1 - tax) / revenue",
+  "_eps_method": "given"
+ },
+ "snapshot": {
+  "mcap": 12188.0,
+  "ev": 11255.8,
+  "pe": 34.003091190108194,
+  "ev_ebitda": null,
+  "p_fcf": 29.604080641243623,
+  "fcf_yield": 0.033779127010173944,
+  "ev_sales": 2.3626288281102408
+ },
+ "base": {
+  "rows": [
+   {
+    "t": 1,
+    "g": 0.16,
+    "revenue": 5526.356,
+    "margin": 0.07304734787263072,
+    "nopat": 403.6856492,
+    "reinv_rate": 0.7999999999999999,
+    "fcf": 80.73712984000002,
+    "eps": 7.644178668687284
+   },
+   {
+    "t": 2,
+    "g": 0.14777777777777779,
+    "revenue": 6343.028608888889,
+    "margin": 0.07437542033122731,
+    "nopat": 471.7654189591111,
+    "reinv_rate": 0.7388888888888889,
+    "fcf": 123.18319272821233,
+    "eps": 8.933335032786587
+   },
+   {
+    "t": 3,
+    "g": 0.13555555555555557,
+    "revenue": 7202.861375871606,
+    "margin": 0.07570349278982388,
+    "nopat": 545.2817642343971,
+    "reinv_rate": 0.6777777777777778,
+    "fcf": 175.70190180886127,
+    "eps": 10.325438218685994
+   },
+   {
+    "t": 4,
+    "g": 0.12333333333333334,
+    "revenue": 8091.21427889577,
+    "margin": 0.07703156524842047,
+    "nopat": 623.2789006637109,
+    "reinv_rate": 0.6166666666666667,
+    "fcf": 238.92357858775586,
+    "eps": 11.802389523973199
+   },
+   {
+    "t": 5,
+    "g": 0.1111111111111111,
+    "revenue": 8990.238087661966,
+    "margin": 0.07835963770701707,
+    "nopat": 704.4717994490176,
+    "reinv_rate": 0.5555555555555555,
+    "fcf": 313.09857753289674,
+    "eps": 13.339855684024961
+   },
+   {
+    "t": 6,
+    "g": 0.09888888888888889,
+    "revenue": 9879.272742997427,
+    "margin": 0.07968771016561366,
+    "nopat": 787.256622991026,
+    "reinv_rate": 0.4944444444444444,
+    "fcf": 398.00195940101867,
+    "eps": 14.907466480854003
+   },
+   {
+    "t": 7,
+    "g": 0.08666666666666667,
+    "revenue": 10735.47638072387,
+    "margin": 0.08101578262421025,
+    "nopat": 869.7430208280684,
+    "reinv_rate": 0.43333333333333335,
+    "fcf": 492.8543784692388,
+    "eps": 16.469426297984835
+   },
+   {
+    "t": 8,
+    "g": 0.07444444444444445,
+    "revenue": 11534.672955733315,
+    "margin": 0.08234385508280682,
+    "nopat": 949.8094382944752,
+    "reinv_rate": 0.37222222222222223,
+    "fcf": 596.269258484865,
+    "eps": 17.985561443457122
+   },
+   {
+    "t": 9,
+    "g": 0.06222222222222222,
+    "revenue": 12252.38593964561,
+    "margin": 0.08367192754140342,
+    "nopat": 1025.1807485513375,
+    "reinv_rate": 0.31111111111111106,
+    "fcf": 706.2356267798102,
+    "eps": 19.412790187501656
+   },
+   {
+    "t": 10,
+    "g": 0.05,
+    "revenue": 12865.00523662789,
+    "margin": 0.085,
+    "nopat": 1093.5254451133708,
+    "reinv_rate": 0.25,
+    "fcf": 820.1440838350281,
+    "eps": 20.70696319715097
+   }
+  ],
+  "pv_fcf": 2098.843717555572,
+  "pv_tv": 5826.80284081699,
+  "tv_share": 0.7351832809982705,
+  "pv_oi": 0.0,
+  "ev": 7925.646558372562,
+  "equity": 8857.846558372563,
+  "value_ps": 159.88892704643615,
+  "cum_dist_ps_5y": 4.204171392137754,
+  "value5_ps": 235.46206597452124,
+  "dcf_pe5": 17.651020487162913,
+  "max_reinv_rate": 0.7999999999999999
+ },
+ "reverse": {
+  "g_flat_margin": 0.1997374305725098,
+  "g_base_margin": 0.17074267196655285,
+  "g_fade_start": 0.2987866115570069,
+  "m_needed_base_growth": 0.1238866539001465,
+  "implied_coe_base": 0.07905750038146975,
+  "gordon_g_on_fcf": 0.05636177415898863,
+  "path_case": "fade",
+  "path": {
+   "rows": [
+    {
+     "t": 1,
+     "g": 0.2987866115570069,
+     "revenue": 6187.549296118737,
+     "margin": 0.07304734787263072,
+     "nopat": 451.98406591263677,
+     "reinv_rate": 1.4939330577850345,
+     "fcf": -223.24987174634126,
+     "eps": 8.55875595796613
+    },
+    {
+     "t": 2,
+     "g": 0.26892143249511724,
+     "revenue": 7851.513916465143,
+     "margin": 0.07437542033122731,
+     "nopat": 583.9596477735757,
+     "reinv_rate": 1.3446071624755862,
+     "fcf": -201.2366772194947,
+     "eps": 11.057841396470696
+    },
+    {
+     "t": 3,
+     "g": 0.23905625343322762,
+     "revenue": 9728.467417114149,
+     "margin": 0.07570349278982388,
+     "nopat": 736.4789629675375,
+     "reinv_rate": 1.195281267166138,
+     "fcf": -143.8205451295039,
+     "eps": 13.945942318757519
+    },
+    {
+     "t": 4,
+     "g": 0.20919107437133794,
+     "revenue": 11763.575968086812,
+     "margin": 0.07703156524842047,
+     "nopat": 906.1666697404303,
+     "reinv_rate": 1.0459553718566896,
+     "fcf": -41.643226272059536,
+     "eps": 17.15914336026685
+    },
+    {
+     "t": 5,
+     "g": 0.1793258953094483,
+     "revenue": 13873.08976060469,
+     "margin": 0.07835963770701707,
+     "nopat": 1087.0902875179115,
+     "reinv_rate": 0.8966294765472416,
+     "fcf": 112.37309206113618,
+     "eps": 20.58510725672223
+    },
+    {
+     "t": 6,
+     "g": 0.14946071624755866,
+     "revenue": 15946.57169279134,
+     "margin": 0.07968771016561366,
+     "nopat": 1270.7457831903355,
+     "reinv_rate": 0.7473035812377933,
+     "fcf": 321.11290856937336,
+     "eps": 24.062801906478764
+    },
+    {
+     "t": 7,
+     "g": 0.11959553718566898,
+     "revenue": 17853.7105006605,
+     "margin": 0.08101578262421025,
+     "nopat": 1446.4323289570912,
+     "reinv_rate": 0.5979776859283449,
+     "fcf": 581.4980720353833,
+     "eps": 27.38959677319504
+    },
+    {
+     "t": 8,
+     "g": 0.08973035812377933,
+     "revenue": 19455.73033772305,
+     "margin": 0.08234385508280682,
+     "nopat": 1602.059839459635,
+     "reinv_rate": 0.44865179061889665,
+     "fcf": 883.2928238074476,
+     "eps": 30.33655438340986
+    },
+    {
+     "t": 9,
+     "g": 0.05986517906188968,
+     "revenue": 20620.451118170677,
+     "margin": 0.08367192754140342,
+     "nopat": 1725.3528918306279,
+     "reinv_rate": 0.29932589530944836,
+     "fcf": 1208.9100927586792,
+     "eps": 32.67122771846506
+    },
+    {
+     "t": 10,
+     "g": 0.030000000000000027,
+     "revenue": 21239.0646517158,
+     "margin": 0.085,
+     "nopat": 1805.320495395843,
+     "reinv_rate": 0.15000000000000013,
+     "fcf": 1534.5224210864662,
+     "eps": 34.185491727033785
+    }
+   ],
+   "pv_fcf": 1636.2272879842085,
+   "pv_tv": 9619.571851907896,
+   "tv_share": 0.8546325083054128,
+   "pv_oi": 0.0,
+   "ev": 11255.799139892104,
+   "equity": 12187.999139892105,
+   "value_ps": 219.99998447458674,
+   "cum_dist_ps_5y": 0.5070987908896037,
+   "value5_ps": 339.65131779970665,
+   "dcf_pe5": 16.499856598453757,
+   "max_reinv_rate": 1.4939330577850345
+  }
+ },
+ "scenarios": {
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.3,
+    "growth": 0.08,
+    "growth_end": 0.04,
+    "margin_end": 0.06,
+    "roiic": 0.15,
+    "exit_pe": 14.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 15.67119690174712,
+    "value_ps": 94.85009969892657,
+    "value_vs_price": -0.5688631831866975,
+    "eps5": 8.375735594442306,
+    "eps_cagr5": 0.05298876070744307,
+    "dist_ps_5y": 4.814276159795302,
+    "mult5": 0.55488442946358,
+    "tv_share": 0.630583593037485
+   },
+   {
+    "name": "base",
+    "prob": 0.47,
+    "growth": 0.16,
+    "growth_end": 0.05,
+    "margin_end": 0.085,
+    "roiic": 0.2,
+    "exit_pe": 20.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 17.651020487162913,
+    "value_ps": 159.88892704643615,
+    "value_vs_price": -0.2732321497889266,
+    "eps5": 13.339855684024961,
+    "eps_cagr5": 0.15571132791045672,
+    "dist_ps_5y": 4.204171392137754,
+    "mult5": 1.231824023057441,
+    "tv_share": 0.7351832809982705
+   },
+   {
+    "name": "bull",
+    "prob": 0.21,
+    "growth": 0.22,
+    "growth_end": 0.07,
+    "margin_end": 0.095,
+    "roiic": 0.25,
+    "exit_pe": 26.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 19.758131107699523,
+    "value_ps": 231.94980301622067,
+    "value_vs_price": 0.05431728643736666,
+    "eps5": 17.67825657807255,
+    "eps_cagr5": 0.22266373358243619,
+    "dist_ps_5y": 4.195011156312681,
+    "mult5": 2.108316737209995,
+    "tv_share": 0.7768950455636753
+   }
+  ],
+  "blowup": {
+   "prob": 0.02,
+   "multiple": 0.15,
+   "note": "no funded debt but $2.0B leases; blow-up needs a comp collapse plus a tariff shock with stores locked into 7-year leases"
+  },
+  "pw_value": 152.97228425490928,
+  "pw_vs_price": -0.30467143520495776,
+  "bear_value": 94.85009969892657,
+  "downside_bear": -0.5688631831866975,
+  "p_value_below_price": 0.79,
+  "p_ge_3x": 0.03550548079730642,
+  "p_ge_2x": 0.1566571336043122,
+  "p_ge_5x": 0.0014442271839828645,
+  "p_le_half": 0.13725609614499465,
+  "p_blowup": 0.02,
+  "ev_mult5": 1.19116913449017,
+  "ev_cagr5": 0.0356063060571723,
+  "median_mult5": 1.1101815239744195,
+  "hurdle_mult5": 1.4693280768000005
+ },
+ "twin": {
+  "pe0": 34.003091190108194,
+  "eps0": 6.47,
+  "horizon": 5.0,
+  "exit_pes": [
+   17.0,
+   25.5,
+   34.0
+  ],
+  "table": [
+   {
+    "target": 2,
+    "cells": [
+     {
+      "exit_pe": 17.0,
+      "eps_cagr": 0.31953190313450763,
+      "rerating_share": -1.0001311600565375
+     },
+     {
+      "exit_pe": 25.5,
+      "eps_cagr": 0.21675080733287033,
+      "rerating_share": -0.4151686593353814
+     },
+     {
+      "exit_pe": 34.0,
+      "eps_cagr": 0.1487192415609524,
+      "rerating_share": -0.00013116005653742875
+     }
+    ]
+   },
+   {
+    "target": 3,
+    "cells": [
+     {
+      "exit_pe": 17.0,
+      "eps_cagr": 0.43099510014414943,
+      "rerating_share": -0.631012506353607
+     },
+     {
+      "exit_pe": 25.5,
+      "eps_cagr": 0.31953190313450763,
+      "rerating_share": -0.2619422599250645
+     },
+     {
+      "exit_pe": 34.0,
+      "eps_cagr": 0.24575359050448298,
+      "rerating_share": -8.275278214957834e-05
+     }
+    ]
+   },
+   {
+    "target": 5,
+    "cells": [
+     {
+      "exit_pe": 17.0,
+      "eps_cagr": 0.584922010272876,
+      "rerating_share": -0.43073304563509934
+     },
+     {
+      "exit_pe": 25.5,
+      "eps_cagr": 0.46146912475414337,
+      "rerating_share": -0.17880340922250712
+     },
+     {
+      "exit_pe": 34.0,
+      "eps_cagr": 0.3797547488234778,
+      "rerating_share": -5.648756170625145e-05
+     }
+    ]
+   }
+  ],
+  "hist_eps_cagr": 0.129,
+  "hist_eps_note": "diluted EPS 3.12 (FY ended Feb-2020) -> 6.47 (Jan-2026), 6 years [XBRL]"
+ },
+ "temperature": {
+  "pes": {
+   "trailing (price / base EPS)": 34.003091190108194,
+   "forward EPS": 21.847070506454816
+  },
+  "n_hist": 0,
+  "own_median": null,
+  "sector_median": null,
+  "sector": {},
+  "rows": [
+   {
+    "basis": "trailing (price / base EPS)",
+    "pe": 34.003091190108194,
+    "vs_own": null,
+    "own_band": "INSUFFICIENT HISTORY (n=0 < 5)"
+   },
+   {
+    "basis": "forward EPS",
+    "pe": 21.847070506454816,
+    "vs_own": null,
+    "own_band": "INSUFFICIENT HISTORY (n=0 < 5)"
+   }
+  ]
+ },
+ "sensitivity": {
+  "coe_x_growth": {
+   "rows": [
+    [
+     0.075,
+     [
+      189.7985071406923,
+      211.2031934202285,
+      242.38405991166366,
+      278.9522439904323,
+      321.75644326529954
+     ]
+    ],
+    [
+     0.085,
+     [
+      155.11090411925494,
+      170.77586613643322,
+      193.35373012855422,
+      219.6743905528614,
+      250.31168898411113
+     ]
+    ],
+    [
+     0.095,
+     [
+      131.2622158565671,
+      143.0648096086743,
+      159.88892704643615,
+      179.37280533778306,
+      201.91142442044028
+     ]
+    ],
+    [
+     0.105,
+     [
+      113.90621915333197,
+      122.96469217622106,
+      135.72829958653605,
+      150.4005724469335,
+      167.25413044894452
+     ]
+    ],
+    [
+     0.115,
+     [
+      100.74277479558184,
+      107.77418527327586,
+      117.55999515367257,
+      128.71427172777248,
+      141.4229791283224
+     ]
+    ]
+   ],
+   "cols": [
+    -0.06,
+    -0.03,
+    0.0,
+    0.03,
+    0.06
+   ]
+  },
+  "tg_x_margin": {
+   "rows": [
+    [
+     0.019999999999999997,
+     [
+      122.17415580289584,
+      136.58619863372107,
+      150.99824146454628,
+      165.41028429537153,
+      179.82232712619674
+     ]
+    ],
+    [
+     0.03,
+     [
+      128.9729153655175,
+      144.43092120597686,
+      159.88892704643615,
+      175.3469328868955,
+      190.80493872735482
+     ]
+    ],
+    [
+     0.04,
+     [
+      138.12090522668112,
+      154.98629412270412,
+      171.85168301872707,
+      188.71707191475,
+      205.582460810773
+     ]
+    ]
+   ],
+   "cols": [
+    0.065,
+    0.07500000000000001,
+    0.085,
+    0.095,
+    0.10500000000000001
+   ]
+  }
+ },
+ "version": "1.0 (2026-11-21)",
+ "generated": "2026-11-21"
+}
