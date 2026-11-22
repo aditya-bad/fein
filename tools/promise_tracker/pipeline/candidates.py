@@ -73,9 +73,17 @@ TIMELINE = re.compile(
     r"(?:\s+20\d\d)?|20[2-4]\d|calendar (?:year )?20\d\d|year[\s-]end|end of (?:the )?(?:year|quarter)|"
     r"going forward|long[\s-]term|medium[\s-]term|quarter [1-4]|full year|year after|for the year)\b", re.I)
 CATEGORIES = [  # (category, regex) — first match wins, order matters
+    # v1.2 (2026-11-22, IT mid-caps): IT services vocabulary. TCV/deal wins before generic orders; people metrics;
+    # client concentration. "CC" / constant-currency growth falls through to revenue_growth (see score.py IT measures).
+    ("deal_wins", r"\bTCV\b|\bACV\b|total contract value|deal wins?|large deals?|mega deals?|deal pipeline|"
+                  r"\bbookings?\b|executable order book|\bEOB\b"),
     ("order_book", r"order ?book|backlog|unexecuted"),
     ("order_inflow", r"order (?:inflow|intake|win|booking)s?|inflows?|orders?\b|bid(?:s|ding)? pipeline|L1\b"),
-    ("margin", r"margins?|ebitda|ebit\b|gross profit|profitability|bps"),
+    ("margin", r"margins?|ebitda|ebit\b|EBIT band|operating band|gross profit|profitability|bps"),
+    ("people", r"attrition|utili[sz]ation|headcount|head count|freshers?|campus hires|net adds?|bench\b|"
+               r"\bwage hikes?|increments?\b|salary hikes?"),
+    ("client_concentration", r"top[\s-]?(?:1|5|10|20|one|five|ten|twenty) (?:clients?|accounts?|customers?)|"
+                             r"client concentration|largest client|\$\s?\d+\s?(?:mn|million)\+? (?:clients?|accounts?)"),
     ("capex", r"capex|capital expenditure|invest(?:ing|ment) of|spend(?:ing)? (?:of|about|around)"),
     ("capacity_commissioning", r"capacit\w*|commission\w*|plant|facility|greenfield|brownfield|warehouse|"
                                r"MTPA|tonnes|line\b|expansion|operational|go live|set ?up"),
@@ -86,7 +94,7 @@ CATEGORIES = [  # (category, regex) — first match wins, order matters
     ("fundraise", r"rights issue|QIP|preferential|fund ?rais|raise (?:capital|equity|funds)|dilution"),
     ("new_product", r"launch\w*|new product|approval|USFDA|qualif\w+|certif\w+|patent|develop(?:ing|ment) of"),
     ("customer_win", r"customer|client|OEM|contract"),
-    ("revenue_growth", r"revenue|top[\s-]?line|sales|turnover|growth|grow\w*|volume|business"),
+    ("revenue_growth", r"revenue|top[\s-]?line|sales|turnover|constant[\s-]currency|\bCC\b|growth|grow\w*|volume|business"),
     ("profit", r"\bPAT\b|net profit|profit after tax|EPS|bottom[\s-]?line|earnings"),
     ("returns", r"ROCE|ROE|return on"),
     ("cash_flow", r"cash flow|FCF|free cash|cash generation|internal accrual"),

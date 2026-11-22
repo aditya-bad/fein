@@ -16,6 +16,8 @@ Rules (each alert row = date, symbol, rule, details, source URL):
   rating_downgrade / rating_not_cooperating / default_delay   announcement keyword rules (NSE; BSE as backup)
   large_deal                                        bulk/block deal >= 1% of equity (or >= Rs 50 cr when the
         share count is unknown)
+  solvency_s1 / solvency_s5                         graded-red solvency flags from the weekly solvency_screen.py
+        run (negative net worth / >= 2 of S1-S4), once per symbol per fiscal year
 
 Alerts already emitted on an earlier run are not repeated (table `alerts`), unless --all.
 Output: $FEIN_DATA/alerts/<today IST>.md and .csv = every alert first seen today (re-runs are safe).
@@ -270,7 +272,27 @@ def rule_deals(con, frm, to):
     return out
 
 
-RULES = [rule_pledges, rule_insider, rule_cluster, rule_announcements, rule_deals]
+SOLVENCY_MAX_AGE = 10   # days: use the weekly solvency_screen.py snapshot only while it is fresh
+
+
+def rule_solvency(con, frm, to):
+    """Graded-red solvency flags from the latest weekly solvency_screen.py snapshot (table `solvency`).
+    solvency_s1 = negative net worth (not payout-driven); solvency_s5 = >= 2 of S1-S4 (interest cover < 1.5x,
+    short-term funding gap, dividends > FCF while debt rose). decision:solvency-flags-graded / lesson L24:
+    look harder and size smaller - not a sell signal. One alert per symbol, rule and fiscal year."""
+    snap = con.execute("SELECT MAX(snapshot_date) FROM solvency WHERE snapshot_date<=?", (to,)).fetchone()[0]
+    if not snap or (dt.date.fromisoformat(to) - dt.date.fromisoformat(snap)).days > SOLVENCY_MAX_AGE:
+        return []
+    out = []
+    for r in con.execute("SELECT * FROM solvency WHERE snapshot_date=? AND grade='red'", (snap,)):
+        for rule, col in (("solvency_s1", "s1"), ("solvency_s5", "s5")):
+            if r[col] == 1:
+                out.append({"date": snap, "symbol": r["symbol"], "rule": rule, "url": r["url"],
+                            "details": f"{r['n_flags']} of S1-S4: {r['details']}", "key": f"{rule}|{r['symbol']}|{r['fy0']}"})
+    return out
+
+
+RULES = [rule_pledges, rule_insider, rule_cluster, rule_announcements, rule_deals, rule_solvency]
 
 
 def run_rules(con, frm, to):
@@ -286,7 +308,7 @@ def run_rules(con, frm, to):
 
 
 ORDER = ["pledge_cross_50", "pledge_cross_25", "pledge_cross_10", "pledge_up", "pledge_invocation",
-         "auditor_resignation", "rating_not_cooperating", "default_delay", "rating_downgrade", "insolvency_new", "kmp_resignation",
+         "auditor_resignation", "rating_not_cooperating", "default_delay", "rating_downgrade", "insolvency_new", "solvency_s1", "solvency_s5", "kmp_resignation",
          "insider_sell", "insider_buy", "insider_cluster", "sast_promoter_open_market", "large_deal",
          "auditor_change", "pledge_release", "pledge_down"]
 
@@ -381,13 +403,17 @@ def selftest():
                                "promoter_holding_pct": 50, "pledged_pct_of_promoter": 0, "pledged_pct_of_equity": 0,
                                "promoter_pledged_shares": 0, "promoter_shares": 5e6, "total_shares": 1e7,
                                "all_pledged_pct": 0, "broadcast_dt": None}])
+    sv = lambda sym, s1, s5, grade: {"snapshot_date": "2026-11-21", "symbol": sym, "status": "ok", "fy0": "2026-03-31",
+                                     "s1": s1, "s5": s5, "n_flags": s1 + 2 * s5, "grade": grade, "details": "x", "url": "u"}
+    C.upsert(con, "solvency", [sv("NEGNW", 1, 0, "red"), sv("TWOFLAG", 0, 1, "red"), sv("CLEAN", 0, 0, "")])
     got = run_rules(con, "2026-11-20", "2026-11-21")
     fired = {}
     for a in got:
         fired.setdefault(a["rule"], set()).add(a["symbol"])
     expect = {"auditor_resignation": {"T1"}, "kmp_resignation": {"T2"}, "rating_downgrade": {"T3"},
               "rating_not_cooperating": {"T4"}, "default_delay": {"T5"}, "insolvency_new": {"T10"}, "pledge_invocation": {"T6"},
-              "insider_buy": {"AAA"}, "insider_sell": {"BBB"}, "insider_cluster": {"AAA"}, "large_deal": {"AAA"}}
+              "insider_buy": {"AAA"}, "insider_sell": {"BBB"}, "insider_cluster": {"AAA"}, "large_deal": {"AAA"},
+              "solvency_s1": {"NEGNW"}, "solvency_s5": {"TWOFLAG"}}
     for rule, syms in expect.items():
         good = fired.get(rule) == syms
         ok &= good

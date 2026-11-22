@@ -173,3 +173,11 @@ US pre-registered test (survivorship-free): negative equity (excluding buyback-d
 2.31 and "≥2 solvency flags" lift 2.37 → graded red; interest cover <1.5x mostly flags loss-makers and would cut 27%
 of later >3x winners; payouts > FCF while borrowing had no signal. Recall only 8–16% of failures — most 2015–16
 energy and COVID failures looked solvent a year earlier. **Use:** look harder and size smaller; not protection, not a short signal.
+
+## L25 (2026-11-22) — US rules don't transfer to India as-is; admission ≠ death
+India solvency screen: the US short-term-funding-gap rule (S3) fired on half of Indian firms because working
+capital runs on short-term bank lines and spare cash sits in liquid funds → excluded from India S5 (decision:
+india-solvency-s3-excluded). Dead-company probe: IBBI CIRP export (9,263 admissions, 673 listed), IBBI liquidations
+(3,023), NSE delisted.csv (stale to 2020), BSE delisted/suspended (no dates) are reachable; NCLT site is behind a
+CAPTCHA (don't automate). An insolvency *admission* is not a failure (Inox Wind, VA Tech Wabag survived) — use
+liquidation, delisting or confirmed price collapse as the failure outcome.

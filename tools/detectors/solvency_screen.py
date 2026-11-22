@@ -12,8 +12,9 @@ Flags (FY0 = latest fiscal year in the profit-and-loss table; balance sheet at t
          (The US test exempted buyback-driven negative equity. Indian buybacks are small and screener does
          not split them out of "Other financing items", so only dividends count; the exemption should
          almost never apply. Exempt rows are reported with s1raw=1, s1=0.)
-  S2     interest cover EBIT / Interest < 1.5x, EBIT = Operating Profit - Depreciation (excludes screener's
-         Other Income, which carries one-off gains; fallback PBT + Interest). Negative EBIT with any interest fires.
+  S2     interest cover EBIT / Interest < 1.5x, EBIT = Operating Profit - Depreciation + recurring Other
+         Income (FY0 other income clipped to [0, 3-year median]: screener's Other Income carries one-off
+         gains and losses; fallback PBT + Interest). Negative EBIT with any interest fires.
          Interest 0 or missing: not fired if borrowings < 5% of total assets, else unknown.
   S2b    India-adjusted variant: interest cover < 2.5x (UNTESTED; reported, not used for the grade).
   S3     short-term funding gap: short-term borrowings > 0 and > cash equivalents + 0.5 x CFO
@@ -128,9 +129,9 @@ def fy0_basis(page):
     return "standalone" if heads and "(S)" in heads[-1] else "consolidated"
 
 
-def fetch_company(sym, max_age, cache):
-    d = os.path.join(cache, sym)
-    url = f"{SCREENER}/company/{urllib.parse.quote(sym)}/consolidated/"
+def fetch_company(sym, max_age, cache, standalone=False):
+    d = os.path.join(cache, sym, "standalone") if standalone else os.path.join(cache, sym)
+    url = f"{SCREENER}/company/{urllib.parse.quote(sym)}/" + ("" if standalone else "consolidated/")
     page = cached(os.path.join(d, "page.html"), max_age, lambda: curl(url))
     if not page or 'id="profit-loss"' not in page:
         return None, url, None, None
@@ -138,10 +139,10 @@ def fetch_company(sym, max_age, cache):
     return page, url, (m.group(1) if m else None), d
 
 
-def fetch_schedules(cid, d, max_age):
+def fetch_schedules(cid, d, max_age, standalone=False):
     out = {}
     for parent, sec in SCHEDULES:
-        q = urllib.parse.urlencode({"parent": parent, "section": sec, "consolidated": "true"})
+        q = urllib.parse.urlencode(dict({"parent": parent, "section": sec}, **({} if standalone else {"consolidated": "true"})))
         u = f"{SCREENER}/api/company/{cid}/schedules/?{q}"
         txt = cached(os.path.join(d, re.sub(r"\W+", "_", parent).lower() + ".json"), max_age, lambda: curl(u))
         try:
@@ -169,6 +170,19 @@ def is_financial(lab, page):
     return not lab and "Financing Profit" in page
 
 
+def ebit_core(fin, fys):
+    """EBIT = Operating Profit - Depreciation + recurring Other Income.
+    Screener's "Other Income" carries exceptional items (Vodafone Idea FY26: +Rs 59,292 cr from dues relief;
+    FY20: -Rs 36,964 cr). Recurring part = FY0 other income clipped to [0, median of FY-2..FY0], so a one-off
+    gain is capped at the usual level and a one-off loss is ignored; treasury or regulatory income that
+    recurs (utilities, cash-rich firms) still counts."""
+    r = fin["FY"][fys[-1]]
+    ois = sorted(fin["FY"][d].get("other_income") or 0.0 for d in fys[-3:])
+    med = ois[len(ois) // 2]
+    oi = min(max(r.get("other_income") or 0.0, 0.0), max(med, 0.0))
+    return r["op_profit"] - (r.get("depreciation") or 0.0) + oi
+
+
 def inputs(fin, sched):
     """Pick FY0 / FY-1 and the inputs. Returns dict (None where missing)."""
     fys = sorted(fin["FY"])
@@ -188,10 +202,7 @@ def inputs(fin, sched):
     d0 = sched_value(sched, "Cash from Financing Activity", "Dividends paid", fy0)
     return {
         "fy0": fy0, "net_worth": eq,
-        # EBIT = Operating Profit - Depreciation (closest to US OperatingIncomeLoss). Screener's "Other
-        # Income" carries exceptional items (e.g. Vodafone Idea FY26 +Rs 59,292 cr), so PBT + interest is
-        # only the fallback.
-        "ebit": (g("op_profit") - (g("depreciation") or 0)) if g("op_profit") is not None
+        "ebit": ebit_core(fin, fys) if g("op_profit") is not None
         else ((pbt + (interest or 0)) if pbt is not None else None), "interest": interest,
         "std": sched_value(sched, "Borrowings", "Short term Borrowings", fy0),
         "cash": sched_value(sched, "Other Assets", "Cash Equivalents", fy0),
@@ -230,8 +241,12 @@ def flags(x):
         f["s4"] = 0 if D == 0 else None
     else:
         f["s4"] = int(D > 0 and D > fcf and x["debt0"] > x["debt1"])
-    for out, s2 in (("s5", "s2"), ("s5b", "s2b")):
-        comps = [f["s1"], f[s2], f["s3"], f["s4"]]
+    # India decision (2026-11-22, decision:india-solvency-s3-excluded): S3 (short-term funding gap) fired on ~50% of
+    # Indian names (working-capital bank lines; liquid funds booked as Investments), so it is EXCLUDED from the
+    # India S5 until an Indian re-test sets a threshold. s5 = >=2 of S1, S2, S4. The US definition (incl. S3) is
+    # kept as s5_us (reported in details only; not stored as its own column).
+    for out, s2, use_s3 in (("s5", "s2", False), ("s5b", "s2b", False), ("s5_us", "s2", True)):
+        comps = [f["s1"], f[s2], f["s4"]] + ([f["s3"]] if use_s3 else [])
         known, fired = sum(c is not None for c in comps), sum(c == 1 for c in comps)
         f[out] = int(fired >= 2) if (fired >= 2 or known >= 2) else None
     f["n_flags"] = sum(f[k] == 1 for k in ("s1", "s2", "s3", "s4"))
@@ -252,9 +267,22 @@ def describe(x, f):
     return "; ".join(parts) + f" (FY {x['fy0']:%b %Y}, Rs cr)"
 
 
-def screen_one(sym, max_age, cache):
+def screen_one(sym, max_age, cache, standalone=False):
+    """Consolidated first. If the consolidated accounts are missing or stale (some companies stop
+    consolidating after merging subsidiaries, and screener then shows old consolidated years), retry on the
+    standalone page and keep that if its FY0 is newer."""
+    row = _screen(sym, max_age, cache, False)
+    if row["status"] in ("stale_fy", "no_annual_data"):
+        alt = _screen(sym, max_age, cache, True)
+        if alt.get("fy0") and alt["fy0"] > (row.get("fy0") or ""):
+            alt["basis"] = "standalone (consolidated stale)"
+            return alt
+    return row
+
+
+def _screen(sym, max_age, cache, standalone):
     row = {"symbol": sym, "status": "", "grade": ""}
-    page, url, cid, d = fetch_company(sym, max_age, cache)
+    page, url, cid, d = fetch_company(sym, max_age, cache, standalone)
     row["url"] = url
     if page is None:
         row["status"] = "no_page"
@@ -263,11 +291,11 @@ def screen_one(sym, max_age, cache):
     row["name"] = company_name(page)
     row["industry"] = " / ".join(v for k, v in lab.items() if k in ("Broad Industry", "Industry"))
     fin = F.parse_screener(page)
-    row["basis"] = fy0_basis(page)
+    row["basis"] = "standalone" if standalone else fy0_basis(page)
     if is_financial(lab, page):
         row["status"] = "financial_alm"
         return row
-    sched = fetch_schedules(cid, d, max_age) if cid else {}
+    sched = fetch_schedules(cid, d, max_age, standalone) if cid else {}
     x = inputs(fin, sched)
     if x is None:
         row["status"] = "no_annual_data"
@@ -358,7 +386,7 @@ def selftest():
          {"s1raw": 1, "s1": 1, "s2": 1, "s5": 1}),
         ("payout-driven negative equity exempt", {"net_worth": -10.0, "fcf": 40.0, "div3": 30.0}, {"s1raw": 1, "s1": 0}),
         ("icr 2.0: India variant only", {"ebit": 20.0}, {"s2": 0, "s2b": 1, "s5": 0}),
-        ("funding gap + payouts beyond FCF", {"std": 80.0, "cfo": 10.0, "dividends": 20.0}, {"s3": 1, "s4": 1, "s5": 1}),
+        ("funding gap + payouts beyond FCF", {"std": 80.0, "cfo": 10.0, "dividends": 20.0}, {"s3": 1, "s4": 1, "s5": 0, "s5_us": 1}),
         ("debt-free, no interest", {"interest": 0.0, "debt0": 0.0, "debt1": 0.0, "std": 0.0}, {"s2": 0, "s3": 0, "s4": 0}),
         ("indebted, interest missing -> unknown", {"interest": None, "debt0": 300.0}, {"s2": None}),
     ]
@@ -368,6 +396,14 @@ def selftest():
         good = all(got[k] == v for k, v in exp.items())
         ok &= good
         print(f"  {'PASS' if good else 'FAIL'} {name}: {({k: got[k] for k in exp})}")
+    # one-off other income is capped at its 3-year median (Vodafone Idea FY24-FY26 shape, Rs cr)
+    fys = [dt.date(2024, 3, 31), dt.date(2025, 3, 31), D]
+    fin = {"FY": {fys[0]: {"other_income": 917}, fys[1]: {"other_income": 1100},
+                  D: {"op_profit": 18859, "depreciation": 22108, "other_income": 59292}}}
+    e = ebit_core(fin, fys)
+    good = e == 18859 - 22108 + 1100
+    ok &= good
+    print(f"  {'PASS' if good else 'FAIL'} one-off other income capped: EBIT {e:,.0f} (expected -2,149)")
     print("selftest:", "ALL PASS" if ok else "FAILURES above")
     return 0 if ok else 1
 

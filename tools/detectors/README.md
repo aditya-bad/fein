@@ -9,6 +9,7 @@ worth a human look. No Claude, no pip packages, no API keys.
 | `collect.py` | Pulls NSE corporate announcements (main board + SME), PIT insider disclosures, SAST Reg 29, bulk and block deals, the all-company NSE promoter-pledge snapshot, and BSE announcements as a backup feed. Raw responses are kept gzipped under `$FEIN_DATA/raw/YYYY-MM-DD/`; normalised rows go into `$FEIN_DATA/fein.sqlite`. |
 | `detect.py` | Runs the rules below over the database and writes `$FEIN_DATA/alerts/YYYY-MM-DD.md` and `.csv` (columns: date, symbol, rule, details, source_url). An alert is reported once, on the day it is first seen. |
 | `fein_common.py` | Shared code: HTTP with pacing and back-off, date/number parsing, SQLite schema. |
+| `solvency_screen.py` | Weekly. Reads the latest annual consolidated numbers for each symbol from screener.in and computes the India solvency flags (below). Writes `$FEIN_DATA/solvency/solvency_YYYY-MM-DD.csv` and `.md` plus `latest.csv`, and the `solvency` table in `fein.sqlite`, which `detect.py` turns into `solvency_s1` / `solvency_s5` alerts. Needs `tools/promise_tracker/pipeline/` (screener parser) next to `tools/detectors/`. |
 
 `FEIN_DATA` defaults to `~/fein-data`. Logs go to `$FEIN_DATA/logs/collect.log` and `detect.log`.
 
@@ -31,8 +32,78 @@ This is a research tool, not SEBI-registered advice. An alert means "open the fi
 | `default_delay` | "default", "delay in payment", "non-payment of interest" and similar (filings saying "no default" are skipped) |
 | `insolvency_new` | insolvency (CIRP) admitted or initiated |
 | `large_deal` | a client's net bulk/block deal in a stock on one day is 1% of equity or more (Rs 50 cr or more if the share count is unknown). Same-day buy-and-sell round trips net to zero and drop out. |
+| `solvency_s1` | latest weekly solvency snapshot (at most 10 days old): net worth (equity capital + reserves) below zero, not explained by payouts. Once per symbol per fiscal year. |
+| `solvency_s5` | same snapshot: 2 or more of S1, interest cover < 1.5x, short-term funding gap, dividends > FCF while debt rose. Once per symbol per fiscal year. |
 
 Thresholds are constants at the top of `detect.py`.
+
+## Solvency screen (weekly, graded red)
+
+Source rule: decision:solvency-flags-graded and lesson L24, from the pre-registered US test
+(`research_notes/Backtests/solvency_flags_us.md`). In the US these flags roughly doubled the odds of failure
+within 5 years but caught only 8-16% of failures. **Use: look harder and size smaller. Not a sell or short
+signal, not protection.** The Indian adaptation below is UNTESTED on Indian outcomes until the
+survivorship-free re-test (`research_notes/Universe/india_dead_companies_probe.md`) is run.
+
+FY0 = latest fiscal year in screener's profit-and-loss table (consolidated; screener falls back to
+standalone where there are no consolidated accounts, column `basis`). Balance sheet at the same date.
+
+| flag | India definition | vs the US test |
+|---|---|---|
+| S1raw | net worth = Equity Capital + Reserves < 0 (minority interest not included) | same |
+| S1 | S1raw, unless payout-driven: FCF > 0 and dividends paid over the last 3 years >= the deficit | US exempted *buyback*-driven negative equity. Indian buybacks are small and screener does not split them out, so only dividends count; the exemption should almost never fire |
+| S2 | interest cover EBIT / interest < 1.5x, EBIT = Operating Profit - Depreciation + recurring Other Income (FY0 other income clipped to [0, its 3-year median]). Interest 0: not fired if borrowings < 5% of assets | US EBIT = operating income. Screener's Other Income carries one-off gains and losses (Vodafone Idea FY26: +Rs 59,292 cr from dues relief), so only its usual level counts; recurring treasury or regulatory income (NHPC) still counts |
+| S2b | interest cover < 2.5x (India-adjusted variant: Indian rates are higher) | **untested; reported, never graded** |
+| S3 | short-term borrowings > cash equivalents + 0.5 x CFO (screener Borrowings and Other Assets schedules) | Ind AS puts current maturities of long-term debt in short-term borrowings, matching US "debt current". Cash excludes liquid mutual funds (screener "Investments"), which Indian treasuries use a lot, so S3 is stricter than in the US |
+| S4 | dividends paid > FCF and borrowings rose on the year | buybacks not counted (not separable) |
+| S5 | >= 2 of S1-S4 | same |
+| S5b | >= 2 of S1, S2b, S3, S4 | **untested variant** |
+
+Banks, NBFCs / financial institutions, housing finance, insurers and margin-funding brokers are excluded
+(`status=financial_alm`): borrowing is their inventory and they need an asset-liability-maturity test.
+FY0 older than 550 days = `stale_fy` (company may have stopped filing). Graded red = S1 or S5.
+
+```bash
+python3 solvency_screen.py --selftest              # offline flag checks
+python3 solvency_screen.py --sample 150 --seed 7   # validation sample
+python3 solvency_screen.py                         # full universe, ~1,550 names x 4 requests, ~2.5 h
+python3 solvency_screen.py --symbols IDEA,VEDL --no-db
+```
+
+Default universe: `research_notes/Backtests/india_pead_live/universe.csv` (column `sym`). Each symbol is
+4 screener requests (page + 3 schedule JSONs) at least 1.5 s apart; pages are cached for 6 days under
+`$FEIN_DATA/solvency/cache/`, so a re-run the same week is offline. Annual numbers change once a year per
+company, so weekly is plenty. Schedule it on Sunday morning, when no collect run is due (cron, IST):
+
+```cron
+10 6 * * 0  cd /home/pi/fein/tools/detectors && /usr/bin/python3 solvency_screen.py >> /home/pi/fein-data/logs/cron.log 2>&1
+```
+
+`detect.py` then reports new `solvency_s1` / `solvency_s5` alerts on its next evening run.
+
+**Validation run, 22-Nov-2026** (`--sample 150 --seed 7`, live screener, 814 s for 150 names, peak memory 26 MB;
+a cached re-run takes about 40 s): 131 screened, 19 excluded as financials (7 banks, 10 finance companies incl. investment holdcos, 1 insurer,
+1 broker), 7 companies whose consolidated accounts stopped years ago were screened on standalone numbers.
+
+| flag | fired / known |
+|---|---|
+| S1 negative net worth | 3 / 131 (BGRENERGY, SADBHIN, SPENCERS; no payout exemption fired) |
+| S2 interest cover < 1.5x | 23 / 131 |
+| S2b < 2.5x (untested) | 35 / 131 |
+| S3 short-term funding gap | 65 / 128 |
+| S4 dividends > FCF while debt rose | 30 / 131 |
+| **S5 >= 2 (graded red)** | **37 / 131 (28%)** |
+| S5b (untested) | 42 / 131 |
+
+`detect.py` turned this into 3 `solvency_s1` + 37 `solvency_s5` alerts; a second run reported 0 new.
+
+**Warning: S3 does not carry over to India as it stands.** Half of Indian non-financial companies fail
+it, because they fund working capital with short-term bank lines (cash credit, working-capital demand loans)
+and keep spare cash in liquid funds, which screener files under Investments, not cash. 33 of the 37 S5 cases
+need S3 (S3+S4 18, S2+S3 15); without S3 only 4 names are red (BGRENERGY, RKFORGE, SADBHIN, SPENCERS). Until
+the Indian re-test sets an Indian S3 threshold, read a `solvency_s5` alert that rests on S3 as a weak
+prompt, and treat `solvency_s1` and S5 cases without S3 as the real graded reds. Numbers are single-source
+(screener); check against the annual report before using one.
 
 ## Raspberry Pi setup (Raspberry Pi OS, ARM64)
 
@@ -41,7 +112,8 @@ sudo apt update
 sudo apt install -y python3 poppler-utils sqlite3 git curl
 sudo timedatectl set-timezone Asia/Kolkata      # so cron times below are IST
 git clone https://github.com/aditya-bad/fein.git ~/fein   # private repo: use a GitHub token or deploy key,
-                                                          # or just copy tools/detectors/ onto the Pi
+                                                          # or copy tools/detectors/ onto the Pi (plus
+                                                          # tools/promise_tracker/pipeline/ for solvency_screen.py)
 mkdir -p ~/fein-data
 echo 'export FEIN_DATA=$HOME/fein-data' >> ~/.bashrc
 ```
@@ -240,3 +312,10 @@ Things to know when reading alerts: `kmp_resignation` and `auditor_change` are t
 (an appointment of a new auditor after a normal term ending also fires `auditor_change`).
 `sast_promoter_open_market` includes trivial top-ups of a few thousand shares. Sort by rule priority,
 which the .md file already does, and open the linked filing before drawing any conclusion.
+
+
+### India S5 definition change (22-Nov-2026)
+S3 (short-term funding gap) fired on ~50% of Indian names in the 150-name validation (working-capital bank lines are
+normal; liquid funds sit in Investments, not cash) and drove 33 of 37 red flags. **Decision:india-solvency-s3-excluded:**
+India S5 = ≥2 of S1, S2, S4. S3 is still computed and shown, and the US-style S5 (incl. S3) is reported as `s5_us` in
+the self-test only. Revisit after a survivorship-free Indian re-test (tools/universe/dead_companies.py).

@@ -56,12 +56,57 @@ BANK_WIDE = {"roe_pct", "cost_income_pct", "casa_ratio_pct", "pcr_pct", "cet1_pc
 BANK_GROWTH = {"loan_growth_yoy_pct": "advances", "deposit_growth_yoy_pct": "deposits",
                "casa_growth_yoy_pct": "casa", "fee_growth_yoy_pct": "fee_income"}
 BANK_MEASURES = BANK_TIGHT | BANK_WIDE | set(BANK_GROWTH)
+# v1.2 (2026-11-22, IT mid-caps): IT-services measures. Constant-currency (CC) and USD growth, TCV/deal wins,
+# utilisation, attrition, headcount and client concentration are company-defined and are scored ONLY from a --csv
+# (field name = measure name; FY rows for FY claims, Q rows for quarters; a reported ratio is read, never derived).
+# EBIT margin (the band IT companies guide) is derived from screener as (operating profit - depreciation) / sales
+# unless the CSV gives ebit_margin_pct (company EBIT, which governs). v1.1 read "EBIT margin 14-16%" as EBITDA
+# margin (screener OPM, ~3 pp higher for IT) and "CC growth 10%" as INR revenue growth (FX moves of 2-4 pp).
+IT_GROWTH = {"cc_revenue_growth_yoy_pct", "cc_revenue_qoq_pct", "usd_revenue_growth_yoy_pct", "usd_revenue_qoq_pct"}
+IT_PP = {"ebit_margin_pct", "utilisation_pct", "attrition_pct", "top5_client_share_pct", "top10_client_share_pct"}
+IT_AMOUNT = {"tcv_usd_mn", "headcount"}
+IT_CSV_ONLY = IT_GROWTH | IT_AMOUNT | (IT_PP - {"ebit_margin_pct"})
+IT_MEASURES = IT_GROWTH | IT_PP | IT_AMOUNT
+IT_RX = [   # matched on the METRIC text first (then metric+target); order matters
+    (r"\btcv\b|total contract value|deal wins?|large deals?|\bbookings?\b|\bacv\b", "tcv_usd_mn"),
+    (r"attrition", "attrition_pct"),
+    (r"utili[sz]ation", "utilisation_pct"),
+    (r"headcount|head count|employee (count|base)", "headcount"),
+    (r"top[\s-]?(5|five) (clients?|accounts?|customers?)", "top5_client_share_pct"),
+    (r"top[\s-]?(10|ten) (clients?|accounts?|customers?)", "top10_client_share_pct"),
+    (r"\bebit\b(?!da)|ebit (margin|band)|operating (margin )?band", "ebit_margin_pct"),
+    (r"(constant[\s-]currency|\bcc\b).*(q-?o-?q|sequential)|(q-?o-?q|sequential).*(constant[\s-]currency|\bcc\b)", "cc_revenue_qoq_pct"),
+    (r"constant[\s-]currency|\bcc\b", "cc_revenue_growth_yoy_pct"),
+    (r"(\busd\b|dollar|\$|us\$).*(q-?o-?q|sequential)", "usd_revenue_qoq_pct"),
+    (r"(\busd\b|dollar|us\$)\s*(revenue|growth|terms)|(revenue|growth)\s*(in )?(\busd\b|dollar|us\$)", "usd_revenue_growth_yoy_pct"),
+]
+IT_SEGMENT_RX = re.compile(r"vertical|\bbfsi\b|\bbfs\b|insurance|healthcare|hi[\s-]?tech|\bmanufacturing\b|retail|"
+                           r"travel|\bgeo|europe|north america|\busa?\b region|\brow\b|segment|service line|\bdirect\b|"
+                           r"\bdxc\b|\bhp\b|top client|client [a-z0-9]|account|nagarro|cigniti|organic|ex-|excluding", re.I)
+
+
+def infer_it_measure(metric, text):
+    """IT-services KPI from the metric text (fallback: metric+target). Vertical/geo/client-level growth,
+    'organic'/'excluding X' variants and multi-year CAGRs are NOT the company-level measure (judgment)."""
+    for src in (metric, text):
+        tl = src.lower()
+        for rx, m in IT_RX:
+            if re.search(rx, tl):
+                if m in IT_GROWTH and (IT_SEGMENT_RX.search(metric) or re.search(r"cagr|\d\s*(-|to)\s*\d\s*years|by fy\d\d.*fy\d\d", tl)):
+                    return None
+                if m == "utilisation_pct" and re.search(r"capacit|plant|engineering|line\b|wheel|tonn|factory|press", tl):
+                    return None   # manufacturing capacity utilisation, not billable-staff utilisation
+                if m == "ebit_margin_pct" and re.search(r"segment|vertical|nagarro|organic|ex-|excluding|exit rate", metric.lower()):
+                    return None
+                return m
+    return None
 LOWER_BETTER = {"finance_cost_pct_revenue", "debtor_days", "borrowings_cr",
-                "credit_cost_pct", "gnpa_pct", "nnpa_pct", "slippage_pct", "cod_pct", "cof_pct", "cost_income_pct"}
+                "credit_cost_pct", "gnpa_pct", "nnpa_pct", "slippage_pct", "cod_pct", "cof_pct", "cost_income_pct",
+                "attrition_pct", "top5_client_share_pct", "top10_client_share_pct"}
 PP_MEASURES = {"ebitda_margin_pct", "ebitda_margin_incl_oi_pct", "finance_cost_pct_revenue", "roce_pct",
                "dividend_payout_pct"}
-GROWTH_MEASURES = {"revenue_growth_yoy_pct", "revenue_qoq_pct", "pat_growth_yoy_pct"} | set(BANK_GROWTH)
-PP_MEASURES |= BANK_WIDE
+GROWTH_MEASURES = {"revenue_growth_yoy_pct", "revenue_qoq_pct", "pat_growth_yoy_pct"} | set(BANK_GROWTH) | IT_GROWTH
+PP_MEASURES |= BANK_WIDE | IT_PP
 SEGMENT_RX = re.compile(r"segment|division|polymer|engineering|infra|export|aftermarket|small[\s-]ag|large ag|"
                         r"construction|mexico|fabrication|warehouse|order|utili[sz]ation|capacity|share of|mix|epc|"
                         r"substation|pipes|tonne|\busd\b|\$|normali[sz]ed|ex-fx|through[\s-]the[\s-]cycle|cagr|"
@@ -92,7 +137,7 @@ def parse_target(text):
     t = str(text).replace("−", "-").replace("–", "-")
     head = re.split(r"\(|;|\bvs\b|\bfrom\b|\bon\b FY|\bbase\b", t)[0]
     comp = "~"
-    if re.search(r"(^|\s)(>|>=|≥|at least|minimum|above|over|in excess|plus|\+$)|\d\s*%?\s*\+|%\s*plus|comfortably above", head, re.I):
+    if re.search(r"(^|\s)(>|>=|≥|at least|minimum|above|over|in excess|plus|\+$)|\d\s*%?\s*\+|\d\s*(?:mn|bn|million|billion)\s*\+|%\s*plus|comfortably above", head, re.I):
         comp = ">="
     if re.search(r"(^|\s)(<|<=|≤|below|under|at most|max|less than|within)", head, re.I):
         comp = "<="
@@ -132,6 +177,20 @@ def parse_target(text):
     if m:
         v = float(m.group(1).replace(",", ""))
         return v, v, "days", comp
+    # v1.2 (IT): 'USD 500 mn' / '$1.5 bn' / '$300-350 million' -> USD mn; qualitative growth words
+    m = re.search(r"(?:USD|US\$|\$)\s*~?\s*([\d,]+(?:\.\d+)?)\s*(?:(?:-|to)\s*(?:USD|US\$|\$)?\s*([\d,]+(?:\.\d+)?)\s*)?"
+                  r"(mn|million|bn|billion)\b", head, re.I)
+    if m:
+        k = 1000.0 if m.group(3).lower() in ("bn", "billion") else 1.0
+        a_ = float(m.group(1).replace(",", "")) * k
+        b_ = float(m.group(2).replace(",", "")) * k if m.group(2) else a_
+        return min(a_, b_), max(a_, b_), "USD mn", ("range" if m.group(2) and comp == "~" else comp)
+    if re.search(r"\bhigh[\s-]single[\s-]digits?\b", head, re.I):
+        return 7, 9, "%", "range"
+    if re.search(r"\blow[\s-]double[\s-]digits?\b", head, re.I):
+        return 10, 12, "%", "range"
+    if re.search(r"\bdouble[\s-]digits?\b", head, re.I):
+        return 10, 10, "%", ">="
     if re.search(r"\b(mid[\s-]teens?)\b", head, re.I):
         return 14, 16, "%", "range"
     if re.search(r"\bflat\b|in line|~?\s*0\s*%", head, re.I):
@@ -197,6 +256,11 @@ def infer_measure(p):
     bm = infer_bank_measure(metric, text)
     if bm:
         return bm, "inferred (bank)"
+    im = infer_it_measure(metric, text)
+    if im:
+        return im, "inferred (IT services)"
+    if re.search(r"constant[\s-]currency|\bcc\b|\busd\b|dollar|us\$|\bebit\b(?!da)", text.lower()):
+        return None, "IT variant (vertical/geo/client, organic/ex-acquisition, CAGR or segment EBIT): judgment"
     if SEGMENT_RX.search(metric) or SEGMENT_RX.search(str(p.get("target") or "")[:40]):
         return None, "segment/non-financial or company-defined metric"
     tl = text.lower()
@@ -343,11 +407,33 @@ def bank_actual(fin, measure, kind, end):
     return None, f"{measure} missing in CSV"
 
 
+def it_actual(fin, measure, kind, end):
+    """IT KPIs (v1.2). Company-reported ratios/amounts come from the --csv only: the FY row for FY/H claims
+    (CC growth, attrition and utilisation are not averages of quarters), the Q row for quarters. For tcv_usd_mn
+    over an FY/H the quarterly rows are summed. ebit_margin_pct falls back to screener (op profit - depreciation)/sales."""
+    row = "Q" if kind == "Q" else "FY"
+    v = fin.get(row, {}).get(end, {}).get(measure)
+    if v is not None:
+        return v, f"{measure} {row} (CSV, company-reported)"
+    if measure in ("tcv_usd_mn",) and kind in ("FY", "H", "TTM"):
+        t = _sum_q(fin, end, 2 if kind == "H" else 4, measure) if fin.get("Q") else None
+        if t is not None:
+            return t, f"sum of quarterly {measure} (CSV)"
+    if measure == "ebit_margin_pct":
+        s_, o, d = (period_value(fin, kind, end, f) for f in ("sales", "op_profit", "depreciation"))
+        if s_ and o is not None and d is not None:
+            return 100 * (o - d) / s_, f"(op {o:g} - dep {d:g}) / sales {s_:g} (screener-derived EBIT; company EBIT may differ)"
+        return None, "sales/op_profit/depreciation missing"
+    return None, f"{measure} missing in CSV (company-defined IT KPI: not on screener)"
+
+
 def actual_for(fin, measure, kind, end):
     """-> (value, detail) or (None, reason)"""
     pv = lambda f, k=kind, e=end: period_value(fin, k, e, f)  # noqa: E731
     if measure in BANK_MEASURES:
         return bank_actual(fin, measure, kind, end)
+    if measure in IT_MEASURES:
+        return it_actual(fin, measure, kind, end)
     try:
         if measure == "revenue_growth_yoy_pct":
             a, b = pv("sales"), pv("sales", kind, year_ago(end))
