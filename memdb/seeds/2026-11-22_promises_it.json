@@ -1,0 +1,4414 @@
+[
+ {
+  "type": "promise",
+  "id": "promise:PERSISTENT:2025-07-23:usd-2bn-revenue-by-fy27",
+  "title": "Reach USD 2 billion revenue by end of FY27 (needs ~19-20% CAGR)",
+  "body": "Sandeep Kalra (ED & CEO) on 2025-07-23 (Q1FY26 concall transcript): \"we have to get to $2 billion by FY27, which is ending in March, 2027. We need a compounded annual growth rate in the range of 19%-20%. We are tracking to that\" Metric: Annual revenue (USD). Target: USD 2,000 mn in FY27. Deadline: 2027-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: FY26 USD 1,654 mn (+17.4%); Q2FY27 USD 487.6 mn (+7.8% QoQ, organic - Nagarro not closed). GOALPOST FLAG: on 2026-04-21 the CEO said '$2 billion by FY27, that's a run rate ... Q4 exit ... in the range of $500 million or so ... plus minus a quarter at worst' - a full-year target re-cast as an exit run rate without saying it had changed. Resolve at the deadline (pipeline v1.1: a pending original is not pre-judged). Nagarro (closing ~Dec-2026/Jan-2027) will inflate reported FY27 revenue.",
+  "tickers": [
+   "PERSISTENT"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2025-07-23",
+  "data": {
+   "said_on": "2025-07-23",
+   "speaker": "Sandeep Kalra (ED & CEO)",
+   "quote": "we have to get to $2 billion by FY27, which is ending in March, 2027. We need a compounded annual growth rate in the range of 19%-20%. We are tracking to that",
+   "category": "revenue_growth",
+   "metric": "Annual revenue (USD)",
+   "target": "USD 2,000 mn in FY27",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 3,
+   "conditionality": "aspiration",
+   "status": "pending",
+   "evidence": "FY26 USD 1,654 mn (+17.4%); Q2FY27 USD 487.6 mn (+7.8% QoQ, organic - Nagarro not closed). GOALPOST FLAG: on 2026-04-21 the CEO said '$2 billion by FY27, that's a run rate ... Q4 exit ... in the range of $500 million or so ... plus minus a quarter at worst' - a full-year target re-cast as an exit run rate without saying it had changed. Resolve at the deadline (pipeline v1.1: a pending original is not pre-judged). Nagarro (closing ~Dec-2026/Jan-2027) will inflate reported FY27 revenue.",
+   "later_restatements": "2025-10-14 'steady progress towards our aspiration of reaching $2 billion by end of FY27'; 2026-01-20 'aspiration of $2 billion by March 2027'; 2026-04-21 re-cast as Q4FY27 exit run rate ~$500 mn",
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_29072025232737_PSLTranscript_of_Investors_call_recordingsigned.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_29072025232737_PSLTranscript_of_Investors_call_recordingsigned.pdf",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:PERSISTENT",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:PERSISTENT:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:PERSISTENT:2025-07-23:ebit-margin-plus-200-300bp-by-fy27",
+  "title": "EBIT margin to improve 200-300 bp from FY25 (14.7%) by FY27, i.e. ~16.7-17.7%",
+  "body": "Vinit Teredesai (CFO) on 2025-07-23 (Q1FY26 concall transcript): \"We have mentioned in the past that it needs to be improved by 200-300 basis point by the time we reach FY27. If you look at our last year, it was 14.7.\" Metric: EBIT margin (company). Target: +200-300 bp vs FY25 14.7% (16.7-17.7%). Deadline: 2027-03-31. Specificity: range; prompted by analyst. Status as of 2026-11-22: pending. Evidence: FY26 15.6% (+90 bp); Q1FY27 ~16.0% (derived from Q2's +1.6% QoQ EBIT on +8.4% QoQ INR revenue), Q2FY27 15.0% (wage hike, large-deal amortisation). GOALPOST FLAG: 2026-01-20 'we are not aspiring now to take it another 200 basis points up'; 2026-04-21 'we have achieved whatever we had said ... Our aspiration continues to be in the 16 to 17% range' - the floor moved from 16.7% to 16% without acknowledging it. Scored at FY27 on the expansion promised (clarification B).",
+  "tickers": [
+   "PERSISTENT"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2025-07-23",
+  "data": {
+   "said_on": "2025-07-23",
+   "speaker": "Vinit Teredesai (CFO)",
+   "quote": "We have mentioned in the past that it needs to be improved by 200-300 basis point by the time we reach FY27. If you look at our last year, it was 14.7.",
+   "category": "margin",
+   "metric": "EBIT margin (company)",
+   "target": "+200-300 bp vs FY25 14.7% (16.7-17.7%)",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": false,
+   "materiality": 3,
+   "conditionality": "aspiration",
+   "status": "pending",
+   "evidence": "FY26 15.6% (+90 bp); Q1FY27 ~16.0% (derived from Q2's +1.6% QoQ EBIT on +8.4% QoQ INR revenue), Q2FY27 15.0% (wage hike, large-deal amortisation). GOALPOST FLAG: 2026-01-20 'we are not aspiring now to take it another 200 basis points up'; 2026-04-21 'we have achieved whatever we had said ... Our aspiration continues to be in the 16 to 17% range' - the floor moved from 16.7% to 16% without acknowledging it. Scored at FY27 on the expansion promised (clarification B).",
+   "later_restatements": "2025-10-14 '100 bp in FY26 and probably another 100 bp in FY27'; 2026-04-21 and 2026-10-15 '16 to 17% range' aspiration",
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_29072025232737_PSLTranscript_of_Investors_call_recordingsigned.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_29072025232737_PSLTranscript_of_Investors_call_recordingsigned.pdf",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:PERSISTENT",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:PERSISTENT:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:PERSISTENT:2025-07-23:fy26-etr-22-5-to-23-5pct",
+  "title": "FY26 effective tax rate in the 22.5-23.5% range",
+  "body": "Vinit Teredesai (CFO) on 2025-07-23 (Q1FY26 concall transcript): \"We expect our overall effective tax rate for the year to remain in the range of 22.5% to 23.5% going forward.\" Metric: Effective tax rate. Target: 22.5-23.5%. Deadline: 2026-03-31. Specificity: range; volunteered. Status as of 2026-11-22: delivered. Evidence: FY26 ETR 22.6% ('Effective tax rate for FY26 stood at 22.6%', Q4FY26 call).",
+  "tickers": [
+   "PERSISTENT"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "other"
+  ],
+  "date": "2025-07-23",
+  "data": {
+   "said_on": "2025-07-23",
+   "speaker": "Vinit Teredesai (CFO)",
+   "quote": "We expect our overall effective tax rate for the year to remain in the range of 22.5% to 23.5% going forward.",
+   "category": "other",
+   "metric": "Effective tax rate",
+   "target": "22.5-23.5%",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "delivered",
+   "evidence": "FY26 ETR 22.6% ('Effective tax rate for FY26 stood at 22.6%', Q4FY26 call).",
+   "delivered_value": "22.6%",
+   "delivery_ratio": 1.0,
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_29072025232737_PSLTranscript_of_Investors_call_recordingsigned.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other",
+   "score": 1.0,
+   "weight": 1.26
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_29072025232737_PSLTranscript_of_Investors_call_recordingsigned.pdf",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "company:PERSISTENT",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:PERSISTENT:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:PERSISTENT:2025-07-23:wage-hike-deferred-to-oct25",
+  "title": "Annual wage hike postponed by one quarter (to 1-Oct-2025)",
+  "body": "Vinit Teredesai (CFO) on 2025-07-23 (Q1FY26 concall transcript): \"In view of the current uncertain business scenario, we have decided to postpone our wage hike by a quarter.\" Metric: Wage-hike timing. Target: effective Q3FY26. Deadline: 2025-10-31. Specificity: precise; volunteered. Status as of 2026-11-22: delivered. Evidence: 'effective October 1, 2025, we have rolled out increments to all our employees ... in line with the previous years' (Q2FY26 call).",
+  "tickers": [
+   "PERSISTENT"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "other"
+  ],
+  "date": "2025-07-23",
+  "data": {
+   "said_on": "2025-07-23",
+   "speaker": "Vinit Teredesai (CFO)",
+   "quote": "In view of the current uncertain business scenario, we have decided to postpone our wage hike by a quarter.",
+   "category": "other",
+   "metric": "Wage-hike timing",
+   "target": "effective Q3FY26",
+   "deadline": "2025-10-31",
+   "deadline_precision": "month",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "delivered",
+   "evidence": "'effective October 1, 2025, we have rolled out increments to all our employees ... in line with the previous years' (Q2FY26 call).",
+   "delivery_ratio": 1.0,
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_29072025232737_PSLTranscript_of_Investors_call_recordingsigned.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other",
+   "score": 1.0,
+   "weight": 1.89
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_29072025232737_PSLTranscript_of_Investors_call_recordingsigned.pdf",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "company:PERSISTENT",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:PERSISTENT:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:PERSISTENT:2025-07-23:europe-15pct-of-revenue-2-3yrs",
+  "title": "Europe to reach ~15% of revenue in the next 2-3 years",
+  "body": "Sandeep Kalra (ED & CEO) on 2025-07-23 (Q1FY26 concall transcript): \"Europe, where we have clearly said that we want to be 15% in revenue terms as we go ahead in the next 2-3 years\" Metric: Europe share of revenue. Target: ~15%. Deadline: 2028-03-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: pending. Evidence: Q4FY26: Europe declined 1.8% QoQ ('an area where we want to double down'). Nagarro (Europe-heavy) would meet it mechanically once consolidated.",
+  "tickers": [
+   "PERSISTENT"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2025-07-23",
+  "data": {
+   "said_on": "2025-07-23",
+   "speaker": "Sandeep Kalra (ED & CEO)",
+   "quote": "Europe, where we have clearly said that we want to be 15% in revenue terms as we go ahead in the next 2-3 years",
+   "category": "revenue_growth",
+   "metric": "Europe share of revenue",
+   "target": "~15%",
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "pending",
+   "evidence": "Q4FY26: Europe declined 1.8% QoQ ('an area where we want to double down'). Nagarro (Europe-heavy) would meet it mechanically once consolidated.",
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_29072025232737_PSLTranscript_of_Investors_call_recordingsigned.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_29072025232737_PSLTranscript_of_Investors_call_recordingsigned.pdf",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:PERSISTENT",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:PERSISTENT:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:PERSISTENT:2025-10-14:fy26-ebit-plus-100bp",
+  "title": "FY26 EBIT margin ~100 bp above FY25 (14.7%), i.e. ~15.7%",
+  "body": "Vinit Teredesai (CFO) on 2025-10-14 (Q2FY26 concall transcript): \"if we are looking at our current trajectory, we are looking at 100 basis point improvement in FY26, and probably another 100 basis point in FY27\" Metric: EBIT margin (company). Target: +100 bp vs FY25 14.7%. Deadline: 2026-03-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: delivered. Evidence: FY26 EBIT margin 15.6% (+90 bp; company, Q4FY26 call), despite a one-time 230 bp labour-code charge in Q3. Within 0.3 pp of +100 bp. Screener-derived (OP-dep)/sales FY26 16.2% (different classification).",
+  "tickers": [
+   "PERSISTENT"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2025-10-14",
+  "data": {
+   "said_on": "2025-10-14",
+   "speaker": "Vinit Teredesai (CFO)",
+   "quote": "if we are looking at our current trajectory, we are looking at 100 basis point improvement in FY26, and probably another 100 basis point in FY27",
+   "category": "margin",
+   "metric": "EBIT margin (company)",
+   "target": "+100 bp vs FY25 14.7%",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "delivered",
+   "evidence": "FY26 EBIT margin 15.6% (+90 bp; company, Q4FY26 call), despite a one-time 230 bp labour-code charge in Q3. Within 0.3 pp of +100 bp. Screener-derived (OP-dep)/sales FY26 16.2% (different classification).",
+   "delivered_value": "15.6% (+90 bp)",
+   "delivery_ratio": 0.9,
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_20102025194609_PSLEarningscallTranscriptQ2FY26.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin",
+   "score": 1.0,
+   "weight": 4.089
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_20102025194609_PSLEarningscallTranscriptQ2FY26.pdf",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "company:PERSISTENT",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:PERSISTENT:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:PERSISTENT:2025-10-14:q3fy26-wage-impact-net-80-100bp",
+  "title": "Q3FY26 wage hike costs 180 bp of margin, of which 80-100 bp offset by other levers (net ~-80-100 bp QoQ from 16.3%)",
+  "body": "Vinit Teredesai (CFO) on 2025-10-14 (Q2FY26 concall transcript): \"We anticipate an impact of 180 basis points on next quarter's margins due to wage hikes. However, on an overall basis, up to 80 to 100 basis points of this impact is expected to get offset\" Metric: EBIT margin Q3FY26 (company). Target: ~15.3-15.5% (16.3% less net 80-100 bp). Deadline: 2025-12-31. Specificity: range; volunteered. Status as of 2026-11-22: delivered. Evidence: Q3FY26 reported EBIT 14.4% incl. a one-time 230 bp New Labour Code provision (government change, sector-wide); excluding it 16.7% (+40 bp QoQ) - the wage walk was beaten. Clarification C: delivered on the adjusted basis, both numbers shown; single-source.",
+  "tickers": [
+   "PERSISTENT"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2025-10-14",
+  "data": {
+   "said_on": "2025-10-14",
+   "speaker": "Vinit Teredesai (CFO)",
+   "quote": "We anticipate an impact of 180 basis points on next quarter's margins due to wage hikes. However, on an overall basis, up to 80 to 100 basis points of this impact is expected to get offset",
+   "category": "margin",
+   "metric": "EBIT margin Q3FY26 (company)",
+   "target": "~15.3-15.5% (16.3% less net 80-100 bp)",
+   "deadline": "2025-12-31",
+   "deadline_precision": "quarter",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "delivered",
+   "evidence": "Q3FY26 reported EBIT 14.4% incl. a one-time 230 bp New Labour Code provision (government change, sector-wide); excluding it 16.7% (+40 bp QoQ) - the wage walk was beaten. Clarification C: delivered on the adjusted basis, both numbers shown; single-source.",
+   "delivered_value": "16.7% ex-labour code (14.4% reported)",
+   "delivery_ratio": 1.0,
+   "admitted_unprompted": true,
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_20102025194609_PSLEarningscallTranscriptQ2FY26.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin",
+   "score": 1.0,
+   "weight": 2.726
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_20102025194609_PSLEarningscallTranscriptQ2FY26.pdf",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:PERSISTENT",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:PERSISTENT:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:PERSISTENT:2026-01-20:usd-5bn-revenue-by-fy31",
+  "title": "Long-term aspiration: USD 5 billion annual revenue by FY31",
+  "body": "Sandeep Kalra (ED & CEO) on 2026-01-20 (Q3FY26 concall transcript): \"our long-term aspiration of reaching $5 billion in annual revenue by FY31\" Metric: Annual revenue (USD). Target: USD 5,000 mn. Deadline: 2031-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "PERSISTENT"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-01-20",
+  "data": {
+   "said_on": "2026-01-20",
+   "speaker": "Sandeep Kalra (ED & CEO)",
+   "quote": "our long-term aspiration of reaching $5 billion in annual revenue by FY31",
+   "category": "revenue_growth",
+   "metric": "Annual revenue (USD)",
+   "target": "USD 5,000 mn",
+   "deadline": "2031-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 2,
+   "conditionality": "aspiration",
+   "status": "pending",
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_27012026213814_PSLSubmissionoftheTranscriptforQ3FY26Sd.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_27012026213814_PSLSubmissionoftheTranscriptforQ3FY26Sd.pdf",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:PERSISTENT",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:PERSISTENT:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:PERSISTENT:2026-01-20:esop-cost-lower-in-fy27",
+  "title": "Stock-option (ESOP) cost to fall further in FY27",
+  "body": "Vinit Teredesai (CFO) on 2026-01-20 (Q3FY26 concall transcript): \"This is a reduction in cost that is happening in FY26. There will be a further reduction in cost that will happen in FY27.\" Metric: ESOP cost. Target: lower than FY26. Deadline: 2027-03-31. Specificity: vague; volunteered. Status as of 2026-11-22: pending. Evidence: Q2FY27: 'lower ESOP costs enabled us to absorb part of this [wage] impact' - on track.",
+  "tickers": [
+   "PERSISTENT"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-01-20",
+  "data": {
+   "said_on": "2026-01-20",
+   "speaker": "Vinit Teredesai (CFO)",
+   "quote": "This is a reduction in cost that is happening in FY26. There will be a further reduction in cost that will happen in FY27.",
+   "category": "margin",
+   "metric": "ESOP cost",
+   "target": "lower than FY26",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "evidence": "Q2FY27: 'lower ESOP costs enabled us to absorb part of this [wage] impact' - on track.",
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_27012026213814_PSLSubmissionoftheTranscriptforQ3FY26Sd.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_27012026213814_PSLSubmissionoftheTranscriptforQ3FY26Sd.pdf",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:PERSISTENT",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:PERSISTENT:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:PERSISTENT:2026-04-21:q4fy27-exit-run-rate-500mn",
+  "title": "Q4FY27 quarterly revenue ~USD 500 mn (USD 2 bn annualised run rate), 'plus minus a quarter at worst'",
+  "body": "Sandeep Kalra (ED & CEO) on 2026-04-21 (Q4FY26 concall transcript (company website; NSE filing is a cover letter)): \"FY'27, Q4 exit is where we are looking at the run rate being in the range of $500 million or so.\" Metric: Quarterly revenue (USD). Target: ~USD 500 mn in Q4FY27. Deadline: 2027-03-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: pending. Evidence: Q2FY27 USD 487.6 mn organic. Restates (and re-defines) the 2025-07-23 USD 2 bn FY27 target.",
+  "tickers": [
+   "PERSISTENT"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-04-21",
+  "data": {
+   "said_on": "2026-04-21",
+   "speaker": "Sandeep Kalra (ED & CEO)",
+   "quote": "FY'27, Q4 exit is where we are looking at the run rate being in the range of $500 million or so.",
+   "category": "revenue_growth",
+   "metric": "Quarterly revenue (USD)",
+   "target": "~USD 500 mn in Q4FY27",
+   "deadline": "2027-03-31",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 3,
+   "status": "pending",
+   "evidence": "Q2FY27 USD 487.6 mn organic. Restates (and re-defines) the 2025-07-23 USD 2 bn FY27 target.",
+   "source_doc": "Q4FY26 concall transcript (company website; NSE filing is a cover letter)",
+   "source_url": "https://www.persistent.com/wp-content/uploads/2026/04/Analyst-Call-Transcript-Q4FY26.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://www.persistent.com/wp-content/uploads/2026/04/Analyst-Call-Transcript-Q4FY26.pdf",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:PERSISTENT",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:PERSISTENT:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:PERSISTENT:2026-04-21:ebit-aspiration-16-17pct",
+  "title": "EBIT margin aspiration 16-17% (FY27)",
+  "body": "Vinit Teredesai (CFO) on 2026-04-21 (Q4FY26 concall transcript (company website; NSE filing is a cover letter)): \"Again, that is not a guidance, it's an aspiration. Our aspiration continues to be in the 16 to 17% range.\" Metric: EBIT margin (company). Target: 16-17%. Deadline: 2027-03-31. Specificity: range; prompted by analyst. Status as of 2026-11-22: pending. Evidence: Q2FY27 15.0% (wage hike 140 bp net, 90 bp large-deal amortisation). Restated 2026-10-15 ('we want to be in the 16 to 17 % range, that is our aspiration').",
+  "tickers": [
+   "PERSISTENT"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-04-21",
+  "data": {
+   "said_on": "2026-04-21",
+   "speaker": "Vinit Teredesai (CFO)",
+   "quote": "Again, that is not a guidance, it's an aspiration. Our aspiration continues to be in the 16 to 17% range.",
+   "category": "margin",
+   "metric": "EBIT margin (company)",
+   "target": "16-17%",
+   "deadline": "2027-03-31",
+   "deadline_precision": "vague",
+   "specificity": "range",
+   "volunteered": false,
+   "materiality": 3,
+   "conditionality": "aspiration",
+   "status": "pending",
+   "evidence": "Q2FY27 15.0% (wage hike 140 bp net, 90 bp large-deal amortisation). Restated 2026-10-15 ('we want to be in the 16 to 17 % range, that is our aspiration').",
+   "later_restatements": "2026-10-15 same band; Nagarro (EBITDA 13.9%) not yet consolidated",
+   "source_doc": "Q4FY26 concall transcript (company website; NSE filing is a cover letter)",
+   "source_url": "https://www.persistent.com/wp-content/uploads/2026/04/Analyst-Call-Transcript-Q4FY26.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin"
+  },
+  "sources": [
+   "https://www.persistent.com/wp-content/uploads/2026/04/Analyst-Call-Transcript-Q4FY26.pdf",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:PERSISTENT",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:PERSISTENT:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:PERSISTENT:2026-06-28:nagarro-close-q4cy26-q1cy27",
+  "title": "Nagarro acquisition to close in Q4 CY2026 or early Q1 CY2027",
+  "body": "Vinit Teredesai (CFO) on 2026-06-28 (Nagarro acquisition investor call transcript): \"we expect this transaction to close sometime towards the Q4 of Calendar Year 2026 or early Q1 of Calendar Year 2027\" Metric: Nagarro deal closing. Target: by ~31-Mar-2027. Deadline: 2027-03-31. Specificity: range; volunteered. Status as of 2026-11-22: pending. Evidence: Oct-26: 94.04% tendered; 'We expect in the next 4 to 6 weeks, max, let's say 8 weeks' for the remaining approvals (Austria, Spain). Covered by batch-2 judgment call thesis:paper-call:PERSISTENT:nagarro-deal-closes-by-mar27.",
+  "tickers": [
+   "PERSISTENT"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "m&a"
+  ],
+  "date": "2026-06-28",
+  "data": {
+   "said_on": "2026-06-28",
+   "speaker": "Vinit Teredesai (CFO)",
+   "quote": "we expect this transaction to close sometime towards the Q4 of Calendar Year 2026 or early Q1 of Calendar Year 2027",
+   "category": "m&a",
+   "metric": "Nagarro deal closing",
+   "target": "by ~31-Mar-2027",
+   "deadline": "2027-03-31",
+   "deadline_precision": "quarter",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 3,
+   "status": "pending",
+   "evidence": "Oct-26: 94.04% tendered; 'We expect in the next 4 to 6 weeks, max, let's say 8 weeks' for the remaining approvals (Austria, Spain). Covered by batch-2 judgment call thesis:paper-call:PERSISTENT:nagarro-deal-closes-by-mar27.",
+   "source_doc": "Nagarro acquisition investor call transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_03072026121301_PSLInvestorCallTranscriptSubmissionSd.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_03072026121301_PSLInvestorCallTranscriptSubmissionSd.pdf",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:PERSISTENT",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:PERSISTENT:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:PERSISTENT:2026-06-28:nagarro-eps-accretive-year1",
+  "title": "Nagarro deal cash-EPS and reported-EPS accretive in year 1 (ex transaction expenses)",
+  "body": "Vinit Teredesai (CFO) on 2026-06-28 (Nagarro acquisition investor call transcript): \"The transaction is expected to be Cash EPS accretive as well as Reported EPS accretive in Year 1 if you remove the transaction expenses\" Metric: EPS accretion. Target: accretive in year 1. Deadline: 2028-03-31. Specificity: vague; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "PERSISTENT"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "m&a"
+  ],
+  "date": "2026-06-28",
+  "data": {
+   "said_on": "2026-06-28",
+   "speaker": "Vinit Teredesai (CFO)",
+   "quote": "The transaction is expected to be Cash EPS accretive as well as Reported EPS accretive in Year 1 if you remove the transaction expenses",
+   "category": "m&a",
+   "metric": "EPS accretion",
+   "target": "accretive in year 1",
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "pending",
+   "source_doc": "Nagarro acquisition investor call transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_03072026121301_PSLInvestorCallTranscriptSubmissionSd.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_03072026121301_PSLInvestorCallTranscriptSubmissionSd.pdf",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:PERSISTENT",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:PERSISTENT:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:PERSISTENT:2026-06-28:net-debt-ebitda-1x-by-fy30",
+  "title": "Net debt / combined EBITDA down to ~1x by FY2030",
+  "body": "Vinit Teredesai (CFO) on 2026-06-28 (Nagarro acquisition investor call transcript): \"it is expected to reduce down to 1X by FY2030\" Metric: Net debt / EBITDA. Target: <=1x. Deadline: 2030-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "PERSISTENT"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "debt-reduction"
+  ],
+  "date": "2026-06-28",
+  "data": {
+   "said_on": "2026-06-28",
+   "speaker": "Vinit Teredesai (CFO)",
+   "quote": "it is expected to reduce down to 1X by FY2030",
+   "category": "debt_reduction",
+   "metric": "Net debt / EBITDA",
+   "target": "<=1x",
+   "deadline": "2030-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "pending",
+   "source_doc": "Nagarro acquisition investor call transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_03072026121301_PSLInvestorCallTranscriptSubmissionSd.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_03072026121301_PSLInvestorCallTranscriptSubmissionSd.pdf",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:PERSISTENT",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:PERSISTENT:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:PERSISTENT:2026-10-15:nagarro-txn-cost-25-30mn-next-2q",
+  "title": "Further Nagarro transaction expenses of USD 25-30 mn over the next two quarters",
+  "body": "Vinit Teredesai (CFO) on 2026-10-15 (Q2FY27 concall transcript): \"Over the next two quarters, we expect an incremental amount ranging between USD 25 to 30 million to be incurred towards the Nagarro transaction.\" Metric: Exceptional transaction costs. Target: USD 25-30 mn (Q3+Q4 FY27). Deadline: 2027-03-31. Specificity: range; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "PERSISTENT"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "m&a"
+  ],
+  "date": "2026-10-15",
+  "data": {
+   "said_on": "2026-10-15",
+   "speaker": "Vinit Teredesai (CFO)",
+   "quote": "Over the next two quarters, we expect an incremental amount ranging between USD 25 to 30 million to be incurred towards the Nagarro transaction.",
+   "category": "m&a",
+   "metric": "Exceptional transaction costs",
+   "target": "USD 25-30 mn (Q3+Q4 FY27)",
+   "deadline": "2027-03-31",
+   "deadline_precision": "half-year",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_23102026204328_PSLTranscriptSubmissionOctober2026Sd.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_23102026204328_PSLTranscriptSubmissionOctober2026Sd.pdf",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:PERSISTENT",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:PERSISTENT:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:PERSISTENT:credibility-2026-11",
+  "title": "PERSISTENT - Management Credibility Score (IT mid-caps peer calibration, Nov 2026)",
+  "body": "Promise tracker on Persistent Systems (IT mid-caps peer set). 6 calls (Jul-2025 to Oct-2026; no Q1FY27 call was held, the Jun-2026 Nagarro call is included); 15 promises, 4 scored. Status counts: {'pending': 11, 'delivered': 4}. Weighted delivery 100.0% (specificity-only 100.0%; hit rate 100.0%); MCS 1.0. Persistent refuses guidance ('we don't give forward-looking guidance'); its near-term statements (FY26 ETR, FY26 +100 bp EBIT, the Q3 wage-hike walk) were all met. The two big aspirations are pending and both show quiet re-framing: USD 2 bn 'by FY27' became a Q4FY27 exit run-rate (~USD 500 mn/qtr, 'plus minus a quarter'), and +200-300 bp from 14.7% became '16-17%'. Nagarro (closing ~Dec-26/Jan-27) will blur both. n scored is tiny: provisional. Research, not advice.",
+  "tickers": [
+   "PERSISTENT"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "process",
+   "it-peer-calibration"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "as_of": "2026-11-22",
+   "n_promises": 15,
+   "n_scored": 4,
+   "status_counts": {
+    "pending": 11,
+    "delivered": 4
+   },
+   "mcs_schema_scale": 1.0,
+   "mcs_scale_note": "-1.5 (all moved/dropped) .. +1 (all delivered); weights = specificity(3/2/1) x materiality(1-3) x recency decay (half-life 8 qtrs)",
+   "weighted_delivery_ratio_pct": 100.0,
+   "specificity_weighted_delivery_ratio_pct": 100.0,
+   "raw_hit_rate_pct": 100.0,
+   "candour_index_pct": null,
+   "candour_index_hard_misses_pct": null,
+   "by_category": {
+    "margin": {
+     "n": 2,
+     "delivery_ratio_pct": 100.0
+    },
+    "other": {
+     "n": 2,
+     "delivery_ratio_pct": 100.0
+    }
+   },
+   "by_specificity": {
+    "precise": {
+     "n": 2,
+     "delivery_ratio_pct": 100.0
+    },
+    "range": {
+     "n": 2,
+     "delivery_ratio_pct": 100.0
+    }
+   },
+   "by_materiality": {
+    "meaningful (2)": {
+     "n": 2,
+     "delivery_ratio_pct": 100.0
+    },
+    "minor (1)": {
+     "n": 2,
+     "delivery_ratio_pct": 100.0
+    }
+   },
+   "by_volunteered": {
+    "prompted": {
+     "n": 1,
+     "delivery_ratio_pct": 100.0
+    },
+    "volunteered": {
+     "n": 3,
+     "delivery_ratio_pct": 100.0
+    }
+   },
+   "by_fiscal_year_said": {
+    "FY26 calls": {
+     "n": 4,
+     "delivery_ratio_pct": 100.0
+    }
+   },
+   "n_shortfalls": 0,
+   "n_shortfalls_admitted_unprompted": 0,
+   "n_volunteered": 10,
+   "n_prompted": 5,
+   "sector_adjusted_credibility_pts": 13.9,
+   "sac_components": {
+    "pooled:margin+other": {
+     "n": 4,
+     "own": 100.0,
+     "peer_median": 86.1,
+     "gap": 13.9
+    }
+   },
+   "peer_set": [
+    "PERSISTENT",
+    "COFORGE",
+    "MPHASIS",
+    "KPITTECH"
+   ]
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_03072026121301_PSLInvestorCallTranscriptSubmissionSd.pdf",
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_20102025194609_PSLEarningscallTranscriptQ2FY26.pdf",
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_23102026204328_PSLTranscriptSubmissionOctober2026Sd.pdf",
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_27012026213814_PSLSubmissionoftheTranscriptforQ3FY26Sd.pdf",
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_29072025232737_PSLTranscript_of_Investors_call_recordingsigned.pdf",
+   "https://www.persistent.com/wp-content/uploads/2026/04/Analyst-Call-Transcript-Q4FY26.pdf",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:PERSISTENT",
+    "rel": "about"
+   },
+   {
+    "to": "insight:it-midcaps-promise-credibility-base-rate",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2025-07-24:fy26-ebit-14pct",
+  "title": "FY26 reported EBIT margin ~14% (from ~13% in Q1, exit ~15%)",
+  "body": "Saurabh Goel (CFO) on 2025-07-24 (Q1FY26 concall transcript (company website)): \"we were able to maintain EBIT margins and I am talking about EBIT because that is what the guidance is going forward\" Metric: EBIT margin (company, reported). Target: 14%. Deadline: 2026-03-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: delivered. Evidence: FY26 reported EBIT 14.4% ('14.4% reported EBIT in FY26', Q4FY26 call; +370 bp YoY). Screener-derived (OP-dep)/sales 13.7% (hedge-loss classification differs).",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2025-07-24",
+  "data": {
+   "said_on": "2025-07-24",
+   "speaker": "Saurabh Goel (CFO)",
+   "quote": "we were able to maintain EBIT margins and I am talking about EBIT because that is what the guidance is going forward",
+   "category": "margin",
+   "metric": "EBIT margin (company, reported)",
+   "target": "14%",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 3,
+   "status": "delivered",
+   "evidence": "FY26 reported EBIT 14.4% ('14.4% reported EBIT in FY26', Q4FY26 call; +370 bp YoY). Screener-derived (OP-dep)/sales 13.7% (hedge-loss classification differs).",
+   "delivered_value": "14.4%",
+   "delivery_ratio": 1.03,
+   "later_restatements": "2025-10-24 'touch 14% in FY'26? - Yes'; 2026-01-23 '13.4% ... and our plan to register a 15% EBIT in Q4 will lead us to the 14% EBIT guidance'",
+   "source_doc": "Q1FY26 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge%20Earnings%20Conference%20Call%20Transcript%20Q1FY26.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin",
+   "score": 1.0,
+   "weight": 5.675
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge%20Earnings%20Conference%20Call%20Transcript%20Q1FY26.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2025-07-24:q2fy26-equally-robust-growth",
+  "title": "Q2FY26 growth to be 'equally robust' as Q1 (~6% organic CC QoQ)",
+  "body": "Sudhir Singh (CEO) on 2025-07-24 (Q1FY26 concall transcript (company website)): \"we have grown organically, excluding acquisitions by almost 6% CC. I would expect Q2 also to be an equally robust quarter.\" Metric: CC revenue growth QoQ (organic). Target: ~6% QoQ. Deadline: 2025-09-30. Specificity: vague; prompted by analyst. Status as of 2026-11-22: delivered. Evidence: Q2FY26 sequential CC growth 5.9% ('sequential CC growth of 8%, 5.9%, and 4.4% recorded between Q1 and Q3', Q4FY26 call).",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2025-07-24",
+  "data": {
+   "said_on": "2025-07-24",
+   "speaker": "Sudhir Singh (CEO)",
+   "quote": "we have grown organically, excluding acquisitions by almost 6% CC. I would expect Q2 also to be an equally robust quarter.",
+   "category": "revenue_growth",
+   "metric": "CC revenue growth QoQ (organic)",
+   "target": "~6% QoQ",
+   "deadline": "2025-09-30",
+   "deadline_precision": "quarter",
+   "specificity": "vague",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "delivered",
+   "evidence": "Q2FY26 sequential CC growth 5.9% ('sequential CC growth of 8%, 5.9%, and 4.4% recorded between Q1 and Q3', Q4FY26 call).",
+   "delivered_value": "5.9% CC QoQ",
+   "delivery_ratio": 0.98,
+   "source_doc": "Q1FY26 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge%20Earnings%20Conference%20Call%20Transcript%20Q1FY26.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth",
+   "score": 1.0,
+   "weight": 1.261
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge%20Earnings%20Conference%20Call%20Transcript%20Q1FY26.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2025-07-24:h2fy26-robust",
+  "title": "H2FY26 to be a 'robust second half'",
+  "body": "Sudhir Singh (CEO) on 2025-07-24 (Q1FY26 concall transcript (company website)): \"And H2, just using that term for a third time, should also be a robust second half for us.\" Metric: CC revenue growth H2FY26. Target: robust (Q1-Q2 ran ~6-8% CC QoQ). Deadline: 2026-03-31. Specificity: vague; prompted by analyst. Status as of 2026-11-22: partly. Evidence: Q3FY26 +4.4% CC QoQ, Q4FY26 +2.0% CC QoQ (slowest of the year); FY26 +29.2% USD. Robust in Q3, not in Q4; the Q4 slowdown was not flagged in advance.",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2025-07-24",
+  "data": {
+   "said_on": "2025-07-24",
+   "speaker": "Sudhir Singh (CEO)",
+   "quote": "And H2, just using that term for a third time, should also be a robust second half for us.",
+   "category": "revenue_growth",
+   "metric": "CC revenue growth H2FY26",
+   "target": "robust (Q1-Q2 ran ~6-8% CC QoQ)",
+   "deadline": "2026-03-31",
+   "deadline_precision": "half-year",
+   "specificity": "vague",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "partly",
+   "evidence": "Q3FY26 +4.4% CC QoQ, Q4FY26 +2.0% CC QoQ (slowest of the year); FY26 +29.2% USD. Robust in Q3, not in Q4; the Q4 slowdown was not flagged in advance.",
+   "delivered_value": "4.4% / 2.0% CC QoQ",
+   "delivery_ratio": 0.6,
+   "admitted_unprompted": false,
+   "source_doc": "Q1FY26 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge%20Earnings%20Conference%20Call%20Transcript%20Q1FY26.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth",
+   "score": 0.5,
+   "weight": 1.261
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge%20Earnings%20Conference%20Call%20Transcript%20Q1FY26.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2025-07-24:cigniti-merger-by-dec25-jan26",
+  "title": "Cigniti merger to complete by December 2025 / January 2026 ('minus a month or two')",
+  "body": "Saurabh Goel (CFO) on 2025-07-24 (Q1FY26 concall transcript (company website)): \"it is more with regulators so it would be minus a month or two, but December, January\" Metric: Cigniti amalgamation effective. Target: by ~31-Jan-2026. Deadline: 2026-01-31. Specificity: range; prompted by analyst. Status as of 2026-11-22: partly. Evidence: Q3FY26 (23-Jan-2026): still awaiting NCLT; Q4FY26 (05-May-2026): 'Following the effective implementation of the Cigniti amalgamation' - effective around FY26 year-end (Mar-Apr 2026), ~2-3 months late, regulator-driven (NCLT meeting dates). Explanation given: NCLT/regulatory timetable",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "m&a"
+  ],
+  "date": "2025-07-24",
+  "data": {
+   "said_on": "2025-07-24",
+   "speaker": "Saurabh Goel (CFO)",
+   "quote": "it is more with regulators so it would be minus a month or two, but December, January",
+   "category": "m&a",
+   "metric": "Cigniti amalgamation effective",
+   "target": "by ~31-Jan-2026",
+   "deadline": "2026-01-31",
+   "deadline_precision": "month",
+   "specificity": "range",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "partly",
+   "evidence": "Q3FY26 (23-Jan-2026): still awaiting NCLT; Q4FY26 (05-May-2026): 'Following the effective implementation of the Cigniti amalgamation' - effective around FY26 year-end (Mar-Apr 2026), ~2-3 months late, regulator-driven (NCLT meeting dates).",
+   "delivery_ratio": 0.5,
+   "explanation_for_miss": "NCLT/regulatory timetable",
+   "admitted_unprompted": true,
+   "later_restatements": "2025-10-24 'getting completed by either December, Jan timeframe'",
+   "source_doc": "Q1FY26 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge%20Earnings%20Conference%20Call%20Transcript%20Q1FY26.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "other",
+   "score": 0.5,
+   "weight": 2.522
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge%20Earnings%20Conference%20Call%20Transcript%20Q1FY26.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2025-07-24:q3-wage-hike-offset-by-esop",
+  "title": "Q3FY26 wage-hike impact to be 'very, very limited', largely offset by 80-90 bp lower ESOP cost",
+  "body": "Saurabh Goel (CFO) on 2025-07-24 (Q1FY26 concall transcript (company website)): \"the wage hike impact is going to be very, very limited in Q3, which will largely get set off by the lower ESOP cost. We are looking at probably 80-90 BPS reduction on the account of ESOP cost\" Metric: EBIT margin Q3FY26 (company). Target: roughly flat QoQ vs Q2 14.0%. Deadline: 2025-12-31. Specificity: vague; prompted by analyst. Status as of 2026-11-22: partly. Evidence: Q3FY26 EBIT 13.4%, down 60 bp QoQ: wage hikes cost 150 bp, hedge losses 90 bp; ex-hedge 14.4% (company). The wage hit was larger than 'very, very limited' but the margin was held on the company's underlying basis.",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2025-07-24",
+  "data": {
+   "said_on": "2025-07-24",
+   "speaker": "Saurabh Goel (CFO)",
+   "quote": "the wage hike impact is going to be very, very limited in Q3, which will largely get set off by the lower ESOP cost. We are looking at probably 80-90 BPS reduction on the account of ESOP cost",
+   "category": "margin",
+   "metric": "EBIT margin Q3FY26 (company)",
+   "target": "roughly flat QoQ vs Q2 14.0%",
+   "deadline": "2025-12-31",
+   "deadline_precision": "quarter",
+   "specificity": "vague",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "partly",
+   "evidence": "Q3FY26 EBIT 13.4%, down 60 bp QoQ: wage hikes cost 150 bp, hedge losses 90 bp; ex-hedge 14.4% (company). The wage hit was larger than 'very, very limited' but the margin was held on the company's underlying basis.",
+   "delivered_value": "13.4% reported / 14.4% ex-hedge",
+   "delivery_ratio": 0.8,
+   "admitted_unprompted": true,
+   "source_doc": "Q1FY26 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge%20Earnings%20Conference%20Call%20Transcript%20Q1FY26.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin",
+   "score": 0.5,
+   "weight": 1.261
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge%20Earnings%20Conference%20Call%20Transcript%20Q1FY26.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2025-10-24:fcf-to-pat-70-80pct",
+  "title": "Free cash flow / PAT ~70-80% on a sustained basis",
+  "body": "Sudhir Singh (CEO) on 2025-10-24 (Q2FY26 concall transcript (company website)): \"we believe on a sustained basis, you should expect free cash flow to PAT at around 70% to 80% going forward\" Metric: FCF / PAT. Target: 70-80%. Deadline: 2026-03-31. Specificity: range; prompted by analyst. Status as of 2026-11-22: delivered. Evidence: Q3FY26 110%, Q4FY26 110% (normalised 156%); FY26 FCF USD 135 mn (+68%). Guidance raised to 100% from FY27 (Q4FY26 call).",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "other"
+  ],
+  "date": "2025-10-24",
+  "data": {
+   "said_on": "2025-10-24",
+   "speaker": "Sudhir Singh (CEO)",
+   "quote": "we believe on a sustained basis, you should expect free cash flow to PAT at around 70% to 80% going forward",
+   "category": "other",
+   "metric": "FCF / PAT",
+   "target": "70-80%",
+   "deadline": "2026-03-31",
+   "deadline_precision": "vague",
+   "specificity": "range",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "delivered",
+   "evidence": "Q3FY26 110%, Q4FY26 110% (normalised 156%); FY26 FCF USD 135 mn (+68%). Guidance raised to 100% from FY27 (Q4FY26 call).",
+   "delivered_value": "110% (Q3, Q4)",
+   "delivery_ratio": 1.4,
+   "source_doc": "Q2FY26 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q2-FY26.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "other",
+   "score": 1.0,
+   "weight": 2.752
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q2-FY26.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2025-10-24:etr-23-5-24pct-sustained",
+  "title": "Sustained effective tax rate ~23.5-24%",
+  "body": "Saurabh Goel (CFO) on 2025-10-24 (Q2FY26 concall transcript (company website)): \"ETR on a sustained basis is roughly 23.5% to 24% is what a sustained ETR is what we would maintain\" Metric: Effective tax rate (normalised). Target: 23.5-24%. Deadline: 2026-03-31. Specificity: range; prompted by analyst. Status as of 2026-11-22: partly. Evidence: FY26 normalised ETR 23%, reported 13% (Cigniti-merger tax true-up, Q4 ETR -7%). Normalised is 0.5 pp below the band floor (lower tax is not adverse, but the forecast was off); FY27 guide reset to 23-24%.",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "other"
+  ],
+  "date": "2025-10-24",
+  "data": {
+   "said_on": "2025-10-24",
+   "speaker": "Saurabh Goel (CFO)",
+   "quote": "ETR on a sustained basis is roughly 23.5% to 24% is what a sustained ETR is what we would maintain",
+   "category": "other",
+   "metric": "Effective tax rate (normalised)",
+   "target": "23.5-24%",
+   "deadline": "2026-03-31",
+   "deadline_precision": "vague",
+   "specificity": "range",
+   "volunteered": false,
+   "materiality": 1,
+   "status": "partly",
+   "evidence": "FY26 normalised ETR 23%, reported 13% (Cigniti-merger tax true-up, Q4 ETR -7%). Normalised is 0.5 pp below the band floor (lower tax is not adverse, but the forecast was off); FY27 guide reset to 23-24%.",
+   "delivered_value": "23% normalised / 13% reported",
+   "delivery_ratio": 0.9,
+   "source_doc": "Q2FY26 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q2-FY26.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "other",
+   "score": 0.5,
+   "weight": 1.376
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q2-FY26.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2026-01-23:q4fy26-ebit-15pct",
+  "title": "Q4FY26 reported EBIT margin 15%",
+  "body": "Sudhir Singh (CEO) on 2026-01-23 (Q3FY26 concall transcript (company website)): \"our plan to register a 15% EBIT in Q4 will lead us to the 14% EBIT guidance for FY2026\" Metric: EBIT margin Q4FY26 (company). Target: 15%. Deadline: 2026-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: delivered. Evidence: Q4FY26 EBIT 16.6% ('a record 16.6%, up 231 basis points quarter on quarter', Q4FY26 call).",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-01-23",
+  "data": {
+   "said_on": "2026-01-23",
+   "speaker": "Sudhir Singh (CEO)",
+   "quote": "our plan to register a 15% EBIT in Q4 will lead us to the 14% EBIT guidance for FY2026",
+   "category": "margin",
+   "metric": "EBIT margin Q4FY26 (company)",
+   "target": "15%",
+   "deadline": "2026-03-31",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "delivered",
+   "evidence": "Q4FY26 EBIT 16.6% ('a record 16.6%, up 231 basis points quarter on quarter', Q4FY26 call).",
+   "delivered_value": "16.6%",
+   "delivery_ratio": 1.1,
+   "source_doc": "Q3FY26 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q3-FY26.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin",
+   "score": 1.0,
+   "weight": 4.501
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q3-FY26.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2026-01-23:encora-approvals-by-mar-apr26",
+  "title": "Encora acquisition approvals by March-April 2026, consolidation from then",
+  "body": "Saurabh Goel (CFO) on 2026-01-23 (Q3FY26 concall transcript (company website)): \"by March timeframe, we should be able to get pretty much all the approvals between March and April. And that is the time when we will start consolidating\" Metric: Encora closing. Target: Mar-Apr 2026. Deadline: 2026-04-30. Specificity: range; prompted by analyst. Status as of 2026-11-22: delivered. Evidence: Q1FY27 revenue 'including two months of contribution from Encora' (US$100.7 mn) - consolidated from ~May-2026 (closing at end-April). Within the stated window.",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "m&a"
+  ],
+  "date": "2026-01-23",
+  "data": {
+   "said_on": "2026-01-23",
+   "speaker": "Saurabh Goel (CFO)",
+   "quote": "by March timeframe, we should be able to get pretty much all the approvals between March and April. And that is the time when we will start consolidating",
+   "category": "m&a",
+   "metric": "Encora closing",
+   "target": "Mar-Apr 2026",
+   "deadline": "2026-04-30",
+   "deadline_precision": "month",
+   "specificity": "range",
+   "volunteered": false,
+   "materiality": 3,
+   "status": "delivered",
+   "evidence": "Q1FY27 revenue 'including two months of contribution from Encora' (US$100.7 mn) - consolidated from ~May-2026 (closing at end-April). Within the stated window.",
+   "delivery_ratio": 1.0,
+   "source_doc": "Q3FY26 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q3-FY26.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "other",
+   "score": 1.0,
+   "weight": 4.501
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q3-FY26.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2026-01-23:term-loan-no-qip",
+  "title": "USD 550 mn 3-year term loan for Encora; no QIP needed",
+  "body": "Saurabh Goel (CFO) on 2026-01-23 (Q3FY26 concall transcript (company website)): \"We are very close to finalizing a term loan of $550 Mn for a period of 3 years ... we will not need to do a QIP for retiring the term loan\" Metric: Acquisition financing. Target: term loan, no QIP. Deadline: 2026-09-30. Specificity: precise; volunteered. Status as of 2026-11-22: delivered. Evidence: Q1FY27: term-loan repayment schedule given (~$59 mn FY27, ~$209 mn FY28); no QIP announced through Nov-2026.",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "debt-reduction"
+  ],
+  "date": "2026-01-23",
+  "data": {
+   "said_on": "2026-01-23",
+   "speaker": "Saurabh Goel (CFO)",
+   "quote": "We are very close to finalizing a term loan of $550 Mn for a period of 3 years ... we will not need to do a QIP for retiring the term loan",
+   "category": "debt_reduction",
+   "metric": "Acquisition financing",
+   "target": "term loan, no QIP",
+   "deadline": "2026-09-30",
+   "deadline_precision": "vague",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "delivered",
+   "evidence": "Q1FY27: term-loan repayment schedule given (~$59 mn FY27, ~$209 mn FY28); no QIP announced through Nov-2026.",
+   "delivery_ratio": 1.0,
+   "source_doc": "Q3FY26 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q3-FY26.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other",
+   "score": 1.0,
+   "weight": 2.25
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q3-FY26.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2026-01-23:no-eps-dilution-fy27-encora",
+  "title": "Encora: no EPS dilution in FY27 for the combined business (later 'EPS accretion in FY27')",
+  "body": "Saurabh Goel (CFO) on 2026-01-23 (Q3FY26 concall transcript (company website)): \"The guidance related to no dilution of EPS in FY27 of the combined business stays intact even after this debt.\" Metric: FY27 EPS vs FY26. Target: not lower than FY26. Deadline: 2027-03-31. Specificity: vague; volunteered. Status as of 2026-11-22: pending. Evidence: Q1FY27/Q2FY27: 'we remain well on track to deliver EPS accretion in FY2027'; Q2FY27 EPS 13.3 vs 12.3 in Q1 (equity base +25%).",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "m&a"
+  ],
+  "date": "2026-01-23",
+  "data": {
+   "said_on": "2026-01-23",
+   "speaker": "Saurabh Goel (CFO)",
+   "quote": "The guidance related to no dilution of EPS in FY27 of the combined business stays intact even after this debt.",
+   "category": "m&a",
+   "metric": "FY27 EPS vs FY26",
+   "target": "not lower than FY26",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 3,
+   "status": "pending",
+   "evidence": "Q1FY27/Q2FY27: 'we remain well on track to deliver EPS accretion in FY2027'; Q2FY27 EPS 13.3 vs 12.3 in Q1 (equity base +25%).",
+   "later_restatements": "2026-07-28 and 2026-10-23 'on track to deliver EPS accretion in FY27'",
+   "source_doc": "Q3FY26 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q3-FY26.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q3-FY26.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2026-05-05:fy27-ebitda-20-5-21pct",
+  "title": "FY27 consolidated EBITDA margin 20.5-21% (incl. Encora)",
+  "body": "Saurabh Goel (CFO) on 2026-05-05 (Q4FY26 concall transcript (company website)): \"EBITDA margins of 20.5% to 21% in FY27 on a consolidated basis, which is including Encora\" Metric: EBITDA margin (company, consolidated). Target: 20.5-21%. Deadline: 2027-03-31. Specificity: range; volunteered. Status as of 2026-11-22: pending. Evidence: H1FY27 20.5% ('We remain confident of the guidance of 20.5% to 21% range', Q2FY27). Screener OPM Q1/Q2 FY27 19.1% / 19.8%.",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-05-05",
+  "data": {
+   "said_on": "2026-05-05",
+   "speaker": "Saurabh Goel (CFO)",
+   "quote": "EBITDA margins of 20.5% to 21% in FY27 on a consolidated basis, which is including Encora",
+   "category": "margin",
+   "metric": "EBITDA margin (company, consolidated)",
+   "target": "20.5-21%",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 3,
+   "status": "pending",
+   "evidence": "H1FY27 20.5% ('We remain confident of the guidance of 20.5% to 21% range', Q2FY27). Screener OPM Q1/Q2 FY27 19.1% / 19.8%.",
+   "source_doc": "Q4FY26 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q4FY26%20_AJ.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin"
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q4FY26%20_AJ.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2026-05-05:fy27-ebit-15-5pct-consol",
+  "title": "FY27 consolidated EBIT margin 15.5% (incl. Encora); 16.5-17% standalone",
+  "body": "Saurabh Goel (CFO) on 2026-05-05 (Q4FY26 concall transcript (company website)): \"EBIT margins of 16.5% to 17% on a standalone basis, that is, excluding Encora, and 15.5% on a consolidated basis, which includes Encora\" Metric: EBIT margin (company, consolidated). Target: 15.5%. Deadline: 2027-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: Q1FY27 16.0% consolidated (organic 16.7%), Q2FY27 16.0% (standalone 17%). Raised to 16% on 2026-10-23 (acknowledged upgrade).",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-05-05",
+  "data": {
+   "said_on": "2026-05-05",
+   "speaker": "Saurabh Goel (CFO)",
+   "quote": "EBIT margins of 16.5% to 17% on a standalone basis, that is, excluding Encora, and 15.5% on a consolidated basis, which includes Encora",
+   "category": "margin",
+   "metric": "EBIT margin (company, consolidated)",
+   "target": "15.5%",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 3,
+   "status": "pending",
+   "evidence": "Q1FY27 16.0% consolidated (organic 16.7%), Q2FY27 16.0% (standalone 17%). Raised to 16% on 2026-10-23 (acknowledged upgrade).",
+   "later_restatements": "2026-10-23 raised to 16% consolidated, Q4FY27 17%",
+   "source_doc": "Q4FY26 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q4FY26%20_AJ.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin"
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q4FY26%20_AJ.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2026-05-05:fy27-fcf-to-pat-100pct",
+  "title": "FCF / PAT ~100% from FY27 (raised from 70-80%)",
+  "body": "Saurabh Goel (CFO) on 2026-05-05 (Q4FY26 concall transcript (company website)): \"we anticipate free cash flow to PAT to be maintained at 100% from FY27 onwards in contrast to our earlier guidance of 70 to 80%\" Metric: FCF / PAT. Target: 100%. Deadline: 2027-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: Q1FY27 FCF $52.9 mn; Q2FY27 90% ('we expect it to be 100% for the year'); H1 conversion 92%.",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "other"
+  ],
+  "date": "2026-05-05",
+  "data": {
+   "said_on": "2026-05-05",
+   "speaker": "Saurabh Goel (CFO)",
+   "quote": "we anticipate free cash flow to PAT to be maintained at 100% from FY27 onwards in contrast to our earlier guidance of 70 to 80%",
+   "category": "other",
+   "metric": "FCF / PAT",
+   "target": "100%",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "pending",
+   "evidence": "Q1FY27 FCF $52.9 mn; Q2FY27 90% ('we expect it to be 100% for the year'); H1 conversion 92%.",
+   "source_doc": "Q4FY26 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q4FY26%20_AJ.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q4FY26%20_AJ.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2026-05-05:fy27-etr-23-24pct",
+  "title": "FY27 steady-state effective tax rate 23-24%",
+  "body": "Saurabh Goel (CFO) on 2026-05-05 (Q4FY26 concall transcript (company website)): \"Steady state effective tax rate guidance for FY27 is between 23% and 24%.\" Metric: Effective tax rate. Target: 23-24%. Deadline: 2027-03-31. Specificity: range; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "other"
+  ],
+  "date": "2026-05-05",
+  "data": {
+   "said_on": "2026-05-05",
+   "speaker": "Saurabh Goel (CFO)",
+   "quote": "Steady state effective tax rate guidance for FY27 is between 23% and 24%.",
+   "category": "other",
+   "metric": "Effective tax rate",
+   "target": "23-24%",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "source_doc": "Q4FY26 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q4FY26%20_AJ.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q4FY26%20_AJ.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2026-05-05:fy27-highest-margin-midcap",
+  "title": "From FY27, emerge as one of the highest EBITDA/EBIT performers among mid-caps while keeping revenue-growth leadership",
+  "body": "Sudhir Singh (CEO) on 2026-05-05 (Q4FY26 concall transcript (company website)): \"Starting in FY27, that is this year itself, we believe we will, along with retaining revenue growth leadership, emerge as one of the highest EBITDA and EBIT performers across the mid-cap segment.\" Metric: Relative EBIT and growth rank (mid-cap IT). Target: top tier on both. Deadline: 2027-03-31. Specificity: vague; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-05-05",
+  "data": {
+   "said_on": "2026-05-05",
+   "speaker": "Sudhir Singh (CEO)",
+   "quote": "Starting in FY27, that is this year itself, we believe we will, along with retaining revenue growth leadership, emerge as one of the highest EBITDA and EBIT performers across the mid-cap segment.",
+   "category": "margin",
+   "metric": "Relative EBIT and growth rank (mid-cap IT)",
+   "target": "top tier on both",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "pending",
+   "source_doc": "Q4FY26 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q4FY26%20_AJ.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin"
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q4FY26%20_AJ.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2026-07-28:encora-integration-cost-15mn",
+  "title": "Encora acquisition/integration expenses within the USD 15 mn budget",
+  "body": "Saurabh Goel (CFO) on 2026-07-28 (Q1FY27 concall transcript (company website)): \"We had guided for acquisition and integration-related expenses of $15 million at the time of acquisition, and we remain well within that budget.\" Metric: Exceptional acquisition expenses. Target: <= USD 15-16 mn. Deadline: 2027-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: Q2FY27: 'we had guided for exceptional expenses of $15 to $16 [mn]'; 'no exceptional expenses in Q3 going forward'.",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "m&a"
+  ],
+  "date": "2026-07-28",
+  "data": {
+   "said_on": "2026-07-28",
+   "speaker": "Saurabh Goel (CFO)",
+   "quote": "We had guided for acquisition and integration-related expenses of $15 million at the time of acquisition, and we remain well within that budget.",
+   "category": "m&a",
+   "metric": "Exceptional acquisition expenses",
+   "target": "<= USD 15-16 mn",
+   "deadline": "2027-03-31",
+   "deadline_precision": "vague",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "evidence": "Q2FY27: 'we had guided for exceptional expenses of $15 to $16 [mn]'; 'no exceptional expenses in Q3 going forward'.",
+   "source_doc": "Q1FY27 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge_Q1FY27%20Earnings%20Conference%20Call%20Transcript.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge_Q1FY27%20Earnings%20Conference%20Call%20Transcript.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2026-10-23:fy27-ebit-16pct-q4-17pct",
+  "title": "FY27 consolidated EBIT 16% (raised from 15.5%); reported Q4FY27 EBIT 17%",
+  "body": "Sudhir Singh (CEO) on 2026-10-23 (Q2FY27 concall transcript (company website)): \"We are pleased to raise our consolidated EBIT margin guidance for fiscal year 2027 to 16%, from the 15.5% we had shared at the beginning of the year. We also plan to achieve a reported Q4 EBIT of 17%\" Metric: EBIT margin (company, consolidated). Target: 16% FY27; 17% Q4FY27. Deadline: 2027-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: H1FY27 consolidated EBIT 16.0%.",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-10-23",
+  "data": {
+   "said_on": "2026-10-23",
+   "speaker": "Sudhir Singh (CEO)",
+   "quote": "We are pleased to raise our consolidated EBIT margin guidance for fiscal year 2027 to 16%, from the 15.5% we had shared at the beginning of the year. We also plan to achieve a reported Q4 EBIT of 17%",
+   "category": "margin",
+   "metric": "EBIT margin (company, consolidated)",
+   "target": "16% FY27; 17% Q4FY27",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 3,
+   "status": "pending",
+   "evidence": "H1FY27 consolidated EBIT 16.0%.",
+   "source_doc": "Q2FY27 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q2FY27-October-23-2026.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin"
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q2FY27-October-23-2026.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2026-10-23:q3fy27-eight-large-deals",
+  "title": "Q3FY27: hope to sign eight, if not more, large deals (Q2 record was eight)",
+  "body": "Sudhir Singh (CEO) on 2026-10-23 (Q2FY27 concall transcript (company website)): \"in Q3, which has now started, which incidentally is the shortest quarter of the year, we hope to again sign eight, if not more large deals\" Metric: Large deals signed in Q3FY27. Target: >=8. Deadline: 2026-12-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "deal-wins"
+  ],
+  "date": "2026-10-23",
+  "data": {
+   "said_on": "2026-10-23",
+   "speaker": "Sudhir Singh (CEO)",
+   "quote": "in Q3, which has now started, which incidentally is the shortest quarter of the year, we hope to again sign eight, if not more large deals",
+   "category": "deal_wins",
+   "metric": "Large deals signed in Q3FY27",
+   "target": ">=8",
+   "deadline": "2026-12-31",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 2,
+   "conditionality": "hope",
+   "status": "pending",
+   "source_doc": "Q2FY27 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q2FY27-October-23-2026.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q2FY27-October-23-2026.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:COFORGE:2026-10-23:fy27-industry-growth-leader",
+  "title": "FY27: industry growth leader for the third consecutive year",
+  "body": "Sudhir Singh (CEO) on 2026-10-23 (Q2FY27 concall transcript (company website)): \"This year, we will be the industry growth leader for the third consecutive year.\" Metric: FY27 revenue growth rank vs peers. Target: #1 growth. Deadline: 2027-03-31. Specificity: vague; volunteered. Status as of 2026-11-22: pending. Evidence: Reported growth is inflated by Encora (consolidated from May-2026); organic Q2FY27 +3.8% QoQ.",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-10-23",
+  "data": {
+   "said_on": "2026-10-23",
+   "speaker": "Sudhir Singh (CEO)",
+   "quote": "This year, we will be the industry growth leader for the third consecutive year.",
+   "category": "revenue_growth",
+   "metric": "FY27 revenue growth rank vs peers",
+   "target": "#1 growth",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "pending",
+   "evidence": "Reported growth is inflated by Encora (consolidated from May-2026); organic Q2FY27 +3.8% QoQ.",
+   "source_doc": "Q2FY27 concall transcript (company website)",
+   "source_url": "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q2FY27-October-23-2026.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q2FY27-October-23-2026.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:COFORGE:credibility-2026-11",
+  "title": "COFORGE - Management Credibility Score (IT mid-caps peer calibration, Nov 2026)",
+  "body": "Promise tracker on Coforge (IT mid-caps peer set). 6 concalls (Jul-2025 to Oct-2026; transcripts from the company website - NSE has cover letters only); 20 promises, 10 scored. Status counts: {'delivered': 6, 'partly': 4, 'pending': 10}. Weighted delivery 88.3% (specificity-only 85.0%; hit rate 60.0%); MCS 0.883. Coforge guides more explicitly than its peers (EBIT, EBITDA, FCF/PAT, ETR) and its hard margin and cash guidance was met or beaten (FY26 EBIT 14.4% vs 14%; Q4 16.6% vs 15%; FCF/PAT 110% vs 70-80%). Weak spots are timing and growth-shape statements: the Cigniti merger ~2-3 months late (regulator), 'robust H2' with a 2% CC Q4, a Q3 wage hit larger than 'very limited'. FY27 guidance (EBITDA 20.5-21%, EBIT raised 15.5% -> 16%, FCF/PAT 100%, no EPS dilution from Encora) is pending; H1 is on track. Research, not advice.",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "process",
+   "it-peer-calibration"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "as_of": "2026-11-22",
+   "n_promises": 20,
+   "n_scored": 10,
+   "status_counts": {
+    "delivered": 6,
+    "partly": 4,
+    "pending": 10
+   },
+   "mcs_schema_scale": 0.883,
+   "mcs_scale_note": "-1.5 (all moved/dropped) .. +1 (all delivered); weights = specificity(3/2/1) x materiality(1-3) x recency decay (half-life 8 qtrs)",
+   "weighted_delivery_ratio_pct": 88.3,
+   "specificity_weighted_delivery_ratio_pct": 85.0,
+   "raw_hit_rate_pct": 60.0,
+   "candour_index_pct": 50.0,
+   "candour_index_hard_misses_pct": null,
+   "by_category": {
+    "margin": {
+     "n": 3,
+     "delivery_ratio_pct": 92.9
+    },
+    "other": {
+     "n": 5,
+     "delivery_ratio_pct": 81.8
+    },
+    "revenue_growth": {
+     "n": 2,
+     "delivery_ratio_pct": 75.0
+    }
+   },
+   "by_specificity": {
+    "precise": {
+     "n": 3,
+     "delivery_ratio_pct": 100.0
+    },
+    "range": {
+     "n": 4,
+     "delivery_ratio_pct": 75.0
+    },
+    "vague": {
+     "n": 3,
+     "delivery_ratio_pct": 66.7
+    }
+   },
+   "by_materiality": {
+    "core (3)": {
+     "n": 2,
+     "delivery_ratio_pct": 100.0
+    },
+    "meaningful (2)": {
+     "n": 6,
+     "delivery_ratio_pct": 80.0
+    },
+    "minor (1)": {
+     "n": 2,
+     "delivery_ratio_pct": 80.0
+    }
+   },
+   "by_volunteered": {
+    "prompted": {
+     "n": 8,
+     "delivery_ratio_pct": 78.6
+    },
+    "volunteered": {
+     "n": 2,
+     "delivery_ratio_pct": 100.0
+    }
+   },
+   "by_fiscal_year_said": {
+    "FY26 calls": {
+     "n": 10,
+     "delivery_ratio_pct": 85.0
+    }
+   },
+   "n_shortfalls": 4,
+   "n_shortfalls_admitted_unprompted": 2,
+   "n_volunteered": 12,
+   "n_prompted": 8,
+   "sector_adjusted_credibility_pts": 12.6,
+   "sac_components": {
+    "other": {
+     "n": 5,
+     "own": 81.8,
+     "peer_median": 50.0,
+     "gap": 31.8
+    },
+    "pooled:revenue_growth+margin": {
+     "n": 5,
+     "own": 88.9,
+     "peer_median": 95.5,
+     "gap": -6.6
+    }
+   },
+   "peer_set": [
+    "PERSISTENT",
+    "COFORGE",
+    "MPHASIS",
+    "KPITTECH"
+   ]
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge%20Earnings%20Conference%20Call%20Transcript%20Q1FY26.pdf",
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q2-FY26.pdf",
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q2FY27-October-23-2026.pdf",
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q3-FY26.pdf",
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q4FY26%20_AJ.pdf",
+   "https://investors.coforge.com/hubfs/Coforge_Q1FY27%20Earnings%20Conference%20Call%20Transcript.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:COFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "insight:it-midcaps-promise-credibility-base-rate",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:MPHASIS:2025-07-25:fy26-2x-industry-growth",
+  "title": "FY26 revenue growth ~2x industry growth",
+  "body": "Aravind Viswanathan (CFO) on 2025-07-25 (Q1FY26 concall transcript): \"For FY26, we expect to be at ~2X industry growth, on the back of our Q1 performance and steady conversion of TCV to revenue\" Metric: FY26 CC revenue growth vs industry. Target: ~2x industry. Deadline: 2026-03-31. Specificity: range; volunteered. Status as of 2026-11-22: delivered. Evidence: FY26 CC growth 6.7% ('For the full year, revenues grew 6.7% in constant currency terms'); company: 'delivering more than 2x industry growth' (Q4FY26). 'Industry' is the company's own benchmark (large-cap peers ~2-3% CC) - single-source.",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2025-07-25",
+  "data": {
+   "said_on": "2025-07-25",
+   "speaker": "Aravind Viswanathan (CFO)",
+   "quote": "For FY26, we expect to be at ~2X industry growth, on the back of our Q1 performance and steady conversion of TCV to revenue",
+   "category": "revenue_growth",
+   "metric": "FY26 CC revenue growth vs industry",
+   "target": "~2x industry",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 3,
+   "status": "delivered",
+   "evidence": "FY26 CC growth 6.7% ('For the full year, revenues grew 6.7% in constant currency terms'); company: 'delivering more than 2x industry growth' (Q4FY26). 'Industry' is the company's own benchmark (large-cap peers ~2-3% CC) - single-source.",
+   "delivered_value": "6.7% CC (>2x per company)",
+   "delivery_ratio": 1.0,
+   "later_restatements": "2025-10-31 and 2026-01-22 'greater than 2x of industry growth'",
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MPHASIS_29072025155615_IntimationoftranscriptJuly2025.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth",
+   "score": 1.0,
+   "weight": 3.787
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_29072025155615_IntimationoftranscriptJuly2025.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:MPHASIS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:MPHASIS:2025-07-25:fy26-ebit-band-14-75-15-75",
+  "title": "FY26 EBIT margin within the 14.75-15.75% band",
+  "body": "Aravind Viswanathan (CFO) on 2025-07-25 (Q1FY26 concall transcript): \"Our target EBIT operating margin would be within the band of 14.75% to 15.75%.\" Metric: EBIT margin band (company). Target: 14.75-15.75%. Deadline: 2026-03-31. Specificity: range; volunteered. Status as of 2026-11-22: delivered. Evidence: FY26 EBIT 15.3% (Q1 15.3, Q2 15.3, Q3 15.2, Q4 15.4; company). Screener-derived (OP-dep)/sales FY26 15.3%.",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2025-07-25",
+  "data": {
+   "said_on": "2025-07-25",
+   "speaker": "Aravind Viswanathan (CFO)",
+   "quote": "Our target EBIT operating margin would be within the band of 14.75% to 15.75%.",
+   "category": "margin",
+   "metric": "EBIT margin band (company)",
+   "target": "14.75-15.75%",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 3,
+   "status": "delivered",
+   "evidence": "FY26 EBIT 15.3% (Q1 15.3, Q2 15.3, Q3 15.2, Q4 15.4; company). Screener-derived (OP-dep)/sales FY26 15.3%.",
+   "delivered_value": "15.3%",
+   "delivery_ratio": 1.0,
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MPHASIS_29072025155615_IntimationoftranscriptJuly2025.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin",
+   "score": 1.0,
+   "weight": 3.787
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_29072025155615_IntimationoftranscriptJuly2025.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "company:MPHASIS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:MPHASIS:2025-07-25:logistics-recover-rest-of-fy26",
+  "title": "Logistics & Transportation vertical to recover gradually through the rest of FY26",
+  "body": "Nitin Rakesh (CEO) on 2025-07-25 (Q1FY26 concall transcript): \"We believe the impact from these is largely behind us, and we expect this vertical to gradually recover through the remainder of the year.\" Metric: Logistics & Transportation vertical revenue. Target: sequential recovery in FY26. Deadline: 2026-03-31. Specificity: vague; volunteered. Status as of 2026-11-22: moved-goalpost. Evidence: Q3FY26: 'the headwind of the Logistics in one of the major customers through the year'; Q4FY26 re-dated: 'we do expect this to gradually recover through FY27' (no acknowledgement that the FY26 expectation was missed); Q2FY27: Logistics & Transportation -12.0% QoQ. Segment figures single-source.",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2025-07-25",
+  "data": {
+   "said_on": "2025-07-25",
+   "speaker": "Nitin Rakesh (CEO)",
+   "quote": "We believe the impact from these is largely behind us, and we expect this vertical to gradually recover through the remainder of the year.",
+   "category": "revenue_growth",
+   "metric": "Logistics & Transportation vertical revenue",
+   "target": "sequential recovery in FY26",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "moved-goalpost",
+   "evidence": "Q3FY26: 'the headwind of the Logistics in one of the major customers through the year'; Q4FY26 re-dated: 'we do expect this to gradually recover through FY27' (no acknowledgement that the FY26 expectation was missed); Q2FY27: Logistics & Transportation -12.0% QoQ. Segment figures single-source.",
+   "delivery_ratio": 0.0,
+   "later_restatements": "2025-10-31 'start delivering sequential growth from Q3'; 2026-04-30 'gradually recover through FY27'",
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MPHASIS_29072025155615_IntimationoftranscriptJuly2025.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth",
+   "score": -1.5,
+   "weight": 1.262
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_29072025155615_IntimationoftranscriptJuly2025.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:MPHASIS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:MPHASIS:2025-07-25:insurance-momentum-fy26",
+  "title": "Insurance vertical to continue its growth momentum in FY26",
+  "body": "Nitin Rakesh (CEO) on 2025-07-25 (Q1FY26 concall transcript): \"our insurance vertical turned into a growth engine and is expected to continue the momentum in FY'26\" Metric: Insurance vertical growth. Target: continued strong growth. Deadline: 2026-03-31. Specificity: vague; volunteered. Status as of 2026-11-22: delivered. Evidence: Q4FY26: BFS 'healthy double digits and our Insurance business actually grew even more than that'; Q1FY27 Insurance +17.8% YoY CC.",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2025-07-25",
+  "data": {
+   "said_on": "2025-07-25",
+   "speaker": "Nitin Rakesh (CEO)",
+   "quote": "our insurance vertical turned into a growth engine and is expected to continue the momentum in FY'26",
+   "category": "revenue_growth",
+   "metric": "Insurance vertical growth",
+   "target": "continued strong growth",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "delivered",
+   "evidence": "Q4FY26: BFS 'healthy double digits and our Insurance business actually grew even more than that'; Q1FY27 Insurance +17.8% YoY CC.",
+   "delivery_ratio": 1.0,
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MPHASIS_29072025155615_IntimationoftranscriptJuly2025.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth",
+   "score": 1.0,
+   "weight": 0.631
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_29072025155615_IntimationoftranscriptJuly2025.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:MPHASIS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:MPHASIS:2025-10-31:logistics-sequential-growth-from-q3",
+  "title": "Logistics & Transportation to start delivering sequential growth from Q3FY26",
+  "body": "Nitin Rakesh (CEO) on 2025-10-31 (Q2FY26 concall transcript): \"We expect the Logistics and Transportation vertical to start delivering sequential growth from Q3.\" Metric: Logistics & Transportation vertical QoQ growth. Target: positive QoQ from Q3FY26. Deadline: 2025-12-31. Specificity: precise; volunteered. Status as of 2026-11-22: missed. Evidence: Q3FY26 call: continuing headwind from 'one of the major customers through the year'; vertical still a drag in Q1FY27 ('a little bit more headwinded given the macro') and -12.0% QoQ in Q2FY27. Single-source (segment). Explanation given: client-specific headwind, then macro/geopolitics",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2025-10-31",
+  "data": {
+   "said_on": "2025-10-31",
+   "speaker": "Nitin Rakesh (CEO)",
+   "quote": "We expect the Logistics and Transportation vertical to start delivering sequential growth from Q3.",
+   "category": "revenue_growth",
+   "metric": "Logistics & Transportation vertical QoQ growth",
+   "target": "positive QoQ from Q3FY26",
+   "deadline": "2025-12-31",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "missed",
+   "evidence": "Q3FY26 call: continuing headwind from 'one of the major customers through the year'; vertical still a drag in Q1FY27 ('a little bit more headwinded given the macro') and -12.0% QoQ in Q2FY27. Single-source (segment).",
+   "delivery_ratio": 0.0,
+   "explanation_for_miss": "client-specific headwind, then macro/geopolitics",
+   "admitted_unprompted": false,
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MPHASIS_05112025182431_Intimation_of_Transcript-signed.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth",
+   "score": -1.0,
+   "weight": 4.156
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_05112025182431_Intimation_of_Transcript-signed.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:MPHASIS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:MPHASIS:2025-10-31:dso-normalise-3-4-quarters",
+  "title": "DSO (89 days, up on fixed-price mix) to normalise over the next 3-4 quarters",
+  "body": "Aravind Viswanathan (CFO) on 2025-10-31 (Q2FY26 concall transcript): \"this change of business has seen an increase in DSO. We do expect normalization over the course of next three to four quarters.\" Metric: DSO (company). Target: back to ~84 days (pre-increase). Deadline: 2026-09-30. Specificity: vague; volunteered. Status as of 2026-11-22: missed. Evidence: DSO 89 (Q2FY26) -> 91 (Q3) -> ~86 adjusted (Q4) -> 95 (Q1FY27) -> 105 'after normalizing for the delayed remittances' (Q2FY27). Q2FY27: 'a quarterly aberration ... expected to get to double digit levels in Q3'. Explanation given: fixed-price mix; remittance delays at quarter-end",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "working-capital"
+  ],
+  "date": "2025-10-31",
+  "data": {
+   "said_on": "2025-10-31",
+   "speaker": "Aravind Viswanathan (CFO)",
+   "quote": "this change of business has seen an increase in DSO. We do expect normalization over the course of next three to four quarters.",
+   "category": "working_capital",
+   "metric": "DSO (company)",
+   "target": "back to ~84 days (pre-increase)",
+   "deadline": "2026-09-30",
+   "deadline_precision": "quarter",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "missed",
+   "evidence": "DSO 89 (Q2FY26) -> 91 (Q3) -> ~86 adjusted (Q4) -> 95 (Q1FY27) -> 105 'after normalizing for the delayed remittances' (Q2FY27). Q2FY27: 'a quarterly aberration ... expected to get to double digit levels in Q3'.",
+   "delivered_value": "105 days (Q2FY27, company-normalised)",
+   "delivery_ratio": 0.0,
+   "explanation_for_miss": "fixed-price mix; remittance delays at quarter-end",
+   "admitted_unprompted": true,
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MPHASIS_05112025182431_Intimation_of_Transcript-signed.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other",
+   "score": -1.0,
+   "weight": 1.385
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_05112025182431_Intimation_of_Transcript-signed.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:MPHASIS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:MPHASIS:2025-10-31:h2fy26-decent-growth",
+  "title": "'Decent growth' in H2FY26 (strong Q3 expected after Q1 deal ramps)",
+  "body": "Aravind Viswanathan (CFO) on 2025-10-31 (Q2FY26 concall transcript): \"if you extrapolate what we are guiding for the remainder of the year, at least at a gross level, you can see that we should have decent growth in the second half of the year\" Metric: CC revenue growth QoQ H2FY26. Target: decent (>2x industry pace). Deadline: 2026-03-31. Specificity: vague; prompted by analyst. Status as of 2026-11-22: delivered. Evidence: Q3FY26 +1.5% QoQ CC (furlough quarter), Q4FY26 +2.5% QoQ CC; FY26 6.7% CC met the >2x guide.",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2025-10-31",
+  "data": {
+   "said_on": "2025-10-31",
+   "speaker": "Aravind Viswanathan (CFO)",
+   "quote": "if you extrapolate what we are guiding for the remainder of the year, at least at a gross level, you can see that we should have decent growth in the second half of the year",
+   "category": "revenue_growth",
+   "metric": "CC revenue growth QoQ H2FY26",
+   "target": "decent (>2x industry pace)",
+   "deadline": "2026-03-31",
+   "deadline_precision": "half-year",
+   "specificity": "vague",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "delivered",
+   "evidence": "Q3FY26 +1.5% QoQ CC (furlough quarter), Q4FY26 +2.5% QoQ CC; FY26 6.7% CC met the >2x guide.",
+   "delivered_value": "1.5% / 2.5% CC QoQ",
+   "delivery_ratio": 0.9,
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MPHASIS_05112025182431_Intimation_of_Transcript-signed.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth",
+   "score": 1.0,
+   "weight": 1.385
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_05112025182431_Intimation_of_Transcript-signed.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:MPHASIS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:MPHASIS:2026-01-22:direct-business-double-digit-trend",
+  "title": "Direct business trending to double-digit YoY growth (template for future growth)",
+  "body": "Nitin Rakesh (CEO) on 2026-01-22 (Q3FY26 concall transcript): \"our direct business is trending to double digit in Q3, potentially giving you a sense of what the template of growth is likely to be for the future\" Metric: Direct business CC growth YoY. Target: >=10% YoY. Deadline: 2026-12-31. Specificity: vague; prompted by analyst. Status as of 2026-11-22: delivered. Evidence: Direct CC YoY: Q3FY26 9.6%, Q1FY27 9.9%, Q2FY27 11.3% (company). Reached 10%+ only in Q2FY27.",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-01-22",
+  "data": {
+   "said_on": "2026-01-22",
+   "speaker": "Nitin Rakesh (CEO)",
+   "quote": "our direct business is trending to double digit in Q3, potentially giving you a sense of what the template of growth is likely to be for the future",
+   "category": "revenue_growth",
+   "metric": "Direct business CC growth YoY",
+   "target": ">=10% YoY",
+   "deadline": "2026-12-31",
+   "deadline_precision": "vague",
+   "specificity": "vague",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "delivered",
+   "evidence": "Direct CC YoY: Q3FY26 9.6%, Q1FY27 9.9%, Q2FY27 11.3% (company). Reached 10%+ only in Q2FY27.",
+   "delivered_value": "11.3% (Q2FY27)",
+   "delivery_ratio": 1.0,
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MPHASIS_27012026181732_Intimation_of_transcript_-_22_January_2026-signed.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth",
+   "score": 1.0,
+   "weight": 1.499
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_27012026181732_Intimation_of_transcript_-_22_January_2026-signed.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:MPHASIS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:MPHASIS:2026-04-30:fy27-cc-growth-hsd-to-ldd",
+  "title": "FY27 revenue growth high single-digit to low double-digit (CC)",
+  "body": "Aravind Viswanathan (CFO) on 2026-04-30 (Q4FY26 concall transcript): \"we expect to deliver high single-digit to low double-digit growth, supported by disciplined execution and increasing demand for AI-led transformation in FY27\" Metric: FY27 CC revenue growth. Target: 7-12%. Deadline: 2027-03-31. Specificity: range; volunteered. Status as of 2026-11-22: pending. Evidence: Q1FY27 +8.3% YoY CC, Q2FY27 Direct +11.3% YoY CC. Raised on 2026-11-06 to 'low double digits' (acknowledged upgrade). Includes acquisitions (TAP / Red Oak).",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-04-30",
+  "data": {
+   "said_on": "2026-04-30",
+   "speaker": "Aravind Viswanathan (CFO)",
+   "quote": "we expect to deliver high single-digit to low double-digit growth, supported by disciplined execution and increasing demand for AI-led transformation in FY27",
+   "category": "revenue_growth",
+   "metric": "FY27 CC revenue growth",
+   "target": "7-12%",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 3,
+   "status": "pending",
+   "evidence": "Q1FY27 +8.3% YoY CC, Q2FY27 Direct +11.3% YoY CC. Raised on 2026-11-06 to 'low double digits' (acknowledged upgrade). Includes acquisitions (TAP / Red Oak).",
+   "later_restatements": "2026-07-24 maintained; 2026-11-06 raised to low double digits",
+   "source_doc": "Q4FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MPHASIS_04052026185004_SE_Intimation_-_transcript_-_30_April_2026-signed.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_04052026185004_SE_Intimation_-_transcript_-_30_April_2026-signed.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:MPHASIS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:MPHASIS:2026-04-30:fy27-ebit-band-14-75-15-75",
+  "title": "FY27 EBIT margin within the 14.75-15.75% band",
+  "body": "Aravind Viswanathan (CFO) on 2026-04-30 (Q4FY26 concall transcript): \"From a margin perspective, we remain committed to operating within our target band of 14.75% to 15.75%\" Metric: EBIT margin band (company). Target: 14.75-15.75%. Deadline: 2027-03-31. Specificity: range; volunteered. Status as of 2026-11-22: pending. Evidence: Q1FY27 down 60 bp QoQ (~14.8%; deal ramp + TAP acquisition costs); Q2FY27 flat. Screener-derived 14.8% / 14.7%. Near the floor.",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-04-30",
+  "data": {
+   "said_on": "2026-04-30",
+   "speaker": "Aravind Viswanathan (CFO)",
+   "quote": "From a margin perspective, we remain committed to operating within our target band of 14.75% to 15.75%",
+   "category": "margin",
+   "metric": "EBIT margin band (company)",
+   "target": "14.75-15.75%",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 3,
+   "status": "pending",
+   "evidence": "Q1FY27 down 60 bp QoQ (~14.8%; deal ramp + TAP acquisition costs); Q2FY27 flat. Screener-derived 14.8% / 14.7%. Near the floor.",
+   "later_restatements": "2026-07-24 and 2026-11-06 'stable margins within the target band'",
+   "source_doc": "Q4FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MPHASIS_04052026185004_SE_Intimation_-_transcript_-_30_April_2026-signed.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_04052026185004_SE_Intimation_-_transcript_-_30_April_2026-signed.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:MPHASIS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:MPHASIS:2026-04-30:fy27-ocf-to-ni-80pct",
+  "title": "FY27 operating cash flow / net income ~80%",
+  "body": "Aravind Viswanathan (CFO) on 2026-04-30 (Q4FY26 concall transcript): \"We also expect to maintain an operating cash flow to net income conversion ratio of approximately 80%.\" Metric: OCF / net income. Target: ~80%. Deadline: 2027-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: Q1FY27 OCF $39 mn; Q2FY27 $34 mn normalised; analysts flagged a large H2 ask (Q2FY27 Q&A).",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "other"
+  ],
+  "date": "2026-04-30",
+  "data": {
+   "said_on": "2026-04-30",
+   "speaker": "Aravind Viswanathan (CFO)",
+   "quote": "We also expect to maintain an operating cash flow to net income conversion ratio of approximately 80%.",
+   "category": "other",
+   "metric": "OCF / net income",
+   "target": "~80%",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "evidence": "Q1FY27 OCF $39 mn; Q2FY27 $34 mn normalised; analysts flagged a large H2 ask (Q2FY27 Q&A).",
+   "source_doc": "Q4FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MPHASIS_04052026185004_SE_Intimation_-_transcript_-_30_April_2026-signed.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_04052026185004_SE_Intimation_-_transcript_-_30_April_2026-signed.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:MPHASIS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:MPHASIS:2026-04-30:hedge-losses-taper-after-h1fy27",
+  "title": "Hedge losses continue in H1FY27 then taper",
+  "body": "Aravind Viswanathan (CFO) on 2026-04-30 (Q4FY26 concall transcript): \"see continued impact of hedge losses in at least the first half of FY27 and then it will kind of taper down a bit\" Metric: Hedge losses. Target: lower in H2FY27. Deadline: 2027-03-31. Specificity: vague; prompted by analyst. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-04-30",
+  "data": {
+   "said_on": "2026-04-30",
+   "speaker": "Aravind Viswanathan (CFO)",
+   "quote": "see continued impact of hedge losses in at least the first half of FY27 and then it will kind of taper down a bit",
+   "category": "margin",
+   "metric": "Hedge losses",
+   "target": "lower in H2FY27",
+   "deadline": "2027-03-31",
+   "deadline_precision": "half-year",
+   "specificity": "vague",
+   "volunteered": false,
+   "materiality": 1,
+   "status": "pending",
+   "source_doc": "Q4FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MPHASIS_04052026185004_SE_Intimation_-_transcript_-_30_April_2026-signed.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_04052026185004_SE_Intimation_-_transcript_-_30_April_2026-signed.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:MPHASIS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:MPHASIS:2026-07-24:insurance-key-driver-fy27",
+  "title": "Insurance to remain a key growth driver through FY27",
+  "body": "Nitin Rakesh (CEO) on 2026-07-24 (Q1FY27 concall transcript): \"key growth driver for us through FY27\" Metric: Insurance vertical growth. Target: above company growth. Deadline: 2027-03-31. Specificity: vague; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-07-24",
+  "data": {
+   "said_on": "2026-07-24",
+   "speaker": "Nitin Rakesh (CEO)",
+   "quote": "key growth driver for us through FY27",
+   "category": "revenue_growth",
+   "metric": "Insurance vertical growth",
+   "target": "above company growth",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "source_doc": "Q1FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MPHASIS_28072026133016_Intimation_of_transcript_-_June_2026-signed.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_28072026133016_Intimation_of_transcript_-_June_2026-signed.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:MPHASIS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:MPHASIS:2026-11-06:fy27-cc-growth-low-double-digit",
+  "title": "FY27 revenue growth 'low double digits' (raised from HSD-LDD)",
+  "body": "Nitin Rakesh (CEO) on 2026-11-06 (Q2FY27 concall transcript): \"we are raising our FY27 guidance. We now expect revenue growth in the low double digits for the full year.\" Metric: FY27 CC revenue growth. Target: 10-12%. Deadline: 2027-03-31. Specificity: range; volunteered. Status as of 2026-11-22: pending. Evidence: H1FY27: Q1 +8.3% YoY CC (total), Q2 Direct +11.3% YoY CC. Raise rests on 'results already delivered' and backlog.",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-11-06",
+  "data": {
+   "said_on": "2026-11-06",
+   "speaker": "Nitin Rakesh (CEO)",
+   "quote": "we are raising our FY27 guidance. We now expect revenue growth in the low double digits for the full year.",
+   "category": "revenue_growth",
+   "metric": "FY27 CC revenue growth",
+   "target": "10-12%",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 3,
+   "status": "pending",
+   "evidence": "H1FY27: Q1 +8.3% YoY CC (total), Q2 Direct +11.3% YoY CC. Raise rests on 'results already delivered' and backlog.",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MPHASIS_09112026150003_Intimation_of_transcript_-_Q2FY2027.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_09112026150003_Intimation_of_transcript_-_Q2FY2027.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:MPHASIS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:MPHASIS:2026-11-06:dso-double-digit-q3fy27",
+  "title": "DSO back to double digits (<100 days) in Q3FY27",
+  "body": "Aravind Viswanathan (CFO) on 2026-11-06 (Q2FY27 concall transcript): \"This is more of a quarterly aberration and is expected to get to double digit levels in Q3.\" Metric: DSO (company). Target: <100 days. Deadline: 2026-12-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "working-capital"
+  ],
+  "date": "2026-11-06",
+  "data": {
+   "said_on": "2026-11-06",
+   "speaker": "Aravind Viswanathan (CFO)",
+   "quote": "This is more of a quarterly aberration and is expected to get to double digit levels in Q3.",
+   "category": "working_capital",
+   "metric": "DSO (company)",
+   "target": "<100 days",
+   "deadline": "2026-12-31",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MPHASIS_09112026150003_Intimation_of_transcript_-_Q2FY2027.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_09112026150003_Intimation_of_transcript_-_Q2FY2027.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:MPHASIS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:MPHASIS:2026-11-06:healthcare-growth-driver",
+  "title": "Healthcare to emerge as a growth driver after a large deal win",
+  "body": "Nitin Rakesh (CEO) on 2026-11-06 (Q2FY27 concall transcript): \"On the back of recent deal wins, including a large deal win this quarter, we expect Healthcare to emerge as a growth driver.\" Metric: Healthcare growth. Target: above company growth. Deadline: 2027-09-30. Specificity: vague; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-11-06",
+  "data": {
+   "said_on": "2026-11-06",
+   "speaker": "Nitin Rakesh (CEO)",
+   "quote": "On the back of recent deal wins, including a large deal win this quarter, we expect Healthcare to emerge as a growth driver.",
+   "category": "revenue_growth",
+   "metric": "Healthcare growth",
+   "target": "above company growth",
+   "deadline": "2027-09-30",
+   "deadline_precision": "vague",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MPHASIS_09112026150003_Intimation_of_transcript_-_Q2FY2027.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_09112026150003_Intimation_of_transcript_-_Q2FY2027.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:MPHASIS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:MPHASIS:credibility-2026-11",
+  "title": "MPHASIS - Management Credibility Score (IT mid-caps peer calibration, Nov 2026)",
+  "body": "Promise tracker on Mphasis (IT mid-caps peer set). 6 concalls (Jul-2025 to Nov-2026); 16 promises, 8 scored. Status counts: {'delivered': 5, 'moved-goalpost': 1, 'missed': 2, 'pending': 8}. Weighted delivery 62.0% (specificity-only 58.3%; hit rate 62.5%); MCS 0.204. Company-level guidance was met: FY26 '~2x industry' growth (6.7% CC) and the 14.75-15.75% EBIT band (15.3%, every quarter in the band). Vertical and working-capital statements were not: Logistics recovery re-dated FY26 -> 'through FY27' without acknowledgement (moved-goalpost) and still falling; DSO 'normalise in 3-4 quarters' went 89 -> 105 days. FY27 guidance (raised to low-double-digit CC growth; band held near its floor) is pending. turns.py could not parse the Mphasis layout; read from raw text. Research, not advice.",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "process",
+   "it-peer-calibration"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "as_of": "2026-11-22",
+   "n_promises": 16,
+   "n_scored": 8,
+   "status_counts": {
+    "delivered": 5,
+    "moved-goalpost": 1,
+    "missed": 2,
+    "pending": 8
+   },
+   "mcs_schema_scale": 0.204,
+   "mcs_scale_note": "-1.5 (all moved/dropped) .. +1 (all delivered); weights = specificity(3/2/1) x materiality(1-3) x recency decay (half-life 8 qtrs)",
+   "weighted_delivery_ratio_pct": 62.0,
+   "specificity_weighted_delivery_ratio_pct": 58.3,
+   "raw_hit_rate_pct": 62.5,
+   "candour_index_pct": 33.3,
+   "candour_index_hard_misses_pct": 33.3,
+   "by_category": {
+    "margin": {
+     "n": 1,
+     "delivery_ratio_pct": 100.0
+    },
+    "other": {
+     "n": 1,
+     "delivery_ratio_pct": 0.0
+    },
+    "revenue_growth": {
+     "n": 6,
+     "delivery_ratio_pct": 55.6
+    }
+   },
+   "by_specificity": {
+    "precise": {
+     "n": 1,
+     "delivery_ratio_pct": 0.0
+    },
+    "range": {
+     "n": 2,
+     "delivery_ratio_pct": 100.0
+    },
+    "vague": {
+     "n": 5,
+     "delivery_ratio_pct": 60.0
+    }
+   },
+   "by_materiality": {
+    "core (3)": {
+     "n": 2,
+     "delivery_ratio_pct": 100.0
+    },
+    "meaningful (2)": {
+     "n": 5,
+     "delivery_ratio_pct": 28.6
+    },
+    "minor (1)": {
+     "n": 1,
+     "delivery_ratio_pct": 100.0
+    }
+   },
+   "by_volunteered": {
+    "prompted": {
+     "n": 2,
+     "delivery_ratio_pct": 100.0
+    },
+    "volunteered": {
+     "n": 6,
+     "delivery_ratio_pct": 50.0
+    }
+   },
+   "by_fiscal_year_said": {
+    "FY26 calls": {
+     "n": 8,
+     "delivery_ratio_pct": 58.3
+    }
+   },
+   "n_shortfalls": 3,
+   "n_shortfalls_admitted_unprompted": 1,
+   "n_volunteered": 13,
+   "n_prompted": 3,
+   "sector_adjusted_credibility_pts": -28.5,
+   "sac_components": {
+    "revenue_growth": {
+     "n": 6,
+     "own": 55.6,
+     "peer_median": 82.5,
+     "gap": -26.9
+    },
+    "pooled:margin+other": {
+     "n": 2,
+     "own": 66.7,
+     "peer_median": 100.0,
+     "gap": -33.3
+    }
+   },
+   "peer_set": [
+    "PERSISTENT",
+    "COFORGE",
+    "MPHASIS",
+    "KPITTECH"
+   ]
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_04052026185004_SE_Intimation_-_transcript_-_30_April_2026-signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_05112025182431_Intimation_of_Transcript-signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_09112026150003_Intimation_of_transcript_-_Q2FY2027.pdf",
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_27012026181732_Intimation_of_transcript_-_22_January_2026-signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_28072026133016_Intimation_of_transcript_-_June_2026-signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_29072025155615_IntimationoftranscriptJuly2025.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:MPHASIS",
+    "rel": "about"
+   },
+   {
+    "to": "insight:it-midcaps-promise-credibility-base-rate",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:KPITTECH:2025-07-30:fy26-ebitda-21pct",
+  "title": "Maintain ~21% EBITDA margin for FY26",
+  "body": "Kishor Patil (Co-founder, CEO & MD) on 2025-07-30 (Q1FY26 concall transcript): \"in a foreseeable future, we believe we can maintain the margins at 21% ... as long as it is in a reasonable way, we should be in a position to maintain it at 21% EBITDA\" Metric: EBITDA margin (company). Target: 21%. Deadline: 2026-03-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: delivered. Evidence: FY26 EBITDA 20.8% ('EBITDA growth margin is for the year 20.8%', Q4FY26 call), within 0.3 pp. Screener OPM FY26 18.9% (different classification).",
+  "tickers": [
+   "KPITTECH"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2025-07-30",
+  "data": {
+   "said_on": "2025-07-30",
+   "speaker": "Kishor Patil (Co-founder, CEO & MD)",
+   "quote": "in a foreseeable future, we believe we can maintain the margins at 21% ... as long as it is in a reasonable way, we should be in a position to maintain it at 21% EBITDA",
+   "category": "margin",
+   "metric": "EBITDA margin (company)",
+   "target": "21%",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 3,
+   "conditionality": "barring currency",
+   "status": "delivered",
+   "evidence": "FY26 EBITDA 20.8% ('EBITDA growth margin is for the year 20.8%', Q4FY26 call), within 0.3 pp. Screener OPM FY26 18.9% (different classification).",
+   "delivered_value": "20.8%",
+   "delivery_ratio": 0.99,
+   "later_restatements": "2025-11-10 'we will be in a position to maintain 21% EBITDA for the full year'",
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/KPITTECH_06082025193155_CoverTransacriptJuly30_Signed.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin",
+   "score": 1.0,
+   "weight": 5.707
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_06082025193155_CoverTransacriptJuly30_Signed.pdf",
+   "https://www.screener.in/company/KPITTECH/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "company:KPITTECH",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:KPITTECH:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:KPITTECH:2025-07-30:h2fy26-higher-than-h1",
+  "title": "H2FY26 revenue higher than H1; growth momentum returns in H2",
+  "body": "Kishor Patil (Co-founder, CEO & MD) on 2025-07-30 (Q1FY26 concall transcript): \"we will be in a position to have certain wins and H2 will be higher than H1. And as we move into the second half, we will start gaining the growth momentum.\" Metric: Revenue H2FY26 vs H1FY26. Target: H2 > H1. Deadline: 2026-03-31. Specificity: vague; volunteered. Status as of 2026-11-22: delivered. Evidence: Screener sales H1FY26 1,539 + 1,588 = 3,127 cr; H2FY26 1,617 + 1,711 = 3,328 cr (+6.4%); CC QoQ Q3 +1.5%, Q4 +1.8% vs Q2 +0.3%.",
+  "tickers": [
+   "KPITTECH"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2025-07-30",
+  "data": {
+   "said_on": "2025-07-30",
+   "speaker": "Kishor Patil (Co-founder, CEO & MD)",
+   "quote": "we will be in a position to have certain wins and H2 will be higher than H1. And as we move into the second half, we will start gaining the growth momentum.",
+   "category": "revenue_growth",
+   "metric": "Revenue H2FY26 vs H1FY26",
+   "target": "H2 > H1",
+   "deadline": "2026-03-31",
+   "deadline_precision": "half-year",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "delivered",
+   "evidence": "Screener sales H1FY26 1,539 + 1,588 = 3,127 cr; H2FY26 1,617 + 1,711 = 3,328 cr (+6.4%); CC QoQ Q3 +1.5%, Q4 +1.8% vs Q2 +0.3%.",
+   "delivered_value": "H2 +6.4% vs H1 (INR)",
+   "delivery_ratio": 1.0,
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/KPITTECH_06082025193155_CoverTransacriptJuly30_Signed.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth",
+   "score": 1.0,
+   "weight": 1.268
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_06082025193155_CoverTransacriptJuly30_Signed.pdf",
+   "https://www.screener.in/company/KPITTECH/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "company:KPITTECH",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:KPITTECH:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:KPITTECH:2025-11-10:q3-marginal-cc-growth-q4-meaningful",
+  "title": "Q3FY26 marginal CC growth, Q4FY26 'meaningful growth'",
+  "body": "Kishor Patil (Co-founder, CEO & MD) on 2025-11-10 (Q2FY26 concall transcript): \"from next quarter we will start seeing marginal growth on constant currency terms and in Q4 there will be meaningful growth\" Metric: CC revenue growth QoQ Q3/Q4 FY26. Target: Q3 >0%, Q4 meaningful. Deadline: 2026-03-31. Specificity: vague; prompted by analyst. Status as of 2026-11-22: partly. Evidence: Q3FY26 +1.5% CC QoQ (marginal: met); Q4FY26 +1.8% CC QoQ ('a bit of a muted growth year, but ultimately, we had a good Q4') - barely above Q3, hard to call 'meaningful' (a spike was implied).",
+  "tickers": [
+   "KPITTECH"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2025-11-10",
+  "data": {
+   "said_on": "2025-11-10",
+   "speaker": "Kishor Patil (Co-founder, CEO & MD)",
+   "quote": "from next quarter we will start seeing marginal growth on constant currency terms and in Q4 there will be meaningful growth",
+   "category": "revenue_growth",
+   "metric": "CC revenue growth QoQ Q3/Q4 FY26",
+   "target": "Q3 >0%, Q4 meaningful",
+   "deadline": "2026-03-31",
+   "deadline_precision": "quarter",
+   "specificity": "vague",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "partly",
+   "evidence": "Q3FY26 +1.5% CC QoQ (marginal: met); Q4FY26 +1.8% CC QoQ ('a bit of a muted growth year, but ultimately, we had a good Q4') - barely above Q3, hard to call 'meaningful' (a spike was implied).",
+   "delivered_value": "1.5% / 1.8% CC QoQ",
+   "delivery_ratio": 0.6,
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/KPITTECH_17112025223456_ransacriptNov10_Signed.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth",
+   "score": 0.5,
+   "weight": 1.398
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_17112025223456_ransacriptNov10_Signed.pdf",
+   "https://www.screener.in/company/KPITTECH/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:KPITTECH",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:KPITTECH:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:KPITTECH:2025-11-10:fy26-ebitda-21pct-after-increments",
+  "title": "Q3FY26 profitability: absorb increments in Q3-Q4 and still hold FY26 at 21%",
+  "body": "Kishor Patil (Co-founder, CEO & MD) on 2025-11-10 (Q2FY26 concall transcript): \"That would be considering the fact that we will be giving increments, some in next quarter and some in the quarter after. So, after giving that, I think we will be in a position to maintain our EBITDA margins at 21% for the whole year.\" Metric: EBITDA margin (company) H2FY26. Target: ~21% full year after increments. Deadline: 2026-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: delivered. Evidence: Q4FY26 EBITDA 20.6%; FY26 20.8% (company).",
+  "tickers": [
+   "KPITTECH"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2025-11-10",
+  "data": {
+   "said_on": "2025-11-10",
+   "speaker": "Kishor Patil (Co-founder, CEO & MD)",
+   "quote": "That would be considering the fact that we will be giving increments, some in next quarter and some in the quarter after. So, after giving that, I think we will be in a position to maintain our EBITDA margins at 21% for the whole year.",
+   "category": "margin",
+   "metric": "EBITDA margin (company) H2FY26",
+   "target": "~21% full year after increments",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "delivered",
+   "evidence": "Q4FY26 EBITDA 20.6%; FY26 20.8% (company).",
+   "delivered_value": "20.8% FY26",
+   "delivery_ratio": 0.99,
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/KPITTECH_17112025223456_ransacriptNov10_Signed.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin",
+   "score": 1.0,
+   "weight": 4.195
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_17112025223456_ransacriptNov10_Signed.pdf",
+   "https://www.screener.in/company/KPITTECH/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:KPITTECH",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:KPITTECH:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:KPITTECH:2026-01-30:q4fy26-highest-growth-quarter",
+  "title": "Q4FY26 to be the highest-growth quarter of FY26, with profitability up from Q3",
+  "body": "Kishor Patil (Co-founder, CEO & MD) on 2026-01-30 (Q3FY26 concall transcript): \"in the last quarter that is Q4, we will improve, our growth will be higher, it will be the highest quarterly growth in FY26 ... And our profitability will improve from what we have in Q3\" Metric: CC revenue growth QoQ Q4FY26. Target: highest QoQ of FY26. Deadline: 2026-03-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: delivered. Evidence: Q4FY26 +1.8% CC QoQ vs Q3 +1.5%, Q2 +0.3%, Q1 +0.4% (company); Q4 EBITDA 20.6%.",
+  "tickers": [
+   "KPITTECH"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-01-30",
+  "data": {
+   "said_on": "2026-01-30",
+   "speaker": "Kishor Patil (Co-founder, CEO & MD)",
+   "quote": "in the last quarter that is Q4, we will improve, our growth will be higher, it will be the highest quarterly growth in FY26 ... And our profitability will improve from what we have in Q3",
+   "category": "revenue_growth",
+   "metric": "CC revenue growth QoQ Q4FY26",
+   "target": "highest QoQ of FY26",
+   "deadline": "2026-03-31",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "delivered",
+   "evidence": "Q4FY26 +1.8% CC QoQ vs Q3 +1.5%, Q2 +0.3%, Q1 +0.4% (company); Q4 EBITDA 20.6%.",
+   "delivered_value": "1.8% CC QoQ",
+   "delivery_ratio": 1.0,
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/KPITTECH_06022026223507_CoverTranscript_Signed.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth",
+   "score": 1.0,
+   "weight": 4.531
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_06022026223507_CoverTranscript_Signed.pdf",
+   "https://www.screener.in/company/KPITTECH/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:KPITTECH",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:KPITTECH:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:KPITTECH:2026-01-30:fy27-growth-higher-than-fy26",
+  "title": "FY27 growth to be higher than FY26 ('for sure')",
+  "body": "Kishor Patil (Co-founder, CEO & MD) on 2026-01-30 (Q3FY26 concall transcript): \"We will for sure grow next year higher than this year. And we believe that we will be in a position to do it.\" Metric: FY27 CC revenue growth vs FY26. Target: FY27 growth > FY26 growth. Deadline: 2027-03-31. Specificity: vague; prompted by analyst. Status as of 2026-11-22: pending. Evidence: Q1FY27 CC -3.6% QoQ, +0.1% YoY (two largest SDV programmes ended); Q2FY27 services flat, products +5% QoQ. Off track.",
+  "tickers": [
+   "KPITTECH"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-01-30",
+  "data": {
+   "said_on": "2026-01-30",
+   "speaker": "Kishor Patil (Co-founder, CEO & MD)",
+   "quote": "We will for sure grow next year higher than this year. And we believe that we will be in a position to do it.",
+   "category": "revenue_growth",
+   "metric": "FY27 CC revenue growth vs FY26",
+   "target": "FY27 growth > FY26 growth",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "vague",
+   "volunteered": false,
+   "materiality": 3,
+   "status": "pending",
+   "evidence": "Q1FY27 CC -3.6% QoQ, +0.1% YoY (two largest SDV programmes ended); Q2FY27 services flat, products +5% QoQ. Off track.",
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/KPITTECH_06022026223507_CoverTranscript_Signed.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_06022026223507_CoverTranscript_Signed.pdf",
+   "https://www.screener.in/company/KPITTECH/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:KPITTECH",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:KPITTECH:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:KPITTECH:2026-05-07:fy27-ebitda-20-5-21-2pct",
+  "title": "FY27 EBITDA margin 20.5-21.2% (after AI / products investment)",
+  "body": "Kishor Patil (Co-founder, CEO & MD) on 2026-05-07 (Q4FY26 concall / outlook transcript): \"it will drive profitability EBITDA 20.5 to 21.2 post increasing investment in AI solutions and products competency development and new markets\" Metric: EBITDA margin (company). Target: 20.5-21.2%. Deadline: 2027-03-31. Specificity: range; volunteered. Status as of 2026-11-22: pending. Evidence: Given 7-May-2026; Q1FY27 EBITDA 17.2%, Q2FY27 17.8% (company). Q2FY27 CEO: margins 'will go up to some extent, every quarter, but, it will be early next year when we get there' - i.e. 20%+ only in FY28. A June-2026 mid-quarter update (not in these transcripts) reset Q2/Q4 expectations. GOALPOST FLAG: never explicitly withdrawn on a call; resolve at the deadline.",
+  "tickers": [
+   "KPITTECH"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-05-07",
+  "data": {
+   "said_on": "2026-05-07",
+   "speaker": "Kishor Patil (Co-founder, CEO & MD)",
+   "quote": "it will drive profitability EBITDA 20.5 to 21.2 post increasing investment in AI solutions and products competency development and new markets",
+   "category": "margin",
+   "metric": "EBITDA margin (company)",
+   "target": "20.5-21.2%",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 3,
+   "status": "pending",
+   "evidence": "Given 7-May-2026; Q1FY27 EBITDA 17.2%, Q2FY27 17.8% (company). Q2FY27 CEO: margins 'will go up to some extent, every quarter, but, it will be early next year when we get there' - i.e. 20%+ only in FY28. A June-2026 mid-quarter update (not in these transcripts) reset Q2/Q4 expectations. GOALPOST FLAG: never explicitly withdrawn on a call; resolve at the deadline.",
+   "source_doc": "Q4FY26 concall / outlook transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MeghanaPhadnis_13052026221810_covertranscript_Signed.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MeghanaPhadnis_13052026221810_covertranscript_Signed.pdf",
+   "https://www.screener.in/company/KPITTECH/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:KPITTECH",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:KPITTECH:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:KPITTECH:2026-05-07:fy27-solutions-products-plus-30pct",
+  "title": "FY27 solutions & products revenue +30% YoY",
+  "body": "Kishor Patil (Co-founder, CEO & MD) on 2026-05-07 (Q4FY26 concall / outlook transcript): \"We expect 30% year-on-year revenue growth in solution and products, and we hope it will increase over the period.\" Metric: Solutions & products revenue growth. Target: >=30% YoY. Deadline: 2027-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: Q2FY27: products +25% YoY, +5% QoQ (company).",
+  "tickers": [
+   "KPITTECH"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-05-07",
+  "data": {
+   "said_on": "2026-05-07",
+   "speaker": "Kishor Patil (Co-founder, CEO & MD)",
+   "quote": "We expect 30% year-on-year revenue growth in solution and products, and we hope it will increase over the period.",
+   "category": "revenue_growth",
+   "metric": "Solutions & products revenue growth",
+   "target": ">=30% YoY",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "pending",
+   "evidence": "Q2FY27: products +25% YoY, +5% QoQ (company).",
+   "source_doc": "Q4FY26 concall / outlook transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MeghanaPhadnis_13052026221810_covertranscript_Signed.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MeghanaPhadnis_13052026221810_covertranscript_Signed.pdf",
+   "https://www.screener.in/company/KPITTECH/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:KPITTECH",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:KPITTECH:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:KPITTECH:2026-05-07:ebitda-22-24pct-medium-term",
+  "title": "Medium-term EBITDA 22-24% as solutions & products reach ~40% of revenue in 3 years",
+  "body": "Kishor Patil (Co-founder, CEO & MD) on 2026-05-07 (Q4FY26 concall / outlook transcript): \"So we expect the EBITDA to be between 22% to 24% from where we are today.\" Metric: EBITDA margin (company). Target: 22-24%. Deadline: 2029-03-31. Specificity: range; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "KPITTECH"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-05-07",
+  "data": {
+   "said_on": "2026-05-07",
+   "speaker": "Kishor Patil (Co-founder, CEO & MD)",
+   "quote": "So we expect the EBITDA to be between 22% to 24% from where we are today.",
+   "category": "margin",
+   "metric": "EBITDA margin (company)",
+   "target": "22-24%",
+   "deadline": "2029-03-31",
+   "deadline_precision": "vague",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 2,
+   "conditionality": "medium term",
+   "status": "pending",
+   "source_doc": "Q4FY26 concall / outlook transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/MeghanaPhadnis_13052026221810_covertranscript_Signed.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MeghanaPhadnis_13052026221810_covertranscript_Signed.pdf",
+   "https://www.screener.in/company/KPITTECH/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:KPITTECH",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:KPITTECH:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:KPITTECH:2026-07-29:return-to-growth-by-q4fy27",
+  "title": "H2FY27 better than H1; return to QoQ growth by Q4FY27",
+  "body": "Kishor Patil (Co-founder, CEO & MD) on 2026-07-29 (Q1FY27 concall transcript): \"we have just mentioned that H2 will be better than H1, and we will return to growth in H2 by Q4, driven by the Q4 performance and our profitability will return largely when the revenues come\" Metric: CC revenue growth QoQ Q4FY27. Target: >0% QoQ in Q4FY27; H2 > H1. Deadline: 2027-03-31. Specificity: vague; volunteered. Status as of 2026-11-22: pending. Evidence: Q2FY27: 'H2 will be better than H1. I think we will maintain that' and 'we expect growth in that quarter' (no number). Screener sales Q1FY27 1,675 cr, Q2FY27 1,691 cr.",
+  "tickers": [
+   "KPITTECH"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-07-29",
+  "data": {
+   "said_on": "2026-07-29",
+   "speaker": "Kishor Patil (Co-founder, CEO & MD)",
+   "quote": "we have just mentioned that H2 will be better than H1, and we will return to growth in H2 by Q4, driven by the Q4 performance and our profitability will return largely when the revenues come",
+   "category": "revenue_growth",
+   "metric": "CC revenue growth QoQ Q4FY27",
+   "target": ">0% QoQ in Q4FY27; H2 > H1",
+   "deadline": "2027-03-31",
+   "deadline_precision": "quarter",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 3,
+   "status": "pending",
+   "evidence": "Q2FY27: 'H2 will be better than H1. I think we will maintain that' and 'we expect growth in that quarter' (no number). Screener sales Q1FY27 1,675 cr, Q2FY27 1,691 cr.",
+   "later_restatements": "2026-10-28 reiterated (H2 > H1, growth in Q4)",
+   "source_doc": "Q1FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/KPITTECH_04082026205946_KPIT_Transcript_Cov_let_signed.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_04082026205946_KPIT_Transcript_Cov_let_signed.pdf",
+   "https://www.screener.in/company/KPITTECH/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:KPITTECH",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:KPITTECH:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:KPITTECH:2026-07-29:margins-normal-by-q4fy27",
+  "title": "EBITDA back to 'normal' (~20%+) by Q4FY27 as growth returns",
+  "body": "Kishor Patil (Co-founder, CEO & MD) on 2026-07-29 (Q1FY27 concall transcript): \"frankly, the large part is related to the growth and it really depends on that. But yes, fundamentally\" Metric: EBITDA margin Q4FY27 (company). Target: ~20%+. Deadline: 2027-03-31. Specificity: vague; prompted by analyst. Status as of 2026-11-22: pending. Evidence: Endorsed an analyst's '20% plus by 4Q' framing; re-dated on 2026-10-28 to 'early next year when we get there' (Q4FY27 or Q1FY28; flag).",
+  "tickers": [
+   "KPITTECH"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-07-29",
+  "data": {
+   "said_on": "2026-07-29",
+   "speaker": "Kishor Patil (Co-founder, CEO & MD)",
+   "quote": "frankly, the large part is related to the growth and it really depends on that. But yes, fundamentally",
+   "category": "margin",
+   "metric": "EBITDA margin Q4FY27 (company)",
+   "target": "~20%+",
+   "deadline": "2027-03-31",
+   "deadline_precision": "quarter",
+   "specificity": "vague",
+   "volunteered": false,
+   "materiality": 2,
+   "conditionality": "depends on growth",
+   "status": "pending",
+   "evidence": "Endorsed an analyst's '20% plus by 4Q' framing; re-dated on 2026-10-28 to 'early next year when we get there' (Q4FY27 or Q1FY28; flag).",
+   "source_doc": "Q1FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/KPITTECH_04082026205946_KPIT_Transcript_Cov_let_signed.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_04082026205946_KPIT_Transcript_Cov_let_signed.pdf",
+   "https://www.screener.in/company/KPITTECH/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:KPITTECH",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:KPITTECH:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:KPITTECH:2026-10-28:ebitda-up-every-quarter",
+  "title": "EBITDA margin to rise every quarter from Q2FY27's 17.8%",
+  "body": "Kishor Patil (Co-founder, CEO & MD) on 2026-10-28 (Q2FY27 concall transcript): \"I can only say right now it will go up to some extent, every quarter, but, it will be early next year when we get there.\" Metric: EBITDA margin QoQ (company). Target: Q3FY27 > 17.8% and Q4 > Q3. Deadline: 2027-03-31. Specificity: vague; prompted by analyst. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "KPITTECH"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "it-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-10-28",
+  "data": {
+   "said_on": "2026-10-28",
+   "speaker": "Kishor Patil (Co-founder, CEO & MD)",
+   "quote": "I can only say right now it will go up to some extent, every quarter, but, it will be early next year when we get there.",
+   "category": "margin",
+   "metric": "EBITDA margin QoQ (company)",
+   "target": "Q3FY27 > 17.8% and Q4 > Q3",
+   "deadline": "2027-03-31",
+   "deadline_precision": "quarter",
+   "specificity": "vague",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "pending",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/KPITTECH_03112026220723_KPIT_Q2FY27_Transcript_Signed.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_03112026220723_KPIT_Q2FY27_Transcript_Signed.pdf",
+   "https://www.screener.in/company/KPITTECH/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:KPITTECH",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:KPITTECH:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:KPITTECH:credibility-2026-11",
+  "title": "KPITTECH - Management Credibility Score (IT mid-caps peer calibration, Nov 2026)",
+  "body": "Promise tracker on KPIT Technologies (IT mid-caps peer set). 6 concalls (Jul-2025 to Oct-2026); 12 promises, 5 scored. Status counts: {'delivered': 4, 'partly': 1, 'pending': 7}. Weighted delivery 95.9% (specificity-only 95.5%; hit rate 80.0%); MCS 0.959. Every FY26 statement resolved delivered or partly (21% EBITDA -> 20.8%; H2 > H1; Q4 highest growth quarter, though only +1.8% CC). The record breaks at FY27: the 20.5-21.2% EBITDA guide given on 7-May-2026 met a 17.2% Q1 within weeks as the two largest SDV programmes ended, 'FY27 growth higher than FY26' is off track, and margin recovery has slid to 'early next year'. These are pending, so the score does not yet show it - a clear case where a good scored record coexists with a likely large miss. Research, not advice.",
+  "tickers": [
+   "KPITTECH"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "process",
+   "it-peer-calibration"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "as_of": "2026-11-22",
+   "n_promises": 12,
+   "n_scored": 5,
+   "status_counts": {
+    "delivered": 4,
+    "partly": 1,
+    "pending": 7
+   },
+   "mcs_schema_scale": 0.959,
+   "mcs_scale_note": "-1.5 (all moved/dropped) .. +1 (all delivered); weights = specificity(3/2/1) x materiality(1-3) x recency decay (half-life 8 qtrs)",
+   "weighted_delivery_ratio_pct": 95.9,
+   "specificity_weighted_delivery_ratio_pct": 95.5,
+   "raw_hit_rate_pct": 80.0,
+   "candour_index_pct": 0.0,
+   "candour_index_hard_misses_pct": null,
+   "by_category": {
+    "margin": {
+     "n": 2,
+     "delivery_ratio_pct": 100.0
+    },
+    "revenue_growth": {
+     "n": 3,
+     "delivery_ratio_pct": 90.0
+    }
+   },
+   "by_specificity": {
+    "precise": {
+     "n": 3,
+     "delivery_ratio_pct": 100.0
+    },
+    "vague": {
+     "n": 2,
+     "delivery_ratio_pct": 75.0
+    }
+   },
+   "by_materiality": {
+    "core (3)": {
+     "n": 1,
+     "delivery_ratio_pct": 100.0
+    },
+    "meaningful (2)": {
+     "n": 4,
+     "delivery_ratio_pct": 93.8
+    }
+   },
+   "by_volunteered": {
+    "prompted": {
+     "n": 3,
+     "delivery_ratio_pct": 92.9
+    },
+    "volunteered": {
+     "n": 2,
+     "delivery_ratio_pct": 100.0
+    }
+   },
+   "by_fiscal_year_said": {
+    "FY26 calls": {
+     "n": 5,
+     "delivery_ratio_pct": 95.5
+    }
+   },
+   "n_shortfalls": 1,
+   "n_shortfalls_admitted_unprompted": 0,
+   "n_volunteered": 6,
+   "n_prompted": 6,
+   "sector_adjusted_credibility_pts": 6.6,
+   "sac_components": {
+    "pooled:revenue_growth+margin": {
+     "n": 5,
+     "own": 95.5,
+     "peer_median": 88.9,
+     "gap": 6.6
+    }
+   },
+   "peer_set": [
+    "PERSISTENT",
+    "COFORGE",
+    "MPHASIS",
+    "KPITTECH"
+   ]
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_03112026220723_KPIT_Q2FY27_Transcript_Signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_04082026205946_KPIT_Transcript_Cov_let_signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_06022026223507_CoverTranscript_Signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_06082025193155_CoverTransacriptJuly30_Signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_17112025223456_ransacriptNov10_Signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/MeghanaPhadnis_13052026221810_covertranscript_Signed.pdf",
+   "https://www.screener.in/company/KPITTECH/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:KPITTECH",
+    "rel": "about"
+   },
+   {
+    "to": "insight:it-midcaps-promise-credibility-base-rate",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:it-midcaps-promise-credibility-base-rate",
+  "title": "Base rate for management promise delivery in Indian IT mid-caps (PERSISTENT, COFORGE, MPHASIS, KPITTECH; Nov 2026)",
+  "body": "Same-method promise scores for four Indian IT mid-caps (last 6 calls each, Jul-2025 to Nov-2026; Persistent held no Q1FY27 call, its Jun-2026 Nagarro call is used). Weighted delivery (credit, specificity-weighted): PERSISTENT 100.0% (n=4), COFORGE 85.0% (n=10), MPHASIS 58.3% (n=8), KPITTECH 95.5% (n=5). Sector pattern: near-term company-level margin guidance (EBIT/EBITDA bands, quarter-ahead margin walks) is almost always met (pooled margin 97.5%); growth-shape, vertical and timing statements are the weak part (pooled revenue/growth 68.8%, other 82.4%). Most FY27 guidance is still pending and n is small (4-10 scored per company), so the big tests - KPIT's FY27 20.5-21.2% EBITDA guide against a 17.2-17.8% H1, Persistent's USD 2 bn and 16-17% EBIT aspirations, Coforge's raised 16% EBIT, Mphasis's low-double-digit growth - are not yet in the scores. SAC (pts vs leave-one-out peer medians): PERSISTENT +13.9, COFORGE +12.6, MPHASIS -28.5, KPITTECH +6.6. Use: base rates for credibility-generated paper calls (thesis tag credibility-generated, it). Provisional. Research, not advice.",
+  "tickers": [
+   "PERSISTENT",
+   "COFORGE",
+   "MPHASIS",
+   "KPITTECH"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-it",
+   "it",
+   "governance",
+   "base-rate",
+   "process",
+   "it-peer-calibration"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "as_of": "2026-11-22",
+   "companies": [
+    "PERSISTENT",
+    "COFORGE",
+    "MPHASIS",
+    "KPITTECH"
+   ],
+   "overall": {
+    "PERSISTENT": {
+     "n": 4,
+     "D": 100.0,
+     "S": 100.0
+    },
+    "COFORGE": {
+     "n": 10,
+     "D": 85.0,
+     "S": 70.0
+    },
+    "MPHASIS": {
+     "n": 8,
+     "D": 58.3,
+     "S": 58.3
+    },
+    "KPITTECH": {
+     "n": 5,
+     "D": 95.5,
+     "S": 90.9
+    }
+   },
+   "by_category": {
+    "PERSISTENT": {
+     "margin": {
+      "n": 2,
+      "D": 100.0,
+      "S": 100.0
+     },
+     "other": {
+      "n": 2,
+      "D": 100.0,
+      "S": 100.0
+     }
+    },
+    "COFORGE": {
+     "revenue_growth": {
+      "n": 2,
+      "D": 75.0,
+      "S": 50.0
+     },
+     "margin": {
+      "n": 3,
+      "D": 92.9,
+      "S": 85.7
+     },
+     "other": {
+      "n": 5,
+      "D": 81.8,
+      "S": 63.6
+     }
+    },
+    "MPHASIS": {
+     "revenue_growth": {
+      "n": 6,
+      "D": 55.6,
+      "S": 55.6
+     },
+     "margin": {
+      "n": 1,
+      "D": 100.0,
+      "S": 100.0
+     },
+     "other": {
+      "n": 1,
+      "D": 0.0,
+      "S": 0.0
+     }
+    },
+    "KPITTECH": {
+     "revenue_growth": {
+      "n": 3,
+      "D": 90.0,
+      "S": 80.0
+     },
+     "margin": {
+      "n": 2,
+      "D": 100.0,
+      "S": 100.0
+     }
+    }
+   },
+   "sector_median_D_pct": {
+    "revenue_growth": 75.0,
+    "margin": 100.0,
+    "capacity": null,
+    "other": 81.8
+   },
+   "sector_pooled": {
+    "revenue_growth": {
+     "n": 11,
+     "D": 68.8,
+     "S": 62.5
+    },
+    "margin": {
+     "n": 8,
+     "D": 97.5,
+     "S": 95.0
+    },
+    "capacity": {
+     "n": 0,
+     "D": null,
+     "S": null
+    },
+    "other": {
+     "n": 8,
+     "D": 82.4,
+     "S": 70.6
+    }
+   },
+   "sac": {
+    "PERSISTENT": {
+     "sac_pts": 13.9,
+     "n_scored": 4,
+     "shrink_weight": 0.167,
+     "components": {
+      "pooled:margin+other": {
+       "n": 4,
+       "own": 100.0,
+       "peer_median": 86.1,
+       "gap": 13.9
+      }
+     }
+    },
+    "COFORGE": {
+     "sac_pts": 12.6,
+     "n_scored": 10,
+     "shrink_weight": 0.333,
+     "components": {
+      "other": {
+       "n": 5,
+       "own": 81.8,
+       "peer_median": 50.0,
+       "gap": 31.8
+      },
+      "pooled:revenue_growth+margin": {
+       "n": 5,
+       "own": 88.9,
+       "peer_median": 95.5,
+       "gap": -6.6
+      }
+     }
+    },
+    "MPHASIS": {
+     "sac_pts": -28.5,
+     "n_scored": 8,
+     "shrink_weight": 0.286,
+     "components": {
+      "revenue_growth": {
+       "n": 6,
+       "own": 55.6,
+       "peer_median": 82.5,
+       "gap": -26.9
+      },
+      "pooled:margin+other": {
+       "n": 2,
+       "own": 66.7,
+       "peer_median": 100.0,
+       "gap": -33.3
+      }
+     }
+    },
+    "KPITTECH": {
+     "sac_pts": 6.6,
+     "n_scored": 5,
+     "shrink_weight": 0.2,
+     "components": {
+      "pooled:revenue_growth+margin": {
+       "n": 5,
+       "own": 95.5,
+       "peer_median": 88.9,
+       "gap": 6.6
+      }
+     }
+    }
+   },
+   "base_rates_leave_one_out": {
+    "PERSISTENT": {
+     "_all": {
+      "n": 23,
+      "p0_pct": 72.1
+     },
+     "revenue_growth": {
+      "n": 11,
+      "p0_pct": 62.5,
+      "fallback_all": false
+     },
+     "margin": {
+      "n": 6,
+      "p0_pct": 72.1,
+      "fallback_all": true
+     },
+     "capacity": {
+      "n": 0,
+      "p0_pct": 72.1,
+      "fallback_all": true
+     },
+     "other": {
+      "n": 6,
+      "p0_pct": 72.1,
+      "fallback_all": true
+     }
+    },
+    "COFORGE": {
+     "_all": {
+      "n": 17,
+      "p0_pct": 81.8
+     },
+     "revenue_growth": {
+      "n": 9,
+      "p0_pct": 64.3,
+      "fallback_all": false
+     },
+     "margin": {
+      "n": 5,
+      "p0_pct": 81.8,
+      "fallback_all": true
+     },
+     "capacity": {
+      "n": 0,
+      "p0_pct": 81.8,
+      "fallback_all": true
+     },
+     "other": {
+      "n": 3,
+      "p0_pct": 81.8,
+      "fallback_all": true
+     }
+    },
+    "MPHASIS": {
+     "_all": {
+      "n": 19,
+      "p0_pct": 82.9
+     },
+     "revenue_growth": {
+      "n": 5,
+      "p0_pct": 82.9,
+      "fallback_all": true
+     },
+     "margin": {
+      "n": 7,
+      "p0_pct": 82.9,
+      "fallback_all": true
+     },
+     "capacity": {
+      "n": 0,
+      "p0_pct": 82.9,
+      "fallback_all": true
+     },
+     "other": {
+      "n": 7,
+      "p0_pct": 82.9,
+      "fallback_all": true
+     }
+    },
+    "KPITTECH": {
+     "_all": {
+      "n": 22,
+      "p0_pct": 73.8
+     },
+     "revenue_growth": {
+      "n": 8,
+      "p0_pct": 54.5,
+      "fallback_all": false
+     },
+     "margin": {
+      "n": 6,
+      "p0_pct": 73.8,
+      "fallback_all": true
+     },
+     "capacity": {
+      "n": 0,
+      "p0_pct": 73.8,
+      "fallback_all": true
+     },
+     "other": {
+      "n": 8,
+      "p0_pct": 70.6,
+      "fallback_all": false
+     }
+    }
+   },
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0."
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge%20Earnings%20Conference%20Call%20Transcript%20Q1FY26.pdf",
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q2-FY26.pdf",
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q2FY27-October-23-2026.pdf",
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q3-FY26.pdf",
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q4FY26%20_AJ.pdf",
+   "https://investors.coforge.com/hubfs/Coforge_Q1FY27%20Earnings%20Conference%20Call%20Transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_03112026220723_KPIT_Q2FY27_Transcript_Signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_04082026205946_KPIT_Transcript_Cov_let_signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_06022026223507_CoverTranscript_Signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_06082025193155_CoverTransacriptJuly30_Signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_17112025223456_ransacriptNov10_Signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_04052026185004_SE_Intimation_-_transcript_-_30_April_2026-signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_05112025182431_Intimation_of_Transcript-signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_09112026150003_Intimation_of_transcript_-_Q2FY2027.pdf",
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_27012026181732_Intimation_of_transcript_-_22_January_2026-signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_28072026133016_Intimation_of_transcript_-_June_2026-signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_29072025155615_IntimationoftranscriptJuly2025.pdf",
+   "https://nsearchives.nseindia.in/corporate/MeghanaPhadnis_13052026221810_covertranscript_Signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_03072026121301_PSLInvestorCallTranscriptSubmissionSd.pdf",
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_20102025194609_PSLEarningscallTranscriptQ2FY26.pdf",
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_23102026204328_PSLTranscriptSubmissionOctober2026Sd.pdf",
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_27012026213814_PSLSubmissionoftheTranscriptforQ3FY26Sd.pdf",
+   "https://nsearchives.nseindia.in/corporate/PERSISTENTUSER1_29072025232737_PSLTranscript_of_Investors_call_recordingsigned.pdf",
+   "https://www.persistent.com/wp-content/uploads/2026/04/Analyst-Call-Transcript-Q4FY26.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/",
+   "https://www.screener.in/company/KPITTECH/consolidated/",
+   "https://www.screener.in/company/MPHASIS/consolidated/",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "analysis:PERSISTENT:credibility-2026-11",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:KPITTECH:credibility-2026-11",
+    "rel": "about"
+   },
+   {
+    "to": "insight:auto-components-promise-credibility-base-rate",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:td-epc-promise-credibility-base-rate",
+    "rel": "similar_to"
+   }
+  ]
+ }
+]

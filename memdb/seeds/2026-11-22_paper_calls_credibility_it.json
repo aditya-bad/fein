@@ -1,0 +1,717 @@
+[
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:PERSISTENT:fy27-ebit-16pct-plus-cred",
+  "title": "Paper call: Persistent FY27 consolidated EBIT margin (company-reported) is >=16.0%",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.74 (naive sector base rate 0.72) that: Persistent FY27 consolidated EBIT margin (company-reported) is >=16.0%. Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/IT_MIDCAPS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.72 (leave-one-out peer strict delivery rate, category 'margin', all-category fallback, n=6); SAC +13.9 pts x weight 0.167 (N=4) -> p = 0.74. Evidence: Q4FY26 (21-Apr-2026) and Q2FY27 (15-Oct-2026): EBIT aspiration '16 to 17% range' (not guidance). FY26 15.6%; Q1FY27 ~16.0% (derived), Q2FY27 15.0%. Nagarro (EBITDA ~13.9%) consolidates from ~Dec-2026/Jan-2027. Origin: Jul-2025 '+200-300 bp by FY27' from 14.7%. Resolution: YES if the FY27 consolidated EBIT margin reported by Persistent (Q4 FY27 press release / factsheet / call, as reported including Nagarro if consolidated, before exceptional items) is >= 16.0%, to one decimal. Screener (OP - depreciation)/sales is NOT used (it differs by 0.5-5 pp). Source: Persistent Q4 FY27 press release / investor factsheet (NSE). Resolve by 2027-05-31; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "PERSISTENT"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "india",
+   "sector-it",
+   "it",
+   "cat-margin"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.74,
+   "base_rate_probability": 0.72,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if the FY27 consolidated EBIT margin reported by Persistent (Q4 FY27 press release / factsheet / call, as reported including Nagarro if consolidated, before exceptional items) is >= 16.0%, to one decimal. Screener (OP - depreciation)/sales is NOT used (it differs by 0.5-5 pp).",
+   "resolution_source": "Persistent Q4 FY27 press release / investor factsheet (NSE)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'margin' promises among the other IT mid-cap peers (strict: delivered only, specificity-weighted; n=6, too few in category so all-category peer rate used). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.72 (leave-one-out peer strict delivery rate, category 'margin', all-category fallback, n=6); SAC +13.9 pts x weight 0.167 (N=4) -> p = 0.74",
+   "sector_adjusted_score": 13.9,
+   "sac_shrink_weight": 0.167,
+   "sac_n_scored": 4,
+   "promise_category": "margin",
+   "promise_id": "promise:PERSISTENT:2026-04-21:ebit-aspiration-16-17pct",
+   "peer_set": [
+    "PERSISTENT",
+    "COFORGE",
+    "MPHASIS",
+    "KPITTECH"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://www.persistent.com/wp-content/uploads/2026/04/Analyst-Call-Transcript-Q4FY26.pdf",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:PERSISTENT:2026-04-21:ebit-aspiration-16-17pct",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:PERSISTENT:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:it-midcaps-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:PERSISTENT:q4fy27-organic-revenue-500mn-cred",
+  "title": "Paper call: Persistent Q4FY27 revenue excluding Nagarro is >=USD 500 mn (the re-cast 'USD 2 bn by FY27' run rate)",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.65 (naive sector base rate 0.62) that: Persistent Q4FY27 revenue excluding Nagarro is >=USD 500 mn (the re-cast 'USD 2 bn by FY27' run rate). Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/IT_MIDCAPS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.62 (leave-one-out peer strict delivery rate, category 'revenue_growth', n=11); SAC +13.9 pts x weight 0.167 (N=4) -> p = 0.65. Evidence: Q4FY26 (21-Apr-2026): 'FY'27, Q4 exit is where we are looking at the run rate being in the range of $500 million or so' ('plus minus a quarter at worst'); re-cast from Jul-2025 'reach $2 billion by FY27'. Q2FY27 USD 487.6 mn organic (+7.8% QoQ incl. a large-deal ramp). Resolution: YES if Persistent's Q4 FY27 USD revenue excluding Nagarro is >= USD 500.0 mn. If Nagarro is not consolidated in Q4 FY27, reported USD revenue is used. If it is consolidated and Persistent does not disclose an ex-Nagarro (organic/standalone Persistent) USD figure by 2027-06-30, the call is VOID. Source: Persistent Q4 FY27 press release / factsheet / call (NSE). Resolve by 2027-06-30; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "PERSISTENT"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "india",
+   "sector-it",
+   "it",
+   "cat-revenue-growth"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.65,
+   "base_rate_probability": 0.62,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-06-30",
+   "resolution_rule": "YES if Persistent's Q4 FY27 USD revenue excluding Nagarro is >= USD 500.0 mn. If Nagarro is not consolidated in Q4 FY27, reported USD revenue is used. If it is consolidated and Persistent does not disclose an ex-Nagarro (organic/standalone Persistent) USD figure by 2027-06-30, the call is VOID.",
+   "resolution_source": "Persistent Q4 FY27 press release / factsheet / call (NSE)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'revenue_growth' promises among the other IT mid-cap peers (strict: delivered only, specificity-weighted; n=11). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.62 (leave-one-out peer strict delivery rate, category 'revenue_growth', n=11); SAC +13.9 pts x weight 0.167 (N=4) -> p = 0.65",
+   "sector_adjusted_score": 13.9,
+   "sac_shrink_weight": 0.167,
+   "sac_n_scored": 4,
+   "promise_category": "revenue_growth",
+   "promise_id": "promise:PERSISTENT:2026-04-21:q4fy27-exit-run-rate-500mn",
+   "peer_set": [
+    "PERSISTENT",
+    "COFORGE",
+    "MPHASIS",
+    "KPITTECH"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://www.persistent.com/wp-content/uploads/2026/04/Analyst-Call-Transcript-Q4FY26.pdf",
+   "https://www.screener.in/company/PERSISTENT/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:PERSISTENT:2026-04-21:q4fy27-exit-run-rate-500mn",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:PERSISTENT:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:it-midcaps-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:COFORGE:fy27-ebit-16pct-plus-cred",
+  "title": "Paper call: Coforge FY27 consolidated EBIT margin (company-reported) is >=16.0%",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.86 (naive sector base rate 0.82) that: Coforge FY27 consolidated EBIT margin (company-reported) is >=16.0%. Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/IT_MIDCAPS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.82 (leave-one-out peer strict delivery rate, category 'margin', all-category fallback, n=5); SAC +12.6 pts x weight 0.333 (N=10) -> p = 0.86. Evidence: Q2FY27 (23-Oct-2026): FY27 consolidated EBIT guidance raised to 16% from 15.5% (May-2026); 'reported Q4 EBIT of 17%'. H1FY27 16.0% (Q1 16.0%, Q2 16.0%). FY26 14.4%. Resolution: YES if Coforge's reported FY27 consolidated EBIT margin (company definition, Q4 FY27 release/factsheet/call) is >= 16.0%, to one decimal. Screener OPM/depreciation is NOT used. Source: Coforge Q4 FY27 press release / factsheet (NSE) and earnings call transcript (investors.coforge.com). Resolve by 2027-05-31; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "india",
+   "sector-it",
+   "it",
+   "cat-margin"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.86,
+   "base_rate_probability": 0.82,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if Coforge's reported FY27 consolidated EBIT margin (company definition, Q4 FY27 release/factsheet/call) is >= 16.0%, to one decimal. Screener OPM/depreciation is NOT used.",
+   "resolution_source": "Coforge Q4 FY27 press release / factsheet (NSE) and earnings call transcript (investors.coforge.com)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'margin' promises among the other IT mid-cap peers (strict: delivered only, specificity-weighted; n=5, too few in category so all-category peer rate used). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.82 (leave-one-out peer strict delivery rate, category 'margin', all-category fallback, n=5); SAC +12.6 pts x weight 0.333 (N=10) -> p = 0.86",
+   "sector_adjusted_score": 12.6,
+   "sac_shrink_weight": 0.333,
+   "sac_n_scored": 10,
+   "promise_category": "margin",
+   "promise_id": "promise:COFORGE:2026-10-23:fy27-ebit-16pct-q4-17pct",
+   "peer_set": [
+    "PERSISTENT",
+    "COFORGE",
+    "MPHASIS",
+    "KPITTECH"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q2FY27-October-23-2026.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:COFORGE:2026-10-23:fy27-ebit-16pct-q4-17pct",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:it-midcaps-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:COFORGE:fy27-ebitda-20-5pct-plus-cred",
+  "title": "Paper call: Coforge FY27 consolidated EBITDA margin (company-reported) is >=20.5%",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.86 (naive sector base rate 0.82) that: Coforge FY27 consolidated EBITDA margin (company-reported) is >=20.5%. Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/IT_MIDCAPS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.82 (leave-one-out peer strict delivery rate, category 'margin', all-category fallback, n=5); SAC +12.6 pts x weight 0.333 (N=10) -> p = 0.86. Evidence: Q4FY26 (05-May-2026): FY27 consolidated EBITDA 20.5-21% incl. Encora; Q2FY27: 'H1 is at 20.5. We remain confident of the guidance'. Screener OPM Q1/Q2 FY27 19.1% / 19.8% (company definition differs). Resolution: YES if Coforge's reported FY27 consolidated EBITDA margin (company definition) is >= 20.5%, to one decimal. Source: Coforge Q4 FY27 press release / factsheet (NSE) and earnings call transcript (investors.coforge.com). Resolve by 2027-05-31; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "india",
+   "sector-it",
+   "it",
+   "cat-margin"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.86,
+   "base_rate_probability": 0.82,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if Coforge's reported FY27 consolidated EBITDA margin (company definition) is >= 20.5%, to one decimal.",
+   "resolution_source": "Coforge Q4 FY27 press release / factsheet (NSE) and earnings call transcript (investors.coforge.com)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'margin' promises among the other IT mid-cap peers (strict: delivered only, specificity-weighted; n=5, too few in category so all-category peer rate used). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.82 (leave-one-out peer strict delivery rate, category 'margin', all-category fallback, n=5); SAC +12.6 pts x weight 0.333 (N=10) -> p = 0.86",
+   "sector_adjusted_score": 12.6,
+   "sac_shrink_weight": 0.333,
+   "sac_n_scored": 10,
+   "promise_category": "margin",
+   "promise_id": "promise:COFORGE:2026-05-05:fy27-ebitda-20-5-21pct",
+   "peer_set": [
+    "PERSISTENT",
+    "COFORGE",
+    "MPHASIS",
+    "KPITTECH"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q4FY26%20_AJ.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:COFORGE:2026-05-05:fy27-ebitda-20-5-21pct",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:it-midcaps-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:COFORGE:q3fy27-eight-large-deals-cred",
+  "title": "Paper call: Coforge reports >=8 large deals signed in Q3FY27",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.86 (naive sector base rate 0.82) that: Coforge reports >=8 large deals signed in Q3FY27. Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/IT_MIDCAPS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.82 (leave-one-out peer strict delivery rate, category 'other', all-category fallback, n=3); SAC +12.6 pts x weight 0.333 (N=10) -> p = 0.86. Evidence: Q2FY27 (23-Oct-2026): 'in Q3 ... we hope to again sign eight, if not more large deals' (Q2: eight, a record; FY26: 21 in the year). Resolution: YES if Coforge's Q3 FY27 results release, factsheet or earnings call states that it signed 8 or more large deals in Q3 FY27 (company definition of 'large deal'). Source: Coforge Q3 FY27 press release / factsheet (NSE) and earnings call transcript (investors.coforge.com). Resolve by 2027-02-28; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "COFORGE"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "india",
+   "sector-it",
+   "it",
+   "cat-other"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.86,
+   "base_rate_probability": 0.82,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-02-28",
+   "resolution_rule": "YES if Coforge's Q3 FY27 results release, factsheet or earnings call states that it signed 8 or more large deals in Q3 FY27 (company definition of 'large deal').",
+   "resolution_source": "Coforge Q3 FY27 press release / factsheet (NSE) and earnings call transcript (investors.coforge.com)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'other' promises among the other IT mid-cap peers (strict: delivered only, specificity-weighted; n=3, too few in category so all-category peer rate used). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.82 (leave-one-out peer strict delivery rate, category 'other', all-category fallback, n=3); SAC +12.6 pts x weight 0.333 (N=10) -> p = 0.86",
+   "sector_adjusted_score": 12.6,
+   "sac_shrink_weight": 0.333,
+   "sac_n_scored": 10,
+   "promise_category": "other",
+   "promise_id": "promise:COFORGE:2026-10-23:q3fy27-eight-large-deals",
+   "peer_set": [
+    "PERSISTENT",
+    "COFORGE",
+    "MPHASIS",
+    "KPITTECH"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://investors.coforge.com/hubfs/Coforge-Limited-Earnings-Call-Transcript-Q2FY27-October-23-2026.pdf",
+   "https://www.screener.in/company/COFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:COFORGE:2026-10-23:q3fy27-eight-large-deals",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:COFORGE:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:it-midcaps-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:MPHASIS:fy27-cc-growth-10pct-plus-cred",
+  "title": "Paper call: Mphasis FY27 constant-currency revenue growth (company-reported) is >=10.0%",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.75 (naive sector base rate 0.83) that: Mphasis FY27 constant-currency revenue growth (company-reported) is >=10.0%. Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/IT_MIDCAPS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.83 (leave-one-out peer strict delivery rate, category 'revenue_growth', all-category fallback, n=5); SAC -28.5 pts x weight 0.286 (N=8) -> p = 0.75. Evidence: Q2FY27 (06-Nov-2026): FY27 guidance raised to 'revenue growth in the low double digits' from 'high single digits to low double digits' (Apr/Jul-2026). Q1FY27 +8.3% YoY CC; Q2FY27 Direct +11.3% YoY CC; includes the TAP / Red Oak acquisitions. FY26 6.7% CC. Resolution: YES if Mphasis reports FY27 consolidated revenue growth in constant currency of >= 10.0% (as reported, acquisitions included). If only Direct CC growth is reported, it is NOT used (review). Source: Mphasis Q4 FY27 press release / investor presentation / call (NSE). Resolve by 2027-05-31; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "india",
+   "sector-it",
+   "it",
+   "cat-revenue-growth"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.75,
+   "base_rate_probability": 0.83,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if Mphasis reports FY27 consolidated revenue growth in constant currency of >= 10.0% (as reported, acquisitions included). If only Direct CC growth is reported, it is NOT used (review).",
+   "resolution_source": "Mphasis Q4 FY27 press release / investor presentation / call (NSE)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'revenue_growth' promises among the other IT mid-cap peers (strict: delivered only, specificity-weighted; n=5, too few in category so all-category peer rate used). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.83 (leave-one-out peer strict delivery rate, category 'revenue_growth', all-category fallback, n=5); SAC -28.5 pts x weight 0.286 (N=8) -> p = 0.75",
+   "sector_adjusted_score": -28.5,
+   "sac_shrink_weight": 0.286,
+   "sac_n_scored": 8,
+   "promise_category": "revenue_growth",
+   "promise_id": "promise:MPHASIS:2026-11-06:fy27-cc-growth-low-double-digit",
+   "peer_set": [
+    "PERSISTENT",
+    "COFORGE",
+    "MPHASIS",
+    "KPITTECH"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_09112026150003_Intimation_of_transcript_-_Q2FY2027.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:MPHASIS:2026-11-06:fy27-cc-growth-low-double-digit",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:it-midcaps-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:MPHASIS:fy27-ebit-in-band-cred",
+  "title": "Paper call: Mphasis FY27 EBIT margin (company-reported) is within 14.75-15.75%",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.75 (naive sector base rate 0.83) that: Mphasis FY27 EBIT margin (company-reported) is within 14.75-15.75%. Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/IT_MIDCAPS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.83 (leave-one-out peer strict delivery rate, category 'margin', all-category fallback, n=7); SAC -28.5 pts x weight 0.286 (N=8) -> p = 0.75. Evidence: Q4FY26 (30-Apr-2026), restated Jul and Nov-2026: 'operating within our target band of 14.75% to 15.75%'. FY26 15.3%; Q1FY27 ~14.8% (down 60 bp), Q2FY27 flat; screener-derived (OP-dep)/sales 14.8% / 14.7%. Resolution: YES if Mphasis's reported FY27 EBIT margin is >= 14.75% and <= 15.75% (company figure, two decimals as reported; one-decimal figures 14.8-15.7 count as inside). Source: Mphasis Q4 FY27 press release / investor presentation / call (NSE). Resolve by 2027-05-31; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "india",
+   "sector-it",
+   "it",
+   "cat-margin"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.75,
+   "base_rate_probability": 0.83,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if Mphasis's reported FY27 EBIT margin is >= 14.75% and <= 15.75% (company figure, two decimals as reported; one-decimal figures 14.8-15.7 count as inside).",
+   "resolution_source": "Mphasis Q4 FY27 press release / investor presentation / call (NSE)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'margin' promises among the other IT mid-cap peers (strict: delivered only, specificity-weighted; n=7, too few in category so all-category peer rate used). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.83 (leave-one-out peer strict delivery rate, category 'margin', all-category fallback, n=7); SAC -28.5 pts x weight 0.286 (N=8) -> p = 0.75",
+   "sector_adjusted_score": -28.5,
+   "sac_shrink_weight": 0.286,
+   "sac_n_scored": 8,
+   "promise_category": "margin",
+   "promise_id": "promise:MPHASIS:2026-04-30:fy27-ebit-band-14-75-15-75",
+   "peer_set": [
+    "PERSISTENT",
+    "COFORGE",
+    "MPHASIS",
+    "KPITTECH"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_04052026185004_SE_Intimation_-_transcript_-_30_April_2026-signed.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:MPHASIS:2026-04-30:fy27-ebit-band-14-75-15-75",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:it-midcaps-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:MPHASIS:q3fy27-dso-below-100-cred",
+  "title": "Paper call: Mphasis Q3FY27 DSO (company-reported) is below 100 days",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.75 (naive sector base rate 0.83) that: Mphasis Q3FY27 DSO (company-reported) is below 100 days. Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/IT_MIDCAPS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.83 (leave-one-out peer strict delivery rate, category 'other', all-category fallback, n=7); SAC -28.5 pts x weight 0.286 (N=8) -> p = 0.75. Evidence: Q2FY27 (06-Nov-2026): DSO 105 days 'after normalizing for the delayed remittances ... expected to get to double digit levels in Q3'. Track record: Q2FY26 'normalise over the next three to four quarters' -> 89, 91, ~86-89, 95, 105 (missed). Resolution: YES if the DSO Mphasis reports for Q3 FY27 (quarter ending 31-Dec-2026; reported figure, not a company 'normalised' figure if both are given) is <= 99 days. Source: Mphasis Q3 FY27 earnings call transcript / investor presentation (NSE). Resolve by 2027-02-28; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "MPHASIS"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "india",
+   "sector-it",
+   "it",
+   "cat-other"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.75,
+   "base_rate_probability": 0.83,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-02-28",
+   "resolution_rule": "YES if the DSO Mphasis reports for Q3 FY27 (quarter ending 31-Dec-2026; reported figure, not a company 'normalised' figure if both are given) is <= 99 days.",
+   "resolution_source": "Mphasis Q3 FY27 earnings call transcript / investor presentation (NSE)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'other' promises among the other IT mid-cap peers (strict: delivered only, specificity-weighted; n=7, too few in category so all-category peer rate used). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.83 (leave-one-out peer strict delivery rate, category 'other', all-category fallback, n=7); SAC -28.5 pts x weight 0.286 (N=8) -> p = 0.75",
+   "sector_adjusted_score": -28.5,
+   "sac_shrink_weight": 0.286,
+   "sac_n_scored": 8,
+   "promise_category": "other",
+   "promise_id": "promise:MPHASIS:2026-11-06:dso-double-digit-q3fy27",
+   "peer_set": [
+    "PERSISTENT",
+    "COFORGE",
+    "MPHASIS",
+    "KPITTECH"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MPHASIS_09112026150003_Intimation_of_transcript_-_Q2FY2027.pdf",
+   "https://www.screener.in/company/MPHASIS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:MPHASIS:2026-11-06:dso-double-digit-q3fy27",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:MPHASIS:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:it-midcaps-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:KPITTECH:fy27-ebitda-20-5pct-plus-cred",
+  "title": "Paper call: KPIT FY27 EBITDA margin (company-reported) is >=20.5%",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.75 (naive sector base rate 0.74) that: KPIT FY27 EBITDA margin (company-reported) is >=20.5%. Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/IT_MIDCAPS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.74 (leave-one-out peer strict delivery rate, category 'margin', all-category fallback, n=6); SAC +6.6 pts x weight 0.2 (N=5) -> p = 0.75. Evidence: Q4FY26 call (07-May-2026): FY27 EBITDA '20.5 to 21.2' after AI/products investment. Q1FY27 17.2%, Q2FY27 17.8% (company); Q2FY27 CEO: 'it will be early next year when we get there'. The rule deliberately ignores in-year progress. Resolution: YES if KPIT's reported FY27 consolidated EBITDA margin (company definition, Q4 FY27 release/presentation/call) is >= 20.5%, to one decimal. Screener OPM is NOT used (FY26 18.9% vs company 20.8%). Source: KPIT Q4 FY27 press release / investor presentation / call (NSE). Resolve by 2027-05-31; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "KPITTECH"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "india",
+   "sector-it",
+   "it",
+   "cat-margin"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.75,
+   "base_rate_probability": 0.74,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if KPIT's reported FY27 consolidated EBITDA margin (company definition, Q4 FY27 release/presentation/call) is >= 20.5%, to one decimal. Screener OPM is NOT used (FY26 18.9% vs company 20.8%).",
+   "resolution_source": "KPIT Q4 FY27 press release / investor presentation / call (NSE)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'margin' promises among the other IT mid-cap peers (strict: delivered only, specificity-weighted; n=6, too few in category so all-category peer rate used). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.74 (leave-one-out peer strict delivery rate, category 'margin', all-category fallback, n=6); SAC +6.6 pts x weight 0.2 (N=5) -> p = 0.75",
+   "sector_adjusted_score": 6.6,
+   "sac_shrink_weight": 0.2,
+   "sac_n_scored": 5,
+   "promise_category": "margin",
+   "promise_id": "promise:KPITTECH:2026-05-07:fy27-ebitda-20-5-21-2pct",
+   "peer_set": [
+    "PERSISTENT",
+    "COFORGE",
+    "MPHASIS",
+    "KPITTECH"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/MeghanaPhadnis_13052026221810_covertranscript_Signed.pdf",
+   "https://www.screener.in/company/KPITTECH/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:KPITTECH:2026-05-07:fy27-ebitda-20-5-21-2pct",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:KPITTECH:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:it-midcaps-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:KPITTECH:h2fy27-revenue-above-h1-cred",
+  "title": "Paper call: KPIT H2FY27 consolidated revenue exceeds H1FY27 (FY27 revenue > INR 6,732 cr = 2 x H1)",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.56 (naive sector base rate 0.55) that: KPIT H2FY27 consolidated revenue exceeds H1FY27 (FY27 revenue > INR 6,732 cr = 2 x H1). Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/IT_MIDCAPS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.55 (leave-one-out peer strict delivery rate, category 'revenue_growth', n=8); SAC +6.6 pts x weight 0.2 (N=5) -> p = 0.56. Evidence: Q1FY27 (29-Jul-2026): 'H2 will be better than H1, and we will return to growth in H2 by Q4'; reiterated 28-Oct-2026. Screener H1FY27 = 1,675 + 1,691 = 3,366 cr; FY26 6,455 cr. Resolution: YES if FY27 consolidated revenue from operations > INR 6,732 cr (twice H1FY27 screener 3,366 cr, i.e. H2 > H1), NSE XBRL and screener consolidated annual figures. If XBRL restates H1, the review uses H2 = FY - H1 from the same source. Source: NSE integrated-filing XBRL (Q4 FY27 results) + screener.in consolidated P&L. Resolve by 2027-05-31; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "KPITTECH"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "india",
+   "sector-it",
+   "it",
+   "cat-revenue-growth"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.56,
+   "base_rate_probability": 0.55,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if FY27 consolidated revenue from operations > INR 6,732 cr (twice H1FY27 screener 3,366 cr, i.e. H2 > H1), NSE XBRL and screener consolidated annual figures. If XBRL restates H1, the review uses H2 = FY - H1 from the same source.",
+   "resolution_source": "NSE integrated-filing XBRL (Q4 FY27 results) + screener.in consolidated P&L",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'revenue_growth' promises among the other IT mid-cap peers (strict: delivered only, specificity-weighted; n=8). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.55 (leave-one-out peer strict delivery rate, category 'revenue_growth', n=8); SAC +6.6 pts x weight 0.2 (N=5) -> p = 0.56",
+   "sector_adjusted_score": 6.6,
+   "sac_shrink_weight": 0.2,
+   "sac_n_scored": 5,
+   "promise_category": "revenue_growth",
+   "promise_id": "promise:KPITTECH:2026-07-29:return-to-growth-by-q4fy27",
+   "peer_set": [
+    "PERSISTENT",
+    "COFORGE",
+    "MPHASIS",
+    "KPITTECH"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_04082026205946_KPIT_Transcript_Cov_let_signed.pdf",
+   "https://www.screener.in/company/KPITTECH/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:KPITTECH:2026-07-29:return-to-growth-by-q4fy27",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:KPITTECH:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:it-midcaps-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:KPITTECH:q4fy27-cc-qoq-growth-positive-cred",
+  "title": "Paper call: KPIT Q4FY27 constant-currency revenue growth QoQ (company-reported) is >0%",
+  "body": "Credibility-generated forward test (NOT a recommendation; not buy/sell). Probability 0.56 (naive sector base rate 0.55) that: KPIT Q4FY27 constant-currency revenue growth QoQ (company-reported) is >0%. Probability set only by the pre-stated rule (research_notes/Promise tracker pilot/IT_MIDCAPS_peer_comparison.md section 5 = AUTO_COMPONENTS_peer_comparison.md section 5, unchanged): p0 = 0.55 (leave-one-out peer strict delivery rate, category 'revenue_growth', n=8); SAC +6.6 pts x weight 0.2 (N=5) -> p = 0.56. Evidence: Q1FY27: 'we will return to growth in H2 by Q4'; Q2FY27: 'we expect growth in that quarter' (no number). Q1FY27 -3.6% CC QoQ; Q2FY27 services flat, products +5% QoQ. Resolution: YES if KPIT reports Q4 FY27 (Jan-Mar 2027) sequential revenue growth in constant currency > 0.0%. If only USD growth is given, it is used; if neither, INR QoQ from screener. Source: KPIT Q4 FY27 press release / investor presentation / call (NSE). Resolve by 2027-05-31; score with Brier vs the base rate, to test whether the credibility adjustment adds skill.",
+  "tickers": [
+   "KPITTECH"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "credibility-generated",
+   "promise-tracker",
+   "india",
+   "sector-it",
+   "it",
+   "cat-revenue-growth"
+  ],
+  "date": "2026-11-22",
+  "status": "open",
+  "data": {
+   "probability": 0.56,
+   "base_rate_probability": 0.55,
+   "method": "promise-tracker credibility (sector-adjusted, rule-generated)",
+   "made_on": "2026-11-22",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if KPIT reports Q4 FY27 (Jan-Mar 2027) sequential revenue growth in constant currency > 0.0%. If only USD growth is given, it is used; if neither, INR QoQ from screener.",
+   "resolution_source": "KPIT Q4 FY27 press release / investor presentation / call (NSE)",
+   "base_rate_reasoning": "Naive forecaster = sector delivery rate for 'revenue_growth' promises among the other IT mid-cap peers (strict: delivered only, specificity-weighted; n=8). No company-specific information.",
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+   "adjustment_applied": "p0 = 0.55 (leave-one-out peer strict delivery rate, category 'revenue_growth', n=8); SAC +6.6 pts x weight 0.2 (N=5) -> p = 0.56",
+   "sector_adjusted_score": 6.6,
+   "sac_shrink_weight": 0.2,
+   "sac_n_scored": 5,
+   "promise_category": "revenue_growth",
+   "promise_id": "promise:KPITTECH:2026-07-29:return-to-growth-by-q4fy27",
+   "peer_set": [
+    "PERSISTENT",
+    "COFORGE",
+    "MPHASIS",
+    "KPITTECH"
+   ],
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/KPITTECH_04082026205946_KPIT_Transcript_Cov_let_signed.pdf",
+   "https://www.screener.in/company/KPITTECH/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "promise:KPITTECH:2026-07-29:return-to-growth-by-q4fy27",
+    "rel": "tests"
+   },
+   {
+    "to": "analysis:KPITTECH:credibility-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:it-midcaps-promise-credibility-base-rate",
+    "rel": "derived_from"
+   }
+  ]
+ }
+]

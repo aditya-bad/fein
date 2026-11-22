@@ -1,4 +1,4 @@
-# Promise-tracker pipeline (v1, 2026-11-21)
+# Promise-tracker pipeline (v1.2, 2026-11-22; v1 2026-11-21)
 
 This pipeline turns the two manual pilots (UNIPARTS, SKIPPER; see `research_notes/Promise tracker pilot/`)
 into a repeatable process. It uses the Python standard library only, plus the `pdftotext` (poppler) and
@@ -13,6 +13,28 @@ fetch.py ──> turns.py ──> candidates.py ──> llm_extract.py ──> s
  date range   boilerplate                     (JSONL)           chains       memdb seed
 ```
 `run.py` chains all six stages. `validate.py` compares any stage with a manual ledger.
+
+## v1.2 changes (2026-11-22, IT mid-caps: PERSISTENT, COFORGE, MPHASIS, KPITTECH)
+- **IT measures in `score.py`** (matched on the metric text, after the bank measures and before the segment filter):
+  | Measure | Phrases it catches | Scored from |
+  |---|---|---|
+  | `cc_revenue_growth_yoy_pct`, `cc_revenue_qoq_pct` | "constant currency", "CC growth", "CC QoQ / sequential" | `--csv` only (company-reported) |
+  | `usd_revenue_growth_yoy_pct`, `usd_revenue_qoq_pct` | "revenue in USD", "dollar growth", "USD QoQ" | `--csv` only |
+  | `ebit_margin_pct` | "EBIT margin", "EBIT band", "operating band" (not EBITDA) | `--csv` (company EBIT governs), else screener (OP − depreciation) / sales |
+  | `tcv_usd_mn` | "TCV", "total contract value", "deal wins", "large deals", "bookings", "ACV" | `--csv` (FY = sum of quarters) |
+  | `utilisation_pct`, `attrition_pct` (lower is better), `headcount` | "utilisation" (not plant/capacity utilisation), "attrition", "headcount" | `--csv` only |
+  | `top5_client_share_pct`, `top10_client_share_pct` (lower is better) | "top 5 / top 10 clients" | `--csv` only |
+  - Growth measures use the growth thresholds, margins and people ratios use the 0.3 / 1.5 pp thresholds, and TCV and headcount use the 95% / 80% ratio thresholds.
+  - Vertical, geography or client-level CC growth, "organic" or "ex-acquisition" variants, CAGRs and segment EBIT are **blocked**: they return *not-auto-scorable* rather than falling through to INR revenue growth or screener OPM. In v1.1, "EBIT margin 14-16%" was read as EBITDA margin (screener OPM runs about 3 pp higher for IT). "CC growth 10%" was read as INR revenue growth, which can be off by 2-4 pp of FX.
+  - **Company EBIT and EBITDA differ from screener for most IT firms** (IT_MIDCAPS_peer_comparison.md, section 3.4). Supply a CSV row `ebit_margin_pct` whenever the company figure is known.
+- **`parse_target`:** "USD 500 mn", "$1.5 bn", "$300-350 million" and "$500 mn+" become USD mn (with a floor for "+"). "Double-digit" means ≥10%, "low double-digit" 10-12% and "high single-digit" 7-9%. Previously these returned nothing.
+- **`candidates.py` categories:** `deal_wins` (TCV, ACV, large/mega deals, bookings, executable order book; placed before `order_book`/`order_inflow` only for these words). `people` (attrition, utilisation, headcount, freshers, wage hikes). `client_concentration` (top-N clients, $X mn+ client buckets). "Constant currency" and "CC" also count toward `revenue_growth`, and "EBIT band" toward `margin`. The memdb category map (`scripts_it_peers/build_seed.py`) puts the three new categories in the "other" group.
+- **Regression check:** all 363 promises in the existing `memdb/seeds/*promises*.json` give the same `infer_measure` and `parse_target` result as v1.1. Plant-capacity "utilisation" (SKIPPER, ENDURANCE) is deliberately excluded from `utilisation_pct`.
+- **Data access notes:**
+  - Coforge's NSE transcript filings are one-page cover letters with a link. Download the PDFs from `investors.coforge.com/quarter-reports` and pass them with `--local`. Its results, press releases and factsheets *are* on NSE.
+  - Persistent's Q4FY26 filing is a cover letter (`persistent.com/wp-content/uploads/2026/04/Analyst-Call-Transcript-Q4FY26.pdf`), and Persistent held no Q1FY27 call.
+  - `turns.py` needs `--roster` for Persistent and cannot split Mphasis's layout. For Mphasis, read the raw text.
+  - `fetch.py` dated Mphasis's Q1FY26 call 2025-07-01; the correct date is 25-Jul-2025.
 
 ## v1.1 changes (2026-11-22, FEDERALBNK dry run: first bank)
 - **Cover-letter transcripts:** many banks file only a letter on NSE saying the transcript is on their website.

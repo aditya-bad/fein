@@ -1,0 +1,386 @@
+{
+ "as_of": "2026-11-22",
+ "companies": [
+  "PERSISTENT",
+  "COFORGE",
+  "MPHASIS",
+  "KPITTECH"
+ ],
+ "category_map": {
+  "capacity_commissioning": "capacity",
+  "capex": "capacity",
+  "customer_win": "other",
+  "new_product": "other",
+  "m&a": "other",
+  "working_capital": "other",
+  "dividend_payout": "other",
+  "debt_reduction": "other",
+  "order_book": "other",
+  "deal_wins": "other",
+  "people": "other",
+  "client_concentration": "other"
+ },
+ "categories": [
+  "revenue_growth",
+  "margin",
+  "capacity",
+  "other"
+ ],
+ "overall": {
+  "PERSISTENT": {
+   "n": 4,
+   "D": 100.0,
+   "S": 100.0
+  },
+  "COFORGE": {
+   "n": 10,
+   "D": 85.0,
+   "S": 70.0
+  },
+  "MPHASIS": {
+   "n": 8,
+   "D": 58.3,
+   "S": 58.3
+  },
+  "KPITTECH": {
+   "n": 5,
+   "D": 95.5,
+   "S": 90.9
+  }
+ },
+ "by_category": {
+  "PERSISTENT": {
+   "margin": {
+    "n": 2,
+    "D": 100.0,
+    "S": 100.0
+   },
+   "other": {
+    "n": 2,
+    "D": 100.0,
+    "S": 100.0
+   }
+  },
+  "COFORGE": {
+   "revenue_growth": {
+    "n": 2,
+    "D": 75.0,
+    "S": 50.0
+   },
+   "margin": {
+    "n": 3,
+    "D": 92.9,
+    "S": 85.7
+   },
+   "other": {
+    "n": 5,
+    "D": 81.8,
+    "S": 63.6
+   }
+  },
+  "MPHASIS": {
+   "revenue_growth": {
+    "n": 6,
+    "D": 55.6,
+    "S": 55.6
+   },
+   "margin": {
+    "n": 1,
+    "D": 100.0,
+    "S": 100.0
+   },
+   "other": {
+    "n": 1,
+    "D": 0.0,
+    "S": 0.0
+   }
+  },
+  "KPITTECH": {
+   "revenue_growth": {
+    "n": 3,
+    "D": 90.0,
+    "S": 80.0
+   },
+   "margin": {
+    "n": 2,
+    "D": 100.0,
+    "S": 100.0
+   }
+  }
+ },
+ "sector_median_D_pct": {
+  "revenue_growth": 75.0,
+  "margin": 100.0,
+  "capacity": null,
+  "other": 81.8
+ },
+ "sector_pooled": {
+  "revenue_growth": {
+   "n": 11,
+   "D": 68.8,
+   "S": 62.5
+  },
+  "margin": {
+   "n": 8,
+   "D": 97.5,
+   "S": 95.0
+  },
+  "capacity": {
+   "n": 0,
+   "D": null,
+   "S": null
+  },
+  "other": {
+   "n": 8,
+   "D": 82.4,
+   "S": 70.6
+  }
+ },
+ "sac": {
+  "PERSISTENT": {
+   "sac_pts": 13.9,
+   "n_scored": 4,
+   "shrink_weight": 0.167,
+   "components": {
+    "pooled:margin+other": {
+     "n": 4,
+     "own": 100.0,
+     "peer_median": 86.1,
+     "gap": 13.9
+    }
+   }
+  },
+  "COFORGE": {
+   "sac_pts": 12.6,
+   "n_scored": 10,
+   "shrink_weight": 0.333,
+   "components": {
+    "other": {
+     "n": 5,
+     "own": 81.8,
+     "peer_median": 50.0,
+     "gap": 31.8
+    },
+    "pooled:revenue_growth+margin": {
+     "n": 5,
+     "own": 88.9,
+     "peer_median": 95.5,
+     "gap": -6.6
+    }
+   }
+  },
+  "MPHASIS": {
+   "sac_pts": -28.5,
+   "n_scored": 8,
+   "shrink_weight": 0.286,
+   "components": {
+    "revenue_growth": {
+     "n": 6,
+     "own": 55.6,
+     "peer_median": 82.5,
+     "gap": -26.9
+    },
+    "pooled:margin+other": {
+     "n": 2,
+     "own": 66.7,
+     "peer_median": 100.0,
+     "gap": -33.3
+    }
+   }
+  },
+  "KPITTECH": {
+   "sac_pts": 6.6,
+   "n_scored": 5,
+   "shrink_weight": 0.2,
+   "components": {
+    "pooled:revenue_growth+margin": {
+     "n": 5,
+     "own": 95.5,
+     "peer_median": 88.9,
+     "gap": 6.6
+    }
+   }
+  }
+ },
+ "base_rates_leave_one_out": {
+  "PERSISTENT": {
+   "_all": {
+    "n": 23,
+    "p0_pct": 72.1
+   },
+   "revenue_growth": {
+    "n": 11,
+    "p0_pct": 62.5,
+    "fallback_all": false
+   },
+   "margin": {
+    "n": 6,
+    "p0_pct": 72.1,
+    "fallback_all": true
+   },
+   "capacity": {
+    "n": 0,
+    "p0_pct": 72.1,
+    "fallback_all": true
+   },
+   "other": {
+    "n": 6,
+    "p0_pct": 72.1,
+    "fallback_all": true
+   }
+  },
+  "COFORGE": {
+   "_all": {
+    "n": 17,
+    "p0_pct": 81.8
+   },
+   "revenue_growth": {
+    "n": 9,
+    "p0_pct": 64.3,
+    "fallback_all": false
+   },
+   "margin": {
+    "n": 5,
+    "p0_pct": 81.8,
+    "fallback_all": true
+   },
+   "capacity": {
+    "n": 0,
+    "p0_pct": 81.8,
+    "fallback_all": true
+   },
+   "other": {
+    "n": 3,
+    "p0_pct": 81.8,
+    "fallback_all": true
+   }
+  },
+  "MPHASIS": {
+   "_all": {
+    "n": 19,
+    "p0_pct": 82.9
+   },
+   "revenue_growth": {
+    "n": 5,
+    "p0_pct": 82.9,
+    "fallback_all": true
+   },
+   "margin": {
+    "n": 7,
+    "p0_pct": 82.9,
+    "fallback_all": true
+   },
+   "capacity": {
+    "n": 0,
+    "p0_pct": 82.9,
+    "fallback_all": true
+   },
+   "other": {
+    "n": 7,
+    "p0_pct": 82.9,
+    "fallback_all": true
+   }
+  },
+  "KPITTECH": {
+   "_all": {
+    "n": 22,
+    "p0_pct": 73.8
+   },
+   "revenue_growth": {
+    "n": 8,
+    "p0_pct": 54.5,
+    "fallback_all": false
+   },
+   "margin": {
+    "n": 6,
+    "p0_pct": 73.8,
+    "fallback_all": true
+   },
+   "capacity": {
+    "n": 0,
+    "p0_pct": 73.8,
+    "fallback_all": true
+   },
+   "other": {
+    "n": 8,
+    "p0_pct": 70.6,
+    "fallback_all": false
+   }
+  }
+ },
+ "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 3 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+ "example_p": {
+  "PERSISTENT": {
+   "revenue_growth": [
+    0.65,
+    0.62
+   ],
+   "margin": [
+    0.74,
+    0.72
+   ],
+   "capacity": [
+    0.74,
+    0.72
+   ],
+   "other": [
+    0.74,
+    0.72
+   ]
+  },
+  "COFORGE": {
+   "revenue_growth": [
+    0.68,
+    0.64
+   ],
+   "margin": [
+    0.86,
+    0.82
+   ],
+   "capacity": [
+    0.86,
+    0.82
+   ],
+   "other": [
+    0.86,
+    0.82
+   ]
+  },
+  "MPHASIS": {
+   "revenue_growth": [
+    0.75,
+    0.83
+   ],
+   "margin": [
+    0.75,
+    0.83
+   ],
+   "capacity": [
+    0.75,
+    0.83
+   ],
+   "other": [
+    0.75,
+    0.83
+   ]
+  },
+  "KPITTECH": {
+   "revenue_growth": [
+    0.56,
+    0.55
+   ],
+   "margin": [
+    0.75,
+    0.74
+   ],
+   "capacity": [
+    0.75,
+    0.74
+   ],
+   "other": [
+    0.72,
+    0.71
+   ]
+  }
+ }
+}
