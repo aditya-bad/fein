@@ -20,6 +20,7 @@ H = {"3m": 63, "6m": 126, "12m": 252}
 MEASURES = ["cos_full", "jac_full", "cos_1a", "jac_1a", "cos_7", "jac_7"]
 LAST_OK = "2026-11-13"
 COST = 0.005
+MINLEN = 50000
 
 
 def load_px(t):
@@ -103,7 +104,25 @@ def spread(a_vals, a_m, b_vals, b_m, B=2000, seed=11):
 
 
 def main():
-    rows = [r for r in csv.DictReader(open(p("sims.tsv")), delimiter="\t") if r["status"] == "ok"]
+    allrows = [r for r in csv.DictReader(open(p("sims.tsv")), delimiter="\t") if r["status"] == "ok"]
+    # data-quality exclusion (added before any return was computed): a primary doc < 50k chars is a wrapper/stub
+    rows = [r for r in allrows if int(r["len"]) >= MINLEN and int(r["prev_len"]) >= MINLEN]
+    n_short = len(allrows) - len(rows)
+    EXBIO = "--exclude-bio" in sys.argv   # exploratory robustness, NOT pre-registered
+    if EXBIO:
+        rows = [r for r in rows if r["sic"] not in {"2834", "2835", "2836", "8731"}]
+    EXSPAC = "--exclude-despac" in sys.argv   # exploratory: drop firm-years whose prior 10-K was a SPAC shell
+    if EXSPAC:
+        ds = {r["acc"] for r in csv.DictReader(open(p("despac.tsv")), delimiter="\t") if r["despac"] == "1"}
+        rows = [r for r in rows if r["acc"] not in ds]
+    tag = ("_exbio" if EXBIO else "") + ("_exspac" if EXSPAC else "")
+    old = {}
+    if os.path.exists(p("old_tickers.tsv")):
+        old = {r["acc"]: r["symbol"] for r in csv.DictReader(open(p("old_tickers.tsv")), delimiter="\t") if r["symbol"]}
+    for r in rows:
+        r["recovered"] = ""
+        if not r["ticker"] and r["acc"] in old:
+            r["ticker"] = old[r["acc"]]; r["recovered"] = "1"
     pxc = {}
     def px(t):
         if t not in pxc: pxc[t] = load_px(t)
@@ -113,7 +132,7 @@ def main():
     for r in rows:
         r["month"] = r["fd"][:7]; r["px"] = None
         P = px(r["ticker"])
-        if not P: r["pxwhy"] = "no_series"; continue
+        if not P: r["pxwhy"] = "no_ticker" if not r["ticker"] else "no_series"; continue
         i0 = entry(P, r["fd"])
         if i0 is None: r["pxwhy"] = "no_entry"; continue
         sh = float(r["shares"]) if r["shares"] else None
@@ -122,9 +141,10 @@ def main():
         if sh and not 0.2 <= mc / fl <= 30: r["pxwhy"] = "mcap_mismatch"; continue
         r["px"] = P; r["i0"] = i0; r["mcap"] = mc; r["ret"] = rets(P, i0); r["pxwhy"] = "ok"
         j = entry(iwm, r["fd"]); r["iwm"] = rets(iwm, j) if j is not None else {}
-    res = {"n_firmyears_ok": len(rows), "by_year": {}, "pxwhy": {}, "measures": {}}
+    res = {"n_firmyears_ok": len(rows), "n_short_excluded": n_short, "by_year": {}, "pxwhy": {}, "measures": {}}
     for r in rows:
-        res["pxwhy"][r["pxwhy"]] = res["pxwhy"].get(r["pxwhy"], 0) + 1
+        k_ = r["pxwhy"] + ("(recovered ticker)" if r["recovered"] else "")
+        res["pxwhy"][k_] = res["pxwhy"].get(k_, 0) + 1
     for y in ("2021", "2022", "2023"):
         res["by_year"][y] = sum(r["year"] == y for r in rows)
     usable = [r for r in rows if r["px"]]
@@ -204,7 +224,7 @@ def main():
         aud[f"Q{qq}"][f"{status}:{kind}"] += 1
         aud["all"][status] += 1
     res["survivorship"] = {k: dict(v) for k, v in aud.items()}
-    json.dump(res, open(p("results.json"), "w"), indent=1, default=str)
+    json.dump(res, open(p(f"results{tag}.json"), "w"), indent=1, default=str)
     # text summary
     L = [f"firm-years with both docs: {len(rows)}  by year {res['by_year']}  price status {res['pxwhy']}"]
     def fmt(s):
@@ -227,7 +247,7 @@ def main():
         for y, s in M["by_year_12m"].items(): L.append(f"  Q1 12m vs ctl {y}: {fmt(s)}")
     L.append(f"\nPRIMARY: {res['primary']['verdict']}  avoid benefit after cost {res['primary']['avoid_benefit_after_cost']*100:+.2f}%")
     L.append(f"survivorship: {json.dumps(res['survivorship'], indent=1)}")
-    open(p("results.txt"), "w").write("\n".join(L))
+    open(p(f"results{tag}.txt"), "w").write("\n".join(L))
     print("\n".join(L))
 
 

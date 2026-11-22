@@ -1,0 +1,704 @@
+[
+ {
+  "type": "insight",
+  "id": "insight:bt-hard-filters-india-v2-2026-summary",
+  "title": "v2 hard-filter rules on the survivorship-free Indian panel (pre-registered, FY2016/FY2018): promoter pledge >25% and >50% clear the graded-red bar; CFO/PAT, debt+negative CFO, other income, debtor days stay questions; nothing hard",
+  "body": "Redo of hard_filters_test Part B without survivorship bias, on the solvency_india panel (489 company-snapshots, 301 companies, D distress census + X delisted sample + L live sample, weighted; non-financial, Rs 200-20,000 cr at T; 5y O_fail = liquidation or compulsory exit or price <=0.2x, weighted base 19.7%). Pledge at T from BSE SHP XBRL filed before T (419 rows known). Lift [stratified company bootstrap], share of >=3x winners flagged: pledge>25% 2.13 [1.53,2.94], 8.5% -> GRADED RED; pledge>50% 2.43 [1.65,3.47], 5.9% -> GRADED RED (FY2016 2.47, FY2018 2.44; O_strict 5.19); CFO/PAT 5y<0.3 2.08 [0.57,3.85], 11.3% -> question; debt>=1.5x in 3y with 3y CFO<0 0.83 -> question/no signal; other income>50% of PBT 1.36 [0.85,1.92] -> question; debtor days x1.5 in 3y 1.51 [0.83,2.37], 19% -> question; ANY 1.31, flags 47% of winners -> question. Logged deviation before outcomes: history-dependent rules (a,c,e, ANY) are FY2018-only because live firms' screener pages start at FY2015 (FY2016 coverage would be fate-dependent). Versus old survivors-only Part B (2020): pledged firms tripled MORE there (69% vs 51%); here they tripled half as often (15% vs 28%) and lost >50% three times as often (31% vs 11%). Post-hoc: 60% of pledge flags overlap interest cover <1.5x; lift among adequately-covered firms ~1.5-1.75 (CI includes 1). Implausible-economics proxy not tested (L20). Research, not SEBI-registered advice.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "stage-2",
+   "hard-filters",
+   "india",
+   "calibration",
+   "redflag",
+   "survivorship-free",
+   "method-test"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "n_rows": 489,
+   "n_companies": 301,
+   "snapshots": [
+    "2016-09-30",
+    "2018-09-30"
+   ],
+   "pledge_known": 419,
+   "base_O_fail_weighted": 0.197,
+   "base_O_fail_FY2018": 0.122,
+   "lift_O_fail_primary": {
+    "A": [
+     2.08,
+     0.57,
+     3.85
+    ],
+    "A7": [
+     1.29,
+     0.48,
+     2.28
+    ],
+    "B25": [
+     2.13,
+     1.53,
+     2.94
+    ],
+    "B50": [
+     2.43,
+     1.65,
+     3.47
+    ],
+    "B_rise": [
+     2.93,
+     0.78,
+     6.93
+    ],
+    "C": [
+     0.83,
+     0.26,
+     2.06
+    ],
+    "D50": [
+     1.36,
+     0.85,
+     1.92
+    ],
+    "D30": [
+     1.15,
+     0.79,
+     1.54
+    ],
+    "E": [
+     1.51,
+     0.83,
+     2.37
+    ],
+    "E60": [
+     1.91,
+     1.01,
+     3.15
+    ],
+    "ANY": [
+     1.31,
+     0.96,
+     1.74
+    ],
+    "ANY_np": [
+     1.32,
+     0.89,
+     1.84
+    ],
+    "TWO": [
+     1.92,
+     1.02,
+     3.09
+    ]
+   },
+   "winners_flagged_primary": {
+    "A": 0.113,
+    "A7": 0.204,
+    "B25": 0.085,
+    "B50": 0.059,
+    "B_rise": 0.017,
+    "C": 0.089,
+    "D50": 0.138,
+    "D30": 0.287,
+    "E": 0.192,
+    "E60": 0.14,
+    "ANY": 0.467,
+    "ANY_np": 0.425,
+    "TWO": 0.195
+   },
+   "lift_O_strict": {
+    "A": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "A7": [
+     0.84,
+     0.0,
+     2.8
+    ],
+    "B25": [
+     3.48,
+     1.99,
+     5.62
+    ],
+    "B50": [
+     5.19,
+     2.78,
+     8.7
+    ],
+    "B_rise": [
+     3.93,
+     0.0,
+     12.88
+    ],
+    "C": [
+     1.25,
+     0.0,
+     4.93
+    ],
+    "D50": [
+     0.35,
+     0.0,
+     1.05
+    ],
+    "D30": [
+     0.78,
+     0.22,
+     1.35
+    ],
+    "E": [
+     1.09,
+     0.0,
+     2.39
+    ],
+    "E60": [
+     1.67,
+     0.0,
+     3.78
+    ],
+    "ANY": [
+     1.64,
+     1.02,
+     2.31
+    ],
+    "ANY_np": [
+     1.27,
+     0.43,
+     2.17
+    ],
+    "TWO": [
+     1.43,
+     0.0,
+     3.69
+    ]
+   },
+   "lift_FY2016": {
+    "A": [
+     1.85,
+     1.2,
+     2.4
+    ],
+    "A7": [
+     1.08,
+     0.41,
+     2.23
+    ],
+    "B25": [
+     2.03,
+     1.41,
+     2.87
+    ],
+    "B50": [
+     2.47,
+     1.6,
+     3.57
+    ],
+    "C": [
+     1.15,
+     0.63,
+     1.72
+    ],
+    "D50": [
+     1.37,
+     0.85,
+     2.03
+    ],
+    "D30": [
+     1.16,
+     0.81,
+     1.56
+    ],
+    "E": [
+     1.34,
+     0.91,
+     1.86
+    ],
+    "E60": [
+     1.43,
+     0.96,
+     2.05
+    ],
+    "ANY": [
+     1.0,
+     0.97,
+     1.03
+    ],
+    "ANY_np": [
+     0.98,
+     0.91,
+     1.03
+    ],
+    "TWO": [
+     1.07,
+     0.92,
+     1.17
+    ]
+   },
+   "lift_FY2018": {
+    "A": [
+     2.08,
+     0.57,
+     3.85
+    ],
+    "A7": [
+     1.29,
+     0.48,
+     2.28
+    ],
+    "B25": [
+     1.95,
+     1.12,
+     3.27
+    ],
+    "B50": [
+     2.44,
+     1.31,
+     4.42
+    ],
+    "B_rise": [
+     2.93,
+     0.78,
+     6.93
+    ],
+    "C": [
+     0.83,
+     0.26,
+     2.06
+    ],
+    "D50": [
+     1.12,
+     0.31,
+     2.17
+    ],
+    "D30": [
+     0.99,
+     0.43,
+     1.63
+    ],
+    "E": [
+     1.51,
+     0.83,
+     2.37
+    ],
+    "E60": [
+     1.91,
+     1.01,
+     3.15
+    ],
+    "ANY": [
+     1.31,
+     0.96,
+     1.74
+    ],
+    "ANY_np": [
+     1.32,
+     0.89,
+     1.84
+    ],
+    "TWO": [
+     1.92,
+     1.02,
+     3.09
+    ]
+   },
+   "lift_L_only": {
+    "A": [
+     2.38,
+     0.0,
+     5.07
+    ],
+    "A7": [
+     1.31,
+     0.0,
+     2.66
+    ],
+    "B25": [
+     1.8,
+     0.79,
+     3.05
+    ],
+    "B50": [
+     2.06,
+     0.4,
+     3.97
+    ],
+    "B_rise": [
+     3.04,
+     0.0,
+     10.86
+    ],
+    "C": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "D50": [
+     1.4,
+     0.72,
+     2.21
+    ],
+    "D30": [
+     1.19,
+     0.7,
+     1.72
+    ],
+    "E": [
+     1.48,
+     0.4,
+     2.85
+    ],
+    "E60": [
+     1.78,
+     0.0,
+     3.74
+    ],
+    "ANY": [
+     1.07,
+     0.42,
+     1.71
+    ],
+    "ANY_np": [
+     1.22,
+     0.55,
+     1.97
+    ],
+    "TWO": [
+     1.71,
+     0.0,
+     3.6
+    ]
+   },
+   "lift_mcap400": {
+    "A": [
+     1.79,
+     0.18,
+     3.61
+    ],
+    "A7": [
+     1.13,
+     0.29,
+     2.05
+    ],
+    "B25": [
+     2.45,
+     1.67,
+     3.77
+    ],
+    "B50": [
+     2.97,
+     1.92,
+     4.58
+    ],
+    "B_rise": [
+     4.39,
+     1.3,
+     8.86
+    ],
+    "C": [
+     0.68,
+     0.13,
+     2.18
+    ],
+    "D50": [
+     1.22,
+     0.68,
+     1.87
+    ],
+    "D30": [
+     1.11,
+     0.68,
+     1.57
+    ],
+    "E": [
+     1.18,
+     0.53,
+     1.92
+    ],
+    "E60": [
+     1.48,
+     0.54,
+     2.59
+    ],
+    "ANY": [
+     1.27,
+     0.88,
+     1.74
+    ],
+    "ANY_np": [
+     1.17,
+     0.73,
+     1.68
+    ],
+    "TWO": [
+     1.7,
+     0.76,
+     2.97
+    ]
+   },
+   "verdicts": {
+    "A": "question",
+    "B25": "GRADED RED",
+    "B50": "GRADED RED",
+    "C": "question",
+    "D50": "question",
+    "E": "question",
+    "ANY": "question"
+   },
+   "scope": {
+    "A": "FY2018",
+    "C": "FY2018",
+    "E": "FY2018",
+    "ANY": "FY2018",
+    "B25": "pooled",
+    "B50": "pooled",
+    "D50": "pooled"
+   },
+   "compare_old_partB": {
+    "pledge25_x3_old": [
+     0.69,
+     0.51
+    ],
+    "pledge25_x3_new": [
+     0.152,
+     0.275
+    ],
+    "pledge25_loss50_old": [
+     0.029,
+     0.016
+    ],
+    "pledge25_loss50_new": [
+     0.307,
+     0.105
+    ]
+   },
+   "deviation": "history-dependent rules FY2018-only (logged before outcomes)",
+   "bse_requests": 938
+  },
+  "sources": [
+   "research_notes/Backtests/hard_filters_india_v2.md",
+   "research_notes/Backtests/hard_filters_india_v2_outputs/results.json",
+   "research_notes/Backtests/hard_filters_india_v2_outputs/panel_v2.csv",
+   "research_notes/Backtests/solvency_india_outputs/panel.csv",
+   "https://www.screener.in/",
+   "https://www.bseindia.com/ (shareholding-pattern XBRL)"
+  ],
+  "links": [
+   {
+    "to": "insight:bt-hard-filters-2026-summary",
+    "rel": "supersedes_part_b_of"
+   },
+   {
+    "to": "insight:disqualifiers-v2-proposal",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:bt-solvency-india-2026-summary",
+    "rel": "reuses_panel_of"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-hard-filters-india-v2-pledge",
+  "title": "Promoter pledge at T is the strongest mechanical stage-2 rule in India: >50% of promoter holding doubles-plus 5-year failure odds (lift 2.43) and flags 6% of later multibaggers; not hard",
+  "body": "Survivorship-free Indian panel, FY2016/FY2018 snapshots, pledge from the latest BSE SHP XBRL filed before T. >25%: 98 of 419 rows fired, precision 39% vs base 18%, lift 2.13 [1.53,2.94], recall 31%, winners flagged 8.5% (8/81). >50%: 68 fired, precision 44%, lift 2.43 [1.65,3.47], winners 5.9% (6/81); per snapshot 2.47/2.44; mcap>=400 cr 2.97; liquidation/compulsory exit only 5.19 [2.78,8.70]; live stratum only 2.06 [0.40,3.97]. Rising pledge (>=10pp in a year) 2.93 [0.78,6.93] on 13 rows (exploratory). Caught: ABG Shipyard, Sical, Essar Shipping, KSK Energy, Gammon, Ballarpur, Coffee Day, Gayatri, B.L. Kashyap, IVRCL, Future Consumer, Sadbhav (>25%), RCom (>25%). Cost: Alok Industries 2016 (7.1x), Jindal Stainless 2018 (8.9x), Granules, Birlasoft, Dr Agarwal's, Steel Exchange; >25% also Aurionpro, Zen Technologies. Missed Jet Airways 2018 (pledges came later). 58-60% overlap with interest cover <1.5x (post-hoc).",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "stage-2",
+   "hard-filters",
+   "india",
+   "calibration",
+   "redflag",
+   "survivorship-free",
+   "method-test",
+   "pledge",
+   "governance"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "B25": {
+    "n_known": 419,
+    "n_fired": 98,
+    "n_fail": 141,
+    "n_fired_fail": 59,
+    "n_winners": 81,
+    "n_fired_winners": 8,
+    "w_fired_share": 0.14386682513532797,
+    "base": 0.18121966681152563,
+    "prec": 0.3857952987143405,
+    "lift": 2.1288820661809305,
+    "recall": 0.30627550394898767,
+    "rr": 2.627277215388859,
+    "wexcl": 0.08539399171196589,
+    "lift_ci": [
+     1.528358257877693,
+     2.9401686800764777
+    ],
+    "prec_ci": [
+     0.28002293566871095,
+     0.511792505763488
+    ],
+    "recall_ci": [
+     0.21151705868652262,
+     0.4176441349210527
+    ],
+    "wexcl_ci": [
+     0.031209468478120492,
+     0.15660827602703503
+    ],
+    "base_ci": [
+     0.1433998884426258,
+     0.22395633501863552
+    ]
+   },
+   "B50": {
+    "n_known": 419,
+    "n_fired": 68,
+    "n_fail": 141,
+    "n_fired_fail": 42,
+    "n_winners": 81,
+    "n_fired_winners": 6,
+    "w_fired_share": 0.08346708856448774,
+    "base": 0.18121966681152563,
+    "prec": 0.4402430554292924,
+    "lift": 2.4293337647903277,
+    "recall": 0.20276941649845473,
+    "rr": 2.7928737235750534,
+    "wexcl": 0.058519541379225624,
+    "lift_ci": [
+     1.6531329391482128,
+     3.4741354484567264
+    ],
+    "prec_ci": [
+     0.3039325470064682,
+     0.5983667274761787
+    ],
+    "recall_ci": [
+     0.1272648745933484,
+     0.29388234695977944
+    ],
+    "wexcl_ci": [
+     0.014248214539723624,
+     0.1174990095349252
+    ],
+    "base_ci": [
+     0.1433998884426258,
+     0.22395633501863552
+    ]
+   },
+   "B_rise": {
+    "n_known": 219,
+    "n_fired": 13,
+    "n_fail": 55,
+    "n_fired_fail": 7,
+    "n_winners": 64,
+    "n_fired_winners": 1,
+    "w_fired_share": 0.039172537880921295,
+    "base": 0.10975545825798452,
+    "prec": 0.3216595468181881,
+    "lift": 2.9306929415948924,
+    "recall": 0.11480268027197459,
+    "rr": 3.1810876496870693,
+    "wexcl": 0.017169559957829688,
+    "lift_ci": [
+     0.7785686613101153,
+     6.928267971924281
+    ],
+    "prec_ci": [
+     0.08425911959150675,
+     0.7425503472911771
+    ],
+    "recall_ci": [
+     0.02804621642517316,
+     0.24237855818369666
+    ],
+    "wexcl_ci": [
+     0.0,
+     0.05560596650059974
+    ],
+    "base_ci": [
+     0.07383227029045723,
+     0.14854074673960227
+    ]
+   }
+  },
+  "sources": [
+   "research_notes/Backtests/hard_filters_india_v2.md",
+   "research_notes/Backtests/hard_filters_india_v2_outputs/results.json",
+   "research_notes/Backtests/hard_filters_india_v2_outputs/panel_v2.csv",
+   "research_notes/Backtests/solvency_india_outputs/panel.csv",
+   "https://www.screener.in/",
+   "https://www.bseindia.com/ (shareholding-pattern XBRL)"
+  ],
+  "links": [
+   {
+    "to": "insight:bt-hard-filters-india-v2-2026-summary",
+    "rel": "part_of"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:disqualifiers-v3-proposal",
+  "title": "PROPOSAL (not adopted): disqualifiers v3 - v2 structure kept; promoter pledge promoted to the top graded red flag with numeric levels (>25% red, >50% strong red, rising = escalate); cash-flow tells confirmed as questions; no mechanical any-flag gate",
+  "body": "Builds on insight:disqualifiers-v2-proposal (unchanged) after the survivorship-free Indian back-test (insight:bt-hard-filters-india-v2-2026-summary). HARD AT ENTRY (unchanged from v2, judgment-only, untestable mechanically): H1a fake cash, H1b implausible economics after a written unit-economics check, H1c unverifiable profits, H4 pump patterns, H5 related-party leakage, H2 auditor exit over disagreement/qualified opinion, H3 rating not cooperating. HARD AT EXIT (unchanged): H2 and the strongest accounting-trouble events. GRADED RED (override template): promoter pledge >50% of promoter holding = strong (written override must state why, the lender, margin-call price vs current price) - tested lift 2.43 [1.65,3.47], 5.9% of winners; pledge >25% = red - lift 2.13 [1.53,2.94], 8.5% of winners; rising pledge >=10pp in a year = escalate (13 cases, untested); accounting-trouble events, dilution, solvency set as before (S1/S5 India = questions-leaning-red per L27). COMBINATION: pledge plus interest cover <1.5x = main 'look much harder, size small' prompt (post-hoc, needs forward check; the two overlap ~60%, so do not count them as independent votes). QUESTIONS, NOT FLAGS (confirmed on survivorship-free data): CFO/PAT 5y (<0.3 lift 2.08, CI 0.57-3.85, 11% of winners), debt growth with negative CFO (0.83), other-income share (1.36), debtor-day jumps (1.51; judge by counterparty). NO MECHANICAL ANY-FLAG GATE: ANY of the five flags 47% of later >=3x winners for lift 1.31. MOVED TO STAGE 5 (unchanged): P/E. Nothing mechanical is hard. WHAT WOULD CHANGE IT: pledge >50% lift >=4 on O_fail with CI >1 in a later snapshot set (2020, 2022) would make it hard; a forward record showing pledge overrides lose money would tighten the override.",
+  "tickers": [],
+  "tags": [
+   "redflag",
+   "checklist",
+   "governance",
+   "proposal",
+   "stage-2",
+   "hard-filters",
+   "india",
+   "pledge"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "status": "proposed",
+   "builds_on": "insight:disqualifiers-v2-proposal",
+   "supersedes_if_adopted": "insight:disqualifiers-v2-proposal",
+   "graded_red": {
+    "pledge_gt_50pct": "strong",
+    "pledge_gt_25pct": "red",
+    "pledge_rising_10pp": "escalate (untested)"
+   },
+   "combination": "pledge + interest cover <1.5x (post-hoc)",
+   "questions_only": [
+    "CFO/PAT",
+    "debt growth + negative CFO",
+    "other income share",
+    "debtor days jump"
+   ],
+   "rejected": [
+    "mechanical ANY-flag gate"
+   ],
+   "hard_mechanical": []
+  },
+  "sources": [
+   "research_notes/Backtests/hard_filters_india_v2.md",
+   "research_notes/Backtests/hard_filters_india_v2_outputs/results.json"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers-v2-proposal",
+    "rel": "revises"
+   },
+   {
+    "to": "insight:bt-hard-filters-india-v2-2026-summary",
+    "rel": "based_on"
+   },
+   {
+    "to": "insight:bt-hard-filters-india-v2-pledge",
+    "rel": "based_on"
+   }
+  ],
+  "confidence": "single-source"
+ }
+]

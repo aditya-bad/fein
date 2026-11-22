@@ -13,7 +13,7 @@ before trusting it. Your branch is the default, so every new session loads this 
 | Stage | What exists now |
 |---|---|
 | 1 Universe | NSE/BSE/SEC fetch tools; lists of failed Indian companies. Full scale waits for your Pi / Kite / Screener. |
-| 2 Hard filters | Fraud & governance rules **tested**: catch frauds, miss debt blow-ups → solvency flags added (tested in the US). |
+| 2 Hard filters | Fraud & governance rules **tested**: catch frauds, miss debt blow-ups → solvency flags added. **Promoter pledge >50% = strongest red flag** (2.4× failure risk, 5× liquidation risk) once failed companies are included. |
 | 3 Signals | **Earnings-miss "avoid" signal proven in two periods.** Insider buying: no edge (US & India). Promise tracker across 3 sectors + 2 markets. |
 | 4 Deep dive | "Security-guard depth" protocol v1.3, practised on retail, a manufacturer, a US retailer and a bank. |
 | 5 Valuation | Worksheet: what the price assumes, scenarios, how much growth a 3×/5× needs. |

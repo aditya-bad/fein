@@ -196,3 +196,10 @@ interest cover <1.5x is a genuine signal in India (2.87× for liquidation/compul
 pages leaked past the financial filter (fixed in the test; live screen has the same small gap).
 **Rule:** asymmetric costs justify keeping cheap "look harder" flags on consistent-but-unproven evidence; never
 promote them to hard rules without proof.
+
+## L28 (2026-11-22) — Survivorship bias flipped a conclusion
+Survivors-only Part B (L20) said pledged firms tripled MORE often (69% vs 51%). With dead firms included, pledged
+firms tripled about half as often (15% vs 28%) and lost >50% three times as often (31% vs 11%); pledge >50% lift 2.43,
+5.19× for liquidation/compulsory exit. The earlier result came from a COVID-low snapshot and a "later grew past
+₹400 cr" sample. **Rule:** never draw a stage-2 conclusion from a survivors-only sample; promoter pledge is our
+strongest mechanical red flag (decision:adopt-disqualifiers-v3), partly because it tracks leverage.

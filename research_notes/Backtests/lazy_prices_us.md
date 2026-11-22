@@ -30,3 +30,14 @@ announcement-day reaction.
 
 What would falsify it for us: primary-metric mean ≥ 0, or CI including zero after costs.
 
+**Deviations logged before any return was computed (2026-11-22):**
+1. Data-quality exclusion: firm-years where either primary document is < 50,000 characters after stripping
+   (stub/wrapper primary documents whose real 10-K sits in an exhibit) are dropped — their "similarity" is an
+   artifact, not a text change.
+2. Firms whose CIK has no current ticker in EDGAR (mostly acquired/delisted later) get their old trading symbol
+   from the 10-K cover page ("Trading Symbol(s)" table); used only if the market-cap identity check passes
+   (cover shares × Yahoo close on entry day within 0.2–30× public float).
+3. Observation (no change to the rule): raw-TF full-text cosine is compressed near 1 (median ≈ 0.998, stop-words
+   dominate), as in the original paper's measure. Quintiles still rank firms; Jaccard is the less
+   stop-word-dominated secondary.
+
