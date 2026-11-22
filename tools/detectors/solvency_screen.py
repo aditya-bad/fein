@@ -166,8 +166,16 @@ def is_financial(lab, page):
     ind = lab.get("Industry", "").lower()
     if bi in FIN_BROAD or any(k in ind for k in FIN_INDUSTRY):
         return True
-    # screener's bank/NBFC template ("Revenue"/"Financing Profit") as a fallback when labels are missing
-    return not lab and "Financing Profit" in page
+    # screener's bank/NBFC template ("Revenue"/"Financing Profit") as a fallback when labels are missing.
+    # Also catch unlabeled dead/merged banks (found in the India solvency re-test, L27): a "Deposits" row or
+    # "Bank" in the company name.
+    if not lab:
+        if "Financing Profit" in page or ">Deposits<" in page or "Deposits</" in page:
+            return True
+        title = page[page.find("<title>") + 7: page.find("</title>")] if "<title>" in page else ""
+        if " bank" in title.lower():
+            return True
+    return False
 
 
 def ebit_core(fin, fys):
