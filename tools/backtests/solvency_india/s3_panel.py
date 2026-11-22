@@ -140,6 +140,10 @@ def main():
                 continue
             if page is None:
                 page = open(os.path.join(d, "page.html"), errors="replace").read()
+                # fix (logged deviation): unlabeled pages of merged/dead banks escape is_financial()
+                if not s.get("industry") and ("Deposits" in page or re.search(r"\bBank\b", s.get("name", ""))):
+                    fun[(strat, "financial_unlabeled_bank")] += 1
+                    break
                 chart = K.jload(os.path.join(d, "chart.json"), {})
                 fin = F.parse_screener(page)
                 sched = load_sched(d)

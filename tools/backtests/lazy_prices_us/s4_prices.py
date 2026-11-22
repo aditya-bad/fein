@@ -23,7 +23,7 @@ def fetch(t, pdir):
         if w > 0: time.sleep(w)
         _last[0] = time.time()
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (research script)"})
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
             with urllib.request.urlopen(req, timeout=40) as r:
                 d = json.load(r)["chart"]["result"][0]
             ts = d.get("timestamp") or []

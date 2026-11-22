@@ -132,3 +132,125 @@ feasibility table above (15 names).
 ## Stage log
 - 2026-11-22: feasibility done (13/15). Frame built (`s1_frame.py`): D 1,739 census, X 500 of 2,132, L 900 of 5,070.
   Page phase started; pre-registration above saved before the chart phase.
+- 2026-11-22 (resumed after a usage-limit pause): pages (3,139 companies, ~82 min), charts (1,345) and schedules (322)
+  fetched at ≥ 1.55 s per request from one stream. **Process slip:** a chained job started the chart and schedule
+  phases early, so about 32 chart and 6 schedule requests ran alongside the page stream for about a minute (two
+  streams). All later fetching was single-stream. All files are cached under the scratchpad `bt_solv_in/`.
+- **Deviation found on audit, before the verdict table was read:** dead or merged banks with unlabeled screener pages
+  (Oriental Bank, Allahabad, Andhra, State Bank of Mysore / Travancore, Lakshmi Vilas) escaped
+  `solvency_screen.is_financial()`, whose label fallback looks only for "Financing Profit". Fix in `s3_panel.py`: an
+  unlabeled page with a "Deposits" row or "Bank" in the name counts as financial (10 rows removed; 499 → 489). This
+  follows the pre-registered exclusion, so it is not a change of rule. Verdicts are the same before and after the fix
+  (before it, S5 was 2.00 [1.04, 3.12], also a question at two decimals). The live screen faces the same gap only for
+  label-less pages.
+
+---
+
+# RESULTS (written 2026-11-22 after the run)
+
+## Funnel and data audit
+
+| step | D (census) | X (sample of BSE/NSE delisted) | L (sample of live) |
+|---|---|---|---|
+| companies sampled (weight) | 1,739 (1.0) | 500 (4.264) | 900 (5.633) |
+| no screener page | 795 | 213 | 14 |
+| financial (excluded) | 57 | 8 + 6 unlabeled banks | 107 |
+| rows FY2016: no annual data at T / no price history / not trading at T / size unknown / outside ₹200–20,000 cr | 236 / 36 / 141 / 55 / 313 | 210 / 23 / 21 / 1 / 14 | 201 / 8 / 133 / 27 / 265 |
+| rows FY2018: same | 333 / 31 / 132 / 50 / 264 | 240 / 12 / 13 / 0 / 7 | 177 / 9 / 116 / 39 / 276 |
+| already in insolvency at T (excluded) | 6 (FY2018) | 0 | 0 |
+| **panel rows** FY2016 + FY2018 | **106 + 71 = 177** | **4 + 1 = 5** | **145 + 162 = 307** |
+
+Panel: **489 company-snapshots** (FY2016 255, FY2018 234). Outcomes in the panel: O_liq 19, O_cdel 29, O_px 165,
+**O_fail 168** (weighted base rate **19.7%**: FY2016 27.6%, FY2018 12.2%), O_strict 33 (1.7%), O_cirp admissions 79,
+winners ≥ 3x 92. "Not trading at T" among live names is mostly companies that listed after T (IPOs from 2017–2023
+whose earlier annual data screener holds). 20 rows have an ambiguous size (rounding interval straddles a boundary).
+
+**Survivorship audit (retrievability of the dead lists):**
+
+| list | companies in frame | screener page | annual data at a T | in panel |
+|---|---|---|---|---|
+| IBBI liquidation | 169 | 144 (85%) | 115 | 22 |
+| IBBI CIRP admission | 492 | 409 (83%) | 350 | 85 |
+| NSE compulsory / liquidation delisting | 204 | 203 (100%) | 65 | 5 |
+| BSE suspended | 1,213 | 494 (41%) | 446 | 55 |
+| NSE suspended (pre-2012) | 128 | 121 | 47 | 0 |
+| IBBI rows with no exchange identifier | 221 | not fetchable | – | – |
+
+The IBBI dead firms are 83–85% retrievable. The missing 15–17% are mostly renamed or merged companies; together with
+the 221 IBBI rows that had no identifier, this leak means *fewer* failures in the panel. BSE-suspended companies
+without a page are mostly old shells far below ₹200 cr. Most NSE compulsory delistings had stopped filing before T,
+so they were not live filers. Stratum D has a 68.9% weighted O_fail rate and stratum L 14.7%: dead companies do get
+in, and the panel is not a survivors-only set. Price coverage: R5 is missing for 50 rows (the series stopped early);
+winner status is unknown for 9.
+
+## Pooled results — primary O_fail (weighted; stratified bootstrap by company, 2,000 draws)
+
+| flag | fired / known | fired & failed | weighted share flagged | precision | lift [95% CI] | recall | >3x winners excluded | verdict |
+|---|---|---|---|---|---|---|---|---|
+| S1 net worth < 0 (adj.) | 13 / 489 | 7 | 1.4% | 43% | **2.20 [0.50, 4.42]** | 3.1% | 1.4% (2/92) | question (CI includes 1) |
+| S2 interest cover < 1.5x | 150 / 484 | 76 | 19.0% | 32% | 1.69 [1.27, 2.20] | 32% | 20% | question |
+| S2b interest cover < 2.5x | 220 / 484 | 108 | 31.9% | 32% | 1.68 [1.35, 2.06] | 54% | 35% | question |
+| S4 dividends > FCF while debt rose | 89 / 487 | 27 | 20.5% | 15% | 0.76 [0.45, 1.15] | 16% | 25% | question (no signal) |
+| **S5-India** ≥ 2 of S1, S2, S4 | 25 / 489 | 14 | 3.7% | 39% | **1.985 [1.01, 3.24]** | 7.3% | 3.8% | **question (misses the 2.0 bar by 0.015)** |
+| S5b-India (with S2b), exploratory | 39 / 489 | 22 | 5.9% | 36% | 1.82 [1.07, 2.70] | 11% | 7.4% | (question) |
+| S3 US funding gap, reported only | 272 / 469 | 116 | 50% | 25% | 1.29 [1.09, 1.50] | 65% | 63% | (question) |
+| S3-India exploratory (STD > cash + investments + 0.5 CFO) | 174 / 469 | 72 | 32% | 23% | 1.15 [0.85, 1.50] | 37% | 47% | (no signal) |
+| S5-US (≥ 2 of S1–S4), exploratory | 171 / 489 | 78 | 27% | 26% | 1.27 [0.98, 1.59] | 33% | 36% | (question) |
+| S0 EBIT < 0, reference | 42 / 489 | 17 | 4.8% | 22% | 1.12 [0.56, 1.91] | 5.3% | 6.4% | reference |
+
+(Weighted share flagged = estimated share of the full frame, among companies where the flag is known.)
+
+## Robustness (does not overturn the verdict)
+- **O_strict** (liquidation or compulsory exit only; 33 events, so CIs are wide): S2 2.87 [1.88, 4.11], S2b 2.28
+  [1.70, 2.98], S3-India 1.86 [1.25, 2.55], S3-US 1.55, S5-India 1.64 [0, 4.91], S1 2.17 [0, 10.3], S4 1.03, S0 4.46
+  [1.76, 8.96]. Liquidations and compulsory exits are concentrated among loss-makers with weak interest cover.
+- **Per snapshot (O_fail):** S5-India 2.08 [0.96, 3.47] in FY2016 and 1.88 [0.19, 5.07] in FY2018; S1 1.91 / 1.90;
+  S2 1.66 / 1.42; S4 0.98 / 0.44.
+- **Without size-ambiguous rows:** S5 1.89, S1 2.00, S2 1.69 (same verdicts).
+- **Live stratum only (survivor-tilted):** S5 2.05 [0, 4.18], S2 1.38, S2b 1.60.
+- **CIRP admissions** (not failures): 79 admitted rows, 65 of them also failed, 18 liquidated. 14 admitted
+  companies did not fail (Alok Industries FY2016, Essar Shipping, Ashapura Minechem, DCW, V2 Retail…), so lesson L25
+  holds. Weighted admission rate: S1-flagged 33.5% vs 3.6% unflagged; S5-flagged 13.8% vs 3.6%; S2 11.1% vs 2.1%.
+- Failures caught by S1 or S5-India include ABG Shipyard, GTL, Jet Airways (both snapshots), Reliance Communications,
+  McNally Bharat, Mcleod Russel, Ballarpur, Pratibha Industries, Future Enterprises, Gayatri Projects
+  (`solvency_india_outputs/tables.md`).
+
+## Verdicts (pre-registered rule: lift ≥ 2 with CI > 1 and < 10% of ≥ 3x winners excluded → graded red; hard if ≥ 4)
+- **S1 negative net worth → QUESTION (underpowered, not refuted).** Lift 2.20 is the same size as in the US (2.31),
+  but only 13 Indian rows in the ₹200–20,000 cr band have negative net worth, so the CI is [0.50, 4.42]. It excludes
+  almost no winners (2 of 92). One in three S1 firms entered CIRP within five years.
+- **S2 interest cover < 1.5x → QUESTION.** A real signal (lift 1.69, CI well above 1; 2.87 on liquidation or exit),
+  and unlike in the US it is not just "loss-maker" (S0 alone: 1.12). It fires on 19% of the frame and would cut 20%
+  of ≥ 3x winners — the same objection as in the US (27%).
+- **S2b < 2.5x → QUESTION:** similar lift, flags 32% of companies and 35% of winners. Not a better India threshold.
+- **S4 dividends > FCF while debt rose → QUESTION / no signal** (lift 0.76; FY2018 0.44: dividend payers failed
+  less). Second market in which it fails.
+- **S5-India (≥ 2 of S1, S2, S4) → QUESTION, borderline.** Lift 1.985 [1.01, 3.24], excludes 3.8% of winners. By
+  the fixed rule it misses graded red by 0.015 of lift, and the CI lower bound is barely above 1. Recall 7%.
+- **S3 (US) stays excluded** from India S5: it flags 50% of companies and 63% of winners for a lift of 1.29. This
+  confirms decision:india-solvency-s3-excluded. **S3-India (cash + investments credit) does not rescue it:** lift
+  1.15 on O_fail (1.86 on O_strict), and it still flags 47% of winners. Exploratory; no adoption.
+- **Nothing is HARD.**
+
+## What it means
+1. India's five-year small/mid-cap failure rate (19.7%, almost all ≥ 80% price collapses) is twice the US rate (9.5%).
+   Solvency flags only roughly double the odds of failure here too. They are "look harder, size smaller" prompts, not
+   protection: S5 catches 7% of failures.
+2. The US graded-red pair (S1, S5) is **not confirmed** on Indian data at the pre-registered bar. The point estimates
+   are the same size as in the US (≈ 2×), and the miss is a power problem (13 and 25 flagged rows). Honest reading:
+   *consistent with the US, not proven in India.*
+3. Weak interest cover is the strongest broad Indian signal but costs a fifth of the multibaggers. It belongs in the
+   deep-dive checklist, not the gate. Dividends-beyond-FCF is noise in both markets.
+
+## Caveats
+- Standalone accounts (holdco debt under-flagged); restated screener numbers, not as-first-reported; market-cap-to-sales
+  rounding; weekly adjusted closes (O_px uses the weekly low close, not the intraday low); BSE suspension dates
+  proxied by the end of the price series.
+- About 15–17% of IBBI firms are unretrievable (renamed or merged); 221 IBBI rows have no identifier → fewer failures.
+- Strata X and L are samples (weights 4.3 and 5.6); X contributes only 5 rows. Bootstrap CIs include the sampling.
+- FY2016 window includes the 2018–19 small-cap / IL&FS crash and COVID; the FY2018 window includes COVID.
+- One process slip (two fetch streams for about a minute) and one logged fix (unlabeled banks), both described above.
+
+Scripts: `tools/backtests/solvency_india/` (common, s1_frame, s2_fetch, s3_panel, s4_analyze, s5_audit). Outputs:
+`research_notes/Backtests/solvency_india_outputs/` (panel.csv, results.json, tables.md, funnel.json, frame_meta.json,
+survivorship_audit.json). Raw cache: scratchpad `bt_solv_in/` (not durable). Research, not SEBI-registered advice.

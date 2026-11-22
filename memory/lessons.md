@@ -188,3 +188,11 @@ capacity/plant/production dates weakest (43–50%) everywhere — the same as T&
 conservative guiding (Watts raised at every call). US peer medians sit near 100%, so sector-adjusted scores are
 noisier there. **Rule:** weight a company's *execution-date* record most; treat beating its own soft guide as weak
 evidence of skill. 38 credibility-generated calls (India 27, US 11) will test whether the adjustment adds skill.
+
+## L27 (2026-11-22) — Indian survivorship-free test: same direction as US, too few cases to prove
+Screener still serves 87% of dead Indian companies (prices + annual tables) → survivorship-free Indian tests are
+feasible now. Weighted 5-year failure base rate 19.7% in India vs 9.5% US. S1/S5-India ≈2× lift but CIs wide;
+interest cover <1.5x is a genuine signal in India (2.87× for liquidation/compulsory exit). Dead banks with unlabeled
+pages leaked past the financial filter (fixed in the test; live screen has the same small gap).
+**Rule:** asymmetric costs justify keeping cheap "look harder" flags on consistent-but-unproven evidence; never
+promote them to hard rules without proof.

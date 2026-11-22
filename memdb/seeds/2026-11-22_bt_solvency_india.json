@@ -1,0 +1,495 @@
+[
+ {
+  "type": "insight",
+  "id": "insight:bt-solvency-india-2026-summary",
+  "title": "India solvency-flag back-test (pre-registered, survivorship-free, FY2016/FY2018): no flag clears the graded-red bar; S5-India 1.985x and S1 2.2x match the US but are underpowered; S3 stays out",
+  "body": "489 company-snapshots (NSE/BSE non-financial, Rs 200-20,000 cr at T=30-Sep-2016/2018, standalone screener annual data cut at FY0; stratified: distress-list census D 177 rows, delisted sample X 5, live sample L 307, weighted). 5-year O_fail = IBBI liquidation (19) or compulsory exit (29) or weekly close <=0.2x (165) = 168 rows, weighted base 19.7% (US 9.5%). Pooled lift [stratified company bootstrap]: S1 2.20 [0.50,4.42] (13 fired, winners lost 1.4%); S2 1.69 [1.27,2.20] (20% of >=3x winners lost); S2b 1.68; S4 0.76; S5-India 1.985 [1.01,3.24] (3.8% winners lost, recall 7%); S3-US 1.29 (flags 50% of firms, 63% of winners); S3-India (cash+investments credit) 1.15 [0.85,1.50]; S0 loss-maker 1.12. Verdict by the fixed rule: all QUESTION, nothing hard. US graded-red pair is consistent but not proven in India (power). Weak interest cover is a real Indian signal beyond losses (O_strict lift 2.87) but costs a fifth of multibaggers. CIRP admission != failure (14 of 79 admitted rows did not fail). Survivorship: 83-85% of IBBI firms retrievable on screener; renamed/merged IBC firms (Bhushan Steel, Monnet) and 221 identifier-less IBBI rows lost. Deviations: unlabeled dead banks removed (fix), ~1 minute of two fetch streams. Research, not SEBI-registered advice.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "solvency",
+   "stage-2",
+   "hard-filters",
+   "india",
+   "calibration",
+   "redflag",
+   "method-test",
+   "survivorship-free"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "n_rows": 489,
+   "snapshots": [
+    "2016-09-30",
+    "2018-09-30"
+   ],
+   "universe": "NSE/BSE non-financial, Rs 200-20,000 cr mcap at T, standalone screener pages, live+dead",
+   "strata": {
+    "D_distress_census": {
+     "pop": 1739,
+     "rows": 177,
+     "weight": 1.0
+    },
+    "X_delisted_sample": {
+     "pop": 2132,
+     "sample": 500,
+     "rows": 5,
+     "weight": 4.264
+    },
+    "L_live_sample": {
+     "pop": 5070,
+     "sample": 900,
+     "rows": 307,
+     "weight": 5.633
+    }
+   },
+   "base_O_fail_weighted": 0.197,
+   "base_O_strict_weighted": 0.017,
+   "events": {
+    "o_liq": 19,
+    "o_cdel": 29,
+    "o_px": 165,
+    "o_fail": 168,
+    "o_strict": 33,
+    "o_cirp": 79,
+    "stopped_in_window": 42,
+    "liq_undated": 1,
+    "size_ambiguous": 20
+   },
+   "winners_ge3x": 92,
+   "lift_O_fail": {
+    "S1": [
+     2.195,
+     0.5,
+     4.42
+    ],
+    "S2": [
+     1.688,
+     1.27,
+     2.2
+    ],
+    "S2B": [
+     1.676,
+     1.35,
+     2.06
+    ],
+    "S4": [
+     0.762,
+     0.45,
+     1.15
+    ],
+    "S5": [
+     1.985,
+     1.01,
+     3.24
+    ],
+    "S5B": [
+     1.819,
+     1.07,
+     2.7
+    ],
+    "S3": [
+     1.293,
+     1.09,
+     1.5
+    ],
+    "S3_INDIA": [
+     1.151,
+     0.85,
+     1.5
+    ],
+    "S5_US": [
+     1.272,
+     0.98,
+     1.63
+    ],
+    "S0": [
+     1.123,
+     0.56,
+     1.91
+    ]
+   },
+   "lift_O_strict": {
+    "S1": [
+     2.172,
+     0.0,
+     10.34
+    ],
+    "S2": [
+     2.867,
+     1.88,
+     4.11
+    ],
+    "S2B": [
+     2.279,
+     1.7,
+     2.98
+    ],
+    "S4": [
+     1.033,
+     0.33,
+     1.9
+    ],
+    "S5": [
+     1.638,
+     0.0,
+     4.91
+    ],
+    "S3": [
+     1.554,
+     1.16,
+     1.91
+    ],
+    "S3_INDIA": [
+     1.858,
+     1.25,
+     2.55
+    ],
+    "S0": [
+     4.464,
+     1.76,
+     8.96
+    ]
+   },
+   "winners_excluded": {
+    "S1": 0.014,
+    "S2": 0.202,
+    "S2B": 0.351,
+    "S4": 0.251,
+    "S5": 0.038,
+    "S5B": 0.074,
+    "S3": 0.633,
+    "S3_INDIA": 0.474,
+    "S0": 0.064
+   },
+   "recall": {
+    "S1": 0.031,
+    "S2": 0.321,
+    "S4": 0.157,
+    "S5": 0.073,
+    "S3": 0.647
+   },
+   "verdicts": {
+    "S1": "QUESTION (lift 2.20, CI [0.50,4.42] includes 1; only 13 flagged rows)",
+    "S2": "QUESTION (1.69; excludes 20% of winners)",
+    "S2b": "QUESTION (1.68; excludes 35% of winners)",
+    "S4": "QUESTION / no signal (0.76)",
+    "S5_India": "QUESTION, borderline (1.985 [1.01,3.24]; winners lost 3.8%)",
+    "S3_US": "stays excluded (1.29; flags 50% of firms, 63% of winners)",
+    "S3_India_exploratory": "no signal (1.15 [0.85,1.50])"
+   },
+   "survivorship": {
+    "ibbi_liq_page_rate": 0.85,
+    "ibbi_cirp_page_rate": 0.83,
+    "bse_suspended_page_rate": 0.41,
+    "ibbi_rows_no_identifier": 221
+   },
+   "stage": 2,
+   "unlocks": "calibrated India solvency gate decision (keep S1/S5 as graded red on US evidence or demote to question); next power boost: add FY2014/FY2020 snapshots or full L/X census"
+  },
+  "sources": [
+   "research_notes/Backtests/solvency_flags_india.md",
+   "research_notes/Backtests/solvency_india_outputs/results.json",
+   "research_notes/Backtests/solvency_india_outputs/panel.csv",
+   "https://www.screener.in/",
+   "https://ibbi.gov.in/en/public-announcement",
+   "research_notes/Universe/india_dead_companies_2026-11-22.csv"
+  ],
+  "links": [
+   {
+    "to": "insight:bt-solvency-us-2026-summary",
+    "rel": "replicates"
+   },
+   {
+    "to": "decision:india-solvency-s3-excluded",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:disqualifiers-v2-proposal",
+    "rel": "tests"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-solvency-india-s1",
+  "title": "India solvency back-test FY2016/18: S1 negative net worth -> QUESTION (lift 2.20, CI 0.50-4.42; only 13 flagged rows) - same size as US, underpowered",
+  "body": "Negative net worth (equity capital + reserves) is rare among Rs 200-20,000 cr Indian companies (1.4% weighted). 7 of 13 flagged rows failed (43% vs 19.7% base); excludes 2 of 92 >=3x winners. One in three S1 firms entered CIRP within 5 years (33.5% vs 3.6%). Examples caught: ABG Shipyard, GTL, Jet Airways, McNally Bharat, Indosolar. Payout exemption never applied. Not refuted - not enough cases.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "solvency",
+   "stage-2",
+   "hard-filters",
+   "india",
+   "calibration",
+   "redflag",
+   "method-test",
+   "survivorship-free",
+   "s1"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "lift": [
+    2.195,
+    0.5,
+    4.42
+   ],
+   "lift_strict": [
+    2.172,
+    0.0,
+    10.34
+   ],
+   "fired": 13,
+   "known": 489,
+   "winners_excluded": 0.014
+  },
+  "sources": [
+   "research_notes/Backtests/solvency_flags_india.md",
+   "research_notes/Backtests/solvency_india_outputs/results.json",
+   "research_notes/Backtests/solvency_india_outputs/panel.csv",
+   "https://www.screener.in/",
+   "https://ibbi.gov.in/en/public-announcement",
+   "research_notes/Universe/india_dead_companies_2026-11-22.csv"
+  ],
+  "links": [
+   {
+    "to": "insight:bt-solvency-india-2026-summary",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:bt-solvency-us-s1",
+    "rel": "replicates"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-solvency-india-s2",
+  "title": "India solvency back-test FY2016/18: S2 interest cover <1.5x -> QUESTION (lift 1.69 [1.27,2.20]; 2.87 on liquidation/exit) but cuts 20% of multibaggers; <2.5x variant no better",
+  "body": "Fires on 19% of the frame; precision 32% vs 19.7% base; recall 32%. Unlike the US, not just a loss-maker proxy (S0 EBIT<0 alone lift 1.12 in India). Strongest broad Indian signal for liquidation/compulsory exit (O_strict lift 2.87 [1.88,4.11]). Excludes 20 of 91 >=3x winners -> deep-dive question, not a gate. S2b (<2.5x) lift 1.68, flags 32% of firms and 35% of winners.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "solvency",
+   "stage-2",
+   "hard-filters",
+   "india",
+   "calibration",
+   "redflag",
+   "method-test",
+   "survivorship-free",
+   "s2",
+   "interest-cover"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "lift": [
+    1.688,
+    1.27,
+    2.2
+   ],
+   "lift_strict": [
+    2.867,
+    1.88,
+    4.11
+   ],
+   "s2b_lift": [
+    1.676,
+    1.35,
+    2.06
+   ],
+   "winners_excluded": 0.202,
+   "s2b_winners_excluded": 0.351
+  },
+  "sources": [
+   "research_notes/Backtests/solvency_flags_india.md",
+   "research_notes/Backtests/solvency_india_outputs/results.json",
+   "research_notes/Backtests/solvency_india_outputs/panel.csv",
+   "https://www.screener.in/",
+   "https://ibbi.gov.in/en/public-announcement",
+   "research_notes/Universe/india_dead_companies_2026-11-22.csv"
+  ],
+  "links": [
+   {
+    "to": "insight:bt-solvency-india-2026-summary",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:bt-solvency-us-s2",
+    "rel": "replicates"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-solvency-india-s4",
+  "title": "India solvency back-test FY2016/18: S4 dividends > FCF while debt rose -> no signal (lift 0.76; FY2018 0.44) - fails in both US and India",
+  "body": "89 of 487 rows flagged; dividend payers failed less than base. Excludes 25% of >=3x winners. Drop as a solvency flag candidate in both markets (keep only as a component of S5 by the live definition until decided).",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "solvency",
+   "stage-2",
+   "hard-filters",
+   "india",
+   "calibration",
+   "redflag",
+   "method-test",
+   "survivorship-free",
+   "s4"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "lift": [
+    0.762,
+    0.45,
+    1.15
+   ],
+   "winners_excluded": 0.251
+  },
+  "sources": [
+   "research_notes/Backtests/solvency_flags_india.md",
+   "research_notes/Backtests/solvency_india_outputs/results.json",
+   "research_notes/Backtests/solvency_india_outputs/panel.csv",
+   "https://www.screener.in/",
+   "https://ibbi.gov.in/en/public-announcement",
+   "research_notes/Universe/india_dead_companies_2026-11-22.csv"
+  ],
+  "links": [
+   {
+    "to": "insight:bt-solvency-india-2026-summary",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:bt-solvency-us-s4",
+    "rel": "replicates"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-solvency-india-s5",
+  "title": "India solvency back-test FY2016/18: S5-India (>=2 of S1,S2,S4) -> QUESTION, borderline (lift 1.985 [1.01,3.24], winners lost 3.8%, recall 7%)",
+  "body": "25 of 489 rows flagged, 14 failed (39% vs 19.7%). Misses the pre-registered graded-red bar (lift >= 2.0) by 0.015; CI lower bound barely above 1. Per snapshot 2.08 (FY2016) / 1.88 (FY2018). S5b (S2b in place of S2) 1.82 [1.07,2.70], winners lost 7.4%. S5-US (incl. S3) 1.27. Consistent with US graded-red S5 (2.37) but not proven in India.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "solvency",
+   "stage-2",
+   "hard-filters",
+   "india",
+   "calibration",
+   "redflag",
+   "method-test",
+   "survivorship-free",
+   "s5"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "lift": [
+    1.985,
+    1.01,
+    3.24
+   ],
+   "lift_strict": [
+    1.638,
+    0.0,
+    4.91
+   ],
+   "s5b_lift": [
+    1.819,
+    1.07,
+    2.7
+   ],
+   "s5_us_lift": [
+    1.272,
+    0.98,
+    1.63
+   ],
+   "winners_excluded": 0.038,
+   "recall": 0.073
+  },
+  "sources": [
+   "research_notes/Backtests/solvency_flags_india.md",
+   "research_notes/Backtests/solvency_india_outputs/results.json",
+   "research_notes/Backtests/solvency_india_outputs/panel.csv",
+   "https://www.screener.in/",
+   "https://ibbi.gov.in/en/public-announcement",
+   "research_notes/Universe/india_dead_companies_2026-11-22.csv"
+  ],
+  "links": [
+   {
+    "to": "insight:bt-solvency-india-2026-summary",
+    "rel": "part_of"
+   },
+   {
+    "to": "insight:bt-solvency-us-s5",
+    "rel": "replicates"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-solvency-india-s3",
+  "title": "India solvency back-test FY2016/18: S3 short-term funding gap stays out of India S5 - US version flags 50% of firms (lift 1.29); India variant with investments credit no better (1.15)",
+  "body": "US S3 (STD > cash + 0.5 CFO): 272 of 469 flagged, lift 1.29 [1.09,1.50], excludes 63% of >=3x winners. Exploratory S3-India (STD > cash + balance-sheet investments + 0.5 CFO): 174 flagged, lift 1.15 [0.85,1.50] on O_fail, 1.86 [1.25,2.55] on O_strict, excludes 47% of winners. Supports decision:india-solvency-s3-excluded. Standalone investments include subsidiary stakes, a known weakness of the variant.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "solvency",
+   "stage-2",
+   "hard-filters",
+   "india",
+   "calibration",
+   "redflag",
+   "method-test",
+   "survivorship-free",
+   "s3"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "lift_us_def": [
+    1.293,
+    1.09,
+    1.5
+   ],
+   "lift_india_variant": [
+    1.151,
+    0.85,
+    1.5
+   ],
+   "lift_india_variant_strict": [
+    1.858,
+    1.25,
+    2.55
+   ],
+   "winners_excluded_us": 0.633,
+   "winners_excluded_india": 0.474
+  },
+  "sources": [
+   "research_notes/Backtests/solvency_flags_india.md",
+   "research_notes/Backtests/solvency_india_outputs/results.json",
+   "research_notes/Backtests/solvency_india_outputs/panel.csv",
+   "https://www.screener.in/",
+   "https://ibbi.gov.in/en/public-announcement",
+   "research_notes/Universe/india_dead_companies_2026-11-22.csv"
+  ],
+  "links": [
+   {
+    "to": "insight:bt-solvency-india-2026-summary",
+    "rel": "part_of"
+   },
+   {
+    "to": "decision:india-solvency-s3-excluded",
+    "rel": "supports"
+   }
+  ],
+  "confidence": "single-source"
+ }
+]
