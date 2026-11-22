@@ -1,0 +1,3 @@
+# Human resolution decisions, one JSON object per line (lines starting with # are ignored).
+# {"id": "thesis:paper-call:X:y", "outcome": 1, "value": 24.3, "source": "https://...", "source_date": "2027-02-05", "note": "Q3 press release p2", "decided_by": "user"}
+# outcome: 1 (event happened), 0 (did not), "void" (source no longer publishes the metric; not scored)

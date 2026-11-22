@@ -1,0 +1,881 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//fein//paper-call scoreboard//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:thesis-paper-call-INFY-q3fy27-guidance-midpoint-raised@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270201
+SUMMARY:Resolve paper call INFY (c/assisted)
+DESCRIPTION:thesis:paper-call:INFY:q3fy27-guidance-midpoint-raised | YES if
+  the FY27 cc revenue guidance announced with Q3 FY27 results has a midpoin
+ t strictly greater than 1.5% (e.g.\, 1.5–2.0% or 1.75–2.25%). Hold at 
+ 1–2% or any cut = NO.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-ISRG-fy2026-procedure-growth-14-5-plus@fein-scoreb
+ oard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270201
+SUMMARY:Resolve paper call US-ISRG (a/assisted)
+DESCRIPTION:thesis:paper-call:US-ISRG:fy2026-procedure-growth-14-5-plus | Y
+ ES if ISRG's reported FY2026 worldwide da Vinci procedure growth (Q4 2026 
+ release or preliminary January announcement) is ≥14.5% as stated\; 'appr
+ oximately 14%' = NO\, 'approximately 15%' or '14.5%' = YES.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-JPM-initial-fy27-nii-guide-110bn-plus@fein-scorebo
+ ard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270201
+SUMMARY:Resolve paper call US-JPM (c/assisted)
+DESCRIPTION:thesis:paper-call:US-JPM:initial-fy27-nii-guide-110bn-plus | YE
+ S if the firmwide (total\, managed basis) FY2027 NII outlook in JPM's Q4 2
+ 026 earnings presentation/call is ≥$110bn ('~$110bn' or a range with mid
+ point ≥$110bn counts). If only NII ex-Markets is guided\, add the stated
+  Markets NII assumption if given\; otherwise void.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-PG-q2fy27-organic-sales-3pct-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270201
+SUMMARY:Resolve paper call US-PG (a/assisted)
+DESCRIPTION:thesis:paper-call:US-PG:q2fy27-organic-sales-3pct-plus | YES if
+  P&G's reported organic sales growth for the quarter ended 31-Dec-2026 (Q2
+  FY27 earnings release) is ≥3% (as rounded by the company).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-PNC-q4-2026-nii-4250m-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270201
+SUMMARY:Resolve paper call US-PNC (a/structured)
+DESCRIPTION:thesis:paper-call:US-PNC:q4-2026-nii-4250m-plus | YES if PNC's 
+ reported total net interest income (GAAP\, not fully taxable-equivalent) f
+ or the quarter ended 31-Dec-2026 is ≥$4\,250m per its Q4 2026 earnings r
+ elease.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-UNH-2027-initial-eps-guide-22-50@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270201
+SUMMARY:Resolve paper call US-UNH (c/assisted)
+DESCRIPTION:thesis:paper-call:US-UNH:2027-initial-eps-guide-22-50 | YES if 
+ the 2027 adjusted EPS outlook first issued (expected with Q4 2026 results\
+ , Jan-2027) has a low end or 'at least' floor ≥ $22.50. If issued as a s
+ ingle point\, use that point.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-HDFCAMC-q3fy27-revenue-1200cr-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270215
+DTEND;VALUE=DATE:20270216
+SUMMARY:Resolve paper call HDFCAMC (a/structured)
+DESCRIPTION:thesis:paper-call:HDFCAMC:q3fy27-revenue-1200cr-plus | YES if H
+ DFC AMC's revenue from operations (consolidated\; standalone if only that 
+ is given) for the quarter ended 31-Dec-2026 is ≥₹1\,200 cr (₹12.0 bn
+ ).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-ICICIGI-q3fy27-combined-ratio-103-5-or-better@fein-sc
+ oreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270215
+DTEND;VALUE=DATE:20270216
+SUMMARY:Resolve paper call ICICIGI (a/assisted)
+DESCRIPTION:thesis:paper-call:ICICIGI:q3fy27-combined-ratio-103-5-or-better
+  | YES if ICICI Lombard's reported combined ratio (n basis\, including CAT
+  losses\, as stated in the Q3 FY27 press release/presentation) for the qua
+ rter ended 31-Dec-2026 is ≤103.5%.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-SBICARD-q3fy27-gnpa-at-or-below-1-90@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270215
+DTEND;VALUE=DATE:20270216
+SUMMARY:Resolve paper call SBICARD (a/assisted)
+DESCRIPTION:thesis:paper-call:SBICARD:q3fy27-gnpa-at-or-below-1-90 | YES if
+  SBI Cards and Payment Services' reported gross NPA ratio (% of gross adva
+ nces/receivables) for the quarter ended 31-Dec-2026 is ≤1.90% (two decim
+ als as reported).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-GE-fy2026-adj-eps-above-8-10@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270215
+DTEND;VALUE=DATE:20270216
+SUMMARY:Resolve paper call US-GE (a/assisted)
+DESCRIPTION:thesis:paper-call:US-GE:fy2026-adj-eps-above-8-10 | YES if GE A
+ erospace's reported FY2026 adjusted EPS (Q4 2026 earnings release\, non-GA
+ AP as defined by the company) ≥ $8.10.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-XOM-q4-2026-adj-eps-above-q3@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270215
+DTEND;VALUE=DATE:20270216
+SUMMARY:Resolve paper call US-XOM (a/assisted)
+DESCRIPTION:thesis:paper-call:US-XOM:q4-2026-adj-eps-above-q3 | YES if Exxo
+ nMobil's Q4 2026 earnings excluding identified items per share (company-de
+ fined non-GAAP adjusted EPS) is ≥$4.23.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-AMD-q4-2026-revenue-above-top-of-guide@fein-scoreb
+ oard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270220
+DTEND;VALUE=DATE:20270221
+SUMMARY:Resolve paper call US-AMD (a/structured)
+DESCRIPTION:thesis:paper-call:US-AMD:q4-2026-revenue-above-top-of-guide | Y
+ ES if AMD's reported Q4 2026 revenue (8-K earnings release) ≥ $17.51B.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-AFCONS-q3fy27-revenue-yoy-nonnegative@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call AFCONS (a/structured)
+DESCRIPTION:thesis:paper-call:AFCONS:q3fy27-revenue-yoy-nonnegative | YES i
+ f Afcons Infrastructure's consolidated revenue from operations for the qua
+ rter ended 31-Dec-2026 (results filing\; screener.in consolidated 'Sales')
+  is ≥₹2\,976 cr. Other income is excluded.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-ASIANPAINT-q3fy27-standalone-opm-20pct-plus@fein-scor
+ eboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call ASIANPAINT (a/structured)
+DESCRIPTION:thesis:paper-call:ASIANPAINT:q3fy27-standalone-opm-20pct-plus |
+  YES if Q3 FY27 standalone Operating Profit ÷ Sales from screener.in (sta
+ ndalone view) ≥20.0%\; company-reported standalone PBDIT margin used as 
+ tiebreak if screener is unavailable.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-BSE-q3fy27-revenue-record-above-1566cr@fein-scoreboar
+ d
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call BSE (a/structured)
+DESCRIPTION:thesis:paper-call:BSE:q3fy27-revenue-record-above-1566cr | YES 
+ if BSE's consolidated revenue from operations for the quarter ended 31-Dec
+ -2026 (results filing\; screener.in 'Sales') is > ₹1\,566 cr.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-CUMMINSIND-q3fy27-opm-17pct-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call CUMMINSIND (a/structured)
+DESCRIPTION:thesis:paper-call:CUMMINSIND:q3fy27-opm-17pct-plus | YES if Q3 
+ FY27 (Dec-2026) standalone Operating Profit ÷ Sales on screener.in (stand
+ alone view) ≥17.0%.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-DEEPAKNTR-q3fy27-op-500cr-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call DEEPAKNTR (a/structured)
+DESCRIPTION:thesis:paper-call:DEEPAKNTR:q3fy27-op-500cr-plus | YES if Deepa
+ k Nitrite's consolidated Operating Profit (screener.in quarterly table\; e
+ quivalently EBITDA excluding other income) for the quarter ended 31-Dec-20
+ 26 is ≥₹500 cr.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-EICHERMOT-q3fy27-opm-24pct-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call EICHERMOT (a/structured)
+DESCRIPTION:thesis:paper-call:EICHERMOT:q3fy27-opm-24pct-plus | YES if Eich
+ er Motors' consolidated Operating Profit ÷ Sales for the quarter ended 31
+ -Dec-2026\, from screener.in's consolidated quarterly table (or recomputed
+  as EBITDA ÷ revenue from operations from the results filing)\, is ≥24.
+ 0% (one decimal).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-HINDUNILVR-q3fy27-opm-22pct-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call HINDUNILVR (a/structured)
+DESCRIPTION:thesis:paper-call:HINDUNILVR:q3fy27-opm-22pct-plus | YES if HUL
+ 's Q3 FY27 (Dec-2026 quarter) consolidated EBITDA margin as reported by th
+ e company is ≥22.0%\; cross-check with screener Operating Profit ÷ Sale
+ s (if they differ\, the company-reported figure governs).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-HONASA-q3fy27-opm-12pct-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call HONASA (a/structured)
+DESCRIPTION:thesis:paper-call:HONASA:q3fy27-opm-12pct-plus | YES if Q3 FY27
+  consolidated Operating Profit ÷ Sales on screener.in ≥12.0% (company-r
+ eported EBITDA margin used if screener unavailable).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-KAYNES-q3fy27-revenue-1050cr-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call KAYNES (a/structured)
+DESCRIPTION:thesis:paper-call:KAYNES:q3fy27-revenue-1050cr-plus | YES if Ka
+ ynes Technology's consolidated revenue from operations for the quarter end
+ ed 31-Dec-2026 (results filing\; equivalently screener.in consolidated 'Sa
+ les') is ≥₹1\,050 cr. Use the figure as first reported\, not later res
+ tatements.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-LAURUSLABS-q3fy27-opm-30pct-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call LAURUSLABS (a/structured)
+DESCRIPTION:thesis:paper-call:LAURUSLABS:q3fy27-opm-30pct-plus | YES if Q3 
+ FY27 (Dec-2026 quarter) consolidated Operating Profit ÷ Sales on screener
+ .in is ≥30.0% (company-reported EBITDA margin used if screener unavailab
+ le).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-LUPIN-q3fy27-ebitda-margin-24pct-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call LUPIN (a/assisted)
+DESCRIPTION:thesis:paper-call:LUPIN:q3fy27-ebitda-margin-24pct-plus | YES i
+ f the EBITDA margin excluding forex and other income for Q3 FY27\, as stat
+ ed in Lupin's Q3 press release/call\, is ≥24.0%. If not stated\, compute
+  (EBITDA − other income − forex gain) ÷ revenue from operations from 
+ the results.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-NAVINFLUOR-chemours-plant-commissioned-q3fy27@fein-sc
+ oreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call NAVINFLUOR (c/assisted)
+DESCRIPTION:thesis:paper-call:NAVINFLUOR:chemours-plant-commissioned-q3fy27
+  | YES if a Navin filing\, press release\, investor presentation or the Q3
+  FY27 earnings call states that the Chemours/advanced-cooling (two-phase i
+ mmersion fluid) plant was commissioned (mechanically complete and started 
+ production) on or before 31-Dec-2026. 'Commissioning in Q4'/'in January' =
+  NO.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-POLYCAB-q3fy27-opm-13pct-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call POLYCAB (a/structured)
+DESCRIPTION:thesis:paper-call:POLYCAB:q3fy27-opm-13pct-plus | YES if Polyca
+ b's consolidated Operating Profit ÷ Sales for the quarter ended 31-Dec-20
+ 26 (screener.in quarterly table\, or EBITDA ÷ revenue from operations fro
+ m the results) is ≥13.0%.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-SONACOMS-q3fy27-opm-23pct-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call SONACOMS (a/structured)
+DESCRIPTION:thesis:paper-call:SONACOMS:q3fy27-opm-23pct-plus | YES if Q3 FY
+ 27 consolidated Operating Profit ÷ Sales on screener.in ≥23.0% (company
+ -reported EBITDA margin used if screener unavailable).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-ULTRACEMCO-q3fy27-op-4500cr-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call ULTRACEMCO (a/structured)
+DESCRIPTION:thesis:paper-call:ULTRACEMCO:q3fy27-op-4500cr-plus | YES if Ult
+ raTech's consolidated Operating Profit (screener.in quarterly table\; equi
+ valently EBITDA excluding other income from the results) for the quarter e
+ nded 31-Dec-2026 is ≥₹4\,500 cr.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-UNIPARTS-fire-rebuild-by-dec-2026@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call UNIPARTS (c/assisted)
+DESCRIPTION:thesis:paper-call:UNIPARTS:fire-rebuild-by-dec-2026 | (no writt
+ en rule\; from title) Uniparts confirms Ludhiana finishing shop back onlin
+ e by 31-Dec-2026 (per Q3 call/filings)
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-UNIPARTS-q3fy27-rev-in-line-q1@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call UNIPARTS (a/structured)
+DESCRIPTION:thesis:paper-call:UNIPARTS:q3fy27-rev-in-line-q1 | (no written 
+ rule\; from title) Uniparts Q3 FY27 revenue within ±7% of Q1 FY27 (~₹34
+ 7 cr)\, i.e. ₹323–371 cr
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-KO-initial-2027-organic-revenue-guide-6pct-plus@fe
+ in-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call US-KO (c/assisted)
+DESCRIPTION:thesis:paper-call:US-KO:initial-2027-organic-revenue-guide-6pct
+ -plus | YES if the FY2027 organic revenue (non-GAAP) growth guidance in KO
+ 's Q4 2026 earnings release has a lower bound ≥6% ('6% to 7%'\, 'at leas
+ t 6%'\, '~6%' count\; '5% to 6%' does not).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-WMT-fy27-adj-eps-at-or-above-2-89@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270301
+DTEND;VALUE=DATE:20270302
+SUMMARY:Resolve paper call US-WMT (a/assisted)
+DESCRIPTION:thesis:paper-call:US-WMT:fy27-adj-eps-at-or-above-2-89 | YES if
+  Walmart's reported FY27 adjusted EPS (Q4 FY27 earnings release) ≥ $2.89
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-HIMS-q4-2026-adj-ebitda-80m-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270310
+DTEND;VALUE=DATE:20270311
+SUMMARY:Resolve paper call US-HIMS (a/assisted)
+DESCRIPTION:thesis:paper-call:US-HIMS:q4-2026-adj-ebitda-80m-plus | YES if 
+ HIMS's reported Q4 2026 adjusted EBITDA (Q4 earnings release) ≥ $80.0M.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-NVDA-q4fy27-revenue-above-top-of-guide@fein-scoreb
+ oard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270310
+DTEND;VALUE=DATE:20270311
+SUMMARY:Resolve paper call US-NVDA (a/structured)
+DESCRIPTION:thesis:paper-call:US-NVDA:q4fy27-revenue-above-top-of-guide | Y
+ ES if NVIDIA's reported Q4 FY27 total revenue (8-K Item 2.02 earnings rele
+ ase) ≥ $133.9B.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-SKIPPER-450kt-commissioned-by-q4-start@fein-scoreboar
+ d
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270315
+DTEND;VALUE=DATE:20270316
+SUMMARY:Resolve paper call SKIPPER (c/assisted)
+DESCRIPTION:thesis:paper-call:SKIPPER:450kt-commissioned-by-q4-start | (no 
+ written rule\; from title) Skipper announces 450k t capacity commissioned 
+ by 31-Jan-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-AAON-fy2026-sales-growth-72pct-plus@fein-scoreboar
+ d
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270315
+DTEND;VALUE=DATE:20270316
+SUMMARY:Resolve paper call US-AAON (a/structured)
+DESCRIPTION:thesis:paper-call:US-AAON:fy2026-sales-growth-72pct-plus | YES 
+ if AAON's FY2026 reported net sales ÷ FY2025 net sales − 1 ≥ 72.0% (p
+ er the Q4/FY2026 earnings release or 10-K\; use the company's stated growt
+ h figure if given).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-CRM-initial-fy28-revenue-guide-10pct-plus@fein-sco
+ reboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270315
+DTEND;VALUE=DATE:20270316
+SUMMARY:Resolve paper call US-CRM (c/assisted)
+DESCRIPTION:thesis:paper-call:US-CRM:initial-fy28-revenue-guide-10pct-plus 
+ | YES if (midpoint of the initial FY28 revenue guidance range in Salesforc
+ e's Q4 FY27 release ÷ FY27 reported revenue) − 1 ≥ 10.0%. Use reporte
+ d (not constant-currency) figures.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-MPWR-material-weakness-remediated-fy26-10k@fein-sc
+ oreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270315
+DTEND;VALUE=DATE:20270316
+SUMMARY:Resolve paper call US-MPWR (c/assisted)
+DESCRIPTION:thesis:paper-call:US-MPWR:material-weakness-remediated-fy26-10k
+  | YES if MPWR's 10-K for fiscal year ended 31-Dec-2026 states that intern
+ al control over financial reporting was effective as of 31-Dec-2026 and th
+ at the previously reported material weakness has been remediated (and no n
+ ew material weakness is reported). NO otherwise\, including if the 10-K is
+  not filed by 15-Mar-2027.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-O-initial-2027-affo-guide-midpoint-4-59-plus@fein-
+ scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270315
+DTEND;VALUE=DATE:20270316
+SUMMARY:Resolve paper call US-O (c/assisted)
+DESCRIPTION:thesis:paper-call:US-O:initial-2027-affo-guide-midpoint-4-59-pl
+ us | YES if the first 2027 AFFO per share guidance range Realty Income pub
+ lishes (whenever issued\, normally with Q4 2026 results) has a midpoint 
+ ≥$4.59. If no 2027 guidance is published by 15-Mar-2027\, void.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-TGT-q4-2026-comps-3pct-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270315
+DTEND;VALUE=DATE:20270316
+SUMMARY:Resolve paper call US-TGT (a/assisted)
+DESCRIPTION:thesis:paper-call:US-TGT:q4-2026-comps-3pct-plus | YES if Targe
+ t's reported Q4 2026 comparable sales change (Q4 earnings release) ≥ +3.
+ 0%.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-FIVE-fy2026-comps-11pct-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270331
+DTEND;VALUE=DATE:20270401
+SUMMARY:Resolve paper call US-FIVE (a/assisted)
+DESCRIPTION:thesis:paper-call:US-FIVE:fy2026-comps-11pct-plus | YES if Five
+  Below's reported FY2026 (year ending ~Jan-2027) comparable sales increase
+  (Q4 FY26 earnings release) ≥ +11.0%.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-PAYO-material-weakness-remediated-fy26-10k@fein-sc
+ oreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270331
+DTEND;VALUE=DATE:20270401
+SUMMARY:Resolve paper call US-PAYO (c/assisted)
+DESCRIPTION:thesis:paper-call:US-PAYO:material-weakness-remediated-fy26-10k
+  | YES if Payoneer's 10-K for fiscal year ended 31-Dec-2026 states ICFR wa
+ s effective as of 31-Dec-2026 and the material weakness disclosed in the Q
+ 3 2026 10-Q is remediated\, with no new material weakness. NO otherwise\, 
+ including if no 10-K is filed by 31-Mar-2027.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-ULTA-fy2026-eps-at-or-above-29@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270331
+DTEND;VALUE=DATE:20270401
+SUMMARY:Resolve paper call US-ULTA (a/structured)
+DESCRIPTION:thesis:paper-call:US-ULTA:fy2026-eps-at-or-above-29 | YES if Ul
+ ta's reported FY2026 diluted EPS (Q4 FY26 earnings release) ≥ $29.00.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-PERSISTENT-nagarro-deal-closes-by-mar27@fein-scoreboa
+ rd
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270415
+DTEND;VALUE=DATE:20270416
+SUMMARY:Resolve paper call PERSISTENT (c/assisted)
+DESCRIPTION:thesis:paper-call:PERSISTENT:nagarro-deal-closes-by-mar27 | YES
+  if\, on or before 31-Mar-2027\, Persistent (NSE filing or press release) 
+ announces that the Nagarro acquisition/offer has completed (settlement/clo
+ sing of the takeover offer). Completion of the later squeeze-out is not re
+ quired. Announcement only of further approvals = NO.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-TATASTEEL-nl-binding-decarb-agreement-by-mar27@fein-s
+ coreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270415
+DTEND;VALUE=DATE:20270416
+SUMMARY:Resolve paper call TATASTEEL (c/assisted)
+DESCRIPTION:thesis:paper-call:TATASTEEL:nl-binding-decarb-agreement-by-mar2
+ 7 | YES if\, on or before 31-Mar-2027\, Tata Steel (stock-exchange filing 
+ or press release) announces a signed binding/definitive agreement (e.g.\, 
+ 'agreement'\, 'binding term sheet'\, 'final investment framework') with th
+ e Dutch State and/or Province of North Holland for the IJmuiden decarbonis
+ ation/health project. A further extension of the LoI\, an MoU or a non-bin
+ ding framework = NO.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-TVSMOTOR-q4fy27-volume-growth-15pct-plus@fein-scorebo
+ ard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270415
+DTEND;VALUE=DATE:20270416
+SUMMARY:Resolve paper call TVSMOTOR (a/assisted)
+DESCRIPTION:thesis:paper-call:TVSMOTOR:q4fy27-volume-growth-15pct-plus | YE
+ S if the sum of TVS Motor's reported total sales (2W + 3W\, domestic + exp
+ orts\, incl. EV) for Jan\, Feb and Mar 2027 ÷ the same sum for Jan–Mar 
+ 2026 − 1 ≥ 15.0%\, per TVS monthly sales press releases.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-NEE-virginia-scc-approves-dominion-merger-by-mar27
+ @fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270415
+DTEND;VALUE=DATE:20270416
+SUMMARY:Resolve paper call US-NEE (c/assisted)
+DESCRIPTION:thesis:paper-call:US-NEE:virginia-scc-approves-dominion-merger-
+ by-mar27 | YES if the Virginia SCC issues a final order approving the Next
+ Era Energy–Dominion Energy merger (approval with conditions counts\, eve
+ n if the companies later contest conditions) on or before 31-Mar-2027\, pe
+ r the SCC docket or a company 8-K/press release. A rejection\, or no final
+  order by that date\, is NO.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-GODREJPROP-fy27-bookings-40000cr-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270430
+DTEND;VALUE=DATE:20270501
+SUMMARY:Resolve paper call GODREJPROP (a/assisted)
+DESCRIPTION:thesis:paper-call:GODREJPROP:fy27-bookings-40000cr-plus | YES i
+ f Godrej Properties' reported FY27 (Apr-2026–Mar-2027) booking value (sa
+ les bookings)\, per its Q4 FY27 operational update or results presentation
+ \, is ≥₹40\,000 cr.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-HCLTECH-fy27-cc-growth-above-midpoint@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270430
+DTEND;VALUE=DATE:20270501
+SUMMARY:Resolve paper call HCLTECH (a/assisted)
+DESCRIPTION:thesis:paper-call:HCLTECH:fy27-cc-growth-above-midpoint | YES i
+ f HCLTech's reported FY27 company revenue growth in constant currency (Q4 
+ FY27 press release) is ≥3.25%.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-INDOTECH-promoter-pledge-reduced-by-mar27@fein-scoreb
+ oard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270430
+DTEND;VALUE=DATE:20270501
+SUMMARY:Resolve paper call INDOTECH (a/structured)
+DESCRIPTION:thesis:paper-call:INDOTECH:promoter-pledge-reduced-by-mar27 | Y
+ ES if the NSE pledge/encumbrance disclosure for the 31-Mar-2027 shareholdi
+ ng pattern shows promoter shares pledged/encumbered as % of total shares <
+  57.93% (a fall caused only by the promoter selling pledged shares still c
+ ounts as YES\; any increase or no change = NO).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-AUBANK-fy27-credit-cost-within-90bps@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270515
+DTEND;VALUE=DATE:20270516
+SUMMARY:Resolve paper call AUBANK (d/human)
+DESCRIPTION:thesis:paper-call:AUBANK:fy27-credit-cost-within-90bps | YES if
+  AU's FY27 credit cost on the same basis as the guidance (management state
+ s ~90 bps excl. CGFMU premium\; H1 was 73–74 bps) is ≤0.90%\, as state
+ d in the Q4 FY27 presentation or call. If only the incl.-CGFMU figure is g
+ iven\, YES requires it ≤0.97% (guide + H1 premium gap ~7 bps).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-BAJFINANCE-fy27-aum-growth-26pct-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270515
+DTEND;VALUE=DATE:20270516
+SUMMARY:Resolve paper call BAJFINANCE (a/assisted)
+DESCRIPTION:thesis:paper-call:BAJFINANCE:fy27-aum-growth-26pct-plus | YES i
+ f consolidated AUM at 31-Mar-2027 ÷ consolidated AUM at 31-Mar-2026 − 1
+  ≥ 26.0% (both as stated in BFL's Q4 FY27 results press release/investor
+  deck\; use BFL's own reported YoY if it states one).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-HDFCLIFE-fy27-vnb-growth-12pct-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270515
+DTEND;VALUE=DATE:20270516
+SUMMARY:Resolve paper call HDFCLIFE (a/assisted)
+DESCRIPTION:thesis:paper-call:HDFCLIFE:fy27-vnb-growth-12pct-plus | YES if 
+ HDFC Life's reported FY27 VNB ÷ FY26 VNB (₹4\,034 cr\, or FY26 as resta
+ ted in the Q4 FY27 deck) − 1 ≥ 12.0%\, using the company's stated grow
+ th if given.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-ICICIBANK-q4fy27-nim-above-q3fy27@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270515
+DTEND;VALUE=DATE:20270516
+SUMMARY:Resolve paper call ICICIBANK (a/assisted)
+DESCRIPTION:thesis:paper-call:ICICIBANK:q4fy27-nim-above-q3fy27 | YES if th
+ e net interest margin ICICI Bank reports for Q4 FY27 (Jan–Mar 2027) in i
+ ts Q4 results/presentation is strictly greater than the NIM it reports for
+  Q3 FY27 (as stated in the Q3 release\, both on the bank's headline basis)
+ . Equal = NO.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-BAJAJCON-fy27-revenue-growth-17pct-plus@fein-scoreboa
+ rd
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call BAJAJCON (a/structured)
+DESCRIPTION:thesis:paper-call:BAJAJCON:fy27-revenue-growth-17pct-plus | YES
+  if Bajaj Consumer Care's FY27 consolidated revenue from operations ÷ FY2
+ 6 consolidated revenue from operations − 1 ≥ 17.0% (company's own repo
+ rted growth figure if stated\; else from the audited results\; screener.in
+  annual table as fallback).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-BEL-fy27-order-inflow-25000cr-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call BEL (a/assisted)
+DESCRIPTION:thesis:paper-call:BEL:fy27-order-inflow-25000cr-plus | YES if B
+ EL's FY27 total order inflow (orders received 1-Apr-2026 to 31-Mar-2027)\,
+  as stated in its Q4 FY27 results/call or an April-2027 order-book disclos
+ ure\, is ≥₹25\,000 cr (QRSAM included if received).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-IOLCP-fy27-opm-14pct-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call IOLCP (a/structured)
+DESCRIPTION:thesis:paper-call:IOLCP:fy27-opm-14pct-plus | YES if FY27 conso
+ lidated Operating Profit ÷ Sales on screener.in's annual P&L ≥14.0% (if
+  screener is unavailable\, EBITDA excl. other income ÷ revenue from opera
+ tions from the Q4 FY27 results).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-MARICO-fy27-ebitda-growth-24pct-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call MARICO (a/structured)
+DESCRIPTION:thesis:paper-call:MARICO:fy27-ebitda-growth-24pct-plus | YES if
+  Marico's consolidated EBITDA for FY27 ÷ FY26 − 1 ≥ 24.0%\, using the
+  company's reported EBITDA (Q4 FY27 information update/press release)\; el
+ se screener Operating Profit FY27 vs FY26.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-NTPC-fy27-re-addition-4-8gw@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call NTPC (d/human)
+DESCRIPTION:thesis:paper-call:NTPC:fy27-re-addition-4-8gw | YES if NTPC (gr
+ oup\, incl. NGEL and JVs as NTPC reports it) states RE (solar + wind) capa
+ city added/declared commercial in FY27 ≥4\,800 MW in its Q4 FY27 results
+  presentation/call or NGEL's Q4 FY27 disclosures (operational RE capacity 
+ 31-Mar-2027 minus 31-Mar-2026).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-SKIPPER-fy27-ebitda-margin-10pct-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call SKIPPER (a/structured)
+DESCRIPTION:thesis:paper-call:SKIPPER:fy27-ebitda-margin-10pct-plus | (no w
+ ritten rule\; from title) Skipper FY27 EBITDA margin ≥10.0%
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-SKIPPER-fy27-inflow-7500cr@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call SKIPPER (a/assisted)
+DESCRIPTION:thesis:paper-call:SKIPPER:fy27-inflow-7500cr | (no written rule
+ \; from title) Skipper FY27 order inflow ≥ ₹7\,500 cr
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-SKIPPER-fy27-revenue-13pct-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call SKIPPER (a/structured)
+DESCRIPTION:thesis:paper-call:SKIPPER:fy27-revenue-13pct-plus | (no written
+  rule\; from title) Skipper FY27 revenue growth ≥13% (its 'at worst' flo
+ or)
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-TATAPOWER-fy27-capacity-addition-2-5gw@fein-scoreboar
+ d
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call TATAPOWER (d/human)
+DESCRIPTION:thesis:paper-call:TATAPOWER:fy27-capacity-addition-2-5gw | YES 
+ if Tata Power's Q4 FY27 results presentation/press release states renewabl
+ e (utility-scale + group captive\, as Tata Power itself counts it) capacit
+ y commissioned/added during FY27 ≥2.5 GW (2\,500 MW). Rooftop/distribute
+ d solar excluded unless Tata Power includes it in the same 2.5 GW target d
+ efinition.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-TRANSRAILL-fy27-order-intake-10000cr@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call TRANSRAILL (a/assisted)
+DESCRIPTION:thesis:paper-call:TRANSRAILL:fy27-order-intake-10000cr | YES if
+  Transrail reports FY27 order intake/inflow (incl. L1 converted to orders 
+ within FY27\, as the company counts it) ≥₹10\,000 cr in its Q4 FY27 pr
+ esentation\, press release or call.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-UNIPARTS-fy27-rev-growth-20pct-plus@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call UNIPARTS (a/structured)
+DESCRIPTION:thesis:paper-call:UNIPARTS:fy27-rev-growth-20pct-plus | (no wri
+ tten rule\; from title) Uniparts FY27 consolidated revenue growth ≥20% Y
+ oY
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-AAPL-buyback-authorization-100bn-may27@fein-scoreb
+ oard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call US-AAPL (c/assisted)
+DESCRIPTION:thesis:paper-call:US-AAPL:buyback-authorization-100bn-may27 | Y
+ ES if Apple's fiscal Q2 2027 earnings release (or another announcement on 
+ or before 31-May-2027) authorizes a new/additional repurchase program of 
+ ≥$100B.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-DECK-fy27-eps-at-or-above-7-95@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270605
+DTEND;VALUE=DATE:20270606
+SUMMARY:Resolve paper call US-DECK (a/structured)
+DESCRIPTION:thesis:paper-call:US-DECK:fy27-eps-at-or-above-7-95 | YES if De
+ ckers' reported FY27 (ending 31-Mar-2027) diluted EPS (Q4 FY27 earnings re
+ lease) ≥ $7.95\, as reported (including tariff-refund effects).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-DIXON-vivo-jv-production-starts-q4fy27@fein-scoreboar
+ d
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270615
+DTEND;VALUE=DATE:20270616
+SUMMARY:Resolve paper call DIXON (c/assisted)
+DESCRIPTION:thesis:paper-call:DIXON:vivo-jv-production-starts-q4fy27 | YES 
+ if Dixon's Q4 FY27 results\, press release or earnings call states that th
+ e Vivo JV commenced commercial production and/or was consolidated (revenue
+  included) in Q4 FY27 (on or before 31-Mar-2027). Statements that it will 
+ start in Q1 FY28 or later = NO.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-BHARTIARTL-prepaid-tariff-hike-by-jun27@fein-scoreboa
+ rd
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270630
+DTEND;VALUE=DATE:20270701
+SUMMARY:Resolve paper call BHARTIARTL (d/human)
+DESCRIPTION:thesis:paper-call:BHARTIARTL:prepaid-tariff-hike-by-jun27 | YES
+  if\, between 21-Nov-2026 and 30-Jun-2027\, Bharti Airtel announces (press
+  release\, NSE filing or widely reported company statement) increases to i
+ ts prepaid mobile tariffs under which its most popular 28-day unlimited pl
+ an price rises ≥10%. Plan withdrawals\, validity cuts or postpaid-only c
+ hanges = NO.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-GENUSPOWER-cold-valuation-beats-nifty-to-jun27@fein-s
+ coreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270630
+DTEND;VALUE=DATE:20270701
+SUMMARY:Resolve paper call GENUSPOWER (b/structured)
+DESCRIPTION:thesis:paper-call:GENUSPOWER:cold-valuation-beats-nifty-to-jun2
+ 7 | YES if (Genus close on NSE 30-Jun-2027 ÷ 266.0) > (Nifty 50 close 30-
+ Jun-2027 ÷ 25\,800.6). Use the last trading day ≤30-Jun-2027\; adjust G
+ enus for any split/bonus\; dividends ignored for both.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-HINDALCO-peak-cycle-cheap-vs-nifty-to-jun27@fein-scor
+ eboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270630
+DTEND;VALUE=DATE:20270701
+SUMMARY:Resolve paper call HINDALCO (b/structured)
+DESCRIPTION:thesis:paper-call:HINDALCO:peak-cycle-cheap-vs-nifty-to-jun27 |
+  YES if (Hindalco NSE close on 30-Jun-2027 ÷ 929.5) > (Nifty 50 close on 
+ 30-Jun-2027 ÷ 25\,800.6). Use the last trading day ≤30-Jun-2027\; adjus
+ t for splits/bonuses\; dividends ignored.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-TITAN-cooler-valuation-beats-nifty-to-jun27@fein-scor
+ eboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270630
+DTEND;VALUE=DATE:20270701
+SUMMARY:Resolve paper call TITAN (b/structured)
+DESCRIPTION:thesis:paper-call:TITAN:cooler-valuation-beats-nifty-to-jun27 |
+  YES if (Titan NSE close on 30-Jun-2027 ÷ 4\,620.0) > (Nifty 50 close on 
+ 30-Jun-2027 ÷ 25\,800.6). Use the last trading day ≤30-Jun-2027\; adjus
+ t for splits/bonuses\; dividends ignored.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-ADBE-cold-valuation-beats-spy-to-jun27@fein-scoreb
+ oard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270630
+DTEND;VALUE=DATE:20270701
+SUMMARY:Resolve paper call US-ADBE (b/structured)
+DESCRIPTION:thesis:paper-call:US-ADBE:cold-valuation-beats-spy-to-jun27 | Y
+ ES if (ADBE close on 30-Jun-2027 ÷ 217.71) > (SPY close on 30-Jun-2027 ÷
+  689.81). Use the last trading day ≤30-Jun-2027\; adjust for splits\; di
+ vidends ignored.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-CAT-dividend-raise-7pct-by-jun27@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270630
+DTEND;VALUE=DATE:20270701
+SUMMARY:Resolve paper call US-CAT (c/structured)
+DESCRIPTION:thesis:paper-call:US-CAT:dividend-raise-7pct-by-jun27 | YES if\
+ , on or before 30-Jun-2027\, Caterpillar declares a regular quarterly divi
+ dend ≥ $1.745 per share (rounded: ≥$1.75).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-COST-hot-valuation-beats-spy-to-jun27@fein-scorebo
+ ard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270630
+DTEND;VALUE=DATE:20270701
+SUMMARY:Resolve paper call US-COST (b/structured)
+DESCRIPTION:thesis:paper-call:US-COST:hot-valuation-beats-spy-to-jun27 | YE
+ S if (COST close on 30-Jun-2027 ÷ 1\,102.15) > (SPY close on 30-Jun-2027 
+ ÷ 689.81). Use the last trading day ≤30-Jun-2027\; adjust for splits\; 
+ special and regular dividends ignored.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-OPTU-chapter11-filing-by-jun27@fein-scoreboard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270630
+DTEND;VALUE=DATE:20270701
+SUMMARY:Resolve paper call US-OPTU (c/structured)
+DESCRIPTION:thesis:paper-call:US-OPTU:chapter11-filing-by-jun27 | YES if Op
+ timum Communications\, Inc.\, CSC Holdings LLC or any parent/intermediate 
+ holding company of CSC Holdings files a voluntary or involuntary petition 
+ under Chapter 11 (including a pre-packaged case) on or before 30-Jun-2027\
+ , per an 8-K or the bankruptcy docket. A purely out-of-court exchange does
+  not count.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-PLTR-hot-valuation-beats-spy-to-jun27@fein-scorebo
+ ard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270630
+DTEND;VALUE=DATE:20270701
+SUMMARY:Resolve paper call US-PLTR (b/structured)
+DESCRIPTION:thesis:paper-call:US-PLTR:hot-valuation-beats-spy-to-jun27 | YE
+ S if (PLTR close 30-Jun-2027 ÷ 143.49) > (SPY close 30-Jun-2027 ÷ 689.81
+ )\; last trading day ≤30-Jun-2027\; split-adjust\; dividends ignored.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-US-SNOW-hot-valuation-beats-spy-to-jun27@fein-scorebo
+ ard
+DTSTAMP:20261122T062801Z
+DTSTART;VALUE=DATE:20270630
+DTEND;VALUE=DATE:20270701
+SUMMARY:Resolve paper call US-SNOW (b/structured)
+DESCRIPTION:thesis:paper-call:US-SNOW:hot-valuation-beats-spy-to-jun27 | YE
+ S if (SNOW close on 30-Jun-2027 ÷ 254.82) > (SPY close on 30-Jun-2027 ÷ 
+ 689.81). Use the last trading day ≤30-Jun-2027\; adjust for splits\; div
+ idends ignored.
+END:VEVENT
+END:VCALENDAR

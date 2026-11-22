@@ -62,3 +62,6 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
   security checklist (SSH not needed by Claude); change detectors done (NSE PIT feed empty since 30-Apr-2026);
   paper-call batch 2 (77 open); India PEAD v1 positive OOS (L17); T&D peer credibility (KPIL 77 / Skipper 41 / KEC 20, L18).
   Usage limit hit (resets 17:30 UTC). To resume via SendMessage: PEAD v2 (live tracker), promise-tracker pipeline.
+- 22-Nov-2026: stage 5–6 templates (worksheet + decision card, L21); Federal Bank end-to-end dry run (19 gaps,
+  14 fixed incl. range-parsing bug; protocol v1.3; bank valuation mode; L22); stage-7 resolver + scoreboard
+  (27 tests pass, nothing resolved yet — first due 31-Jan-2027). Still running: US solvency-flags test.

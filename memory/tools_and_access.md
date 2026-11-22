@@ -50,6 +50,12 @@ exactly; rules+LLM recall 85–87%, precision ≥36–40% (lower bound; LLM over
 screener only ~30% of promises (segment/order-book/capex need results-PDF CSVs next); judgment items (status of
 non-financial promises, goalpost vs missed, candour) still need human/LLM review.
 
+## Scoreboard (22-Nov-2026) — tools/scoreboard/ (Pi-ready)
+calls.py (export + classify), resolve.py (only on real data; India needs 2 sources same side of threshold;
+event NO/text numbers = proposals for review), scoreboard.py (Brier/log-loss vs base rates, calibration bins →
+research_notes/Scoreboard/scoreboard.md + curriculum.md SCOREBOARD block), apply.sh, run_daily.sh (cron 22:00 IST).
+Calendar: research_notes/Scoreboard/calendar.md/.ics. First due 31-Jan-2027.
+
 ## Blocked / missing
 - screener.in custom raw queries need login → ask user for a Screener account (paid w/ export ideal).
 - YouTube: yt-dlp blocked ("confirm you're not a bot"); youtubetotranscript 403 → need a

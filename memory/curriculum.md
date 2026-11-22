@@ -45,6 +45,14 @@ companies; written post-mortems on misses. Until then: no idea-pitching (except 
 | 2026-11-21 | set 2: 1 of 10 usable (9 recognised); D017 Brier 0.170 vs base 0.230 | 0.170 | 0.230 | 0 | historical drills retired as skill test (L15) |
 | 2026-11-20 | set 1: 0 of 10 usable (all recognised) | – | – | 0 | method fixed → v2 anonymisation; forward calls prioritised |
 
+<!-- SCOREBOARD:START -->
+**Auto scoreboard** — `tools/scoreboard/scoreboard.py`, updated 2026-11-22. Generated block: do not edit inside the markers. Full: `research_notes/Scoreboard/scoreboard.md`.
+
+| As of | Resolved | Void | Open | Brier (ours) | Brier (base, paired) | Skill vs base | Log loss ours / base | Next |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-22 | 0 | 0 | 77 | – | – | – | – / – | next check 2026-12-01 (US-UNH); earliest open resolve-by 2027-01-31 |
+<!-- SCOREBOARD:END -->
+
 ## Forward paper calls = main skill engine (L15)
 Target: 20–40 new dated calls each results season across India and US (guidance delivery, margin direction,
 capex commissioning, pledge changes, rating actions, earnings vs consensus). Cheap, many, scored.
