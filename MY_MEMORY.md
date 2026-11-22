@@ -1,19 +1,27 @@
 # My Memory — everything we've learned and decided
 
 *Your plain-language copy. Claude updates this at the end of every session.*
-*Last updated: 19 Nov 2026 (evening).*
+*Last updated: 22 Nov 2026.*
 
 ---
 
-## 1. Where we are right now
+## 1. Where we are right now (22 Nov 2026)
 
-We've finished the **learning phase** and built the **memory**. The knowledge library now holds
-**100 case studies** (Indian and global multibaggers, 32 frauds/blow-ups), **19 sector playbooks**,
-**32 investor profiles**, **14 Indian market cycles (1992–2026)** and **68 insights** — all searchable.
-Claude can now pull filings, transcripts, pledges and insider trades **directly from NSE/BSE**.
-Next: build the "promise tracker" (what management said vs what they delivered).
-**Action for you:** merge the pull request so new sessions load the memory:
-https://github.com/aditya-bad/fein/pull/1
+We're building a **7-stage stock-selection machine** (see `memory/roadmap.md`) and testing every part honestly
+before trusting it. Your branch is the default, so every new session loads this memory.
+
+| Stage | What exists now |
+|---|---|
+| 1 Universe | NSE/BSE/SEC fetch tools; lists of failed Indian companies. Full scale waits for your Pi / Kite / Screener. |
+| 2 Hard filters | Fraud & governance rules **tested**: catch frauds, miss debt blow-ups → solvency flags added (tested in the US). |
+| 3 Signals | **Earnings-miss "avoid" signal proven in two periods.** Insider buying: no edge (US & India). Promise tracker across 3 sectors + 2 markets. |
+| 4 Deep dive | "Security-guard depth" protocol v1.3, practised on retail, a manufacturer, a US retailer and a bank. |
+| 5 Valuation | Worksheet: what the price assumes, scenarios, how much growth a 3×/5× needs. |
+| 6 Decision | Card: gates, probabilities, kill criteria, position size by rule. |
+| 7 Scorekeeping | **115 dated predictions** open; automatic resolver + scoreboard; first results from 31 Jan 2027. |
+
+**No proven edge yet for picking winners.** The bar: ≥50 resolved predictions that clearly beat base rates.
+**No stock recommendations** until then.
 
 ---
 
