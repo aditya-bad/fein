@@ -1,0 +1,585 @@
+[
+ {
+  "type": "insight",
+  "id": "insight:bt-solvency-us-2026-summary",
+  "title": "US solvency-flag back-test (pre-registered, survivorship-free, 2015/2017/2019 snapshots): negative equity (ex-buyback) and >=2 solvency flags = GRADED RED (lift ~2.3x, <10% of winners lost); interest cover <1.5x, short-term funding gap, payouts>FCF = questions; none qualifies as hard",
+  "body": "4,843 candidate CIKs from dei:EntityPublicFloat frames -> 4,821 firm-snapshots (2,271 firms; ex financials/REITs/utilities; float $300M-$20B from the latest 10-K filed <= T; as-first-reported companyfacts). 5-year O_fail = 8-K 1.03 bankruptcy (213) or delisting for cause (19, revised after audit) or month-end price <= 0.2x (233): 460 = 9.5% base. Pooled lift [CIK bootstrap]: S1 2.31 [1.63,3.11], winners lost 3.7%; S2 1.98 [1.79,2.17], 27%; S3 1.55 [1.04,2.16], 5.4%; S4 1.06 [0.84,1.31], 13.8%; S5 2.37 [1.90,2.86], 8.0%. Verdict: S1 and S5 GRADED RED; S2/S3/S4 QUESTIONS; nothing HARD (best EDGAR-only lift 3.28). Recall is low (S5 16%): most failures (2015-16 energy, COVID) had positive equity a year before. Flagged-firm median size-matched 5y excess is ~+0.07 (lottery shape: big recoveries among survivors) -> flags are sizing/avoid rules, not shorts. Survivorship audit: 97% of bankrupt firms have no Yahoo history; 45% of rows have no price - O_fail understated there; EDGAR events fate-independent. Deviation: as-registered delisting rule (3.01+Form 25/15) was dominated by voluntary exchange transfers; text-classified version used; as-registered results give the same verdicts. Indian re-test needed (IBC/IBBI + delisted universe; buybacks rare so exemption seldom applies; NBFC ALM test separately).",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "solvency",
+   "stage-2",
+   "hard-filters",
+   "us",
+   "calibration",
+   "redflag",
+   "method-test"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "n_rows": 4821,
+   "n_firms": 2271,
+   "snapshots": [
+    "2015-06-30",
+    "2017-06-30",
+    "2019-06-30"
+   ],
+   "base_O_fail": 0.095,
+   "base_O_strict": 0.048,
+   "events": {
+    "bankrupt_8k103": 213,
+    "delist_cause_revised": 19,
+    "delist_asregistered": 199,
+    "price_le_0.2x": 233,
+    "O_fail": 460
+   },
+   "price_coverage": {
+    "full": 2667,
+    "none": 2154,
+    "winners_gt3x": 276
+   },
+   "verdicts": {
+    "S1": "GRADED RED",
+    "S2": "QUESTION (lift 1.98 < 2; excludes 27% of >3x winners)",
+    "S3": "QUESTION (lift 1.55 < 2)",
+    "S4": "QUESTION (lift 1.06 < 2; lift CI touches 1; excludes 14% of >3x winners)",
+    "S5": "GRADED RED"
+   },
+   "lift": {
+    "S1": [
+     2.312,
+     1.63,
+     3.11
+    ],
+    "S2": [
+     1.977,
+     1.789,
+     2.171
+    ],
+    "S3": [
+     1.554,
+     1.043,
+     2.165
+    ],
+    "S4": [
+     1.064,
+     0.836,
+     1.31
+    ],
+    "S5": [
+     2.371,
+     1.901,
+     2.857
+    ],
+    "S1raw": [
+     1.627,
+     1.122,
+     2.176
+    ],
+    "S0": [
+     1.915,
+     1.72,
+     2.129
+    ]
+   },
+   "winners_excluded": {
+    "S1": 0.0366,
+    "S2": 0.2711,
+    "S3": 0.0543,
+    "S4": 0.1382,
+    "S5": 0.0797,
+    "S1raw": 0.0586,
+    "S0": 0.2409
+   },
+   "stage": 2,
+   "unlocks": "graded solvency flags (S1, S5) in disqualifiers v2; Pi detector; Indian re-test on dead-company universe"
+  },
+  "sources": [
+   "research_notes/Backtests/solvency_flags_us.md",
+   "research_notes/Backtests/solvency_us_outputs/results.json",
+   "research_notes/Backtests/solvency_us_outputs/panel.csv",
+   "https://data.sec.gov/api/xbrl/companyfacts/",
+   "https://data.sec.gov/submissions/"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers-v2-proposal",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:bt-hard-filters-2026-summary",
+    "rel": "follows_up"
+   },
+   {
+    "to": "insight:bt-hard-filters-solvency-gap",
+    "rel": "follows_up"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-solvency-us-s1",
+  "title": "US solvency back-test 2015/17/19: S1 negative equity (ex buyback-driven with FCF>0) -> GRADED RED",
+  "body": "Negative stockholders' equity unless FCF>0 and treasury stock + 3y dividends+buybacks >= |equity|. Pooled lift 2.31 [1.63, 3.11] for 5-year failure (bankruptcy / delisting for cause / price <= 0.2x); 21.5% of flagged firms failed vs 9.3% base; excludes 3.7% (10/273) of eventual >3x winners (Caesars-2015, Dell-2019, Tenet-2019, Exelixis-2015, Domino's-2015). Recall only 7.7%. Exempted buyback firms failed 4.3% (below base) - the exemption works; raw negative equity is weaker (lift 1.63). EDGAR-only failures lift 3.12; per-snapshot 1.65/2.86/2.66 (2015 CI touches 1: energy failures had positive equity). Not hard (< 4x). Universe: 4,821 US non-financial firm-snapshots (float $300M-$20B, 10-K filed <= T), dead firms included. Research, not advice.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "solvency",
+   "stage-2",
+   "hard-filters",
+   "us",
+   "calibration",
+   "redflag"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "pooled_O_fail": {
+    "n": 4717,
+    "n_flag": 158,
+    "n_fail": 439,
+    "n_flag_fail": 34,
+    "n_win": 273,
+    "n_flag_win": 10,
+    "precision": 0.2152,
+    "precision_ci": [
+     0.1484,
+     0.289
+    ],
+    "base": 0.0931,
+    "base_ci": [
+     0.0824,
+     0.1041
+    ],
+    "lift": 2.3122,
+    "lift_ci": [
+     1.6299,
+     3.1096
+    ],
+    "rr": 2.4223,
+    "rr_ci": [
+     1.6634,
+     3.3522
+    ],
+    "recall": 0.0774,
+    "recall_ci": [
+     0.05,
+     0.1077
+    ],
+    "win_excl": 0.0366,
+    "win_excl_ci": [
+     0.0153,
+     0.0603
+    ],
+    "med_excess_flagged": 0.0832,
+    "n_excess": 52
+   },
+   "pooled_O_strict_lift": 3.121,
+   "pooled_O_strict_lift_ci": [
+    1.988,
+    4.407
+   ],
+   "per_snapshot_lift_O_fail": {
+    "2015-06-30": 1.65,
+    "2017-06-30": 2.859,
+    "2019-06-30": 2.66
+   },
+   "stage": 2,
+   "verdict": "GRADED RED"
+  },
+  "sources": [
+   "research_notes/Backtests/solvency_flags_us.md",
+   "research_notes/Backtests/solvency_us_outputs/results.json",
+   "research_notes/Backtests/solvency_us_outputs/panel.csv",
+   "https://data.sec.gov/api/xbrl/companyfacts/",
+   "https://data.sec.gov/submissions/"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers-v2-proposal",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:bt-hard-filters-solvency-gap",
+    "rel": "follows_up"
+   },
+   {
+    "to": "insight:bt-solvency-us-2026-summary",
+    "rel": "part_of"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-solvency-us-s2",
+  "title": "US solvency back-test 2015/17/19: S2 interest cover (EBIT/interest) < 1.5x -> QUESTION",
+  "body": "Pooled lift 1.98 [1.79, 2.17] - just under the 2x bar - and it would have excluded 27% (74/273) of eventual >3x winners. It mostly re-labels operating losses: S0 (EBIT<0) alone gives lift 1.92 and excludes 24% of winners; profitable firms with cover <1.5 (exploratory) lift 1.80. Use as a deep-dive question (cover at mid-cycle margins, maturity wall), not a flag. Universe: 4,821 US non-financial firm-snapshots (float $300M-$20B, 10-K filed <= T), dead firms included. Research, not advice.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "solvency",
+   "stage-2",
+   "hard-filters",
+   "us",
+   "calibration",
+   "redflag"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "pooled_O_fail": {
+    "n": 4739,
+    "n_flag": 1185,
+    "n_fail": 445,
+    "n_flag_fail": 220,
+    "n_win": 273,
+    "n_flag_win": 74,
+    "precision": 0.1857,
+    "precision_ci": [
+     0.1596,
+     0.2102
+    ],
+    "base": 0.0939,
+    "base_ci": [
+     0.0833,
+     0.1044
+    ],
+    "lift": 1.9771,
+    "lift_ci": [
+     1.7887,
+     2.1709
+    ],
+    "rr": 2.9325,
+    "rr_ci": [
+     2.4591,
+     3.5281
+    ],
+    "recall": 0.4944,
+    "recall_ci": [
+     0.447,
+     0.5426
+    ],
+    "win_excl": 0.2711,
+    "win_excl_ci": [
+     0.2157,
+     0.3321
+    ],
+    "med_excess_flagged": -0.0472,
+    "n_excess": 467
+   },
+   "pooled_O_strict_lift": 2.486,
+   "pooled_O_strict_lift_ci": [
+    2.222,
+    2.766
+   ],
+   "per_snapshot_lift_O_fail": {
+    "2015-06-30": 1.965,
+    "2017-06-30": 2.113,
+    "2019-06-30": 1.917
+   },
+   "stage": 2,
+   "verdict": "QUESTION (lift 1.98 < 2; excludes 27% of >3x winners)"
+  },
+  "sources": [
+   "research_notes/Backtests/solvency_flags_us.md",
+   "research_notes/Backtests/solvency_us_outputs/results.json",
+   "research_notes/Backtests/solvency_us_outputs/panel.csv",
+   "https://data.sec.gov/api/xbrl/companyfacts/",
+   "https://data.sec.gov/submissions/"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers-v2-proposal",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:bt-hard-filters-solvency-gap",
+    "rel": "follows_up"
+   },
+   {
+    "to": "insight:bt-solvency-us-2026-summary",
+    "rel": "part_of"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-solvency-us-s3",
+  "title": "US solvency back-test 2015/17/19: S3 short-term debt > cash + 0.5xCFO (funding gap) -> QUESTION",
+  "body": "Pooled lift 1.55 [1.04, 2.16], unstable across snapshots (1.58/2.23/1.12); excludes 5.4% of winners. Floor-plan-financed dealers and working-capital borrowers fire without distress. Keep as a question: what refinances the near-term debt? Universe: 4,821 US non-financial firm-snapshots (float $300M-$20B, 10-K filed <= T), dead firms included. Research, not advice.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "solvency",
+   "stage-2",
+   "hard-filters",
+   "us",
+   "calibration",
+   "redflag"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "pooled_O_fail": {
+    "n": 4785,
+    "n_flag": 218,
+    "n_fail": 452,
+    "n_flag_fail": 32,
+    "n_win": 276,
+    "n_flag_win": 15,
+    "precision": 0.1468,
+    "precision_ci": [
+     0.0969,
+     0.2034
+    ],
+    "base": 0.0945,
+    "base_ci": [
+     0.0843,
+     0.1048
+    ],
+    "lift": 1.5539,
+    "lift_ci": [
+     1.0433,
+     2.165
+    ],
+    "rr": 1.5962,
+    "rr_ci": [
+     1.0456,
+     2.2852
+    ],
+    "recall": 0.0708,
+    "recall_ci": [
+     0.0459,
+     0.0982
+    ],
+    "win_excl": 0.0543,
+    "win_excl_ci": [
+     0.0284,
+     0.0833
+    ],
+    "med_excess_flagged": 0.0312,
+    "n_excess": 117
+   },
+   "pooled_O_strict_lift": 1.934,
+   "pooled_O_strict_lift_ci": [
+    1.093,
+    2.874
+   ],
+   "per_snapshot_lift_O_fail": {
+    "2015-06-30": 1.581,
+    "2017-06-30": 2.231,
+    "2019-06-30": 1.116
+   },
+   "stage": 2,
+   "verdict": "QUESTION (lift 1.55 < 2)"
+  },
+  "sources": [
+   "research_notes/Backtests/solvency_flags_us.md",
+   "research_notes/Backtests/solvency_us_outputs/results.json",
+   "research_notes/Backtests/solvency_us_outputs/panel.csv",
+   "https://data.sec.gov/api/xbrl/companyfacts/",
+   "https://data.sec.gov/submissions/"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers-v2-proposal",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:bt-hard-filters-solvency-gap",
+    "rel": "follows_up"
+   },
+   {
+    "to": "insight:bt-solvency-us-2026-summary",
+    "rel": "part_of"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-solvency-us-s4",
+  "title": "US solvency back-test 2015/17/19: S4 dividends+buybacks > FCF while total debt rose -> QUESTION (no signal)",
+  "body": "Pooled lift 1.06 [0.84, 1.31] - no information about 5-year failure - and excludes 13.8% of >3x winners. Drop as a solvency flag; keep as a capital-allocation question. Universe: 4,821 US non-financial firm-snapshots (float $300M-$20B, 10-K filed <= T), dead firms included. Research, not advice.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "solvency",
+   "stage-2",
+   "hard-filters",
+   "us",
+   "calibration",
+   "redflag"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "pooled_O_fail": {
+    "n": 4782,
+    "n_flag": 635,
+    "n_fail": 453,
+    "n_flag_fail": 64,
+    "n_win": 275,
+    "n_flag_win": 38,
+    "precision": 0.1008,
+    "precision_ci": [
+     0.0774,
+     0.1271
+    ],
+    "base": 0.0947,
+    "base_ci": [
+     0.084,
+     0.106
+    ],
+    "lift": 1.0639,
+    "lift_ci": [
+     0.8358,
+     1.3099
+    ],
+    "rr": 1.0745,
+    "rr_ci": [
+     0.8146,
+     1.3773
+    ],
+    "recall": 0.1413,
+    "recall_ci": [
+     0.1102,
+     0.1761
+    ],
+    "win_excl": 0.1382,
+    "win_excl_ci": [
+     0.0951,
+     0.1815
+    ],
+    "med_excess_flagged": 0.0228,
+    "n_excess": 391
+   },
+   "pooled_O_strict_lift": 1.113,
+   "pooled_O_strict_lift_ci": [
+    0.748,
+    1.488
+   ],
+   "per_snapshot_lift_O_fail": {
+    "2015-06-30": 1.138,
+    "2017-06-30": 0.872,
+    "2019-06-30": 1.059
+   },
+   "stage": 2,
+   "verdict": "QUESTION (lift 1.06 < 2; lift CI touches 1; excludes 14% of >3x winners)"
+  },
+  "sources": [
+   "research_notes/Backtests/solvency_flags_us.md",
+   "research_notes/Backtests/solvency_us_outputs/results.json",
+   "research_notes/Backtests/solvency_us_outputs/panel.csv",
+   "https://data.sec.gov/api/xbrl/companyfacts/",
+   "https://data.sec.gov/submissions/"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers-v2-proposal",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:bt-hard-filters-solvency-gap",
+    "rel": "follows_up"
+   },
+   {
+    "to": "insight:bt-solvency-us-2026-summary",
+    "rel": "part_of"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:bt-solvency-us-s5",
+  "title": "US solvency back-test 2015/17/19: S5 two or more of S1-S4 -> GRADED RED",
+  "body": "Pooled lift 2.37 [1.90, 2.86]; 22.5% of flagged firms failed vs 9.5% base; recall 16%; excludes 8.0% (22/276) of >3x winners (11% in 2017 - near the limit; e.g. FTAI, Plug, Natera, Fair Isaac, IDEXX). EDGAR-only failures lift 3.28 [2.59, 4.08]; stable per snapshot 2.11/2.77/2.39. Not hard (< 4x). Caught Sears, Frontier, GNC, Dean Foods, Alpha Natural, Arch, Bristow, Diebold, Endo, Weatherford. Universe: 4,821 US non-financial firm-snapshots (float $300M-$20B, 10-K filed <= T), dead firms included. Research, not advice.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "solvency",
+   "stage-2",
+   "hard-filters",
+   "us",
+   "calibration",
+   "redflag"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "pooled_O_fail": {
+    "n": 4803,
+    "n_flag": 325,
+    "n_fail": 455,
+    "n_flag_fail": 73,
+    "n_win": 276,
+    "n_flag_win": 22,
+    "precision": 0.2246,
+    "precision_ci": [
+     0.1749,
+     0.2733
+    ],
+    "base": 0.0947,
+    "base_ci": [
+     0.0845,
+     0.1055
+    ],
+    "lift": 2.371,
+    "lift_ci": [
+     1.9015,
+     2.8566
+    ],
+    "rr": 2.6331,
+    "rr_ci": [
+     2.0342,
+     3.2939
+    ],
+    "recall": 0.1604,
+    "recall_ci": [
+     0.1241,
+     0.1976
+    ],
+    "win_excl": 0.0797,
+    "win_excl_ci": [
+     0.0468,
+     0.1142
+    ],
+    "med_excess_flagged": 0.0681,
+    "n_excess": 142
+   },
+   "pooled_O_strict_lift": 3.277,
+   "pooled_O_strict_lift_ci": [
+    2.588,
+    4.08
+   ],
+   "per_snapshot_lift_O_fail": {
+    "2015-06-30": 2.113,
+    "2017-06-30": 2.77,
+    "2019-06-30": 2.385
+   },
+   "stage": 2,
+   "verdict": "GRADED RED"
+  },
+  "sources": [
+   "research_notes/Backtests/solvency_flags_us.md",
+   "research_notes/Backtests/solvency_us_outputs/results.json",
+   "research_notes/Backtests/solvency_us_outputs/panel.csv",
+   "https://data.sec.gov/api/xbrl/companyfacts/",
+   "https://data.sec.gov/submissions/"
+  ],
+  "links": [
+   {
+    "to": "insight:disqualifiers-v2-proposal",
+    "rel": "tests"
+   },
+   {
+    "to": "insight:bt-hard-filters-solvency-gap",
+    "rel": "follows_up"
+   },
+   {
+    "to": "insight:bt-solvency-us-2026-summary",
+    "rel": "part_of"
+   }
+  ],
+  "confidence": "single-source"
+ }
+]

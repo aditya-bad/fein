@@ -167,3 +167,9 @@ windows, write-offs and one-offs before trusting headline asset-quality and grow
 Running 4–6 agents in parallel hit the 5-hour usage limit roughly daily, leaving several tasks half-done;
 each resume re-reads large transcripts/files, wasting budget. **Rule (user: "not a hard rule, your decision"):** default 2–3 concurrent agents (prefer heavy + light mix), adjust to task size and remaining budget; size each task to finish within one usage window; save in stages; start the next task only when one
 finishes; give agents precise file paths so they read less.
+
+## L24 (2026-11-22) — Solvency flags double failure odds but catch few failures
+US pre-registered test (survivorship-free): negative equity (excluding buyback-driven cases with positive FCF) lift
+2.31 and "≥2 solvency flags" lift 2.37 → graded red; interest cover <1.5x mostly flags loss-makers and would cut 27%
+of later >3x winners; payouts > FCF while borrowing had no signal. Recall only 8–16% of failures — most 2015–16
+energy and COVID failures looked solvent a year earlier. **Use:** look harder and size smaller; not protection, not a short signal.
