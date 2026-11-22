@@ -1,0 +1,475 @@
+{
+ "as_of": "2026-11-22",
+ "companies": [
+  "SONACOMS",
+  "SANSERA",
+  "HAPPYFORGE",
+  "ENDURANCE",
+  "UNIPARTS"
+ ],
+ "category_map": {
+  "capacity_commissioning": "capacity",
+  "capex": "capacity",
+  "customer_win": "other",
+  "new_product": "other",
+  "m&a": "other",
+  "working_capital": "other",
+  "dividend_payout": "other",
+  "debt_reduction": "other",
+  "order_book": "other"
+ },
+ "categories": [
+  "revenue_growth",
+  "margin",
+  "capacity",
+  "other"
+ ],
+ "overall": {
+  "SONACOMS": {
+   "n": 6,
+   "D": 83.3,
+   "S": 77.8
+  },
+  "SANSERA": {
+   "n": 8,
+   "D": 60.0,
+   "S": 60.0
+  },
+  "HAPPYFORGE": {
+   "n": 7,
+   "D": 50.0,
+   "S": 42.1
+  },
+  "ENDURANCE": {
+   "n": 9,
+   "D": 26.1,
+   "S": 26.1
+  },
+  "UNIPARTS": {
+   "n": 47,
+   "D": 64.8,
+   "S": 57.1
+  }
+ },
+ "by_category": {
+  "SONACOMS": {
+   "margin": {
+    "n": 3,
+    "D": 75.0,
+    "S": 75.0
+   },
+   "other": {
+    "n": 3,
+    "D": 90.0,
+    "S": 80.0
+   }
+  },
+  "SANSERA": {
+   "revenue_growth": {
+    "n": 5,
+    "D": 100.0,
+    "S": 100.0
+   },
+   "capacity": {
+    "n": 3,
+    "D": 0.0,
+    "S": 0.0
+   }
+  },
+  "HAPPYFORGE": {
+   "margin": {
+    "n": 1,
+    "D": 100.0,
+    "S": 100.0
+   },
+   "capacity": {
+    "n": 4,
+    "D": 65.0,
+    "S": 50.0
+   },
+   "other": {
+    "n": 2,
+    "D": 0.0,
+    "S": 0.0
+   }
+  },
+  "ENDURANCE": {
+   "margin": {
+    "n": 1,
+    "D": 0.0,
+    "S": 0.0
+   },
+   "capacity": {
+    "n": 8,
+    "D": 27.3,
+    "S": 27.3
+   }
+  },
+  "UNIPARTS": {
+   "revenue_growth": {
+    "n": 23,
+    "D": 62.8,
+    "S": 57.4
+   },
+   "margin": {
+    "n": 5,
+    "D": 85.0,
+    "S": 70.0
+   },
+   "capacity": {
+    "n": 6,
+    "D": 71.4,
+    "S": 64.3
+   },
+   "other": {
+    "n": 13,
+    "D": 57.4,
+    "S": 48.1
+   }
+  }
+ },
+ "sector_median_D_pct": {
+  "revenue_growth": 81.4,
+  "margin": 80.0,
+  "capacity": 46.15,
+  "other": 57.4
+ },
+ "sector_pooled": {
+  "revenue_growth": {
+   "n": 28,
+   "D": 68.8,
+   "S": 64.3
+  },
+  "margin": {
+   "n": 10,
+   "D": 80.6,
+   "S": 72.2
+  },
+  "capacity": {
+   "n": 21,
+   "D": 43.3,
+   "S": 38.5
+  },
+  "other": {
+   "n": 18,
+   "D": 52.6,
+   "S": 44.7
+  }
+ },
+ "sac": {
+  "SONACOMS": {
+   "sac_pts": 50.0,
+   "n_scored": 6,
+   "shrink_weight": 0.231,
+   "components": {
+    "pooled:margin+other": {
+     "n": 6,
+     "own": 83.3,
+     "peer_median": 33.3,
+     "gap": 50.0
+    }
+   }
+  },
+  "SANSERA": {
+   "sac_pts": -4.8,
+   "n_scored": 8,
+   "shrink_weight": 0.286,
+   "components": {
+    "pooled:revenue_growth+capacity": {
+     "n": 8,
+     "own": 60.0,
+     "peer_median": 64.8,
+     "gap": -4.8
+    }
+   }
+  },
+  "HAPPYFORGE": {
+   "sac_pts": 3.6,
+   "n_scored": 7,
+   "shrink_weight": 0.259,
+   "components": {
+    "pooled:margin+capacity+other": {
+     "n": 7,
+     "own": 50.0,
+     "peer_median": 46.400000000000006,
+     "gap": 3.6
+    }
+   }
+  },
+  "ENDURANCE": {
+   "sac_pts": -43.0,
+   "n_scored": 9,
+   "shrink_weight": 0.31,
+   "components": {
+    "capacity": {
+     "n": 8,
+     "own": 27.3,
+     "peer_median": 65.0,
+     "gap": -37.7
+    },
+    "pooled:margin": {
+     "n": 1,
+     "own": 0.0,
+     "peer_median": 85.0,
+     "gap": -85.0
+    }
+   }
+  },
+  "UNIPARTS": {
+   "sac_pts": -8.1,
+   "n_scored": 47,
+   "shrink_weight": 0.701,
+   "components": {
+    "margin": {
+     "n": 5,
+     "own": 85.0,
+     "peer_median": 75.0,
+     "gap": 10.0
+    },
+    "capacity": {
+     "n": 6,
+     "own": 71.4,
+     "peer_median": 27.3,
+     "gap": 44.1
+    },
+    "other": {
+     "n": 13,
+     "own": 57.4,
+     "peer_median": 45.0,
+     "gap": 12.4
+    },
+    "pooled:revenue_growth": {
+     "n": 23,
+     "own": 62.8,
+     "peer_median": 100.0,
+     "gap": -37.2
+    }
+   }
+  }
+ },
+ "base_rates_leave_one_out": {
+  "SONACOMS": {
+   "_all": {
+    "n": 71,
+    "p0_pct": 51.0
+   },
+   "revenue_growth": {
+    "n": 28,
+    "p0_pct": 64.3,
+    "fallback_all": false
+   },
+   "margin": {
+    "n": 7,
+    "p0_pct": 51.0,
+    "fallback_all": true
+   },
+   "capacity": {
+    "n": 21,
+    "p0_pct": 38.5,
+    "fallback_all": false
+   },
+   "other": {
+    "n": 15,
+    "p0_pct": 39.4,
+    "fallback_all": false
+   }
+  },
+  "SANSERA": {
+   "_all": {
+    "n": 69,
+    "p0_pct": 51.7
+   },
+   "revenue_growth": {
+    "n": 23,
+    "p0_pct": 57.4,
+    "fallback_all": false
+   },
+   "margin": {
+    "n": 10,
+    "p0_pct": 72.2,
+    "fallback_all": false
+   },
+   "capacity": {
+    "n": 18,
+    "p0_pct": 43.5,
+    "fallback_all": false
+   },
+   "other": {
+    "n": 18,
+    "p0_pct": 44.7,
+    "fallback_all": false
+   }
+  },
+  "HAPPYFORGE": {
+   "_all": {
+    "n": 70,
+    "p0_pct": 53.8
+   },
+   "revenue_growth": {
+    "n": 28,
+    "p0_pct": 64.3,
+    "fallback_all": false
+   },
+   "margin": {
+    "n": 9,
+    "p0_pct": 66.7,
+    "fallback_all": false
+   },
+   "capacity": {
+    "n": 17,
+    "p0_pct": 35.7,
+    "fallback_all": false
+   },
+   "other": {
+    "n": 16,
+    "p0_pct": 53.1,
+    "fallback_all": false
+   }
+  },
+  "ENDURANCE": {
+   "_all": {
+    "n": 68,
+    "p0_pct": 56.7
+   },
+   "revenue_growth": {
+    "n": 28,
+    "p0_pct": 64.3,
+    "fallback_all": false
+   },
+   "margin": {
+    "n": 9,
+    "p0_pct": 76.5,
+    "fallback_all": false
+   },
+   "capacity": {
+    "n": 13,
+    "p0_pct": 46.7,
+    "fallback_all": false
+   },
+   "other": {
+    "n": 18,
+    "p0_pct": 44.7,
+    "fallback_all": false
+   }
+  },
+  "UNIPARTS": {
+   "_all": {
+    "n": 30,
+    "p0_pct": 45.5
+   },
+   "revenue_growth": {
+    "n": 5,
+    "p0_pct": 45.5,
+    "fallback_all": true
+   },
+   "margin": {
+    "n": 5,
+    "p0_pct": 45.5,
+    "fallback_all": true
+   },
+   "capacity": {
+    "n": 15,
+    "p0_pct": 28.9,
+    "fallback_all": false
+   },
+   "other": {
+    "n": 5,
+    "p0_pct": 45.5,
+    "fallback_all": true
+   }
+  }
+ },
+ "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 4 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0.",
+ "example_p": {
+  "SONACOMS": {
+   "revenue_growth": [
+    0.76,
+    0.64
+   ],
+   "margin": [
+    0.63,
+    0.51
+   ],
+   "capacity": [
+    0.5,
+    0.39
+   ],
+   "other": [
+    0.51,
+    0.39
+   ]
+  },
+  "SANSERA": {
+   "revenue_growth": [
+    0.56,
+    0.57
+   ],
+   "margin": [
+    0.71,
+    0.72
+   ],
+   "capacity": [
+    0.42,
+    0.43
+   ],
+   "other": [
+    0.43,
+    0.45
+   ]
+  },
+  "HAPPYFORGE": {
+   "revenue_growth": [
+    0.65,
+    0.64
+   ],
+   "margin": [
+    0.68,
+    0.67
+   ],
+   "capacity": [
+    0.37,
+    0.36
+   ],
+   "other": [
+    0.54,
+    0.53
+   ]
+  },
+  "ENDURANCE": {
+   "revenue_growth": [
+    0.51,
+    0.64
+   ],
+   "margin": [
+    0.63,
+    0.77
+   ],
+   "capacity": [
+    0.33,
+    0.47
+   ],
+   "other": [
+    0.31,
+    0.45
+   ]
+  },
+  "UNIPARTS": {
+   "revenue_growth": [
+    0.4,
+    0.46
+   ],
+   "margin": [
+    0.4,
+    0.46
+   ],
+   "capacity": [
+    0.23,
+    0.29
+   ],
+   "other": [
+    0.4,
+    0.46
+   ]
+  }
+ }
+}

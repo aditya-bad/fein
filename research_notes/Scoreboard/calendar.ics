@@ -4,7 +4,7 @@ PRODID:-//fein//paper-call scoreboard//EN
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
 UID:thesis-paper-call-INFY-q3fy27-guidance-midpoint-raised@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:Resolve paper call INFY (c/assisted)
@@ -16,7 +16,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-ISRG-fy2026-procedure-growth-14-5-plus@fein-scoreb
  oard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:Resolve paper call US-ISRG (a/assisted)
@@ -28,7 +28,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-JPM-initial-fy27-nii-guide-110bn-plus@fein-scorebo
  ard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:Resolve paper call US-JPM (c/assisted)
@@ -40,7 +40,7 @@ DESCRIPTION:thesis:paper-call:US-JPM:initial-fy27-nii-guide-110bn-plus | YE
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-PG-q2fy27-organic-sales-3pct-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:Resolve paper call US-PG (a/assisted)
@@ -50,7 +50,7 @@ DESCRIPTION:thesis:paper-call:US-PG:q2fy27-organic-sales-3pct-plus | YES if
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-PNC-q4-2026-nii-4250m-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:Resolve paper call US-PNC (a/structured)
@@ -61,7 +61,7 @@ DESCRIPTION:thesis:paper-call:US-PNC:q4-2026-nii-4250m-plus | YES if PNC's
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-UNH-2027-initial-eps-guide-22-50@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:Resolve paper call US-UNH (c/assisted)
@@ -72,7 +72,7 @@ DESCRIPTION:thesis:paper-call:US-UNH:2027-initial-eps-guide-22-50 | YES if
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-HDFCAMC-q3fy27-revenue-1200cr-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270215
 DTEND;VALUE=DATE:20270216
 SUMMARY:Resolve paper call HDFCAMC (a/structured)
@@ -84,7 +84,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-ICICIGI-q3fy27-combined-ratio-103-5-or-better@fein-sc
  oreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270215
 DTEND;VALUE=DATE:20270216
 SUMMARY:Resolve paper call ICICIGI (a/assisted)
@@ -95,7 +95,7 @@ DESCRIPTION:thesis:paper-call:ICICIGI:q3fy27-combined-ratio-103-5-or-better
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-SBICARD-q3fy27-gnpa-at-or-below-1-90@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270215
 DTEND;VALUE=DATE:20270216
 SUMMARY:Resolve paper call SBICARD (a/assisted)
@@ -106,7 +106,7 @@ DESCRIPTION:thesis:paper-call:SBICARD:q3fy27-gnpa-at-or-below-1-90 | YES if
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-GE-fy2026-adj-eps-above-8-10@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270215
 DTEND;VALUE=DATE:20270216
 SUMMARY:Resolve paper call US-GE (a/assisted)
@@ -116,7 +116,7 @@ DESCRIPTION:thesis:paper-call:US-GE:fy2026-adj-eps-above-8-10 | YES if GE A
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-XOM-q4-2026-adj-eps-above-q3@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270215
 DTEND;VALUE=DATE:20270216
 SUMMARY:Resolve paper call US-XOM (a/assisted)
@@ -127,7 +127,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-AMD-q4-2026-revenue-above-top-of-guide@fein-scoreb
  oard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270220
 DTEND;VALUE=DATE:20270221
 SUMMARY:Resolve paper call US-AMD (a/structured)
@@ -136,7 +136,7 @@ DESCRIPTION:thesis:paper-call:US-AMD:q4-2026-revenue-above-top-of-guide | Y
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-AFCONS-q3fy27-revenue-yoy-nonnegative@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Resolve paper call AFCONS (a/structured)
@@ -148,7 +148,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-ASIANPAINT-q3fy27-standalone-opm-20pct-plus@fein-scor
  eboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Resolve paper call ASIANPAINT (a/structured)
@@ -160,7 +160,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-BSE-q3fy27-revenue-record-above-1566cr@fein-scoreboar
  d
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Resolve paper call BSE (a/structured)
@@ -170,7 +170,7 @@ DESCRIPTION:thesis:paper-call:BSE:q3fy27-revenue-record-above-1566cr | YES
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-CUMMINSIND-q3fy27-opm-17pct-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Resolve paper call CUMMINSIND (a/structured)
@@ -180,7 +180,7 @@ DESCRIPTION:thesis:paper-call:CUMMINSIND:q3fy27-opm-17pct-plus | YES if Q3
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-DEEPAKNTR-q3fy27-op-500cr-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Resolve paper call DEEPAKNTR (a/structured)
@@ -191,7 +191,7 @@ DESCRIPTION:thesis:paper-call:DEEPAKNTR:q3fy27-op-500cr-plus | YES if Deepa
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-EICHERMOT-q3fy27-opm-24pct-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Resolve paper call EICHERMOT (a/structured)
@@ -202,8 +202,20 @@ DESCRIPTION:thesis:paper-call:EICHERMOT:q3fy27-opm-24pct-plus | YES if Eich
  0% (one decimal).
 END:VEVENT
 BEGIN:VEVENT
+UID:thesis-paper-call-ENDURANCE-tata-4w-driveshaft-sop-q3fy27-cred@fein-sco
+ reboard
+DTSTAMP:20261122T120233Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call ENDURANCE (c/assisted)
+DESCRIPTION:thesis:paper-call:ENDURANCE:tata-4w-driveshaft-sop-q3fy27-cred 
+ | YES if the Q3 FY27 call/presentation (or an NSE filing) states that 4W d
+ riveshaft supplies/SOP for Tata Motors started on or before 31-Dec-2026. S
+ tarted in Jan-2027 or later\, or not mentioned by the Q3 call = NO.
+END:VEVENT
+BEGIN:VEVENT
 UID:thesis-paper-call-HINDUNILVR-q3fy27-opm-22pct-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Resolve paper call HINDUNILVR (a/structured)
@@ -214,7 +226,7 @@ DESCRIPTION:thesis:paper-call:HINDUNILVR:q3fy27-opm-22pct-plus | YES if HUL
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-HONASA-q3fy27-opm-12pct-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Resolve paper call HONASA (a/structured)
@@ -224,7 +236,7 @@ DESCRIPTION:thesis:paper-call:HONASA:q3fy27-opm-12pct-plus | YES if Q3 FY27
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-KAYNES-q3fy27-revenue-1050cr-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Resolve paper call KAYNES (a/structured)
@@ -236,7 +248,7 @@ DESCRIPTION:thesis:paper-call:KAYNES:q3fy27-revenue-1050cr-plus | YES if Ka
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-LAURUSLABS-q3fy27-opm-30pct-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Resolve paper call LAURUSLABS (a/structured)
@@ -247,7 +259,7 @@ DESCRIPTION:thesis:paper-call:LAURUSLABS:q3fy27-opm-30pct-plus | YES if Q3
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-LUPIN-q3fy27-ebitda-margin-24pct-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Resolve paper call LUPIN (a/assisted)
@@ -260,7 +272,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-NAVINFLUOR-chemours-plant-commissioned-q3fy27@fein-sc
  oreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Resolve paper call NAVINFLUOR (c/assisted)
@@ -273,7 +285,7 @@ DESCRIPTION:thesis:paper-call:NAVINFLUOR:chemours-plant-commissioned-q3fy27
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-POLYCAB-q3fy27-opm-13pct-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Resolve paper call POLYCAB (a/structured)
@@ -283,8 +295,20 @@ DESCRIPTION:thesis:paper-call:POLYCAB:q3fy27-opm-13pct-plus | YES if Polyca
  m the results) is ≥13.0%.
 END:VEVENT
 BEGIN:VEVENT
+UID:thesis-paper-call-SONACOMS-jv1-denso-closed-by-jan27-cred@fein-scoreboa
+ rd
+DTSTAMP:20261122T120233Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Resolve paper call SONACOMS (c/assisted)
+DESCRIPTION:thesis:paper-call:SONACOMS:jv1-denso-closed-by-jan27-cred | YES
+  if an NSE filing or the Q3 FY27 results/call states the JV1 transaction (
+ business transfer / JV formation with Denso) was completed on or before 31
+ -Jan-2027. Signed-but-not-closed\, or completion after 31-Jan-2027 = NO.
+END:VEVENT
+BEGIN:VEVENT
 UID:thesis-paper-call-SONACOMS-q3fy27-opm-23pct-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Resolve paper call SONACOMS (a/structured)
@@ -294,7 +318,7 @@ DESCRIPTION:thesis:paper-call:SONACOMS:q3fy27-opm-23pct-plus | YES if Q3 FY
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-ULTRACEMCO-q3fy27-op-4500cr-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Resolve paper call ULTRACEMCO (a/structured)
@@ -305,7 +329,7 @@ DESCRIPTION:thesis:paper-call:ULTRACEMCO:q3fy27-op-4500cr-plus | YES if Ult
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-UNIPARTS-fire-rebuild-by-dec-2026@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Resolve paper call UNIPARTS (c/assisted)
@@ -315,7 +339,7 @@ DESCRIPTION:thesis:paper-call:UNIPARTS:fire-rebuild-by-dec-2026 | (no writt
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-UNIPARTS-q3fy27-rev-in-line-q1@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Resolve paper call UNIPARTS (a/structured)
@@ -326,7 +350,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-KO-initial-2027-organic-revenue-guide-6pct-plus@fe
  in-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Resolve paper call US-KO (c/assisted)
@@ -337,7 +361,7 @@ DESCRIPTION:thesis:paper-call:US-KO:initial-2027-organic-revenue-guide-6pct
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-WMT-fy27-adj-eps-at-or-above-2-89@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270301
 DTEND;VALUE=DATE:20270302
 SUMMARY:Resolve paper call US-WMT (a/assisted)
@@ -347,7 +371,7 @@ DESCRIPTION:thesis:paper-call:US-WMT:fy27-adj-eps-at-or-above-2-89 | YES if
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-HIMS-q4-2026-adj-ebitda-80m-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270310
 DTEND;VALUE=DATE:20270311
 SUMMARY:Resolve paper call US-HIMS (a/assisted)
@@ -357,7 +381,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-NVDA-q4fy27-revenue-above-top-of-guide@fein-scoreb
  oard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270310
 DTEND;VALUE=DATE:20270311
 SUMMARY:Resolve paper call US-NVDA (a/structured)
@@ -368,7 +392,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-SKIPPER-450kt-commissioned-by-q4-start@fein-scoreboar
  d
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270315
 DTEND;VALUE=DATE:20270316
 SUMMARY:Resolve paper call SKIPPER (c/assisted)
@@ -379,7 +403,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-AAON-fy2026-sales-growth-72pct-plus@fein-scoreboar
  d
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270315
 DTEND;VALUE=DATE:20270316
 SUMMARY:Resolve paper call US-AAON (a/structured)
@@ -391,7 +415,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-CRM-initial-fy28-revenue-guide-10pct-plus@fein-sco
  reboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270315
 DTEND;VALUE=DATE:20270316
 SUMMARY:Resolve paper call US-CRM (c/assisted)
@@ -403,7 +427,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-MPWR-material-weakness-remediated-fy26-10k@fein-sc
  oreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270315
 DTEND;VALUE=DATE:20270316
 SUMMARY:Resolve paper call US-MPWR (c/assisted)
@@ -417,7 +441,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-O-initial-2027-affo-guide-midpoint-4-59-plus@fein-
  scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270315
 DTEND;VALUE=DATE:20270316
 SUMMARY:Resolve paper call US-O (c/assisted)
@@ -428,7 +452,7 @@ DESCRIPTION:thesis:paper-call:US-O:initial-2027-affo-guide-midpoint-4-59-pl
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-TGT-q4-2026-comps-3pct-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270315
 DTEND;VALUE=DATE:20270316
 SUMMARY:Resolve paper call US-TGT (a/assisted)
@@ -438,7 +462,7 @@ DESCRIPTION:thesis:paper-call:US-TGT:q4-2026-comps-3pct-plus | YES if Targe
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-FIVE-fy2026-comps-11pct-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Resolve paper call US-FIVE (a/assisted)
@@ -449,7 +473,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-PAYO-material-weakness-remediated-fy26-10k@fein-sc
  oreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Resolve paper call US-PAYO (c/assisted)
@@ -461,7 +485,7 @@ DESCRIPTION:thesis:paper-call:US-PAYO:material-weakness-remediated-fy26-10k
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-ULTA-fy2026-eps-at-or-above-29@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Resolve paper call US-ULTA (a/structured)
@@ -471,7 +495,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-PERSISTENT-nagarro-deal-closes-by-mar27@fein-scoreboa
  rd
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270415
 DTEND;VALUE=DATE:20270416
 SUMMARY:Resolve paper call PERSISTENT (c/assisted)
@@ -484,7 +508,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-TATASTEEL-nl-binding-decarb-agreement-by-mar27@fein-s
  coreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270415
 DTEND;VALUE=DATE:20270416
 SUMMARY:Resolve paper call TATASTEEL (c/assisted)
@@ -499,7 +523,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-TVSMOTOR-q4fy27-volume-growth-15pct-plus@fein-scorebo
  ard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270415
 DTEND;VALUE=DATE:20270416
 SUMMARY:Resolve paper call TVSMOTOR (a/assisted)
@@ -511,7 +535,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-NEE-virginia-scc-approves-dominion-merger-by-mar27
  @fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270415
 DTEND;VALUE=DATE:20270416
 SUMMARY:Resolve paper call US-NEE (c/assisted)
@@ -524,7 +548,7 @@ DESCRIPTION:thesis:paper-call:US-NEE:virginia-scc-approves-dominion-merger-
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-GODREJPROP-fy27-bookings-40000cr-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270430
 DTEND;VALUE=DATE:20270501
 SUMMARY:Resolve paper call GODREJPROP (a/assisted)
@@ -535,7 +559,7 @@ DESCRIPTION:thesis:paper-call:GODREJPROP:fy27-bookings-40000cr-plus | YES i
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-HCLTECH-fy27-cc-growth-above-midpoint@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270430
 DTEND;VALUE=DATE:20270501
 SUMMARY:Resolve paper call HCLTECH (a/assisted)
@@ -546,7 +570,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-INDOTECH-promoter-pledge-reduced-by-mar27@fein-scoreb
  oard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270430
 DTEND;VALUE=DATE:20270501
 SUMMARY:Resolve paper call INDOTECH (a/structured)
@@ -558,7 +582,7 @@ DESCRIPTION:thesis:paper-call:INDOTECH:promoter-pledge-reduced-by-mar27 | Y
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-AUBANK-fy27-credit-cost-within-90bps@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270515
 DTEND;VALUE=DATE:20270516
 SUMMARY:Resolve paper call AUBANK (d/human)
@@ -570,7 +594,7 @@ DESCRIPTION:thesis:paper-call:AUBANK:fy27-credit-cost-within-90bps | YES if
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-BAJFINANCE-fy27-aum-growth-26pct-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270515
 DTEND;VALUE=DATE:20270516
 SUMMARY:Resolve paper call BAJFINANCE (a/assisted)
@@ -581,7 +605,7 @@ DESCRIPTION:thesis:paper-call:BAJFINANCE:fy27-aum-growth-26pct-plus | YES i
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-HDFCLIFE-fy27-vnb-growth-12pct-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270515
 DTEND;VALUE=DATE:20270516
 SUMMARY:Resolve paper call HDFCLIFE (a/assisted)
@@ -592,7 +616,7 @@ DESCRIPTION:thesis:paper-call:HDFCLIFE:fy27-vnb-growth-12pct-plus | YES if
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-ICICIBANK-q4fy27-nim-above-q3fy27@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270515
 DTEND;VALUE=DATE:20270516
 SUMMARY:Resolve paper call ICICIBANK (a/assisted)
@@ -605,7 +629,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-BAJAJCON-fy27-revenue-growth-17pct-plus@fein-scoreboa
  rd
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
 SUMMARY:Resolve paper call BAJAJCON (a/structured)
@@ -617,7 +641,7 @@ DESCRIPTION:thesis:paper-call:BAJAJCON:fy27-revenue-growth-17pct-plus | YES
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-BEL-fy27-order-inflow-25000cr-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
 SUMMARY:Resolve paper call BEL (a/assisted)
@@ -627,8 +651,29 @@ DESCRIPTION:thesis:paper-call:BEL:fy27-order-inflow-25000cr-plus | YES if B
  ure\, is ≥₹25\,000 cr (QRSAM included if received).
 END:VEVENT
 BEGIN:VEVENT
+UID:thesis-paper-call-HAPPYFORGE-fy27-opm-30pct-plus-cred@fein-scoreboard
+DTSTAMP:20261122T120233Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call HAPPYFORGE (a/structured)
+DESCRIPTION:thesis:paper-call:HAPPYFORGE:fy27-opm-30pct-plus-cred | YES if 
+ FY27 consolidated Operating Profit / Sales (screener\; NSE XBRL second sou
+ rce) is >= 30.0%\, to one decimal.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-HAPPYFORGE-fy27-revenue-growth-17pct-plus-cred@fein-s
+ coreboard
+DTSTAMP:20261122T120233Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call HAPPYFORGE (a/structured)
+DESCRIPTION:thesis:paper-call:HAPPYFORGE:fy27-revenue-growth-17pct-plus-cre
+ d | YES if FY27 consolidated revenue from operations / FY26 - 1 >= 17.0% (
+ NSE XBRL + screener\, one decimal).
+END:VEVENT
+BEGIN:VEVENT
 UID:thesis-paper-call-IOLCP-fy27-opm-14pct-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
 SUMMARY:Resolve paper call IOLCP (a/structured)
@@ -639,7 +684,7 @@ DESCRIPTION:thesis:paper-call:IOLCP:fy27-opm-14pct-plus | YES if FY27 conso
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-MARICO-fy27-ebitda-growth-24pct-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
 SUMMARY:Resolve paper call MARICO (a/structured)
@@ -650,7 +695,7 @@ DESCRIPTION:thesis:paper-call:MARICO:fy27-ebitda-growth-24pct-plus | YES if
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-NTPC-fy27-re-addition-4-8gw@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
 SUMMARY:Resolve paper call NTPC (d/human)
@@ -661,8 +706,29 @@ DESCRIPTION:thesis:paper-call:NTPC:fy27-re-addition-4-8gw | YES if NTPC (gr
  31-Mar-2027 minus 31-Mar-2026).
 END:VEVENT
 BEGIN:VEVENT
+UID:thesis-paper-call-SANSERA-fy27-opm-above-fy26-cred@fein-scoreboard
+DTSTAMP:20261122T120233Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call SANSERA (a/structured)
+DESCRIPTION:thesis:paper-call:SANSERA:fy27-opm-above-fy26-cred | YES if FY2
+ 7 consolidated Operating Profit / Sales (screener\; NSE XBRL second source
+ ) is > 18.4%\, to one decimal.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-SANSERA-fy27-revenue-growth-17pct-plus-cred@fein-scor
+ eboard
+DTSTAMP:20261122T120233Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call SANSERA (a/structured)
+DESCRIPTION:thesis:paper-call:SANSERA:fy27-revenue-growth-17pct-plus-cred |
+  YES if FY27 consolidated revenue from operations / FY26 - 1 >= 17.0% (NSE
+  XBRL + screener consolidated\, one decimal).
+END:VEVENT
+BEGIN:VEVENT
 UID:thesis-paper-call-SKIPPER-fy27-ebitda-margin-10pct-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
 SUMMARY:Resolve paper call SKIPPER (a/structured)
@@ -671,7 +737,7 @@ DESCRIPTION:thesis:paper-call:SKIPPER:fy27-ebitda-margin-10pct-plus | (no w
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-SKIPPER-fy27-inflow-7500cr@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
 SUMMARY:Resolve paper call SKIPPER (a/assisted)
@@ -680,7 +746,7 @@ DESCRIPTION:thesis:paper-call:SKIPPER:fy27-inflow-7500cr | (no written rule
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-SKIPPER-fy27-revenue-13pct-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
 SUMMARY:Resolve paper call SKIPPER (a/structured)
@@ -689,9 +755,20 @@ DESCRIPTION:thesis:paper-call:SKIPPER:fy27-revenue-13pct-plus | (no written
  or)
 END:VEVENT
 BEGIN:VEVENT
+UID:thesis-paper-call-SONACOMS-fy27-opm-23pct-plus-cred@fein-scoreboard
+DTSTAMP:20261122T120233Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call SONACOMS (a/structured)
+DESCRIPTION:thesis:paper-call:SONACOMS:fy27-opm-23pct-plus-cred | YES if FY
+ 27 consolidated Operating Profit / Sales is >= 23.0% on both NSE XBRL and 
+ screener.in (to one decimal)\; if they straddle 23.0% the call goes to rev
+ iew and the company-reported FY27 EBITDA margin decides.
+END:VEVENT
+BEGIN:VEVENT
 UID:thesis-paper-call-TATAPOWER-fy27-capacity-addition-2-5gw@fein-scoreboar
  d
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
 SUMMARY:Resolve paper call TATAPOWER (d/human)
@@ -704,7 +781,7 @@ DESCRIPTION:thesis:paper-call:TATAPOWER:fy27-capacity-addition-2-5gw | YES
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-TRANSRAILL-fy27-order-intake-10000cr@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
 SUMMARY:Resolve paper call TRANSRAILL (a/assisted)
@@ -714,8 +791,18 @@ DESCRIPTION:thesis:paper-call:TRANSRAILL:fy27-order-intake-10000cr | YES if
  esentation\, press release or call.
 END:VEVENT
 BEGIN:VEVENT
+UID:thesis-paper-call-UNIPARTS-fy27-opm-above-20pct-cred@fein-scoreboard
+DTSTAMP:20261122T120233Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call UNIPARTS (a/structured)
+DESCRIPTION:thesis:paper-call:UNIPARTS:fy27-opm-above-20pct-cred | YES if F
+ Y27 consolidated Operating Profit / Sales (screener\; NSE XBRL as second s
+ ource) is > 20.0%\, to one decimal.
+END:VEVENT
+BEGIN:VEVENT
 UID:thesis-paper-call-UNIPARTS-fy27-rev-growth-20pct-plus@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
 SUMMARY:Resolve paper call UNIPARTS (a/structured)
@@ -724,9 +811,21 @@ DESCRIPTION:thesis:paper-call:UNIPARTS:fy27-rev-growth-20pct-plus | (no wri
  oY
 END:VEVENT
 BEGIN:VEVENT
+UID:thesis-paper-call-UNIPARTS-fy27-revenue-growth-24pct-cred@fein-scoreboa
+ rd
+DTSTAMP:20261122T120233Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Resolve paper call UNIPARTS (a/structured)
+DESCRIPTION:thesis:paper-call:UNIPARTS:fy27-revenue-growth-24pct-cred | YES
+  if FY27 consolidated revenue from operations / FY26 consolidated revenue 
+ from operations - 1 >= 24.0% (NSE XBRL and screener consolidated annual fi
+ gures\, to one decimal).
+END:VEVENT
+BEGIN:VEVENT
 UID:thesis-paper-call-US-AAPL-buyback-authorization-100bn-may27@fein-scoreb
  oard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
 SUMMARY:Resolve paper call US-AAPL (c/assisted)
@@ -737,7 +836,7 @@ DESCRIPTION:thesis:paper-call:US-AAPL:buyback-authorization-100bn-may27 | Y
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-DECK-fy27-eps-at-or-above-7-95@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270605
 DTEND;VALUE=DATE:20270606
 SUMMARY:Resolve paper call US-DECK (a/structured)
@@ -748,7 +847,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-DIXON-vivo-jv-production-starts-q4fy27@fein-scoreboar
  d
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270615
 DTEND;VALUE=DATE:20270616
 SUMMARY:Resolve paper call DIXON (c/assisted)
@@ -759,9 +858,67 @@ DESCRIPTION:thesis:paper-call:DIXON:vivo-jv-production-starts-q4fy27 | YES
  start in Q1 FY28 or later = NO.
 END:VEVENT
 BEGIN:VEVENT
+UID:thesis-paper-call-ENDURANCE-chennai-disc-brake-sop-by-mar27-cred@fein-s
+ coreboard
+DTSTAMP:20261122T120233Z
+DTSTART;VALUE=DATE:20270615
+DTEND;VALUE=DATE:20270616
+SUMMARY:Resolve paper call ENDURANCE (c/assisted)
+DESCRIPTION:thesis:paper-call:ENDURANCE:chennai-disc-brake-sop-by-mar27-cre
+ d | YES if the Q4 FY27 call/presentation (or an NSE filing) states SOP at 
+ the new Chennai disc-brake plant started on or before 31-Mar-2027.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-ENDURANCE-fifth-forging-press-sop-by-mar27-cred@fein-
+ scoreboard
+DTSTAMP:20261122T120233Z
+DTSTART;VALUE=DATE:20270615
+DTEND;VALUE=DATE:20270616
+SUMMARY:Resolve paper call ENDURANCE (c/assisted)
+DESCRIPTION:thesis:paper-call:ENDURANCE:fifth-forging-press-sop-by-mar27-cr
+ ed | YES if the Q4 FY27 call/presentation (or an NSE filing) states SOP of
+  the fifth aluminium forging press / new forging plant started on or befor
+ e 31-Mar-2027.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-HAPPYFORGE-orders-500cr-by-mar27-cred@fein-scoreboard
+DTSTAMP:20261122T120233Z
+DTSTART;VALUE=DATE:20270615
+DTEND;VALUE=DATE:20270616
+SUMMARY:Resolve paper call HAPPYFORGE (a/assisted)
+DESCRIPTION:thesis:paper-call:HAPPYFORGE:orders-500cr-by-mar27-cred | YES i
+ f the Q4 FY27 call/presentation (or NSE filings) states new orders/peak-an
+ nual business won after the Q2FY27 call and by 31-Mar-2027 totalling >=INR
+  450 cr (company's own figure\; lifetime vs annual basis as the company st
+ ates it\, judged against the ~500 cr statement).
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-SANSERA-defence-facility-operational-by-mar27-cred@fe
+ in-scoreboard
+DTSTAMP:20261122T120233Z
+DTSTART;VALUE=DATE:20270615
+DTEND;VALUE=DATE:20270616
+SUMMARY:Resolve paper call SANSERA (c/assisted)
+DESCRIPTION:thesis:paper-call:SANSERA:defence-facility-operational-by-mar27
+ -cred | YES if a Q3/Q4 FY27 call\, presentation or NSE filing states the d
+ edicated defence facility began operations on or before 31-Mar-2027.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-SANSERA-nichidai-jv-production-by-mar27-cred@fein-sco
+ reboard
+DTSTAMP:20261122T120233Z
+DTSTART;VALUE=DATE:20270615
+DTEND;VALUE=DATE:20270616
+SUMMARY:Resolve paper call SANSERA (c/assisted)
+DESCRIPTION:thesis:paper-call:SANSERA:nichidai-jv-production-by-mar27-cred 
+ | YES if the Q4 FY27 results release/presentation/call (or an NSE filing) 
+ states that the JV's commercial production began on or before 31-Mar-2027.
+  'Trial/sample production' only = NO.
+END:VEVENT
+BEGIN:VEVENT
 UID:thesis-paper-call-BHARTIARTL-prepaid-tariff-hike-by-jun27@fein-scoreboa
  rd
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
 SUMMARY:Resolve paper call BHARTIARTL (d/human)
@@ -773,9 +930,21 @@ DESCRIPTION:thesis:paper-call:BHARTIARTL:prepaid-tariff-hike-by-jun27 | YES
  hanges = NO.
 END:VEVENT
 BEGIN:VEVENT
+UID:thesis-paper-call-ENDURANCE-fy27-driveshaft-revenue-100cr-cred@fein-sco
+ reboard
+DTSTAMP:20261122T120233Z
+DTSTART;VALUE=DATE:20270630
+DTEND;VALUE=DATE:20270701
+SUMMARY:Resolve paper call ENDURANCE (a/assisted)
+DESCRIPTION:thesis:paper-call:ENDURANCE:fy27-driveshaft-revenue-100cr-cred 
+ | YES if Endurance's Q4 FY27 call/presentation states FY27 driveshaft reve
+ nue > INR 100 cr. Not disclosed = review (void if never disclosed by 2027-
+ 06-30).
+END:VEVENT
+BEGIN:VEVENT
 UID:thesis-paper-call-GENUSPOWER-cold-valuation-beats-nifty-to-jun27@fein-s
  coreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
 SUMMARY:Resolve paper call GENUSPOWER (b/structured)
@@ -787,7 +956,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-HINDALCO-peak-cycle-cheap-vs-nifty-to-jun27@fein-scor
  eboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
 SUMMARY:Resolve paper call HINDALCO (b/structured)
@@ -799,7 +968,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-TITAN-cooler-valuation-beats-nifty-to-jun27@fein-scor
  eboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
 SUMMARY:Resolve paper call TITAN (b/structured)
@@ -811,7 +980,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-ADBE-cold-valuation-beats-spy-to-jun27@fein-scoreb
  oard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
 SUMMARY:Resolve paper call US-ADBE (b/structured)
@@ -822,7 +991,7 @@ DESCRIPTION:thesis:paper-call:US-ADBE:cold-valuation-beats-spy-to-jun27 | Y
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-CAT-dividend-raise-7pct-by-jun27@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
 SUMMARY:Resolve paper call US-CAT (c/structured)
@@ -833,7 +1002,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-COST-hot-valuation-beats-spy-to-jun27@fein-scorebo
  ard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
 SUMMARY:Resolve paper call US-COST (b/structured)
@@ -844,7 +1013,7 @@ DESCRIPTION:thesis:paper-call:US-COST:hot-valuation-beats-spy-to-jun27 | YE
 END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-OPTU-chapter11-filing-by-jun27@fein-scoreboard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
 SUMMARY:Resolve paper call US-OPTU (c/structured)
@@ -858,7 +1027,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-PLTR-hot-valuation-beats-spy-to-jun27@fein-scorebo
  ard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
 SUMMARY:Resolve paper call US-PLTR (b/structured)
@@ -869,7 +1038,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thesis-paper-call-US-SNOW-hot-valuation-beats-spy-to-jun27@fein-scorebo
  ard
-DTSTAMP:20261122T062801Z
+DTSTAMP:20261122T120233Z
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
 SUMMARY:Resolve paper call US-SNOW (b/structured)
@@ -877,5 +1046,16 @@ DESCRIPTION:thesis:paper-call:US-SNOW:hot-valuation-beats-spy-to-jun27 | YE
  S if (SNOW close on 30-Jun-2027 ÷ 254.82) > (SPY close on 30-Jun-2027 ÷ 
  689.81). Use the last trading day ≤30-Jun-2027\; adjust for splits\; div
  idends ignored.
+END:VEVENT
+BEGIN:VEVENT
+UID:thesis-paper-call-SONACOMS-jv2-closed-by-jun27-cred@fein-scoreboard
+DTSTAMP:20261122T120233Z
+DTSTART;VALUE=DATE:20270731
+DTEND;VALUE=DATE:20270801
+SUMMARY:Resolve paper call SONACOMS (c/assisted)
+DESCRIPTION:thesis:paper-call:SONACOMS:jv2-closed-by-jun27-cred | YES if an
+  NSE filing or company communication states JV2 was formed/closed (definit
+ ive agreements executed and transaction completed) on or before 30-Jun-202
+ 7.
 END:VEVENT
 END:VCALENDAR

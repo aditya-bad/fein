@@ -1,0 +1,5024 @@
+[
+ {
+  "type": "promise",
+  "id": "promise:SONACOMS:2025-08-04:bev-share-improve-next-quarters",
+  "title": "BEV revenue share to improve over the next few quarters (from 28% in Q1FY26)",
+  "body": "Vivek Vikram Singh (MD & Group CEO) on 2025-08-04 (Q1FY26 concall transcript): \"share remains low at 9%, and we expect the BEV share to improve in the next few quarters\" Metric: BEV share of automotive revenue. Target: higher than Q1FY26 28%. Deadline: 2026-03-31. Specificity: vague; volunteered. Status as of 2026-11-22: delivered. Evidence: BEV share 38% in Q3FY26, 39% in Q4FY26, 44% Q1FY27, 51% Q2FY27 (company, later calls).",
+  "tickers": [
+   "SONACOMS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "other"
+  ],
+  "date": "2025-08-04",
+  "data": {
+   "said_on": "2025-08-04",
+   "speaker": "Vivek Vikram Singh (MD & Group CEO)",
+   "quote": "share remains low at 9%, and we expect the BEV share to improve in the next few quarters",
+   "category": "other",
+   "metric": "BEV share of automotive revenue",
+   "target": "higher than Q1FY26 28%",
+   "deadline": "2026-03-31",
+   "deadline_precision": "vague",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "delivered",
+   "evidence": "BEV share 38% in Q3FY26, 39% in Q4FY26, 44% Q1FY27, 51% Q2FY27 (company, later calls).",
+   "delivered_value": "39% (Q4FY26)",
+   "delivery_ratio": 1.4,
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SONACOMS_09082025173136_Transcript.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other",
+   "score": 1.0,
+   "weight": 1.274
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_09082025173136_Transcript.pdf",
+   "https://www.screener.in/company/SONACOMS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SONACOMS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SONACOMS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SONACOMS:2025-08-04:non-auto-share-over-25pct",
+  "title": "Non-automotive revenue share to rise above 25% in the coming quarters (railways consolidation)",
+  "body": "Vivek Vikram Singh (MD & Group CEO) on 2025-08-04 (Q1FY26 concall transcript): \"The share from Asia, including India, obviously, will likely exceed 50% in the coming quarters, and we expect non-automotive revenue shares to also increase to over 25%.\" Metric: Non-automotive share of revenue. Target: >25%. Deadline: 2026-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: delivered. Evidence: 'The share of non-automotive revenues from 9% in FY25 today is 31% in the first nine months of this year' (Q3FY26 call). Mostly mechanical (railway acquisition consolidated from Q2FY26).",
+  "tickers": [
+   "SONACOMS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "other"
+  ],
+  "date": "2025-08-04",
+  "data": {
+   "said_on": "2025-08-04",
+   "speaker": "Vivek Vikram Singh (MD & Group CEO)",
+   "quote": "The share from Asia, including India, obviously, will likely exceed 50% in the coming quarters, and we expect non-automotive revenue shares to also increase to over 25%.",
+   "category": "other",
+   "metric": "Non-automotive share of revenue",
+   "target": ">25%",
+   "deadline": "2026-03-31",
+   "deadline_precision": "vague",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "delivered",
+   "evidence": "'The share of non-automotive revenues from 9% in FY25 today is 31% in the first nine months of this year' (Q3FY26 call). Mostly mechanical (railway acquisition consolidated from Q2FY26).",
+   "delivered_value": "31% (9MFY26)",
+   "delivery_ratio": 1.24,
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SONACOMS_09082025173136_Transcript.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other",
+   "score": 1.0,
+   "weight": 3.823
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_09082025173136_Transcript.pdf",
+   "https://www.screener.in/company/SONACOMS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SONACOMS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SONACOMS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SONACOMS:2025-08-04:asia-share-over-50pct",
+  "title": "Asia incl. India to exceed 50% of revenue in the coming quarters",
+  "body": "Vivek Vikram Singh (MD & Group CEO) on 2025-08-04 (Q1FY26 concall transcript): \"The share from Asia, including India, obviously, will likely exceed 50% in the coming quarters\" Metric: Asia share of revenue. Target: >50%. Deadline: 2026-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: unverifiable. Evidence: Geography split not restated in later transcripts read; deck not checked.",
+  "tickers": [
+   "SONACOMS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "other"
+  ],
+  "date": "2025-08-04",
+  "data": {
+   "said_on": "2025-08-04",
+   "speaker": "Vivek Vikram Singh (MD & Group CEO)",
+   "quote": "The share from Asia, including India, obviously, will likely exceed 50% in the coming quarters",
+   "category": "other",
+   "metric": "Asia share of revenue",
+   "target": ">50%",
+   "deadline": "2026-03-31",
+   "deadline_precision": "vague",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "unverifiable",
+   "evidence": "Geography split not restated in later transcripts read; deck not checked.",
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SONACOMS_09082025173136_Transcript.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_09082025173136_Transcript.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SONACOMS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SONACOMS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SONACOMS:2025-10-27:consol-ebitda-margin-24-25pct",
+  "title": "Consolidated EBITDA margin target 24-25% after consolidating lower-margin railways",
+  "body": "Vivek Vikram Singh (MD & Group CEO) on 2025-10-27 (Q2FY26 concall transcript): \"But I would say that is the range, 24-25%, and that is our target.\" Metric: Consolidated EBITDA margin (company). Target: 24-25%. Deadline: 2026-03-31. Specificity: range; prompted by analyst. Status as of 2026-11-22: delivered. Evidence: FY26 company EBITDA margin 24.7% ('we have still managed to end FY26 with a full year EBITDA margin of 24.7%', Q4FY26 call); screener OPM 24.3%. Q4FY26 alone 23.5% (screener).",
+  "tickers": [
+   "SONACOMS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "margin"
+  ],
+  "date": "2025-10-27",
+  "data": {
+   "said_on": "2025-10-27",
+   "speaker": "Vivek Vikram Singh (MD & Group CEO)",
+   "quote": "But I would say that is the range, 24-25%, and that is our target.",
+   "category": "margin",
+   "metric": "Consolidated EBITDA margin (company)",
+   "target": "24-25%",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": false,
+   "materiality": 3,
+   "status": "delivered",
+   "evidence": "FY26 company EBITDA margin 24.7% ('we have still managed to end FY26 with a full year EBITDA margin of 24.7%', Q4FY26 call); screener OPM 24.3%. Q4FY26 alone 23.5% (screener).",
+   "delivered_value": "24.7% (company)",
+   "delivery_ratio": 1.0,
+   "later_restatements": "2026-04-30: 'now it is 23 to 25%' (band widened down, acknowledged); 2026-10-26: 'around 23%'",
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SONACOMS_31102025175705_Transcript.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin",
+   "score": 1.0,
+   "weight": 4.14
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_31102025175705_Transcript.pdf",
+   "https://www.screener.in/company/SONACOMS/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "company:SONACOMS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SONACOMS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SONACOMS:2025-10-27:return-ratios-improve-gradually",
+  "title": "Return ratios (ROCE 16%, ROE 13% in H1FY26) to improve in the quarters and years ahead",
+  "body": "Rohit Nanda (Group CFO) on 2025-10-27 (Q2FY26 concall transcript): \"We expect these ratios to improve in the quarters and years ahead.\" Metric: ROCE / ROE. Target: higher than H1FY26 (ROCE 16%). Deadline: 2027-03-31. Specificity: vague; volunteered. Status as of 2026-11-22: partly. Evidence: Screener FY26 ROCE 14% (FY25 18%) - fell; Q2FY27 call: 'Our return ratios have also improved' for H1FY27 (company, figure not checked). Direction right only from H1FY27.",
+  "tickers": [
+   "SONACOMS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "other"
+  ],
+  "date": "2025-10-27",
+  "data": {
+   "said_on": "2025-10-27",
+   "speaker": "Rohit Nanda (Group CFO)",
+   "quote": "We expect these ratios to improve in the quarters and years ahead.",
+   "category": "other",
+   "metric": "ROCE / ROE",
+   "target": "higher than H1FY26 (ROCE 16%)",
+   "deadline": "2027-03-31",
+   "deadline_precision": "vague",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "partly",
+   "evidence": "Screener FY26 ROCE 14% (FY25 18%) - fell; Q2FY27 call: 'Our return ratios have also improved' for H1FY27 (company, figure not checked). Direction right only from H1FY27.",
+   "delivery_ratio": 0.5,
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SONACOMS_31102025175705_Transcript.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other",
+   "score": 0.5,
+   "weight": 1.38
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_31102025175705_Transcript.pdf",
+   "https://www.screener.in/company/SONACOMS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SONACOMS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SONACOMS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SONACOMS:2025-10-27:mexico-driveline-sop-q2fy28",
+  "title": "Mexico driveline plant: first program production from Q2 FY28",
+  "body": "Vivek Vikram Singh (MD & Group CEO) on 2025-10-27 (Q2FY26 concall transcript): \"This program has added 2.6 billion to our order book with production expected to start in the second quarter of FY 28.\" Metric: SOP Mexico plant. Target: Q2FY28. Deadline: 2027-09-30. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "SONACOMS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2025-10-27",
+  "data": {
+   "said_on": "2025-10-27",
+   "speaker": "Vivek Vikram Singh (MD & Group CEO)",
+   "quote": "This program has added 2.6 billion to our order book with production expected to start in the second quarter of FY 28.",
+   "category": "capacity",
+   "metric": "SOP Mexico plant",
+   "target": "Q2FY28",
+   "deadline": "2027-09-30",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "pending",
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SONACOMS_31102025175705_Transcript.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_31102025175705_Transcript.pdf",
+   "https://www.screener.in/company/SONACOMS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SONACOMS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SONACOMS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SONACOMS:2026-01-23:traction-motors-fastest-5yr",
+  "title": "Traction motors & controllers to be the highest-growth segment for the next 5 years",
+  "body": "Vivek Vikram Singh (MD & Group CEO) on 2026-01-23 (Q3FY26 concall transcript): \"I would expect traction motors and controllers to be our highest growth segment, by far, I think.\" Metric: Segment growth ranking. Target: highest growth segment. Deadline: 2031-03-31. Specificity: vague; prompted by analyst. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "SONACOMS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "other"
+  ],
+  "date": "2026-01-23",
+  "data": {
+   "said_on": "2026-01-23",
+   "speaker": "Vivek Vikram Singh (MD & Group CEO)",
+   "quote": "I would expect traction motors and controllers to be our highest growth segment, by far, I think.",
+   "category": "other",
+   "metric": "Segment growth ranking",
+   "target": "highest growth segment",
+   "deadline": "2031-03-31",
+   "deadline_precision": "vague",
+   "specificity": "vague",
+   "volunteered": false,
+   "materiality": 1,
+   "status": "pending",
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SONACOMS_31012026114914_Transcript.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_31012026114914_Transcript.pdf",
+   "https://www.screener.in/company/SONACOMS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SONACOMS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SONACOMS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SONACOMS:2026-04-30:margin-pressure-continues-fy27",
+  "title": "Commodity pass-through lag will keep pressure on margins in the foreseeable future",
+  "body": "Vivek Vikram Singh (MD & Group CEO) on 2026-04-30 (Q4FY26 concall transcript): \"that lag along with the arithmetic impact on both revenue and cost, will put pressure on our margins, which we expect to continue seeing in the foreseeable future\" Metric: EBITDA margin direction. Target: below FY26 24.7%. Deadline: 2026-09-30. Specificity: vague; volunteered. Status as of 2026-11-22: delivered. Evidence: Q1FY27 and Q2FY27 company EBITDA margin ~23% (screener 22.5% / 22.5%) vs FY26 24.7%.",
+  "tickers": [
+   "SONACOMS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-04-30",
+  "data": {
+   "said_on": "2026-04-30",
+   "speaker": "Vivek Vikram Singh (MD & Group CEO)",
+   "quote": "that lag along with the arithmetic impact on both revenue and cost, will put pressure on our margins, which we expect to continue seeing in the foreseeable future",
+   "category": "margin",
+   "metric": "EBITDA margin direction",
+   "target": "below FY26 24.7%",
+   "deadline": "2026-09-30",
+   "deadline_precision": "vague",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "delivered",
+   "evidence": "Q1FY27 and Q2FY27 company EBITDA margin ~23% (screener 22.5% / 22.5%) vs FY26 24.7%.",
+   "delivered_value": "~23%",
+   "delivery_ratio": 1.0,
+   "source_doc": "Q4FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SONACOMS_06052026103543_Intimation.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin",
+   "score": 1.0,
+   "weight": 1.645
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_06052026103543_Intimation.pdf",
+   "https://www.screener.in/company/SONACOMS/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "company:SONACOMS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SONACOMS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SONACOMS:2026-04-30:fy27-margin-23-25-band",
+  "title": "FY27 consolidated EBITDA margin to stay in a 23-25% band",
+  "body": "Vivek Vikram Singh (MD & Group CEO) on 2026-04-30 (Q4FY26 concall transcript): \"I think now it is 23 to 25%, and that, I think we can say we should be able to continue being in that band.\" Metric: FY27 consolidated EBITDA margin. Target: 23-25%. Deadline: 2027-03-31. Specificity: range; prompted by analyst. Status as of 2026-11-22: pending. Evidence: H1FY27 company ~23.0% (screener 22.5%); 2026-10-26 CFO: 'around 23% ... don't hold us to every 10 or 20 bps'.",
+  "tickers": [
+   "SONACOMS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-04-30",
+  "data": {
+   "said_on": "2026-04-30",
+   "speaker": "Vivek Vikram Singh (MD & Group CEO)",
+   "quote": "I think now it is 23 to 25%, and that, I think we can say we should be able to continue being in that band.",
+   "category": "margin",
+   "metric": "FY27 consolidated EBITDA margin",
+   "target": "23-25%",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": false,
+   "materiality": 3,
+   "status": "pending",
+   "evidence": "H1FY27 company ~23.0% (screener 22.5%); 2026-10-26 CFO: 'around 23% ... don't hold us to every 10 or 20 bps'.",
+   "source_doc": "Q4FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SONACOMS_06052026103543_Intimation.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_06052026103543_Intimation.pdf",
+   "https://www.screener.in/company/SONACOMS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SONACOMS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SONACOMS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SONACOMS:2026-04-30:novelic-india-sensor-sop-cy26",
+  "title": "Sensor assembly (Novelic India) SOP by end of 2026",
+  "body": "Sat Mohan Gupta (CEO, Sensors/Software) on 2026-04-30 (Q4FY26 concall transcript): \"The SOP is going to be end of this year. the lines are already set up, because it's a sensor assembly unit.\" Metric: SOP sensor line. Target: by Dec-2026. Deadline: 2026-12-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "SONACOMS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-04-30",
+  "data": {
+   "said_on": "2026-04-30",
+   "speaker": "Sat Mohan Gupta (CEO, Sensors/Software)",
+   "quote": "The SOP is going to be end of this year. the lines are already set up, because it's a sensor assembly unit.",
+   "category": "capacity",
+   "metric": "SOP sensor line",
+   "target": "by Dec-2026",
+   "deadline": "2026-12-31",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 1,
+   "status": "pending",
+   "source_doc": "Q4FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SONACOMS_06052026103543_Intimation.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_06052026103543_Intimation.pdf",
+   "https://www.screener.in/company/SONACOMS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SONACOMS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SONACOMS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SONACOMS:2026-07-23:margin-recovery-visible-from-q2",
+  "title": "Cost-recovery measures to become progressively visible in margins from Q2FY27",
+  "body": "Vivek Vikram Singh (MD & Group CEO) on 2026-07-23 (Q1FY27 concall transcript): \"We expect that these recovery measures will become progressively more visible from quarter 2 onwards.\" Metric: EBITDA margin Q2FY27 vs Q1FY27. Target: margin up from Q1FY27 (~23%). Deadline: 2026-09-30. Specificity: vague; volunteered. Status as of 2026-11-22: missed. Evidence: Q2FY27 company EBITDA margin 23% ('lower by 2.x pp' YoY), screener 22.5% = flat QoQ; mgmt: 'continued margin pressure ... mainly driven by change in product mix'. Explanation given: Product mix (traction motors), West Asia inflation in steel/copper",
+  "tickers": [
+   "SONACOMS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-07-23",
+  "data": {
+   "said_on": "2026-07-23",
+   "speaker": "Vivek Vikram Singh (MD & Group CEO)",
+   "quote": "We expect that these recovery measures will become progressively more visible from quarter 2 onwards.",
+   "category": "margin",
+   "metric": "EBITDA margin Q2FY27 vs Q1FY27",
+   "target": "margin up from Q1FY27 (~23%)",
+   "deadline": "2026-09-30",
+   "deadline_precision": "quarter",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "missed",
+   "evidence": "Q2FY27 company EBITDA margin 23% ('lower by 2.x pp' YoY), screener 22.5% = flat QoQ; mgmt: 'continued margin pressure ... mainly driven by change in product mix'.",
+   "delivered_value": "23.0% vs ~23% in Q1",
+   "delivery_ratio": 0.0,
+   "explanation_for_miss": "Product mix (traction motors), West Asia inflation in steel/copper",
+   "admitted_unprompted": true,
+   "source_doc": "Q1FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SONACOMS_30072026142213_Transcript.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin",
+   "score": -1.0,
+   "weight": 1.781
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_30072026142213_Transcript.pdf",
+   "https://www.screener.in/company/SONACOMS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SONACOMS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SONACOMS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SONACOMS:2026-07-23:fy27-phenomenal-ev-growth",
+  "title": "'Phenomenal' EV (BEV) revenue growth in FY27",
+  "body": "Vivek Vikram Singh (MD & Group CEO) on 2026-07-23 (Q1FY27 concall transcript): \"But despite that, I think we will see phenomenal, EV growth in the, in this year at least.\" Metric: FY27 BEV revenue growth. Target: very high growth. Deadline: 2027-03-31. Specificity: vague; prompted by analyst. Status as of 2026-11-22: pending. Evidence: H1FY27 BEV revenue +119% YoY to INR 1,042 cr (Q2FY27 call).",
+  "tickers": [
+   "SONACOMS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "other"
+  ],
+  "date": "2026-07-23",
+  "data": {
+   "said_on": "2026-07-23",
+   "speaker": "Vivek Vikram Singh (MD & Group CEO)",
+   "quote": "But despite that, I think we will see phenomenal, EV growth in the, in this year at least.",
+   "category": "other",
+   "metric": "FY27 BEV revenue growth",
+   "target": "very high growth",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "vague",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "pending",
+   "evidence": "H1FY27 BEV revenue +119% YoY to INR 1,042 cr (Q2FY27 call).",
+   "source_doc": "Q1FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SONACOMS_30072026142213_Transcript.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_30072026142213_Transcript.pdf",
+   "https://www.screener.in/company/SONACOMS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SONACOMS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SONACOMS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SONACOMS:2026-10-26:jv1-denso-carveout-close-dec26",
+  "title": "Close JV1 (2W/3W carve-out with Denso) by end-December 2026, possibly spilling to January",
+  "body": "Rohit Nanda (Group CFO) on 2026-10-26 (Q2FY27 concall transcript): \"So we're targeting to close this JV 1 part of it which is carving out of the business by end of December because of the year-end holidays there is a possibility it may spill over to January\" Metric: JV1 completion. Target: by 31-Dec-2026 (Jan-2027 at the latest). Deadline: 2027-01-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "SONACOMS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "other"
+  ],
+  "date": "2026-10-26",
+  "data": {
+   "said_on": "2026-10-26",
+   "speaker": "Rohit Nanda (Group CFO)",
+   "quote": "So we're targeting to close this JV 1 part of it which is carving out of the business by end of December because of the year-end holidays there is a possibility it may spill over to January",
+   "category": "other",
+   "metric": "JV1 completion",
+   "target": "by 31-Dec-2026 (Jan-2027 at the latest)",
+   "deadline": "2027-01-31",
+   "deadline_precision": "month",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "pending",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SONACOMS_31102026183421_Intimation.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_31102026183421_Intimation.pdf",
+   "https://www.screener.in/company/SONACOMS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SONACOMS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SONACOMS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SONACOMS:2026-10-26:jv2-close-h1-cy27",
+  "title": "JV2 (high-voltage, Denso majority) to close in H1 of calendar 2027",
+  "body": "Sat Mohan Gupta (CEO, Sensors/Software) on 2026-10-26 (Q2FY27 concall transcript): \"JV2 has not yet formed up but we are targeting to close and have it sometime in the 1st half of calendar year 2027.\" Metric: JV2 completion. Target: by 30-Jun-2027. Deadline: 2027-06-30. Specificity: range; prompted by analyst. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "SONACOMS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "other"
+  ],
+  "date": "2026-10-26",
+  "data": {
+   "said_on": "2026-10-26",
+   "speaker": "Sat Mohan Gupta (CEO, Sensors/Software)",
+   "quote": "JV2 has not yet formed up but we are targeting to close and have it sometime in the 1st half of calendar year 2027.",
+   "category": "other",
+   "metric": "JV2 completion",
+   "target": "by 30-Jun-2027",
+   "deadline": "2027-06-30",
+   "deadline_precision": "half-year",
+   "specificity": "range",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "pending",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SONACOMS_31102026183421_Intimation.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_31102026183421_Intimation.pdf",
+   "https://www.screener.in/company/SONACOMS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SONACOMS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SONACOMS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SONACOMS:2026-10-26:normal-margin-around-23pct",
+  "title": "Normalised consolidated EBITDA margin 'around 23%' given product mix",
+  "body": "Rohit Nanda (Group CFO) on 2026-10-26 (Q2FY27 concall transcript): \"if the world is operating in a normal fashion then we should probably around 23% I don't hold us to like every 10 or 20 bps\" Metric: EBITDA margin (company). Target: ~23%. Deadline: 2027-03-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: pending. Evidence: Restates 2026-04-30 '23-25%' at its floor - an acknowledged downward drift (24-25 -> 23-25 -> ~23) over 12 months.",
+  "tickers": [
+   "SONACOMS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-10-26",
+  "data": {
+   "said_on": "2026-10-26",
+   "speaker": "Rohit Nanda (Group CFO)",
+   "quote": "if the world is operating in a normal fashion then we should probably around 23% I don't hold us to like every 10 or 20 bps",
+   "category": "margin",
+   "metric": "EBITDA margin (company)",
+   "target": "~23%",
+   "deadline": "2027-03-31",
+   "deadline_precision": "vague",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "pending",
+   "evidence": "Restates 2026-04-30 '23-25%' at its floor - an acknowledged downward drift (24-25 -> 23-25 -> ~23) over 12 months.",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SONACOMS_31102026183421_Intimation.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_31102026183421_Intimation.pdf",
+   "https://www.screener.in/company/SONACOMS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SONACOMS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SONACOMS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SONACOMS:2026-10-26:revenue-cagr-25pct-medium-term",
+  "title": "Medium-term aspiration implies ~25% revenue CAGR",
+  "body": "Vivek Vikram Singh (MD & Group CEO) on 2026-10-26 (Q2FY27 concall transcript): \"Pamod, in short we've already given our aspiration which actually does imply a 25% CAGR.\" Metric: Revenue CAGR. Target: ~25% p.a.. Deadline: 2030-03-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "SONACOMS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-10-26",
+  "data": {
+   "said_on": "2026-10-26",
+   "speaker": "Vivek Vikram Singh (MD & Group CEO)",
+   "quote": "Pamod, in short we've already given our aspiration which actually does imply a 25% CAGR.",
+   "category": "revenue_growth",
+   "metric": "Revenue CAGR",
+   "target": "~25% p.a.",
+   "deadline": "2030-03-31",
+   "deadline_precision": "vague",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 3,
+   "conditionality": "aspiration",
+   "status": "pending",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SONACOMS_31102026183421_Intimation.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_31102026183421_Intimation.pdf",
+   "https://www.screener.in/company/SONACOMS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SONACOMS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SONACOMS:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:SONACOMS:credibility-2026-11",
+  "title": "SONACOMS - Management Credibility Score (auto-components peer calibration, Nov 2026)",
+  "body": "Promise tracker on Sona BLW (auto-components peer set). 6 concalls (Aug-2025 to Oct-2026); 16 promises, 6 scored. Status counts: {'delivered': 4, 'unverifiable': 1, 'partly': 1, 'pending': 9, 'missed': 1}. Weighted delivery 82.4% (specificity-only 83.3%; hit rate 66.7%); MCS 0.697. Sona refuses revenue guidance, so the scoreable record is thin: mix/BEV-share statements (delivered), the 24-25% FY26 margin target (delivered 24.7%) and a Q2FY27 margin-recovery statement (missed). The margin band drifted down openly (24-25% -> 23-25% -> ~23%) - acknowledged, not hidden. Pending: JV1 close by Jan-2027, JV2 in H1 CY27, FY27 23-25% band. n is too small to rank. Research, not advice.",
+  "tickers": [
+   "SONACOMS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "process",
+   "auto-peer-calibration"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "as_of": "2026-11-22",
+   "n_promises": 16,
+   "n_scored": 6,
+   "status_counts": {
+    "delivered": 4,
+    "unverifiable": 1,
+    "partly": 1,
+    "pending": 9,
+    "missed": 1
+   },
+   "mcs_schema_scale": 0.697,
+   "mcs_scale_note": "-1.5 (all moved/dropped) .. +1 (all delivered); weights = specificity(3/2/1) x materiality(1-3) x recency decay (half-life 8 qtrs)",
+   "weighted_delivery_ratio_pct": 82.4,
+   "specificity_weighted_delivery_ratio_pct": 83.3,
+   "raw_hit_rate_pct": 66.7,
+   "candour_index_pct": 50.0,
+   "candour_index_hard_misses_pct": 100.0,
+   "by_category": {
+    "margin": {
+     "n": 3,
+     "delivery_ratio_pct": 75.0
+    },
+    "other": {
+     "n": 3,
+     "delivery_ratio_pct": 90.0
+    }
+   },
+   "by_specificity": {
+    "precise": {
+     "n": 1,
+     "delivery_ratio_pct": 100.0
+    },
+    "range": {
+     "n": 1,
+     "delivery_ratio_pct": 100.0
+    },
+    "vague": {
+     "n": 4,
+     "delivery_ratio_pct": 62.5
+    }
+   },
+   "by_materiality": {
+    "core (3)": {
+     "n": 1,
+     "delivery_ratio_pct": 100.0
+    },
+    "meaningful (2)": {
+     "n": 5,
+     "delivery_ratio_pct": 78.6
+    }
+   },
+   "by_volunteered": {
+    "prompted": {
+     "n": 1,
+     "delivery_ratio_pct": 100.0
+    },
+    "volunteered": {
+     "n": 5,
+     "delivery_ratio_pct": 78.6
+    }
+   },
+   "by_fiscal_year_said": {
+    "FY26 calls": {
+     "n": 5,
+     "delivery_ratio_pct": 93.8
+    },
+    "FY27 calls": {
+     "n": 1,
+     "delivery_ratio_pct": 0.0
+    }
+   },
+   "n_shortfalls": 2,
+   "n_shortfalls_admitted_unprompted": 1,
+   "n_volunteered": 7,
+   "n_prompted": 9,
+   "sector_adjusted_credibility_pts": 50.0,
+   "sac_components": {
+    "pooled:margin+other": {
+     "n": 6,
+     "own": 83.3,
+     "peer_median": 33.3,
+     "gap": 50.0
+    }
+   },
+   "peer_set": [
+    "SONACOMS",
+    "SANSERA",
+    "HAPPYFORGE",
+    "ENDURANCE",
+    "UNIPARTS"
+   ]
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_06052026103543_Intimation.pdf",
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_09082025173136_Transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_30072026142213_Transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_31012026114914_Transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_31102025175705_Transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_31102026183421_Intimation.pdf",
+   "https://www.screener.in/company/SONACOMS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SONACOMS",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:UNIPARTS:credibility-2026-11",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:auto-components-promise-credibility-base-rate",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2025-08-12:fy26-ads-revenue-280-300cr",
+  "title": "FY26 ADS revenue to double to INR 280-300 cr",
+  "body": "B.R. Preetham (Group CEO) on 2025-08-12 (Q1FY26 concall transcript): \"So we are quite hopeful that we should be able to reach our targeted revenue of INR280 crores to INR300 crores this year.\" Metric: ADS segment revenue FY26. Target: INR 280-300 cr. Deadline: 2026-03-31. Specificity: range; prompted by analyst. Status as of 2026-11-22: delivered. Evidence: 'ADS revenue from product sales reaching INR3,155 million, representing an exceptional growth of 155%' (Q4FY26 call). Company figure.",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2025-08-12",
+  "data": {
+   "said_on": "2025-08-12",
+   "speaker": "B.R. Preetham (Group CEO)",
+   "quote": "So we are quite hopeful that we should be able to reach our targeted revenue of INR280 crores to INR300 crores this year.",
+   "category": "revenue_growth",
+   "metric": "ADS segment revenue FY26",
+   "target": "INR 280-300 cr",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": false,
+   "materiality": 3,
+   "status": "delivered",
+   "evidence": "'ADS revenue from product sales reaching INR3,155 million, representing an exceptional growth of 155%' (Q4FY26 call). Company figure.",
+   "delivered_value": "INR 315.5 cr",
+   "delivery_ratio": 1.1,
+   "later_restatements": "2025-11-13 'very close to INR 3000 million'; 2026-02-10 'target of between INR275 crores and INR300 crores'",
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_17082025151807_Transcript.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth",
+   "score": 1.0,
+   "weight": 3.852
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_17082025151807_Transcript.pdf",
+   "https://www.screener.in/company/SANSERA/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2025-08-12:fy26-sweden-growth-20-25pct",
+  "title": "FY26 Swedish subsidiary growth 20-25% (~INR 225 cr)",
+  "body": "B.R. Preetham (Group CEO) on 2025-08-12 (Q1FY26 concall transcript): \"So we continue -overall, I think full year basis, we expect between 20%, 25% growth from the Swedish subsidiary.\" Metric: Sansera Sweden revenue growth FY26. Target: +20-25%. Deadline: 2026-03-31. Specificity: range; prompted by analyst. Status as of 2026-11-22: unverifiable. Evidence: Q4FY26 call cites 'strong growth in Swedish subsidiary' but no FY figure; Q2FY27: Sweden -16% YoY.",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2025-08-12",
+  "data": {
+   "said_on": "2025-08-12",
+   "speaker": "B.R. Preetham (Group CEO)",
+   "quote": "So we continue -overall, I think full year basis, we expect between 20%, 25% growth from the Swedish subsidiary.",
+   "category": "revenue_growth",
+   "metric": "Sansera Sweden revenue growth FY26",
+   "target": "+20-25%",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": false,
+   "materiality": 1,
+   "status": "unverifiable",
+   "evidence": "Q4FY26 call cites 'strong growth in Swedish subsidiary' but no FY figure; Q2FY27: Sweden -16% YoY.",
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_17082025151807_Transcript.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_17082025151807_Transcript.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2025-11-13:fy26-growth-at-least-teens",
+  "title": "FY26 consolidated revenue growth at least in the teens",
+  "body": "B.R. Preetham (Group CEO) on 2025-11-13 (Q2FY26 concall transcript): \"But currently, our visibility shows that on a full year basis, we should be able to enter at least the teens.\" Metric: Consolidated revenue growth FY26. Target: >=+13% (teens). Deadline: 2026-03-31. Specificity: range; prompted by analyst. Status as of 2026-11-22: delivered. Evidence: FY26 revenue 3,498 vs 3,017 cr = +15.9% (screener consolidated).",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2025-11-13",
+  "data": {
+   "said_on": "2025-11-13",
+   "speaker": "B.R. Preetham (Group CEO)",
+   "quote": "But currently, our visibility shows that on a full year basis, we should be able to enter at least the teens.",
+   "category": "revenue_growth",
+   "metric": "Consolidated revenue growth FY26",
+   "target": ">=+13% (teens)",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": false,
+   "materiality": 3,
+   "status": "delivered",
+   "evidence": "FY26 revenue 3,498 vs 3,017 cr = +15.9% (screener consolidated).",
+   "delivered_value": "+15.9%",
+   "delivery_ratio": 1.2,
+   "later_restatements": "The FY26 plan at the start of the year was 'mid-teens to high-teens' (Q4FY25 call, outside window; restated as such on 2026-02-10, acknowledged).",
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_20112025093848_Transcript.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth",
+   "score": 1.0,
+   "weight": 4.207
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_20112025093848_Transcript.pdf",
+   "https://www.screener.in/company/SANSERA/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2025-11-13:h2fy26-stronger-than-h1",
+  "title": "H2FY26 'much, much stronger' than H1FY26",
+  "body": "B.R. Preetham (Group CEO) on 2025-11-13 (Q2FY26 concall transcript): \"Our expectation is that the H2 is going to be much, much, much stronger than the H1.\" Metric: H2 vs H1 FY26 revenue. Target: H2 > H1. Deadline: 2026-03-31. Specificity: vague; prompted by analyst. Status as of 2026-11-22: delivered. Evidence: H1FY26 1,591 cr, H2FY26 1,907 cr (+20%) (screener).",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2025-11-13",
+  "data": {
+   "said_on": "2025-11-13",
+   "speaker": "B.R. Preetham (Group CEO)",
+   "quote": "Our expectation is that the H2 is going to be much, much, much stronger than the H1.",
+   "category": "revenue_growth",
+   "metric": "H2 vs H1 FY26 revenue",
+   "target": "H2 > H1",
+   "deadline": "2026-03-31",
+   "deadline_precision": "half-year",
+   "specificity": "vague",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "delivered",
+   "evidence": "H1FY26 1,591 cr, H2FY26 1,907 cr (+20%) (screener).",
+   "delivered_value": "+20% H2/H1",
+   "delivery_ratio": 1.0,
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_20112025093848_Transcript.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth",
+   "score": 1.0,
+   "weight": 1.402
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_20112025093848_Transcript.pdf",
+   "https://www.screener.in/company/SANSERA/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2025-11-13:ads-run-rate-38-40cr-month",
+  "title": "ADS run-rate ~INR 38-40 cr/month for the next five months",
+  "body": "B.R. Preetham (Group CEO) on 2025-11-13 (Q2FY26 concall transcript): \"while our run rate in ADS has been almost now for the next five months should be close to about Rs.38 to 40 crores per month\" Metric: ADS monthly revenue Nov-25..Mar-26. Target: INR 38-40 cr/month. Deadline: 2026-03-31. Specificity: range; prompted by analyst. Status as of 2026-11-22: delivered. Evidence: H2FY26 ADS = 315.5 - 86.4 (H1) = ~229 cr over 6 months = ~38 cr/month (company figures).",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2025-11-13",
+  "data": {
+   "said_on": "2025-11-13",
+   "speaker": "B.R. Preetham (Group CEO)",
+   "quote": "while our run rate in ADS has been almost now for the next five months should be close to about Rs.38 to 40 crores per month",
+   "category": "revenue_growth",
+   "metric": "ADS monthly revenue Nov-25..Mar-26",
+   "target": "INR 38-40 cr/month",
+   "deadline": "2026-03-31",
+   "deadline_precision": "quarter",
+   "specificity": "range",
+   "volunteered": false,
+   "materiality": 1,
+   "status": "delivered",
+   "evidence": "H2FY26 ADS = 315.5 - 86.4 (H1) = ~229 cr over 6 months = ~38 cr/month (company figures).",
+   "delivered_value": "~38 cr/month",
+   "delivery_ratio": 0.97,
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_20112025093848_Transcript.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth",
+   "score": 1.0,
+   "weight": 1.402
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_20112025093848_Transcript.pdf",
+   "https://www.screener.in/company/SANSERA/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2025-11-13:ads-hangar-ready-jun-jul-26",
+  "title": "New ADS hangar ready by June-July 2026",
+  "body": "Hari Krishnan (ADS business head) on 2025-11-13 (Q2FY26 concall transcript): \"our basic idea is to finish this by middle of next year, say around June to July\" Metric: New hangar completion. Target: Jun-Jul 2026. Deadline: 2026-07-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: moved-goalpost. Evidence: Restated 2026-02-10 'June, July'; 2026-05-21 'complete the construction by July, August'; 2026-08-13 'probably by towards October when we have our new hangar ready'. No explanation of the slip given; Q2FY27 call does not confirm completion.",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2025-11-13",
+  "data": {
+   "said_on": "2025-11-13",
+   "speaker": "Hari Krishnan (ADS business head)",
+   "quote": "our basic idea is to finish this by middle of next year, say around June to July",
+   "category": "capacity",
+   "metric": "New hangar completion",
+   "target": "Jun-Jul 2026",
+   "deadline": "2026-07-31",
+   "deadline_precision": "month",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "moved-goalpost",
+   "evidence": "Restated 2026-02-10 'June, July'; 2026-05-21 'complete the construction by July, August'; 2026-08-13 'probably by towards October when we have our new hangar ready'. No explanation of the slip given; Q2FY27 call does not confirm completion.",
+   "delivery_ratio": 0.0,
+   "admitted_unprompted": false,
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_20112025093848_Transcript.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity",
+   "score": -1.5,
+   "weight": 4.207
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_20112025093848_Transcript.pdf",
+   "https://www.screener.in/company/SANSERA/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2026-02-10:fy26-teens-to-mid-teens",
+  "title": "FY26 revenue growth teens to mid-teens with margin profile maintained",
+  "body": "B.R. Preetham (Group CEO) on 2026-02-10 (Q3FY26 concall transcript): \"we remain confident that we will close the year with teens to mid-teens top line growth while comfortably maintaining our current margin profile\" Metric: Consolidated revenue growth FY26. Target: +13-15%. Deadline: 2026-03-31. Specificity: range; volunteered. Status as of 2026-11-22: delivered. Evidence: +15.9% (screener); FY26 company EBITDA margin 18.1% vs 17.5% FY25.",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-02-10",
+  "data": {
+   "said_on": "2026-02-10",
+   "speaker": "B.R. Preetham (Group CEO)",
+   "quote": "we remain confident that we will close the year with teens to mid-teens top line growth while comfortably maintaining our current margin profile",
+   "category": "revenue_growth",
+   "metric": "Consolidated revenue growth FY26",
+   "target": "+13-15%",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 3,
+   "status": "delivered",
+   "evidence": "+15.9% (screener); FY26 company EBITDA margin 18.1% vs 17.5% FY25.",
+   "delivered_value": "+15.9%",
+   "delivery_ratio": 1.06,
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_17022026122638_transcript.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth",
+   "score": 1.0,
+   "weight": 4.578
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_17022026122638_transcript.pdf",
+   "https://www.screener.in/company/SANSERA/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2026-02-10:fy26-capex-375-400cr",
+  "title": "FY26 capex INR 375-400 cr (below the INR 450 cr plan)",
+  "body": "B.R. Preetham (Group CEO) on 2026-02-10 (Q3FY26 concall transcript): \"And this year, if I say that between INR375 crores and INR400 crores, a similar number could be for the next year as well.\" Metric: Capex FY26. Target: INR 375-400 cr. Deadline: 2026-03-31. Specificity: range; prompted by analyst. Status as of 2026-11-22: missed. Evidence: FY26 capex INR 509.7 cr ('we incurred a capex of INR5,097 million', Q4FY26 call) = 27% above the top of the range given 7 weeks before year-end. Growth capex for ADS orders, so economically benign, but a forecast miss.",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-02-10",
+  "data": {
+   "said_on": "2026-02-10",
+   "speaker": "B.R. Preetham (Group CEO)",
+   "quote": "And this year, if I say that between INR375 crores and INR400 crores, a similar number could be for the next year as well.",
+   "category": "capacity",
+   "metric": "Capex FY26",
+   "target": "INR 375-400 cr",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": false,
+   "materiality": 1,
+   "status": "missed",
+   "evidence": "FY26 capex INR 509.7 cr ('we incurred a capex of INR5,097 million', Q4FY26 call) = 27% above the top of the range given 7 weeks before year-end. Growth capex for ADS orders, so economically benign, but a forecast miss.",
+   "delivered_value": "INR 510 cr",
+   "delivery_ratio": 0.0,
+   "admitted_unprompted": false,
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_17022026122638_transcript.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity",
+   "score": -1.0,
+   "weight": 1.526
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_17022026122638_transcript.pdf",
+   "https://www.screener.in/company/SANSERA/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2026-02-10:fy27-ads-revenue-550-600cr",
+  "title": "FY27 ADS revenue INR 550-600 cr",
+  "body": "B.R. Preetham (Group CEO) on 2026-02-10 (Q3FY26 concall transcript): \"which is what we are looking at for the next year between INR550 crores to INR600 crores is what we look at\" Metric: ADS segment revenue FY27. Target: INR 550-600 cr. Deadline: 2027-03-31. Specificity: range; prompted by analyst. Status as of 2026-11-22: pending. Evidence: 2026-08-13: ADS growth 'about 75%-80%' for FY27 (= INR 552-568 cr on 315.5).",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-02-10",
+  "data": {
+   "said_on": "2026-02-10",
+   "speaker": "B.R. Preetham (Group CEO)",
+   "quote": "which is what we are looking at for the next year between INR550 crores to INR600 crores is what we look at",
+   "category": "revenue_growth",
+   "metric": "ADS segment revenue FY27",
+   "target": "INR 550-600 cr",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": false,
+   "materiality": 3,
+   "status": "pending",
+   "evidence": "2026-08-13: ADS growth 'about 75%-80%' for FY27 (= INR 552-568 cr on 315.5).",
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_17022026122638_transcript.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_17022026122638_transcript.pdf",
+   "https://www.screener.in/company/SANSERA/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2026-02-10:fy27-revenue-growth-about-20pct",
+  "title": "FY27 consolidated revenue growth about 20%",
+  "body": "B.R. Preetham (Group CEO) on 2026-02-10 (Q3FY26 concall transcript): \"I think next year, we are looking at about 20% growth.\" Metric: Consolidated revenue growth FY27. Target: ~+20%. Deadline: 2027-03-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: pending. Evidence: 2026-05-21 plan 'mid-to-high teens, more towards high-teens'; 2026-08-13 'high-teens top-line growth' (volunteered) and 'high-teens to 20%'. H1FY27 +33% (screener 2,112 vs 1,591 cr).",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-02-10",
+  "data": {
+   "said_on": "2026-02-10",
+   "speaker": "B.R. Preetham (Group CEO)",
+   "quote": "I think next year, we are looking at about 20% growth.",
+   "category": "revenue_growth",
+   "metric": "Consolidated revenue growth FY27",
+   "target": "~+20%",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 3,
+   "status": "pending",
+   "evidence": "2026-05-21 plan 'mid-to-high teens, more towards high-teens'; 2026-08-13 'high-teens top-line growth' (volunteered) and 'high-teens to 20%'. H1FY27 +33% (screener 2,112 vs 1,591 cr).",
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_17022026122638_transcript.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_17022026122638_transcript.pdf",
+   "https://www.screener.in/company/SANSERA/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2026-02-10:fy27-margin-better-than-fy26",
+  "title": "FY27 margin profile better than FY26",
+  "body": "B.R. Preetham (Group CEO) on 2026-02-10 (Q3FY26 concall transcript): \"I don't want to put what number we will have, but our margin profile will continue to be better than the current year.\" Metric: Consolidated EBITDA margin FY27 vs FY26. Target: > FY26 (company 18.1%; screener 18.4%). Deadline: 2027-03-31. Specificity: vague; prompted by analyst. Status as of 2026-11-22: pending. Evidence: 2026-08-13: 'happier if we are able to inch towards 19%'. H1FY27 company 19.3%, screener 19.2%.",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-02-10",
+  "data": {
+   "said_on": "2026-02-10",
+   "speaker": "B.R. Preetham (Group CEO)",
+   "quote": "I don't want to put what number we will have, but our margin profile will continue to be better than the current year.",
+   "category": "margin",
+   "metric": "Consolidated EBITDA margin FY27 vs FY26",
+   "target": "> FY26 (company 18.1%; screener 18.4%)",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "vague",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "pending",
+   "evidence": "2026-08-13: 'happier if we are able to inch towards 19%'. H1FY27 company 19.3%, screener 19.2%.",
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_17022026122638_transcript.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_17022026122638_transcript.pdf",
+   "https://www.screener.in/company/SANSERA/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2026-05-21:fy27-capex-similar-to-fy26",
+  "title": "FY27 capex at a similar level to FY26 (~INR 510 cr)",
+  "body": "B.R. Preetham (Group CEO) on 2026-05-21 (Q4FY26 concall transcript): \"On the capex front, during FY '26, we incurred a capex of INR5,097 million, and we expect a similar level of investment in FY '27 as well.\" Metric: Capex FY27. Target: ~INR 510 cr. Deadline: 2027-03-31. Specificity: vague; volunteered. Status as of 2026-11-22: withdrawn. Evidence: Raised openly to INR 800 cr on 2026-11-06 ('we have raised FY27 Capex projection to INR8,000 million', for new ADS orders) - explicit, explained revision >1 quarter before the deadline.",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-05-21",
+  "data": {
+   "said_on": "2026-05-21",
+   "speaker": "B.R. Preetham (Group CEO)",
+   "quote": "On the capex front, during FY '26, we incurred a capex of INR5,097 million, and we expect a similar level of investment in FY '27 as well.",
+   "category": "capacity",
+   "metric": "Capex FY27",
+   "target": "~INR 510 cr",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "withdrawn",
+   "evidence": "Raised openly to INR 800 cr on 2026-11-06 ('we have raised FY27 Capex projection to INR8,000 million', for new ADS orders) - explicit, explained revision >1 quarter before the deadline.",
+   "admitted_unprompted": true,
+   "source_doc": "Q4FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_28052026152825_Transcript.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity",
+   "score": -0.5,
+   "weight": 0.839
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_28052026152825_Transcript.pdf",
+   "https://www.screener.in/company/SANSERA/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2026-05-21:fy27-auto-h1-stronger-than-h2",
+  "title": "FY27 Auto business H1 stronger than H2 (base effect)",
+  "body": "B.R. Preetham (Group CEO) on 2026-05-21 (Q4FY26 concall transcript): \"Within the Auto business, FY '27 H1 is expected to be relatively stronger than the H2, aided by favorable base effect.\" Metric: Auto segment growth H1 vs H2 FY27. Target: H1 growth > H2 growth. Deadline: 2027-03-31. Specificity: vague; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-05-21",
+  "data": {
+   "said_on": "2026-05-21",
+   "speaker": "B.R. Preetham (Group CEO)",
+   "quote": "Within the Auto business, FY '27 H1 is expected to be relatively stronger than the H2, aided by favorable base effect.",
+   "category": "revenue_growth",
+   "metric": "Auto segment growth H1 vs H2 FY27",
+   "target": "H1 growth > H2 growth",
+   "deadline": "2027-03-31",
+   "deadline_precision": "half-year",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "source_doc": "Q4FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_28052026152825_Transcript.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_28052026152825_Transcript.pdf",
+   "https://www.screener.in/company/SANSERA/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2026-08-13:fy27-high-teens-growth",
+  "title": "FY27 high-teens top-line growth (volunteered)",
+  "body": "B.R. Preetham (Group CEO) on 2026-08-13 (Q1FY27 concall transcript): \"With this, we expect to end FY27 with high-teens top-line growth with continuous focus on improving margin profile.\" Metric: Consolidated revenue growth FY27. Target: +17-19% (high teens). Deadline: 2027-03-31. Specificity: range; volunteered. Status as of 2026-11-22: pending. Evidence: H1FY27 +33% (screener).",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-08-13",
+  "data": {
+   "said_on": "2026-08-13",
+   "speaker": "B.R. Preetham (Group CEO)",
+   "quote": "With this, we expect to end FY27 with high-teens top-line growth with continuous focus on improving margin profile.",
+   "category": "revenue_growth",
+   "metric": "Consolidated revenue growth FY27",
+   "target": "+17-19% (high teens)",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 3,
+   "status": "pending",
+   "evidence": "H1FY27 +33% (screener).",
+   "source_doc": "Q1FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_20082026120039_Transcript.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_20082026120039_Transcript.pdf",
+   "https://www.screener.in/company/SANSERA/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2026-08-13:nadcap-approval-q2fy27",
+  "title": "NADCAP and customer approvals for the new special-process facility within Q2FY27",
+  "body": "B.R. Preetham (Group CEO) on 2026-08-13 (Q1FY27 concall transcript): \"So with the new facility that we will probably hope to get a NADCAP and customer approvals for this special process within this quarter.\" Metric: NADCAP approval. Target: by 30-Sep-2026. Deadline: 2026-09-30. Specificity: precise; prompted by analyst. Status as of 2026-11-22: unverifiable. Evidence: Not mentioned in the Q2FY27 call text read.",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-08-13",
+  "data": {
+   "said_on": "2026-08-13",
+   "speaker": "B.R. Preetham (Group CEO)",
+   "quote": "So with the new facility that we will probably hope to get a NADCAP and customer approvals for this special process within this quarter.",
+   "category": "capacity",
+   "metric": "NADCAP approval",
+   "target": "by 30-Sep-2026",
+   "deadline": "2026-09-30",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 1,
+   "conditionality": "hope",
+   "status": "unverifiable",
+   "evidence": "Not mentioned in the Q2FY27 call text read.",
+   "source_doc": "Q1FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_20082026120039_Transcript.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_20082026120039_Transcript.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2026-11-06:nichidai-jv-production-end-h2fy27",
+  "title": "Sansera-Nichidai JV commercial production towards the end of H2 FY27",
+  "body": "B.R. Preetham (Group CEO) on 2026-11-06 (Q2FY27 concall transcript): \"Adding to our growth pipeline, commercial production at the Sansera-Nichidai JV is expected to commence towards the end of H2 FY 2027.\" Metric: JV commercial production start. Target: by 31-Mar-2027. Deadline: 2027-03-31. Specificity: range; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-11-06",
+  "data": {
+   "said_on": "2026-11-06",
+   "speaker": "B.R. Preetham (Group CEO)",
+   "quote": "Adding to our growth pipeline, commercial production at the Sansera-Nichidai JV is expected to commence towards the end of H2 FY 2027.",
+   "category": "capacity",
+   "metric": "JV commercial production start",
+   "target": "by 31-Mar-2027",
+   "deadline": "2027-03-31",
+   "deadline_precision": "half-year",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "pending",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_13112026120144_transcript.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_13112026120144_transcript.pdf",
+   "https://www.screener.in/company/SANSERA/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2026-11-06:defence-facility-ops-end-q3fy27",
+  "title": "Dedicated defence facility to begin operations towards the end of Q3 FY27 (or from Q4)",
+  "body": "B.R. Preetham (Group CEO) on 2026-11-06 (Q2FY27 concall transcript): \"In defense, our dedicated facility is expected to begin operations towards the end of Q3 FY 2027\" Metric: Defence facility start. Target: by Dec-2026 / Q4FY27. Deadline: 2027-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: Q&A: 'The defense should be operational towards the end of the third quarter or from the fourth quarter.'",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-11-06",
+  "data": {
+   "said_on": "2026-11-06",
+   "speaker": "B.R. Preetham (Group CEO)",
+   "quote": "In defense, our dedicated facility is expected to begin operations towards the end of Q3 FY 2027",
+   "category": "capacity",
+   "metric": "Defence facility start",
+   "target": "by Dec-2026 / Q4FY27",
+   "deadline": "2027-03-31",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "evidence": "Q&A: 'The defense should be operational towards the end of the third quarter or from the fourth quarter.'",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_13112026120144_transcript.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_13112026120144_transcript.pdf",
+   "https://www.screener.in/company/SANSERA/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2026-11-06:second-semicon-customer-q3fy27",
+  "title": "Add a second customer in the new (semicon/ADS) space in Q3FY27",
+  "body": "Hari Krishnan (ADS business head) on 2026-11-06 (Q2FY27 concall transcript): \"I would say conversations are progressing well, but we haven't yet reached the final point, which we are hopeful in Q3 we should be able to add a second customer in this space.\" Metric: Second customer win. Target: by 31-Dec-2026. Deadline: 2026-12-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "other"
+  ],
+  "date": "2026-11-06",
+  "data": {
+   "said_on": "2026-11-06",
+   "speaker": "Hari Krishnan (ADS business head)",
+   "quote": "I would say conversations are progressing well, but we haven't yet reached the final point, which we are hopeful in Q3 we should be able to add a second customer in this space.",
+   "category": "other",
+   "metric": "Second customer win",
+   "target": "by 31-Dec-2026",
+   "deadline": "2026-12-31",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 1,
+   "conditionality": "hopeful",
+   "status": "pending",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_13112026120144_transcript.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_13112026120144_transcript.pdf",
+   "https://www.screener.in/company/SANSERA/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SANSERA:2026-11-06:fy27-capex-800cr",
+  "title": "FY27 capex raised to INR 800 cr",
+  "body": "Vikas Goel (CFO) on 2026-11-06 (Q2FY27 concall transcript): \"To deliver these orders, we have raised FY27 Capex projection to INR8,000 million, fased with the customer validations\" Metric: Capex FY27. Target: ~INR 800 cr. Deadline: 2027-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-11-06",
+  "data": {
+   "said_on": "2026-11-06",
+   "speaker": "Vikas Goel (CFO)",
+   "quote": "To deliver these orders, we have raised FY27 Capex projection to INR8,000 million, fased with the customer validations",
+   "category": "capacity",
+   "metric": "Capex FY27",
+   "target": "~INR 800 cr",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/SANSERA_13112026120144_transcript.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_13112026120144_transcript.pdf",
+   "https://www.screener.in/company/SANSERA/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:SANSERA:credibility-2026-11",
+  "title": "SANSERA - Management Credibility Score (auto-components peer calibration, Nov 2026)",
+  "body": "Promise tracker on Sansera Engineering (auto-components peer set). 6 concalls (Aug-2025 to Nov-2026); 19 promises, 8 scored. Status counts: {'delivered': 5, 'unverifiable': 2, 'moved-goalpost': 1, 'missed': 1, 'pending': 9, 'withdrawn': 1}. Weighted delivery 70.1% (specificity-only 60.0%; hit rate 62.5%); MCS 0.326. Revenue promises were met: FY26 group +15.9% vs 'teens/teens to mid-teens' (the start-of-year 'mid-to-high teens' was trimmed openly), ADS INR 315 cr vs 280-300, H2>H1. Misses are capacity forecasts: FY26 capex 510 cr vs 375-400 guided seven weeks before year-end, and the new ADS hangar re-dated Jun-Jul -> Jul-Aug -> Oct without explanation. Guidance is mostly given under questioning, then repeated in the opening remarks. Research, not advice.",
+  "tickers": [
+   "SANSERA"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "process",
+   "auto-peer-calibration"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "as_of": "2026-11-22",
+   "n_promises": 19,
+   "n_scored": 8,
+   "status_counts": {
+    "delivered": 5,
+    "unverifiable": 2,
+    "moved-goalpost": 1,
+    "missed": 1,
+    "pending": 9,
+    "withdrawn": 1
+   },
+   "mcs_schema_scale": 0.326,
+   "mcs_scale_note": "-1.5 (all moved/dropped) .. +1 (all delivered); weights = specificity(3/2/1) x materiality(1-3) x recency decay (half-life 8 qtrs)",
+   "weighted_delivery_ratio_pct": 70.1,
+   "specificity_weighted_delivery_ratio_pct": 60.0,
+   "raw_hit_rate_pct": 62.5,
+   "candour_index_pct": 33.3,
+   "candour_index_hard_misses_pct": 33.3,
+   "by_category": {
+    "capacity": {
+     "n": 3,
+     "delivery_ratio_pct": 0.0
+    },
+    "revenue_growth": {
+     "n": 5,
+     "delivery_ratio_pct": 100.0
+    }
+   },
+   "by_specificity": {
+    "precise": {
+     "n": 1,
+     "delivery_ratio_pct": 0.0
+    },
+    "range": {
+     "n": 5,
+     "delivery_ratio_pct": 80.0
+    },
+    "vague": {
+     "n": 2,
+     "delivery_ratio_pct": 50.0
+    }
+   },
+   "by_materiality": {
+    "core (3)": {
+     "n": 3,
+     "delivery_ratio_pct": 100.0
+    },
+    "meaningful (2)": {
+     "n": 2,
+     "delivery_ratio_pct": 25.0
+    },
+    "minor (1)": {
+     "n": 3,
+     "delivery_ratio_pct": 40.0
+    }
+   },
+   "by_volunteered": {
+    "prompted": {
+     "n": 6,
+     "delivery_ratio_pct": 58.3
+    },
+    "volunteered": {
+     "n": 2,
+     "delivery_ratio_pct": 66.7
+    }
+   },
+   "by_fiscal_year_said": {
+    "FY26 calls": {
+     "n": 7,
+     "delivery_ratio_pct": 64.3
+    },
+    "FY27 calls": {
+     "n": 1,
+     "delivery_ratio_pct": 0.0
+    }
+   },
+   "n_shortfalls": 3,
+   "n_shortfalls_admitted_unprompted": 1,
+   "n_volunteered": 7,
+   "n_prompted": 12,
+   "sector_adjusted_credibility_pts": -4.8,
+   "sac_components": {
+    "pooled:revenue_growth+capacity": {
+     "n": 8,
+     "own": 60.0,
+     "peer_median": 64.8,
+     "gap": -4.8
+    }
+   },
+   "peer_set": [
+    "SONACOMS",
+    "SANSERA",
+    "HAPPYFORGE",
+    "ENDURANCE",
+    "UNIPARTS"
+   ]
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/SANSERA_13112026120144_transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SANSERA_17022026122638_transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SANSERA_17082025151807_Transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SANSERA_20082026120039_Transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SANSERA_20112025093848_Transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SANSERA_28052026152825_Transcript.pdf",
+   "https://www.screener.in/company/SANSERA/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SANSERA",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:UNIPARTS:credibility-2026-11",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:auto-components-promise-credibility-base-rate",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2025-08-11:sustain-ebitda-margin-28-6pct",
+  "title": "Sustain EBITDA margins around the Q1FY26 peak (28.6%) going forward",
+  "body": "Ashish Garg (MD) on 2025-08-11 (Q1FY26 concall transcript): \"our EBITDA margins stood at 28.6%, both around peak levels. We remain confident of sustaining these margins going forward as well.\" Metric: EBITDA margin. Target: >= ~28.6%. Deadline: 2026-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: delivered. Evidence: FY26 company EBITDA margin 30.4% (screener OPM 30.5%); every quarter Q2FY26..Q2FY27 >= 30.5% (screener).",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "margin"
+  ],
+  "date": "2025-08-11",
+  "data": {
+   "said_on": "2025-08-11",
+   "speaker": "Ashish Garg (MD)",
+   "quote": "our EBITDA margins stood at 28.6%, both around peak levels. We remain confident of sustaining these margins going forward as well.",
+   "category": "margin",
+   "metric": "EBITDA margin",
+   "target": ">= ~28.6%",
+   "deadline": "2026-03-31",
+   "deadline_precision": "vague",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 3,
+   "status": "delivered",
+   "evidence": "FY26 company EBITDA margin 30.4% (screener OPM 30.5%); every quarter Q2FY26..Q2FY27 >= 30.5% (screener).",
+   "delivered_value": "30.4%",
+   "delivery_ratio": 1.06,
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_18082025121524_TranscriptEarningsCall.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin",
+   "score": 1.0,
+   "weight": 5.772
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_18082025121524_TranscriptEarningsCall.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2025-08-11:pv-share-8-10pct-2yrs",
+  "title": "Passenger-vehicle share of revenue to rise to 8-10% within two years (from 6%)",
+  "body": "Ashish Garg (MD) on 2025-08-11 (Q1FY26 concall transcript): \"We expect this segment to grow 8-10% of our total revenues over the next two years\" Metric: PV share of revenue. Target: 8-10%. Deadline: 2027-08-31. Specificity: range; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "other"
+  ],
+  "date": "2025-08-11",
+  "data": {
+   "said_on": "2025-08-11",
+   "speaker": "Ashish Garg (MD)",
+   "quote": "We expect this segment to grow 8-10% of our total revenues over the next two years",
+   "category": "other",
+   "metric": "PV share of revenue",
+   "target": "8-10%",
+   "deadline": "2027-08-31",
+   "deadline_precision": "vague",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "pending",
+   "later_restatements": "2025-11-07 'contribute 8% to 10% of our total revenues within 2 years' (restates); 2026-08-05 'PV ... 12% to 15% of our revenues' (longer-term)",
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_18082025121524_TranscriptEarningsCall.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_18082025121524_TranscriptEarningsCall.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2025-08-11:presses-10000t-4000t-fy26",
+  "title": "Commission 10,000-t and 4,000-t presses during FY26 (+~20,000 MTPA)",
+  "body": "Ashish Garg (MD) on 2025-08-11 (Q1FY26 concall transcript): \"During the year, we expect additional commissioning for 10,000-ton press and 4,000-ton press with annual capacity addition of approximately 20,000 MTPA.\" Metric: Press commissioning. Target: both in FY26. Deadline: 2026-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: partly. Evidence: 10,000-t line commissioned Q4FY26 (Q4FY26 call); 4,000-t press slipped to Q1FY27 ('commissioning a new forging press in Q1 FY2027', Q2FY27 call). Slip acknowledged on 2026-02-10 ('4,000 ton press in H1 FY27').",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2025-08-11",
+  "data": {
+   "said_on": "2025-08-11",
+   "speaker": "Ashish Garg (MD)",
+   "quote": "During the year, we expect additional commissioning for 10,000-ton press and 4,000-ton press with annual capacity addition of approximately 20,000 MTPA.",
+   "category": "capacity",
+   "metric": "Press commissioning",
+   "target": "both in FY26",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "partly",
+   "evidence": "10,000-t line commissioned Q4FY26 (Q4FY26 call); 4,000-t press slipped to Q1FY27 ('commissioning a new forging press in Q1 FY2027', Q2FY27 call). Slip acknowledged on 2026-02-10 ('4,000 ton press in H1 FY27').",
+   "delivery_ratio": 0.5,
+   "admitted_unprompted": true,
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_18082025121524_TranscriptEarningsCall.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity",
+   "score": 0.5,
+   "weight": 3.848
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_18082025121524_TranscriptEarningsCall.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2025-08-11:us-pv-order-ramp-nov-dec-25",
+  "title": "US passenger-vehicle order to ramp up from Nov-Dec 2025",
+  "body": "Ashish Garg (MD) on 2025-08-11 (Q1FY26 concall transcript): \"Even for the US market, we have expected ramp up this year from November, December for one of the large PV order wins\" Metric: US PV programme ramp-up. Target: from Nov-Dec 2025. Deadline: 2025-12-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: missed. Evidence: Q2FY27 call: 'this line was commissioned for a North American client for PV application, and for which we have started ramping up in Q1 and Q2' (FY27) - about two quarters late; no explanation volunteered.",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "other"
+  ],
+  "date": "2025-08-11",
+  "data": {
+   "said_on": "2025-08-11",
+   "speaker": "Ashish Garg (MD)",
+   "quote": "Even for the US market, we have expected ramp up this year from November, December for one of the large PV order wins",
+   "category": "other",
+   "metric": "US PV programme ramp-up",
+   "target": "from Nov-Dec 2025",
+   "deadline": "2025-12-31",
+   "deadline_precision": "month",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "missed",
+   "evidence": "Q2FY27 call: 'this line was commissioned for a North American client for PV application, and for which we have started ramping up in Q1 and Q2' (FY27) - about two quarters late; no explanation volunteered.",
+   "delivery_ratio": 0.0,
+   "admitted_unprompted": false,
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_18082025121524_TranscriptEarningsCall.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "other",
+   "score": -1.0,
+   "weight": 3.848
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_18082025121524_TranscriptEarningsCall.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2025-08-11:heavy-capex-650cr-done-q2-q3-fy27",
+  "title": "INR 650 cr heavy-component capex finished by Q2-Q3 FY27",
+  "body": "Ashish Garg (MD) on 2025-08-11 (Q1FY26 concall transcript): \"Because right now, we are in a phase where it is coming up and the CAPEX will get finished by, say, second quarter or third quarter of next financial\" Metric: Heavy-component plant completion. Target: by Q3FY27 (Dec-2026). Deadline: 2026-12-31. Specificity: range; prompted by analyst. Status as of 2026-11-22: moved-goalpost. Evidence: 2025-11-07 'will probably start from third quarter of next year'; 2026-02-10 'on track ... as per the schedule', utilisation 'some bit from FY28'; 2026-05-22 'by end of FY27 we expect to complete our large capex ... trials early FY28'; 2026-11-06 'going as per the scheduled timelines ... expected to be completed and commence operation in the quarter four of FY2028'. Five quarters later than first stated while each call says 'on schedule' - a silent goalpost move. Scored before the Dec-2026 deadline because the company's own latest date makes it unreachable.",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2025-08-11",
+  "data": {
+   "said_on": "2025-08-11",
+   "speaker": "Ashish Garg (MD)",
+   "quote": "Because right now, we are in a phase where it is coming up and the CAPEX will get finished by, say, second quarter or third quarter of next financial",
+   "category": "capacity",
+   "metric": "Heavy-component plant completion",
+   "target": "by Q3FY27 (Dec-2026)",
+   "deadline": "2026-12-31",
+   "deadline_precision": "quarter",
+   "specificity": "range",
+   "volunteered": false,
+   "materiality": 3,
+   "status": "moved-goalpost",
+   "evidence": "2025-11-07 'will probably start from third quarter of next year'; 2026-02-10 'on track ... as per the schedule', utilisation 'some bit from FY28'; 2026-05-22 'by end of FY27 we expect to complete our large capex ... trials early FY28'; 2026-11-06 'going as per the scheduled timelines ... expected to be completed and commence operation in the quarter four of FY2028'. Five quarters later than first stated while each call says 'on schedule' - a silent goalpost move. Scored before the Dec-2026 deadline because the company's own latest date makes it unreachable.",
+   "delivery_ratio": 0.0,
+   "admitted_unprompted": false,
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_18082025121524_TranscriptEarningsCall.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity",
+   "score": -1.5,
+   "weight": 3.848
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_18082025121524_TranscriptEarningsCall.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2025-11-07:inorganic-deal-6-8-months",
+  "title": "Close an inorganic (M&A) deal within 6-8 months",
+  "body": "Ashish Garg (MD) on 2025-11-07 (Q2FY26 concall transcript): \"We are very hopeful that in next 6 to 8 months, probably we should be able to close something on the inorganic side as well.\" Metric: Acquisition closed. Target: by ~Jul-2026. Deadline: 2026-07-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: missed. Evidence: No acquisition announced or mentioned in the Q4FY26, Q1FY27 or Q2FY27 calls (grep 'inorganic|acquisition'); not raised again by management.",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "other"
+  ],
+  "date": "2025-11-07",
+  "data": {
+   "said_on": "2025-11-07",
+   "speaker": "Ashish Garg (MD)",
+   "quote": "We are very hopeful that in next 6 to 8 months, probably we should be able to close something on the inorganic side as well.",
+   "category": "other",
+   "metric": "Acquisition closed",
+   "target": "by ~Jul-2026",
+   "deadline": "2026-07-31",
+   "deadline_precision": "month",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 1,
+   "conditionality": "hopeful",
+   "status": "missed",
+   "evidence": "No acquisition announced or mentioned in the Q4FY26, Q1FY27 or Q2FY27 calls (grep 'inorganic|acquisition'); not raised again by management.",
+   "delivery_ratio": 0.0,
+   "admitted_unprompted": false,
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_13112025134935_TranscriptOfEarningsCall.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "other",
+   "score": -1.0,
+   "weight": 2.092
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_13112025134935_TranscriptOfEarningsCall.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2025-11-07:fy27-growth-trajectory-better",
+  "title": "Growth trajectory better from FY27 ('back on a full trend')",
+  "body": "Ashish Garg (MD) on 2025-11-07 (Q2FY26 concall transcript): \"So, on the growth side, we expect that from next year onwards, the growth trajectory should be better, and we should be back on a full trend.\" Metric: Revenue growth FY27 vs FY26 (+9.7%). Target: FY27 growth > FY26. Deadline: 2027-03-31. Specificity: vague; prompted by analyst. Status as of 2026-11-22: pending. Evidence: H1FY27 revenue +30% (screener).",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2025-11-07",
+  "data": {
+   "said_on": "2025-11-07",
+   "speaker": "Ashish Garg (MD)",
+   "quote": "So, on the growth side, we expect that from next year onwards, the growth trajectory should be better, and we should be back on a full trend.",
+   "category": "revenue_growth",
+   "metric": "Revenue growth FY27 vs FY26 (+9.7%)",
+   "target": "FY27 growth > FY26",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "vague",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "pending",
+   "evidence": "H1FY27 revenue +30% (screener).",
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_13112025134935_TranscriptOfEarningsCall.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_13112025134935_TranscriptOfEarningsCall.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2025-11-07:return-ratios-improve",
+  "title": "Return ratios to improve going forward",
+  "body": "Pankaj Goyal (CFO) on 2025-11-07 (Q2FY26 concall transcript): \"And we expect this return ratio to improve going forward.\" Metric: ROCE. Target: > FY25 (19%). Deadline: 2027-03-31. Specificity: vague; volunteered. Status as of 2026-11-22: pending. Evidence: Screener ROCE FY26 18% (FY25 19%).",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "other"
+  ],
+  "date": "2025-11-07",
+  "data": {
+   "said_on": "2025-11-07",
+   "speaker": "Pankaj Goyal (CFO)",
+   "quote": "And we expect this return ratio to improve going forward.",
+   "category": "other",
+   "metric": "ROCE",
+   "target": "> FY25 (19%)",
+   "deadline": "2027-03-31",
+   "deadline_precision": "vague",
+   "specificity": "vague",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "evidence": "Screener ROCE FY26 18% (FY25 19%).",
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_13112025134935_TranscriptOfEarningsCall.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_13112025134935_TranscriptOfEarningsCall.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2026-02-10:ebitda-29-31pct-medium-term",
+  "title": "EBITDA margin sustained in a 29-31% range over the medium term",
+  "body": "Ashish Garg (MD) on 2026-02-10 (Q3FY26 concall transcript): \"Our focus remains on maintaining EBITDA margins within a sustained range between 29% to 31% over the medium term.\" Metric: EBITDA margin. Target: 29-31%. Deadline: 2028-03-31. Specificity: range; volunteered. Status as of 2026-11-22: pending. Evidence: FY26 30.4%; Q1FY27 31.4%, Q2FY27 30.5% (screener).",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-02-10",
+  "data": {
+   "said_on": "2026-02-10",
+   "speaker": "Ashish Garg (MD)",
+   "quote": "Our focus remains on maintaining EBITDA margins within a sustained range between 29% to 31% over the medium term.",
+   "category": "margin",
+   "metric": "EBITDA margin",
+   "target": "29-31%",
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 3,
+   "status": "pending",
+   "evidence": "FY26 30.4%; Q1FY27 31.4%, Q2FY27 30.5% (screener).",
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_16022026172207_TranscriptOfEarningsCall.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_16022026172207_TranscriptOfEarningsCall.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2026-02-10:10000t-q4fy26-4000t-h1fy27",
+  "title": "New 10,000-t press in Q4FY26 and 4,000-t press in H1FY27",
+  "body": "Ashish Garg (MD) on 2026-02-10 (Q3FY26 concall transcript): \"we will strengthen our forging capacities by commissioning a new 10,000 ton press in quarter 4 FY '26 and the 4,000 ton press in H1 FY '27\" Metric: Press commissioning. Target: Q4FY26 / H1FY27. Deadline: 2026-09-30. Specificity: precise; volunteered. Status as of 2026-11-22: delivered. Evidence: 10,000-t commissioned Q4FY26 (Q4FY26 call); new forging press commissioned Q1FY27 and an extra hammer in Q2FY27 (Q2FY27 call).",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-02-10",
+  "data": {
+   "said_on": "2026-02-10",
+   "speaker": "Ashish Garg (MD)",
+   "quote": "we will strengthen our forging capacities by commissioning a new 10,000 ton press in quarter 4 FY '26 and the 4,000 ton press in H1 FY '27",
+   "category": "capacity",
+   "metric": "Press commissioning",
+   "target": "Q4FY26 / H1FY27",
+   "deadline": "2026-09-30",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "delivered",
+   "evidence": "10,000-t commissioned Q4FY26 (Q4FY26 call); new forging press commissioned Q1FY27 and an extra hammer in Q2FY27 (Q2FY27 call).",
+   "delivery_ratio": 1.0,
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_16022026172207_TranscriptOfEarningsCall.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity",
+   "score": 1.0,
+   "weight": 4.578
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_16022026172207_TranscriptOfEarningsCall.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2026-02-10:fy26-capex-400-500cr",
+  "title": "FY26 total capex INR 400-500 cr",
+  "body": "Pankaj Goyal (CFO) on 2026-02-10 (Q3FY26 concall transcript): \"we expected our total capex for FY '26 to be in the range of INR400 crores to INR500 crores\" Metric: Capex FY26. Target: INR 400-500 cr. Deadline: 2026-03-31. Specificity: range; volunteered. Status as of 2026-11-22: delivered. Evidence: 'capex of around Rs.460 crores deployed during FY 26' (Q4FY26 call). (In Aug-2025 the FY26 plan was ~INR 300 cr ex-solar; raised openly.)",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-02-10",
+  "data": {
+   "said_on": "2026-02-10",
+   "speaker": "Pankaj Goyal (CFO)",
+   "quote": "we expected our total capex for FY '26 to be in the range of INR400 crores to INR500 crores",
+   "category": "capacity",
+   "metric": "Capex FY26",
+   "target": "INR 400-500 cr",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "delivered",
+   "evidence": "'capex of around Rs.460 crores deployed during FY 26' (Q4FY26 call). (In Aug-2025 the FY26 plan was ~INR 300 cr ex-solar; raised openly.)",
+   "delivered_value": "INR 460 cr",
+   "delivery_ratio": 1.0,
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_16022026172207_TranscriptOfEarningsCall.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity",
+   "score": 1.0,
+   "weight": 1.526
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_16022026172207_TranscriptOfEarningsCall.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2026-02-10:solar-power-savings-from-q3fy27",
+  "title": "Captive solar plant to start cutting power cost from Q3 FY27 (INR 25-30 cr p.a.)",
+  "body": "Ashish Garg (MD) on 2026-02-10 (Q3FY26 concall transcript): \"with regard to the solar project, which is coming up, we expect that to also improve our power cost starting from third quarter\" Metric: Solar plant generation start. Target: from Q3FY27. Deadline: 2026-12-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: pending. Evidence: 2026-05-22: 'partial benefits starting from FY28'; 2026-11-06: 'we expect some generations to happen in Q4' - re-dated twice; goalpost flag, resolve at deadline.",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-02-10",
+  "data": {
+   "said_on": "2026-02-10",
+   "speaker": "Ashish Garg (MD)",
+   "quote": "with regard to the solar project, which is coming up, we expect that to also improve our power cost starting from third quarter",
+   "category": "capacity",
+   "metric": "Solar plant generation start",
+   "target": "from Q3FY27",
+   "deadline": "2026-12-31",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 1,
+   "status": "pending",
+   "evidence": "2026-05-22: 'partial benefits starting from FY28'; 2026-11-06: 'we expect some generations to happen in Q4' - re-dated twice; goalpost flag, resolve at deadline.",
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_16022026172207_TranscriptOfEarningsCall.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_16022026172207_TranscriptOfEarningsCall.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2026-05-22:fy27-late-teen-volume-margin-flat",
+  "title": "FY27 late-teen volume growth with EBITDA margin broadly in line with FY26",
+  "body": "Ashish Garg (MD) on 2026-05-22 (Q4FY26 concall transcript): \"We expect late-teen volume growth for the business while maintaining EBITDA margins broadly in line with FY '26 levels.\" Metric: FY27 volume growth (and margin ~30.4%). Target: +17-19% volume. Deadline: 2027-03-31. Specificity: range; volunteered. Status as of 2026-11-22: pending. Evidence: Restated 2026-08-05 and 2026-11-06 ('well-positioned to meet our full-year volume growth guidance'). H1FY27 finished-goods volume +24%, revenue +30%.",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-05-22",
+  "data": {
+   "said_on": "2026-05-22",
+   "speaker": "Ashish Garg (MD)",
+   "quote": "We expect late-teen volume growth for the business while maintaining EBITDA margins broadly in line with FY '26 levels.",
+   "category": "revenue_growth",
+   "metric": "FY27 volume growth (and margin ~30.4%)",
+   "target": "+17-19% volume",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 3,
+   "status": "pending",
+   "evidence": "Restated 2026-08-05 and 2026-11-06 ('well-positioned to meet our full-year volume growth guidance'). H1FY27 finished-goods volume +24%, revenue +30%.",
+   "source_doc": "Q4FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_28052026180252_TranscriptOfEarningsCall28052026.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_28052026180252_TranscriptOfEarningsCall28052026.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2026-05-22:fy27-capex-450-500cr",
+  "title": "FY27 capex INR 450-500 cr",
+  "body": "Pankaj Goyal (CFO) on 2026-05-22 (Q4FY26 concall transcript): \"Looking ahead, we expect total capex for FY '27 to be in the range of Rs.450 crores to Rs.500 crores\" Metric: Capex FY27. Target: INR 450-500 cr. Deadline: 2027-03-31. Specificity: range; volunteered. Status as of 2026-11-22: pending. Evidence: H1FY27 spend ~INR 378 cr; additional INR 500 cr programme approved 2026-11-06.",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-05-22",
+  "data": {
+   "said_on": "2026-05-22",
+   "speaker": "Pankaj Goyal (CFO)",
+   "quote": "Looking ahead, we expect total capex for FY '27 to be in the range of Rs.450 crores to Rs.500 crores",
+   "category": "capacity",
+   "metric": "Capex FY27",
+   "target": "INR 450-500 cr",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "evidence": "H1FY27 spend ~INR 378 cr; additional INR 500 cr programme approved 2026-11-06.",
+   "source_doc": "Q4FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_28052026180252_TranscriptOfEarningsCall28052026.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_28052026180252_TranscriptOfEarningsCall28052026.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2026-05-22:fy27-cv-growth-35-40pct",
+  "title": "FY27 CV segment growth 35-40% on new programmes",
+  "body": "Ashish Garg (MD) on 2026-05-22 (Q4FY26 concall transcript): \"So CV alone, we are expecting almost 35%, 40% growth this year for us because of the new programs and the new ramp-ups\" Metric: CV segment revenue growth FY27. Target: +35-40%. Deadline: 2027-03-31. Specificity: range; prompted by analyst. Status as of 2026-11-22: pending. Evidence: Q1FY27: CV 'healthy single-digit growth' (domestic +18%) - well short so far.",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-05-22",
+  "data": {
+   "said_on": "2026-05-22",
+   "speaker": "Ashish Garg (MD)",
+   "quote": "So CV alone, we are expecting almost 35%, 40% growth this year for us because of the new programs and the new ramp-ups",
+   "category": "revenue_growth",
+   "metric": "CV segment revenue growth FY27",
+   "target": "+35-40%",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "range",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "pending",
+   "evidence": "Q1FY27: CV 'healthy single-digit growth' (domestic +18%) - well short so far.",
+   "source_doc": "Q4FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_28052026180252_TranscriptOfEarningsCall28052026.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_28052026180252_TranscriptOfEarningsCall28052026.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2026-05-22:forging-capacity-161k-fy27",
+  "title": "Forging capacity to 161,000 t by FY27 (from 147,000)",
+  "body": "Ashish Garg (MD) on 2026-05-22 (Q4FY26 concall transcript): \"So forging capacities in the last year have ramped up from 125,000 to 147,000, which is further expected to go up to 161,000 by FY '27.\" Metric: Forging capacity. Target: 161,000 t. Deadline: 2027-03-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-05-22",
+  "data": {
+   "said_on": "2026-05-22",
+   "speaker": "Ashish Garg (MD)",
+   "quote": "So forging capacities in the last year have ramped up from 125,000 to 147,000, which is further expected to go up to 161,000 by FY '27.",
+   "category": "capacity",
+   "metric": "Forging capacity",
+   "target": "161,000 t",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 1,
+   "status": "pending",
+   "source_doc": "Q4FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_28052026180252_TranscriptOfEarningsCall28052026.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_28052026180252_TranscriptOfEarningsCall28052026.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2026-08-05:margin-upwards-of-30pct",
+  "title": "EBITDA margin 'upwards of 30%' going forward (power savings +1-1.5 pp)",
+  "body": "Ashish Garg (MD) on 2026-08-05 (Q1FY27 concall transcript): \"So I'm quite confident that, you know, we should be seeing upwards of 30% going forward.\" Metric: EBITDA margin. Target: >30%. Deadline: 2027-03-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-08-05",
+  "data": {
+   "said_on": "2026-08-05",
+   "speaker": "Ashish Garg (MD)",
+   "quote": "So I'm quite confident that, you know, we should be seeing upwards of 30% going forward.",
+   "category": "margin",
+   "metric": "EBITDA margin",
+   "target": ">30%",
+   "deadline": "2027-03-31",
+   "deadline_precision": "vague",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "pending",
+   "source_doc": "Q1FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_11082026155459_TranscriptOfEarningsCall.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_11082026155459_TranscriptOfEarningsCall.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2026-11-06:close-500cr-orders-by-mar27",
+  "title": "Close ~INR 500 cr of new orders (data-centre / heavy) by March 2027",
+  "body": "Ashish Garg (MD) on 2026-11-06 (Q2FY27 concall transcript): \"As I have mentioned that by March, we will have orders of close to Rs.500 crores.\" Metric: New order wins. Target: ~INR 500 cr. Deadline: 2027-03-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: pending. Evidence: Also: 'We aim to close nearly Rs.500 crores of orders by this financial year'.",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "other"
+  ],
+  "date": "2026-11-06",
+  "data": {
+   "said_on": "2026-11-06",
+   "speaker": "Ashish Garg (MD)",
+   "quote": "As I have mentioned that by March, we will have orders of close to Rs.500 crores.",
+   "category": "other",
+   "metric": "New order wins",
+   "target": "~INR 500 cr",
+   "deadline": "2027-03-31",
+   "deadline_precision": "month",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "pending",
+   "evidence": "Also: 'We aim to close nearly Rs.500 crores of orders by this financial year'.",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_13112026122617_TranscriptEarningscall13112026.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_13112026122617_TranscriptEarningscall13112026.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:HAPPYFORGE:2026-11-06:heavy-plant-ops-q4fy28",
+  "title": "Heavy-component plant (+20 MW solar) completed and operating in Q4 FY28",
+  "body": "Ashish Garg (MD) on 2026-11-06 (Q2FY27 concall transcript): \"This facility, with our 20 MW captive solar power plant, is expected to be completed and commence operation in the quarter four of FY2028.\" Metric: Heavy plant start. Target: Q4FY28. Deadline: 2028-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-11-06",
+  "data": {
+   "said_on": "2026-11-06",
+   "speaker": "Ashish Garg (MD)",
+   "quote": "This facility, with our 20 MW captive solar power plant, is expected to be completed and commence operation in the quarter four of FY2028.",
+   "category": "capacity",
+   "metric": "Heavy plant start",
+   "target": "Q4FY28",
+   "deadline": "2028-03-31",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 3,
+   "status": "pending",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/9876964720_13112026122617_TranscriptEarningscall13112026.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_13112026122617_TranscriptEarningscall13112026.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:HAPPYFORGE:credibility-2026-11",
+  "title": "HAPPYFORGE - Management Credibility Score (auto-components peer calibration, Nov 2026)",
+  "body": "Promise tracker on Happy Forgings (auto-components peer set). 6 concalls (Aug-2025 to Nov-2026); 19 promises, 7 scored. Status counts: {'delivered': 3, 'pending': 12, 'partly': 1, 'missed': 2, 'moved-goalpost': 1}. Weighted delivery 54.1% (specificity-only 50.0%; hit rate 42.9%); MCS 0.082. Margin and near-term capacity promises are reliable (EBITDA 30.4% vs 'sustain 28.6%'; presses one quarter late at most; FY26 capex in range). Dates on large projects and customer ramps are not: the INR 650 cr heavy-component plant moved from Q2-Q3 FY27 to Q4 FY28 while every call said 'as per schedule'; a US PV ramp came two quarters late; a hoped-for acquisition did not happen. Most FY27 guidance (late-teen volume, margin ~30%) is pending and on track at H1. Research, not advice.",
+  "tickers": [
+   "HAPPYFORGE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "process",
+   "auto-peer-calibration"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "as_of": "2026-11-22",
+   "n_promises": 19,
+   "n_scored": 7,
+   "status_counts": {
+    "delivered": 3,
+    "pending": 12,
+    "partly": 1,
+    "missed": 2,
+    "moved-goalpost": 1
+   },
+   "mcs_schema_scale": 0.082,
+   "mcs_scale_note": "-1.5 (all moved/dropped) .. +1 (all delivered); weights = specificity(3/2/1) x materiality(1-3) x recency decay (half-life 8 qtrs)",
+   "weighted_delivery_ratio_pct": 54.1,
+   "specificity_weighted_delivery_ratio_pct": 50.0,
+   "raw_hit_rate_pct": 42.9,
+   "candour_index_pct": 25.0,
+   "candour_index_hard_misses_pct": 0.0,
+   "by_category": {
+    "capacity": {
+     "n": 4,
+     "delivery_ratio_pct": 65.0
+    },
+    "margin": {
+     "n": 1,
+     "delivery_ratio_pct": 100.0
+    },
+    "other": {
+     "n": 2,
+     "delivery_ratio_pct": 0.0
+    }
+   },
+   "by_specificity": {
+    "precise": {
+     "n": 5,
+     "delivery_ratio_pct": 50.0
+    },
+    "range": {
+     "n": 2,
+     "delivery_ratio_pct": 50.0
+    }
+   },
+   "by_materiality": {
+    "core (3)": {
+     "n": 2,
+     "delivery_ratio_pct": 60.0
+    },
+    "meaningful (2)": {
+     "n": 3,
+     "delivery_ratio_pct": 50.0
+    },
+    "minor (1)": {
+     "n": 2,
+     "delivery_ratio_pct": 40.0
+    }
+   },
+   "by_volunteered": {
+    "prompted": {
+     "n": 3,
+     "delivery_ratio_pct": 0.0
+    },
+    "volunteered": {
+     "n": 4,
+     "delivery_ratio_pct": 86.4
+    }
+   },
+   "by_fiscal_year_said": {
+    "FY26 calls": {
+     "n": 7,
+     "delivery_ratio_pct": 50.0
+    }
+   },
+   "n_shortfalls": 4,
+   "n_shortfalls_admitted_unprompted": 1,
+   "n_volunteered": 10,
+   "n_prompted": 9,
+   "sector_adjusted_credibility_pts": 3.6,
+   "sac_components": {
+    "pooled:margin+capacity+other": {
+     "n": 7,
+     "own": 50.0,
+     "peer_median": 46.400000000000006,
+     "gap": 3.6
+    }
+   },
+   "peer_set": [
+    "SONACOMS",
+    "SANSERA",
+    "HAPPYFORGE",
+    "ENDURANCE",
+    "UNIPARTS"
+   ]
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_11082026155459_TranscriptOfEarningsCall.pdf",
+   "https://nsearchives.nseindia.in/corporate/9876964720_13112025134935_TranscriptOfEarningsCall.pdf",
+   "https://nsearchives.nseindia.in/corporate/9876964720_13112026122617_TranscriptEarningscall13112026.pdf",
+   "https://nsearchives.nseindia.in/corporate/9876964720_16022026172207_TranscriptOfEarningsCall.pdf",
+   "https://nsearchives.nseindia.in/corporate/9876964720_18082025121524_TranscriptEarningsCall.pdf",
+   "https://nsearchives.nseindia.in/corporate/9876964720_28052026180252_TranscriptOfEarningsCall28052026.pdf",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:HAPPYFORGE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:UNIPARTS:credibility-2026-11",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:auto-components-promise-credibility-base-rate",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2025-08-14:dual-channel-abs-sop-sep25",
+  "title": "Dual-channel ABS SOP (Royal Enfield / Bajaj) next month (Sep-2025)",
+  "body": "Anurang Jain (MD) on 2025-08-14 (Q1FY26 concall transcript): \"our dual-channel ABS final samples have been sent to Royal Enfield and Bajaj, and we expect SOP to start next month.\" Metric: Dual-channel ABS SOP. Target: Sep-2025. Deadline: 2025-09-30. Specificity: precise; volunteered. Status as of 2026-11-22: missed. Evidence: Re-dated 2026-02-13 ('now expected to start next month, as we await the final clearance from a key OEM'), 2026-05-15 ('June 2026 for Bajaj'), 2026-08-14 ('this quarter'); 2026-11-04: 'supplies to Bajaj Auto has started in October this year' - 13 months late. Each re-date was stated openly with a customer-clearance reason. Explanation given: awaiting OEM final clearance",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2025-08-14",
+  "data": {
+   "said_on": "2025-08-14",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "our dual-channel ABS final samples have been sent to Royal Enfield and Bajaj, and we expect SOP to start next month.",
+   "category": "capacity",
+   "metric": "Dual-channel ABS SOP",
+   "target": "Sep-2025",
+   "deadline": "2025-09-30",
+   "deadline_precision": "month",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "missed",
+   "evidence": "Re-dated 2026-02-13 ('now expected to start next month, as we await the final clearance from a key OEM'), 2026-05-15 ('June 2026 for Bajaj'), 2026-08-14 ('this quarter'); 2026-11-04: 'supplies to Bajaj Auto has started in October this year' - 13 months late. Each re-date was stated openly with a customer-clearance reason.",
+   "delivery_ratio": 0.0,
+   "explanation_for_miss": "awaiting OEM final clearance",
+   "admitted_unprompted": true,
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_22082025153100_20250822TranscriptofEarningsConferenceCallon14082025.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity",
+   "score": -1.0,
+   "weight": 3.859
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_22082025153100_20250822TranscriptofEarningsConferenceCallon14082025.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2025-08-14:abs-new-lines-ready-mar26",
+  "title": "New ABS capacity lines ready by March 2026",
+  "body": "Anurang Jain (MD) on 2025-08-14 (Q1FY26 concall transcript): \"So, we are going ahead because we want to be ready with the capacity, which I said should be by March 2026.\" Metric: ABS expansion ready. Target: by Mar-2026. Deadline: 2026-03-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: missed. Evidence: 2025-11-13: first 1.2 mn line 'operational in Quarter 1 FY 27', second line tied to final ABS-mandate guidelines; 2026-05-15 'SOP expected in September 2026'; 2026-08-14 'September or early October 2026'. About two quarters late; explained by the government's delayed ABS guidelines (sector-wide). Explanation given: ABS mandate guidelines not notified",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2025-08-14",
+  "data": {
+   "said_on": "2025-08-14",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "So, we are going ahead because we want to be ready with the capacity, which I said should be by March 2026.",
+   "category": "capacity",
+   "metric": "ABS expansion ready",
+   "target": "by Mar-2026",
+   "deadline": "2026-03-31",
+   "deadline_precision": "month",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "missed",
+   "evidence": "2025-11-13: first 1.2 mn line 'operational in Quarter 1 FY 27', second line tied to final ABS-mandate guidelines; 2026-05-15 'SOP expected in September 2026'; 2026-08-14 'September or early October 2026'. About two quarters late; explained by the government's delayed ABS guidelines (sector-wide).",
+   "delivery_ratio": 0.0,
+   "explanation_for_miss": "ABS mandate guidelines not notified",
+   "admitted_unprompted": true,
+   "source_doc": "Q1FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_22082025153100_20250822TranscriptofEarningsConferenceCallon14082025.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity",
+   "score": -1.0,
+   "weight": 3.859
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_22082025153100_20250822TranscriptofEarningsConferenceCallon14082025.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2025-11-13:chennai-disc-brake-sop-q2fy27",
+  "title": "New Chennai disc-brake plant SOP in Q2 FY27",
+  "body": "Anurang Jain (MD) on 2025-11-13 (Q2FY26 concall transcript): \"We have started civil work for setting up a new Chennai plant for disc brake systems, which includes the master cylinder, caliper, brake disc and brake hoses, where we expect SOP in Q2 FY '27.\" Metric: Chennai plant SOP. Target: Q2FY27 (by Sep-2026). Deadline: 2026-09-30. Specificity: precise; volunteered. Status as of 2026-11-22: moved-goalpost. Evidence: 2026-05-15 'SOP for Royal Enfield is planned in July 2026'; 2026-08-14 'expected by next month'; 2026-11-04: 'At our new Chennai plant for disc brake assembly systems, the SOP will start in March 2027' - re-dated two quarters with no reason given.",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2025-11-13",
+  "data": {
+   "said_on": "2025-11-13",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "We have started civil work for setting up a new Chennai plant for disc brake systems, which includes the master cylinder, caliper, brake disc and brake hoses, where we expect SOP in Q2 FY '27.",
+   "category": "capacity",
+   "metric": "Chennai plant SOP",
+   "target": "Q2FY27 (by Sep-2026)",
+   "deadline": "2026-09-30",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "moved-goalpost",
+   "evidence": "2026-05-15 'SOP for Royal Enfield is planned in July 2026'; 2026-08-14 'expected by next month'; 2026-11-04: 'At our new Chennai plant for disc brake assembly systems, the SOP will start in March 2027' - re-dated two quarters with no reason given.",
+   "delivery_ratio": 0.0,
+   "admitted_unprompted": false,
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_20112025174935_2025_11_20_-_Transcript_of_Earnings_Conference_Call_on_13_11_2025.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity",
+   "score": -1.5,
+   "weight": 4.207
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_20112025174935_2025_11_20_-_Transcript_of_Earnings_Conference_Call_on_13_11_2025.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2025-11-13:hero-sop-within-fy26",
+  "title": "SOP for Hero MotoCorp (BMS / electronics) within FY26",
+  "body": "Anurang Jain (MD) on 2025-11-13 (Q2FY26 concall transcript): \"The SOP for another OEM Hero MotoCorp is planned within this financial year, while SOP for a leading Chinese 2W OEM is expected to start in Q1 of FY 27.\" Metric: Hero SOP. Target: by Mar-2026. Deadline: 2026-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: delivered. Evidence: 'The SOP for Hero MotoCorp started in January 2026' (Q3FY26 call).",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2025-11-13",
+  "data": {
+   "said_on": "2025-11-13",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "The SOP for another OEM Hero MotoCorp is planned within this financial year, while SOP for a leading Chinese 2W OEM is expected to start in Q1 of FY 27.",
+   "category": "capacity",
+   "metric": "Hero SOP",
+   "target": "by Mar-2026",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "delivered",
+   "evidence": "'The SOP for Hero MotoCorp started in January 2026' (Q3FY26 call).",
+   "delivery_ratio": 1.0,
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_20112025174935_2025_11_20_-_Transcript_of_Earnings_Conference_Call_on_13_11_2025.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity",
+   "score": 1.0,
+   "weight": 2.104
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_20112025174935_2025_11_20_-_Transcript_of_Earnings_Conference_Call_on_13_11_2025.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2025-11-13:chinese-2w-oem-sop-q1fy27",
+  "title": "SOP for a leading Chinese 2W OEM in Q1 FY27",
+  "body": "Anurang Jain (MD) on 2025-11-13 (Q2FY26 concall transcript): \"while SOP for a leading Chinese 2W OEM is expected to start in Q1 of FY 27\" Metric: Chinese OEM SOP. Target: Q1FY27. Deadline: 2026-06-30. Specificity: precise; volunteered. Status as of 2026-11-22: moved-goalpost. Evidence: 2026-02-13: 'validation is ongoing for a leading Chinese OEM, with SOP expected in Q3 of FY 27' - re-dated by two quarters without acknowledging the change.",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2025-11-13",
+  "data": {
+   "said_on": "2025-11-13",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "while SOP for a leading Chinese 2W OEM is expected to start in Q1 of FY 27",
+   "category": "capacity",
+   "metric": "Chinese OEM SOP",
+   "target": "Q1FY27",
+   "deadline": "2026-06-30",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "moved-goalpost",
+   "evidence": "2026-02-13: 'validation is ongoing for a leading Chinese OEM, with SOP expected in Q3 of FY 27' - re-dated by two quarters without acknowledging the change.",
+   "delivery_ratio": 0.0,
+   "admitted_unprompted": false,
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_20112025174935_2025_11_20_-_Transcript_of_Earnings_Conference_Call_on_13_11_2025.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity",
+   "score": -1.5,
+   "weight": 2.104
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_20112025174935_2025_11_20_-_Transcript_of_Earnings_Conference_Call_on_13_11_2025.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2025-11-13:win-1500cr-business-12-18m",
+  "title": "Win more than INR 1,500 cr of new business in the next 12-18 months",
+  "body": "Anurang Jain (MD) on 2025-11-13 (Q2FY26 concall transcript): \"We expect to win more than Rs 1,500 crores of business in the next 12 to 18 months.\" Metric: New business wins (lifetime/peak). Target: >INR 1,500 cr. Deadline: 2027-05-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: Restated verbatim 2026-02-13.",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "other"
+  ],
+  "date": "2025-11-13",
+  "data": {
+   "said_on": "2025-11-13",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "We expect to win more than Rs 1,500 crores of business in the next 12 to 18 months.",
+   "category": "other",
+   "metric": "New business wins (lifetime/peak)",
+   "target": ">INR 1,500 cr",
+   "deadline": "2027-05-31",
+   "deadline_precision": "vague",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "pending",
+   "evidence": "Restated verbatim 2026-02-13.",
+   "source_doc": "Q2FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_20112025174935_2025_11_20_-_Transcript_of_Earnings_Conference_Call_on_13_11_2025.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_20112025174935_2025_11_20_-_Transcript_of_Earnings_Conference_Call_on_13_11_2025.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2026-02-13:fy26-india-capex-below-800cr",
+  "title": "FY26 India capex slightly less than INR 800 cr",
+  "body": "Anurang Jain (MD) on 2026-02-13 (Q3FY26 concall transcript): \"This year, we will be slightly less than ₹ 800 crores, largely because of these 4 new facilities, plus expansions which we are doing in Brakes.\" Metric: Capex FY26 (India). Target: < ~INR 800 cr. Deadline: 2026-03-31. Specificity: precise; prompted by analyst. Status as of 2026-11-22: delivered. Evidence: 2026-08-14: 'similar to the FY 26 capex of ₹ 800 crores'.",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-02-13",
+  "data": {
+   "said_on": "2026-02-13",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "This year, we will be slightly less than ₹ 800 crores, largely because of these 4 new facilities, plus expansions which we are doing in Brakes.",
+   "category": "capacity",
+   "metric": "Capex FY26 (India)",
+   "target": "< ~INR 800 cr",
+   "deadline": "2026-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": false,
+   "materiality": 1,
+   "status": "delivered",
+   "evidence": "2026-08-14: 'similar to the FY 26 capex of ₹ 800 crores'.",
+   "delivered_value": "~INR 800 cr",
+   "delivery_ratio": 1.0,
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_19022026174447_Transcript.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity",
+   "score": 1.0,
+   "weight": 2.296
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_19022026174447_Transcript.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2026-02-13:fy27-india-capex-much-below-800cr",
+  "title": "FY27 India capex to be 'much below' INR 800 cr",
+  "body": "Anurang Jain (MD) on 2026-02-13 (Q3FY26 concall transcript): \"But according to me, in India, the CAPEX will be controlled much below this figure of ₹ 800 crores.\" Metric: Capex FY27 (India). Target: well below INR 800 cr. Deadline: 2027-03-31. Specificity: vague; prompted by analyst. Status as of 2026-11-22: missed. Evidence: 2026-05-15 'similar to FY 26'; 2026-08-14 'similar to the FY 26 capex of ₹ 800 crores'; 2026-11-04 'We expect capital expenditure in FY 27 to be around ₹ 1,100 crores' (consolidated 1,250). Scored before the deadline on the company's own latest guide; revisions were stated openly (new programmes).",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-02-13",
+  "data": {
+   "said_on": "2026-02-13",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "But according to me, in India, the CAPEX will be controlled much below this figure of ₹ 800 crores.",
+   "category": "capacity",
+   "metric": "Capex FY27 (India)",
+   "target": "well below INR 800 cr",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "vague",
+   "volunteered": false,
+   "materiality": 1,
+   "status": "missed",
+   "evidence": "2026-05-15 'similar to FY 26'; 2026-08-14 'similar to the FY 26 capex of ₹ 800 crores'; 2026-11-04 'We expect capital expenditure in FY 27 to be around ₹ 1,100 crores' (consolidated 1,250). Scored before the deadline on the company's own latest guide; revisions were stated openly (new programmes).",
+   "delivery_ratio": 0.0,
+   "admitted_unprompted": true,
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_19022026174447_Transcript.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity",
+   "score": -1.0,
+   "weight": 0.765
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_19022026174447_Transcript.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2026-02-13:bajaj-sop-q2fy27",
+  "title": "SOP for Bajaj Auto (new product line) in Q2 FY27",
+  "body": "Anurang Jain (MD) on 2026-02-13 (Q3FY26 concall transcript): \"The SOP for Bajaj Auto is expected in Q2 of FY 27.\" Metric: Bajaj SOP. Target: Q2FY27. Deadline: 2026-09-30. Specificity: precise; volunteered. Status as of 2026-11-22: moved-goalpost. Evidence: 2026-08-14 'For Bajaj Auto, SOP is expected in the next quarter'; 2026-11-04 'customer validation is in process and SOP is expected in Q4 of this financial year'.",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-02-13",
+  "data": {
+   "said_on": "2026-02-13",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "The SOP for Bajaj Auto is expected in Q2 of FY 27.",
+   "category": "capacity",
+   "metric": "Bajaj SOP",
+   "target": "Q2FY27",
+   "deadline": "2026-09-30",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "moved-goalpost",
+   "evidence": "2026-08-14 'For Bajaj Auto, SOP is expected in the next quarter'; 2026-11-04 'customer validation is in process and SOP is expected in Q4 of this financial year'.",
+   "delivery_ratio": 0.0,
+   "admitted_unprompted": false,
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_19022026174447_Transcript.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity",
+   "score": -1.5,
+   "weight": 2.296
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_19022026174447_Transcript.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2026-02-13:tata-drum-brake-sop-q1fy27",
+  "title": "4W drum-brake line for Tata Motors: SOP in Q1 FY27",
+  "body": "Anurang Jain (MD) on 2026-02-13 (Q3FY26 concall transcript): \"We have also installed an assembly line for 4W passenger vehicle drum brakes for Tata Motors, with SOP expected in Q1 of FY 27.\" Metric: Tata drum-brake SOP. Target: Q1FY27. Deadline: 2026-06-30. Specificity: precise; volunteered. Status as of 2026-11-22: unverifiable. Evidence: Not confirmed or re-dated in later calls read (only 'we also established our assembly line', May-26).",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-02-13",
+  "data": {
+   "said_on": "2026-02-13",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "We have also installed an assembly line for 4W passenger vehicle drum brakes for Tata Motors, with SOP expected in Q1 of FY 27.",
+   "category": "capacity",
+   "metric": "Tata drum-brake SOP",
+   "target": "Q1FY27",
+   "deadline": "2026-06-30",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "unverifiable",
+   "evidence": "Not confirmed or re-dated in later calls read (only 'we also established our assembly line', May-26).",
+   "source_doc": "Q3FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_19022026174447_Transcript.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_19022026174447_Transcript.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2026-05-15:forging-plant-sop-q3fy27",
+  "title": "New aluminium forging plant (fifth press) SOP in Q3 FY27",
+  "body": "Anurang Jain (MD) on 2026-05-15 (Q4FY26 concall transcript): \"All our presses will be set up in a new forging plant at Chhatrapati Sambhajinagar, which will start SOP in Q3 of this financial year.\" Metric: Forging plant / fifth press SOP. Target: Q3FY27 (by Dec-2026). Deadline: 2026-12-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: 2026-08-14 'fifth forging press with SOP expected in the next quarter'; 2026-11-04 'fifth aluminum forging press with SOP expected in Q4 of FY 27' - goalpost flag, resolve at deadline.",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-05-15",
+  "data": {
+   "said_on": "2026-05-15",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "All our presses will be set up in a new forging plant at Chhatrapati Sambhajinagar, which will start SOP in Q3 of this financial year.",
+   "category": "capacity",
+   "metric": "Forging plant / fifth press SOP",
+   "target": "Q3FY27 (by Dec-2026)",
+   "deadline": "2026-12-31",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "evidence": "2026-08-14 'fifth forging press with SOP expected in the next quarter'; 2026-11-04 'fifth aluminum forging press with SOP expected in Q4 of FY 27' - goalpost flag, resolve at deadline.",
+   "source_doc": "Q4FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_22052026142524_2026_05_22_-_Transcript_of_EarningsCall.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_22052026142524_2026_05_22_-_Transcript_of_EarningsCall.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2026-05-15:isuzu-hybrid-sop-q4fy27",
+  "title": "Isuzu hybrid-model castings (Chennai) SOP by Q4 FY27",
+  "body": "Anurang Jain (MD) on 2026-05-15 (Q4FY26 concall transcript): \"At our Chennai plant, we have secured orders for hybrid models of Isuzu, with SOP expected by Q4 of this year.\" Metric: Isuzu SOP. Target: by Mar-2027. Deadline: 2027-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: Restated 2026-08-14.",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-05-15",
+  "data": {
+   "said_on": "2026-05-15",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "At our Chennai plant, we have secured orders for hybrid models of Isuzu, with SOP expected by Q4 of this year.",
+   "category": "capacity",
+   "metric": "Isuzu SOP",
+   "target": "by Mar-2027",
+   "deadline": "2027-03-31",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "evidence": "Restated 2026-08-14.",
+   "source_doc": "Q4FY26 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_22052026142524_2026_05_22_-_Transcript_of_EarningsCall.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_22052026142524_2026_05_22_-_Transcript_of_EarningsCall.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2026-08-14:q2-margin-improves-on-q1-base",
+  "title": "Q2FY27 EBITDA margin to improve on the higher Q1 revenue base",
+  "body": "Anurang Jain (MD) on 2026-08-14 (Q1FY27 concall transcript): \"Now in Q2, we'll be operating on the Q1 base which is definitely much higher than the Q4 base and that should improve the EBITDA margin and percentage.\" Metric: EBITDA margin Q2FY27 vs Q1FY27. Target: > Q1FY27 (screener 12.4%). Deadline: 2026-09-30. Specificity: vague; prompted by analyst. Status as of 2026-11-22: missed. Evidence: Screener consolidated OPM Q1FY27 12.4% -> Q2FY27 11.7%. Q2FY27 call attributes drag to four new plants (-0.5% PBT) and steel/aluminium prices.",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "margin"
+  ],
+  "date": "2026-08-14",
+  "data": {
+   "said_on": "2026-08-14",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "Now in Q2, we'll be operating on the Q1 base which is definitely much higher than the Q4 base and that should improve the EBITDA margin and percentage.",
+   "category": "margin",
+   "metric": "EBITDA margin Q2FY27 vs Q1FY27",
+   "target": "> Q1FY27 (screener 12.4%)",
+   "deadline": "2026-09-30",
+   "deadline_precision": "quarter",
+   "specificity": "vague",
+   "volunteered": false,
+   "materiality": 2,
+   "status": "missed",
+   "evidence": "Screener consolidated OPM Q1FY27 12.4% -> Q2FY27 11.7%. Q2FY27 call attributes drag to four new plants (-0.5% PBT) and steel/aluminium prices.",
+   "delivered_value": "11.7%",
+   "delivery_ratio": 0.0,
+   "admitted_unprompted": true,
+   "source_doc": "Q1FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_21082026161009_2026_08_21_-_Transcript_of_Earnings_Conference_Call_on_14_08_2026.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "margin",
+   "score": -1.0,
+   "weight": 1.819
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_21082026161009_2026_08_21_-_Transcript_of_Earnings_Conference_Call_on_14_08_2026.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2026-08-14:4w-battery-pack-sop-q4fy27",
+  "title": "4W battery packs: SOP by Q4 FY27 (INR 62 cr capex)",
+  "body": "Anurang Jain (MD) on 2026-08-14 (Q1FY27 concall transcript): \"We have also announced our entry into 4W battery packs from the same plant with a capex of ₹ 62 crores and we expect SOP by Q4 of this financial year.\" Metric: 4W battery pack SOP. Target: by Mar-2027. Deadline: 2027-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-08-14",
+  "data": {
+   "said_on": "2026-08-14",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "We have also announced our entry into 4W battery packs from the same plant with a capex of ₹ 62 crores and we expect SOP by Q4 of this financial year.",
+   "category": "capacity",
+   "metric": "4W battery pack SOP",
+   "target": "by Mar-2027",
+   "deadline": "2027-03-31",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "source_doc": "Q1FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_21082026161009_2026_08_21_-_Transcript_of_Earnings_Conference_Call_on_14_08_2026.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_21082026161009_2026_08_21_-_Transcript_of_Earnings_Conference_Call_on_14_08_2026.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2026-08-14:tata-4w-driveshaft-sop-q3fy27",
+  "title": "4W driveshaft SOP for Tata Motors next quarter (Q3 FY27)",
+  "body": "Anurang Jain (MD) on 2026-08-14 (Q1FY27 concall transcript): \"In our 4W driveshaft program, SOP for Tata Motors is expected also in the next quarter\" Metric: Tata 4W driveshaft SOP. Target: Q3FY27 (by Dec-2026). Deadline: 2026-12-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: Restated 2026-11-04 'expected in this quarter'.",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-08-14",
+  "data": {
+   "said_on": "2026-08-14",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "In our 4W driveshaft program, SOP for Tata Motors is expected also in the next quarter",
+   "category": "capacity",
+   "metric": "Tata 4W driveshaft SOP",
+   "target": "Q3FY27 (by Dec-2026)",
+   "deadline": "2026-12-31",
+   "deadline_precision": "quarter",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "evidence": "Restated 2026-11-04 'expected in this quarter'.",
+   "source_doc": "Q1FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_21082026161009_2026_08_21_-_Transcript_of_Earnings_Conference_Call_on_14_08_2026.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_21082026161009_2026_08_21_-_Transcript_of_Earnings_Conference_Call_on_14_08_2026.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2026-08-14:alloy-wheels-full-capacity-fy27",
+  "title": "Alloy-wheel plants at full capacity by end FY27",
+  "body": "Anurang Jain (MD) on 2026-08-14 (Q1FY27 concall transcript): \"So, I would say by end of this financial year, we should be at full capacities for as far as alloy wheels is concerned.\" Metric: Alloy-wheel utilisation. Target: full by Mar-2027. Deadline: 2027-03-31. Specificity: vague; prompted by analyst. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-08-14",
+  "data": {
+   "said_on": "2026-08-14",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "So, I would say by end of this financial year, we should be at full capacities for as far as alloy wheels is concerned.",
+   "category": "capacity",
+   "metric": "Alloy-wheel utilisation",
+   "target": "full by Mar-2027",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "vague",
+   "volunteered": false,
+   "materiality": 1,
+   "status": "pending",
+   "source_doc": "Q1FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_21082026161009_2026_08_21_-_Transcript_of_Earnings_Conference_Call_on_14_08_2026.pdf",
+   "prompted": true,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_21082026161009_2026_08_21_-_Transcript_of_Earnings_Conference_Call_on_14_08_2026.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2026-11-04:chennai-disc-brake-sop-mar27",
+  "title": "Chennai disc-brake plant SOP in March 2027 (re-dated)",
+  "body": "Anurang Jain (MD) on 2026-11-04 (Q2FY27 concall transcript): \"At our new Chennai plant for disc brake assembly systems, the SOP will start in March 2027.\" Metric: Chennai plant SOP. Target: Mar-2027. Deadline: 2027-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-11-04",
+  "data": {
+   "said_on": "2026-11-04",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "At our new Chennai plant for disc brake assembly systems, the SOP will start in March 2027.",
+   "category": "capacity",
+   "metric": "Chennai plant SOP",
+   "target": "Mar-2027",
+   "deadline": "2027-03-31",
+   "deadline_precision": "month",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 2,
+   "status": "pending",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_12112026183008_2026_11_12_-_Transcript_of_Earnings_Conference_Call_on_04_11_2026.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_12112026183008_2026_11_12_-_Transcript_of_Earnings_Conference_Call_on_04_11_2026.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2026-11-04:driveshaft-revenue-over-100cr-fy27",
+  "title": "Driveshaft revenue to cross INR 100 cr in FY27",
+  "body": "Anurang Jain (MD) on 2026-11-04 (Q2FY27 concall transcript): \"we expect our driveshaft revenue to cross ₹ 100 crores in FY 27\" Metric: Driveshaft revenue FY27. Target: >INR 100 cr. Deadline: 2027-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "revenue-growth"
+  ],
+  "date": "2026-11-04",
+  "data": {
+   "said_on": "2026-11-04",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "we expect our driveshaft revenue to cross ₹ 100 crores in FY 27",
+   "category": "revenue_growth",
+   "metric": "Driveshaft revenue FY27",
+   "target": ">INR 100 cr",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_12112026183008_2026_11_12_-_Transcript_of_Earnings_Conference_Call_on_04_11_2026.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "revenue_growth"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_12112026183008_2026_11_12_-_Transcript_of_Earnings_Conference_Call_on_04_11_2026.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2026-11-04:fy27-capex-1100cr",
+  "title": "FY27 capex ~INR 1,100 cr standalone (INR 1,250 cr consolidated)",
+  "body": "Anurang Jain (MD) on 2026-11-04 (Q2FY27 concall transcript): \"We expect capital expenditure in FY 27 to be around ₹ 1,100 crores. Our consolidated capex is expected to be ₹ 1,250 crores.\" Metric: Capex FY27. Target: ~INR 1,100 cr / 1,250 cr consol. Deadline: 2027-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "capacity"
+  ],
+  "date": "2026-11-04",
+  "data": {
+   "said_on": "2026-11-04",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "We expect capital expenditure in FY 27 to be around ₹ 1,100 crores. Our consolidated capex is expected to be ₹ 1,250 crores.",
+   "category": "capacity",
+   "metric": "Capex FY27",
+   "target": "~INR 1,100 cr / 1,250 cr consol",
+   "deadline": "2027-03-31",
+   "deadline_precision": "fiscal-year",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_12112026183008_2026_11_12_-_Transcript_of_Earnings_Conference_Call_on_04_11_2026.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "capacity"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_12112026183008_2026_11_12_-_Transcript_of_Earnings_Conference_Call_on_04_11_2026.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:ENDURANCE:2026-11-04:psi-incentive-50cr-h2",
+  "title": "Book a further INR 50 cr of PSI incentives in H2 FY27",
+  "body": "Anurang Jain (MD) on 2026-11-04 (Q2FY27 concall transcript): \"In half one of this year, we have booked an income of ₹ 75 crores against this PSI incentives and expect to book a further ₹ 50 crores in half two of this financial year.\" Metric: PSI incentive income H2FY27. Target: ~INR 50 cr. Deadline: 2027-03-31. Specificity: precise; volunteered. Status as of 2026-11-22: pending. Evidence: n/a",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "auto-peer-calibration",
+   "other"
+  ],
+  "date": "2026-11-04",
+  "data": {
+   "said_on": "2026-11-04",
+   "speaker": "Anurang Jain (MD)",
+   "quote": "In half one of this year, we have booked an income of ₹ 75 crores against this PSI incentives and expect to book a further ₹ 50 crores in half two of this financial year.",
+   "category": "other",
+   "metric": "PSI incentive income H2FY27",
+   "target": "~INR 50 cr",
+   "deadline": "2027-03-31",
+   "deadline_precision": "half-year",
+   "specificity": "precise",
+   "volunteered": true,
+   "materiality": 1,
+   "status": "pending",
+   "source_doc": "Q2FY27 concall transcript",
+   "source_url": "https://nsearchives.nseindia.in/corporate/ENDURANCE_12112026183008_2026_11_12_-_Transcript_of_Earnings_Conference_Call_on_04_11_2026.pdf",
+   "prompted": false,
+   "status_as_of": "2026-11-22",
+   "category_group": "other"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_12112026183008_2026_11_12_-_Transcript_of_Earnings_Conference_Call_on_04_11_2026.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:ENDURANCE:credibility-2026-11",
+  "title": "ENDURANCE - Management Credibility Score (auto-components peer calibration, Nov 2026)",
+  "body": "Promise tracker on Endurance Technologies (auto-components peer set). 6 concalls (Aug-2025 to Nov-2026); 20 promises, 9 scored. Status counts: {'missed': 4, 'moved-goalpost': 3, 'delivered': 2, 'pending': 10, 'unverifiable': 1}. Weighted delivery 18.9% (specificity-only 26.1%; hit rate 22.2%); MCS -0.807. Endurance gives no revenue or margin guidance; it gives many SOP dates, and most of them slip 1-4 quarters (dual-channel ABS 13 months; Chennai brakes Q2 -> March 2027; Bajaj, Chinese OEM). Some slips are explained (OEM clearance, ABS-mandate guidelines), others re-dated silently. Group revenue still grew 26% in FY26, so date slips have not yet hurt the P&L. Research, not advice.",
+  "tickers": [
+   "ENDURANCE"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "process",
+   "auto-peer-calibration"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "as_of": "2026-11-22",
+   "n_promises": 20,
+   "n_scored": 9,
+   "status_counts": {
+    "missed": 4,
+    "moved-goalpost": 3,
+    "delivered": 2,
+    "pending": 10,
+    "unverifiable": 1
+   },
+   "mcs_schema_scale": -0.807,
+   "mcs_scale_note": "-1.5 (all moved/dropped) .. +1 (all delivered); weights = specificity(3/2/1) x materiality(1-3) x recency decay (half-life 8 qtrs)",
+   "weighted_delivery_ratio_pct": 18.9,
+   "specificity_weighted_delivery_ratio_pct": 26.1,
+   "raw_hit_rate_pct": 22.2,
+   "candour_index_pct": 57.1,
+   "candour_index_hard_misses_pct": 57.1,
+   "by_category": {
+    "capacity": {
+     "n": 8,
+     "delivery_ratio_pct": 27.3
+    },
+    "margin": {
+     "n": 1,
+     "delivery_ratio_pct": 0.0
+    }
+   },
+   "by_specificity": {
+    "precise": {
+     "n": 7,
+     "delivery_ratio_pct": 28.6
+    },
+    "vague": {
+     "n": 2,
+     "delivery_ratio_pct": 0.0
+    }
+   },
+   "by_materiality": {
+    "meaningful (2)": {
+     "n": 4,
+     "delivery_ratio_pct": 0.0
+    },
+    "minor (1)": {
+     "n": 5,
+     "delivery_ratio_pct": 46.2
+    }
+   },
+   "by_volunteered": {
+    "prompted": {
+     "n": 4,
+     "delivery_ratio_pct": 37.5
+    },
+    "volunteered": {
+     "n": 5,
+     "delivery_ratio_pct": 20.0
+    }
+   },
+   "by_fiscal_year_said": {
+    "FY26 calls": {
+     "n": 8,
+     "delivery_ratio_pct": 27.3
+    },
+    "FY27 calls": {
+     "n": 1,
+     "delivery_ratio_pct": 0.0
+    }
+   },
+   "n_shortfalls": 7,
+   "n_shortfalls_admitted_unprompted": 4,
+   "n_volunteered": 15,
+   "n_prompted": 5,
+   "sector_adjusted_credibility_pts": -43.0,
+   "sac_components": {
+    "capacity": {
+     "n": 8,
+     "own": 27.3,
+     "peer_median": 65.0,
+     "gap": -37.7
+    },
+    "pooled:margin": {
+     "n": 1,
+     "own": 0.0,
+     "peer_median": 85.0,
+     "gap": -85.0
+    }
+   },
+   "peer_set": [
+    "SONACOMS",
+    "SANSERA",
+    "HAPPYFORGE",
+    "ENDURANCE",
+    "UNIPARTS"
+   ]
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_12112026183008_2026_11_12_-_Transcript_of_Earnings_Conference_Call_on_04_11_2026.pdf",
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_19022026174447_Transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_20112025174935_2025_11_20_-_Transcript_of_Earnings_Conference_Call_on_13_11_2025.pdf",
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_21082026161009_2026_08_21_-_Transcript_of_Earnings_Conference_Call_on_14_08_2026.pdf",
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_22052026142524_2026_05_22_-_Transcript_of_EarningsCall.pdf",
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_22082025153100_20250822TranscriptofEarningsConferenceCallon14082025.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:ENDURANCE",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:UNIPARTS:credibility-2026-11",
+    "rel": "similar_to"
+   },
+   {
+    "to": "insight:auto-components-promise-credibility-base-rate",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:auto-components-promise-credibility-base-rate",
+  "title": "Base rate for management promise delivery in Indian auto components (UNIPARTS, SONACOMS, SANSERA, HAPPYFORGE, ENDURANCE; Nov 2026)",
+  "body": "Same-method promise scores for five Indian auto-component makers (last 6 concalls each, Aug-2025 to Nov-2026; UNIPARTS from its 10-call pilot). Weighted delivery (credit, specificity-weighted): SONACOMS 83.3% (n=6), SANSERA 60.0% (n=8), HAPPYFORGE 50.0% (n=7), ENDURANCE 26.1% (n=9), UNIPARTS 64.8% (n=47). Sector pattern: group revenue and margin guidance is usually met (pooled revenue 68.8%, margin 80.6%); capacity/SOP dates are the weak category (pooled 43.3%), with 1-5 quarter slips at Endurance, Happy Forgings and Sansera - the same date-slip pattern seen in T&D (L18). Two of five (Sona, Endurance) refuse revenue guidance, so their scored records are mostly mix statements or SOP dates; categories rarely reach n>=5, so SAC is computed with small categories pooled. SAC (pts vs leave-one-out peer medians): SONACOMS +50.0, SANSERA -4.8, HAPPYFORGE +3.6, ENDURANCE -43.0, UNIPARTS -8.1. Use: base rates by category for credibility-generated paper calls (thesis tag credibility-generated). n is small (6-9 scored per new company): provisional. Research, not advice.",
+  "tickers": [
+   "SONACOMS",
+   "SANSERA",
+   "HAPPYFORGE",
+   "ENDURANCE",
+   "UNIPARTS"
+  ],
+  "tags": [
+   "india",
+   "promise-tracker",
+   "sector-auto-ancillary",
+   "governance",
+   "base-rate",
+   "process",
+   "auto-peer-calibration"
+  ],
+  "date": "2026-11-22",
+  "data": {
+   "as_of": "2026-11-22",
+   "companies": [
+    "SONACOMS",
+    "SANSERA",
+    "HAPPYFORGE",
+    "ENDURANCE",
+    "UNIPARTS"
+   ],
+   "overall": {
+    "SONACOMS": {
+     "n": 6,
+     "D": 83.3,
+     "S": 77.8
+    },
+    "SANSERA": {
+     "n": 8,
+     "D": 60.0,
+     "S": 60.0
+    },
+    "HAPPYFORGE": {
+     "n": 7,
+     "D": 50.0,
+     "S": 42.1
+    },
+    "ENDURANCE": {
+     "n": 9,
+     "D": 26.1,
+     "S": 26.1
+    },
+    "UNIPARTS": {
+     "n": 47,
+     "D": 64.8,
+     "S": 57.1
+    }
+   },
+   "by_category": {
+    "SONACOMS": {
+     "margin": {
+      "n": 3,
+      "D": 75.0,
+      "S": 75.0
+     },
+     "other": {
+      "n": 3,
+      "D": 90.0,
+      "S": 80.0
+     }
+    },
+    "SANSERA": {
+     "revenue_growth": {
+      "n": 5,
+      "D": 100.0,
+      "S": 100.0
+     },
+     "capacity": {
+      "n": 3,
+      "D": 0.0,
+      "S": 0.0
+     }
+    },
+    "HAPPYFORGE": {
+     "margin": {
+      "n": 1,
+      "D": 100.0,
+      "S": 100.0
+     },
+     "capacity": {
+      "n": 4,
+      "D": 65.0,
+      "S": 50.0
+     },
+     "other": {
+      "n": 2,
+      "D": 0.0,
+      "S": 0.0
+     }
+    },
+    "ENDURANCE": {
+     "margin": {
+      "n": 1,
+      "D": 0.0,
+      "S": 0.0
+     },
+     "capacity": {
+      "n": 8,
+      "D": 27.3,
+      "S": 27.3
+     }
+    },
+    "UNIPARTS": {
+     "revenue_growth": {
+      "n": 23,
+      "D": 62.8,
+      "S": 57.4
+     },
+     "margin": {
+      "n": 5,
+      "D": 85.0,
+      "S": 70.0
+     },
+     "capacity": {
+      "n": 6,
+      "D": 71.4,
+      "S": 64.3
+     },
+     "other": {
+      "n": 13,
+      "D": 57.4,
+      "S": 48.1
+     }
+    }
+   },
+   "sector_median_D_pct": {
+    "revenue_growth": 81.4,
+    "margin": 80.0,
+    "capacity": 46.15,
+    "other": 57.4
+   },
+   "sector_pooled": {
+    "revenue_growth": {
+     "n": 28,
+     "D": 68.8,
+     "S": 64.3
+    },
+    "margin": {
+     "n": 10,
+     "D": 80.6,
+     "S": 72.2
+    },
+    "capacity": {
+     "n": 21,
+     "D": 43.3,
+     "S": 38.5
+    },
+    "other": {
+     "n": 18,
+     "D": 52.6,
+     "S": 44.7
+    }
+   },
+   "sac": {
+    "SONACOMS": {
+     "sac_pts": 50.0,
+     "n_scored": 6,
+     "shrink_weight": 0.231,
+     "components": {
+      "pooled:margin+other": {
+       "n": 6,
+       "own": 83.3,
+       "peer_median": 33.3,
+       "gap": 50.0
+      }
+     }
+    },
+    "SANSERA": {
+     "sac_pts": -4.8,
+     "n_scored": 8,
+     "shrink_weight": 0.286,
+     "components": {
+      "pooled:revenue_growth+capacity": {
+       "n": 8,
+       "own": 60.0,
+       "peer_median": 64.8,
+       "gap": -4.8
+      }
+     }
+    },
+    "HAPPYFORGE": {
+     "sac_pts": 3.6,
+     "n_scored": 7,
+     "shrink_weight": 0.259,
+     "components": {
+      "pooled:margin+capacity+other": {
+       "n": 7,
+       "own": 50.0,
+       "peer_median": 46.400000000000006,
+       "gap": 3.6
+      }
+     }
+    },
+    "ENDURANCE": {
+     "sac_pts": -43.0,
+     "n_scored": 9,
+     "shrink_weight": 0.31,
+     "components": {
+      "capacity": {
+       "n": 8,
+       "own": 27.3,
+       "peer_median": 65.0,
+       "gap": -37.7
+      },
+      "pooled:margin": {
+       "n": 1,
+       "own": 0.0,
+       "peer_median": 85.0,
+       "gap": -85.0
+      }
+     }
+    },
+    "UNIPARTS": {
+     "sac_pts": -8.1,
+     "n_scored": 47,
+     "shrink_weight": 0.701,
+     "components": {
+      "margin": {
+       "n": 5,
+       "own": 85.0,
+       "peer_median": 75.0,
+       "gap": 10.0
+      },
+      "capacity": {
+       "n": 6,
+       "own": 71.4,
+       "peer_median": 27.3,
+       "gap": 44.1
+      },
+      "other": {
+       "n": 13,
+       "own": 57.4,
+       "peer_median": 45.0,
+       "gap": 12.4
+      },
+      "pooled:revenue_growth": {
+       "n": 23,
+       "own": 62.8,
+       "peer_median": 100.0,
+       "gap": -37.2
+      }
+     }
+    }
+   },
+   "base_rates_leave_one_out": {
+    "SONACOMS": {
+     "_all": {
+      "n": 71,
+      "p0_pct": 51.0
+     },
+     "revenue_growth": {
+      "n": 28,
+      "p0_pct": 64.3,
+      "fallback_all": false
+     },
+     "margin": {
+      "n": 7,
+      "p0_pct": 51.0,
+      "fallback_all": true
+     },
+     "capacity": {
+      "n": 21,
+      "p0_pct": 38.5,
+      "fallback_all": false
+     },
+     "other": {
+      "n": 15,
+      "p0_pct": 39.4,
+      "fallback_all": false
+     }
+    },
+    "SANSERA": {
+     "_all": {
+      "n": 69,
+      "p0_pct": 51.7
+     },
+     "revenue_growth": {
+      "n": 23,
+      "p0_pct": 57.4,
+      "fallback_all": false
+     },
+     "margin": {
+      "n": 10,
+      "p0_pct": 72.2,
+      "fallback_all": false
+     },
+     "capacity": {
+      "n": 18,
+      "p0_pct": 43.5,
+      "fallback_all": false
+     },
+     "other": {
+      "n": 18,
+      "p0_pct": 44.7,
+      "fallback_all": false
+     }
+    },
+    "HAPPYFORGE": {
+     "_all": {
+      "n": 70,
+      "p0_pct": 53.8
+     },
+     "revenue_growth": {
+      "n": 28,
+      "p0_pct": 64.3,
+      "fallback_all": false
+     },
+     "margin": {
+      "n": 9,
+      "p0_pct": 66.7,
+      "fallback_all": false
+     },
+     "capacity": {
+      "n": 17,
+      "p0_pct": 35.7,
+      "fallback_all": false
+     },
+     "other": {
+      "n": 16,
+      "p0_pct": 53.1,
+      "fallback_all": false
+     }
+    },
+    "ENDURANCE": {
+     "_all": {
+      "n": 68,
+      "p0_pct": 56.7
+     },
+     "revenue_growth": {
+      "n": 28,
+      "p0_pct": 64.3,
+      "fallback_all": false
+     },
+     "margin": {
+      "n": 9,
+      "p0_pct": 76.5,
+      "fallback_all": false
+     },
+     "capacity": {
+      "n": 13,
+      "p0_pct": 46.7,
+      "fallback_all": false
+     },
+     "other": {
+      "n": 18,
+      "p0_pct": 44.7,
+      "fallback_all": false
+     }
+    },
+    "UNIPARTS": {
+     "_all": {
+      "n": 30,
+      "p0_pct": 45.5
+     },
+     "revenue_growth": {
+      "n": 5,
+      "p0_pct": 45.5,
+      "fallback_all": true
+     },
+     "margin": {
+      "n": 5,
+      "p0_pct": 45.5,
+      "fallback_all": true
+     },
+     "capacity": {
+      "n": 15,
+      "p0_pct": 28.9,
+      "fallback_all": false
+     },
+     "other": {
+      "n": 5,
+      "p0_pct": 45.5,
+      "fallback_all": true
+     }
+    }
+   },
+   "adjustment_rule": "p0 = leave-one-out pooled STRICT delivery rate (specificity-weighted share 'delivered'; partly=0) of the other 4 peers in the promise's category (all-category peer rate if <8 peer promises in that category). p = clip(p0 + N/(N+20) x SAC/100, 0.05, 0.95), N = company's scored promises, SAC in points (credit basis: delivered 1, partly 0.5; categories with n<5, or with <2 peers having data, pooled). P(base) = p0."
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/9876964720_11082026155459_TranscriptOfEarningsCall.pdf",
+   "https://nsearchives.nseindia.in/corporate/9876964720_13112025134935_TranscriptOfEarningsCall.pdf",
+   "https://nsearchives.nseindia.in/corporate/9876964720_13112026122617_TranscriptEarningscall13112026.pdf",
+   "https://nsearchives.nseindia.in/corporate/9876964720_16022026172207_TranscriptOfEarningsCall.pdf",
+   "https://nsearchives.nseindia.in/corporate/9876964720_18082025121524_TranscriptEarningsCall.pdf",
+   "https://nsearchives.nseindia.in/corporate/9876964720_28052026180252_TranscriptOfEarningsCall28052026.pdf",
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_12112026183008_2026_11_12_-_Transcript_of_Earnings_Conference_Call_on_04_11_2026.pdf",
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_19022026174447_Transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_20112025174935_2025_11_20_-_Transcript_of_Earnings_Conference_Call_on_13_11_2025.pdf",
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_21082026161009_2026_08_21_-_Transcript_of_Earnings_Conference_Call_on_14_08_2026.pdf",
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_22052026142524_2026_05_22_-_Transcript_of_EarningsCall.pdf",
+   "https://nsearchives.nseindia.in/corporate/ENDURANCE_22082025153100_20250822TranscriptofEarningsConferenceCallon14082025.pdf",
+   "https://nsearchives.nseindia.in/corporate/SANSERA_13112026120144_transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SANSERA_17022026122638_transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SANSERA_17082025151807_Transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SANSERA_20082026120039_Transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SANSERA_20112025093848_Transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SANSERA_28052026152825_Transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_06052026103543_Intimation.pdf",
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_09082025173136_Transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_30072026142213_Transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_31012026114914_Transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_31102025175705_Transcript.pdf",
+   "https://nsearchives.nseindia.in/corporate/SONACOMS_31102026183421_Intimation.pdf",
+   "https://www.screener.in/company/ENDURANCE/consolidated/",
+   "https://www.screener.in/company/HAPPYFORGE/consolidated/",
+   "https://www.screener.in/company/SANSERA/consolidated/",
+   "https://www.screener.in/company/SONACOMS/consolidated/",
+   "https://www.screener.in/company/UNIPARTS/consolidated/"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "analysis:SONACOMS:credibility-2026-11",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SANSERA:credibility-2026-11",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:HAPPYFORGE:credibility-2026-11",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:ENDURANCE:credibility-2026-11",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:UNIPARTS:credibility-2026-11",
+    "rel": "about"
+   },
+   {
+    "to": "insight:td-epc-promise-credibility-base-rate",
+    "rel": "similar_to"
+   }
+  ]
+ }
+]

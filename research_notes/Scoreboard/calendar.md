@@ -22,6 +22,7 @@ Every open call's resolve-by date. `check from` = first day the nightly resolver
 | 2027-02-28 | 2027-01-10 | `thesis:paper-call:CUMMINSIND:q3fy27-opm-17pct-plus` | a | structured | 0.38 | 0.45 |
 | 2027-02-28 | 2027-01-10 | `thesis:paper-call:DEEPAKNTR:q3fy27-op-500cr-plus` | a | structured | 0.55 | 0.45 |
 | 2027-02-28 | 2027-01-10 | `thesis:paper-call:EICHERMOT:q3fy27-opm-24pct-plus` | a | structured | 0.42 | 0.6 |
+| 2027-02-28 | 2027-02-01 | `thesis:paper-call:ENDURANCE:tata-4w-driveshaft-sop-q3fy27-cred` | c | assisted | 0.33 | 0.47 |
 | 2027-02-28 | 2027-01-10 | `thesis:paper-call:HINDUNILVR:q3fy27-opm-22pct-plus` | a | structured | 0.7 | 0.85 |
 | 2027-02-28 | 2027-01-10 | `thesis:paper-call:HONASA:q3fy27-opm-12pct-plus` | a | structured | 0.68 | 0.6 |
 | 2027-02-28 | 2027-01-10 | `thesis:paper-call:KAYNES:q3fy27-revenue-1050cr-plus` | a | structured | 0.38 | 0.45 |
@@ -29,6 +30,7 @@ Every open call's resolve-by date. `check from` = first day the nightly resolver
 | 2027-02-28 | 2027-01-15 | `thesis:paper-call:LUPIN:q3fy27-ebitda-margin-24pct-plus` | a | assisted | 0.35 | 0.6 |
 | 2027-02-28 | 2026-11-21 | `thesis:paper-call:NAVINFLUOR:chemours-plant-commissioned-q3fy27` | c | assisted | 0.45 | 0.6 |
 | 2027-02-28 | 2027-01-10 | `thesis:paper-call:POLYCAB:q3fy27-opm-13pct-plus` | a | structured | 0.72 | 0.7 |
+| 2027-02-28 | 2027-01-01 | `thesis:paper-call:SONACOMS:jv1-denso-closed-by-jan27-cred` | c | assisted | 0.51 | 0.39 |
 | 2027-02-28 | 2027-01-10 | `thesis:paper-call:SONACOMS:q3fy27-opm-23pct-plus` | a | structured | 0.42 | 0.5 |
 | 2027-02-28 | 2027-01-10 | `thesis:paper-call:ULTRACEMCO:q3fy27-op-4500cr-plus` | a | structured | 0.45 | 0.5 |
 | 2027-02-28 | 2027-01-15 | `thesis:paper-call:UNIPARTS:fire-rebuild-by-dec-2026` | c | assisted | 0.45 | - |
@@ -59,19 +61,32 @@ Every open call's resolve-by date. `check from` = first day the nightly resolver
 | 2027-05-15 | 2027-04-15 | `thesis:paper-call:ICICIBANK:q4fy27-nim-above-q3fy27` | a | assisted | 0.62 | 0.45 |
 | 2027-05-31 | 2027-04-15 | `thesis:paper-call:BAJAJCON:fy27-revenue-growth-17pct-plus` | a | structured | 0.52 | 0.55 |
 | 2027-05-31 | 2027-04-01 | `thesis:paper-call:BEL:fy27-order-inflow-25000cr-plus` | a | assisted | 0.66 | 0.6 |
+| 2027-05-31 | 2027-04-15 | `thesis:paper-call:HAPPYFORGE:fy27-opm-30pct-plus-cred` | a | structured | 0.68 | 0.67 |
+| 2027-05-31 | 2027-04-15 | `thesis:paper-call:HAPPYFORGE:fy27-revenue-growth-17pct-plus-cred` | a | structured | 0.65 | 0.64 |
 | 2027-05-31 | 2027-04-15 | `thesis:paper-call:IOLCP:fy27-opm-14pct-plus` | a | structured | 0.58 | 0.5 |
 | 2027-05-31 | 2027-04-15 | `thesis:paper-call:MARICO:fy27-ebitda-growth-24pct-plus` | a | structured | 0.68 | 0.55 |
 | 2027-05-31 | 2027-05-01 | `thesis:paper-call:NTPC:fy27-re-addition-4-8gw` | d | human | 0.3 | 0.4 |
+| 2027-05-31 | 2027-04-15 | `thesis:paper-call:SANSERA:fy27-opm-above-fy26-cred` | a | structured | 0.71 | 0.72 |
+| 2027-05-31 | 2027-04-15 | `thesis:paper-call:SANSERA:fy27-revenue-growth-17pct-plus-cred` | a | structured | 0.56 | 0.57 |
 | 2027-05-31 | 2027-04-15 | `thesis:paper-call:SKIPPER:fy27-ebitda-margin-10pct-plus` | a | structured | 0.7 | - |
 | 2027-05-31 | 2027-04-15 | `thesis:paper-call:SKIPPER:fy27-inflow-7500cr` | a | assisted | 0.35 | - |
 | 2027-05-31 | 2027-04-15 | `thesis:paper-call:SKIPPER:fy27-revenue-13pct-plus` | a | structured | 0.5 | - |
+| 2027-05-31 | 2027-04-15 | `thesis:paper-call:SONACOMS:fy27-opm-23pct-plus-cred` | a | structured | 0.63 | 0.51 |
 | 2027-05-31 | 2027-05-01 | `thesis:paper-call:TATAPOWER:fy27-capacity-addition-2-5gw` | d | human | 0.3 | 0.4 |
 | 2027-05-31 | 2027-04-15 | `thesis:paper-call:TRANSRAILL:fy27-order-intake-10000cr` | a | assisted | 0.38 | 0.5 |
+| 2027-05-31 | 2027-04-15 | `thesis:paper-call:UNIPARTS:fy27-opm-above-20pct-cred` | a | structured | 0.4 | 0.46 |
 | 2027-05-31 | 2027-04-15 | `thesis:paper-call:UNIPARTS:fy27-rev-growth-20pct-plus` | a | structured | 0.65 | - |
+| 2027-05-31 | 2027-04-15 | `thesis:paper-call:UNIPARTS:fy27-revenue-growth-24pct-cred` | a | structured | 0.4 | 0.46 |
 | 2027-05-31 | 2026-11-21 | `thesis:paper-call:US-AAPL:buyback-authorization-100bn-may27` | c | assisted | 0.75 | 0.6 |
 | 2027-06-05 | 2027-05-20 | `thesis:paper-call:US-DECK:fy27-eps-at-or-above-7-95` | a | structured | 0.52 | 0.4 |
 | 2027-06-15 | 2027-04-15 | `thesis:paper-call:DIXON:vivo-jv-production-starts-q4fy27` | c | assisted | 0.45 | 0.55 |
+| 2027-06-15 | 2027-05-01 | `thesis:paper-call:ENDURANCE:chennai-disc-brake-sop-by-mar27-cred` | c | assisted | 0.33 | 0.47 |
+| 2027-06-15 | 2027-05-01 | `thesis:paper-call:ENDURANCE:fifth-forging-press-sop-by-mar27-cred` | c | assisted | 0.33 | 0.47 |
+| 2027-06-15 | 2027-04-15 | `thesis:paper-call:HAPPYFORGE:orders-500cr-by-mar27-cred` | a | assisted | 0.54 | 0.53 |
+| 2027-06-15 | 2027-02-01 | `thesis:paper-call:SANSERA:defence-facility-operational-by-mar27-cred` | c | assisted | 0.42 | 0.43 |
+| 2027-06-15 | 2027-04-15 | `thesis:paper-call:SANSERA:nichidai-jv-production-by-mar27-cred` | c | assisted | 0.42 | 0.43 |
 | 2027-06-30 | 2026-11-21 | `thesis:paper-call:BHARTIARTL:prepaid-tariff-hike-by-jun27` | d | human | 0.35 | 0.3 |
+| 2027-06-30 | 2027-05-01 | `thesis:paper-call:ENDURANCE:fy27-driveshaft-revenue-100cr-cred` | a | assisted | 0.51 | 0.64 |
 | 2027-06-30 | 2027-07-02 | `thesis:paper-call:GENUSPOWER:cold-valuation-beats-nifty-to-jun27` | b | structured | 0.52 | 0.45 |
 | 2027-06-30 | 2027-07-02 | `thesis:paper-call:HINDALCO:peak-cycle-cheap-vs-nifty-to-jun27` | b | structured | 0.42 | 0.48 |
 | 2027-06-30 | 2027-07-02 | `thesis:paper-call:TITAN:cooler-valuation-beats-nifty-to-jun27` | b | structured | 0.45 | 0.48 |
@@ -81,14 +96,16 @@ Every open call's resolve-by date. `check from` = first day the nightly resolver
 | 2027-06-30 | 2026-11-21 | `thesis:paper-call:US-OPTU:chapter11-filing-by-jun27` | c | structured | 0.65 | 0.55 |
 | 2027-06-30 | 2027-07-02 | `thesis:paper-call:US-PLTR:hot-valuation-beats-spy-to-jun27` | b | structured | 0.42 | 0.47 |
 | 2027-06-30 | 2027-07-02 | `thesis:paper-call:US-SNOW:hot-valuation-beats-spy-to-jun27` | b | structured | 0.43 | 0.48 |
+| 2027-07-31 | 2027-03-01 | `thesis:paper-call:SONACOMS:jv2-closed-by-jun27-cred` | c | assisted | 0.51 | 0.39 |
 
 ## Due per month
 
 | Month | Calls due |
 |---|---|
 | 2027-01 | 6 |
-| 2027-02 | 24 |
+| 2027-02 | 26 |
 | 2027-03 | 12 |
 | 2027-04 | 7 |
-| 2027-05 | 16 |
-| 2027-06 | 12 |
+| 2027-05 | 23 |
+| 2027-06 | 18 |
+| 2027-07 | 1 |

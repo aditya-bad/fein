@@ -40,6 +40,7 @@ companies; written post-mortems on misses. Until then: no idea-pitching (except 
 |---|---|---|---|---|---|
 | 2026-11-20 | 0 | – | – | 0 | loop started |
 | 2026-11-20 | paper calls: 7 opened (promise tracker, resolve Feb–May 2027) | | | 0 | |
+| 2026-11-22 | paper calls: 93 open (+16 credibility-generated, auto components; tests whether sector-adjusted credibility adds skill vs sector base) | | | 0 | |
 | 2026-11-21 | paper calls: 77 open (batch2 +35: 21 India/14 US) | | | 0 | |
 | 2026-11-21 | paper calls: 42 open (7 + batch1 35: 20 India/15 US), resolve Jan–Jun 2027 | | | 0 | |
 | 2026-11-21 | set 2: 1 of 10 usable (9 recognised); D017 Brier 0.170 vs base 0.230 | 0.170 | 0.230 | 0 | historical drills retired as skill test (L15) |
