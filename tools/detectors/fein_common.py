@@ -207,6 +207,12 @@ CREATE TABLE IF NOT EXISTS shares(symbol TEXT PRIMARY KEY, as_of TEXT, shares RE
 CREATE TABLE IF NOT EXISTS symbols(symbol TEXT PRIMARY KEY, name TEXT, isin TEXT, norm TEXT);
 CREATE INDEX IF NOT EXISTS ix_sym_norm ON symbols(norm);
 CREATE TABLE IF NOT EXISTS runs(run_at TEXT, dataset TEXT, day TEXT, rows INTEGER, status TEXT, note TEXT);
+CREATE TABLE IF NOT EXISTS solvency(
+  snapshot_date TEXT, symbol TEXT, name TEXT, industry TEXT, basis TEXT, status TEXT, fy0 TEXT,
+  net_worth REAL, ebit REAL, interest REAL, icr REAL, std REAL, cash REAL, cfo REAL, fcf REAL,
+  dividends REAL, debt0 REAL, debt1 REAL, s1raw INTEGER, s1 INTEGER, s2 INTEGER, s2b INTEGER,
+  s3 INTEGER, s4 INTEGER, s5 INTEGER, s5b INTEGER, n_flags INTEGER, grade TEXT, details TEXT, url TEXT,
+  PRIMARY KEY(snapshot_date, symbol));
 CREATE TABLE IF NOT EXISTS alerts(
   key TEXT PRIMARY KEY, first_seen TEXT, date TEXT, symbol TEXT, rule TEXT, details TEXT, url TEXT);
 """
