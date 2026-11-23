@@ -262,3 +262,11 @@ more than a miss alone (H1 not supported), but halved within 12 months 17.6% of 
 (3.9×); S5-India alone showed nothing. **Rule:** keep the PEAD WAIT gate; add a survival cap — bottom-two result plus
 pledge >25% or interest cover <1.5x → no new money / minimum size and a balance-sheet question
 (decision:pead-avoid-plus-redflag-survival-cap). Proposal to test: cap any red-flag firm regardless of results.
+
+## L36 (2026-11-23) — Our scenarios under-weight the left tail; the outside view says blow-ups are common
+Real 5-year base rates (survivorship-free): India non-fin ₹1,000–20,000 cr: P(≥3x) 21%, P(≤0.5x) 11%, P(blow-up) 15%;
+US $0.5–10B float: 7% / 14% / 11%. (Old India placeholder said 44% / 2% — badly wrong.) On every card our P(blow-up)
+was only 0.07–0.18× the base rate → systematic overconfidence about survival. Calibration (cash tax, ROIIC realism,
+exit-multiple bet table) didn't open any card; the binding choice is the exit multiple, as it should be.
+**Rule:** anchor tail probabilities to the class base rate and move away only with written evidence; Brier scoring
+of live calls will measure this. Next useful card: a stock cheap at entry and inside a base-rate size band.
