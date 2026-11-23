@@ -20,6 +20,11 @@ before trusting it. Your branch is the default, so every new session loads this 
 | 6 Decision | Card: gates, probabilities, kill criteria, position size by rule. |
 | 7 Scorekeeping | **115 dated predictions** open; automatic resolver + scoreboard; first results from 31 Jan 2027. |
 
+**What 7 honest tests showed:** rules for *picking winners* from public data have all failed (0 of 6).
+Rules for *avoiding losers* work: skip stocks after a big earnings miss; be very careful with high promoter pledges
+and weak interest cover. So our real edge has to come from **depth** — reading what others skip, tracking what
+management promised vs delivered, and your ground checks. Full review: `memory/strategy_review.md`.
+
 **No proven edge yet for picking winners.** The bar: ≥50 resolved predictions that clearly beat base rates.
 **No stock recommendations** until then.
 

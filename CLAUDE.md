@@ -47,7 +47,7 @@ Same id = update (fields merge, version increments, old versions stay in the JSO
 Default to 2–3 subagents at a time, as a pipeline: finish tasks, then start the next (lesson L23). This is Claude's judgment call, not a hard cap: use more when tasks are small or the limit has headroom, fewer when tasks are heavy.
 
 ## Roadmap rule
-Read `memory/roadmap.md`. Every task must name which of the 7 stages (universe → hard filters → signals →
+Read `memory/strategy_review.md` and `memory/roadmap.md`. Every task must name which of the 7 stages (universe → hard filters → signals →
 deep dive → valuation → decision → scorekeeping) it builds and what it unlocks next. No random analysis.
 
 ## Hard rules (learned the hard way — see memory/lessons.md)

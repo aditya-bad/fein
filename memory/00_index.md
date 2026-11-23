@@ -12,6 +12,7 @@ Last updated: 2026-11-19
 | `decisions_log.md` | Dated decisions and why | A decision is made |
 | `tools_and_access.md` | What tools/data work, what's blocked, credentials needed | Access changes |
 | `next_steps.md` | Open questions for the user + the build plan | Every session end |
+| `strategy_review.md` | **Where the edge is and isn't (after 7 signal tests); priorities** — re-read before choosing work | After each results season |
 | `roadmap.md` | **The 7-stage stock-selection machine, status per stage, priority order** | When a stage advances |
 | `curriculum.md` | **The learning loop, blind-drill method, phase-B gate, scoreboard, knowledge backlog** | Every cycle |
 | `session_log.md` | Chronological log of every session | Every session end |
