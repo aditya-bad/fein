@@ -1,0 +1,781 @@
+[
+ {
+  "type": "analysis",
+  "id": "analysis:autoaxles-live-deepdive-2026-11",
+  "title": "Automotive Axles (AUTOAXLES) - LIVE deep dive #3, first cheap-tercile draw (protocol v1.3 stages 2-7): method test, no verdict; card size 0; 6 live calls",
+  "body": "LIVE method test (L9, L21): random draw from the cheapest EV/EBITDA tercile of a 120-name random sample of the India non-financial Rs 1,000-20,000 cr universe; no buy/sell verdict. Research, not advice. SELECTION: 809 in range -> 741 eligible -> sample 120 (Random(20261125)) -> 111 valid -> cheapest tercile 37 (EV/EBITDA <= 11.86x) -> Random(20261126) walk: JPPOWER skipped (PEAD Q1, event 19-Oct-2026), AUTOAXLES passed all v3 checks (pledge 0, unmodified audits, PEAD Q5 SUE +4.19, solvency 0 flags). WHY CHEAP: cyclical peak, not fraud or solvency. P/E 12.9x trailing (record EPS 137.6 adj; record OPM 12.5% in Q2 FY27) vs 25.8x on 10-year normalised EPS 68.9; FY26 M&HCV industry ~480k = FY19 peak; FY27 guided 500k+ with a regulatory pre-buy to April 2027; capacity ~98% used; last cycle revenue -53%, EPS -81%, price -80% (2018-20). KEY FINDINGS: (1) since 1-Apr-2025 AAL sells direct to OEMs and pays Meritor HVS (India) (Cummins) a technical fee, Rs 97.5 cr FY26 = 4.5% of sales = 41% of core EBITDA, under a one-year agreement renewable 30-Apr-2027, after minorities rejected a Rs 2,500 cr material-RPT resolution 79.5% against (Dec-2024); (2) the switch grossed revenue up ~5% (materials 71.0% -> 67.5% of revenue), so FY26 like-for-like revenue was ~flat vs industry +16%; (3) Customer A = 66% of revenue; (4) net cash Rs 394 cr (15% of mcap), ICRA AA-, ROIC 15-22% FY23-26; (5) promise ledger 43% vs auto-peer median 60%: dates slip, industry forecasts too bearish twice. VALUATION: worksheet v1.3 EV 1.49x raw / 1.40x anchored (w=0.6) vs hurdle 1.76x -> card v1.2 size 0; base IRR 10.4%; exit-bet table 1.13x (DCF P/E) / 1.49x / 1.73x (own median 18.8). METHOD LESSONS: cheap tercile selects cycle position; materials-ratio test for sales-model gross-ups; minority vote results are governance data.",
+  "tickers": [
+   "AUTOAXLES"
+  ],
+  "tags": [
+   "deep-dive",
+   "live",
+   "method-test",
+   "india",
+   "cheap-tercile",
+   "sector-auto-ancillary",
+   "stage-4",
+   "stage-5",
+   "stage-6",
+   "no-verdict",
+   "value-trap-test",
+   "cyclical"
+  ],
+  "date": "2026-11-23",
+  "status": "done",
+  "data": {
+   "selection_seed": [
+    20261125,
+    20261126
+   ],
+   "tercile_n": 37,
+   "tercile_cut_ev_ebitda": 11.86,
+   "skips": [
+    {
+     "symbol": "JPPOWER",
+     "reason": "PEAD quintile 1, event 2026-10-19"
+    }
+   ],
+   "price": 1776.3,
+   "mcap_cr": 2684,
+   "net_cash_cr": 393.9,
+   "pe_trailing": 12.9,
+   "pe_normalised": 25.8,
+   "ev_ebitda": 8.1,
+   "card_rule_output": "size 0 (EV 1.40x anchored vs 1.76x)",
+   "credibility": 0.43,
+   "credibility_peer_median": 0.6,
+   "technical_fee_cr_fy26": 97.53,
+   "customer_a_share_fy26": 0.66,
+   "review_date": "2027-02-15"
+  },
+  "sources": [
+   "research_notes/Deep dives/AUTOAXLES_live.md",
+   "tools/valuation/live/AUTOAXLES_worksheet.md",
+   "tools/decision/live/AUTOAXLES_card.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_29891_AUTOAXLES_2025_2026_A_16112201_18072026164730.pdf",
+   "https://nsearchives.nseindia.in/annual_reports/AR_27028_AUTOAXLES_2024_2025_A_18072025200747.pdf"
+  ],
+  "links": [
+   {
+    "to": "decision:live-dd-selection-rules",
+    "rel": "applies"
+   },
+   {
+    "to": "decision:card:AUTOAXLES:2026-11-23",
+    "rel": "produced"
+   },
+   {
+    "to": "thesis:AUTOAXLES:variant-view-2026-11",
+    "rel": "produced"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:AUTOAXLES:variant-view-2026-11",
+  "title": "Automotive Axles (AUTOAXLES) variant view, Nov 2026: cheap for a reason (cyclical peak + parent fee); no claimable mispricing",
+  "body": "Market appears to price peak M&HCV earnings that fall after the April-2027 pre-buy (12.9x trailing, ~26x normalised). Our view: agree on direction; no claimable mispricing. We add two negatives the market may under-weight - FY26 like-for-like revenue ~flat vs industry +16% (direct-sales gross-up) and an annually renewed 4.5%-of-sales technical fee to the Cummins group that minorities cannot vote on - and one positive: net cash 15% of mcap and through-cycle ROIC ~15%, so the left tail is a cyclical drawdown, not ruin. Proves us wrong: FY27 revenue >= Rs 2,500 cr AND H1 FY28 revenue within 10% of H1 FY27; fee stable on a multi-year agreement; FY27 growth >= industry + 5 pts. Scored by thesis:paper-call:AUTOAXLES:*.",
+  "tickers": [
+   "AUTOAXLES"
+  ],
+  "tags": [
+   "variant-perception",
+   "live",
+   "deepdive-generated",
+   "india",
+   "cheap-tercile",
+   "stage-6"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "market_view": "cyclical peak earnings; de-rating ahead of the post-pre-buy downturn",
+   "our_view": "agree; no claimable mispricing; mild negative tilt (content lag, parent fee)",
+   "score_by": "2027-09-30"
+  },
+  "sources": [
+   "research_notes/Deep dives/AUTOAXLES_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:autoaxles-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:AUTOAXLES:q3fy27-revenue-675cr-plus",
+  "title": "Paper call: Automotive Axles Q3 FY27 revenue from operations is >= Rs 675 cr (+20% YoY)",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #3, company drawn at random from the cheapest EV/EBITDA tercile (method test, L9/L21). Probability 0.55 (naive base rate 0.15) that: Automotive Axles Q3 FY27 revenue from operations is >= Rs 675 cr (+20% YoY). Our reasoning: Q2 FY27 Rs 663 cr (+43% YoY); Q2->Q3 sequential change averaged +7% over FY24-FY26 (-7%, +7%, +22%); regulatory pre-buy continues to April 2027 and phase-1 capacity completes in Q3; risks: steel scarcity, gear-supplier constraints, holiday days. Naive base: 2 of the last 13 quarters (Sep-2023..Sep-2026) grew >= 20% YoY [SCR]. Resolution: YES if revenue from operations for the quarter ended 31-Dec-2026, as first reported, is >= Rs 675 cr (standalone = only basis). Source: NSE integrated-filing XBRL (results) + screener.in (standalone; AAL has no subsidiaries). Resolve by 2027-02-28; score with Brier vs the base rate.",
+  "tickers": [
+   "AUTOAXLES"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "cheap-tercile",
+   "method-test",
+   "sector-auto-ancillary",
+   "cat-revenue"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.55,
+   "base_rate_probability": 0.15,
+   "method": "deep-dive protocol v1.3 (live #3, cheap tercile)",
+   "made_on": "2026-11-23",
+   "resolve_by": "2027-02-28",
+   "resolution_rule": "YES if revenue from operations for the quarter ended 31-Dec-2026, as first reported, is >= Rs 675 cr (standalone = only basis).",
+   "resolution_source": "NSE integrated-filing XBRL (results) + screener.in (standalone; AAL has no subsidiaries)",
+   "base_rate_reasoning": "2 of the last 13 quarters (Sep-2023..Sep-2026) grew >= 20% YoY [SCR].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/AUTOAXLES_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:autoaxles-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:AUTOAXLES:fy27-revenue-2500cr-plus",
+  "title": "Paper call: Automotive Axles FY27 revenue from operations is >= Rs 2,500 cr",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #3, company drawn at random from the cheapest EV/EBITDA tercile (method test, L9/L21). Probability 0.62 (naive base rate 0.4) that: Automotive Axles FY27 revenue from operations is >= Rs 2,500 cr. Our reasoning: H1 FY27 Rs 1,179 cr (+24%); needs H2 >= Rs 1,321 cr (+7.7% vs H2 FY26 Rs 1,226 cr, about 2x the Q2 run-rate of Rs 663 cr); pre-buy to April 2027; Q4 is seasonally strongest. Naive base: 4 of 10 fiscal years FY17-FY26 had revenue growth >= 14.8% (FY18, FY19, FY22, FY23) [SCR]. Resolution: YES if revenue from operations for FY27 (1-Apr-2026 to 31-Mar-2027), as first reported in the audited FY27 results, is >= Rs 2,500 cr. Source: NSE integrated-filing XBRL (results) + screener.in (standalone; AAL has no subsidiaries). Resolve by 2027-05-31; score with Brier vs the base rate.",
+  "tickers": [
+   "AUTOAXLES"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "cheap-tercile",
+   "method-test",
+   "sector-auto-ancillary",
+   "cat-revenue"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.62,
+   "base_rate_probability": 0.4,
+   "method": "deep-dive protocol v1.3 (live #3, cheap tercile)",
+   "made_on": "2026-11-23",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if revenue from operations for FY27 (1-Apr-2026 to 31-Mar-2027), as first reported in the audited FY27 results, is >= Rs 2,500 cr.",
+   "resolution_source": "NSE integrated-filing XBRL (results) + screener.in (standalone; AAL has no subsidiaries)",
+   "base_rate_reasoning": "4 of 10 fiscal years FY17-FY26 had revenue growth >= 14.8% (FY18, FY19, FY22, FY23) [SCR].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/AUTOAXLES_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:autoaxles-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:AUTOAXLES:fy27-opm-12pct-plus",
+  "title": "Paper call: Automotive Axles FY27 operating margin (resolver definition) is >= 12.0%",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #3, company drawn at random from the cheapest EV/EBITDA tercile (method test, L9/L21). Probability 0.55 (naive base rate 0.08) that: Automotive Axles FY27 operating margin (resolver definition) is >= 12.0%. Our reasoning: H1 FY27 OPM 12.1% (Q1 11.6%, Q2 12.5%) on screener's operating profit / sales; H2 volume absorption vs steel/fuel conversion-cost headwinds; FY26 Q4 was 11.6%. Naive base: 0 of 11 fiscal years FY16-FY26 reached 12.0% (max 11.8% in FY19); Laplace (0+1)/(11+2) = 0.08 [SCR]. Resolution: YES if FY27 OPM (operating profit before other income / revenue from operations, as computed by the scoreboard resolver from XBRL and screener) is >= 12.0%. Source: NSE integrated-filing XBRL (results) + screener.in (standalone; AAL has no subsidiaries). Resolve by 2027-05-31; score with Brier vs the base rate.",
+  "tickers": [
+   "AUTOAXLES"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "cheap-tercile",
+   "method-test",
+   "sector-auto-ancillary",
+   "cat-margin"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.55,
+   "base_rate_probability": 0.08,
+   "method": "deep-dive protocol v1.3 (live #3, cheap tercile)",
+   "made_on": "2026-11-23",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if FY27 OPM (operating profit before other income / revenue from operations, as computed by the scoreboard resolver from XBRL and screener) is >= 12.0%.",
+   "resolution_source": "NSE integrated-filing XBRL (results) + screener.in (standalone; AAL has no subsidiaries)",
+   "base_rate_reasoning": "0 of 11 fiscal years FY16-FY26 reached 12.0% (max 11.8% in FY19); Laplace (0+1)/(11+2) = 0.08 [SCR].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/AUTOAXLES_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:autoaxles-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:AUTOAXLES:fy27-net-profit-220cr-plus",
+  "title": "Paper call: Automotive Axles FY27 net profit is >= Rs 220 cr",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #3, company drawn at random from the cheapest EV/EBITDA tercile (method test, L9/L21). Probability 0.58 (naive base rate 0.5) that: Automotive Axles FY27 net profit is >= Rs 220 cr. Our reasoning: H1 FY27 Rs 105.7 cr; H2 needs Rs 114.3 cr vs the Q2 run-rate of Rs 120 cr per half; the Rs 12 cr labour-code exceptional of Q3 FY26 does not repeat. Naive base: 5 of 10 fiscal years FY17-FY26 had PAT growth >= 34% (FY17, FY18, FY19, FY22, FY23) [SCR]. Resolution: YES if profit for the year FY27, as first reported in the audited FY27 results, is >= Rs 220 cr. Source: NSE integrated-filing XBRL (FY27 results). Resolve by 2027-05-31; score with Brier vs the base rate.",
+  "tickers": [
+   "AUTOAXLES"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "cheap-tercile",
+   "method-test",
+   "sector-auto-ancillary",
+   "cat-profit"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.58,
+   "base_rate_probability": 0.5,
+   "method": "deep-dive protocol v1.3 (live #3, cheap tercile)",
+   "made_on": "2026-11-23",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if profit for the year FY27, as first reported in the audited FY27 results, is >= Rs 220 cr.",
+   "resolution_source": "NSE integrated-filing XBRL (FY27 results)",
+   "base_rate_reasoning": "5 of 10 fiscal years FY17-FY26 had PAT growth >= 34% (FY17, FY18, FY19, FY22, FY23) [SCR].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/AUTOAXLES_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:autoaxles-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:AUTOAXLES:fy27-technical-fee-le-4p75pct",
+  "title": "Paper call: Automotive Axles FY27 technical fees to Meritor HVS (India) are <= 4.75% of revenue from operations",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #3, company drawn at random from the cheapest EV/EBITDA tercile (method test, L9/L21). Probability 0.75 (naive base rate 0.5) that: Automotive Axles FY27 technical fees to Meritor HVS (India) are <= 4.75% of revenue from operations. Our reasoning: FY26 technical fees Rs 97.53 cr = 4.48% of revenue from operations Rs 2,177.7 cr [AR26 n.29, n.21]; the 29-Apr-2026 extension to 30-Apr-2027 states 'no impact'; the fee is reportedly not charged on group exports, and a falling export share adds about 0.1 pt mechanically. Naive base: a related-party fee around an annual renewal: coin flip [EST, unverified]. Resolution: YES if 'Technical fees' in the FY27 annual report's Other-expenses note divided by 'Total revenue from operations' (FY27 AR revenue note) is <= 4.75%. If the line is renamed, use the MHVSIL 'services received / technical fees' amount in the related-party note. Source: Automotive Axles FY2026-27 annual report (NSE annual_reports). Resolve by 2027-08-31; score with Brier vs the base rate.",
+  "tickers": [
+   "AUTOAXLES"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "cheap-tercile",
+   "method-test",
+   "sector-auto-ancillary",
+   "cat-governance"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.75,
+   "base_rate_probability": 0.5,
+   "method": "deep-dive protocol v1.3 (live #3, cheap tercile)",
+   "made_on": "2026-11-23",
+   "resolve_by": "2027-08-31",
+   "resolution_rule": "YES if 'Technical fees' in the FY27 annual report's Other-expenses note divided by 'Total revenue from operations' (FY27 AR revenue note) is <= 4.75%. If the line is renamed, use the MHVSIL 'services received / technical fees' amount in the related-party note.",
+   "resolution_source": "Automotive Axles FY2026-27 annual report (NSE annual_reports)",
+   "base_rate_reasoning": "a related-party fee around an annual renewal: coin flip [EST, unverified].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/AUTOAXLES_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:autoaxles-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:AUTOAXLES:beats-nifty500-to-sep27",
+  "title": "Paper call: Automotive Axles price return beats the Nifty 500 from 23-Nov-2026 to 30-Sep-2027",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #3, company drawn at random from the cheapest EV/EBITDA tercile (method test, L9/L21). Probability 0.4 (naive base rate 0.44) that: Automotive Axles price return beats the Nifty 500 from 23-Nov-2026 to 30-Sep-2027. Our reasoning: The window ends ~5 months after the regulatory pre-buy ends (April 2027); CV ancillaries usually de-rate into a volume turn; the low starting P/E (12.9x) and net cash limit the damage. Naive base: share of small caps beating the index over ~10 months, skewed below 0.5 [EST, as in live deep dive #1]. Resolution: YES if AUTOAXLES.NS close on 30-Sep-2027 / 1,776.30 (close 23-Nov-2026) > ^CRSLDX close on 30-Sep-2027 / 23,748.15 (close 23-Nov-2026); price return, last close on or before 30-Sep-2027. Source: Yahoo v8 daily closes (AUTOAXLES.NS, ^CRSLDX); NSE bhavcopy. Resolve by 2027-09-30; score with Brier vs the base rate.",
+  "tickers": [
+   "AUTOAXLES"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "cheap-tercile",
+   "method-test",
+   "sector-auto-ancillary",
+   "price-relative"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.4,
+   "base_rate_probability": 0.44,
+   "method": "deep-dive protocol v1.3 (live #3, cheap tercile)",
+   "made_on": "2026-11-23",
+   "resolve_by": "2027-09-30",
+   "resolution_rule": "YES if AUTOAXLES.NS close on 30-Sep-2027 / 1,776.30 (close 23-Nov-2026) > ^CRSLDX close on 30-Sep-2027 / 23,748.15 (close 23-Nov-2026); price return, last close on or before 30-Sep-2027.",
+   "resolution_source": "Yahoo v8 daily closes (AUTOAXLES.NS, ^CRSLDX); NSE bhavcopy",
+   "base_rate_reasoning": "share of small caps beating the index over ~10 months, skewed below 0.5 [EST, as in live deep dive #1].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/AUTOAXLES_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:autoaxles-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:AUTOAXLES:card-2026-11-23-5y-ge3x",
+  "title": "Paper call: Automotive Axles Ltd 5-year outcome ≥3.0x from 2026-11-23 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.06 (base rate 0.213, class india_nonfin_1000_20000cr_5y) that: YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-23 (entry INR 1,776) to the last close on or before 2031-11-23 is ≥ 3.0. Model: worksheet scenarios bear 35%→1.04x, base 45%→1.60x, bull 17%→2.32x with σ=0.35; reverse DCF base-case IRR 10.4%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.40x anchored (raw 1.49x) vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "AUTOAXLES"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india",
+   "deepdive-generated",
+   "live",
+   "cheap-tercile",
+   "sector-auto-ancillary"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.0562,
+   "base_rate_probability": 0.2129,
+   "anchored_probability": null,
+   "anchor_weight": null,
+   "base_rate_reasoning": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted). n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "method": "decision-card-v1",
+   "card_version": "1.2",
+   "made_on": "2026-11-23",
+   "resolve_by": "2031-11-23",
+   "entry_date": "2026-11-23",
+   "entry_price": 1776.3,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-23 (entry INR 1,776) to the last close on or before 2031-11-23 is ≥ 3.0.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/AUTOAXLES_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_29891_AUTOAXLES_2025_2026_A_16112201_18072026164730.pdf",
+   "https://nsearchives.nseindia.in/annual_reports/AR_27028_AUTOAXLES_2024_2025_A_18072025200747.pdf",
+   "https://nsearchives.nseindia.in/corporate/AUTOAXLES_12112026175115_BMOutcome12112026.pdf",
+   "https://nsearchives.nseindia.in/corporate/AUTOAXLES_17112026155524_CallTranscription_Q2_17112026.pdf",
+   "https://www.screener.in/company/AUTOAXLES/consolidated/",
+   "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_23112026.csv"
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:AUTOAXLES:card-2026-11-23-5y-le0p5x",
+  "title": "Paper call: Automotive Axles Ltd 5-year outcome ≤0.5x from 2026-11-23 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.04 (base rate 0.113, class india_nonfin_1000_20000cr_5y) that: YES if the total-return multiple from 2026-11-23 (entry INR 1,776) to the last close on or before 2031-11-23 is ≤ 0.5, or the stock is delisted/suspended below that level. Model: worksheet scenarios bear 35%→1.04x, base 45%→1.60x, bull 17%→2.32x with σ=0.35; reverse DCF base-case IRR 10.4%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.40x anchored (raw 1.49x) vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "AUTOAXLES"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india",
+   "deepdive-generated",
+   "live",
+   "cheap-tercile",
+   "sector-auto-ancillary"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.0364,
+   "base_rate_probability": 0.1127,
+   "anchored_probability": 0.0822,
+   "anchor_weight": 0.6,
+   "base_rate_reasoning": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted). n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "method": "decision-card-v1",
+   "card_version": "1.2",
+   "made_on": "2026-11-23",
+   "resolve_by": "2031-11-23",
+   "entry_date": "2026-11-23",
+   "entry_price": 1776.3,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple from 2026-11-23 (entry INR 1,776) to the last close on or before 2031-11-23 is ≤ 0.5, or the stock is delisted/suspended below that level.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/AUTOAXLES_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_29891_AUTOAXLES_2025_2026_A_16112201_18072026164730.pdf",
+   "https://nsearchives.nseindia.in/annual_reports/AR_27028_AUTOAXLES_2024_2025_A_18072025200747.pdf",
+   "https://nsearchives.nseindia.in/corporate/AUTOAXLES_12112026175115_BMOutcome12112026.pdf",
+   "https://nsearchives.nseindia.in/corporate/AUTOAXLES_17112026155524_CallTranscription_Q2_17112026.pdf",
+   "https://www.screener.in/company/AUTOAXLES/consolidated/",
+   "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_23112026.csv"
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:AUTOAXLES:card-2026-11-23-5y-blowup",
+  "title": "Paper call: Automotive Axles Ltd 5-year outcome blow-up from 2026-11-23 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.03 (base rate 0.154, class india_nonfin_1000_20000cr_5y) that: YES if between 2026-11-23 and 2031-11-23: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples). Model: worksheet scenarios bear 35%→1.04x, base 45%→1.60x, bull 17%→2.32x with σ=0.35; reverse DCF base-case IRR 10.4%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.40x anchored (raw 1.49x) vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "AUTOAXLES"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india",
+   "deepdive-generated",
+   "live",
+   "cheap-tercile",
+   "sector-auto-ancillary"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.03,
+   "base_rate_probability": 0.1537,
+   "anchored_probability": 0.1042,
+   "anchor_weight": 0.6,
+   "base_rate_reasoning": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted). n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "method": "decision-card-v1",
+   "card_version": "1.2",
+   "made_on": "2026-11-23",
+   "resolve_by": "2031-11-23",
+   "entry_date": "2026-11-23",
+   "entry_price": 1776.3,
+   "currency": "INR",
+   "resolution_rule": "YES if between 2026-11-23 and 2031-11-23: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples).",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/AUTOAXLES_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_29891_AUTOAXLES_2025_2026_A_16112201_18072026164730.pdf",
+   "https://nsearchives.nseindia.in/annual_reports/AR_27028_AUTOAXLES_2024_2025_A_18072025200747.pdf",
+   "https://nsearchives.nseindia.in/corporate/AUTOAXLES_12112026175115_BMOutcome12112026.pdf",
+   "https://nsearchives.nseindia.in/corporate/AUTOAXLES_17112026155524_CallTranscription_Q2_17112026.pdf",
+   "https://www.screener.in/company/AUTOAXLES/consolidated/",
+   "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_23112026.csv"
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "decision",
+  "id": "decision:card:AUTOAXLES:2026-11-23",
+  "title": "Decision card AUTOAXLES 2026-11-23 (paper)",
+  "body": "Decision card v1 for Automotive Axles Ltd. Rule output: size 0: blocked by Expected value vs hurdle (EV 1.40x anchored (raw 1.49x) vs hurdle 1.76x → below hurdle → size 0). Thesis: Method-test thesis: Automotive Axles is cheap only on peak-cycle earnings (12.9x trailing, 25.8x 10-year normalised EPS); over 5 years it compounds roughly with the M&HCV cycle at a through-cycle ROIC ~15-18% while its parent (Cummins/Meritor) takes ~4.5% of sales as a technical fee under an annually renewed agreement, so the 5-year outcome is driven by cycle position in FY31-32 and the exit multiple, not by a mispricing. Variant view: Market (reverse DCF and temperature): at Rs 1,776 the stock is at 12.9x trailing EPS, 8.1x EV/EBITDA net of Rs 394 cr cash, the lowest P/E on the highest earnings in its 11-year history; the market is pricing a cyclical peak (record FY27 M&HCV volume of 500k+ guided, a regulatory pre-buy to April 2027, capacity nearly full at a Rs 2,650 cr annualised run-rate). Our view: we largely AGREE that it is cheap for a reason, so there is no claimable mispricing. On 10-year normalised EPS (Rs 69) the P/E is 25.8x (warm vs own history); the last cycle took revenue -53% and EPS -81% (FY19-21) and the price -80% peak to trough. What we found that the market may be MIS-weighting, in both directions: (1, negative) like-for-like FY26 revenue was roughly flat while the industry grew ~16% - the reported +4.8% is mostly the gross-up from selling direct to OEMs at OEM prices since 1-Apr-2025 (materials fell 71.0% -> 67.5% of revenue, other expenses rose 11.7% -> 14.3% with the new Rs 97.5 cr technical fee) - so content/share per industry vehicle has lagged; (2, negative) the parent take is now an explicit 4.5%-of-sales fee to Meritor HVS India (Cummins) under a one-year agreement renewable 30-Apr-2027, structured below the shareholder-approval threshold after minority holders voted 79.5% against a Rs 2,500 cr material-RPT resolution in Dec-2024; (3, positive) the balance sheet is clean (net cash 15% of market cap, AA- ICRA, payout ~30%) and the business earned 15-22% ROIC across FY23-26, so the downside is a cyclical drawdown, not a solvency event. What would prove us wrong: FY27 revenue >= Rs 2,500 cr AND FY28 H1 revenue holding within 10% of H1 FY27 after the pre-buy (the cycle is longer than we assume), or a fee cut/stable fee with rising content per vehicle. Departure from the outside view: P(>=3x) far below the class (6% vs 21%) because a 3x needs ~25% EPS CAGR from a cyclical-peak base (twin engine); tail probabilities are anchored at w=0.6 toward the class because this stock already printed a ~0.2x drawdown in the last cycle. Checked by paper calls thesis:paper-call:AUTOAXLES:* (6 operating/fee/price calls to 2027-09-30, plus the 3 card calls). Open soft flags: 5. P(≥3x) 6% vs base 21%; P(≤0.5x) 4% vs base 11.3%; EV 5-yr multiple 1.49x vs hurdle 1.76x. Review 2027-02-15.",
+  "tickers": [
+   "AUTOAXLES"
+  ],
+  "tags": [
+   "decision-card",
+   "stage-6",
+   "india",
+   "deepdive-generated",
+   "live",
+   "cheap-tercile",
+   "sector-auto-ancillary"
+  ],
+  "date": "2026-11-23",
+  "data": {
+   "gates": [
+    {
+     "gate": "Stage 2 hard filters",
+     "result": "passed (7 rules)",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 3 PEAD avoid flag",
+     "result": "clear",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 3 survival cap",
+     "result": "n/a",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 4 soft flags",
+     "result": "5 open, variant view written",
+     "blocks": false
+    },
+    {
+     "gate": "Expected value vs hurdle",
+     "result": "EV 1.40x anchored (raw 1.49x) vs hurdle 1.76x → below hurdle → size 0",
+     "blocks": true
+    }
+   ],
+   "size_after_gates": 0.0,
+   "survival_cap": {
+    "status": "n/a",
+    "triggered": false,
+    "blocks": false,
+    "reasons": [],
+    "already_owned": false
+   },
+   "anchor_weight": 0.6,
+   "ev_mult5_raw": 1.489725255214575,
+   "ev_mult5_anchored": 1.3960639983003726,
+   "p_blowup_anchored": 0.10422,
+   "p_le_half_anchored": 0.08217973734674212,
+   "rule_size": 0.0,
+   "kelly_f_star": 0.0,
+   "open_soft_flags": 5,
+   "review_date": "2027-02-15",
+   "kill_criteria": [
+    {
+     "if": "MHVSIL services agreement renewed with technical fees above 5.0% of revenue (or a new MRPT resolution moving margin to the group)",
+     "measure": "Reg-30 filing at the 30-Apr-2027 renewal; FY27 AR n.29/n.35; H1 FY28 results",
+     "by": "2027-11-15"
+    },
+    {
+     "if": "FY27 core OPM (ex other income) below 10.5%",
+     "measure": "screener / NSE XBRL FY27",
+     "by": "2027-05-31"
+    },
+    {
+     "if": "Customer A share above 70% while total revenue falls, or loss of a Customer A platform",
+     "measure": "FY27 AR segment note (n.32)",
+     "by": "2027-07-31"
+    },
+    {
+     "if": "Any promoter encumbrance, open offer, delisting proposal or merger scheme",
+     "measure": "SHP XBRL quarterly; Reg-30",
+     "by": "2027-09-30"
+    },
+    {
+     "if": "Modified audit opinion, auditor resignation, or rating below AA-",
+     "measure": "Reg-30 / AR / ICRA",
+     "by": "2027-09-30"
+    }
+   ],
+   "override_log": [
+    {
+     "date": "2026-11-23",
+     "flag": "Selection EV used screener cash only",
+     "decision": "true EV/EBITDA 8.1x (net cash Rs 394 cr incl. MFs) used in the worksheet; the subject stays in the tercile either way",
+     "why": "Rule fixed before drawing; disclosed, not changed"
+    },
+    {
+     "date": "2026-11-23",
+     "flag": "Trailing P/E 12.9 looks cold",
+     "decision": "valuation read on 10-year normalised EPS (25.8x) and cycle-position scenarios",
+     "why": "M&HCV cycle at a record; FY19-21 analogue"
+    },
+    {
+     "date": "2026-11-23",
+     "flag": "Promise pipeline not run",
+     "decision": "hand ledger n=7 used as the credibility read",
+     "why": "Time budget; concall mode applies (11 transcripts exist)"
+    }
+   ],
+   "paper_calls": [
+    "thesis:paper-call:AUTOAXLES:card-2026-11-23-5y-ge3x",
+    "thesis:paper-call:AUTOAXLES:card-2026-11-23-5y-le0p5x",
+    "thesis:paper-call:AUTOAXLES:card-2026-11-23-5y-blowup"
+   ],
+   "practice": false
+  },
+  "sources": [
+   "research_notes/Deep dives/AUTOAXLES_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_29891_AUTOAXLES_2025_2026_A_16112201_18072026164730.pdf",
+   "https://nsearchives.nseindia.in/annual_reports/AR_27028_AUTOAXLES_2024_2025_A_18072025200747.pdf",
+   "https://nsearchives.nseindia.in/corporate/AUTOAXLES_12112026175115_BMOutcome12112026.pdf",
+   "https://nsearchives.nseindia.in/corporate/AUTOAXLES_17112026155524_CallTranscription_Q2_17112026.pdf",
+   "https://www.screener.in/company/AUTOAXLES/consolidated/",
+   "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_23112026.csv"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "thesis:paper-call:AUTOAXLES:card-2026-11-23-5y-ge3x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:AUTOAXLES:card-2026-11-23-5y-le0p5x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:AUTOAXLES:card-2026-11-23-5y-blowup",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:sales-model-change-gross-up-test",
+  "title": "When a related-party sales channel is removed, re-derive like-for-like growth from the materials ratio before trusting reported growth",
+  "body": "Technique (AUTOAXLES, live deep dive #3, Nov 2026): AAL stopped selling ~80% of output through Meritor HVS (India) and began selling direct to OEMs at OEM prices from 1-Apr-2025, paying a technical fee instead. Materials fell from 71.0% to 67.5% of revenue and other expenses rose from 11.7% to 14.3%, so ~5% of FY26's +4.8% revenue growth was price gross-up, not volume: like-for-like revenue was ~flat while the M&HCV industry grew ~16%. Rule: when the customer of record changes (distributor/parent -> end customer), compute gross-up = old materials ratio / new materials ratio and deflate growth by it; check that OPM moved little (it should if the change is arm's length).",
+  "tickers": [
+   "AUTOAXLES"
+  ],
+  "tags": [
+   "technique",
+   "deep-dive",
+   "india",
+   "related-party",
+   "good-but-misleading",
+   "l2"
+  ],
+  "date": "2026-11-23",
+  "status": "active",
+  "data": {
+   "materials_ratio_fy25": 0.71,
+   "materials_ratio_fy26": 0.675,
+   "implied_grossup": 0.052,
+   "reported_growth_fy26": 0.048
+  },
+  "sources": [
+   "research_notes/Deep dives/AUTOAXLES_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:autoaxles-live-deepdive-2026-11",
+    "rel": "derived_from"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:cheap-tercile-selects-cycle-position",
+  "title": "A 'cheapest EV/EBITDA tercile' draw tends to select cyclicals at peak earnings: read the valuation on normalised EPS as well as trailing",
+  "body": "First cheap-tercile live draw (AUTOAXLES, 23-Nov-2026): trailing P/E 12.9x read COLD (0th percentile of own history) while P/E on 10-year normalised EPS read WARM (25.8x, 70th percentile). The stock had looked similarly 'cheap' at the FY19 peak (16x) and then fell 80%. Value-trap test order for any cheap draw: (1) is EPS at a cycle or margin peak (compare with 10-year mean EPS and prior-peak OPM)? (2) is a turn dated (pre-buy, regulation, capacity full)? (3) capital allocation and parent take; (4) fraud/solvency. Single case (n=1); scored by the AUTOAXLES live calls and card calls.",
+  "tickers": [
+   "AUTOAXLES"
+  ],
+  "tags": [
+   "technique",
+   "valuation",
+   "value-trap",
+   "cyclical",
+   "india",
+   "cheap-tercile"
+  ],
+  "date": "2026-11-23",
+  "status": "active",
+  "data": {
+   "pe_trailing": 12.9,
+   "pe_normalised": 25.8,
+   "own_pe_median": 18.8
+  },
+  "sources": [
+   "research_notes/Deep dives/AUTOAXLES_live.md",
+   "tools/valuation/live/AUTOAXLES_worksheet.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:autoaxles-live-deepdive-2026-11",
+    "rel": "derived_from"
+   }
+  ],
+  "confidence": "unverified"
+ },
+ {
+  "type": "event",
+  "id": "event:autoaxles-mrpt-rejected-2024-12",
+  "title": "Automotive Axles minority shareholders reject Rs 2,500 cr material RPT with Meritor HVS (India), 14-Dec-2024 (79.47% against)",
+  "body": "Postal ballot (ordinary resolution) to approve FY26 material related-party transactions of Rs 25,000 mn with Meritor HVS (India) Ltd was rejected: 20.53% for, 79.47% against (related parties cannot vote). The board then (20/31-Mar-2025) signed an MoU and a services agreement: AAL sells direct to OEMs from 1-Apr-2025 and pays MHVSIL a technical fee (Rs 97.5 cr FY26), extended on 29-Apr-2026 to 30-Apr-2027.",
+  "tickers": [
+   "AUTOAXLES"
+  ],
+  "tags": [
+   "governance",
+   "related-party",
+   "minority-vote",
+   "india",
+   "sector-auto-ancillary"
+  ],
+  "date": "2024-12-14",
+  "status": "done",
+  "data": {
+   "for_pct": 20.53,
+   "against_pct": 79.47,
+   "rpt_value_mn": 25000
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_27028_AUTOAXLES_2024_2025_A_18072025200747.pdf",
+   "https://nsearchives.nseindia.in/corporate/AUTOAXLES_31032025180101_Service_Agreement_AAL_MHVSIL31032025.pdf"
+  ],
+  "links": [
+   {
+    "to": "analysis:autoaxles-live-deepdive-2026-11",
+    "rel": "found_in"
+   }
+  ],
+  "confidence": "single-source"
+ }
+]

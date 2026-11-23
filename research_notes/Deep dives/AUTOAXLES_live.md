@@ -293,6 +293,7 @@ anchored (base 0.154).
 | 5 | FY27 technical fees to MHVSIL **≤ 4.75% of revenue from operations** (AR FY27 note "Other expenses" ÷ note "Revenue") | 2027-08-31 | **0.75** | 0.50 | Naive: a related-party fee at an annual renewal, coin flip [EST]. Ours: the 29-Apr-2026 extension said "no impact"; FY26 4.48%; falling export share (no fee on group exports) adds ~0.1 pt mechanically |
 | 6 | AUTOAXLES price **beats Nifty 500** from 23-Nov-2026 (₹1,776.30; 23,748.15) to 30-Sep-2027 | 2027-09-30 | **0.40** | 0.44 | Naive: share of small caps beating the index over ~10 months (skew) [EST, as in live #1]. Ours: the window ends 5 months after the pre-buy; CV ancillaries usually de-rate into a volume turn; low starting P/E limits the damage |
 Card calls (5-year, `decision-card-v1`, card v1.2) are in 8.4.
+**Spec check (23-Nov-2026):** the four financial specs use `basis: standalone` (AAL files standalone only). The resolver's data path was probed on past periods with `sources.Live`: Q2 FY27 revenue screener ₹663.0 cr vs XBRL ₹662.6 cr, OPM 12.52% vs 12.47%, XBRL net profit ₹60.1 cr; FY26 OPM 10.88% vs 10.89% — two sources agree. `calls.build_rows` on the seed: 0 calls need a spec.
 
 ---
 

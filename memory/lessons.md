@@ -277,3 +277,12 @@ Promise tracker v1.4 annual-report mode (validated on SUNFLAG, GULFPETRO, REPRO)
 the same "commissioned during the year" sentence in consecutive reports (SUNFLAG), outlook text copied year to year
 (GULFPETRO), unchanged reserve quantities. **Use:** for companies without calls, report the asset×year status table
 and disclosure flags in the deep dive; don't compare AR-mode scores with concall scores.
+
+## L38 (2026-11-23) — "Cheap" usually means peak-cycle earnings; follow fees to related parties
+Live deep dive #3 (AUTOAXLES, random draw from the cheapest EV/EBITDA tercile): 12.9× trailing but 25.8× on 10-yr
+average EPS, at a truck-cycle peak (last cycle: revenue −53%, EPS −81%, price −80%). After minorities voted 79.5%
+against a ₹2,500 cr related-party deal, a technical fee to the Cummins-group entity appeared (41% of core EBITDA,
+renewed annually below the vote threshold); a switch to direct OEM pricing inflated revenue ~5% (visible in the
+materials ratio). Credibility 43% vs 60% sector median. Card size 0 (EV 1.40× anchored vs 1.76× hurdle).
+**Rules:** for cheap-tercile names, value on normalised (cycle-average) earnings; read vote *results*, not just
+notices; when a related-party channel changes, check growth against the materials ratio.
