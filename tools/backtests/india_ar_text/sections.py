@@ -64,20 +64,23 @@ def _labels_in_head(page):
 
 def label_pages(pages):
     out, cur = [], "OTHER"
-    for p in pages:
+    for i, p in enumerate(pages):
         h = _labels_in_head(p)
-        if len(set(h)) >= 3:
+        if len(set(h)) >= 3 and i < 20:
             out.append("TOC"); cur = "OTHER"; continue
         if h:
-            # prefer a real section start over running headers like FS inside AUD; take the first hit
-            cur = h[0]
+            # MD&A wins when it shares a page head with another label ("Board's Report including MD&A",
+            # running headers naming two sections); otherwise the first heading line wins
+            cur = "MDA" if "MDA" in h else h[0]
         out.append(cur)
     return out
 
 
 AUD_START = re.compile(r"independent\s+auditor['’`s]*\s+report", re.I)
-MEMBERS = re.compile(r"to\s+the\s+(?:members|shareholders)", re.I)
-AUD_END = re.compile(r"^[ \t■•▪]*(?:standalone\s+)?balance\s+sheet(?:\s+as\s+at[^\n]{0,40})?[ \t]*$|"
+MEMBERS = re.compile(r"\bto[,\s]+the\s+(?:members|shareholders)", re.I)
+OPINION = re.compile(r"we\s+have\s+audited|\bopinion\b", re.I)
+AUD_END = re.compile(r"^[ \t■•▪]*(?:revised\s+)?(?:standalone\s+)?balance\s+sheet(?:\s+as\s+(?:at|on)[^\n]{0,40})?"
+                     r"(?:\s*\(contd\.?\))?[ \t]*$|"
                      r"^[ \t■•▪]*statement\s+of\s+assets\s+and\s+liabilities", re.I | re.M)
 CARO = re.compile(r"auditor['’`s]*\s+report\s*\)\s*order", re.I)
 MAX_AUD, MAX_MDA_PAGES = 200_000, 60
@@ -87,14 +90,15 @@ def auditor_section(text):
     """First 'Independent Auditor's Report' heading followed within 1,000 chars by 'To the Members' -> up to the
     first line that is just '(Standalone) Balance Sheet [as at ...]' >= 8,000 chars later, or the next report start (consolidated), cap 200k."""
     for m in AUD_START.finditer(text):
-        if not MEMBERS.search(text, m.end(), m.end() + 400):
+        if not MEMBERS.search(text, m.end(), m.end() + 400) or not OPINION.search(text, m.end(), m.end() + 3000):
             continue
-        if re.search(r"balance\s+sheet", text[m.end():m.end() + 250], re.I):
+        nxt = text[m.end():m.end() + 250]
+        if re.search(r"balance\s+sheet", nxt, re.I) and re.search(r"^\s*\d{1,3}\s*$", nxt, re.M):
             continue                      # contents / divider page ("... Report 136 Standalone Balance Sheet 137")
         st = m.start()
         ends = [x.start() for x in [AUD_END.search(text, st + 8000)] if x]
         for m2 in AUD_START.finditer(text, st + 8000):
-            if MEMBERS.search(text, m2.end(), m2.end() + 1000) and not re.search(
+            if MEMBERS.search(text, m2.end(), m2.end() + 400) and not re.search(
                     r"annexure", text[max(0, m2.start() - 120):m2.start()], re.I):
                 ends.append(m2.start()); break
         en = min(ends + [st + MAX_AUD])

@@ -68,7 +68,17 @@ the winsorised mean and median in the rule; (b) section extraction errors add no
 weekly prices; (e) firms appear in both pairs (bootstrap by firm handles the clustering).
 
 ### Deviations (pre-run)
-*(none yet)*
+- **D1 (2026-11-23, after ~140 text firms were downloaded, before any similarity score was looked at and before any
+  return was computed).** (a) FY24 file names often have a 13-digit time stamp (`2908202422056`, no zero padding),
+  which the first `_stamp` regex missed, so `submitted` was empty and those FY24 reports were skipped. Fixed: the
+  first 8 digits give the date (time set to 00:00 when the stamp is short); skipped FY24 reports are fetched on the
+  resumed walk. Entry is the first weekly close after the date, so the missing time does not matter.
+  (b) Section parser tuned on the downloaded texts (extraction stats only, no scores or returns): MD&A wins when
+  it shares a page head with another label ("Board's Report including MD&A", combined running headers); the contents
+  page rule applies only to the first 20 pages; the auditor-report start must be followed by "To the Members"
+  (also "To, The Members" / "TO THE MEMBERS") within 400 chars and by "we have audited" / "opinion" within 3,000;
+  the contents-page skip needs a page number nearby; the end line also accepts "Revised", "as on" and "(contd.)".
+  Effect on 385 reports: MD&A usable 86% (was ~75%), auditor+CARO usable 90% (was ~78%).
 
 ---
 *Everything below this line is written after returns were computed.*

@@ -51,6 +51,9 @@ def screener(sym):
 
 def pick_reports(rows):
     out = {}
+    for r in rows:
+        if not r.get("submitted") and r.get("fileName"):
+            r["submitted"] = K.N._stamp(r["fileName"])
     for fy in FYS:
         c = [r for r in rows if r.get("fromYr") == fy and r.get("fileName") and r.get("submitted")]
         if c:

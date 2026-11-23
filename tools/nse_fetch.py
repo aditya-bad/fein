@@ -72,15 +72,20 @@ def announcements(symbol=None, frm=None, to=None):
 
 
 def _stamp(fn):
-    """Submission time from an AR file name: AR_<id>_<SYM>_<fy1>_<fy2>[_A_<n>]_<DDMMYYYYhhmmss>[_<MMDDYYYYhhmmss>].<ext>.
-    The first stamp is the company's upload (DDMMYYYY); a second one on older ZIPs is dissemination (MMDDYYYY)."""
+    """Submission date from an AR file name: AR_<id>_<SYM>_<fy1>_<fy2>[_A_<n>]_<DDMMYYYY><hhmmss>[_<MMDDYYYYhhmmss>].<ext>.
+    The first stamp is the company's upload (DDMMYYYY); a second one on older ZIPs is dissemination (MMDDYYYY).
+    FY24 names often drop zero padding in the time part (e.g. 2908202422056), so only the 8-digit date is trusted
+    when the stamp is shorter than 14 digits (time then reported as 00:00:00)."""
     import datetime as dt, re
-    st = re.findall(r"_(\d{14})(?=[_.])", os.path.basename(fn))
+    st = re.findall(r"_(\d{12,14})(?=[_.])", os.path.basename(fn))
     out = []
     for i, x in enumerate(st):
-        for f in (("%d%m%Y%H%M%S", "%m%d%Y%H%M%S") if i else ("%d%m%Y%H%M%S",)):
+        for f in (("%m%d%Y", "%d%m%Y") if i else ("%d%m%Y",)):
             try:
-                out.append(dt.datetime.strptime(x, f)); break
+                d = dt.datetime.strptime(x[:8], f)
+                if len(x) == 14:
+                    d = dt.datetime.strptime(x, f + "%H%M%S")
+                out.append(d); break
             except ValueError:
                 pass
     return max(out).strftime("%Y-%m-%d %H:%M:%S") if out else None
