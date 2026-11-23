@@ -227,3 +227,13 @@ size-matched controls at 13 weeks (t −6.2) vs −2.08% live-only → bias smal
 (live-only understated the avoid leg). Long leg +1.00% net — not proven for the third time. Descriptive: distress-
 listed firms after a bottom-two-quintile result lagged controls by −16.6% → combine the PEAD avoid flag with
 pledge/solvency flags (stage 2 + 3 together). Status of the avoid leg: confirmed in 3 independent checks.
+
+## L32 (2026-11-23) — Text change fails in India too; signal-test scorecard 1 of 7
+Indian annual-report pilot (pre-registered, 200 firms incl. later-dead, FY22→23/FY23→24): MD&A and auditor+CARO
+big-change quintiles −2.1% / −0.8% vs sector-size controls (t ≈ −0.3/−0.1); new adverse auditor item +7.7% (wrong
+sign, n=21) → NO-GO for a full run. Plain text-change has now failed 3 times (US v1, US v2, India).
+Useful by-product: NSE annual_reports fetch works (tools/nse_fetch.py annual_reports); reading the auditor's report
++ CARO vs last year stays a deep-dive judgment cue (worst cases −42% to −77%, but big winners too).
+**Scorecard of signal tests (honest):** survived = Indian PEAD avoid leg; failed/not proven = US insider clusters,
+Indian promoter buying, PEAD long leg, Lazy Prices US v1/v2, India AR text. Edge is likelier in human-depth work
+(promise tracking, deep dives) combined with the few proven filters than in mechanical text/flow signals.

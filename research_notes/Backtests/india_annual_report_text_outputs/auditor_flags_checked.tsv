@@ -1,0 +1,33 @@
+sym	pair	cat	confirmed	kind	note
+BOMDYEING	P1	EOM	Y	trouble	SEBI order (Oct-2022): Rs 2.25 cr penalty, company barred from securities market for 2 years
+BOSCH-HCIL	P2	CASHLOSS	N	-	prior-year report already reported cash losses (Rs 334.2 m); not new
+CENTURYPLY	P2	EOM	Y	technical	demerger of the container-freight-station division (NCLT Jan-2024) accounting
+COCHINSHIP	P1	EOM	Y	technical	capitalisation of International Ship Repair Facility costs on leased port land
+COHANCE	P2	ST_LT	N	-	boilerplate "no funds raised on short-term basis..." split by a table; prior year identical
+CONFIPET	P1	QUAL	Y	trouble	qualified opinion on standalone accounts (none the year before)
+CONFIPET	P2	EOM	Y	trouble	restatement under Ind AS 8 (prior-period errors)
+DCAL	P2	EOM	Y	trouble	merger accounting + audit observation by Swiss regulator at a subsidiary
+DIAMONDYD	P2	EOM	Y	technical	change in policy: ESOP trust consolidated into the company's accounts
+EXPLEOSOL	P1	EOM	Y	technical	accounting for amalgamation of four group companies
+GHCL	P1	EOM	Y	trouble	restatement: deferred tax on land revaluation not recognised earlier; revenue reclassification
+GREENPANEL	P1	EOM	N	-	same EoM (government subsidies not accounted, legal opinion) in the prior year
+GRINFRA	P1	EOM	Y	trouble	ongoing regulatory matter, sub-judice (note 53)
+GTLINFRA	P2	EOM	N	-	EoM replaced the earlier QUALIFIED opinion: an upgrade, not a new adverse item
+ITDC	P2	ICFR_MW	Y	trouble	qualified opinion on internal financial controls: material weakness identified at 31-Mar-2024
+JAYNECOIND	P2	EOM	N	-	prior year already had the EoM (ED attachment of properties)
+KRITI	P1	CASHLOSS	Y	trouble	CARO xvii: cash loss Rs 14.3 cr in FY23; none in FY22
+MTNL	P1	DEFAULT	Y	trouble	CARO ix: default (41-day delay) on interest of a Union Bank term loan; prior year "not defaulted"
+MTNL	P1	CASHLOSS	N	-	cash losses also reported in the prior year
+MTNL	P2	EOM	N	-	EoMs present in the prior year too (detector missed them there)
+NATIONALUM	P1	EOM	Y	technical	capitalisation of coal mines; R&R-policy capital expenditure not accounted
+NETWORK18	P1	CASHLOSS	N	-	current report shows cash losses in the preceding year too; not new
+PANACEABIO	P1	CASHLOSS	N	-	prior year already reported cash losses (Rs 639.9 m)
+POWERMECH	P1	EOM	Y	trouble	Income Tax Department search (Jul-2022); no provision, outcome uncertain
+RAMRAT	P2	EOM	Y	trouble	Income Tax search and seizure (Nov-2023) on company, subsidiaries, group entities
+SANGAMIND	P1	CARO_GC	N	-	boilerplate "nothing has come to our attention ... material uncertainty"
+SATIA	P1	EOM	Y	technical	change in depreciation estimate (residual value 10% -> 5%)
+SCHAND	P2	EOM	Y	technical	composite scheme of arrangement with group companies
+SEPC	P1	EOM	Y	trouble	resolution plan with lenders (Jun-2022), interest waiver accounting; already qualified
+SHIVALIK	P2	AUD_RESIGN	N	-	auditor left at end of statutory term, not a resignation in the adverse sense
+TITAGARH	P1	EOM	Y	technical	amalgamation of subsidiary; prior year restated
+VALIANTORG	P1	EOM	Y	trouble	OCPS from a scheme not converted by the Feb-2022 deadline

@@ -56,6 +56,8 @@ event NO/text numbers = proposals for review), scoreboard.py (Brier/log-loss vs 
 research_notes/Scoreboard/scoreboard.md + curriculum.md SCOREBOARD block), apply.sh, run_daily.sh (cron 22:00 IST).
 Calendar: research_notes/Scoreboard/calendar.md/.ics. First due 31-Jan-2027.
 
+- `tools/nse_fetch.py annual_reports SYMBOL [--download DIR]` (NSE api/annual-reports; pre-FY24 dates from file-name stamp) — added 23-Nov-2026.
+
 ## Blocked / missing
 - screener.in custom raw queries need login → ask user for a Screener account (paid w/ export ideal).
 - YouTube: yt-dlp blocked ("confirm you're not a bot"); youtubetotranscript 403 → need a

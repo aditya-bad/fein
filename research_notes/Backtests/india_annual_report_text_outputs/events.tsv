@@ -1,0 +1,147 @@
+test	sym	pair	entry	mcap_cr	sector	score_or_cats	r12	ctrl12	x12	tier	ended_early
+jac_mda	ABREL	P1	2023-07-07	10070	Realty	0.2213	1.4855	0.239	1.2466	B	False
+jac_mda	AGARIND	P2	2024-08-23	2019	Chemicals	0.189	-0.3751	-0.1188	-0.2562	A	False
+jac_mda	AXITA	P1	2023-09-08	515	Textiles	0.1843	0.0739	0.23	-0.1562	A	False
+jac_mda	AXITA	P2	2024-09-13	618	Textiles	0.19	-0.4621	-0.1813	-0.2808	A	False
+jac_mda	BHAGCHEM	P1	2023-07-14	1456	Chemicals	0.1396	0.8324	0.1743	0.6581	A	False
+jac_mda	BHAGCHEM	P2	2024-07-19	3294	Chemicals	0.1412	0.1418	0.2066	-0.0649	A	False
+jac_mda	BLISSGVS	P1	2023-06-30	838	Healthcare	0.2063	0.265	0.5173	-0.2522	A	False
+jac_mda	BLISSGVS	P2	2024-07-05	1211	Healthcare	0.2136	0.3739	0.7562	-0.3823	A	False
+jac_mda	BOROLTD	P1	2023-07-07	4007	Consumer Durables	0.2278	0.1021	0.6105	-0.5084	A	False
+jac_mda	CENTUM	P2	2024-07-19	2088	Capital Goods	0.1533	0.4251	-0.1086	0.5337	A	False
+jac_mda	COCHINSHIP	P2	2024-09-13	47714	Capital Goods	0.2221	-0.0391	-0.2634	0.2243	A	False
+jac_mda	COHANCE	P1	2023-11-24	15635	Healthcare	0.1471	1.1046	0.3063	0.7983	A	False
+jac_mda	COHANCE	P2	2024-07-19	20922	Healthcare	0.107	0.3202	0.3433	-0.0231	A	False
+jac_mda	CONFIPET	P2	2024-09-13	2987	Oil, Gas & Consumable Fuels	0.1517	-0.4591	-0.2166	-0.2426	A	False
+jac_mda	DPWIRES	P1	2023-09-15	897	Capital Goods	0.116	-0.2752	0.2068	-0.482	A	False
+jac_mda	DPWIRES	P2	2024-09-06	643	Capital Goods	0.1235	-0.3261	-0.1469	-0.1792	A	False
+jac_mda	EMAMILTD	P1	2023-08-04	19766	Fast Moving Consumer Goods	0.1452	0.7309	0.5392	0.1917	A	False
+jac_mda	EXPLEOSOL	P1	2023-07-21	2439	Information Technology	0.2274	-0.2092	0.2574	-0.4666	A	False
+jac_mda	EXPLEOSOL	P2	2024-08-09	1984	Information Technology	0.2736	-0.1424	-0.1821	0.0396	A	False
+jac_mda	FDC	P1	2023-09-08	6531	Healthcare	0.2451	0.4358	0.398	0.0379	A	False
+jac_mda	FINCABLES	P1	2023-09-08	17278	Capital Goods	0.0965	0.2464	0.9831	-0.7366	A	False
+jac_mda	FINCABLES	P2	2024-09-13	21675	Capital Goods	0.1	-0.4051	-0.2696	-0.1355	A	False
+jac_mda	FSL	P1	2023-07-14	9355	Services	0.0974	0.8782	0.6419	0.2363	A	False
+jac_mda	GALLANTT	P2	2024-09-13	9134	Capital Goods	0.2486	0.8196	0.0019	0.8176	A	False
+jac_mda	GNA	P1	2023-09-08	2214	Automobile and Auto Components	0.2095	-0.1809	0.1551	-0.336	A	False
+jac_mda	GNA	P2	2024-08-30	1838	Automobile and Auto Components	0.2533	-0.3037	-0.0522	-0.2516	A	False
+jac_mda	GPPL	P1	2023-07-14	5777	Services	0.1612	0.9309	0.6419	0.289	A	False
+jac_mda	GPPL	P2	2024-08-02	10972	Services	0.1631	-0.297	-0.0488	-0.2482	A	False
+jac_mda	INDIAMART	P1	2023-05-19	17087	Consumer Services	0.1757	-0.058	0.248	-0.306	A	False
+jac_mda	INDIAMART	P2	2024-05-31	14465	Consumer Services	0.2513	-0.0352	0.0857	-0.1209	A	False
+jac_mda	INDOAMIN	P2	2024-09-06	1497	Chemicals	0.3082	-0.3039	-0.062	-0.2419	A	False
+jac_mda	JAGSNPHARM	P1	2023-09-15	1158	Healthcare	0.1908	-0.0755	0.568	-0.6435	A	False
+jac_mda	KDDL	P1	2023-09-08	2369	Consumer Durables	0.199	0.7086	0.4726	0.2359	A	False
+jac_mda	KOLTEPATIL	P2	2024-07-26	3127	Realty	0.1599	0.0883	-0.219	0.3072	A	False
+jac_mda	LAOPALA	P1	2023-09-08	4746	Consumer Durables	0.1437	-0.2044	0.6348	-0.8391	A	False
+jac_mda	LAOPALA	P2	2024-09-13	4221	Consumer Durables	0.1507	-0.3437	0.1083	-0.452	A	False
+jac_mda	MANINDS	P1	2023-09-01	1031	Capital Goods	0.1702	1.3223	0.097	1.2252	A	False
+jac_mda	MANINDS	P2	2024-09-06	2678	Capital Goods	0.1736	0.0776	-0.2108	0.2884	A	False
+jac_mda	MANINFRA	P1	2023-07-14	4149	Realty	0.1729	0.7488	0.7308	0.0179	A	False
+jac_mda	MEDICO	P1	2023-07-28	660	Healthcare	0.1357	-0.522	0.2278	-0.7498	A	False
+jac_mda	MINDACORP	P2	2024-07-26	11534	Automobile and Auto Components	0.1602	0.0544	0.1023	-0.0479	A	False
+jac_mda	NAVKARCORP	P2	2024-08-30	2235	Services	0.1822	-0.2184	-0.3087	0.0903	A	False
+jac_mda	NCC	P1	2023-08-18	9962	Construction	0.1467	1.0371	0.881	0.1561	A	False
+jac_mda	NCC	P2	2024-08-23	21108	Construction	0.1312	-0.3294	-0.1089	-0.2205	A	False
+jac_mda	PRSMJOHNSN	P2	2024-09-13	10363	Construction Materials	0.1974	-0.2968	0.163	-0.4598	A	False
+jac_mda	PURVA	P1	2023-09-08	2683	Realty	0.0492	2.8546	0.3824	2.4722	A	False
+jac_mda	RAMRAT	P1	2023-08-25	1185	Capital Goods	0.1752	0.8313	0.1394	0.6919	A	False
+jac_mda	RAMRAT	P2	2024-08-16	1909	Capital Goods	0.1946	0.51	-0.2804	0.7904	A	False
+jac_mda	SATIA	P1	2023-09-08	1364	Forest Materials	0.2288	-0.1543	0.1065	-0.2608	B	False
+jac_mda	SATIA	P2	2024-09-13	1147	Forest Materials	0.2545	-0.2821	0.0082	-0.2903	B	False
+jac_mda	SEPC	P2	2024-09-06	4629	Construction	0.1204	-0.5799	-0.0107	-0.5693	A	False
+jac_mda	SHIVALIK	P2	2024-09-06	863	Chemicals	0.2683	-0.1859	-0.0641	-0.1218	A	False
+jac_mda	STERTOOLS	P2	2024-08-23	1866	Automobile and Auto Components	0.1744	-0.3914	-0.0708	-0.3205	A	False
+jac_mda	SUPRAJIT	P1	2023-09-08	5853	Automobile and Auto Components	0.1917	0.2265	0.4428	-0.2163	A	False
+jac_mda	SUPRAJIT	P2	2024-09-06	7270	Automobile and Auto Components	0.24	-0.1165	0.4048	-0.5213	A	False
+jac_mda	TANLA	P1	2023-08-18	14803	Information Technology	0.1962	-0.1748	0.2875	-0.4623	A	False
+jac_mda	TATACOFFEE	P1	2023-05-12	4298	Fast Moving Consumer Goods	0.1659	0.5044	0.3288	0.1756	A	True
+jac_mda	TVTODAY	P2	2024-08-09	1653	Media, Entertainment & Publication	0.2705	-0.47	-0.1741	-0.2959	A	False
+jac_mda	VALIANTORG	P2	2024-08-02	1084	Chemicals	0.1337	-0.1494	-0.0598	-0.0896	A	False
+jac_mda	VRLLOG	P1	2023-10-13	5688	Services	0.225	-0.1031	0.4784	-0.5815	A	False
+jac_aud	AARTIDRUGS	P2	2024-08-30	5421	Healthcare	0.755	-0.1943	0.0896	-0.284	A	False
+jac_aud	ABFRL	P1	2023-09-08	8365	Consumer Services	0.6298	0.3479	0.257	0.0909	A	False
+jac_aud	ABFRL	P2	2024-08-30	11202	Consumer Services	0.5864	-0.2996	-0.0374	-0.2622	A	False
+jac_aud	AFFLE	P2	2024-09-06	22734	Information Technology	0.5834	0.1901	-0.2593	0.4494	A	False
+jac_aud	ASTRAZEN	P1	2023-07-28	9629	Healthcare	0.3493	0.8547	0.3509	0.5037	A	False
+jac_aud	ASTRAZEN	P2	2024-07-19	15805	Healthcare	0.6495	0.4366	0.3644	0.0722	A	False
+jac_aud	BAJAJHCARE	P2	2024-09-13	1047	Healthcare	0.6321	0.1005	0.2681	-0.1677	A	False
+jac_aud	BALAMINES	P2	2024-06-21	7711	Chemicals	0.5054	-0.4219	-0.0543	-0.3676	A	False
+jac_aud	BLISSGVS	P2	2024-07-05	1211	Healthcare	0.7278	0.3739	0.604	-0.2301	A	False
+jac_aud	BOROLTD	P1	2023-07-07	4007	Consumer Durables	0.0984	0.1021	0.3182	-0.2161	A	False
+jac_aud	BOSCH-HCIL	P1	2023-08-25	3494	Consumer Durables	0.6676	0.5279	0.3294	0.1985	A	False
+jac_aud	CAMS	P2	2024-06-14	17610	Financial Services	0.7836	0.1127	0.7715	-0.6588	A	False
+jac_aud	COCHINSHIP	P1	2023-09-08	15877	Capital Goods	0.6404	2.078	0.5322	1.5458	A	False
+jac_aud	CONFIPET	P2	2024-09-13	2987	Oil, Gas & Consumable Fuels	0.2438	-0.4591	-0.2166	-0.2426	A	False
+jac_aud	DBCORP	P1	2023-08-18	4376	Media, Entertainment & Publication	0.5507	0.3498	0.324	0.0258	A	False
+jac_aud	DBCORP	P2	2024-08-09	6090	Media, Entertainment & Publication	0.5038	-0.2072	-0.253	0.0458	A	False
+jac_aud	DECCANCE	P1	2023-09-01	702	Construction Materials	0.6771	0.2203	0.464	-0.2437	B	False
+jac_aud	DPWIRES	P1	2023-09-15	897	Capital Goods	0.3102	-0.2752	0.6843	-0.9595	A	False
+jac_aud	DPWIRES	P2	2024-09-06	643	Capital Goods	0.3107	-0.3261	-0.1469	-0.1792	A	False
+jac_aud	ELIN	P2	2024-09-06	1212	Consumer Durables	0.7357	-0.1511	-0.1096	-0.0415	A	False
+jac_aud	EMIL	P2	2024-08-09	8500	Consumer Services	0.5813	-0.4533	-0.1173	-0.336	A	False
+jac_aud	FINEORG	P1	2023-08-04	14044	Chemicals	0.6767	0.1867	0.4865	-0.2998	A	False
+jac_aud	FOSECOIND	P1	2023-05-05	1592	Chemicals	0.3596	0.3786	0.0291	0.3495	A	False
+jac_aud	FOSECOIND	P2	2024-05-31	2298	Chemicals	0.6336	0.2735	0.3578	-0.0843	A	False
+jac_aud	GALLANTT	P2	2024-09-13	9134	Capital Goods	0.6467	0.8196	0.0019	0.8176	A	False
+jac_aud	GENESYS	P1	2023-09-08	1475	Information Technology	0.3268	1.0617	0.2471	0.8146	A	False
+jac_aud	GNA	P1	2023-09-08	2214	Automobile and Auto Components	0.6616	-0.1809	0.1551	-0.336	A	False
+jac_aud	GNA	P2	2024-08-30	1838	Automobile and Auto Components	0.6624	-0.3037	-0.0552	-0.2485	A	False
+jac_aud	GOCLCORP	P1	2023-09-01	2135	Chemicals	0.5483	0.1212	0.0589	0.0624	A	False
+jac_aud	GREENPANEL	P1	2023-06-09	4101	Consumer Durables	0.6976	-0.101	0.2417	-0.3427	A	False
+jac_aud	GREENPANEL	P2	2024-06-07	3604	Consumer Durables	0.682	-0.0835	0.3552	-0.4387	A	False
+jac_aud	GTLINFRA	P2	2024-08-23	3649	Telecommunication	0.7441	-0.4555	-0.1335	-0.322	A	False
+jac_aud	HEMIPROP	P2	2024-09-06	5590	Services	0.8314	-0.1015	-0.1054	0.004	A	False
+jac_aud	INDOAMIN	P2	2024-09-06	1497	Chemicals	0.3766	-0.3039	-0.0605	-0.2434	A	False
+jac_aud	ITDC	P1	2023-09-08	3532	Consumer Services	0.6175	0.7044	0.4161	0.2883	A	False
+jac_aud	ITDC	P2	2024-08-16	6032	Consumer Services	0.6843	-0.2369	-0.1341	-0.1028	A	False
+jac_aud	JAYNECOIND	P2	2024-09-06	4725	Capital Goods	0.6413	0.2557	-0.1845	0.4402	A	False
+jac_aud	JINDALSAW	P1	2023-06-02	7641	Capital Goods	0.6342	1.1768	0.9439	0.2329	A	False
+jac_aud	JINDALSAW	P2	2024-05-31	17962	Capital Goods	0.5843	-0.212	-0.1334	-0.0786	A	False
+jac_aud	KHAICHEM	P1	2023-07-07	621	Chemicals	0.2656	0.1651	0.3985	-0.2335	A	False
+jac_aud	KOLTEPATIL	P2	2024-07-26	3127	Realty	0.237	0.0883	-0.219	0.3072	A	False
+jac_aud	MEDANTA	P2	2024-08-30	30513	Healthcare	0.5748	0.2109	0.2429	-0.032	A	False
+jac_aud	NCC	P1	2023-08-18	9962	Construction	0.2262	1.0371	0.881	0.1561	A	False
+jac_aud	NETWORK18	P1	2023-08-18	6652	Media, Entertainment & Publication	0.5948	0.4962	0.2918	0.2044	B	False
+jac_aud	NFL	P1	2023-09-08	2818	Chemicals	0.6402	0.8479	-0.0996	0.9475	A	False
+jac_aud	NLCINDIA	P1	2023-09-08	19938	Power	0.3318	0.9028	0.4402	0.4626	B	False
+jac_aud	PARAS	P1	2023-09-08	3176	Capital Goods	0.4263	0.4774	0.8196	-0.3422	A	False
+jac_aud	PGEL	P1	2023-09-15	4772	Consumer Durables	0.6727	2.3716	0.0916	2.28	A	False
+jac_aud	PGEL	P2	2024-09-13	16070	Consumer Durables	0.6543	-0.0724	-0.1795	0.1071	A	False
+jac_aud	PRSMJOHNSN	P2	2024-09-13	10363	Construction Materials	0.2741	-0.2968	0.163	-0.4598	A	False
+jac_aud	PRUDENT	P1	2023-08-11	5079	Financial Services	0.293	0.9043	1.0588	-0.1545	A	False
+jac_aud	PTCIL	P2	2024-09-13	21343	Capital Goods	0.6148	-0.0066	-0.3413	0.3347	A	False
+jac_aud	RATNAMANI	P1	2023-07-14	17043	Capital Goods	0.6435	0.5074	0.8186	-0.3112	A	False
+jac_aud	SATIA	P1	2023-09-08	1364	Forest Materials	0.528	-0.1543	0.513	-0.6673	B	False
+jac_aud	SCHAND	P1	2023-09-08	1003	Media, Entertainment & Publication	0.3475	-0.1768	0.3634	-0.5401	A	False
+jac_aud	SCHAND	P2	2024-08-30	788	Media, Entertainment & Publication	0.3664	-0.1528	-0.0524	-0.1005	B	False
+jac_aud	SEPC	P2	2024-09-06	4629	Construction	0.8019	-0.5799	-0.0107	-0.5693	A	False
+jac_aud	SIGACHI	P2	2024-08-16	1951	Healthcare	0.7788	-0.4869	0.1696	-0.6565	A	False
+jac_aud	STERTOOLS	P1	2023-09-01	1337	Automobile and Auto Components	0.504	0.3528	0.413	-0.0603	A	False
+jac_aud	SUDARCOLOR	P1	2023-09-08	1209	Chemicals	0.6593	0.1029	0.3315	-0.2286	A	False
+jac_aud	TATASTLLP	P1	2023-07-14	2952	Capital Goods	0.5624	0.168	0.9619	-0.794	A	True
+jac_aud	TCI	P1	2023-07-07	5488	Services	0.6278	0.3323	0.6644	-0.3321	A	False
+jac_aud	TCI	P2	2024-07-12	7228	Services	0.6171	0.345	-0.089	0.434	A	False
+jac_aud	ZENSARTECH	P1	2023-07-21	10888	Information Technology	0.6306	0.5405	0.3362	0.2044	A	False
+jac_aud	ZENSARTECH	P2	2024-07-19	16961	Information Technology	0.8035	0.1055	-0.1607	0.2661	A	False
+h3	BOMDYEING	P1	2023-08-11	2565	Textiles	EOM	0.7801	0.2015	0.5786	A	False
+h3	CENTURYPLY	P2	2024-09-06	18215	Consumer Durables	EOM	-0.0108	-0.207	0.1962	A	False
+h3	COCHINSHIP	P1	2023-09-08	15877	Capital Goods	EOM	2.078	0.6373	1.4406	A	False
+h3	CONFIPET	P1	2023-09-15	2516	Oil, Gas & Consumable Fuels	QUAL	0.0098	0.431	-0.4212	A	False
+h3	CONFIPET	P2	2024-09-13	2987	Oil, Gas & Consumable Fuels	EOM	-0.4591	-0.2166	-0.2426	A	False
+h3	DCAL	P2	2024-09-06	3106	Healthcare	EOM	0.3954	-0.1853	0.5807	A	False
+h3	DIAMONDYD	P2	2024-09-06	1982	Fast Moving Consumer Goods	EOM	0.2149	-0.1717	0.3866	A	False
+h3	EXPLEOSOL	P1	2023-07-21	2439	Information Technology	EOM	-0.2092	0.2574	-0.4666	A	False
+h3	GHCL	P1	2023-09-08	5741	Chemicals	EOM	0.0581	0.5527	-0.4946	A	False
+h3	GRINFRA	P1	2023-09-08	12517	Construction	EOM	0.2837	0.9326	-0.6489	A	False
+h3	ITDC	P2	2024-08-16	6032	Consumer Services	ICFR_MW	-0.2369	-0.1341	-0.1028	A	False
+h3	KRITI	P1	2023-08-11	580	Capital Goods	CASHLOSS	1.1843	0.7631	0.4213	A	False
+h3	MTNL	P1	2023-09-01	1621	Telecommunication	DEFAULT	1.3937	0.5902	0.8034	C	False
+h3	NATIONALUM	P1	2023-09-01	17728	Metals & Mining	EOM	0.8566	0.5863	0.2704	A	False
+h3	POWERMECH	P1	2023-09-08	6204	Construction	EOM	0.4804	0.9199	-0.4395	A	False
+h3	RAMRAT	P2	2024-08-16	1909	Capital Goods	EOM	0.51	-0.1158	0.6257	A	False
+h3	SATIA	P1	2023-09-08	1364	Forest Materials	EOM	-0.1543	0.5793	-0.7336	B	False
+h3	SCHAND	P2	2024-08-30	788	Media, Entertainment & Publication	EOM	-0.1528	-0.0524	-0.1005	B	False
+h3	SEPC	P1	2023-09-01	1944	Construction	EOM	0.8881	0.3365	0.5516	A	False
+h3	TITAGARH	P1	2023-09-08	10098	Capital Goods	EOM	0.7362	0.5609	0.1753	A	False
+h3	VALIANTORG	P1	2023-08-25	1281	Chemicals	EOM	-0.1407	0.6302	-0.7709	A	False

@@ -1,0 +1,331 @@
+[
+ {
+  "type": "insight",
+  "id": "insight:bt-india-annual-report-text-pilot-fy23-24",
+  "title": "India annual-report text-change PILOT (pre-registered; 200 non-financial NSE firms Rs500-20,000 cr, FY22->FY23 & FY23->FY24, sector-size controls): MD&A changers -2.1% (wins -4.1%, t -0.30), auditor+CARO changers -0.8% (t -0.12), new auditor-section adverse items (21 hand-confirmed) +7.7% (median +17.5%) at 12m = NO-GO; changers did BETTER than other sample firms (+2 to +6 pp)",
+  "body": "Pre-registered in research_notes/Backtests/india_annual_report_text.md s0 before sampling. Frame = 2,021 NSE symbols with an announcement Jun-Sep 2023 (survivorship-free for mid-2023 listings), seed 2026112203; 810 walked -> 350 eligible (200 text firms + 150 control-only). 585 ARs (5.1 GB, median 6.9 MB) downloaded via new `nse_fetch.py annual_reports`, pdftotext'd, PDFs deleted; section parser usable for 77% (MD&A) / 83% (auditor+CARO) of pairs; BRSR pages excluded by construction. Go rule (wins. mean <= -5%, median < 0, t <= -1.5; H3: >=10 flags, wins <= -10%) failed on all three. Calibration: all text-firm events -4.0/-6.6% vs controls (sample noise), so read relative: changers +1.9 pp (MD&A) / +5.8 pp (auditor) vs all events. Lottery profile as US (medians -17%/-10%, hit 37-42%). Secondary only: stalest auditor text (Q5) -15.2% (t -2.54) but P1 -28.5% / P2 -2.0% -> hypothesis, not finding. Auditor-change cases: 'trouble' items (restatement, qualification, regulatory/tax action, default) median -10% but mean +3%; technical EoMs (schemes, mergers, policy changes) carry no signal. Use: judgment cue in stage-4 deep dives (diff auditor report + CARO vs prior year), not a rule.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "stage-3",
+   "india",
+   "annual-report",
+   "text-change",
+   "lazy-prices",
+   "auditor",
+   "caro",
+   "pre-registered",
+   "no-go",
+   "pilot"
+  ],
+  "date": "2026-11-23",
+  "data": {
+   "design": {
+    "firms_text": 200,
+    "pool": 350,
+    "pairs": [
+     "FY23vsFY22",
+     "FY24vsFY23"
+    ],
+    "mcap_cr": [
+     500,
+     20000
+    ],
+    "seed": 2026112203,
+    "horizon_m": 12
+   },
+   "H1_mda_Q1": {
+    "n": 60,
+    "mean": -0.021,
+    "wmean": -0.041,
+    "median": -0.168,
+    "hit": 0.37,
+    "t": -0.3,
+    "ci": [
+     -0.164,
+     0.147
+    ]
+   },
+   "H2_aud_Q1": {
+    "n": 65,
+    "mean": -0.008,
+    "wmean": -0.037,
+    "median": -0.1,
+    "hit": 0.42,
+    "t": -0.12,
+    "ci": [
+     -0.13,
+     0.119
+    ]
+   },
+   "H3_flags": {
+    "n": 21,
+    "mean": 0.077,
+    "wmean": 0.048,
+    "median": 0.175,
+    "hit": 0.52,
+    "t": 0.6
+   },
+   "all_mda": {
+    "n": 297,
+    "mean": -0.04,
+    "t": -1.35
+   },
+   "all_aud": {
+    "n": 318,
+    "mean": -0.066,
+    "t": -2.41
+   },
+   "secondary_aud_Q5": {
+    "n": 62,
+    "mean": -0.152,
+    "t": -2.54,
+    "P1": -0.285,
+    "P2": -0.02
+   },
+   "feasibility": {
+    "mda_usable": 0.774,
+    "aud_usable": 0.829,
+    "pdf_mb_median": 6.9,
+    "gb_total": 5.1
+   },
+   "verdict": "NO-GO",
+   "auditor_cases_12m_excess": [
+    {
+     "sym": "VALIANTORG",
+     "fy": "FY23",
+     "item": "EoM OCPS from scheme not converted",
+     "x12": -0.771
+    },
+    {
+     "sym": "SATIA",
+     "fy": "FY23",
+     "item": "EoM depreciation estimate change",
+     "x12": -0.734
+    },
+    {
+     "sym": "GRINFRA",
+     "fy": "FY23",
+     "item": "EoM regulatory matter sub-judice",
+     "x12": -0.649
+    },
+    {
+     "sym": "GHCL",
+     "fy": "FY23",
+     "item": "EoM restatement",
+     "x12": -0.495
+    },
+    {
+     "sym": "EXPLEOSOL",
+     "fy": "FY23",
+     "item": "EoM amalgamation",
+     "x12": -0.467
+    },
+    {
+     "sym": "POWERMECH",
+     "fy": "FY23",
+     "item": "EoM income-tax search",
+     "x12": -0.44
+    },
+    {
+     "sym": "CONFIPET",
+     "fy": "FY23",
+     "item": "qualified opinion",
+     "x12": -0.421
+    },
+    {
+     "sym": "CONFIPET",
+     "fy": "FY24",
+     "item": "EoM Ind AS 8 restatement",
+     "x12": -0.243
+    },
+    {
+     "sym": "ITDC",
+     "fy": "FY24",
+     "item": "ICFR material weakness",
+     "x12": -0.103
+    },
+    {
+     "sym": "SCHAND",
+     "fy": "FY24",
+     "item": "EoM scheme",
+     "x12": -0.101
+    },
+    {
+     "sym": "TITAGARH",
+     "fy": "FY23",
+     "item": "EoM amalgamation",
+     "x12": 0.175
+    },
+    {
+     "sym": "CENTURYPLY",
+     "fy": "FY24",
+     "item": "EoM demerger",
+     "x12": 0.196
+    },
+    {
+     "sym": "NATIONALUM",
+     "fy": "FY23",
+     "item": "EoM coal-mine capitalisation",
+     "x12": 0.27
+    },
+    {
+     "sym": "DIAMONDYD",
+     "fy": "FY24",
+     "item": "EoM ESOP trust consolidation",
+     "x12": 0.387
+    },
+    {
+     "sym": "KRITI",
+     "fy": "FY23",
+     "item": "CARO first cash loss",
+     "x12": 0.421
+    },
+    {
+     "sym": "SEPC",
+     "fy": "FY23",
+     "item": "EoM lender resolution plan",
+     "x12": 0.552
+    },
+    {
+     "sym": "BOMDYEING",
+     "fy": "FY23",
+     "item": "EoM SEBI order + market ban",
+     "x12": 0.579
+    },
+    {
+     "sym": "DCAL",
+     "fy": "FY24",
+     "item": "EoM merger + Swiss audit observation",
+     "x12": 0.581
+    },
+    {
+     "sym": "RAMRAT",
+     "fy": "FY24",
+     "item": "EoM income-tax search & seizure",
+     "x12": 0.626
+    },
+    {
+     "sym": "MTNL",
+     "fy": "FY23",
+     "item": "CARO interest default",
+     "x12": 0.803
+    },
+    {
+     "sym": "COCHINSHIP",
+     "fy": "FY23",
+     "item": "EoM ship-repair-facility capitalisation",
+     "x12": 1.441
+    }
+   ]
+  },
+  "sources": [
+   "https://www.nseindia.in/api/annual-reports?index=equities&symbol=",
+   "https://www.nseindia.in/api/corporate-announcements",
+   "https://nsearchives.nseindia.in/annual_reports/",
+   "https://www.screener.in/api/company/{id}/chart/",
+   "https://www.nber.org/papers/w25084"
+  ],
+  "links": [
+   {
+    "to": "insight:bt-lazy-prices-us-v2-2024-25",
+    "rel": "replicates_failure_of"
+   },
+   {
+    "to": "insight:lazy-prices-filing-changes",
+    "rel": "tests"
+   },
+   {
+    "to": "strategy:lazy-prices-text-change-flag",
+    "rel": "evidence_against"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "strategy",
+  "id": "strategy:lazy-prices-text-change-flag",
+  "title": "Text-change flag (status after US v1, US v2 and the Indian AR pilot, 2026-11-23): RETIRED as a mechanical rule in the US and India (India pilot: MD&A/auditor changers no worse than peers; NO-GO for a full run). Keep only stage-4 judgment cues: first 10-K after de-SPAC = look harder; in Indian ARs, diff the auditor's report + CARO vs last year (new qualification / restatement / regulatory EoM = look harder)",
+  "body": "Evidence: insight:bt-lazy-prices-us-2021-23, insight:bt-lazy-prices-us-v2-2024-25, insight:bt-india-annual-report-text-pilot-fy23-24. India pilot pre-registered; 200 firms, 2 pair-years; H1 MD&A -2.1% t -0.30, H2 auditor -0.8% t -0.12, H3 auditor-change flags +7.7%. Open hypothesis only: stale auditor text (Q5) -15% in 2023-24, not in 2024-25.",
+  "tickers": [],
+  "tags": [
+   "strategy",
+   "lazy-prices",
+   "text-change",
+   "stage-3",
+   "stage-4",
+   "flag",
+   "us",
+   "india",
+   "retired-rule",
+   "judgment-cue"
+  ],
+  "date": "2026-11-23",
+  "data": {
+   "status": "retired-as-rule (US+India); judgment-cue only",
+   "india_pilot": {
+    "H1_mean": -0.021,
+    "H1_t": -0.3,
+    "H2_mean": -0.008,
+    "H2_t": -0.12,
+    "H3_mean": 0.077,
+    "verdict": "NO-GO"
+   }
+  },
+  "sources": [
+   "https://www.nseindia.in/api/annual-reports?index=equities&symbol=",
+   "https://www.nseindia.in/api/corporate-announcements",
+   "https://nsearchives.nseindia.in/annual_reports/",
+   "https://www.screener.in/api/company/{id}/chart/",
+   "https://www.nber.org/papers/w25084"
+  ],
+  "links": [
+   {
+    "to": "insight:bt-india-annual-report-text-pilot-fy23-24",
+    "rel": "evidence_against"
+   },
+   {
+    "to": "insight:bt-lazy-prices-us-v2-2024-25",
+    "rel": "evidence_against"
+   },
+   {
+    "to": "insight:bt-lazy-prices-us-2021-23",
+    "rel": "evidence"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "decision",
+  "id": "decision:india-ar-text-full-run-no-go",
+  "title": "2026-11-23: NO full multi-year Indian annual-report text-change backtest (pilot failed its pre-registered go rule on all three tests); keep the AR fetcher + section parser + auditor diff for stage-4 deep dives",
+  "body": "Pre-stated rule: GO if bottom-quintile wins. mean <= -5% AND median < 0 AND t <= -1.5 (H1 or H2), or >= 10 confirmed auditor flags with wins. mean <= -10% and median < 0 (H3), plus >= 75% usable pairs. Feasibility passed (77%/83%), effects did not (-4.1%/t -0.30, -3.7%/t -0.12, +4.8%). Tools: tools/nse_fetch.py annual_reports; tools/backtests/india_ar_text/{sections,flags}.py.",
+  "tickers": [],
+  "tags": [
+   "decision",
+   "stage-3",
+   "india",
+   "annual-report",
+   "no-go"
+  ],
+  "date": "2026-11-23",
+  "data": {
+   "verdict": "NO-GO",
+   "reopen_if": "a fresh-data test of the 'stale auditor text' hypothesis is pre-registered, or a cheaper section-level signal (e.g. new auditor qualifications across all NSE firms) is proposed"
+  },
+  "sources": [
+   "https://www.nseindia.in/api/annual-reports?index=equities&symbol=",
+   "https://www.nseindia.in/api/corporate-announcements",
+   "https://nsearchives.nseindia.in/annual_reports/",
+   "https://www.screener.in/api/company/{id}/chart/",
+   "https://www.nber.org/papers/w25084"
+  ],
+  "links": [
+   {
+    "to": "insight:bt-india-annual-report-text-pilot-fy23-24",
+    "rel": "based_on"
+   }
+  ],
+  "confidence": "verified"
+ }
+]
