@@ -1,0 +1,688 @@
+[
+ {
+  "type": "analysis",
+  "id": "analysis:us-kex-live-deepdive-2026-11",
+  "title": "Kirby Corporation (US-KEX) - LIVE deep dive #2, first US live run (random draw from an SEC frame, protocol v1.3 stages 2-7): method test, no verdict; card size 0; 6 live calls",
+  "body": "LIVE method test (L9, L21): company drawn at random from an SEC-built frame; no buy/sell verdict. Research, not advice. SELECTION: 8 dei:EntityPublicFloat frames -> 2,161 candidates -> 1,037 in frame (float $500M-$10B on the latest 10-K; financials/REITs/SPACs/utilities/no-revenue biotech removed) -> sorted by CIK, random.Random(20261124).shuffle; KEX drawn first and passed all checks (no merger, no 4.01/4.02 in 3 yrs - one 4.02 in Jul-2020, ICFR effective, solvency S1/S5 0, SUE CY2026Q3 +2.58 quintile 5). KEY FINDINGS: (1) Kirby earns about its cost of capital (proxy ROTC 10.4% 2023-25) even near the top of the inland cycle (utilization low-90%, industry newbuilds 60-70/yr just replace retirements); (2) contract escalators decelerated (+9.5% Jan-2024 -> +3-5% Jan-2025), term share rose 60->65->70%; (3) 2026 is a fuel-shock year ($3.91/gal Q3 vs $2.46) after the Iran conflict, with a ~120-day escalator lag, plus a federal Jones Act waiver (17-Mar-2026, extended to 14-Feb-2027); (4) KDS pivoted to data-center power (power gen ~46-52% of KDS, backlog > $1.5bn; new 10-K risk factor); (5) receivables +36% YoY vs revenue +12%; 21 insider sales, 0 buys. VALUATION: $122.89 = 19.4x FY25 EPS, 17.0x FY26 guide, 9.5x EV/EBITDA, FCF yield 6.3%. Worksheet (ROIIC 10%, pre-registered) DCF $58.6 (prob-weighted), EV 5-yr multiple 1.12x vs hurdle 1.47x -> card size 0; a post-output ROIIC 20% sensitivity still gives EV 1.17x. Method finding: the NOPAT-based worksheet ignores cash-tax deferral from bonus depreciation (FY25 FCF 406 > NOPAT 374), so it under-values capex-heavy US firms; on reported FCF the price implies ~3.8% perpetual growth (roughly fair). Promise ledger (6 calls, Q2-25..Q3-26): 79% credit (n=12) vs US-industrials peer median 84%. Calls: FY26 EPS >= 7.28 (P 0.35 vs 0.50), revenue growth >= 9% (0.62 vs 0.40), op margin >= 14% (0.55 vs 0.50), capex in $220-260M (0.82 vs 0.60), Jones Act waiver extended past 14-Feb-2027 (0.55 vs 0.50), beats SPY to 30-Sep-2027 (0.42 vs 0.45); card 5-yr calls P(>=3x) 0.004, P(<=0.5x) 0.04, blow-up 0.02 (EST bases 0.10/0.12/0.04).",
+  "tickers": [
+   "US-KEX"
+  ],
+  "tags": [
+   "deep-dive",
+   "live",
+   "method-test",
+   "us",
+   "sector-marine-transport",
+   "stage-4",
+   "stage-5",
+   "stage-6",
+   "no-verdict"
+  ],
+  "date": "2026-11-23",
+  "status": "done",
+  "data": {
+   "selection_seed": 20261124,
+   "frame_n": 1037,
+   "candidates": 2161,
+   "subject_rank": 1,
+   "price": 122.89,
+   "price_date": "2026-11-20",
+   "card_rule_output": "size 0 (EV 1.12x vs hurdle 1.47x)",
+   "credibility": {
+    "score": 0.792,
+    "n": 12,
+    "peer_median": 0.84
+   },
+   "sue_q": 5,
+   "calls": [
+    "thesis:paper-call:US-KEX:fy2026-eps-7-28-plus",
+    "thesis:paper-call:US-KEX:fy2026-revenue-growth-9pct-plus",
+    "thesis:paper-call:US-KEX:fy2026-op-margin-14pct-plus",
+    "thesis:paper-call:US-KEX:fy2026-capex-220-260mn",
+    "thesis:paper-call:US-KEX:jones-act-waiver-extended-past-feb27",
+    "thesis:paper-call:US-KEX:beats-spy-to-sep27",
+    "thesis:paper-call:US-KEX:card-2026-11-23-5y-ge3x",
+    "thesis:paper-call:US-KEX:card-2026-11-23-5y-le0p5x",
+    "thesis:paper-call:US-KEX:card-2026-11-23-5y-blowup"
+   ]
+  },
+  "sources": [
+   "research_notes/Deep dives/US-KEX_live.md",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526054016/kex-20251231.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526436155/kex-ex99_1.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526451723/kex-20260930.htm"
+  ],
+  "links": [
+   {
+    "to": "decision:live-dd-selection-rules",
+    "rel": "applies"
+   },
+   {
+    "to": "insight:us-industrials-promise-credibility-base-rate",
+    "rel": "uses"
+   },
+   {
+    "to": "decision:card:US-KEX:2026-11-23",
+    "rel": "produced"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:US-KEX:variant-view-2026-11",
+  "title": "Kirby (US-KEX) variant view, Nov 2026: no claimable mispricing; mild negative tilt (return on capital ~ cost of capital at a cyclical high)",
+  "body": "Market appears to price an inland up-cycle plus a data-center power-gen growth story at 17x forward EPS / 9.5x EV/EBITDA. Our view: no claimable mispricing; on reported FCF the price is roughly fair (~3.8% perpetual growth at 9.5% CoE), on NOPAT with honest reinvestment it is rich. Evidence: ROTC 10.4% (2023-25), escalators decelerating, term renewals flat-to-low-single-digit 2025-26, fuel lag, Jones Act waiver, receivables build, insider selling. Proves us wrong: FY26 EPS >= 7.28, 2027 renewals high-single digits, power-gen growth > 20%. Scored by thesis:paper-call:US-KEX:*.",
+  "tickers": [
+   "US-KEX"
+  ],
+  "tags": [
+   "variant-perception",
+   "live",
+   "deepdive-generated",
+   "us",
+   "stage-6"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "market_view": "inland up-cycle + power-gen growth at 17x forward",
+   "our_view": "no claimable mispricing, mild negative tilt",
+   "score_by": "2027-09-30"
+  },
+  "sources": [
+   "research_notes/Deep dives/US-KEX_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:us-kex-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-KEX:fy2026-eps-7-28-plus",
+  "title": "Paper call: Kirby FY2026 diluted EPS is >= $7.28 (top of the 10-15% growth guide)",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #2 (first US live run), company drawn at random (method test, L9/L21). Probability 0.35 (naive base rate 0.50) that: Kirby FY2026 diluted EPS is >= $7.28 (top of the 10-15% growth guide). Our reasoning: 9M-2026 EPS $5.26, so Q4 needs >= $2.02 (+20% YoY vs $1.68); Q3-26 was $2.09 but Q4 carries winter weather, heavy coastal shipyards and fuel still ~$3.9/gal with a ~120-day escalator lag; management's 'toward the upper end' implies ~$7.20-7.25; buybacks cut the share count ~5% YoY. Naive base: management guided 'upper end of 10-15%'; hitting or beating the exact top of a narrowed range is treated as a coin flip (Kirby's one prior full-year guide, 2025's 15-25%, was delivered at the low end: +16%). Resolution: YES if diluted EPS for fiscal 2026 (year to 31-Dec-2026), as first reported in the FY2026 10-K XBRL (EarningsPerShareDiluted), is >= 7.28. Source: SEC XBRL companyfacts (10-K FY2026). Resolve by 2027-03-31; score with Brier vs the base rate to test whether deep-dive probabilities beat naive base rates.",
+  "tickers": [
+   "US-KEX"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "us",
+   "method-test",
+   "sector-marine-transport",
+   "cat-profit"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.35,
+   "base_rate_probability": 0.5,
+   "method": "deep-dive protocol v1.3 (live #2, US)",
+   "made_on": "2026-11-23",
+   "resolve_by": "2027-03-31",
+   "resolution_rule": "YES if diluted EPS for fiscal 2026 (year to 31-Dec-2026), as first reported in the FY2026 10-K XBRL (EarningsPerShareDiluted), is >= 7.28.",
+   "resolution_source": "SEC XBRL companyfacts (10-K FY2026)",
+   "base_rate_reasoning": "management guided 'upper end of 10-15%'; hitting or beating the exact top of a narrowed range is treated as a coin flip (Kirby's one prior full-year guide, 2025's 15-25%, was delivered at the low end: +16%).",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/US-KEX_live.md",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526054016/kex-20251231.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526436155/kex-ex99_1.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526451723/kex-20260930.htm"
+  ],
+  "links": [
+   {
+    "to": "analysis:us-kex-live-deepdive-2026-11",
+    "rel": "generated_by"
+   },
+   {
+    "to": "thesis:US-KEX:variant-view-2026-11",
+    "rel": "tests"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-KEX:fy2026-revenue-growth-9pct-plus",
+  "title": "Paper call: Kirby FY2026 revenue grows >= 9.0% (>= ~$3,667M vs $3,364.1M)",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #2 (first US live run), company drawn at random (method test, L9/L21). Probability 0.62 (naive base rate 0.40) that: Kirby FY2026 revenue grows >= 9.0% (>= ~$3,667M vs $3,364.1M). Our reasoning: 9M-2026 revenue +9.2%; Q4 needs >= $923M (+8.4% vs $851.8M). Q3 grew 12.2%; inland guided low-double-digit growth for the year (fuel pass-through lifts revenue), KDS high-single digits with a >$1.5bn power-gen backlog; the $115M barge acquisition closed 4-Nov-2026. Risk: KDS deliveries are lumpy (OEM engine timing). Naive base: share of Kirby's own last 10 fiscal years (2016-2025) with revenue growth >= 9%: 4 of 10 (2017, 2018, 2022, 2023) [XBRL]. Resolution: YES if FY2026 revenue (RevenueFromContractWithCustomerExcludingAssessedTax/Revenues, first reported in the FY2026 10-K) is >= 109.0% of the FY2025 comparative in the same filing. Source: SEC XBRL companyfacts (10-K FY2026). Resolve by 2027-03-31; score with Brier vs the base rate to test whether deep-dive probabilities beat naive base rates.",
+  "tickers": [
+   "US-KEX"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "us",
+   "method-test",
+   "sector-marine-transport",
+   "cat-revenue"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.62,
+   "base_rate_probability": 0.4,
+   "method": "deep-dive protocol v1.3 (live #2, US)",
+   "made_on": "2026-11-23",
+   "resolve_by": "2027-03-31",
+   "resolution_rule": "YES if FY2026 revenue (RevenueFromContractWithCustomerExcludingAssessedTax/Revenues, first reported in the FY2026 10-K) is >= 109.0% of the FY2025 comparative in the same filing.",
+   "resolution_source": "SEC XBRL companyfacts (10-K FY2026)",
+   "base_rate_reasoning": "share of Kirby's own last 10 fiscal years (2016-2025) with revenue growth >= 9%: 4 of 10 (2017, 2018, 2022, 2023) [XBRL].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/US-KEX_live.md",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526054016/kex-20251231.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526436155/kex-ex99_1.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526451723/kex-20260930.htm"
+  ],
+  "links": [
+   {
+    "to": "analysis:us-kex-live-deepdive-2026-11",
+    "rel": "generated_by"
+   },
+   {
+    "to": "thesis:US-KEX:variant-view-2026-11",
+    "rel": "tests"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-KEX:fy2026-op-margin-14pct-plus",
+  "title": "Paper call: Kirby FY2026 GAAP operating margin is >= 14.0%",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #2 (first US live run), company drawn at random (method test, L9/L21). Probability 0.55 (naive base rate 0.50) that: Kirby FY2026 GAAP operating margin is >= 14.0%. Our reasoning: 9M-2026 operating margin 13.9% (380.9/2,743.7); FY >= 14.0% needs a Q4 margin of ~14.3% on ~$935M revenue. Q4-25 was 15.2% (with unusually low corporate expense of $0.7M), Q3-26 15.4%; Q4-26 faces winter delays, planned coastal shipyards and the fuel-escalator lag, offset by term renewals 'north of inflation'. Naive base: persistence: FY2025 operating margin was 14.8% (above the line) while 9M-2026 is 13.9% (below), so no-change reasoning gives ~0.5. Resolution: YES if 100 x OperatingIncomeLoss / revenue for FY2026, both first reported in the FY2026 10-K XBRL, is >= 14.0 (rounded to 1 dp). Source: SEC XBRL companyfacts (10-K FY2026). Resolve by 2027-03-31; score with Brier vs the base rate to test whether deep-dive probabilities beat naive base rates.",
+  "tickers": [
+   "US-KEX"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "us",
+   "method-test",
+   "sector-marine-transport",
+   "cat-margin"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.55,
+   "base_rate_probability": 0.5,
+   "method": "deep-dive protocol v1.3 (live #2, US)",
+   "made_on": "2026-11-23",
+   "resolve_by": "2027-03-31",
+   "resolution_rule": "YES if 100 x OperatingIncomeLoss / revenue for FY2026, both first reported in the FY2026 10-K XBRL, is >= 14.0 (rounded to 1 dp).",
+   "resolution_source": "SEC XBRL companyfacts (10-K FY2026)",
+   "base_rate_reasoning": "persistence: FY2025 operating margin was 14.8% (above the line) while 9M-2026 is 13.9% (below), so no-change reasoning gives ~0.5.",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/US-KEX_live.md",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526054016/kex-20251231.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526436155/kex-ex99_1.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526451723/kex-20260930.htm"
+  ],
+  "links": [
+   {
+    "to": "analysis:us-kex-live-deepdive-2026-11",
+    "rel": "generated_by"
+   },
+   {
+    "to": "thesis:US-KEX:variant-view-2026-11",
+    "rel": "tests"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-KEX:fy2026-capex-220-260mn",
+  "title": "Paper call: Kirby FY2026 capital expenditures land inside the $220-260M guide",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #2 (first US live run), company drawn at random (method test, L9/L21). Probability 0.82 (naive base rate 0.60) that: Kirby FY2026 capital expenditures land inside the $220-260M guide. Our reasoning: 9M-2026 capex $189.3M, so Q4 must be $30.7-70.7M; Q4-25 was $47.0M, Q4-24 $96.7M; the guide was held unchanged in all four 2026 releases and Kirby hit its 2025 range ($264.5M vs $260-290M). Naive base: US industrials capex-range delivery in our credibility ledgers is weaker than margin delivery (pooled 'capacity/capex' 50%, insight:us-industrials-promise-credibility-base-rate); 0.60 blends that with Kirby's 2025 hit [EST]. Resolution: YES if FY2026 capital expenditures (PaymentsToAcquireProductiveAssets, or PaymentsToAcquirePropertyPlantAndEquipment if tagged; acquisitions excluded), first reported in the FY2026 10-K XBRL, are between $220M and $260M inclusive. Source: SEC XBRL companyfacts (10-K FY2026). Resolve by 2027-03-31; score with Brier vs the base rate to test whether deep-dive probabilities beat naive base rates.",
+  "tickers": [
+   "US-KEX"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "us",
+   "method-test",
+   "sector-marine-transport",
+   "cat-capex"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.82,
+   "base_rate_probability": 0.6,
+   "method": "deep-dive protocol v1.3 (live #2, US)",
+   "made_on": "2026-11-23",
+   "resolve_by": "2027-03-31",
+   "resolution_rule": "YES if FY2026 capital expenditures (PaymentsToAcquireProductiveAssets, or PaymentsToAcquirePropertyPlantAndEquipment if tagged; acquisitions excluded), first reported in the FY2026 10-K XBRL, are between $220M and $260M inclusive.",
+   "resolution_source": "SEC XBRL companyfacts (10-K FY2026)",
+   "base_rate_reasoning": "US industrials capex-range delivery in our credibility ledgers is weaker than margin delivery (pooled 'capacity/capex' 50%, insight:us-industrials-promise-credibility-base-rate); 0.60 blends that with Kirby's 2025 hit [EST].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/US-KEX_live.md",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526054016/kex-20251231.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526436155/kex-ex99_1.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526451723/kex-20260930.htm"
+  ],
+  "links": [
+   {
+    "to": "analysis:us-kex-live-deepdive-2026-11",
+    "rel": "generated_by"
+   },
+   {
+    "to": "thesis:US-KEX:variant-view-2026-11",
+    "rel": "tests"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-KEX:jones-act-waiver-extended-past-feb27",
+  "title": "Paper call: The federal Jones Act waiver (first issued 17-Mar-2026) is extended again, or replaced, so that it is in effect after 14-Feb-2027",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #2 (first US live run), company drawn at random (method test, L9/L21). Probability 0.55 (naive base rate 0.50) that: The federal Jones Act waiver (first issued 17-Mar-2026) is extended again, or replaced, so that it is in effect after 14-Feb-2027. Our reasoning: Already extended three times (to mid-May, mid-Aug, mid-Nov 2026, then to 14-Feb-2027) while fuel stayed elevated after the Iran conflict; opposition from maritime groups and Jones Act supporters in Congress is rising and fuel has eased from the Q2-26 peak ($4.23/gal to $3.91 in Q3). Naive base: coin flip on a renewal decision with a three-for-three history but growing political resistance. Resolution: YES if DHS/CBP extend the waiver or issue a successor covering petroleum products with an expiry after 14-Feb-2027, announced by 28-Feb-2027; a lapse on 14-Feb-2027 = NO. Kirby's FY2026 10-K risk factor is the filing cross-check. Source: DHS/CBP notices; KEX FY2026 10-K Item 1A (EDGAR). Resolve by 2027-03-15; score with Brier vs the base rate to test whether deep-dive probabilities beat naive base rates.",
+  "tickers": [
+   "US-KEX"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "us",
+   "method-test",
+   "sector-marine-transport",
+   "event",
+   "jones-act"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.55,
+   "base_rate_probability": 0.5,
+   "method": "deep-dive protocol v1.3 (live #2, US)",
+   "made_on": "2026-11-23",
+   "resolve_by": "2027-03-15",
+   "resolution_rule": "YES if DHS/CBP extend the waiver or issue a successor covering petroleum products with an expiry after 14-Feb-2027, announced by 28-Feb-2027; a lapse on 14-Feb-2027 = NO. Kirby's FY2026 10-K risk factor is the filing cross-check.",
+   "resolution_source": "DHS/CBP notices; KEX FY2026 10-K Item 1A (EDGAR)",
+   "base_rate_reasoning": "coin flip on a renewal decision with a three-for-three history but growing political resistance.",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/US-KEX_live.md",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526054016/kex-20251231.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526436155/kex-ex99_1.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526451723/kex-20260930.htm"
+  ],
+  "links": [
+   {
+    "to": "analysis:us-kex-live-deepdive-2026-11",
+    "rel": "generated_by"
+   },
+   {
+    "to": "thesis:US-KEX:variant-view-2026-11",
+    "rel": "tests"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-KEX:beats-spy-to-sep27",
+  "title": "Paper call: KEX total price return from 20-Nov-2026 (close $122.89) to 30-Sep-2027 beats SPY (close $689.81 on 20-Nov-2026)",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #2 (first US live run), company drawn at random (method test, L9/L21). Probability 0.42 (naive base rate 0.45) that: KEX total price return from 20-Nov-2026 (close $122.89) to 30-Sep-2027 beats SPY (close $689.81 on 20-Nov-2026). Our reasoning: no edge on the cycle claimed; the worksheet DCF sits well below the price and insiders sold $22M with no buys, against ~4-5%/yr buybacks, a strong 2026 print (EPS +14%) and a power-gen backlog; the stock fell 16% from $146 (28-Oct) into a falling market, so part of the de-rating has happened. Naive base: share of US single stocks beating the S&P 500 over ~10 months is a little below half because returns are right-skewed [EST, unverified; Bessembinder context]. Resolution: YES if (KEX close on the last trading day on or before 30-Sep-2027 / 122.89) > (SPY close on the same day / 689.81); split-adjusted closes, dividends ignored (KEX pays none; SPY ~1.2%/yr is a small handicap stated here). Source: Yahoo v8 daily closes KEX and SPY (Nasdaq.com historical as check). Resolve by 2027-09-30; score with Brier vs the base rate to test whether deep-dive probabilities beat naive base rates.",
+  "tickers": [
+   "US-KEX"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "us",
+   "method-test",
+   "sector-marine-transport",
+   "price-relative"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.42,
+   "base_rate_probability": 0.45,
+   "method": "deep-dive protocol v1.3 (live #2, US)",
+   "made_on": "2026-11-23",
+   "resolve_by": "2027-09-30",
+   "resolution_rule": "YES if (KEX close on the last trading day on or before 30-Sep-2027 / 122.89) > (SPY close on the same day / 689.81); split-adjusted closes, dividends ignored (KEX pays none; SPY ~1.2%/yr is a small handicap stated here).",
+   "resolution_source": "Yahoo v8 daily closes KEX and SPY (Nasdaq.com historical as check)",
+   "base_rate_reasoning": "share of US single stocks beating the S&P 500 over ~10 months is a little below half because returns are right-skewed [EST, unverified; Bessembinder context].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/US-KEX_live.md",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526054016/kex-20251231.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526436155/kex-ex99_1.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526451723/kex-20260930.htm"
+  ],
+  "links": [
+   {
+    "to": "analysis:us-kex-live-deepdive-2026-11",
+    "rel": "generated_by"
+   },
+   {
+    "to": "thesis:US-KEX:variant-view-2026-11",
+    "rel": "tests"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-KEX:card-2026-11-23-5y-ge3x",
+  "title": "Paper call: Kirby Corporation 5-year outcome ≥3.0x from 2026-11-20 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.00 (base rate n/a, class us_seasoned_5y) that: YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-20 (entry USD 122.89) to the last close on or before 2031-11-20 is ≥ 3.0. Model: worksheet scenarios bear 30%→0.80x, base 50%→1.16x, bull 18%→1.63x with σ=0.30; reverse DCF base-case IRR 6.8%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.12x vs hurdle 1.47x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "US-KEX"
+  ],
+  "tags": [
+   "decision-card",
+   "deepdive-generated",
+   "live",
+   "method-test",
+   "paper-call",
+   "sector-marine-transport",
+   "stage-6",
+   "us",
+   "valuation"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.0041,
+   "base_rate_probability": 0.1,
+   "base_rate_reasoning": "EST, unverified: US mid caps tripling in 5 years ~10% (no CRSP class on file; base_rates.json us_seasoned_5y is a placeholder).",
+   "method": "decision-card-v1",
+   "made_on": "2026-11-23",
+   "resolve_by": "2031-11-20",
+   "entry_date": "2026-11-20",
+   "entry_price": 122.89,
+   "currency": "USD",
+   "resolution_rule": "YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-20 (entry USD 122.89) to the last close on or before 2031-11-20 is ≥ 3.0.",
+   "resolution_source": "Yahoo v8 adjusted closes (KEX), EDGAR 8-K items 1.03/4.02 for blow-up",
+   "practice": false,
+   "outcome": null,
+   "brier": null,
+   "live": true
+  },
+  "sources": [
+   "research_notes/Deep dives/US-KEX_live.md",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526054016/kex-20251231.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526436155/kex-ex99_1.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526451723/kex-20260930.htm"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "analysis:us-kex-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-KEX:card-2026-11-23-5y-le0p5x",
+  "title": "Paper call: Kirby Corporation 5-year outcome ≤0.5x from 2026-11-20 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.04 (base rate n/a, class us_seasoned_5y) that: YES if the total-return multiple from 2026-11-20 (entry USD 122.89) to the last close on or before 2031-11-20 is ≤ 0.5, or the stock is delisted/suspended below that level. Model: worksheet scenarios bear 30%→0.80x, base 50%→1.16x, bull 18%→1.63x with σ=0.30; reverse DCF base-case IRR 6.8%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.12x vs hurdle 1.47x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "US-KEX"
+  ],
+  "tags": [
+   "decision-card",
+   "deepdive-generated",
+   "live",
+   "method-test",
+   "paper-call",
+   "sector-marine-transport",
+   "stage-6",
+   "us",
+   "valuation"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.0385,
+   "base_rate_probability": 0.12,
+   "base_rate_reasoning": "EST, unverified: US mid caps halving (or delisting) within 5 years ~12% (no CRSP class on file).",
+   "method": "decision-card-v1",
+   "made_on": "2026-11-23",
+   "resolve_by": "2031-11-20",
+   "entry_date": "2026-11-20",
+   "entry_price": 122.89,
+   "currency": "USD",
+   "resolution_rule": "YES if the total-return multiple from 2026-11-20 (entry USD 122.89) to the last close on or before 2031-11-20 is ≤ 0.5, or the stock is delisted/suspended below that level.",
+   "resolution_source": "Yahoo v8 adjusted closes (KEX), EDGAR 8-K items 1.03/4.02 for blow-up",
+   "practice": false,
+   "outcome": null,
+   "brier": null,
+   "live": true
+  },
+  "sources": [
+   "research_notes/Deep dives/US-KEX_live.md",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526054016/kex-20251231.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526436155/kex-ex99_1.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526451723/kex-20260930.htm"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "analysis:us-kex-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-KEX:card-2026-11-23-5y-blowup",
+  "title": "Paper call: Kirby Corporation 5-year outcome blow-up from 2026-11-20 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.02 (base rate n/a, class us_seasoned_5y) that: YES if between 2026-11-20 and 2031-11-20: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples). Model: worksheet scenarios bear 30%→0.80x, base 50%→1.16x, bull 18%→1.63x with σ=0.30; reverse DCF base-case IRR 6.8%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.12x vs hurdle 1.47x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "US-KEX"
+  ],
+  "tags": [
+   "decision-card",
+   "deepdive-generated",
+   "live",
+   "method-test",
+   "paper-call",
+   "sector-marine-transport",
+   "stage-6",
+   "us",
+   "valuation"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.02,
+   "base_rate_probability": 0.04,
+   "base_rate_reasoning": "EST, unverified: >=80% drawdown or delisting/bankruptcy in 5 years for US mid caps ~4% (no class on file).",
+   "method": "decision-card-v1",
+   "made_on": "2026-11-23",
+   "resolve_by": "2031-11-20",
+   "entry_date": "2026-11-20",
+   "entry_price": 122.89,
+   "currency": "USD",
+   "resolution_rule": "YES if between 2026-11-20 and 2031-11-20: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples).",
+   "resolution_source": "Yahoo v8 adjusted closes (KEX), EDGAR 8-K items 1.03/4.02 for blow-up",
+   "practice": false,
+   "outcome": null,
+   "brier": null,
+   "live": true
+  },
+  "sources": [
+   "research_notes/Deep dives/US-KEX_live.md",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526054016/kex-20251231.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526436155/kex-ex99_1.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526451723/kex-20260930.htm"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "analysis:us-kex-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ]
+ },
+ {
+  "type": "decision",
+  "id": "decision:card:US-KEX:2026-11-23",
+  "title": "Decision card US-KEX 2026-11-23 (paper)",
+  "body": "Decision card v1 for Kirby Corporation. Rule output: size 0: blocked by Expected value vs hurdle (EV 1.12x vs hurdle 1.47x → below hurdle → size 0). Thesis: Method-test thesis: Kirby is a cyclical, capital-heavy tank-barge operator (28% of the ~4,004-barge US inland fleet, Jones Act protected) plus an engine/power-generation distributor riding data-center backup and prime-power demand; over 5 years it compounds EPS ~4-9%/yr (pricing on a near-fixed fleet plus ~4-5%/yr buybacks) at a return on total capital close to its cost of capital (~10%), so shareholder returns track EPS plus buybacks minus any de-rating from today's ~17x forward P/E. Variant view: Market (reverse DCF): at $122.89 (19.4x FY25 EPS, 17.0x the FY26 guide, 9.5x EV/EBITDA, FCF yield 6.3%) the worksheet's NOPAT-based DCF cannot reproduce the price at a 10% ROIIC; even at a 20% ROIIC (sensitivity file, written after the outputs) the price needs ~11%/yr revenue growth for 10 years or a 17% NOPAT margin (FY25 11.1%). On reported FCF the price is consistent with ~3.8% perpetual FCF growth at a 9.5% cost of equity, i.e. roughly fair if 2025's cash taxes (bonus depreciation, deferred tax $82M) persist. Our view: NO claimable mispricing, with a mild negative tilt. What the market appears to price: an inland up-cycle (utilization low-90%, term renewals 'north of inflation', newbuilds 60-70/yr only matching retirements) plus a power-generation growth story (backlog > $1.5bn, book-to-bill > 1). What we verified that cuts against it: (1) ROTC 10.4% over 2023-25 (proxy) - the business earns about its cost of capital even at good points of the cycle; (2) contract escalators slowed from +9.5% (Jan-2024) to +3-5% (Jan-2025) and term renewals were flat to low-single-digit in 2025-26 - the rate cycle has been decelerating, not accelerating; (3) 2026 inland margins are capped by fuel ($3.91/gal Q3-26 vs $2.46) with a ~120-day escalator lag, and the Jones Act waiver (17-Mar-2026, now extended to 14-Feb-2027) adds foreign-flag competition risk in coastal; (4) 21 open-market insider sales, 0 buys in 12 months (weak signal, L14); (5) receivables +36% YoY vs revenue +12% (fuel-related, but CFO 9M-26 $313M vs $358M). What would prove us wrong: FY2026 EPS above the top of the guide (>= $7.28) with 2027 term renewals up high-single digits and power-gen revenue growth > 20% - i.e. a genuine margin step-up, not a buyback-driven EPS line. Departure from the outside view: the US seasoned-stock 5-year distribution is NOT on file (base_rates.json us_seasoned_5y), so the card's 5-year probabilities are compared with an EST naive class in the deep-dive file (P(>=3x) ~10%, P(<=0.5x) ~12% for US mid caps [EST, unverified]); our P(>=3x) is lower on purpose (a ~10%-ROTC cyclical at 17x forward needs a re-rating and a supercycle to triple). Checked by thesis:paper-call:US-KEX:* (6 calls to 2027-09-30, plus the 3 card calls). Open soft flags: 6. P(≥3x) 0% vs base n/a; P(≤0.5x) 4% vs base n/a; EV 5-yr multiple 1.12x vs hurdle 1.47x. Review 2027-02-15.",
+  "tickers": [
+   "US-KEX"
+  ],
+  "tags": [
+   "decision-card",
+   "deepdive-generated",
+   "live",
+   "sector-marine-transport",
+   "stage-6",
+   "us"
+  ],
+  "date": "2026-11-23",
+  "data": {
+   "gates": [
+    {
+     "gate": "Stage 2 hard filters",
+     "result": "passed (7 rules)",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 3 PEAD avoid flag",
+     "result": "clear",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 4 soft flags",
+     "result": "6 open, variant view written",
+     "blocks": false
+    },
+    {
+     "gate": "Expected value vs hurdle",
+     "result": "EV 1.12x vs hurdle 1.47x → below hurdle → size 0",
+     "blocks": true
+    }
+   ],
+   "size_after_gates": 0.0,
+   "rule_size": 0.0,
+   "kelly_f_star": 0.0,
+   "open_soft_flags": 6,
+   "review_date": "2027-02-15",
+   "kill_criteria": [
+    {
+     "if": "FY2026 or any 2027 quarter shows inland utilization below 85% (company language 'mid-80%' or lower) for two consecutive quarters",
+     "measure": "8-K Item 2.02 Ex-99.1",
+     "by": "2027-09-30"
+    },
+    {
+     "if": "Debt-to-capitalization above 35% (buybacks/acquisitions funded with debt)",
+     "measure": "8-K Ex-99.1 / 10-Q balance sheet",
+     "by": "2027-09-30"
+    },
+    {
+     "if": "Jones Act waiver made permanent, or statutory change to coastwise cabotage",
+     "measure": "Federal Register / DHS / KEX 10-Q risk factors",
+     "by": "2027-09-30"
+    },
+    {
+     "if": "Any 8-K 4.01/4.02, material weakness, or Controller/CFO exit with disagreement",
+     "measure": "EDGAR submissions / 10-K Item 9A",
+     "by": "2027-09-30"
+    },
+    {
+     "if": "FY2026 CFO below $500M (working-capital drain persists)",
+     "measure": "10-K FY2026 cash-flow statement",
+     "by": "2027-03-01"
+    }
+   ],
+   "override_log": [
+    {
+     "date": "2026-11-23",
+     "flag": "FY2024 EPS 4.91",
+     "decision": "use adjusted 5.46 as the base for growth comparisons",
+     "why": "$56.3M impairment of conventional frac inventory and a Louisiana tax-law credit (PR-Q4-25 reconciliation); proxy also uses 16% growth on 5.46"
+    },
+    {
+     "date": "2026-11-23",
+     "flag": "Worksheet DCF far below price",
+     "decision": "kept the pre-registered card input (ROIIC 10%); recorded a post-output ROIIC 20% sensitivity and the cash-tax explanation in the deep dive",
+     "why": "Protocol L8 step 2: scenarios fixed before outputs; the gap is a method finding (NOPAT vs cash tax, pricing-led growth), not a reason to re-fit"
+    },
+    {
+     "date": "2026-11-23",
+     "flag": "Vanguard 0% 13G/A",
+     "decision": "ignored as a sale",
+     "why": "Realignment into two Vanguard entities filing separately (FIVE lesson)"
+    }
+   ],
+   "paper_calls": [
+    "thesis:paper-call:US-KEX:card-2026-11-23-5y-ge3x",
+    "thesis:paper-call:US-KEX:card-2026-11-23-5y-le0p5x",
+    "thesis:paper-call:US-KEX:card-2026-11-23-5y-blowup"
+   ],
+   "practice": false
+  },
+  "sources": [
+   "research_notes/Deep dives/US-KEX_live.md",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526054016/kex-20251231.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526436155/kex-ex99_1.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526451723/kex-20260930.htm"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "thesis:paper-call:US-KEX:card-2026-11-23-5y-ge3x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:US-KEX:card-2026-11-23-5y-le0p5x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:US-KEX:card-2026-11-23-5y-blowup",
+    "rel": "about"
+   }
+  ]
+ }
+]

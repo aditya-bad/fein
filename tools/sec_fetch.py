@@ -311,7 +311,7 @@ def cmd_concept(a):
 
 
 def cmd_frames(a):
-    unit = a.unit or ("USD/shares" if "PerShare" in a.tag else "USD")
+    unit = a.unit or ("USD-per-shares" if "PerShare" in a.tag else "USD")  # frames API spells per-share units with "-per-"
     d = get_json(f"https://data.sec.gov/api/xbrl/frames/{a.taxonomy}/{a.tag}/{unit}/{a.period}.json")
     rows = sorted(d["data"], key=lambda x: -x["val"])
     if a.raw:

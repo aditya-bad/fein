@@ -1,0 +1,246 @@
+[
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-KEX:card-2026-11-23-5y-ge3x",
+  "title": "Paper call: Kirby Corporation 5-year outcome ≥3.0x from 2026-11-20 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.00 (base rate n/a, class us_seasoned_5y) that: YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-20 (entry USD 122.89) to the last close on or before 2031-11-20 is ≥ 3.0. Model: worksheet scenarios bear 30%→0.80x, base 50%→1.16x, bull 18%→1.63x with σ=0.30; reverse DCF base-case IRR 6.8%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.12x vs hurdle 1.47x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "US-KEX"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "us"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.0041,
+   "base_rate_probability": null,
+   "base_rate_reasoning": "US seasoned listed stocks, 5-yr total return distribution. Placeholder so US cards show n/a instead of a borrowed India number.",
+   "method": "decision-card-v1",
+   "made_on": "2026-11-23",
+   "resolve_by": "2031-11-20",
+   "entry_date": "2026-11-20",
+   "entry_price": 122.89,
+   "currency": "USD",
+   "resolution_rule": "YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-20 (entry USD 122.89) to the last close on or before 2031-11-20 is ≥ 3.0.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/US-KEX_live.md",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526054016/kex-20251231.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526436155/kex-ex99_1.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526451723/kex-20260930.htm"
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-KEX:card-2026-11-23-5y-le0p5x",
+  "title": "Paper call: Kirby Corporation 5-year outcome ≤0.5x from 2026-11-20 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.04 (base rate n/a, class us_seasoned_5y) that: YES if the total-return multiple from 2026-11-20 (entry USD 122.89) to the last close on or before 2031-11-20 is ≤ 0.5, or the stock is delisted/suspended below that level. Model: worksheet scenarios bear 30%→0.80x, base 50%→1.16x, bull 18%→1.63x with σ=0.30; reverse DCF base-case IRR 6.8%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.12x vs hurdle 1.47x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "US-KEX"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "us"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.0385,
+   "base_rate_probability": null,
+   "base_rate_reasoning": "US seasoned listed stocks, 5-yr total return distribution. Placeholder so US cards show n/a instead of a borrowed India number.",
+   "method": "decision-card-v1",
+   "made_on": "2026-11-23",
+   "resolve_by": "2031-11-20",
+   "entry_date": "2026-11-20",
+   "entry_price": 122.89,
+   "currency": "USD",
+   "resolution_rule": "YES if the total-return multiple from 2026-11-20 (entry USD 122.89) to the last close on or before 2031-11-20 is ≤ 0.5, or the stock is delisted/suspended below that level.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/US-KEX_live.md",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526054016/kex-20251231.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526436155/kex-ex99_1.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526451723/kex-20260930.htm"
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:US-KEX:card-2026-11-23-5y-blowup",
+  "title": "Paper call: Kirby Corporation 5-year outcome blow-up from 2026-11-20 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.02 (base rate n/a, class us_seasoned_5y) that: YES if between 2026-11-20 and 2031-11-20: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples). Model: worksheet scenarios bear 30%→0.80x, base 50%→1.16x, bull 18%→1.63x with σ=0.30; reverse DCF base-case IRR 6.8%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.12x vs hurdle 1.47x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "US-KEX"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "us"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.02,
+   "base_rate_probability": null,
+   "base_rate_reasoning": "US seasoned listed stocks, 5-yr total return distribution. Placeholder so US cards show n/a instead of a borrowed India number.",
+   "method": "decision-card-v1",
+   "made_on": "2026-11-23",
+   "resolve_by": "2031-11-20",
+   "entry_date": "2026-11-20",
+   "entry_price": 122.89,
+   "currency": "USD",
+   "resolution_rule": "YES if between 2026-11-20 and 2031-11-20: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples).",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/US-KEX_live.md",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526054016/kex-20251231.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526436155/kex-ex99_1.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526451723/kex-20260930.htm"
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "decision",
+  "id": "decision:card:US-KEX:2026-11-23",
+  "title": "Decision card US-KEX 2026-11-23 (paper)",
+  "body": "Decision card v1 for Kirby Corporation. Rule output: size 0: blocked by Expected value vs hurdle (EV 1.12x vs hurdle 1.47x → below hurdle → size 0). Thesis: Method-test thesis: Kirby is a cyclical, capital-heavy tank-barge operator (28% of the ~4,004-barge US inland fleet, Jones Act protected) plus an engine/power-generation distributor riding data-center backup and prime-power demand; over 5 years it compounds EPS ~4-9%/yr (pricing on a near-fixed fleet plus ~4-5%/yr buybacks) at a return on total capital close to its cost of capital (~10%), so shareholder returns track EPS plus buybacks minus any de-rating from today's ~17x forward P/E. Variant view: Market (reverse DCF): at $122.89 (19.4x FY25 EPS, 17.0x the FY26 guide, 9.5x EV/EBITDA, FCF yield 6.3%) the worksheet's NOPAT-based DCF cannot reproduce the price at a 10% ROIIC; even at a 20% ROIIC (sensitivity file, written after the outputs) the price needs ~11%/yr revenue growth for 10 years or a 17% NOPAT margin (FY25 11.1%). On reported FCF the price is consistent with ~3.8% perpetual FCF growth at a 9.5% cost of equity, i.e. roughly fair if 2025's cash taxes (bonus depreciation, deferred tax $82M) persist. Our view: NO claimable mispricing, with a mild negative tilt. What the market appears to price: an inland up-cycle (utilization low-90%, term renewals 'north of inflation', newbuilds 60-70/yr only matching retirements) plus a power-generation growth story (backlog > $1.5bn, book-to-bill > 1). What we verified that cuts against it: (1) ROTC 10.4% over 2023-25 (proxy) - the business earns about its cost of capital even at good points of the cycle; (2) contract escalators slowed from +9.5% (Jan-2024) to +3-5% (Jan-2025) and term renewals were flat to low-single-digit in 2025-26 - the rate cycle has been decelerating, not accelerating; (3) 2026 inland margins are capped by fuel ($3.91/gal Q3-26 vs $2.46) with a ~120-day escalator lag, and the Jones Act waiver (17-Mar-2026, now extended to 14-Feb-2027) adds foreign-flag competition risk in coastal; (4) 21 open-market insider sales, 0 buys in 12 months (weak signal, L14); (5) receivables +36% YoY vs revenue +12% (fuel-related, but CFO 9M-26 $313M vs $358M). What would prove us wrong: FY2026 EPS above the top of the guide (>= $7.28) with 2027 term renewals up high-single digits and power-gen revenue growth > 20% - i.e. a genuine margin step-up, not a buyback-driven EPS line. Departure from the outside view: the US seasoned-stock 5-year distribution is NOT on file (base_rates.json us_seasoned_5y), so the card's 5-year probabilities are compared with an EST naive class in the deep-dive file (P(>=3x) ~10%, P(<=0.5x) ~12% for US mid caps [EST, unverified]); our P(>=3x) is lower on purpose (a ~10%-ROTC cyclical at 17x forward needs a re-rating and a supercycle to triple). Checked by thesis:paper-call:US-KEX:* (6 calls to 2027-09-30, plus the 3 card calls). Open soft flags: 6. P(≥3x) 0% vs base n/a; P(≤0.5x) 4% vs base n/a; EV 5-yr multiple 1.12x vs hurdle 1.47x. Review 2027-02-15.",
+  "tickers": [
+   "US-KEX"
+  ],
+  "tags": [
+   "decision-card",
+   "stage-6",
+   "us"
+  ],
+  "date": "2026-11-23",
+  "data": {
+   "gates": [
+    {
+     "gate": "Stage 2 hard filters",
+     "result": "passed (7 rules)",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 3 PEAD avoid flag",
+     "result": "clear",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 4 soft flags",
+     "result": "6 open, variant view written",
+     "blocks": false
+    },
+    {
+     "gate": "Expected value vs hurdle",
+     "result": "EV 1.12x vs hurdle 1.47x → below hurdle → size 0",
+     "blocks": true
+    }
+   ],
+   "size_after_gates": 0.0,
+   "rule_size": 0.0,
+   "kelly_f_star": 0.0,
+   "open_soft_flags": 6,
+   "review_date": "2027-02-15",
+   "kill_criteria": [
+    {
+     "if": "FY2026 or any 2027 quarter shows inland utilization below 85% (company language 'mid-80%' or lower) for two consecutive quarters",
+     "measure": "8-K Item 2.02 Ex-99.1",
+     "by": "2027-09-30"
+    },
+    {
+     "if": "Debt-to-capitalization above 35% (buybacks/acquisitions funded with debt)",
+     "measure": "8-K Ex-99.1 / 10-Q balance sheet",
+     "by": "2027-09-30"
+    },
+    {
+     "if": "Jones Act waiver made permanent, or statutory change to coastwise cabotage",
+     "measure": "Federal Register / DHS / KEX 10-Q risk factors",
+     "by": "2027-09-30"
+    },
+    {
+     "if": "Any 8-K 4.01/4.02, material weakness, or Controller/CFO exit with disagreement",
+     "measure": "EDGAR submissions / 10-K Item 9A",
+     "by": "2027-09-30"
+    },
+    {
+     "if": "FY2026 CFO below $500M (working-capital drain persists)",
+     "measure": "10-K FY2026 cash-flow statement",
+     "by": "2027-03-01"
+    }
+   ],
+   "override_log": [
+    {
+     "date": "2026-11-23",
+     "flag": "FY2024 EPS 4.91",
+     "decision": "use adjusted 5.46 as the base for growth comparisons",
+     "why": "$56.3M impairment of conventional frac inventory and a Louisiana tax-law credit (PR-Q4-25 reconciliation); proxy also uses 16% growth on 5.46"
+    },
+    {
+     "date": "2026-11-23",
+     "flag": "Worksheet DCF far below price",
+     "decision": "kept the pre-registered card input (ROIIC 10%); recorded a post-output ROIIC 20% sensitivity and the cash-tax explanation in the deep dive",
+     "why": "Protocol L8 step 2: scenarios fixed before outputs; the gap is a method finding (NOPAT vs cash tax, pricing-led growth), not a reason to re-fit"
+    },
+    {
+     "date": "2026-11-23",
+     "flag": "Vanguard 0% 13G/A",
+     "decision": "ignored as a sale",
+     "why": "Realignment into two Vanguard entities filing separately (FIVE lesson)"
+    }
+   ],
+   "paper_calls": [
+    "thesis:paper-call:US-KEX:card-2026-11-23-5y-ge3x",
+    "thesis:paper-call:US-KEX:card-2026-11-23-5y-le0p5x",
+    "thesis:paper-call:US-KEX:card-2026-11-23-5y-blowup"
+   ],
+   "practice": false
+  },
+  "sources": [
+   "research_notes/Deep dives/US-KEX_live.md",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526054016/kex-20251231.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526436155/kex-ex99_1.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526451723/kex-20260930.htm"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "thesis:paper-call:US-KEX:card-2026-11-23-5y-ge3x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:US-KEX:card-2026-11-23-5y-le0p5x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:US-KEX:card-2026-11-23-5y-blowup",
+    "rel": "about"
+   }
+  ]
+ }
+]

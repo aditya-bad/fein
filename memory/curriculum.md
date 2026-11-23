@@ -40,6 +40,7 @@ companies; written post-mortems on misses. Until then: no idea-pitching (except 
 |---|---|---|---|---|---|
 | 2026-11-20 | 0 | – | – | 0 | loop started |
 | 2026-11-20 | paper calls: 7 opened (promise tracker, resolve Feb–May 2027) | | | 0 | |
+| 2026-11-23 | paper calls: 133 open (+6 live deep-dive Kirby + 3 card calls) | | | 0 | second live deep dive (US) |
 | 2026-11-23 | paper calls: 124 open (+6 live deep-dive SUNFLAG + 3 card calls) | | | 0 | first live deep dive |
 | 2026-11-22 | paper calls: 115 open (+11 credibility-generated, US industrials) | | | 0 | |
 | 2026-11-22 | paper calls: 104 open (+11 credibility-generated, IT mid-caps) | | | 0 | |

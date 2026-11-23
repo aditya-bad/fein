@@ -245,3 +245,12 @@ no concalls, mining milestones that never arrive, 1% institutional ownership), s
 Card: size 0 (EV below hurdle). 6 live calls + 3 card calls now test whether deep-dive probabilities beat base rates.
 Tools: worksheet v1.2 handles non-operating stakes; promise tracker needs an annual-report-status mode for firms
 without concalls; NSE pledge API sometimes returns empty → XBRL fallback.
+
+## L34 (2026-11-23) — Every decision card so far says "size 0": the gate itself needs calibrating
+6 of 6 cards (4 practice + SUNFLAG + Kirby) returned size 0, mostly from the expected-value hurdle. Some of that is
+right (no claimable mispricing), but Kirby exposed a model gap: the worksheet ignores deferred cash taxes from
+accelerated depreciation (FCF $406M vs NOPAT $374M), and India's 12–13% cost of equity makes compounders look
+overvalued (L21). A gate that never opens can't be tested. **Next:** add cash-tax and reinvestment-realism inputs,
+build real US/India 5-year base-rate classes from the survivorship-free panels, reconcile the PEAD avoid rule
+(bottom-two quintiles for India; US uncalibrated), then re-run all 6 cards to see which, if any, open — without
+changing the hurdle just to make cards open.

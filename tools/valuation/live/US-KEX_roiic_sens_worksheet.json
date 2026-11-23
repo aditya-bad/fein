@@ -1,0 +1,736 @@
+{
+ "input": {
+  "company": "Kirby Corporation",
+  "ticker": "US-KEX",
+  "market": "us",
+  "practice": false,
+  "currency": "USD",
+  "units": "USD M",
+  "as_of": "2026-11-20",
+  "price": 122.89,
+  "shares": 52.0,
+  "net_debt": 1033.5,
+  "base": {
+   "fy": "FY2025 (to 31-Dec-2025)",
+   "revenue": 3364.1,
+   "ebitda": 781.0,
+   "ebit": 496.3,
+   "pat": 354.6,
+   "eps": 6.33,
+   "fcf": 405.7,
+   "eps_forward": 7.24,
+   "sbc": 17.6,
+   "eps_normalised": null,
+   "pe_trailing": null
+  },
+  "tax_rate": 0.246,
+  "roiic": 0.2,
+  "terminal_roic": 0.15,
+  "years": 10,
+  "coe": 0.095,
+  "terminal_growth": 0.03,
+  "payout_of_fcf": 0.75,
+  "dispersion": 0.3,
+  "base_case": {
+   "name": "base",
+   "growth": 0.05,
+   "growth_end": 0.03,
+   "margin_end": 0.11,
+   "roiic": 0.2,
+   "exit_pe": 16.0,
+   "prob": 0.0
+  },
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.3,
+    "growth": 0.01,
+    "growth_end": 0.02,
+    "margin_end": 0.085,
+    "roiic": 0.12,
+    "exit_pe": 13.0
+   },
+   {
+    "name": "base",
+    "prob": 0.5,
+    "growth": 0.05,
+    "growth_end": 0.03,
+    "margin_end": 0.11,
+    "roiic": 0.2,
+    "exit_pe": 16.0
+   },
+   {
+    "name": "bull",
+    "prob": 0.18,
+    "growth": 0.08,
+    "growth_end": 0.04,
+    "margin_end": 0.13,
+    "roiic": 0.25,
+    "exit_pe": 19.0
+   }
+  ],
+  "blowup": {
+   "prob": 0.02,
+   "multiple": 0.3,
+   "note": "permanent loss of Jones Act protection (waiver made permanent or repeal) during an inland down-cycle and a data-center capex bust; debt $1.07bn + leases $0.22bn against a fleet whose resale value falls with rates"
+  },
+  "twin_engine": {
+   "targets": [
+    2,
+    3,
+    5
+   ],
+   "horizon": 5,
+   "hist_eps_cagr": 0.044,
+   "hist_eps_note": "diluted EPS 4.11 (2015) -> 6.33 (2025), 10 years [XBRL]; trough-to-peak 2.37 (2019) -> 6.33 is 17.8%/yr, which is cycle, not trend"
+  },
+  "pe_history": [
+   {
+    "date": "FY2015",
+    "pe": 12.8
+   },
+   {
+    "date": "FY2016",
+    "pe": 25.4
+   },
+   {
+    "date": "FY2017",
+    "pe": 11.9
+   },
+   {
+    "date": "FY2018",
+    "pe": 51.4
+   },
+   {
+    "date": "FY2019",
+    "pe": 37.8
+   },
+   {
+    "date": "FY2022",
+    "pe": 31.7
+   },
+   {
+    "date": "FY2023",
+    "pe": 21.1
+   },
+   {
+    "date": "FY2024",
+    "pe": 21.5
+   },
+   {
+    "date": "FY2025",
+    "pe": 17.4
+   }
+  ],
+  "sector_pes": {
+   "Matson (Jones Act liner)": 14.5,
+   "Cummins (engine OEM)": 19.7,
+   "Generac (FY25 EPS depressed, not comparable)": 71.8
+  },
+  "market_pe": {
+   "index": "S&P 500",
+   "pe": null,
+   "as_of": "not on file"
+  },
+  "notes": [
+   "SENSITIVITY FILE written AFTER the main worksheet output (not used by the card): same scenarios, but ROIIC 12/20/25% to test the claim that inland growth is mostly pricing on an existing fleet (little capital), so the main file's 10% ROIIC over-charges reinvestment.",
+   "Price 122.89 = NYSE close 20-Nov-2026 [Yahoo v8 KEX] = Nasdaq.com historical close 20-Nov-2026 (two sources). Shares 52.0M [10-Q Q3 2026 cover, ~Oct-2026]; 0.3M more bought to 5-Nov-2026.",
+   "Net debt 1,033.5 = debt 1,071.8 - cash 38.3 at 30-Sep-2026 [PR-Q3-26]; the $115M barge/fleeting acquisition closed 4-Nov-2026 (debt-funded, not yet in this figure); operating lease liabilities 215.6 [10K25] excluded because charter/lease cost sits inside operating margin.",
+   "Base FY2025 [XBRL, PR-Q4-25]: revenue 3,364.1 (KMT 1,935.3, KDS 1,428.7), operating income 496.3, net earnings 354.6, EPS 6.33 (no one-time items in 2025; 2024 adjusted 5.46), FCF 405.7 (CFO 670.2 - capex 264.5), SBC 17.6, adjusted EBITDA 781 [DEF 14A].",
+   "eps_forward 7.24 = FY2026 guide 'EPS growth 10-15%, toward the upper end' [PR-Q3-26] applied to 6.33 -> 6.96-7.28; 7.24 = ~14.4%. 9M-2026 EPS 5.26 [10Q3-26].",
+   "ROIIC 10% [EST]: proxy 3-yr Return on Total Capital 10.4% (2023-25 performance award, DEF 14A); unit economics (deep dive section 4) say new-build barges earn ~6-8% pre-tax at current rates, acquisitions of used barges more.",
+   "payout_of_fcf 0.75: 2025 buybacks 354.2 vs FCF 405.7; no dividend. Buybacks are treated as distributions.",
+   "pe_history: FY-end close [Yahoo v8] / diluted EPS [XBRL]. 2020 and 2021 omitted (losses, impairments); 2017 includes a tax-reform gain; 2018-19 depressed EPS. Own band is noisy; median ~21.5.",
+   "Peer P/Es on FY2025 diluted EPS [XBRL] and 20-Nov-2026 closes [Yahoo]: MATX 200.05/13.81, CMI 403.61/20.50, GNRC 193.22/2.69 (depressed). No pure inland-barge peer is listed (ACBL, Canal, Ingram, Marquette are private). Single-source."
+  ],
+  "sources": [
+   "research_notes/Deep dives/US-KEX_live.md",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526054016/kex-20251231.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526436155/kex-ex99_1.htm",
+   "https://www.sec.gov/Archives/edgar/data/56047/000119312526451723/kex-20260930.htm"
+  ],
+  "_warnings": [],
+  "non_operating_value": 0.0,
+  "non_operating_growth": null,
+  "other_income_recurring_post_tax": 0.0,
+  "treasury_income_post_tax": 0.0,
+  "hurdle_cagr": 0.08,
+  "nopat_margin": 0.1112363485033144,
+  "_nopat_margin_method": "base.ebit x (1 - tax) / revenue",
+  "_eps_method": "given"
+ },
+ "snapshot": {
+  "mcap": 6390.28,
+  "ev": 7423.78,
+  "pe": 19.41390205371248,
+  "ev_ebitda": 9.505480153649167,
+  "p_fcf": 15.751244762139512,
+  "fcf_yield": 0.06348704595103814,
+  "ev_sales": 2.20676555393716
+ },
+ "base": {
+  "rows": [
+   {
+    "t": 1,
+    "g": 0.05,
+    "revenue": 3532.305,
+    "margin": 0.11111271365298296,
+    "nopat": 392.48399399999994,
+    "reinv_rate": 0.25,
+    "fcf": 294.36299549999995,
+    "eps": 6.639112675229055
+   },
+   {
+    "t": 2,
+    "g": 0.04777777777777778,
+    "revenue": 3701.070683333333,
+    "margin": 0.11098907880265152,
+    "nopat": 410.77842572666657,
+    "reinv_rate": 0.2388888888888889,
+    "fcf": 312.6480240252962,
+    "eps": 6.948574450535554
+   },
+   {
+    "t": 3,
+    "g": 0.04555555555555556,
+    "revenue": 3869.6750144629627,
+    "margin": 0.11086544395232008,
+    "nopat": 429.013238429637,
+    "reinv_rate": 0.22777777777777777,
+    "fcf": 331.29355634288635,
+    "eps": 7.257027732701039
+   },
+   {
+    "t": 4,
+    "g": 0.043333333333333335,
+    "revenue": 4037.3609317563582,
+    "margin": 0.11074180910198864,
+    "nopat": 447.1046535803896,
+    "reinv_rate": 0.21666666666666667,
+    "fcf": 350.23197863797185,
+    "eps": 7.563055355422878
+   },
+   {
+    "t": 5,
+    "g": 0.04111111111111111,
+    "revenue": 4203.341325617453,
+    "margin": 0.11061817425165721,
+    "nopat": 464.9659431963432,
+    "reinv_rate": 0.20555555555555555,
+    "fcf": 369.38961042820597,
+    "eps": 7.865190260534995
+   },
+   {
+    "t": 6,
+    "g": 0.03888888888888889,
+    "revenue": 4366.804599391465,
+    "margin": 0.11049453940132577,
+    "nopat": 482.5080628653508,
+    "reinv_rate": 0.19444444444444445,
+    "fcf": 388.6870506415326,
+    "eps": 8.161926206013813
+   },
+   {
+    "t": 7,
+    "g": 0.03666666666666667,
+    "revenue": 4526.920768035819,
+    "margin": 0.11037090455099433,
+    "nopat": 499.64033999879524,
+    "reinv_rate": 0.18333333333333332,
+    "fcf": 408.03961099901613,
+    "eps": 8.45172940821061
+   },
+   {
+    "t": 8,
+    "g": 0.034444444444444444,
+    "revenue": 4682.848038934831,
+    "margin": 0.11024726970066288,
+    "nopat": 516.2712107156685,
+    "reinv_rate": 0.17222222222222222,
+    "fcf": 427.35783553685894,
+    "eps": 8.733051006707411
+   },
+   {
+    "t": 9,
+    "g": 0.03222222222222222,
+    "revenue": 4833.739809078286,
+    "margin": 0.11012363485033144,
+    "nopat": 532.308997696448,
+    "reinv_rate": 0.1611111111111111,
+    "fcf": 446.54810362313145,
+    "eps": 9.004340222202698
+   },
+   {
+    "t": 10,
+    "g": 0.03,
+    "revenue": 4978.752003350635,
+    "margin": 0.11,
+    "nopat": 547.6627203685699,
+    "reinv_rate": 0.15,
+    "fcf": 465.5133123132844,
+    "eps": 9.264058061306313
+   }
+  ],
+  "pv_fcf": 2293.7376634591083,
+  "pv_tv": 2801.4691388744172,
+  "tv_share": 0.5498244227479419,
+  "pv_oi": 0.0,
+  "ev": 5095.206802333525,
+  "equity": 4061.706802333525,
+  "value_ps": 78.10974619872164,
+  "cum_dist_ps_5y": 23.9123966096302,
+  "value5_ps": 104.19712889320434,
+  "dcf_pe5": 13.247884086928215,
+  "max_reinv_rate": 0.25
+ },
+ "reverse": {
+  "g_flat_margin": 0.11447500991821291,
+  "g_base_margin": 0.11638124465942387,
+  "g_fade_start": 0.19215920448303223,
+  "m_needed_base_growth": 0.1742914085388184,
+  "implied_coe_base": 0.07481212379455568,
+  "gordon_g_on_fcf": 0.038260408098622134,
+  "path_case": "fade",
+  "path": {
+   "rows": [
+    {
+     "t": 1,
+     "g": 0.19215920448303223,
+     "revenue": 4010.542779801369,
+     "margin": 0.11111271365298296,
+     "nopat": 445.6222914851078,
+     "reinv_rate": 0.960796022415161,
+     "fcf": 17.470166326686737,
+     "eps": 7.5379802717850355
+    },
+    {
+     "t": 2,
+     "g": 0.17414151509602865,
+     "revenue": 4708.944775833417,
+     "margin": 0.11098907880265152,
+     "nopat": 522.6414428023094,
+     "reinv_rate": 0.8707075754801432,
+     "fcf": 67.57357929446663,
+     "eps": 8.840807473817172
+    },
+    {
+     "t": 3,
+     "g": 0.15612382570902505,
+     "revenue": 5444.123249289059,
+     "margin": 0.11086544395232008,
+     "nopat": 603.5651409635788,
+     "reinv_rate": 0.7806191285451253,
+     "fcf": 132.41064660437422,
+     "eps": 10.209682532168962
+    },
+    {
+     "t": 4,
+     "g": 0.13810613632202148,
+     "revenue": 6195.99007690926,
+     "margin": 0.11074180910198864,
+     "nopat": 686.1551502949012,
+     "reinv_rate": 0.6905306816101073,
+     "fcf": 212.34396667147743,
+     "eps": 11.606744288014395
+    },
+    {
+     "t": 5,
+     "g": 0.1200884469350179,
+     "revenue": 6940.056902470075,
+     "margin": 0.11061817425165721,
+     "nopat": 767.6964237538511,
+     "reinv_rate": 0.6004422346750895,
+     "fcf": 306.7390675230143,
+     "eps": 12.986066019477496
+    },
+    {
+     "t": 6,
+     "g": 0.10207075754801433,
+     "revenue": 7648.433767931522,
+     "margin": 0.11049453940132577,
+     "nopat": 845.11016632914,
+     "reinv_rate": 0.5103537877400716,
+     "fcf": 413.80499188542154,
+     "eps": 14.295567979877237
+    },
+    {
+     "t": 7,
+     "g": 0.08405306816101074,
+     "revenue": 8291.308092752446,
+     "margin": 0.11037090455099433,
+     "nopat": 915.119174108067,
+     "reinv_rate": 0.4202653408050537,
+     "fcf": 530.5263025243011,
+     "eps": 15.479814211649133
+    },
+    {
+     "t": 8,
+     "g": 0.06603537877400717,
+     "revenue": 8838.827763189345,
+     "margin": 0.11024726970066288,
+     "nopat": 974.4566282460426,
+     "reinv_rate": 0.33017689387003585,
+     "fcf": 652.7135655206961,
+     "eps": 16.483544427162727
+    },
+    {
+     "t": 9,
+     "g": 0.04801768938700357,
+     "revenue": 9263.247849267396,
+     "margin": 0.11012363485033144,
+     "nopat": 1020.1025236808408,
+     "reinv_rate": 0.24008844693501785,
+     "fcf": 775.1876930558154,
+     "eps": 17.25567334856111
+    },
+    {
+     "t": 10,
+     "g": 0.03,
+     "revenue": 9541.145284745418,
+     "margin": 0.11,
+     "nopat": 1049.5259813219961,
+     "reinv_rate": 0.15,
+     "fcf": 892.0970841236967,
+     "eps": 17.753389570268894
+    }
+   ],
+   "pv_fcf": 2055.1210284096705,
+   "pv_tv": 5368.659464609411,
+   "tv_share": 0.7231705557105044,
+   "pv_oi": 0.0,
+   "ev": 7423.780493019081,
+   "equity": 6390.280493019081,
+   "value_ps": 122.89000948113618,
+   "cum_dist_ps_5y": 10.623135957981049,
+   "value5_ps": 192.7996559703136,
+   "dcf_pe5": 14.846656075915364,
+   "max_reinv_rate": 0.960796022415161
+  }
+ },
+ "scenarios": {
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.3,
+    "growth": 0.01,
+    "growth_end": 0.02,
+    "margin_end": 0.085,
+    "roiic": 0.12,
+    "exit_pe": 13.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 10.231089983341716,
+    "value_ps": 50.334923125911686,
+    "value_vs_price": -0.590406679746833,
+    "eps5": 5.933120455111959,
+    "eps_cagr5": -0.012866498981044527,
+    "dist_ps_5y": 23.302181530551827,
+    "mult5": 0.8172572825047384,
+    "tv_share": 0.46494073643972594,
+    "nonop5_ps": 0.0
+   },
+   {
+    "name": "base",
+    "prob": 0.5,
+    "growth": 0.05,
+    "growth_end": 0.03,
+    "margin_end": 0.11,
+    "roiic": 0.2,
+    "exit_pe": 16.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 13.247884086928215,
+    "value_ps": 78.10974619872164,
+    "value_vs_price": -0.364392983979806,
+    "eps5": 7.865190260534995,
+    "eps_cagr5": 0.044386151689075115,
+    "dist_ps_5y": 23.9123966096302,
+    "mult5": 1.2186137259190342,
+    "tv_share": 0.5498244227479419,
+    "nonop5_ps": 0.0
+   },
+   {
+    "name": "bull",
+    "prob": 0.18,
+    "growth": 0.08,
+    "growth_end": 0.04,
+    "margin_end": 0.13,
+    "roiic": 0.25,
+    "exit_pe": 19.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 15.58602672022397,
+    "value_ps": 108.68419597410599,
+    "value_vs_price": -0.11559772175029714,
+    "eps5": 9.676202992578359,
+    "eps_cagr5": 0.08857975228458614,
+    "dist_ps_5y": 25.405452266107584,
+    "mult5": 1.7027692173903197,
+    "tv_share": 0.5988555664618501,
+    "nonop5_ps": 0.0
+   }
+  ],
+  "blowup": {
+   "prob": 0.02,
+   "multiple": 0.3,
+   "note": "permanent loss of Jones Act protection (waiver made permanent or repeal) during an inland down-cycle and a data-center capex bust; debt $1.07bn + leases $0.22bn against a fleet whose resale value falls with rates"
+  },
+  "pw_value": 74.4558453124734,
+  "pw_vs_price": -0.39412608582900643,
+  "bear_value": 50.334923125911686,
+  "downside_bear": -0.590406679746833,
+  "p_value_below_price": 1.0,
+  "p_ge_3x": 0.005984623591077249,
+  "p_ge_2x": 0.078347248207128,
+  "p_ge_5x": 3.0324394045242453e-05,
+  "p_le_half": 0.0359684966772052,
+  "p_blowup": 0.02,
+  "ev_mult5": 1.166982506841196,
+  "ev_cagr5": 0.031366139727888154,
+  "median_mult5": 1.1373558673965556,
+  "hurdle_mult5": 1.4693280768000005
+ },
+ "twin": {
+  "pe0": 19.41390205371248,
+  "eps0": 6.33,
+  "horizon": 5.0,
+  "exit_pes": [
+   9.7,
+   14.6,
+   19.4,
+   19.7,
+   21.5
+  ],
+  "table": [
+   {
+    "target": 2,
+    "cells": [
+     {
+      "exit_pe": 9.7,
+      "eps_cagr": 0.31969696864936026,
+      "rerating_share": -1.001033466039002
+     },
+     {
+      "exit_pe": 14.6,
+      "eps_cagr": 0.21606837620787944,
+      "rerating_share": -0.4111217493461123
+     },
+     {
+      "exit_pe": 19.4,
+      "eps_cagr": 0.1488629394378882,
+      "rerating_share": -0.0010334660390018781
+     },
+     {
+      "exit_pe": 19.7,
+      "eps_cagr": 0.1453423534843381,
+      "rerating_share": 0.021105511230246798
+     },
+     {
+      "exit_pe": 21.5,
+      "eps_cagr": 0.125488013205993,
+      "rerating_share": 0.1472465413633307
+     }
+    ]
+   },
+   {
+    "target": 3,
+    "cells": [
+     {
+      "exit_pe": 9.7,
+      "eps_cagr": 0.43117410903540554,
+      "rerating_share": -0.6315817980447693
+     },
+     {
+      "exit_pe": 14.6,
+      "eps_cagr": 0.3187918258436684,
+      "rerating_share": -0.2593889440028091
+     },
+     {
+      "exit_pe": 19.4,
+      "eps_cagr": 0.2459094267956008,
+      "rerating_share": -0.0006520444733119251
+     },
+     {
+      "exit_pe": 19.7,
+      "eps_cagr": 0.24209145071090066,
+      "rerating_share": 0.013316094999499237
+     },
+     {
+      "exit_pe": 21.5,
+      "eps_cagr": 0.22055997914328218,
+      "rerating_share": 0.09290222405661565
+     }
+    ]
+   },
+   {
+    "target": 5,
+    "cells": [
+     {
+      "exit_pe": 9.7,
+      "eps_cagr": 0.5851202744959736,
+      "rerating_share": -0.43112164766995614
+     },
+     {
+      "exit_pe": 14.6,
+      "eps_cagr": 0.46064944005540753,
+      "rerating_share": -0.17706049995749587
+     },
+     {
+      "exit_pe": 19.4,
+      "eps_cagr": 0.3799273478545766,
+      "rerating_share": -0.00044508959656307186
+     },
+     {
+      "exit_pe": 19.7,
+      "eps_cagr": 0.37569868604383583,
+      "rerating_share": 0.009089648933022033
+     },
+     {
+      "exit_pe": 21.5,
+      "eps_cagr": 0.35185115281493395,
+      "rerating_share": 0.06341563362257077
+     }
+    ]
+   }
+  ],
+  "hist_eps_cagr": 0.044,
+  "hist_eps_note": "diluted EPS 4.11 (2015) -> 6.33 (2025), 10 years [XBRL]; trough-to-peak 2.37 (2019) -> 6.33 is 17.8%/yr, which is cycle, not trend"
+ },
+ "temperature": {
+  "pes": {
+   "trailing (price / base EPS)": 19.41390205371248,
+   "forward EPS": 16.973756906077348
+  },
+  "n_hist": 9,
+  "own_median": 21.5,
+  "sector_median": 19.7,
+  "sector": {
+   "Matson (Jones Act liner)": 14.5,
+   "Cummins (engine OEM)": 19.7,
+   "Generac (FY25 EPS depressed, not comparable)": 71.8
+  },
+  "rows": [
+   {
+    "basis": "trailing (price / base EPS)",
+    "pe": 19.41390205371248,
+    "vs_own": 0.9029721885447665,
+    "own_band": "NORMAL",
+    "pctile": 0.3333333333333333,
+    "vs_sector": 0.9854772616097706,
+    "sector_band": "NORMAL"
+   },
+   {
+    "basis": "forward EPS",
+    "pe": 16.973756906077348,
+    "vs_own": 0.7894770653989465,
+    "own_band": "COOL",
+    "pctile": 0.2222222222222222,
+    "vs_sector": 0.8616120256892055,
+    "sector_band": "COOL"
+   }
+  ]
+ },
+ "sensitivity": {
+  "coe_x_growth": {
+   "rows": [
+    [
+     0.075,
+     [
+      97.68933719847557,
+      109.36708550669255,
+      122.2880719496861,
+      143.37897849664222,
+      168.14697975750002
+     ]
+    ],
+    [
+     0.085,
+     [
+      77.89049042991881,
+      86.6056233039486,
+      96.18319909159503,
+      111.54609612289164,
+      129.4478004323692
+     ]
+    ],
+    [
+     0.095,
+     [
+      64.09743934067015,
+      70.79955852892164,
+      78.10974619872164,
+      89.62797543795183,
+      102.93480451257204
+     ]
+    ],
+    [
+     0.105,
+     [
+      53.91398077220473,
+      59.17059510066686,
+      64.85611522969549,
+      73.65025916879995,
+      83.71232887596382
+     ]
+    ],
+    [
+     0.115,
+     [
+      46.07102227030695,
+      50.24751541110576,
+      54.72190328077885,
+      61.5095736828232,
+      69.1904108795384
+     ]
+    ]
+   ],
+   "cols": [
+    -0.06,
+    -0.03,
+    0.0,
+    0.03,
+    0.06
+   ]
+  },
+  "tg_x_margin": {
+   "rows": [
+    [
+     0.019999999999999997,
+     [
+      61.083829442164465,
+      67.70508131329919,
+      74.32633318443392,
+      80.94758505556867,
+      87.5688369267034
+     ]
+    ],
+    [
+     0.03,
+     [
+      64.17934918112714,
+      71.1445476899244,
+      78.10974619872164,
+      85.07494470751891,
+      92.04014321631614
+     ]
+    ],
+    [
+     0.04,
+     [
+      68.31621887835834,
+      75.74106957573684,
+      83.16592027311536,
+      90.59077097049385,
+      98.01562166787235
+     ]
+    ]
+   ],
+   "cols": [
+    0.09,
+    0.1,
+    0.11,
+    0.12,
+    0.13
+   ]
+  }
+ },
+ "version": "1.2 (2026-11-23; non_operating_growth adds non-operating value to the 5-year multiple; 1.1 added bank mode)",
+ "generated": "2026-11-23"
+}
