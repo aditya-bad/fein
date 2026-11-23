@@ -220,3 +220,10 @@ lottery profile (median −10%, hit rate ~40%, a few +500–970% winners), not a
 de-SPAC/transformation = look harder; big change = read the diff). Next text test: the Indian annual-report pilot.
 Meta-lesson: 1 of 6 signal tests so far survived fresh data (Indian PEAD avoid leg) — base rate for "published
 anomaly works for us" is low, as McLean–Pontiff predicted.
+
+## L31 (2026-11-23) — Our one proven signal survives the survivorship check
+PEAD avoid leg with dead firms included (2018–25, weekly closes, pre-registered): bottom quintile −2.43% vs
+size-matched controls at 13 weeks (t −6.2) vs −2.08% live-only → bias small and in the predicted direction
+(live-only understated the avoid leg). Long leg +1.00% net — not proven for the third time. Descriptive: distress-
+listed firms after a bottom-two-quintile result lagged controls by −16.6% → combine the PEAD avoid flag with
+pledge/solvency flags (stage 2 + 3 together). Status of the avoid leg: confirmed in 3 independent checks.

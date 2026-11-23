@@ -101,3 +101,102 @@ t across quarters; 95% bootstrap CI resampling quarters (5,000 draws, seed 1). *
   `delisted_compulsory_delisting` / `delisted_delisting_liquidation`, so those were not counted as distress. Fixed;
   sampled distress-listed firms 77 → 80. The sample and its order are unchanged (checked). It only affects the S1
   sensitivity.
+- 2026-11-23 (resumed after a usage-limit pause): fetch complete. Screener: 131 of 147 sampled MISSING firms have a weekly price series (66 from the solvency cache, 65 fetched; 16 no page). NSE: 61 'ok', 70 out of the ₹400–60,000 cr pre-filter range, 16 skipped (no prices). Event build and analysis run next, unchanged.
+- 2026-11-23: `s4_events.py` and `s5_analyze.py` ran once, unchanged from the pre-registered rules. Results below.
+
+---
+
+# RESULTS (written 2026-11-23 after the run; everything above is the unchanged pre-registration and log)
+
+## Funnel and survivorship audit
+| step | count |
+|---|---|
+| NSE quarterly filers 2018-01 → 2025-03 | 2,403 symbols |
+| MISSING (not in v1's frame): dead/left 347 + off-series 30 | 377 |
+| sampled at f = 0.3908 (seed 20261122) | **147** (80 on a distress list) |
+| no screener page or price series | 16 (all *not* distress-listed: mostly old mergers / renamed firms) |
+| mcap never ₹400–60,000 cr in 2018–25 (v1 pre-filter) | **70 (49 of them distress-listed)** |
+| results fetched, no eligible event (no SUE history, < ₹500 cr at entry, or filing after trading stopped) | 20 (15 distress) |
+| **firms contributing events** | **41 (16 distress-listed)** |
+| MISSING events / ALL events | **468 / 10,242 (4.6%)**; 332 in 2018–21, 136 in 2022–25 |
+
+LIVE re-run on weekly closes: 580 firms, 9,774 events (v1 daily: 9,782 EPS-SUE events). Of the 468 MISSING events only
+19 had the price series end inside the 13-week window. Most dead firms stopped filing results well before their
+shares stopped trading (bias 5), so the delisting-return rules (S1 −30% penalty, S2 drop) barely move anything.
+**The main reason dead firms matter little here: most Indian failures were already below ₹400–500 cr by the time
+they were in trouble** (49 of 80 sampled distress firms never reached the band in 2018–25). MISSING is about half
+failures (JP Associates, Future Consumer / Lifestyle, Max Ventures, Nagarjuna Fertilizers, Manpasand, Rolta,
+Kwality, JBF, Amtek Auto…) and half mergers / buy-outs at a premium (Piramal Enterprises, Tata Coffee, JMC Projects,
+Cigniti, Ujjivan, Equitas, the merged PSU banks…). Firm list: `india_pead_survivorship_outputs/missing_sample.csv`.
+
+## Verdicts (13 weeks ≈ 63 trading days; all events 2018–2025; 32 fiscal quarters; bootstrap over quarters)
+| | ALL (live + missing) | LIVE (weekly re-run) | bias = ALL − LIVE (paired) | verdict |
+|---|---|---|---|---|
+| **H1** bottom quintile vs controls | **−2.43% [−3.18, −1.66], t −6.17** | −2.08% [−2.73, −1.42], t −6.00 | **−0.35 pp [−0.82, +0.06]**, t −1.48 | **H1 SUPPORTED** (≤ −1%, t < −3); stronger with the dead firms in, as expected |
+| **H2** top quintile net of 1% | **+1.00% [−0.03, +2.20], t 1.72** (gross +2.00%, t 3.44) | +0.76% [−0.25, +1.86], t 1.37 | +0.25 pp [−0.03, +0.53], t 1.70 | **H2 NOT PROVEN** (CI touches 0, t < 3), third time |
+| top − bottom (raw) | +4.39% [+2.86, +5.91], t 5.55 | +3.81% [+2.44, +5.19], t 5.20 | +0.57 pp [−0.01, +1.19], t 1.84 | — |
+| all events vs controls | +0.01% | +0.02% | −0.02 pp | controls calibrated |
+
+**H3 (how much survivorship bias the live-only universe carried):** survivors-only data *understated* the avoid leg by
+**0.35 pp** (−2.08% → −2.43%) and the top-minus-bottom spread by **0.57 pp**, and understated the top leg's excess by
+0.25 pp. **None is "material" by the pre-registered rule** (|bias| ≥ 0.5 pp and CI excluding 0): the T−B bias reaches
+0.57 pp but its CI touches −0.01. The bias is larger in 2018–21, where the deaths are: bottom −0.66 pp [−1.58, +0.15],
+T−B +1.02 pp [−0.14, +2.16]; in 2022–25 it is ≈ 0 (−0.04 / +0.13 pp).
+
+**Where the bias comes from (decomposition, 13 weeks, full period):**
+- *Event side:* the dead firms' own events push the bottom quintile down by 0.56 pp; the top quintile is unchanged.
+- *Control side:* adding dead firms to the size-matched controls lowers control returns, which lifts every excess
+  return by ~0.2–0.25 pp. This is why the top leg looks *better*, not worse, with the dead firms in.
+- MISSING firms' events lag controls in every quintile (event level, 13w: Q1 −7.3%, Q2 −5.1%, Q3 −3.6%, Q4 −0.8%,
+  Q5 −2.4%). **Distress-listed firms after a bottom-two-quintile result: −16.6% mean (median −16.6%, 71 events);**
+  distress-listed firms in Q3–Q5 −8.4% (67). Non-distress missing firms (mostly mergers): about −0.4% to −0.9%.
+
+## Robustness (does not overturn H1/H2)
+| 13 weeks, full period | bottom | top net 1% | T−B |
+|---|---|---|---|
+| S1: −30% delisting return for distress firms whose series ends in the window | −2.44% (t −6.18) | +1.01% (t 1.73) | +4.40% |
+| S2: survivors-style, drop events whose window is not fully traded | −2.44% (t −6.25) | +1.00% (t 1.71) | +4.39% |
+| S3: without off-series firms | −2.33% (t −6.38) | +1.00% (t 1.68) | +4.27% |
+| ALL, 2018–21 / 2022–25 | −3.07% (t −5.18) / −1.78% (t −3.70) | +0.98% / +1.02% | +5.18% / +3.60% |
+| ALL, 4 weeks | −0.83% (t −3.62) | −0.60% | +1.22% |
+| ALL, 26 weeks | −3.94% (t −5.20) | **+2.23% [+0.49, +4.07], t 2.40** | +7.22% |
+
+The avoid leg holds in both sub-periods, at every horizon, and under every delisting rule. At 26 weeks the long leg's
+net CI excludes zero but t is 2.40 < 3, and 26 weeks is not the primary horizon (as in v1, it is not used to rescue H2).
+
+**Weekly vs daily calibration.** The LIVE weekly re-run gives bottom −2.08% / top +1.76% / T−B +3.81% over 2018–25,
+against v1's daily figures on the same firms of −2.42% / +2.08% / +4.54% (v1 events through the same functions).
+Weekly closes cost about 0.3 pp per leg (entry up to four trading days later, so some of the drift is missed). The
+ALL-vs-LIVE comparison is weekly on both sides, so this does not affect H3. Daily ALL figures would be about 0.3 pp
+stronger on each leg.
+
+## What it means
+1. **The avoid leg survives the survivorship check and gets a little stronger.** Lesson L19's rule (treat the bottom
+   two SUE quintiles as an avoid/exit flag for ≥ 63 trading days) stands. With the dead firms back in, it is −2.4% vs
+   controls per quarter, t ≈ −6, 2018–2025.
+2. **The live-only universe was a mild, not a fatal, bias** (≈ 0.35 pp on the avoid leg, ≈ 0.6 pp on T−B, both pointing
+   the way v1 §4 predicted). Unlike lesson L28 (pledges), the conclusion does not flip. The reason is the ₹500 cr
+   floor: most failures fell below it before they failed.
+3. **The cheapest edge is the overlap with distress:** a big earnings miss at a firm that later lands on a distress
+   list lost −16.6% vs controls in 13 weeks. That supports pairing the PEAD avoid flag with the stage-2 solvency /
+   pledge flags (L27, L28). This is descriptive only (71 events, 16 firms, picked by later fate), not a tested rule.
+4. **The long leg is still not proven net of costs** (+1.0%, t 1.7). No change to "don't buy on a positive surprise
+   alone."
+
+## Caveats
+- MISSING is a 39% sample (147 of 377). Only 41 firms and 468 events contribute, so the bias CIs are wide, and a
+  different seed could move the bias by a few tenths of a point.
+- 16 sampled firms (11%) had no screener page or price series. None was distress-listed, so this loss is mostly
+  mergers and probably does not affect the bottom leg.
+- Dead firms' mcap uses adjusted price × shares without split un-adjustment, and their EPS has no split adjustment
+  (pre-registered bias 4). Standalone EPS throughout (v1 D1). Price returns only.
+- Weekly closes for everyone (see calibration). Screener's weekly close is labelled with the Friday.
+- Firms that stopped filing before their shares stopped trading drop out of the event set before the collapse. This is
+  the realistic case (no fresh SUE exists), but it means "avoid after a miss" cannot catch a firm that goes silent;
+  a missed filing deadline is a separate red flag.
+- Fetching: one stream per host (NSE and screener in parallel, each ≥ 1.5 s); logged above.
+
+Scripts: `tools/backtests/india_pead_survivorship/` (common, s1_filers, s2_missing, s3_fetch, s4_events, s5_analyze).
+Outputs: `research_notes/Backtests/india_pead_survivorship_outputs/` (results.json, tables.md, events_w.tsv,
+missing_sample.csv, funnel_audit.json). Raw cache: scratchpad `bt_pead_surv/` (not durable). Research, not
+SEBI-registered advice.

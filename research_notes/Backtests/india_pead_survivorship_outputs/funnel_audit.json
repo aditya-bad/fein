@@ -1,0 +1,59 @@
+{
+ "audit": {
+  "no_screener_page | other | dead": 16,
+  "ok | distress | dead": 12,
+  "ok | distress | offser": 4,
+  "ok | other | dead": 24,
+  "ok | other | offser": 1,
+  "ok_no_eligible_event | distress | dead": 12,
+  "ok_no_eligible_event | distress | offser": 3,
+  "ok_no_eligible_event | other | dead": 4,
+  "ok_no_eligible_event | other | offser": 1,
+  "out_of_range | distress | dead": 43,
+  "out_of_range | distress | offser": 6,
+  "out_of_range | other | dead": 21
+ },
+ "missing_meta": {
+  "windows": 379,
+  "windows_failed": 0,
+  "filer_symbols": 2403,
+  "counts": {
+   "in_v1_frame": 1779,
+   "dead": 347,
+   "eq_listed_after_2023-06_or_renamed": 247,
+   "offser": 30
+  },
+  "missing": 377,
+  "f": 0.3908431044109436,
+  "sampled": 147,
+  "sampled_by_cls": {
+   "dead": 132,
+   "offser": 15
+  },
+  "sampled_distress": 80
+ },
+ "s4_funnel": {
+  "L_status_ok": 580,
+  "L_status_out_of_range": 119,
+  "L_unit_rescaled": 37,
+  "L_status_no_quarters": 1,
+  "M_status_out_of_range": 70,
+  "M_no_results_file": 16,
+  "M_status_ok": 61,
+  "M_unit_rescaled": 9,
+  "L_ev_in_window": 15977,
+  "L_drop_mcap_range": 3989,
+  "L_drop_no_sue": 2187,
+  "L_events_kept": 9774,
+  "L_drop_short_history": 7,
+  "L_drop_late_filing": 19,
+  "L_drop_price_gap": 1,
+  "M_ev_in_window": 1150,
+  "M_events_kept": 468,
+  "M_drop_mcap_range": 443,
+  "M_drop_no_entry_px": 78,
+  "M_drop_no_sue": 131,
+  "M_drop_price_gap": 18,
+  "M_drop_late_filing": 12
+ }
+}

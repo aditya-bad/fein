@@ -1,0 +1,148 @@
+symbol,name,cls,distress,tags,screener,px_last,nse,events
+SRPL,Shree Ram Proteins Limited,dead,0,,fetched,2026-08-10,out_of_range,0
+SHRIASTER,Shri Aster Silicates Limited,dead,1,bse_delisted|ibbi_cirp|ibbi_liq|nse_delisted:delisted_compulsory_delisting,solv_cache,2017-05-02,ok,0
+NAGAFERT,Nagarjuna Fertilizers and Chemicals Limited,dead,1,bse_suspended,solv_cache,2026-11-16,ok,15
+SRIPIPES,Srikalahasthi Pipes Limited,dead,0,bse_delisted,fetched,2022-01-12,ok,16
+INFINITE,Infinite Computer Solutions (India) Limited,dead,0,bse_delisted|nse_delisted:delisted_voluntary_delisting,fetched,2018-12-13,ok,4
+LEEL,LEEL Electricals Limited,dead,1,bse_suspended|ibbi_cirp|ibbi_liq,solv_cache,2020-03-09,ok,2
+BKMINDST,Bkm Industries Limited,dead,1,bse_suspended|ibbi_cirp,solv_cache,2024-11-25,out_of_range,0
+XLENERGY,XL Energy Limited,dead,1,bse_suspended|ibbi_cirp,solv_cache,2020-03-09,out_of_range,0
+SGFL,Shree Ganesh Forgings Limited,dead,0,bse_delisted,fetched,2019-10-22,ok,0
+RNAVAL,Reliance Naval and Engineering Limited,dead,0,,no_page,,no_prices,0
+ECEIND,ECE Industries Limited,dead,0,bse_delisted|nse_delisted:delisted_voluntary_delisting,fetched,2019-05-09,out_of_range,0
+FIRSTWIN,First Winner Industries Limited,dead,1,bse_delisted|nse_delisted:delisted_compulsory_delisting,solv_cache,2018-11-26,out_of_range,0
+KWALITY,kwality limited,dead,1,bse_delisted|ibbi_cirp|ibbi_liq,solv_cache,2021-02-23,ok,2
+OSIAHYPER,Osia Hyper Retail Limited,offser,1,ibbi_cirp,solv_cache,2026-11-20,ok,0
+VIVIMEDLAB,Vivimed Labs Limited,offser,1,ibbi_cirp,solv_cache,2026-11-20,ok,3
+LAKPRE,Lakshmi Precision Screws Limited,offser,1,bse_delisted|ibbi_cirp,solv_cache,2026-11-20,out_of_range,0
+BLUEBLENDS,Blue Blends (I) Limited,dead,1,nse_suspended,solv_cache,2020-10-26,out_of_range,0
+BILENERGY,Bil Energy Systems Limited,dead,0,,fetched,2021-08-02,out_of_range,0
+BIRLATYRE,Birla Tyres Limited,dead,1,bse_delisted|ibbi_cirp,fetched,2023-10-23,ok,0
+TATAMTRDVR,Tata Motors Limited,dead,0,,fetched,2024-08-29,ok,0
+ORIENTBANK,Oriental Bank of Commerce,dead,0,bse_delisted,solv_cache,2020-03-20,ok,9
+RMCL,Radha Madhav Corporation Limited,dead,1,bse_suspended|ibbi_cirp,solv_cache,2023-12-21,out_of_range,0
+PEL,Piramal Enterprises Limited,dead,0,bse_delisted,fetched,2025-09-22,ok,29
+ANKITMETAL,Ankit Metal & Power Limited,offser,1,ibbi_cirp,solv_cache,2026-11-20,out_of_range,0
+KARUNACAB,Karuna Cables Limited,dead,1,bse_delisted|nse_delisted:delisted_voluntary_delisting|nse_suspended,solv_cache,2022-06-13,out_of_range,0
+TATASTLBSL,Tata Steel Bsl Limited,dead,0,bse_delisted,fetched,2021-11-12,ok,16
+JAINSTUDIO,Jain Studios Limited,dead,1,bse_suspended|ibbi_cirp,solv_cache,2022-07-26,out_of_range,0
+OCL,OCL India Limited,dead,0,bse_delisted,fetched,2018-10-24,ok,3
+JSLHISAR,Jindal Stainless (Hisar) Limited,dead,0,bse_delisted,fetched,2023-03-08,ok,20
+BAFNAPHARM,Bafna Pharmaceuticals Limited,dead,0,,no_page,,no_prices,0
+DIL,Debock Industries Limited,dead,0,,fetched,2026-08-31,out_of_range,0
+SABEVENTS,Sab Events & Governance Now Media Limited,dead,1,bse_suspended|ibbi_cirp,solv_cache,2026-08-04,out_of_range,0
+RAMGOPOLY,Ramgopal Polytex Limited,dead,1,nse_delisted:delisted_voluntary_delisting|nse_suspended,solv_cache,2026-11-20,out_of_range,0
+ALBK,Allahabad Bank,dead,0,bse_delisted,solv_cache,2020-03-19,ok,8
+ORTEL,Ortel Communications Limited,offser,1,ibbi_cirp,solv_cache,2026-11-20,out_of_range,0
+VISESHINFO,Visesh Infotecnics Limited,dead,0,,fetched,2024-12-02,ok,1
+UNITEDBNK,United Bank of India,dead,0,bse_delisted,fetched,2020-03-20,ok,9
+EON,Eon Electric Limited,dead,1,bse_delisted|bse_suspended|ibbi_cirp,fetched,2020-10-26,out_of_range,0
+INDUSFILA,Indus Fila Limited,dead,1,bse_suspended|ibbi_cirp|nse_delisted:delisted_compulsory_delisting,solv_cache,2015-11-30,ok,0
+UJJIVAN,Ujjivan Financial Services Limited,dead,0,bse_delisted,fetched,2024-05-02,ok,14
+AURIGROW,Auri Grow India Limited,dead,0,,fetched,2026-07-07,out_of_range,0
+MANPASAND,Manpasand Beverages Limited,dead,1,bse_delisted|ibbi_cirp,fetched,2020-06-29,ok,6
+SABTN,Sri Adhikari Brothers Television Network Limited,dead,0,,no_page,,no_prices,0
+RAINBOWPAP,Rainbow Papers Limited,dead,1,bse_suspended|ibbi_cirp|ibbi_liq,solv_cache,2020-02-03,out_of_range,0
+HANUNG,Hanung Toys and Textiles Limited,dead,1,bse_delisted|nse_delisted:delisted_delisting_liquidation,solv_cache,2018-10-11,out_of_range,0
+JAIHINDPRO,Jaihind Projects Limited,dead,1,bse_delisted|ibbi_cirp,fetched,2021-01-25,out_of_range,0
+EUROMULTI,Euro Multivision Limited,dead,1,bse_suspended|ibbi_cirp|ibbi_liq,solv_cache,2021-12-13,out_of_range,0
+PANORAMUNI,Panoramic Universal Limited,dead,1,bse_delisted|nse_delisted:delisted_compulsory_delisting,solv_cache,2019-04-01,out_of_range,0
+SIMPLEX,Simplex Projects Limited,dead,1,bse_delisted|ibbi_cirp,solv_cache,2021-12-13,out_of_range,0
+GUJNRECOKE,Gujarat NRE Coke Limited,dead,0,bse_delisted,fetched,2018-02-09,out_of_range,0
+FCONSUMER,Future Consumer Limited,dead,1,bse_suspended|ibbi_cirp,solv_cache,2026-08-31,ok,17
+ICSA,ICSA (India) Limited,dead,1,bse_suspended|ibbi_cirp|ibbi_liq,solv_cache,2020-03-09,out_of_range,0
+HMT,HMT Limited,offser,0,,fetched,2026-11-20,ok,27
+AUTOLITIND,Autolite (India) Limited,dead,0,bse_delisted,fetched,2021-10-04,out_of_range,0
+SANGHIIND,Sanghi Industries Limited,dead,0,bse_delisted,fetched,2026-04-02,ok,32
+EMCO,Emco Limited,dead,0,bse_delisted,fetched,2021-10-26,out_of_range,0
+JVLAGRO,JVL Agro Industries Limited,dead,1,bse_delisted|ibbi_cirp|ibbi_liq,fetched,2020-09-08,ok,0
+ANSALAPI,Ansal Properties & Infrastructure Limited,offser,1,ibbi_cirp,solv_cache,2026-11-20,ok,0
+THIRUSUGAR,Thiru Arooran Sugars Limited,dead,1,bse_delisted|ibbi_cirp|ibbi_liq,fetched,2021-05-31,out_of_range,0
+INDSWFTLTD,Ind-Swift Limited,dead,1,bse_delisted|ibbi_cirp,fetched,2025-08-13,out_of_range,0
+ROLTA,Rolta India Limited,dead,1,bse_delisted|ibbi_cirp,fetched,2025-12-17,ok,3
+CURATECH,Cura Technologies Limited,dead,0,,no_page,,no_prices,0
+ERAINFRA,Era Infra Engineering Limited,dead,1,bse_suspended|ibbi_cirp|nse_delisted:delisted_compulsory_delisting,solv_cache,2016-09-12,ok,0
+PEPL,Pearl Engineering Polymers Limited,dead,1,bse_delisted|nse_delisted:delisted_compulsory_delisting|nse_suspended,solv_cache,2012-10-09,ok,0
+SICAL,Sical Logistics Limited,dead,0,,no_page,,no_prices,0
+LITL,Lanco Infratech Limited,dead,1,bse_delisted|ibbi_cirp|ibbi_liq|nse_delisted:delisted_delisting_liquidation,solv_cache,2018-09-12,ok,0
+NARMADASUG,Girdharilal Sugar and Allied Industries Limited,dead,1,ibbi_cirp|ibbi_liq|nse_suspended,solv_cache,2019-02-25,out_of_range,0
+GDL,Gateway Distriparks Limited,dead,0,bse_delisted,fetched,2022-01-04,ok,15
+CHROMATIC,Chromatic India Limited,dead,0,bse_delisted,fetched,2021-12-13,out_of_range,0
+EUROCERA,Euro Ceramics Limited,dead,1,bse_suspended|ibbi_cirp|ibbi_liq|ibbi_nclt,solv_cache,2021-04-15,out_of_range,0
+GTNIND,GTN Industries Limited,dead,0,,solv_cache,2026-11-20,out_of_range,0
+MANDHANA,Mandhana Industries Limited,dead,0,,no_page,,no_prices,0
+UDAICEMENT,Udaipur Cement Works Limited,dead,0,bse_delisted,fetched,2025-08-22,ok,0
+MAXVIL,Max Ventures and Industries Limited,dead,1,bse_delisted|bse_suspended,fetched,2023-08-10,ok,17
+COMPINFO,Compuage Infocom Limited,dead,0,,fetched,2026-11-19,ok,0
+FEDDERELEC,Fedders Electric and Engineering Limited,dead,1,bse_delisted|ibbi_cirp,fetched,2019-06-17,out_of_range,0
+OCCL,Oriental Carbon & Chemicals Limited,dead,0,bse_delisted,fetched,2026-11-20,out_of_range,0
+BSLIMITED,BS Limited,dead,0,,fetched,2018-11-26,out_of_range,0
+HINDNATGLS,Hindusthan National Glass & Industries Limited,dead,1,bse_delisted|ibbi_cirp,fetched,2025-09-02,ok,6
+JIKIND,JIK Industries Limited,dead,0,bse_delisted,fetched,2023-02-27,out_of_range,0
+SHIRPUR-G,Shirpur Gold Refinery Limited,dead,1,bse_suspended|ibbi_cirp,solv_cache,2021-12-13,ok,0
+SANWARIA,Sanwaria Consumer Limited,offser,1,ibbi_cirp,solv_cache,2026-11-20,ok,5
+POCHIRAJU,Pochiraju Industries Limited,dead,0,bse_delisted,fetched,2019-07-29,out_of_range,0
+PBAINFRA,PBA Infrastructure Limited,dead,1,ibbi_cirp,solv_cache,2026-11-20,out_of_range,0
+CRANESSOFT,Cranes Software International Limited,dead,1,nse_delisted:delisted_voluntary_delisting|nse_suspended,solv_cache,2026-11-20,out_of_range,0
+EDUCOMP,Educomp Solutions Limited,dead,1,bse_suspended|ibbi_cirp,solv_cache,2026-11-16,out_of_range,0
+PETRONENGG,Petron Engineering Construction Limited,dead,1,bse_delisted|ibbi_cirp|ibbi_liq,fetched,2020-02-18,out_of_range,0
+PRADIP,Pradip Overseas Limited,dead,1,bse_delisted|ibbi_cirp,solv_cache,2021-10-14,out_of_range,0
+PRESSMN,Pressman Advertising Limited,dead,0,bse_delisted,fetched,2023-09-21,ok,1
+AMTEKAUTO,Amtek Auto Limited,dead,1,bse_delisted|ibbi_cirp,solv_cache,2019-04-01,ok,1
+SANGHVIFOR,Sanghvi Forging and Engineering Limited,dead,1,bse_delisted|ibbi_cirp,fetched,2021-04-30,out_of_range,0
+MANGCHEFER,Mangalore Chemicals & Fertilizers Limited,dead,0,bse_delisted,fetched,2025-10-30,ok,22
+VALECHAENG,Valecha Engineering Limited,dead,1,bse_suspended|ibbi_cirp,solv_cache,2017-06-19,ok,0
+GTNTEX,GTN Textiles Limited,dead,0,,fetched,2026-11-20,out_of_range,0
+CORPBANK,Corporation Bank,dead,0,,fetched,2020-03-19,ok,8
+ABMINTLTD,ABM International Limited,dead,0,,no_page,,no_prices,0
+KTIL,Kesar Terminals & Infrastructure Limited,dead,1,ibbi_cirp|nse_delisted:delisted_voluntary_delisting,solv_cache,2026-11-19,out_of_range,0
+LASA,Lasa Supergenerics Limited,dead,1,bse_suspended,solv_cache,2026-11-16,ok,0
+ORCHIDPHAR,Orchid Pharma Limited,dead,0,,no_page,,no_prices,0
+MORARJEE,Morarjee Textiles Limited,offser,1,bse_delisted|ibbi_cirp,solv_cache,2026-11-20,out_of_range,0
+SITASHREE,Sita Shree Food Products Limited,dead,0,bse_delisted,fetched,2020-03-09,out_of_range,0
+SELMCL,SEL Manufacturing Company Limited,dead,0,,no_page,,no_prices,0
+JMCPROJECT,JMC Projects (India)  Limited,dead,0,,fetched,2023-01-10,ok,17
+SANCO,Sanco Industries Limited,dead,0,,fetched,2026-06-04,out_of_range,0
+JBFIND,JBF Industries Limited,dead,1,bse_delisted|bse_suspended|ibbi_cirp,fetched,2023-10-03,ok,2
+ANSALHSG,Ansal Housing Limited,dead,0,bse_delisted,fetched,2026-11-20,out_of_range,0
+BALLARPUR,Ballarpur Industries Limited,dead,1,bse_suspended|ibbi_cirp|ibbi_liq,solv_cache,2023-06-22,out_of_range,0
+VITALCOMM,Vital Communications Limited,dead,1,bse_delisted|nse_delisted:delisted_compulsory_delisting|nse_suspended,solv_cache,2012-07-10,ok,0
+MIC,MIC Electronics Limited,dead,0,,no_page,,no_prices,0
+TANTIACONS,Tantia Constructions Limited,dead,0,,no_page,,no_prices,0
+AUSTRAL,Austral Coke & Projects Limited,dead,0,bse_delisted,fetched,2021-12-13,out_of_range,0
+CMICABLES,CMI Limited,dead,1,bse_suspended|ibbi_cirp,solv_cache,2026-11-16,out_of_range,0
+MONNETISPA,Monnet Ispat and Energy Limited,dead,0,,no_page,,no_prices,0
+SUNILHITEC,Sunil Hitech Engineers Limited,dead,0,,fetched,2019-07-16,ok,1
+ARSSINFRA,ARSS Infrastructure Projects Limited,dead,1,bse_suspended|ibbi_cirp|ibbi_liq,solv_cache,2025-09-03,out_of_range,0
+NRC,NRC Limited,dead,1,bse_delisted|ibbi_cirp|nse_delisted:delisted_compulsory_delisting,solv_cache,2015-05-25,ok,0
+NITINFIRE,Nitin Fire Protection Industries Limited,dead,0,,fetched,2022-02-10,out_of_range,0
+RHFL,Reliance Home Finance Limited,offser,1,ibbi_cirp,solv_cache,2026-11-20,ok,0
+VISUINTL,Visu International Limited,dead,1,bse_suspended,solv_cache,2018-04-02,out_of_range,0
+SYNCOM,Syncom Healthcare Limited,dead,1,bse_delisted|ibbi_cirp,solv_cache,2021-06-28,out_of_range,0
+SRSLTD,SRS Limited,dead,1,bse_delisted|ibbi_cirp|ibbi_liq,fetched,2019-11-06,out_of_range,0
+SITINET,Siti Networks Limited,offser,1,bse_delisted|ibbi_cirp,solv_cache,2026-11-20,ok,4
+MEGH,Meghmani Organics Limited,dead,0,bse_delisted,fetched,2021-05-17,ok,13
+FLFL,Future Lifestyle Fashions Limited,offser,1,ibbi_cirp|ibbi_liq,solv_cache,2026-11-20,ok,16
+PROVOGE,Provogue (India) Limited,dead,1,bse_delisted|ibbi_cirp|ibbi_liq,fetched,2019-11-14,out_of_range,0
+SUPREMEENG,Supreme Engineering Limited,offser,1,ibbi_cirp,solv_cache,2026-11-20,out_of_range,0
+EQUITAS,Equitas Holdings Limited,dead,0,bse_delisted,fetched,2023-02-02,ok,13
+JPASSOCIAT,Jaiprakash Associates Limited,dead,1,bse_delisted|ibbi_cirp,fetched,2026-03-17,ok,30
+GOLDENTOBC,Golden Tobacco Limited,offser,1,ibbi_cirp,solv_cache,2026-11-20,out_of_range,0
+ASTRON,Astron Paper & Board Mill Limited,offser,0,,fetched,2026-11-20,ok,0
+ADHUNIK,Adhunik Metaliks Limited,dead,1,bse_delisted|ibbi_cirp|ibbi_liq,solv_cache,2019-11-29,out_of_range,0
+SUBEX,Subex Limited,dead,0,,no_page,,no_prices,0
+HBSTOCK,HB Stockholdings Limited,dead,0,,no_page,,no_prices,0
+UNIVAFOODS,Univa Foods Limited,dead,1,bse_suspended,solv_cache,2026-11-16,out_of_range,0
+KHAITANELE,Khaitan Electricals Limited,dead,1,bse_delisted|ibbi_cirp|ibbi_liq,solv_cache,2019-09-16,out_of_range,0
+CEREBRAINT,Cerebra Integrated Technologies Limited,dead,1,bse_suspended,solv_cache,2026-11-16,ok,9
+SEJAL,SEJAL GLASS LIMITED,dead,0,,no_page,,no_prices,0
+HDFC,Housing Development Finance Corporation Limited,dead,0,,fetched,2023-07-12,out_of_range,0
+BARTRONICS,Bartronics India Limited,dead,0,,no_page,,no_prices,0
+ARCOTECH,Arcotech Limited,dead,0,,fetched,2021-08-30,ok,1
+ANGIND,ANG Industries Limited,dead,1,bse_delisted|ibbi_cirp|ibbi_liq|nse_delisted:delisted_delisting_liquidation,solv_cache,2019-06-04,out_of_range,0
+HINDDORROL,Hindustan Dorr-Oliver Limited,dead,1,bse_delisted|ibbi_cirp|ibbi_liq|nse_delisted:delisted_delisting_liquidation,solv_cache,2018-07-17,out_of_range,0
+TATACOFFEE,Tata Coffee Limited,dead,0,,fetched,2024-01-12,ok,24
+CIGNITITEC,Cigniti Technologies Limited,dead,0,bse_delisted,fetched,2026-05-14,ok,25
+POLARIS,POLARIS CONSULTING & SERVICES LIMITED,dead,0,bse_delisted|nse_delisted:delisted_voluntary_delisting,fetched,2022-05-19,ok,2
+SUBCAPCITY,International Constructions Limited,dead,1,nse_suspended,solv_cache,2023-01-04,out_of_range,0
+ABHISHEK,Abhishek Corporation Limited,dead,1,bse_suspended|ibbi_liq,solv_cache,2021-12-13,out_of_range,0
