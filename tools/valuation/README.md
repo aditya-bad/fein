@@ -20,7 +20,7 @@ The input is JSON. Lines that start with `#` or `//` are comments. `--json` dump
 |---|---|
 | Snapshot | Market cap, EV, P/E, EV/EBITDA, P/FCF, FCF yield, NOPAT margin |
 | (a) Reverse DCF | The revenue CAGR the price implies (margin flat, or moving to the base-case margin); the year-1 growth that fades to terminal; the margin needed on the base-case growth path; the IRR the price offers if the base case happens; a Gordon check on trailing FCF; the implied path year by year; and a **feasibility flag** when the path needs reinvestment above 100% of NOPAT |
-| (b) Scenario DCF | Bear/base/bull (+ blow-up) DCF values, a probability-weighted value, the bear downside, P(value < price); 5-year multiples from each scenario's exit P/E next to the **DCF-consistent P/E at year 5**, and an exit-multiple gap warning; P(≥2x/3x/5x), P(≤0.5x), P(blow-up), the EV of the 5-year multiple, the median and the hurdle |
+| (b) Scenario DCF | Bear/base/bull (+ blow-up) DCF values, a probability-weighted value, the bear downside, P(value < price); 5-year multiples from each scenario's exit P/E next to the **DCF-consistent P/E at year 5**, and an exit-multiple gap warning; P(≥2x/3x/5x), P(≤0.5x), P(blow-up), the EV of the 5-year multiple, the median and the hurdle; **v1.3: the exit-multiple bet table** (exit P/E used vs DCF-consistent vs own median, and the EV of the 5-year multiple under each) |
 | (c) Twin engine | EPS CAGR needed for 2x/3x/5x in N years at each exit P/E, and the share of the return that has to come from re-rating |
 | (d) Temperature | P/E against the stock's own history (needs n ≥ 5), the sector median and the market (Nifty bands from `insight:india-valuation-forward-returns`) |
 | (e) Sensitivity | Cost of equity × growth shift, and terminal growth × end margin |
@@ -46,6 +46,27 @@ The input is JSON. Lines that start with `#` or `//` are comments. `--json` dump
 - Use the **economic** margin: pre-Ind AS 116 for Indian retailers, core (ex other income) for cash-rich companies, and after SBC.
 - Every input needs a source tag or an `[EST]` with its method in `notes` (stock-research-analyst rule).
 - **Holdco-like stocks (v1.2, 2026-11-23):** put a listed stake (post-tax, after any discount you assume) in `non_operating_value` and set `non_operating_growth` (or per-scenario `nonop_growth`). The 5-year multiple then adds the stake at year 5 to EPS₅ × exit P/E, and the DCF-consistent P/E leaves the stake out. Without the key, behaviour is unchanged. Example: `live/SUNFLAG.json` (plus the steel-only stub `live/SUNFLAG_stub.json`).
+
+## v1.3 (2026-11-23, lesson L34): cash tax, reinvestment realism, exit-multiple bet
+All three are optional or display-only. With no new inputs, every number is unchanged: all 9 example and live files
+were regression-tested, and the Markdown is identical except for the version string and the new exit-bet table,
+while the JSON keeps every old key with the same value.
+- **Cash tax.** `cash_tax_rate`, or `deferred_tax_share` (deferred tax ÷ total tax expense, so cash = book × (1 − share)),
+  plus an optional `cash_tax_rate_end` (year N and the terminal value; defaults to the year-1 rate).
+  - FCF_t += NOPAT_t × (t_book − t_cash,t) ÷ (1 − t_book), and the terminal value carries the same term at the end rate.
+  - EPS stays on book tax. The cash benefit therefore reaches the 5-year multiple only through `payout_of_fcf`.
+  - Use it for capex-heavy filers with accelerated or bonus depreciation. Remember that the annual deferral shrinks once
+    capex ≈ D&A and stops growing, so fade it unless you can show otherwise.
+- **Reinvestment realism.** `incremental_roic_5y`, or `roic_history` `[{fy, nopat, invested_capital}]` (ΔNOPAT ÷ ΔIC
+  over the last ≤6 points).
+  - The worksheet then solves the **ROIIC the price implies** on the base path and flags any ROIIC used or implied
+    that is more than 5 pts from history.
+  - For cyclicals, use a full-cycle window and add impairments back: Kirby's 2022→25 window gives 128%, the
+    cross-cycle window 11.7%.
+- **Exit-multiple bet (always on, L21).** For each scenario it shows the exit P/E used, the DCF-consistent P/E at
+  year 5 and the own median P/E (n ≥ 5), plus the EV of the 5-year multiple at each of the three. It is display only:
+  the decision card's EV gate still uses the stated exit.
+- Example: `tools/decision/calibration_2026-11-23/US-KEX_v13.json`.
 
 ## Bank / NBFC mode (v1.1, 2026-11-22)
 Lenders are valued on book and ROE, not revenue/EBIT/FCF. Put `"mode": "bank"` in the input

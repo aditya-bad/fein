@@ -1,6 +1,6 @@
 # Valuation worksheet and decision card: how to use them, worked examples, design choices, known limits
 
-**Version 1.0 · 2026-11-21.** Roadmap stages **5 (valuation)** and **6 (decision)**, with the hand-off to
+**Version 1.1 · 2026-11-23** (changelog in §6; v1.0 2026-11-21). Roadmap stages **5 (valuation)** and **6 (decision)**, with the hand-off to
 **stage 7 (scorekeeping)**. Each future deep dive (stage 4) ends by filling these two templates, so every company
 comes out with the same comparable fields.
 **What it unlocks next:** stage 7 gets one dated, mechanically resolvable set of probabilities per decision
@@ -118,13 +118,15 @@ The fictional `SYNTHETIC` card shows the gates-clear path: f* 92%, ¼-Kelly 23%,
 2. **The cost-of-equity convention dominates the DCF for Indian stocks** (§2.3.1). Treat DCF value as "what the cash flows justify at our hurdle", not as a price target. The sensitivity table shows the spread: at 10.5% CoE, VMM's base value rises by ~45%.
 3. **The EPS path is approximate.** EPS scales with NOPAT + recurring other income, and treasury income is held flat. Buybacks, dilution and changes in interest are not modelled; SBC dilution must be inside the margin.
 4. **One growth path per scenario**, with linear fades. Cyclicals (Cummins' margin cycle) need a cycle-aware base year. Use a normalised margin as `nopat_margin`, not the peak.
-5. **Base rates are weak.** The India class is survivors-only and bull-biased, the US class is IPOs over 3 years, and blow-up rates are unknown everywhere. A **stage-1 task** (Pi + Kite/NSE bhavcopy + delisting lists) is to compute 5-year outcome distributions by size bucket and starting-P/E bucket, from several start dates, including delisted firms.
+5. ~~**Base rates are weak.** The India class is survivors-only and bull-biased, the US class is IPOs over 3 years, and blow-up rates are unknown everywhere.~~ *(Superseded 2026-11-23: see §6.)* **Now:** two survivorship-free 5-year classes exist, India non-financial ₹1,000–20,000 cr and US float $0.5–10B (`research_notes/Backtests/base_rates_5y.md`). Their limits are few start dates (2 and 3), no class for banks/NBFCs or large caps, and blow-up without fraud findings. Still to do in **stage 1:** more start dates and starting-P/E buckets.
 6. **The 5-year paper calls resolve slowly** (first in Nov-2031). Stage 7 also needs faster feedback, so each live card should add one or two 6–12 month calls (for example on a kill criterion or a reverse-DCF growth check). The v1 card does not generate those automatically.
-7. **The PEAD gate depends on the live tracker** (`research_notes/Backtests/india_pead_live/`). Until a company has a computed SUE quintile, the gate reads "unknown, does not block". It is not wired to the tracker's CSV yet.
+7. **The PEAD gate is India-only** (card v1.1). US quintiles are shown but never block, because US cut-points are uncalibrated and no US PEAD test exists. **It also depends on the live tracker** (`research_notes/Backtests/india_pead_live/`). Until a company has a computed SUE quintile, the gate reads "unknown, does not block". It is not wired to the tracker's CSV yet.
 8. **The credibility gate needs ≥5 promises per category and a peer median (L18).** Without both, it is shown and ignored.
 9. **Liquidity cap** needs ADV and portfolio value in the same money units. If they are not supplied, it is skipped (shown as n/a).
 10. **US temperature has no market-level base rate on file.** The Nifty bands come from `insight:india-valuation-forward-returns` (data mostly before 2015).
 11. **Not wired to memdb metrics yet.** Inputs are typed by hand. Next: a `--from-memdb TICKER` loader once stage-1 snapshots land in `memdb metric`.
+12. **Cash tax and incremental ROIC are hand inputs** (v1.3). The annual deferral is not modelled from capex vs tax depreciation; fade it unless persistence is shown. For cyclicals the incremental ROIC needs a full-cycle window with impairments added back.
+13. **The exit-multiple bet table is display only.** The EV gate still uses the stated exit P/E, so the scenario author's exit choice remains the single most influential judgment on the card.
 
 ---
 
@@ -133,3 +135,25 @@ The fictional `SYNTHETIC` card shows the gates-clear path: f* 92%, ¼-Kelly 23%,
 - Stage 1: compute the base-rate classes in §4.5 and replace the placeholders in `tools/decision/base_rates.json`.
 - Stage 7: decide whether practice-card calls enter the scoreboard (recommendation: no; only live cards), and extend the resolver to read `resolution_rule` from `decision-card-v1` calls.
 - Wire the PEAD live tracker and the promise-tracker peer medians directly into the card input.
+
+---
+
+## 6. Changelog
+**2026-11-23: worksheet v1.3, card v1.1, base rates v2 (lesson L34: every card so far said size 0).**
+Goal: fix genuine model gaps without loosening the hurdle or any threshold.
+- **Worksheet v1.3**
+  - Optional cash tax (`cash_tax_rate` / `deferred_tax_share` / `cash_tax_rate_end`).
+  - Reinvestment-realism check (`incremental_roic_5y` or `roic_history`; flags a gap of more than 5 pts, and solves the ROIIC the price implies).
+  - An always-on **exit-multiple bet** table: exit P/E used vs DCF-consistent vs own median, and the EV of the 5-year multiple at each.
+  - Regression: all 9 example and live inputs give identical numbers when the new inputs are absent.
+- **Base rates v2** (`research_notes/Backtests/base_rates_5y.md`) from the survivorship-free stage-2 panels:
+  - India ₹1,000–20,000 cr: P(≥3x) **21.3%** [14.1–28.7], P(≤0.5x) **11.3%** [7.0–16.1], P(blow-up) **15.4%** [10.2–21.4], n=208.
+  - US float $0.5–10B: **7.0%** [6.0–8.1], **14.2%** [12.7–15.7], **10.9%** [9.6–12.3], n=3,125. Bounds under the other missing-price assumption: 9.8% / 19.9% / 15.3%.
+  - The old classes are kept with a `_deprecated` suffix.
+- **Card v1.1**
+  - PEAD gate: India = bottom two quintiles (L19/L31). US = no gate (uncalibrated; quintile shown).
+  - New outputs: base-rate CIs, a size-outside-class warning, and the v1.3 stage-5 lines.
+- **Re-run of all 6 cards** (`tools/decision/calibration_2026-11-23/README.md`; no calls written): **all still size 0.**
+  - The live cards are blocked only by EV vs hurdle.
+  - Kirby's cash tax lifts the probability-weighted DCF from $58.6 to $70–84, but its EV only from 1.12x to 1.16–1.17x (hurdle 1.47x). The binding choice is the exit P/E: the card would clear only at its noisy own-median P/E of 21.5x.
+  - Method lesson: every card's P(blow-up) is 0.07–0.18x the new base rate, so our scenario sets under-weight the left tail compared with the outside view.

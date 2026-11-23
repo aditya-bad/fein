@@ -1,0 +1,199 @@
+{
+ "worksheet": "../../valuation/examples/VMM.json",
+ "decision_date": "2026-11-21",
+ "practice": true,
+ "analyst": "Claude",
+ "deep_dive": "research_notes/Deep dives/VMM_practice.md",
+ "thesis": "TEST THESIS (illustrative): a value retailer for Tier II/III India keeps adding ~100+ stores a year at network-average density, so revenue compounds ~18% while pre-Ind AS EBITDA margin holds near 10%.",
+ "variant_view": null,
+ "stage2": {
+  "source": "VMM practice deep dive §4-§6 (AR26, BRSR26, UDRHP). VMM is not in the hard-filter Part B sample (listed Dec-2024).",
+  "hard": [
+   {
+    "rule": "H1a fake-cash signal",
+    "status": "pass",
+    "evidence": "Bank debt nil; bank interest ~Rs 1.8 cr; no cash/borrowing mismatch seen [AR26]"
+   },
+   {
+    "rule": "H1b economics implausible",
+    "status": "pass",
+    "evidence": "Store P&L rebuilt (§1.4); density and margins plausible vs DMart/V2"
+   },
+   {
+    "rule": "H1c profits unverifiable by outsiders",
+    "status": "pass",
+    "evidence": "Store counts, area, BRSR headcount and wage data are checkable on the ground"
+   },
+   {
+    "rule": "H2 auditor exit / qualified opinion",
+    "status": "pass",
+    "evidence": "No qualification in AR26 (shrinkage is a Key Audit Matter, not a qualification)"
+   },
+   {
+    "rule": "H3 rating 'issuer not cooperating'",
+    "status": "unknown",
+    "evidence": "Not checked in the practice run"
+   },
+   {
+    "rule": "H4 SME/Telegram pump",
+    "status": "pass",
+    "evidence": "Main-board large cap, ~20 brokers cover it"
+   },
+   {
+    "rule": "H5 related-party cash leakage to promoter entities",
+    "status": "unknown",
+    "evidence": "~Rs 103 cr/yr logistics to the controlling shareholder's entity (Samayat), share of transport cost doubled; arm's length unproven -> graded as an open soft flag, hard status unresolved"
+   }
+  ],
+  "graded": [
+   {
+    "rule": "G4 trailing P/E > 50 or > 2x own median",
+    "status": "clear",
+    "evidence": "P/E 47.7 (screener TTM); own median not computable (2 points)"
+   }
+  ]
+ },
+ "stage3": {
+  "pead": {
+   "applicable": true,
+   "quintile": null,
+   "event_date": null,
+   "note": "Live PEAD tracker starts Q3 FY27; Q2 FY27 (Oct-2026) SUE not computed for VMM."
+  },
+  "credibility": {
+   "score": null,
+   "note": "Promise tracker not run on VMM."
+  },
+  "detectors": [
+   {
+    "name": "promoter/PE supply",
+    "date": "2025-2026",
+    "detail": "PE promoter sold ~58% of its stake in 18 months via blocks (Rs 110-117); ~40% left",
+    "severity": "med"
+   },
+   {
+    "name": "ESOP grant (Reg 30)",
+    "date": "2026-08-21",
+    "detail": "4.68 cr options to the MD at Rs 102.60 (above CMP)",
+    "severity": "low"
+   }
+  ]
+ },
+ "stage4": {
+  "soft_flags": [
+   {
+    "flag": "P/E 47.7: own-median test impossible",
+    "status": "open",
+    "changes_mind": "4 quarters of SSSG < 8%",
+    "review": "Q4 FY27"
+   },
+   {
+    "flag": "Women's median pay < minimum wage (likely part-year tenure)",
+    "status": "open",
+    "changes_mind": "Staff interviews",
+    "review": "next visit"
+   },
+   {
+    "flag": "Payables days 95 -> 46",
+    "status": "open",
+    "changes_mind": "Vendor interviews",
+    "review": "FY27"
+   },
+   {
+    "flag": "PE promoter selling 58% in 18 months",
+    "status": "open",
+    "changes_mind": "Management selling own shares",
+    "review": "each quarter"
+   },
+   {
+    "flag": "SSSG definition excludes refurbished/area-reduced stores",
+    "status": "open",
+    "changes_mind": "Disclosure of excluded-store count",
+    "review": "Q3 FY27"
+   },
+   {
+    "flag": "19-month payback: pre- or post-rent EBITDA?",
+    "status": "open",
+    "changes_mind": "RHP p.128 or IR answer",
+    "review": "before any use"
+   },
+   {
+    "flag": "Related-party logistics ~Rs 103 cr/yr to Samayat",
+    "status": "open",
+    "changes_mind": "Rates vs third-party quotes; post-PE-exit fate of the contract",
+    "review": "FY27 AR"
+   },
+   {
+    "flag": "Employee cost +25% vs revenue +14% (wage steps, ~55-60 bps)",
+    "status": "open",
+    "changes_mind": "Next state wage notifications (Oct VDA)",
+    "review": "Q4 FY27"
+   },
+   {
+    "flag": "Screener 'borrowings' Rs 1,988 cr",
+    "status": "cleared",
+    "changes_mind": "Bank/CP borrowing appears",
+    "review": "each AR"
+   },
+   {
+    "flag": "EBITDA margin 14.6% (Ind AS 116)",
+    "status": "adjusted",
+    "changes_mind": "-",
+    "review": "-"
+   }
+  ],
+  "override_log": [
+   {
+    "date": "2026-11-20",
+    "flag": "Borrowings Rs 1,988 cr",
+    "decision": "cleared",
+    "why": "AR26 n.33: equals lease liabilities exactly; HSIE: total debt nil since FY24"
+   },
+   {
+    "date": "2026-11-20",
+    "flag": "EBITDA 14.6%",
+    "decision": "use pre-Ind AS 9.8% in all valuation",
+    "why": "Rent is a real cost; AR26 Ind AS 116 impact Rs 613 cr"
+   }
+  ]
+ },
+ "base_rate_class": "india_nonfin_1000_20000cr_5y",
+ "sizing": {
+  "tier": "satellite",
+  "kelly_fraction": 0.25,
+  "portfolio_value": null,
+  "adv_value": null,
+  "adv_pct": 0.1,
+  "days_to_exit": 5
+ },
+ "kill_criteria": [
+  {
+   "if": "SSSG below 8% for 4 straight quarters",
+   "measure": "company SSSG (definition unchanged) in quarterly presentations",
+   "by": "2027-11-30"
+  },
+  {
+   "if": "Pre-Ind AS EBITDA margin below 8.5% for FY27",
+   "measure": "AR27: EBITDA - Ind AS 116 impact",
+   "by": "2027-08-31"
+  },
+  {
+   "if": "Revenue per sq ft falls YoY two quarters running (V2-style density dilution)",
+   "measure": "revenue / average retail area from PPTs",
+   "by": "2027-05-31"
+  },
+  {
+   "if": "Management (not the PE fund) sells shares, or the RPT logistics share rises again",
+   "measure": "SAST/insider filings; AR27 RPT note",
+   "by": "2027-08-31"
+  }
+ ],
+ "pre_mortem": [
+  "New-state stores (South/West, 15k sq ft) never reached network density; SSSG held only because weak stores were excluded as 'refurbishment'.",
+  "Minimum-wage steps (UP wage board, Haryana) and rent re-pricing on short leases took 150 bps of margin that 'GM reinvestment' could not cover.",
+  "Quick commerce and Zudio took the Tier II apparel customer; the P/E de-rated from ~48x to ~25x while EPS grew 12%.",
+  "The remaining ~40% PE stake came out at a discount and capped the price for two years."
+ ],
+ "review_date": "2027-02-15",
+ "_calibration_note": "Re-run 2026-11-23 with worksheet v1.3 / card v1.1 / base_rates v2. Base-rate class india_survivors_2020_25_mcap_ge400 -> india_nonfin_1000_20000cr_5y. NOT a new decision: no paper calls are written from this file (the practice card and its calls stand as made)."
+}

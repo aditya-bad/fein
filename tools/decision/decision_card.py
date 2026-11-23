@@ -33,8 +33,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "..", "valuation"))
 import worksheet as ws  # noqa: E402
 
-CARD_VERSION = "1.0 (2026-11-21)"
+CARD_VERSION = "1.1 (2026-11-23; market-specific PEAD gate, base-rate CIs/size band, v1.3 worksheet lines)"
 PEAD_AVOID_QUINTILES = (1, 2)          # L19: bottom two SUE quintiles
+# v1.1 (L34): the avoid gate is calibrated for India only (bottom two quintiles: L17, L19, L31, confirmed 3 times).
+# US: no PEAD back-test on file and the SUE proxy cut-points are uncalibrated -> quintile shown, never blocks.
+PEAD_GATE_MARKETS = {"india": PEAD_AVOID_QUINTILES, "us": None}
 PEAD_AVOID_CAL_DAYS = 92               # ~63 trading days
 OPEN_FLAG_LIMIT = 3                    # insight:flag-override-template: 3+ open soft flags -> need variant view
 CREDIBILITY_GAP = -0.15                # sector-adjusted credibility this far below peers counts as an open flag
@@ -163,6 +166,26 @@ def _pe_stage5_lines(lines, wd, wres):
                                                        tp["market"]["note"]))
 
 
+def _v13_lines(lines, wd, wres):
+    """v1.1 card: worksheet v1.3 outputs (cash tax, reinvestment realism, exit-multiple bet)."""
+    if wd.get("cash_tax_rate") is not None:
+        lines.append("- **Cash tax:** %s → %s (book %s); FCF includes the deferral, EPS does not."
+                     % (pct(wd["cash_tax_rate"]), pct(wd["cash_tax_rate_end"]), pct(wd["tax_rate"])))
+    rz = wres.get("realism")
+    if rz:
+        lines.append("- **Reinvestment realism:** last-5y incremental ROIC %s; price-implied ROIIC on the base path %s; %s."
+                     % (pct(rz["history"]), pct(rz["rows"][-1]["roiic"]) if rz["rows"][-1]["roiic"] is not None
+                        else "none up to 300% (on this growth/margin path no ROIIC reproduces the price)",
+                        ("**flag** (>5 pts): " + "; ".join(rz["flagged"])) if rz["flagged"] else "no flag"))
+    eb = wres["scenarios"].get("exit_bet")
+    if eb:
+        lines.append("- **Exit-multiple bet (L21):** exit P/E used %s vs DCF-consistent %s vs own median %s. EV of the "
+                     "5-yr multiple at the used exits %s, at DCF exits %s, at the own median %s (hurdle %s)."
+                     % ("/".join(num(x["exit_pe"]) for x in eb["rows"]), "/".join(num(x["dcf_pe5"]) for x in eb["rows"]),
+                        num(eb["own_median"]) if eb["own_median"] else "n/a (n=%d)" % eb["n_hist"],
+                        mult(eb["ev_stated"]), mult(eb["ev_dcf"]), mult(eb["ev_own"]), mult(eb["hurdle"])))
+
+
 def _bank_stage5_lines(wd, wres):
     """Stage-5 bullet lines for the bank-mode (P/B-ROE, residual income) worksheet (v1.1)."""
     rv, sc, tw, tp, sn = wres["reverse"], wres["scenarios"], wres["twin"], wres["temperature"], wres["snapshot"]
@@ -240,6 +263,7 @@ def build(card, card_path):
         lines += _bank_stage5_lines(wd, wres)
     else:
         _pe_stage5_lines(lines, wd, wres)
+        _v13_lines(lines, wd, wres)
     lines.append("- Full worksheet: `%s` (re-run `python3 tools/valuation/worksheet.py <input>`)."
                  % os.path.relpath(wpath, os.path.join(HERE, "..", "..")))
     F["price_implies"] = "\n".join(lines)
@@ -284,12 +308,23 @@ def build(card, card_path):
         q = int(pe["quintile"])
         ev = _date(pe["event_date"]) if pe.get("event_date") else None
         until = ev + _dt.timedelta(days=PEAD_AVOID_CAL_DAYS) if ev else None
-        active = q in PEAD_AVOID_QUINTILES and until is not None and dd <= until
-        t3.append("- **Earnings-surprise (PEAD):** SUE quintile %d (event %s). Avoid flag %s%s. Rule L19: bottom two "
-                  "quintiles = avoid/exit for ≥63 trading days." % (q, pe.get("event_date"),
-                                                                   "**ACTIVE**" if active else "not active",
-                                                                   (" until %s" % until) if active else ""))
-        gates.append(("Stage 3 PEAD avoid flag", ("ACTIVE until %s → WAIT" % until) if active else "clear", active))
+        gate_q = PEAD_GATE_MARKETS.get(wd["market"], PEAD_AVOID_QUINTILES)
+        if gate_q is None:
+            would = q in PEAD_AVOID_QUINTILES and until is not None and dd <= until
+            t3.append("- **Earnings-surprise (PEAD):** SUE quintile %d (event %s). **No PEAD gate for %s stocks:** the "
+                      "avoid rule is calibrated on Indian data only (L19/L31); US cut-points are uncalibrated. %s%s"
+                      % (q, pe.get("event_date"), wd["market"].upper(),
+                         "Shown for information (it would sit in an India-style avoid window). " if would else "",
+                         pe.get("note", "")))
+            gates.append(("Stage 3 PEAD avoid flag", "not gated (%s: uncalibrated); quintile %d noted"
+                          % (wd["market"].upper(), q), False))
+        else:
+            active = q in gate_q and until is not None and dd <= until
+            t3.append("- **Earnings-surprise (PEAD):** SUE quintile %d (event %s). Avoid flag %s%s. Rule L19: bottom two "
+                    "quintiles = avoid/exit for ≥63 trading days." % (q, pe.get("event_date"),
+                                                                     "**ACTIVE**" if active else "not active",
+                                                                     (" until %s" % until) if active else ""))
+            gates.append(("Stage 3 PEAD avoid flag", ("ACTIVE until %s → WAIT" % until) if active else "clear", active))
     cr = s3.get("credibility") or {}
     if cr.get("score") is None:
         t3.append("- **Promise credibility:** not scored. %s" % cr.get("note", ""))
@@ -347,6 +382,10 @@ def build(card, card_path):
     # --- probabilities vs base rates
     cls_name = card.get("base_rate_class")
     cls = rates["classes"].get(cls_name) if cls_name else None
+    cls_note = ""
+    if cls_name and cls is None and (cls_name + "_deprecated") in rates["classes"]:
+        cls = rates["classes"][cls_name + "_deprecated"]
+        cls_note = " **Deprecated class** (%s)" % cls.get("deprecated", "")
     if cls_name and cls is None:
         raise ValueError("unknown base_rate_class %r (see tools/decision/base_rates.json)" % cls_name)
 
@@ -359,13 +398,27 @@ def build(card, card_path):
     edge_claims = []
     for label, p, b in probs:
         ratio = (p / b) if (p is not None and b) else None
-        prow.append([label, pct(p, 0), pct(b, 1) if b is not None else "n/a", mult(ratio) if ratio else "n/a"])
+        bcell = pct(b, 1) if b is not None else "n/a"
+        key = {"P(≥3x in 5 yrs)": "p_ge_3x", "P(≤0.5x in 5 yrs)": "p_le_half", "P(blow-up)": "p_blowup"}[label]
+        if b is not None and cls and (cls.get("ci95") or {}).get(key):
+            lo_, hi_ = cls["ci95"][key]
+            bcell += " [95%% CI %s–%s]" % (pct(lo_, 1), pct(hi_, 1))
+        prow.append([label, pct(p, 0), bcell, mult(ratio) if ratio else "n/a"])
         if ratio is not None and (ratio > EDGE_CLAIM_RATIO or ratio < 1 / EDGE_CLAIM_RATIO):
             edge_claims.append("%s is %.2fx the base rate" % (label, ratio))
     ptxt = [_table(["Event", "Model (worksheet)", "Base rate", "Model ÷ base"], prow), ""]
     if cls:
-        ptxt.append("Base-rate class: **%s** (n=%s, %s-yr horizon). Source: %s. Caveats: %s"
-                    % (cls["label"], cls.get("n"), cls.get("horizon_years"), cls["source"], cls["caveats"]))
+        ptxt.append("Base-rate class: **%s** (n=%s, %s-yr horizon). Source: %s. Caveats: %s%s"
+                    % (cls["label"], cls.get("n"), cls.get("horizon_years"), cls["source"], cls["caveats"], cls_note))
+        band = cls.get("size_band")
+        if band:
+            size = wres["snapshot"].get("mcap")
+            if size is not None and wd.get("units") == band.get("units") and not (band["min"] <= size <= band["max"]):
+                ptxt.append("")
+                ptxt.append("> **Size outside the class:** market cap %s %s vs the class band %s–%s %s (%s). No class "
+                            "on file fits better; read the base rates as the nearest class, not as this stock's."
+                            % (num(size), wd.get("units"), num(band["min"]), num(band["max"]), band["units"],
+                               band["measure"]))
     else:
         ptxt.append("Base-rate class: none chosen.")
     ptxt.append("Blow-up = %s" % rates["blowup_definition"])

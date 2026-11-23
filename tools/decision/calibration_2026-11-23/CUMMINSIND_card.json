@@ -1,0 +1,210 @@
+{
+ "worksheet": "../../valuation/examples/CUMMINSIND.json",
+ "decision_date": "2026-11-21",
+ "practice": true,
+ "analyst": "Claude",
+ "deep_dive": "research_notes/Deep dives/CUMMINSIND_practice.md",
+ "thesis": "TEST THESIS (illustrative): data-centre gensets and the CPCB IV+ price step keep revenue growing ~12% with core NOPAT margin ~14-15%, while cash keeps flowing out ~100% as dividends.",
+ "variant_view": null,
+ "stage2": {
+  "source": "Cummins practice deep dive §2, §5, §7 (AR26, AGM-notice RPT annex) and the hard-filter Part B snapshot (research_notes/Backtests/hard_filters_outputs/partB_flags.csv, T0 30-Sep-2020).",
+  "hard": [
+   {
+    "rule": "H1a fake-cash signal",
+    "status": "pass",
+    "evidence": "Cash/MFs ~Rs 3.8-4.0k cr yield treasury income ~Rs 264 cr (consistent); FCF ~= dividends paid"
+   },
+   {
+    "rule": "H1b economics implausible",
+    "status": "pass",
+    "evidence": "BRSR units x realisation cross-foot revenue (+7% volume, +10% price/mix)"
+   },
+   {
+    "rule": "H1c profits unverifiable by outsiders",
+    "status": "pass",
+    "evidence": "GOEM channel and dealer price sheets checkable"
+   },
+   {
+    "rule": "H2 auditor exit / qualified opinion",
+    "status": "pass",
+    "evidence": "No auditor issues noted [AR26]; Part B R3 (auditor resignation before T0) = False"
+   },
+   {
+    "rule": "H3 rating 'issuer not cooperating'",
+    "status": "unknown",
+    "evidence": "Not checked in the practice run"
+   },
+   {
+    "rule": "H4 SME/Telegram pump",
+    "status": "pass",
+    "evidence": "Large cap, 51% MNC parent"
+   },
+   {
+    "rule": "H5 related-party cash leakage to promoter entities",
+    "status": "pass",
+    "evidence": "Cash to the parent ~8.9% of sales but under disclosed formulas (royalty 4% x eligible sales, cost +11%) with shareholder approvals -> graded soft flags, not diversion"
+   }
+  ],
+  "graded": [
+   {
+    "rule": "R5 other income > 30% of PBT (FY18-20, Part B)",
+    "status": "fired",
+    "evidence": "Part B flag True; FY26 other income 23% of PBT (now below 30%), keep as a question: core PBT Rs 2,384 cr used for multiples"
+   },
+   {
+    "rule": "R1/R2/R4 (CFO/PAT, pledge, debt+neg CFO)",
+    "status": "clear",
+    "evidence": "Part B: all False; CFO/PAT 5y 0.89; pledge 0%"
+   }
+  ]
+ },
+ "stage3": {
+  "pead": {
+   "applicable": true,
+   "quintile": null,
+   "event_date": "2026-11",
+   "note": "Q2 FY27 OPM fell to ~15% (from 21%): likely a large miss, but no SUE computed (live tracker starts Q3 FY27). If it lands in quintile 1-2 the avoid flag would be active ~92 days."
+  },
+  "credibility": {
+   "score": null,
+   "note": "Promise tracker not run; management gives ranges (e.g. DC 30-40% of power gen), which the protocol treats as a definitional flag."
+  },
+  "detectors": [
+   {
+    "name": "KMP churn",
+    "date": "2025-2026",
+    "detail": "MD x3 and CFO x2 in 26 months; senior manager resigned Aug-2026",
+    "severity": "med"
+   },
+   {
+    "name": "RPT step-up",
+    "date": "FY26 / Q2 FY27",
+    "detail": "Support services to parent Rs 111 -> 223 cr, then a Q2 'true-up'",
+    "severity": "med"
+   },
+   {
+    "name": "Dated contract",
+    "date": "2027-03-31",
+    "detail": "Royalty agreement with the parent expires",
+    "severity": "low"
+   }
+  ]
+ },
+ "stage4": {
+  "soft_flags": [
+   {
+    "flag": "51% of purchases from related parties (cost-plus pass-in)",
+    "status": "open",
+    "changes_mind": "Materials ratio vs KOEL through a commodity cycle",
+    "review": "FY27"
+   },
+   {
+    "flag": "Support services to parent doubled; Q2 true-up",
+    "status": "open",
+    "changes_mind": "Disclosure of the allocation key; FY27 support < 2% of sales",
+    "review": "FY27 AR"
+   },
+   {
+    "flag": "Sales +4% vs KOEL +19% (Q2 FY27)",
+    "status": "open",
+    "changes_mind": "Two quarters of growth back in line with peers",
+    "review": "Q4 FY27"
+   },
+   {
+    "flag": "3 customers = 31% of sales (GOEM channel)",
+    "status": "open",
+    "changes_mind": "GOEM MCA financials; brand switching",
+    "review": "FY27"
+   },
+   {
+    "flag": "DC = '30-40%' of power gen (band hides the ex-DC trend)",
+    "status": "open",
+    "changes_mind": "Installer DG/IT ratio, brand split",
+    "review": "ground visit C"
+   },
+   {
+    "flag": "MD x3, CFO x2 in 26 months",
+    "status": "open",
+    "changes_mind": "Further senior exits",
+    "review": "each quarter"
+   },
+   {
+    "flag": "IT appeal on Rs 210.8 cr adjustments",
+    "status": "open",
+    "changes_mind": "High Court order",
+    "review": "-"
+   },
+   {
+    "flag": "Royalty agreement expires 31-Mar-2027",
+    "status": "watch",
+    "changes_mind": "FY28 AGM-notice RPT annex: rate or eligible base raised",
+    "review": "2027-07-31"
+   },
+   {
+    "flag": "Other income 23% of PBT",
+    "status": "adjusted",
+    "changes_mind": "-",
+    "review": "-"
+   },
+   {
+    "flag": "Payout 79%, FCF ~= dividends",
+    "status": "cleared",
+    "changes_mind": "Capex spike or payout > 100%",
+    "review": "FY27"
+   }
+  ],
+  "override_log": [
+   {
+    "date": "2026-11-21",
+    "flag": "Other income 23% of PBT",
+    "decision": "use core PBT Rs 2,384 cr; treasury income held flat in the EPS path; rent/JV dividends valued separately",
+    "why": "AR26 n.27 split: rent 186, JV/associate dividends 217, interest 189, MF 75"
+   },
+   {
+    "date": "2026-11-21",
+    "flag": "Labour-code exceptional Rs 94 cr",
+    "decision": "cleared as one-off; ~80 bps recurring tracked",
+    "why": "Q2 results note 6 (regulatory catch-up)"
+   }
+  ]
+ },
+ "base_rate_class": "india_nonfin_1000_20000cr_5y",
+ "sizing": {
+  "tier": "satellite",
+  "kelly_fraction": 0.25,
+  "portfolio_value": null,
+  "adv_value": null,
+  "adv_pct": 0.1,
+  "days_to_exit": 5
+ },
+ "kill_criteria": [
+  {
+   "if": "Royalty rate or eligible base raised at renewal",
+   "measure": "FY28 AGM-notice RPT annex",
+   "by": "2027-07-31"
+  },
+  {
+   "if": "Standalone OPM below 17% in both Q3 and Q4 FY27 (pass-through failed)",
+   "measure": "screener / results filings",
+   "by": "2027-05-31"
+  },
+  {
+   "if": "Parent take (royalty + support) above 3% of sales in FY27",
+   "measure": "AR27 RPT note",
+   "by": "2027-08-31"
+  },
+  {
+   "if": "Payout above 100% of FCF or a capex spike above 2x D&A without a stated plan",
+   "measure": "AR27 cash flow",
+   "by": "2027-08-31"
+  }
+ ],
+ "pre_mortem": [
+  "The parent raised the royalty and cost allocations at the 2027 renewal; the minority's share of DC economics shrank while reported growth looked fine.",
+  "HHP engines were allocated to other regions; India lost DC share to KOEL and imports, and the '30-40%' band hid it for four quarters.",
+  "The FY26 margin was a CPCB IV+ price-step peak; normalised OPM settled at 17-18% and the P/E fell from ~50x to ~30x.",
+  "Rates fell and the 79% payout shrank the cash pile, so treasury income (~10% of PAT) stopped growing."
+ ],
+ "review_date": "2027-02-15",
+ "_calibration_note": "Re-run 2026-11-23 with worksheet v1.3 / card v1.1 / base_rates v2. Base-rate class india_survivors_2020_25_mcap_ge400 -> india_nonfin_1000_20000cr_5y. NOT a new decision: no paper calls are written from this file (the practice card and its calls stand as made)."
+}

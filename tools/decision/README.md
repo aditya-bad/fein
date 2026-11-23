@@ -18,8 +18,13 @@ python3 tools/decision/decision_card.py my_card.json -o card.md --calls paper_ca
 |---|---|
 | `decision_card.md` | The template. Every `{{field}}` must be filled, and an unknown placeholder is an error |
 | `decision_card.py` | The assembler, the gates and the sizing rule. It writes the paper calls |
-| `base_rates.json` | The reference classes shown next to every probability, each with its source and biases. `null` means no honest number on file |
+| `base_rates.json` | The reference classes shown next to every probability, each with its source, biases, 95% CI and size band. `null` means no honest number on file. **v2 (2026-11-23):** `india_nonfin_1000_20000cr_5y` and `us_float_500m_10b_5y`, survivorship-free (method: `research_notes/Backtests/base_rates_5y.md`; script `tools/backtests/base_rates_5y/build.py`). Old classes keep a `_deprecated` suffix; an old card that names the old key resolves to it and prints "Deprecated class" |
+| `calibration_2026-11-23/` | All 6 cards re-run with worksheet v1.3, card v1.1 and base rates v2 (no calls written). Results and reasons in its README: all 6 still size 0 |
 | `examples/` | Cards for VMM, CUMMINSIND and US-FIVE (TEST MATERIAL, no verdict), plus a fictional SYNTHETIC card that exercises the path where every gate clears |
+
+Card v1.1 (2026-11-23) adds three stage-5 lines when the worksheet has them: cash tax, reinvestment realism and
+the exit-multiple bet (EV of the 5-year multiple at the stated exits, at the DCF-consistent P/E and at the own median).
+It also prints base-rate CIs and the size-band warning, and applies the market-specific PEAD gate.
 
 Bank/NBFC worksheets (`"mode": "bank"`, v1.1) are supported: the stage-5 block then reports reverse P/B, implied CoE,
 residual-income scenarios, P/B temperature and book stress. Example: `examples/FEDERALBNK_card.json` (practice).
@@ -34,11 +39,12 @@ the written rule → dated kill criteria → pre-mortem → gate log and review 
 | Gate | Blocks when | Source |
 |---|---|---|
 | Stage 2 hard filters | any rule `fail` (disqualified, no override) or `unknown` (incomplete), or none supplied | `insight:disqualifiers` |
-| Stage 3 PEAD avoid flag | SUE quintile 1–2 and decision date ≤ event + 92 calendar days (~63 trading days) | L17, L19 |
+| Stage 3 PEAD avoid flag | **India only:** SUE quintile 1–2 and decision date ≤ event + 92 calendar days (~63 trading days). **US: no gate.** The quintile is shown but never blocks, because the US SUE proxy cut-points are uncalibrated and no US PEAD back-test exists (card v1.1, 2026-11-23) | L17, L19, L31, L34 |
 | Stage 4 soft flags | ≥3 open (deep-dive open flags + fired graded stage-2 flags + high-severity detectors + credibility ≥15 pts below peers) and no written variant view | `insight:flag-override-template` |
 | Expected value | EV of the 5-year multiple < hurdle multiple (index CAGR^5) | — |
 | Kill criteria | missing or undated | — |
 | Outside-view check (note only) | model P is >2x or <0.5x the base rate | `insight:lit-base-rate-neglect-outside-view` |
+| Size outside the class (note only, v1.1) | market cap outside the class `size_band` (same money units) | `base_rates.json` |
 
 ## Sizing rule
 `size = min(kelly_fraction × f*, tier cap at cost, liquidity cap)`, then 0 if any gate blocks.
