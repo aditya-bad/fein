@@ -1,0 +1,74 @@
+# LIVE deep dive #3 (method test; random draw from the cheapest EV/EBITDA tercile, see research_notes/Deep dives/AUTOAXLES_live.md section 0). L9/L21: no buy/sell verdict; the card's paper calls are LIVE (not practice).
+{
+ "worksheet": "../../valuation/live/AUTOAXLES.json",
+ "decision_date": "2026-11-23", "practice": false, "analyst": "Claude",
+ "deep_dive": "research_notes/Deep dives/AUTOAXLES_live.md",
+ "thesis": "Method-test thesis: Automotive Axles is cheap only on peak-cycle earnings (12.9x trailing, 25.8x 10-year normalised EPS); over 5 years it compounds roughly with the M&HCV cycle at a through-cycle ROIC ~15-18% while its parent (Cummins/Meritor) takes ~4.5% of sales as a technical fee under an annually renewed agreement, so the 5-year outcome is driven by cycle position in FY31-32 and the exit multiple, not by a mispricing.",
+ "variant_view": "Market (reverse DCF and temperature): at Rs 1,776 the stock is at 12.9x trailing EPS, 8.1x EV/EBITDA net of Rs 394 cr cash, the lowest P/E on the highest earnings in its 11-year history; the market is pricing a cyclical peak (record FY27 M&HCV volume of 500k+ guided, a regulatory pre-buy to April 2027, capacity nearly full at a Rs 2,650 cr annualised run-rate). Our view: we largely AGREE that it is cheap for a reason, so there is no claimable mispricing. On 10-year normalised EPS (Rs 69) the P/E is 25.8x (warm vs own history); the last cycle took revenue -53% and EPS -81% (FY19-21) and the price -80% peak to trough. What we found that the market may be MIS-weighting, in both directions: (1, negative) like-for-like FY26 revenue was roughly flat while the industry grew ~16% - the reported +4.8% is mostly the gross-up from selling direct to OEMs at OEM prices since 1-Apr-2025 (materials fell 71.0% -> 67.5% of revenue, other expenses rose 11.7% -> 14.3% with the new Rs 97.5 cr technical fee) - so content/share per industry vehicle has lagged; (2, negative) the parent take is now an explicit 4.5%-of-sales fee to Meritor HVS India (Cummins) under a one-year agreement renewable 30-Apr-2027, structured below the shareholder-approval threshold after minority holders voted 79.5% against a Rs 2,500 cr material-RPT resolution in Dec-2024; (3, positive) the balance sheet is clean (net cash 15% of market cap, AA- ICRA, payout ~30%) and the business earned 15-22% ROIC across FY23-26, so the downside is a cyclical drawdown, not a solvency event. What would prove us wrong: FY27 revenue >= Rs 2,500 cr AND FY28 H1 revenue holding within 10% of H1 FY27 after the pre-buy (the cycle is longer than we assume), or a fee cut/stable fee with rising content per vehicle. Departure from the outside view: P(>=3x) far below the class (6% vs 21%) because a 3x needs ~25% EPS CAGR from a cyclical-peak base (twin engine); tail probabilities are anchored at w=0.6 toward the class because this stock already printed a ~0.2x drawdown in the last cycle. Checked by paper calls thesis:paper-call:AUTOAXLES:* (6 operating/fee/price calls to 2027-09-30, plus the 3 card calls).",
+ "stage2": {
+  "source": "S2 checklist in research_notes/Deep dives/AUTOAXLES_live.md section 1 (AR FY26/FY25 auditor's reports + CARO, 774 NSE announcements to 23-Nov-2026, NSE pledge API + SHP XBRL 30-Sep-2026, ICRA letter 02-Feb-2026, tools/detectors/solvency_screen.py run 23-Nov-2026).",
+  "hard": [
+   {"rule": "H1a fake-cash signal", "status": "pass", "evidence": "Liquid assets Rs 407 cr at 30-Sep-2026 (cash 30.8 + other bank 206.7 + MFs 169.7) [Q2FY27 SoAL]; FY26 treasury income Rs 27 cr on ~Rs 330 cr average (~8%) [AR26 n.22]; ICRA AA-(Stable)/A1+ 02-Feb-2026"},
+   {"rule": "H1b economics implausible", "status": "pass", "evidence": "Revenue per industry M&HCV ~Rs 45k (FY26) vs ~Rs 41k (FY19); materials 67.5% with back-to-back steel pass-through; OPM 7-12% over 11 years, in line with CV component peers"},
+   {"rule": "H1c profits unverifiable by outsiders", "status": "pass", "evidence": "Listed OEM customers (Customer A Rs 1,440 cr = 66% of FY26 revenue, Customer B Rs 214 cr) [AR26 n.32]; exports to Meritor group plants; trade receivables 30-90 days"},
+   {"rule": "H2 auditor exit / qualified opinion", "status": "pass", "evidence": "S R Batliboi & Associates LLP unmodified FY25 and FY26 (one KAM: inventory provision); CARO 3(xviii) no resignation; the Jan-2024 'Change in Auditors' filing was an internal-auditor appointment (Deloitte), read in full"},
+   {"rule": "H3 rating 'issuer not cooperating'", "status": "pass", "evidence": "ICRA AA-(Stable)/A1+ on Rs 135 cr reaffirmed 02-Feb-2026"},
+   {"rule": "H4 SME/Telegram pump", "status": "pass", "evidence": "Main board; no exchange surveillance queries 2025-26; ADV ~Rs 1-2.4 cr"},
+   {"rule": "H5 related-party cash leakage to promoter entities", "status": "pass", "evidence": "Technical fee to Meritor HVS (India) Rs 97.5 cr FY26 (4.5% of sales) under a disclosed services agreement on 'arm's length' terms; OPM rose 10.6% -> 10.9% after the switch, so no evidence of leakage; graded below as an open soft flag (minority rejected the Rs 2,500 cr MRPT in Dec-2024)"}
+  ],
+  "graded": [
+   {"rule": "G1 promoter pledge > 25% (v3: >50% strong red)", "status": "clear", "evidence": "NSE pledge API 23-Nov-2026: promoter shares pledged 0 (0.00%); SHP XBRL 30-Sep-2026 encumbrance flags all false; promoters 71.04% unchanged"},
+   {"rule": "G2 accounting-trouble events in 5 years", "status": "clear", "evidence": "None; NSE format query on the Q4 FY21 audit report resolved 27-May-2021"},
+   {"rule": "G3 dilution", "status": "clear", "evidence": "1,51,11,975 shares unchanged"},
+   {"rule": "G4 solvency set (S1/S5 India)", "status": "clear", "evidence": "solvency_screen 23-Nov-2026: grade blank, 0 flags, ICR 110.5x; only lease liabilities Rs 13 cr"},
+   {"rule": "Q CFO/PAT 5y (question)", "status": "clear", "evidence": "FY22-26 CFO Rs 656 cr vs PAT Rs 722 cr = 0.91x [SCR]"},
+   {"rule": "Q supplier loans (CARO 3(iii))", "status": "clear", "evidence": "Rs 5.6 cr secured loans to five suppliers for machinery [AR26 n.37]; Rs 0.03 cr overdue (AB Auto Brakes)"}
+  ]
+ },
+ "stage3": {
+  "pead": {"applicable": true, "quintile": 5, "event_date": "2026-11-12", "note": "Q2 FY27 SUE +4.19 (basis per live_tracker.sue_for on eps_history.csv) vs fixed cut-points -> quintile 5; Q1 FY27 +2.02 -> Q5. Not in the avoid window."},
+  "credibility": {"score": 0.43, "peer_median": 0.60, "n": 7, "category": "hand ledger, 11 calls May-2024..Nov-2026: margin, capex/SOP dates, industry forecasts", "note": "Hand ledger (LLM pipeline not run): 2 met, 2 partly/late (0.5 each), 3 missed = 43% credit. Dates slip 1-4 quarters (bus axle, capex phase 1); industry forecasts were too BEARISH twice (FY26 'flat' vs +16%; FY27 '-3 to -4%' vs record). Peer median 60% = median of UNIPARTS 64.8 / SONACOMS 83.3 / SANSERA 60.0 / HAPPYFORGE 50.0 / ENDURANCE 26.1 (AUTO_COMPONENTS_peer_comparison.md, credit basis). Not comparable in method (hand vs pipeline)."},
+  "detectors": [
+   {"name": "Material-RPT resolution rejected by minority", "date": "2024-12-14", "detail": "Rs 2,500 cr FY26 RPT with Meritor HVS (India) rejected 79.47% against; company switched to direct OEM sales + a services agreement (fee Rs 97.5 cr FY26)", "severity": "med"},
+   {"name": "Pollution-board notices", "date": "2025-03-19 / 2026-08-09", "detail": "KSPCB cautionary letter (Mar-2025); Water Act non-compliance notice at Mysuru STP (Jul/Aug-2026), disclosed 5 days late with reason", "severity": "low"},
+   {"name": "KMP churn", "date": "2025-11 to 2026-11", "detail": "CFO Ranganathan S left 21-Nov-2025; Raman K CFO from 04-Feb-2026 (re-announced full-time 12-Nov-2026); two senior-management cessations Feb-2026; Hosur plant closed Feb-2025", "severity": "low"}
+  ]
+ },
+ "stage4": {
+  "soft_flags": [
+   {"flag": "'Cheap' is peak-cycle cheap (good-but-misleading): 12.9x trailing vs 25.8x on 10-year normalised EPS; FY26 industry ~480k = prior FY19 peak; FY27 pre-buy to April 2027", "status": "open", "changes_mind": "H1 FY28 revenue within 10% of H1 FY27 after the pre-buy ends", "review": "2027-11-15"},
+   {"flag": "Customer A = 66% of FY26 revenue (almost certainly Ashok Leyland)", "status": "open", "changes_mind": "Customer A share < 55% with total revenue rising (diversification), disclosed in FY27 AR n.32", "review": "FY27 AR (Jul-2027)"},
+   {"flag": "Parent take: technical fee to Meritor HVS (India) Rs 97.5 cr = 4.5% of sales, ~41% of FY26 core EBITDA; one-year agreement renewable 30-Apr-2027; set below the MRPT approval threshold after minority rejection", "status": "open", "changes_mind": "Fee <= 4.6% of revenue in FY27 and a multi-year agreement on disclosed terms", "review": "2027-05-15"},
+   {"flag": "Like-for-like FY26 revenue ~flat vs industry +16% [EST from materials ratio 71.0% -> 67.5%]: content/share per vehicle lagging", "status": "open", "changes_mind": "FY27 revenue growth >= industry M&HCV growth + 5 pts", "review": "2027-05-31"},
+   {"flag": "Capacity near full at peak (Rs 2,700 cr capacity vs Rs 2,650 cr Q2 run-rate); Rs 120 cr phase-1 capex ~2 quarters late; steel scarcity", "status": "watch", "changes_mind": "Phase 1 complete by Q4 FY27 and Q4 revenue > Q2", "review": "2027-05-31"},
+   {"flag": "Management credibility 43% vs peer 60% (dates slip; industry forecasts too bearish)", "status": "watch", "changes_mind": "Tandem-axle ramp by Q4 FY27 as stated on 13-Nov-2026", "review": "2027-05-31"},
+   {"flag": "KSPCB notices and a late Reg-30 disclosure", "status": "watch", "changes_mind": "Any closure direction or a third notice", "review": "each quarter"},
+   {"flag": "CCI order: Bharat Forge commitments on access to AAL business information", "status": "watch", "changes_mind": "-", "review": "FY27 AR"},
+   {"flag": "FY26 revenue +4.8% includes the direct-sales gross-up (good-but-misleading)", "status": "adjusted", "changes_mind": "-", "review": "-"},
+   {"flag": "Q3 FY26 labour-code exceptional Rs 12 cr", "status": "adjusted", "changes_mind": "-", "review": "-"}
+  ],
+  "override_log": [
+   {"date": "2026-11-23", "flag": "Selection EV used screener cash only", "decision": "true EV/EBITDA 8.1x (net cash Rs 394 cr incl. MFs) used in the worksheet; the subject stays in the tercile either way", "why": "Rule fixed before drawing; disclosed, not changed"},
+   {"date": "2026-11-23", "flag": "Trailing P/E 12.9 looks cold", "decision": "valuation read on 10-year normalised EPS (25.8x) and cycle-position scenarios", "why": "M&HCV cycle at a record; FY19-21 analogue"},
+   {"date": "2026-11-23", "flag": "Promise pipeline not run", "decision": "hand ledger n=7 used as the credibility read", "why": "Time budget; concall mode applies (11 transcripts exist)"}
+  ]
+ },
+ "survival": {"pledge_pct_of_promoter": 0.0, "interest_cover": 110.5, "already_owned": false, "as_of": "2026-11-23", "source": "NSE pledge API 23-Nov-2026; solvency_screen FY26", "note": "PEAD quintile 5, so the survival cap is n/a; inputs recorded anyway"},
+ "tail_anchor": {"base_weight": 0.6, "evidence": "Weighted MORE toward the class than the 0.5 default: this stock fell from Rs 1,780 (2018 high) to Rs 361 (2020 low) = 0.20x in the last cycle, 66% single-customer revenue, and the model's 3% blow-up/4% <=0.5x look thin for a cyclical at a record peak (L36)"},
+ "base_rate_class": "india_nonfin_1000_20000cr_5y",
+ "sizing": {"tier": "satellite", "kelly_fraction": 0.25, "max_pct_at_cost": null, "portfolio_value": 1.0, "adv_value": null, "adv_pct": 0.10, "days_to_exit": 5},
+ "kill_criteria": [
+  {"if": "MHVSIL services agreement renewed with technical fees above 5.0% of revenue (or a new MRPT resolution moving margin to the group)", "measure": "Reg-30 filing at the 30-Apr-2027 renewal; FY27 AR n.29/n.35; H1 FY28 results", "by": "2027-11-15"},
+  {"if": "FY27 core OPM (ex other income) below 10.5%", "measure": "screener / NSE XBRL FY27", "by": "2027-05-31"},
+  {"if": "Customer A share above 70% while total revenue falls, or loss of a Customer A platform", "measure": "FY27 AR segment note (n.32)", "by": "2027-07-31"},
+  {"if": "Any promoter encumbrance, open offer, delisting proposal or merger scheme", "measure": "SHP XBRL quarterly; Reg-30", "by": "2027-09-30"},
+  {"if": "Modified audit opinion, auditor resignation, or rating below AA-", "measure": "Reg-30 / AR / ICRA", "by": "2027-09-30"}
+ ],
+ "pre_mortem": [
+  "The regulatory pre-buy pulled M&HCV demand into H2 FY27; H1 FY28 industry volumes fell 20-30%, AAL revenue fell ~25% and EPS ~45%; the P/E stayed ~14x and the price fell ~40% (the FY19-20 pattern).",
+  "At the 30-Apr-2027 renewal Cummins/Meritor raised the technical fee, taking back the margin the Dec-2024 minority vote denied it; OPM fell 1-2 pts with no volume change.",
+  "Customer A dual-sourced axles on its new tractor-trailer platforms; AAL's content per industry vehicle kept lagging (as FY26 already hinted).",
+  "Rs 120 cr of capacity arrived at the top of the cycle and sat idle in the downturn while steel scarcity had capped the peak volumes."
+ ],
+ "review_date": "2027-02-15"
+}

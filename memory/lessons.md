@@ -270,3 +270,10 @@ was only 0.07–0.18× the base rate → systematic overconfidence about surviva
 exit-multiple bet table) didn't open any card; the binding choice is the exit multiple, as it should be.
 **Rule:** anchor tail probabilities to the class base rate and move away only with written evidence; Brier scoring
 of live calls will measure this. Next useful card: a stock cheap at entry and inside a base-rate size band.
+
+## L37 (2026-11-23) — For no-concall companies, disclosure flags beat credibility scores
+Promise tracker v1.4 annual-report mode (validated on SUNFLAG, GULFPETRO, REPRO): too few dated promises to score
+(n ≤ 5), but cheap *disclosure-quality flags* are informative: "planned" dates already past at filing (REPRO ×3),
+the same "commissioned during the year" sentence in consecutive reports (SUNFLAG), outlook text copied year to year
+(GULFPETRO), unchanged reserve quantities. **Use:** for companies without calls, report the asset×year status table
+and disclosure flags in the deep dive; don't compare AR-mode scores with concall scores.

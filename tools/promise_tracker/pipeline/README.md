@@ -1,4 +1,4 @@
-# Promise-tracker pipeline (v1.3, 2026-11-22; v1 2026-11-21)
+# Promise-tracker pipeline (v1.4, 2026-11-23; v1 2026-11-21)
 
 This pipeline turns the two manual pilots (UNIPARTS, SKIPPER; see `research_notes/Promise tracker pilot/`)
 into a repeatable process. It uses the Python standard library only, plus the `pdftotext` (poppler) and
@@ -13,6 +13,72 @@ fetch.py ──> turns.py ──> candidates.py ──> llm_extract.py ──> s
  date range   boilerplate                     (JSONL)           chains       memdb seed
 ```
 `run.py` chains all six stages. `validate.py` compares any stage with a manual ledger.
+
+## v1.4 changes (2026-11-23): annual-report mode for companies with no earnings calls
+Many Indian small caps hold no earnings calls (SUNFLAG: 0 transcripts in 584 announcements; see
+`research_notes/Deep dives/SUNFLAG_live.md` section 10). AR mode treats **each annual report as one "call"**, dated at
+its NSE submission date, and uses the next year's report as the evidence. Roadmap stage 3 (signals): it gives a
+credibility read, an asset-status tracker and disclosure-quality flags where the concall path returns nothing.
+Validation: `research_notes/Promise tracker pilot/AR_mode_validation.md`.
+
+```
+ar_fetch.py ──> ar_sections.py ──> candidates.py ──> ar_run.py: build_promises ─> evidence ─> score.py ─> report.py
+ last N ARs     forward-looking     (unchanged)       company subject + project   next ARs    (unchanged)  (unchanged)
+ text only,     zone -> "turns"                       word + future marker;        done /
+ PDFs deleted   (tables row-wise)                     asset:milestone chain keys   pending /
+                                                                                   dropped
+```
+```bash
+cd tools/promise_tracker/pipeline
+python3 -I ar_run.py SUNFLAG --cache ~/pt_cache/ar --as-of 2026-11-23        # fetch + everything (about 15 s per company)
+python3 -I ar_run.py SUNFLAG --cache ~/pt_cache/ar --skip-fetch              # re-run on cached text
+python3 -I ar_sections.py --txt ~/pt_cache/ar/SUNFLAG/txt/AR_FY26.txt --print # inspect the zone and blocks of one report
+python3 -I ar_fetch.py SUNFLAG --n 5 --presentations                         # optional: investor presentations as extra "calls"
+```
+Outputs in `<ar cache>/<SYMBOL>/out/`: `_scored.jsonl`, `_credibility.md`, `_summary.json`, `_seed.json` (as in concall
+mode, tag `ar-mode`), plus **`_assets.md/.json`**: the asset x report status table with flags.
+- **Separate cache root** (`--cache`, default `$PT_CACHE/ar`). The concall modules are not edited; AR mode only adds
+  `ar_fetch.py`, `ar_sections.py`, `ar_run.py` and `regress_concall.py`.
+- **`ar_fetch.py`:** `nse_fetch.annual_reports` list (one row per FY; a later "Revised" upload wins), downloads PDF or
+  ZIP (only `*.pdf` members, read in memory), `pdftotext -layout`, then **deletes the PDF**. Fewer than 8,000 words =
+  scanned/partial, skipped. `--presentations` / `--outcomes` add investor presentations / board-meeting outcomes.
+- **`ar_sections.py`:** keeps the Chairman's/MD's message, the Board's (Directors') Report, the MD&A and the
+  energy-conservation/technology-absorption annexure. It cuts the Notice, the other annexures, the BRSR, the CG report,
+  auditors' reports, financials and statutory boilerplate. Report-level headings count only in the first 8 lines of a
+  page, so a "CORPORATE GOVERNANCE REPORT" item inside a two-column Directors' Report does not close the zone. It also
+  splits two-column pages and rebuilds tables row by row (asset name + status cell in one turn). It normalises
+  "FY 2026-27" -> FY27, "Sep-2026" / "April, 2025" -> month + year, and "second quarter of FY23" -> Q2FY23; the raw block
+  is kept in the turn. About 7-14% of a report's words survive.
+- **`ar_run.py`:** (1) candidates.py unchanged; (2) rule-based promise builder (no LLM needed; `--promises FILE`
+  accepts `llm_extract.py` output from the same cache root). It keeps a statement only if the company is the subject
+  (in the sentence or the one before), it is not macro/industry text, it has a project/target word and a future marker.
+  AR deadlines drop balance-sheet dates ("as on 31st March, 2026") and "this/current year" (= the year under review).
+  Categories add `approval_regulatory`. The chain key is `asset:milestone` (asset = the table row's name, or a rare proper
+  noun next to plant/mine/block/mill...; milestone = ec / fc / lease / production / commissioning / capacity / ...);
+  (3) evidence: later reports' sentences on the asset are classified done / pending / dropped and dated (dd.mm.yyyy,
+  "during the year" = by the reported FY end). done by the deadline = delivered; up to 6 months late = partly; later, or
+  still pending after the deadline = missed (only when an asset is named; otherwise "missed?" as a suggestion only);
+  lapsed/de-allocated = withdrawn. "m&a" promises without an asset use new LOIs/allocations/acquisitions as evidence.
+  Vague deadlines = FY+2 (score.py rule). Statuses go in `status` (report.py hybrid: human > numbers > this).
+  (4) score.py's chain rule; a milestone the evidence shows done on time stays delivered.
+  (5) Flags: `stale_at_filing` (a forward date already past when the report was filed), unchanged quantity in an
+  asset's row across years (SUNFLAG Belgaon 5.391 MT), asset gone from later status tables, and the same "completed
+  during the year" sentence repeated in consecutive reports.
+- **Validation (2026-11-23):** SUNFLAG asset tracker 17/17 hand-ledger cells, the Bajna "EC by end-Sep-2026" promise
+  and the Belgaon stale-reserve flag reproduced. On two seeded-random no-concall small caps (GULFPETRO, REPRO), one hand-read
+  report each gave this recall: zone 5/7 and 3/8, candidates 4/7 and 3/8, **promises 3/7 and 2/8**. Hand precision of the
+  promise stage was 28/48 (58%) across 15 reports. Auto-scored n: 5, 0, 0. **AR-mode MCS is not comparable with concall
+  MCS.** Most annual-report statements carry no date or number. Use the asset tracker and flags, plus a human read.
+- **Known limits:** some two-column pages still come through as "tables"; merged table cells (two assets in one row)
+  are assigned to both; the forward-looking "company overview" front pages and the BRSR "specific commitments" row
+  are outside the zone (REPRO lost 3 of 8 hand items there); present-tense plans ("is actively expanding ... by
+  launching") are not candidates; the prose asset heuristic can latch onto a wrong word; tracker rows include some
+  non-asset tables (noise assets such as "awareness").
+- **Regression check (`regress_concall.py`):** it extracts the pre-AR-mode pipeline (`--ref 5c15082`) from git and runs
+  turns, candidates, score (seeded promises, `--no-screener` + fin.csv) and report with the old and new code on 8 cached
+  concall companies (COFORGE ... SONACOMS). **All outputs are byte-identical.** Across all seeded promises (508; 546 with the AR-mode seed),
+  `infer_measure` / `parse_target` changed 0. Run:
+  `python3 -I regress_concall.py --ref 5c15082 --cache $PT_CACHE`.
 
 ## v1.3 changes (2026-11-22, first US sector: US-WTS, US-AOS, US-SSD, US-LECO)
 - **US gate in `score.py`.** A promise is US if its id starts `promise:US-`, or its `symbol` starts `US-`, or `market` is `us`. US
@@ -126,6 +192,10 @@ follow the pilot scheme, `promise:SYM:<said_on>:<slug>`. The analysis id is
 | `report.py` | MCS, weighted delivery ratio, hit rate, candour index; breakdowns by category, driver (cycle vs execution), specificity, volunteered/prompted, year said and speaker; markdown ledger; memdb seed. |
 | `validate.py` | Compares pipeline output with a manual ledger (recall/precision, field agreement, status agreement, goalposts). |
 | `run.py` | Orchestrator. |
+| `ar_fetch.py` | AR mode: last N annual reports (NSE), text extracted, PDFs deleted; manifest dated at submission. |
+| `ar_sections.py` | AR mode: forward-looking zone -> management "turns" (two-column split, tables row by row, FY/month normalisation). |
+| `ar_run.py` | AR mode orchestrator: candidates -> rule promises -> next-report evidence -> score -> report, plus asset tracker and flags. |
+| `regress_concall.py` | Proves concall-mode outputs are byte-identical to a reference git revision. |
 
 ### How score.py decides
 - **Measures** it can check against screener: revenue YoY / QoQ / absolute (quarter, half or FY),

@@ -1,0 +1,77 @@
+# LIVE deep dive #3 (method test; company drawn at random from the cheapest EV/EBITDA tercile, see research_notes/Deep dives/AUTOAXLES_live.md section 0). No verdict (L9/L21).
+# Scenarios and probabilities were written BEFORE the worksheet was run (protocol L8 step 2); they are cycle-position scenarios for FY31-32.
+{
+ "company": "Automotive Axles Ltd",
+ "ticker": "AUTOAXLES",
+ "market": "india",
+ "practice": false,
+ "currency": "INR",
+ "units": "INR cr",
+ "as_of": "2026-11-23",
+ "price": 1776.30,
+ "shares": 1.5112,
+ "net_debt": -393.9,
+ "non_operating_value": 0.0,
+ "other_income_recurring_post_tax": 0.0,
+ "treasury_income_post_tax": 23.0,
+ "base": {
+  "fy": "TTM Sep-2026",
+  "revenue": 2406.0,
+  "ebitda": 284.0,
+  "ebit": 246.0,
+  "pat": 208.0,
+  "fcf": 110.0,
+  "eps": 137.6,
+  "eps_normalised": 68.9,
+  "eps_forward": null,
+  "pe_trailing": 12.9,
+  "sbc": 0.0
+ },
+ "tax_rate": 0.25,
+ "roiic": 0.18,
+ "terminal_roic": 0.15,
+ "incremental_roic_5y": 0.21,
+ "years": 10,
+ "coe": 0.125,
+ "terminal_growth": 0.05,
+ "payout_of_fcf": 0.45,
+ "dispersion": 0.35,
+ "base_case": {"name": "base", "growth": 0.05, "growth_end": 0.06, "margin_end": 0.068, "roiic": 0.18, "exit_pe": 16},
+ "scenarios": [
+  {"name": "bear", "prob": 0.35, "growth": -0.03, "growth_end": 0.05, "margin_end": 0.055, "roiic": 0.15, "exit_pe": 14},
+  {"name": "base", "prob": 0.45, "growth": 0.05, "growth_end": 0.06, "margin_end": 0.068, "roiic": 0.18, "exit_pe": 16},
+  {"name": "bull", "prob": 0.17, "growth": 0.11, "growth_end": 0.07, "margin_end": 0.08, "roiic": 0.22, "exit_pe": 18}
+ ],
+ "blowup": {"prob": 0.03, "multiple": 0.3, "note": "Customer A (66% of revenue, almost certainly Ashok Leyland) dual-sources or in-sources axles during a post-pre-buy M&HCV downturn (FY20-21 analogue: revenue -53%, EPS -81%, price -80% peak to trough 2018-20), and the annual MHVSIL services fee steps up"},
+ "twin_engine": {"targets": [2, 3, 5], "horizon": 5, "exit_pes": null, "hist_eps_cagr": 0.044, "hist_eps_note": "Peak-to-peak EPS FY19 80.43 -> FY26 108.77 = 4.4%/yr [SCR]; FY16->FY26 16.8%/yr starts from a weak base and is not used"},
+ "pe_history": [
+  {"date": "FY17", "pe": 21.6}, {"date": "FY18", "pe": 26.1}, {"date": "FY19", "pe": 16.0}, {"date": "FY20", "pe": 14.1},
+  {"date": "FY21", "pe": 70.3}, {"date": "FY22", "pe": 34.8}, {"date": "FY23", "pe": 22.1}, {"date": "FY24", "pe": 16.0},
+  {"date": "FY25", "pe": 15.7}, {"date": "FY26", "pe": 14.2}
+ ],
+ "sector_pes": {"Jamna Auto (CV springs)": 20.8, "GNA Axles": 15.6, "Wheels India (CV wheels)": 29.7},
+ "market_pe": {"index": "Nifty 50", "pe": 20.6, "as_of": "2026-11 (insight:india-valuation-forward-returns)"},
+ "notes": [
+  "Price Rs 1,776.30 = NSE bhavcopy close 23-Nov-2026 = Yahoo AUTOAXLES.NS close 23-Nov-2026 (two sources). Shares 1,51,11,975 [AR26; NSE pledge API totIssuedShares 15,111,975].",
+  "Net cash 393.9 at 30-Sep-2026 [Q2FY27 SoAL]: cash 30.82 + other bank balances 206.70 + current MF investments 169.67 = 407.2 less lease liabilities 13.29 (115.45+17.47 mn). Screener Sep-2026: cash equivalents 238 + investments 170 - borrowings 13 = 395 (second source).",
+  "Treasury income post-tax 23 [EST]: 407 x ~7.5% x 0.75; FY26 interest on deposits 19.5 + MF gains/FV 7.5 = 27.0 pre-tax [AR26 n.22].",
+  "Base = TTM Q3FY26..Q2FY27 [SCR quarterly, cross-checked to Q2FY27 results]: revenue 562+664+517+663 = 2,406; core EBITDA (ex other income) 64+77+60+83 = 284; D&A 38 -> core EBIT 246; PAT 199 reported + 9 post-tax add-back of the Q3FY26 labour-code exceptional (Rs 11.99 cr pre-tax [AR26 n.25]) = 208; EPS 137.6 adj (131.3 reported).",
+  "FCF 110 [EST]: FY26 CFO 173 - capex ~72 (company: 'more than INR 70 crores') = ~101 [SCR FCF 101]; H1 FY27 CFO 86 - capex 45 = 41 with inventory build for the pre-buy. Not a clean run-rate.",
+  "eps_normalised 68.9 = 10-year mean reported EPS FY17-FY26 (32.7, 55.5, 80.4, 27.2, 15.0, 49.2, 107.2, 110.0, 102.9, 108.8) [SCR]: two full M&HCV cycles.",
+  "ROIIC 18% base [EST]: cross-cycle FY19->FY26 dNOPAT 30 / dIC 143 = 21%; FY18->FY26 22%; through-cycle average ROIC FY16-26 15.6% (min 4.5% FY21, max 21.9% FY23). terminal_roic 15% = through-cycle average. incremental_roic_5y 0.21 is the peak-to-peak window (a trough-to-peak FY21->FY26 window would give ~59% and is NOT used, per README v1.3 cyclicals guidance).",
+  "Scenario design (cycle-position at year 5 = FY31-32; written before outputs): bear = the post-April-2027 pre-buy hangover plus one more downturn leaves FY31 revenue ~flat on TTM and NOPAT margin falling toward 5.5% by year 10 (OPM ~9%, the FY16-26 average is 10.0%); base = mid-cycle, revenue +5-6%/yr (industry 500k by 2030 is management's view, i.e. roughly flat volume from FY27 plus tonnage/content and price), NOPAT margin 6.8% (OPM ~10.7%); bull = management's Rs 4,000-5,000 cr by 2030 aspiration delivered partly (revenue ~2x by year 6-7), NOPAT 8%.",
+  "Exit P/Es 14/16/18 [EST]: below the own FY-end median 21.6 because that median is inflated by trough-year P/Es (FY21 70x, FY22 35x); peers JAMNAAUTO 20.8, GNA 15.6, WHEELS 29.7 [SCR 23-Nov-2026]; RKFORGE 71 and BHARATFORG 84 excluded (depressed/one-off EPS). At the FY19 peak the stock traded at 16x trailing.",
+  "Own P/E history = FY-end close [YH] / FY reported EPS [SCR] (FY17-FY26). Cyclical: high P/E at troughs, low at peaks.",
+  "Payout of FCF 0.45 [EST]: dividend Rs 32/share = Rs 48 cr vs FCF ~101-110; payout ~29-30% of PAT for 5 years [SCR].",
+  "Dispersion 0.35 (cyclical, single-customer 66%)."
+ ],
+ "sources": [
+  "research_notes/Deep dives/AUTOAXLES_live.md",
+  "https://nsearchives.nseindia.in/annual_reports/AR_29891_AUTOAXLES_2025_2026_A_16112201_18072026164730.pdf",
+  "https://nsearchives.nseindia.in/annual_reports/AR_27028_AUTOAXLES_2024_2025_A_18072025200747.pdf",
+  "https://nsearchives.nseindia.in/corporate/AUTOAXLES_12112026175115_BMOutcome12112026.pdf",
+  "https://nsearchives.nseindia.in/corporate/AUTOAXLES_17112026155524_CallTranscription_Q2_17112026.pdf",
+  "https://www.screener.in/company/AUTOAXLES/consolidated/",
+  "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_23112026.csv"
+ ]
+}

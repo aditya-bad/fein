@@ -1,0 +1,3103 @@
+[
+ {
+  "type": "promise",
+  "id": "promise:SUNFLAG:2022-09-03:blooming-capacity-the-purpose-of-allocation-is-s",
+  "title": "Blooming capacity: capacity by Q2FY23",
+  "body": "Board'S Report (annual report) on 2022-09-03 (volunteered): \"The purpose of allocation is sale of coal, including to its affiliates, related parties and utilization for captive consumption etc. The ongoing project viz. expansion at Blooming Mill, the Company has received all imported equipment / machineries and now looking forward to take cold trial in the Q2FY23.\" Metric: Blooming capacity. Target: capacity by Q2FY23. Deadline: 2022-09-30 (quarter). Status as of 2026-11-23: partly [llm/manual]. ARFY23 (filed 2023-08-28): Steel Plant:- The Company during the year commissioned its Blooming mill and now operating at its minimum capacity in view of operational requirement for stabilization. Hand review: AR FY23: 'during the year commissioned its Blooming mill' (by 31-Mar-2023) vs cold trial promised Q2 FY23; exact date not disclosed. AR FY24 and FY25 repeat the same 'commissioned during the year' sentence (stale text).",
+  "tickers": [
+   "SUNFLAG"
+  ],
+  "tags": [
+   "ar-mode",
+   "capacity-commissioning",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2022-09-03",
+  "data": {
+   "symbol": "SUNFLAG",
+   "said_on": "2022-09-03",
+   "speaker": "Board'S Report (annual report)",
+   "quote": "The purpose of allocation is sale of coal, including to its affiliates, related parties and utilization for captive consumption etc. The ongoing project viz. expansion at Blooming Mill, the Company has received all imported equipment / machineries and now looking forward to take cold trial in the Q2FY23.",
+   "source_doc": "ARFY22 annual report (Board'S Report)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_21239_SUNFLAG_2021_2022_03092022182037_09032022190012.zip",
+   "category": "capacity_commissioning",
+   "metric": "Blooming capacity",
+   "target": "capacity by Q2FY23",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2022-09-30",
+   "deadline_precision": "quarter",
+   "deadline_raw": "Q2FY23",
+   "deadline_assumed": null,
+   "chain_key": "blooming:capacity",
+   "asset": "blooming",
+   "milestones": [
+    "capacity"
+   ],
+   "acknowledges_revision": false,
+   "specificity": "range",
+   "materiality": 2,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "A",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "partly",
+   "status_basis": "ar-evidence(auto): done 2023-03-31 (by end of the reported FY) vs deadline 2022-09-30; completion date not stated, upper bound used",
+   "evidence": "ARFY23 (filed 2023-08-28): Steel Plant:- The Company during the year commissioned its Blooming mill and now operating at its minimum capacity in view of operational requirement for stabilization.",
+   "admitted_unprompted": false,
+   "chain": {
+    "chain_key": "blooming:capacity",
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "human",
+   "status_as_of": "2026-11-23",
+   "score": 0.5,
+   "weight": 0.926,
+   "hand_review": "AR FY23: 'during the year commissioned its Blooming mill' (by 31-Mar-2023) vs cold trial promised Q2 FY23; exact date not disclosed. AR FY24 and FY25 repeat the same 'commissioned during the year' sentence (stale text).",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23",
+   "human_status": "partly"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_21239_SUNFLAG_2021_2022_03092022182037_09032022190012.zip"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SUNFLAG",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SUNFLAG:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SUNFLAG:2023-08-28:acquisition-besides-the-company-is-also-looking",
+  "title": "looking forward acquire increase business volume: acquisition by 2026-03-31",
+  "body": "Board'S Report (annual report) on 2023-08-28 (volunteered): \"Besides, the Company is also looking forward to acquire coal and iron ore mines with the aim to increase its business volume.\" Metric: looking forward acquire increase business volume. Target: acquisition by 2026-03-31. Deadline: 2026-03-31 (vague). Status as of 2026-11-23: delivered [llm/manual]. ARFY26 (filed 2026-09-01): 9 Surajpura Phosphorite Block (CL), Chhatarpur, Madhya Pradesh | 1,027.29 | Phosphorite | The Letter of Intent (LOI) was granted by the Director, Mineral Resources Department, Bhopal, on 13.02.2026. Hand review: Surajpura phosphorite LOI 13-Feb-2026; Tambia South coal successful bidder 07-May-2026 (AR FY26). Restated in AR FY23, FY24, FY25.",
+  "tickers": [
+   "SUNFLAG"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "m&a",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2023-08-28",
+  "data": {
+   "symbol": "SUNFLAG",
+   "said_on": "2023-08-28",
+   "speaker": "Board'S Report (annual report)",
+   "quote": "Besides, the Company is also looking forward to acquire coal and iron ore mines with the aim to increase its business volume.",
+   "source_doc": "ARFY23 annual report (Board'S Report)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_23013_SUNFLAG_2022_2023_28082023183137_08282023190018.zip",
+   "category": "m&a",
+   "metric": "looking forward acquire increase business volume",
+   "target": "acquisition by 2026-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2026-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [
+    "acquisition"
+   ],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "delivered",
+   "status_basis": "ar-evidence(auto): done 2026-02-13 (dated) vs deadline 2026-03-31",
+   "evidence": "ARFY26 (filed 2026-09-01): 9 Surajpura Phosphorite Block (CL), Chhatarpur, Madhya Pradesh | 1,027.29 | Phosphorite | The Letter of Intent (LOI) was granted by the Director, Mineral Resources Department, Bhopal, on 13.02.2026.",
+   "chain": {
+    "chain_key": "m&a::~acquire-business-forward-increase-intent",
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "human",
+   "status_as_of": "2026-11-23",
+   "score": 1.0,
+   "weight": 0.325,
+   "hand_review": "Surajpura phosphorite LOI 13-Feb-2026; Tambia South coal successful bidder 07-May-2026 (AR FY26). Restated in AR FY23, FY24, FY25.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23",
+   "human_status": "delivered"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_23013_SUNFLAG_2022_2023_28082023183137_08282023190018.zip"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SUNFLAG",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SUNFLAG:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SUNFLAG:2024-09-03:acquisition-besides-the-company-is-also-looking",
+  "title": "looking forward acquire increase business volume: acquisition by 2027-03-31",
+  "body": "Board'S Report (annual report) on 2024-09-03 (volunteered): \"Besides, the Company is also looking forward to acquire coal and iron ore mines with the aim to increase its business volume.\" Metric: looking forward acquire increase business volume. Target: acquisition by 2027-03-31. Deadline: 2027-03-31 (vague). Status as of 2026-11-23: delivered [llm/manual]. ARFY26 (filed 2026-09-01): 9 Surajpura Phosphorite Block (CL), Chhatarpur, Madhya Pradesh | 1,027.29 | Phosphorite | The Letter of Intent (LOI) was granted by the Director, Mineral Resources Department, Bhopal, on 13.02.2026. Hand review: Surajpura phosphorite LOI 13-Feb-2026; Tambia South coal successful bidder 07-May-2026 (AR FY26). Restated in AR FY23, FY24, FY25.",
+  "tickers": [
+   "SUNFLAG"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "m&a",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2024-09-03",
+  "data": {
+   "symbol": "SUNFLAG",
+   "said_on": "2024-09-03",
+   "speaker": "Board'S Report (annual report)",
+   "quote": "Besides, the Company is also looking forward to acquire coal and iron ore mines with the aim to increase its business volume.",
+   "source_doc": "ARFY24 annual report (Board'S Report)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_25512_SUNFLAG_2023_2024_03092024122853.pdf",
+   "category": "m&a",
+   "metric": "looking forward acquire increase business volume",
+   "target": "acquisition by 2027-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2027-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [
+    "acquisition"
+   ],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "delivered",
+   "status_basis": "ar-evidence(auto): done 2026-02-13 (dated) vs deadline 2027-03-31",
+   "evidence": "ARFY26 (filed 2026-09-01): 9 Surajpura Phosphorite Block (CL), Chhatarpur, Madhya Pradesh | 1,027.29 | Phosphorite | The Letter of Intent (LOI) was granted by the Director, Mineral Resources Department, Bhopal, on 13.02.2026.",
+   "chain": {
+    "chain_key": "m&a::~acquire-business-forward-increase-intent",
+    "supersedes": null,
+    "restates": "promise:SUNFLAG:2023-08-28:acquisition-besides-the-company-is-also-looking",
+    "change": "same",
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "human",
+   "status_as_of": "2026-11-23",
+   "score": 1.0,
+   "weight": 0.463,
+   "restates": "promise:SUNFLAG:2023-08-28:acquisition-besides-the-company-is-also-looking",
+   "hand_review": "Surajpura phosphorite LOI 13-Feb-2026; Tambia South coal successful bidder 07-May-2026 (AR FY26). Restated in AR FY23, FY24, FY25.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23",
+   "human_status": "delivered"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_25512_SUNFLAG_2023_2024_03092024122853.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SUNFLAG",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SUNFLAG:credibility-ar-2026-11",
+    "rel": "part_of"
+   },
+   {
+    "to": "promise:SUNFLAG:2023-08-28:acquisition-besides-the-company-is-also-looking",
+    "rel": "restates"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SUNFLAG:2025-09-02:acquisition-besides-the-company-is-also-looking",
+  "title": "looking forward acquire other intention increase business volume: acquisition by 2028-03-31",
+  "body": "Board'S Report (annual report) on 2025-09-02 (volunteered): \"Besides, the Company is also looking forward to acquire coal, iron ore and other mines with the intention to increase its business volume.\" Metric: looking forward acquire other intention increase business volume. Target: acquisition by 2028-03-31. Deadline: 2028-03-31 (vague). Status as of 2026-11-23: delivered [llm/manual]. ARFY26 (filed 2026-09-01): 9 Surajpura Phosphorite Block (CL), Chhatarpur, Madhya Pradesh | 1,027.29 | Phosphorite | The Letter of Intent (LOI) was granted by the Director, Mineral Resources Department, Bhopal, on 13.02.2026. Hand review: Same evidence as the FY23/FY24 statements.",
+  "tickers": [
+   "SUNFLAG"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "m&a",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2025-09-02",
+  "data": {
+   "symbol": "SUNFLAG",
+   "said_on": "2025-09-02",
+   "speaker": "Board'S Report (annual report)",
+   "quote": "Besides, the Company is also looking forward to acquire coal, iron ore and other mines with the intention to increase its business volume.",
+   "source_doc": "ARFY25 annual report (Board'S Report)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_28121_SUNFLAG_2024_2025_A_4649627_02092025130140.pdf",
+   "category": "m&a",
+   "metric": "looking forward acquire other intention increase business volume",
+   "target": "acquisition by 2028-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [
+    "acquisition"
+   ],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "delivered",
+   "status_basis": "ar-evidence(auto): done 2026-02-13 (dated) vs deadline 2028-03-31",
+   "evidence": "ARFY26 (filed 2026-09-01): 9 Surajpura Phosphorite Block (CL), Chhatarpur, Madhya Pradesh | 1,027.29 | Phosphorite | The Letter of Intent (LOI) was granted by the Director, Mineral Resources Department, Bhopal, on 13.02.2026.",
+   "chain": {
+    "chain_key": "m&a::~acquire-business-forward-increase-intent",
+    "supersedes": null,
+    "restates": "promise:SUNFLAG:2024-09-03:acquisition-besides-the-company-is-also-looking",
+    "change": "same",
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "human",
+   "status_as_of": "2026-11-23",
+   "score": 1.0,
+   "weight": 0.654,
+   "restates": "promise:SUNFLAG:2024-09-03:acquisition-besides-the-company-is-also-looking",
+   "hand_review": "Same evidence as the FY23/FY24 statements.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23",
+   "human_status": "delivered"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_28121_SUNFLAG_2024_2025_A_4649627_02092025130140.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SUNFLAG",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SUNFLAG:credibility-ar-2026-11",
+    "rel": "part_of"
+   },
+   {
+    "to": "promise:SUNFLAG:2024-09-03:acquisition-besides-the-company-is-also-looking",
+    "rel": "restates"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SUNFLAG:2025-09-02:photovoltaic-acquisition-as-a-milestone-towards",
+  "title": "Photovoltaic acquisition: 71.34 MW",
+  "body": "Management Discussion And Analysis (annual report) on 2025-09-02 (volunteered): \"As a milestone towards minimising the carbon emissions, has entered into a Joint Venture Agreement with Renew Green Energy Solution Pvt. Ltd. to source 71.34 MW of captive renewable power from its Solar Photovoltaic Power Project, which will reduce carbon emissions over the contract period of 15 years which may be extended upto 25 years.\" Metric: Photovoltaic acquisition. Target: 71.34 MW. Deadline: 2028-03-31 (vague). Status as of 2026-11-23: delivered [llm/manual]. ARFY26 (filed 2026-09-01): Sunsure Solarpark Thirty Seven Private Limited [CIN – U35105HR2024PTC126567] During the period under review, Sunflag executed a Share Subscription and Shareholders' Agreement with Sunsure Energy Private Limited (Promoter of Power Producer Company) and Sunsure Solarpark Thirty Seven Private Limited ( Hand review: Status right, evidence sentence wrong: the pipeline matched the Sunsure SPV text; the real evidence is AR FY26 BRSR P6 (137.75 m kWh renewable power bought, 3x FY25, from the ReNew JV).",
+  "tickers": [
+   "SUNFLAG"
+  ],
+  "tags": [
+   "ar-mode",
+   "customer-win",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2025-09-02",
+  "data": {
+   "symbol": "SUNFLAG",
+   "said_on": "2025-09-02",
+   "speaker": "Management Discussion And Analysis (annual report)",
+   "quote": "As a milestone towards minimising the carbon emissions, has entered into a Joint Venture Agreement with Renew Green Energy Solution Pvt. Ltd. to source 71.34 MW of captive renewable power from its Solar Photovoltaic Power Project, which will reduce carbon emissions over the contract period of 15 years which may be extended upto 25 years.",
+   "source_doc": "ARFY25 annual report (Management Discussion And Analysis)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_28121_SUNFLAG_2024_2025_A_4649627_02092025130140.pdf",
+   "category": "customer_win",
+   "metric": "Photovoltaic acquisition",
+   "target": "71.34 MW",
+   "target_low": 71.34,
+   "target_high": 71.34,
+   "unit": "mw",
+   "comparator": "~",
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": "photovoltaic:acquisition",
+   "asset": "photovoltaic",
+   "milestones": [
+    "acquisition"
+   ],
+   "acknowledges_revision": false,
+   "specificity": "range",
+   "materiality": 2,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "A",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "delivered",
+   "status_basis": "ar-evidence(auto): done 2026-03-31 (by end of the reported FY) vs deadline 2028-03-31",
+   "evidence": "ARFY26 (filed 2026-09-01): Sunsure Solarpark Thirty Seven Private Limited [CIN – U35105HR2024PTC126567] During the period under review, Sunflag executed a Share Subscription and Shareholders' Agreement with Sunsure Energy Private Limited (Promoter of Power Producer Company) and Sunsure Solarpark Thirty Seven Private Limited (",
+   "chain": {
+    "chain_key": "photovoltaic:acquisition",
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "human",
+   "status_as_of": "2026-11-23",
+   "score": 1.0,
+   "weight": 2.617,
+   "hand_review": "Status right, evidence sentence wrong: the pipeline matched the Sunsure SPV text; the real evidence is AR FY26 BRSR P6 (137.75 m kWh renewable power bought, 3x FY25, from the ReNew JV).",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23",
+   "human_status": "delivered"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_28121_SUNFLAG_2024_2025_A_4649627_02092025130140.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SUNFLAG",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SUNFLAG:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SUNFLAG:2026-09-01:acquisition-the-management-remains-confident-tha",
+  "title": "remains confident integrated manufacturing facilities strong customer relationsh: acquisition by 2029-03-31",
+  "body": "Board'S Report (annual report) on 2026-09-01 (volunteered): \"The management remains confident that the Company's integrated manufacturing facilities, strong customer relationships, continuous technology upgradation, diversified product portfolio and focus on specialty steel will enable it to capitalise on emerging opportunities and create sustainable value for all stakeholders.\" Metric: remains confident integrated manufacturing facilities strong customer relationsh. Target: acquisition by 2029-03-31. Deadline: 2029-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Vague; not scorable.",
+  "tickers": [
+   "SUNFLAG"
+  ],
+  "tags": [
+   "ar-mode",
+   "customer-win",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2026-09-01",
+  "data": {
+   "symbol": "SUNFLAG",
+   "said_on": "2026-09-01",
+   "speaker": "Board'S Report (annual report)",
+   "quote": "The management remains confident that the Company's integrated manufacturing facilities, strong customer relationships, continuous technology upgradation, diversified product portfolio and focus on specialty steel will enable it to capitalise on emerging opportunities and create sustainable value for all stakeholders.",
+   "source_doc": "ARFY26 annual report (Board'S Report)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_31025_SUNFLAG_2025_2026_A_4883414_01092026183814.pdf",
+   "category": "customer_win",
+   "metric": "remains confident integrated manufacturing facilities strong customer relationsh",
+   "target": "acquisition by 2029-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2029-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [
+    "acquisition"
+   ],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 2,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline 2029-03-31 not reached",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Vague; not scorable.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_31025_SUNFLAG_2025_2026_A_4883414_01092026183814.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SUNFLAG",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SUNFLAG:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:SUNFLAG:2026-09-01:bajna-ec-ec-and-stage-i-clearances-are-likely-to",
+  "title": "Bajna ec: ec by end of September 2026",
+  "body": "Board'S Report (annual report) on 2026-09-01 (volunteered): \"EC and Stage I clearances are likely to be in place during the end of September 2026.\" Metric: Bajna ec. Target: ec by end of September 2026. Deadline: 2026-09-30 (month). Status as of 2026-11-23: pending [llm/manual].  Hand review: The only dated mine promise (hand ledger section 5.4). Deadline end-Sep-2026 passed; no AR since; check NSE filings/Parivesh. Live call 4 (EC by 2027-09-30, P=0.35).",
+  "tickers": [
+   "SUNFLAG"
+  ],
+  "tags": [
+   "approval-regulatory",
+   "ar-mode",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2026-09-01",
+  "data": {
+   "symbol": "SUNFLAG",
+   "said_on": "2026-09-01",
+   "speaker": "Board'S Report (annual report)",
+   "quote": "EC and Stage I clearances are likely to be in place during the end of September 2026.",
+   "source_doc": "ARFY26 annual report (Board'S Report; table row 7 Bajna Iron Ore Block at Village – Bajna, Tahsil- Baxwaha, )",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_31025_SUNFLAG_2025_2026_A_4883414_01092026183814.pdf",
+   "category": "approval_regulatory",
+   "metric": "Bajna ec",
+   "target": "ec by end of September 2026",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2026-09-30",
+   "deadline_precision": "month",
+   "deadline_raw": "end of September 2026",
+   "deadline_assumed": null,
+   "chain_key": "bajna:ec",
+   "asset": "bajna",
+   "milestones": [
+    "ec",
+    "fc",
+    "approval"
+   ],
+   "acknowledges_revision": false,
+   "specificity": "range",
+   "materiality": 3,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "A",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline 2026-09-30 passed but no annual report filed since; check filings/next AR",
+   "chain": {
+    "chain_key": "bajna:ec",
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "The only dated mine promise (hand ledger section 5.4). Deadline end-Sep-2026 passed; no AR since; check NSE filings/Parivesh. Live call 4 (EC by 2027-09-30, P=0.35).",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_31025_SUNFLAG_2025_2026_A_4883414_01092026183814.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SUNFLAG",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:SUNFLAG:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:SUNFLAG:credibility-ar-2026-11",
+  "title": "SUNFLAG: management credibility from annual reports (AR mode, 2026-11-23)",
+  "body": "AR-mode promise tracker (no earnings calls): last 5 annual reports, hand-confirmed records only. 7 promises, 5 scored; MCS 0.907 (scale -1.5..+1), weighted delivery 90.7%, hit rate 80.0%. Most annual-report statements are vague (no date, no number), so n is tiny and the score is NOT comparable with concall MCS. See research_notes/Promise tracker pilot/AR_mode_validation.md. Research, not advice.",
+  "tickers": [
+   "SUNFLAG"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "no-concall",
+   "process",
+   "promise-tracker"
+  ],
+  "date": "2026-11-23",
+  "data": {
+   "n": 7,
+   "n_scored": 5,
+   "mcs": 0.907,
+   "weighted_delivery_ratio_pct": 90.7,
+   "hit_rate_pct": 80.0,
+   "status_counts": {
+    "partly": 1,
+    "delivered": 4,
+    "pending": 2
+   },
+   "candour_index_pct": 0.0,
+   "candour_known_n": 0,
+   "n_shortfalls": 1,
+   "goalpost_moves_counted": 0,
+   "restatements": 2,
+   "status_sources": {
+    "human": 5
+   },
+   "avg_delivery_ratio_auto": null,
+   "by_category": {
+    "approval_regulatory": {
+     "n": 1,
+     "n_scored": 0
+    },
+    "capacity/capex": {
+     "n": 1,
+     "n_scored": 1,
+     "mcs": 0.5,
+     "weighted_delivery_ratio_pct": 50.0,
+     "hit_rate_pct": 0.0
+    },
+    "customer_win": {
+     "n": 2,
+     "n_scored": 1,
+     "mcs": 1.0,
+     "weighted_delivery_ratio_pct": 100.0,
+     "hit_rate_pct": 100.0
+    },
+    "m&a": {
+     "n": 3,
+     "n_scored": 3,
+     "mcs": 1.0,
+     "weighted_delivery_ratio_pct": 100.0,
+     "hit_rate_pct": 100.0
+    }
+   },
+   "symbol": "SUNFLAG",
+   "as_of": "2026-11-23",
+   "status_source": "hybrid",
+   "formula": "score: delivered +1, partly +0.5, missed -1, moved-goalpost -1.5, silently-dropped -1.5, withdrawn -0.5; weight = specificity(3/2/1) x materiality(1-3) x 0.5^(quarters/8)",
+   "mode": "annual_report",
+   "comparable_with_concall": false
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_21239_SUNFLAG_2021_2022_03092022182037_09032022190012.zip",
+   "https://nsearchives.nseindia.in/annual_reports/AR_23013_SUNFLAG_2022_2023_28082023183137_08282023190018.zip",
+   "https://nsearchives.nseindia.in/annual_reports/AR_25512_SUNFLAG_2023_2024_03092024122853.pdf",
+   "https://nsearchives.nseindia.in/annual_reports/AR_28121_SUNFLAG_2024_2025_A_4649627_02092025130140.pdf",
+   "https://nsearchives.nseindia.in/annual_reports/AR_31025_SUNFLAG_2025_2026_A_4883414_01092026183814.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SUNFLAG",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:GULFPETRO:2023-08-21:the-division-is-dedicated-to-expanding-its-geogr",
+  "title": "division dedicated expanding geographical presence larger scale plans territorie: milestone by 2026-03-31",
+  "body": "Management Discussion And Analysis (annual report) on 2023-08-21 (volunteered): \"The division is dedicated to expanding its geographical presence on a larger scale and has plans to venture into new territories.\" Metric: division dedicated expanding geographical presence larger scale plans territorie. Target: milestone by 2026-03-31. Deadline: 2026-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Vague; restated in AR FY25 (next record).",
+  "tickers": [
+   "GULFPETRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "capacity-commissioning",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2023-08-21",
+  "data": {
+   "symbol": "GULFPETRO",
+   "said_on": "2023-08-21",
+   "speaker": "Management Discussion And Analysis (annual report)",
+   "quote": "The division is dedicated to expanding its geographical presence on a larger scale and has plans to venture into new territories.",
+   "source_doc": "ARFY23 annual report (Management Discussion And Analysis)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_22837_GULFPETRO_2022_2023_21082023151755_08212023160000.zip",
+   "category": "capacity_commissioning",
+   "metric": "division dedicated expanding geographical presence larger scale plans territorie",
+   "target": "milestone by 2026-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2026-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "suggested_status": "silently-dropped?",
+   "suggestion_basis": "not mentioned in any annual report filed after the deadline (read it: maybe done, or immaterial)",
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline passed; no later report mentions it",
+   "chain": {
+    "chain_key": "capacity_commissioning::~dedicated-division-expanding-geographica",
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Vague; restated in AR FY25 (next record).",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_22837_GULFPETRO_2022_2023_21082023151755_08212023160000.zip"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:GULFPETRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:GULFPETRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:GULFPETRO:2024-08-22:these-partnerships-are-expected-to-strengthen-ou",
+  "title": "partnerships expected strengthen market presence enhance export sales facilitate: milestone by 2027-03-31",
+  "body": "Message From Executive Director & Cfo (annual report) on 2024-08-22 (volunteered): \"These partnerships are expected to strengthen our market presence, enhance export sales, and facilitate the seamless distribution of 'REPSOL' products to a broader market.\" Metric: partnerships expected strengthen market presence enhance export sales facilitate. Target: milestone by 2027-03-31. Deadline: 2027-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Vague (Repsol distribution/export).",
+  "tickers": [
+   "GULFPETRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker",
+   "revenue-growth"
+  ],
+  "date": "2024-08-22",
+  "data": {
+   "symbol": "GULFPETRO",
+   "said_on": "2024-08-22",
+   "speaker": "Message From Executive Director & Cfo (annual report)",
+   "quote": "These partnerships are expected to strengthen our market presence, enhance export sales, and facilitate the seamless distribution of 'REPSOL' products to a broader market.",
+   "source_doc": "ARFY24 annual report (Message From Executive Director & Cfo)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_25073_GULFPETRO_2023_2024_22082024154517.pdf",
+   "category": "revenue_growth",
+   "metric": "partnerships expected strengthen market presence enhance export sales facilitate",
+   "target": "milestone by 2027-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2027-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline 2027-03-31 not reached",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Vague (Repsol distribution/export).",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_25073_GULFPETRO_2023_2024_22082024154517.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:GULFPETRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:GULFPETRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:GULFPETRO:2024-08-22:the-company-s-automotive-lubricants-adhere-to-th",
+  "title": "automotive lubricants adhere highest industry performance criteria prepared equi: milestone by for the next five years",
+  "body": "Management Discussion And Analysis (annual report) on 2024-08-22 (volunteered): \"The Company's automotive lubricants adhere to the highest industry performance criteria, and its well-prepared plant is equipped to support its growth agenda for the next five years.\" Metric: automotive lubricants adhere highest industry performance criteria prepared equi. Target: milestone by for the next five years. Deadline: 2029-09-30 (multi-year). Status as of 2026-11-23: pending [llm/manual].  Hand review: Capacity-sufficiency claim for 5 years; not checkable from ARs.",
+  "tickers": [
+   "GULFPETRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "capacity-commissioning",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2024-08-22",
+  "data": {
+   "symbol": "GULFPETRO",
+   "said_on": "2024-08-22",
+   "speaker": "Management Discussion And Analysis (annual report)",
+   "quote": "The Company's automotive lubricants adhere to the highest industry performance criteria, and its well-prepared plant is equipped to support its growth agenda for the next five years.",
+   "source_doc": "ARFY24 annual report (Management Discussion And Analysis)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_25073_GULFPETRO_2023_2024_22082024154517.pdf",
+   "category": "capacity_commissioning",
+   "metric": "automotive lubricants adhere highest industry performance criteria prepared equi",
+   "target": "milestone by for the next five years",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2029-09-30",
+   "deadline_precision": "multi-year",
+   "deadline_raw": "for the next five years",
+   "deadline_assumed": "upper end of span from call date",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [],
+   "acknowledges_revision": false,
+   "specificity": "range",
+   "materiality": 2,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "A",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline 2029-09-30 not reached",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Capacity-sufficiency claim for 5 years; not checkable from ARs.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_25073_GULFPETRO_2023_2024_22082024154517.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:GULFPETRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:GULFPETRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:GULFPETRO:2024-08-22:the-division-is-dedicated-to-expanding-its-geogr",
+  "title": "division dedicated expanding geographical presence plans territories: milestone by 2027-03-31",
+  "body": "Management Discussion And Analysis (annual report) on 2024-08-22 (volunteered): \"The division is dedicated to expanding its geographical presence and plans to venture into new territories.\" Metric: division dedicated expanding geographical presence plans territories. Target: milestone by 2027-03-31. Deadline: 2027-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Vague restatement.",
+  "tickers": [
+   "GULFPETRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "capacity-commissioning",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2024-08-22",
+  "data": {
+   "symbol": "GULFPETRO",
+   "said_on": "2024-08-22",
+   "speaker": "Management Discussion And Analysis (annual report)",
+   "quote": "The division is dedicated to expanding its geographical presence and plans to venture into new territories.",
+   "source_doc": "ARFY24 annual report (Management Discussion And Analysis)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_25073_GULFPETRO_2023_2024_22082024154517.pdf",
+   "category": "capacity_commissioning",
+   "metric": "division dedicated expanding geographical presence plans territories",
+   "target": "milestone by 2027-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2027-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline 2027-03-31 not reached",
+   "chain": {
+    "chain_key": "capacity_commissioning::~dedicated-division-expanding-geographica",
+    "supersedes": null,
+    "restates": "promise:GULFPETRO:2023-08-21:the-division-is-dedicated-to-expanding-its-geogr",
+    "change": "same",
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "restates": "promise:GULFPETRO:2023-08-21:the-division-is-dedicated-to-expanding-its-geogr",
+   "hand_review": "Vague restatement.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_25073_GULFPETRO_2023_2024_22082024154517.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:GULFPETRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:GULFPETRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   },
+   {
+    "to": "promise:GULFPETRO:2023-08-21:the-division-is-dedicated-to-expanding-its-geogr",
+    "rel": "restates"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:GULFPETRO:2025-08-22:approval-over-all-indian-tyre-industry-is-poised",
+  "title": "industry poised domestically export front petroleums going beneficiaries because: approval by 2028-03-31",
+  "body": "Management Discussion And Analysis (annual report) on 2025-08-22 (volunteered): \"Over all Indian tyre Industry is poised to grow both domestically and also on the export front and GP Petroleums is going to be one of the key beneficiaries because of the competitive position, product approval from key OEM’s like JK, CEAT, MRF, GoodYear, TVS, Apollo etc. Automotive Lubricants: India is the 3rd largest market for Lubricants and with ever increasing disposable income and rapid urbanization demand for new vehicles is on the rise which will further add to the demand for lubricants in the market.\" Metric: industry poised domestically export front petroleums going beneficiaries because. Target: approval by 2028-03-31. Deadline: 2028-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Vague; hand item G7.",
+  "tickers": [
+   "GULFPETRO"
+  ],
+  "tags": [
+   "approval-regulatory",
+   "ar-mode",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2025-08-22",
+  "data": {
+   "symbol": "GULFPETRO",
+   "said_on": "2025-08-22",
+   "speaker": "Management Discussion And Analysis (annual report)",
+   "quote": "Over all Indian tyre Industry is poised to grow both domestically and also on the export front and GP Petroleums is going to be one of the key beneficiaries because of the competitive position, product approval from key OEM’s like JK, CEAT, MRF, GoodYear, TVS, Apollo etc. Automotive Lubricants: India is the 3rd largest market for Lubricants and with ever increasing disposable income and rapid urbanization demand for new vehicles is on the rise which will further add to the demand for lubricants in the market.",
+   "source_doc": "ARFY25 annual report (Management Discussion And Analysis)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_27575_GULFPETRO_2024_2025_A_22082025160920.pdf",
+   "category": "approval_regulatory",
+   "metric": "industry poised domestically export front petroleums going beneficiaries because",
+   "target": "approval by 2028-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [
+    "approval"
+   ],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline 2028-03-31 not reached",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Vague; hand item G7.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_27575_GULFPETRO_2024_2025_A_22082025160920.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:GULFPETRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:GULFPETRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:GULFPETRO:2025-08-22:the-company-aims-to-significantly-enhance-market",
+  "title": "significantly enhance market coverage visibility sharp focus potential categorie: milestone by 2028-03-31",
+  "body": "Management Discussion And Analysis (annual report) on 2025-08-22 (volunteered): \"The Company aims to significantly enhance market coverage and visibility, with a sharp focus on high-potential categories such as new-age tractors, SUVs, and scooters emerging segments that are expected to be key drivers of future growth.\" Metric: significantly enhance market coverage visibility sharp focus potential categorie. Target: milestone by 2028-03-31. Deadline: 2028-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Vague; hand item G5.",
+  "tickers": [
+   "GULFPETRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker",
+   "revenue-growth"
+  ],
+  "date": "2025-08-22",
+  "data": {
+   "symbol": "GULFPETRO",
+   "said_on": "2025-08-22",
+   "speaker": "Management Discussion And Analysis (annual report)",
+   "quote": "The Company aims to significantly enhance market coverage and visibility, with a sharp focus on high-potential categories such as new-age tractors, SUVs, and scooters emerging segments that are expected to be key drivers of future growth.",
+   "source_doc": "ARFY25 annual report (Management Discussion And Analysis)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_27575_GULFPETRO_2024_2025_A_22082025160920.pdf",
+   "category": "revenue_growth",
+   "metric": "significantly enhance market coverage visibility sharp focus potential categorie",
+   "target": "milestone by 2028-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline 2028-03-31 not reached",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Vague; hand item G5.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_27575_GULFPETRO_2024_2025_A_22082025160920.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:GULFPETRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:GULFPETRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:GULFPETRO:2026-08-03:acquisition-we-will-continue-to-pursue-growth-th",
+  "title": "pursue growth sustainable responsible aligned interests stakeholders: acquisition by long-term",
+  "body": "Message From The Chairman & Managing Director (annual report) on 2026-08-03 (volunteered): \"We will continue to pursue growth that is sustainable, responsible and aligned with the long-term interests of all stakeholders.\" Metric: pursue growth sustainable responsible aligned interests stakeholders. Target: acquisition by long-term. Deadline: 2029-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Boilerplate aspiration.",
+  "tickers": [
+   "GULFPETRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker",
+   "revenue-growth"
+  ],
+  "date": "2026-08-03",
+  "data": {
+   "symbol": "GULFPETRO",
+   "said_on": "2026-08-03",
+   "speaker": "Message From The Chairman & Managing Director (annual report)",
+   "quote": "We will continue to pursue growth that is sustainable, responsible and aligned with the long-term interests of all stakeholders.",
+   "source_doc": "ARFY26 annual report (Message From The Chairman & Managing Director)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_30150_GULFPETRO_2025_2026_A_8290922_03082026171335.pdf",
+   "category": "revenue_growth",
+   "metric": "pursue growth sustainable responsible aligned interests stakeholders",
+   "target": "acquisition by long-term",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2029-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": "long-term",
+   "deadline_assumed": null,
+   "chain_key": null,
+   "asset": null,
+   "milestones": [
+    "acquisition"
+   ],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "A",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline 2029-03-31 not reached",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Boilerplate aspiration.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_30150_GULFPETRO_2025_2026_A_8290922_03082026171335.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:GULFPETRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:GULFPETRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:GULFPETRO:2026-08-03:these-initiatives-represent-significant-mileston",
+  "title": "initiatives represent significant milestones diversification strategy expected s: milestone by long-term",
+  "body": "Directors' Report (annual report) on 2026-08-03 (volunteered): \"These initiatives represent significant milestones in the Company's diversification strategy and are expected to support its long-term growth in India's expanding infrastructure sector.\" Metric: initiatives represent significant milestones diversification strategy expected s. Target: milestone by long-term. Deadline: 2029-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Vague (bitumen / infrastructure).",
+  "tickers": [
+   "GULFPETRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "capacity-commissioning",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2026-08-03",
+  "data": {
+   "symbol": "GULFPETRO",
+   "said_on": "2026-08-03",
+   "speaker": "Directors' Report (annual report)",
+   "quote": "These initiatives represent significant milestones in the Company's diversification strategy and are expected to support its long-term growth in India's expanding infrastructure sector.",
+   "source_doc": "ARFY26 annual report (Directors' Report)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_30150_GULFPETRO_2025_2026_A_8290922_03082026171335.pdf",
+   "category": "capacity_commissioning",
+   "metric": "initiatives represent significant milestones diversification strategy expected s",
+   "target": "milestone by long-term",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2029-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": "long-term",
+   "deadline_assumed": null,
+   "chain_key": null,
+   "asset": null,
+   "milestones": [],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "A",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline 2029-03-31 not reached",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Vague (bitumen / infrastructure).",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_30150_GULFPETRO_2025_2026_A_8290922_03082026171335.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:GULFPETRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:GULFPETRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:GULFPETRO:2025-08-22:pcmo-launch-new-products",
+  "title": "PCMO segment presence / new launches",
+  "body": "ARFY25 annual report (filed 2025-08-22), hand read: \"the company is actively expanding its presence in the passenger car motor oil (PCMO) segment by aggressively launching new products to capitalize on the burgeoning opportunities in this market.\" Status as of 2026-11-23: pending. Vague. The identical sentence is repeated in AR FY26 (copied text). Missed by the AR-mode pipeline. Research, not advice.",
+  "tickers": [
+   "GULFPETRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "new-product",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2025-08-22",
+  "data": {
+   "said_on": "2025-08-22",
+   "speaker": "ARFY25 annual report (hand read)",
+   "quote": "the company is actively expanding its presence in the passenger car motor oil (PCMO) segment by aggressively launching new products to capitalize on the burgeoning opportunities in this market.",
+   "category": "new_product",
+   "metric": "PCMO segment presence / new launches",
+   "target": "PCMO segment presence / new launches",
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "status": "pending",
+   "status_source": "human",
+   "human_status": "pending",
+   "evidence": "Vague. The identical sentence is repeated in AR FY26 (copied text).",
+   "source_doc": "ARFY25 annual report",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_27575_GULFPETRO_2024_2025_A_22082025160920.pdf",
+   "mode": "annual_report",
+   "review": "hand read 2026-11-23; missed by the AR-mode pipeline (recall miss)",
+   "status_as_of": "2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_27575_GULFPETRO_2024_2025_A_22082025160920.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:GULFPETRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:GULFPETRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:GULFPETRO:2025-08-22:repsol-bangladesh-nepal",
+  "title": "Repsol alliance: exclusive distributors in Bangladesh and Nepal",
+  "body": "ARFY25 annual report (filed 2025-08-22), hand read: \"The company is also exploring opportunities to expand this alliance into Bangladesh and Nepal through the appointment of exclusive distributors, anticipating substantial growth in these territories.\" Status as of 2026-11-23: pending. Not mentioned in AR FY26 (suggested: silently dropped?). Missed by the AR-mode pipeline. Research, not advice.",
+  "tickers": [
+   "GULFPETRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "customer-win",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2025-08-22",
+  "data": {
+   "said_on": "2025-08-22",
+   "speaker": "ARFY25 annual report (hand read)",
+   "quote": "The company is also exploring opportunities to expand this alliance into Bangladesh and Nepal through the appointment of exclusive distributors, anticipating substantial growth in these territories.",
+   "category": "customer_win",
+   "metric": "Repsol alliance: exclusive distributors in Bangladesh and Nepal",
+   "target": "Repsol alliance: exclusive distributors in Bangladesh and Nepal",
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "specificity": "vague",
+   "materiality": 2,
+   "volunteered": true,
+   "status": "pending",
+   "status_source": "human",
+   "human_status": "pending",
+   "evidence": "Not mentioned in AR FY26 (suggested: silently dropped?).",
+   "source_doc": "ARFY25 annual report",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_27575_GULFPETRO_2024_2025_A_22082025160920.pdf",
+   "mode": "annual_report",
+   "review": "hand read 2026-11-23; missed by the AR-mode pipeline (recall miss)",
+   "status_as_of": "2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_27575_GULFPETRO_2024_2025_A_22082025160920.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:GULFPETRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:GULFPETRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:GULFPETRO:2025-08-22:lubricants-beyond-india",
+  "title": "International lubricant opportunities",
+  "body": "ARFY25 annual report (filed 2025-08-22), hand read: \"In parallel, we are also exploring opportunities beyond Indian borders in the lubricants segment, seeking to expand our international footprint\" Status as of 2026-11-23: pending. Not mentioned in AR FY26. Missed by the AR-mode pipeline. Research, not advice.",
+  "tickers": [
+   "GULFPETRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "no-concall",
+   "other",
+   "promise-tracker"
+  ],
+  "date": "2025-08-22",
+  "data": {
+   "said_on": "2025-08-22",
+   "speaker": "ARFY25 annual report (hand read)",
+   "quote": "In parallel, we are also exploring opportunities beyond Indian borders in the lubricants segment, seeking to expand our international footprint",
+   "category": "other",
+   "metric": "International lubricant opportunities",
+   "target": "International lubricant opportunities",
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "status": "pending",
+   "status_source": "human",
+   "human_status": "pending",
+   "evidence": "Not mentioned in AR FY26.",
+   "source_doc": "ARFY25 annual report",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_27575_GULFPETRO_2024_2025_A_22082025160920.pdf",
+   "mode": "annual_report",
+   "review": "hand read 2026-11-23; missed by the AR-mode pipeline (recall miss)",
+   "status_as_of": "2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_27575_GULFPETRO_2024_2025_A_22082025160920.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:GULFPETRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:GULFPETRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:GULFPETRO:2025-08-22:amron-50pc-jv",
+  "title": "Acquire 50% of Amron Oil Resources (JV with West Coast Oils)",
+  "body": "ARFY25 annual report (filed 2025-08-22), hand read: \"The Company has entered into a Share Purchase Agreement on June 07, 2025, to acquire 50% stake in Amron Oil Resources Private Limited (the Target Company) to form it as its JV Company in association with West Coast Oils LLP.\" Status as of 2026-11-23: delivered. AR FY26: 50% stake acquired in June 2025; the JV commenced operations during FY 2025-26. Missed by the AR-mode pipeline. Research, not advice.",
+  "tickers": [
+   "GULFPETRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "m&a",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2025-08-22",
+  "data": {
+   "said_on": "2025-08-22",
+   "speaker": "ARFY25 annual report (hand read)",
+   "quote": "The Company has entered into a Share Purchase Agreement on June 07, 2025, to acquire 50% stake in Amron Oil Resources Private Limited (the Target Company) to form it as its JV Company in association with West Coast Oils LLP.",
+   "category": "m&a",
+   "metric": "Acquire 50% of Amron Oil Resources (JV with West Coast Oils)",
+   "target": "Acquire 50% of Amron Oil Resources (JV with West Coast Oils)",
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "specificity": "precise",
+   "materiality": 2,
+   "volunteered": true,
+   "status": "delivered",
+   "status_source": "human",
+   "human_status": "delivered",
+   "evidence": "AR FY26: 50% stake acquired in June 2025; the JV commenced operations during FY 2025-26.",
+   "source_doc": "ARFY25 annual report",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_27575_GULFPETRO_2024_2025_A_22082025160920.pdf",
+   "mode": "annual_report",
+   "review": "hand read 2026-11-23; missed by the AR-mode pipeline (recall miss)",
+   "status_as_of": "2026-11-23",
+   "score": 1.0,
+   "weight": 3.885
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_27575_GULFPETRO_2024_2025_A_22082025160920.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:GULFPETRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:GULFPETRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:GULFPETRO:credibility-ar-2026-11",
+  "title": "GULFPETRO: management credibility from annual reports (AR mode, 2026-11-23)",
+  "body": "AR-mode promise tracker (no earnings calls): last 5 annual reports, hand-confirmed records only. 12 promises, 1 scored; MCS 1.0 (scale -1.5..+1), weighted delivery 100.0%, hit rate 100.0%. Most annual-report statements are vague (no date, no number), so n is tiny and the score is NOT comparable with concall MCS. See research_notes/Promise tracker pilot/AR_mode_validation.md. Research, not advice.",
+  "tickers": [
+   "GULFPETRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "no-concall",
+   "process",
+   "promise-tracker"
+  ],
+  "date": "2026-11-23",
+  "data": {
+   "n": 12,
+   "n_scored": 1,
+   "mcs": 1.0,
+   "weighted_delivery_ratio_pct": 100.0,
+   "hit_rate_pct": 100.0,
+   "status_counts": {
+    "pending": 11,
+    "delivered": 1
+   },
+   "candour_index_pct": null,
+   "candour_known_n": 0,
+   "n_shortfalls": 0,
+   "goalpost_moves_counted": 0,
+   "restatements": 1,
+   "status_sources": {
+    "human": 1
+   },
+   "avg_delivery_ratio_auto": null,
+   "by_category": {
+    "approval_regulatory": {
+     "n": 1,
+     "n_scored": 0
+    },
+    "capacity/capex": {
+     "n": 4,
+     "n_scored": 0
+    },
+    "customer_win": {
+     "n": 1,
+     "n_scored": 0
+    },
+    "m&a": {
+     "n": 1,
+     "n_scored": 1,
+     "mcs": 1.0,
+     "weighted_delivery_ratio_pct": 100.0,
+     "hit_rate_pct": 100.0
+    },
+    "new_product": {
+     "n": 1,
+     "n_scored": 0
+    },
+    "other": {
+     "n": 1,
+     "n_scored": 0
+    },
+    "revenue_growth": {
+     "n": 3,
+     "n_scored": 0
+    }
+   },
+   "symbol": "GULFPETRO",
+   "as_of": "2026-11-23",
+   "status_source": "hybrid",
+   "formula": "score: delivered +1, partly +0.5, missed -1, moved-goalpost -1.5, silently-dropped -1.5, withdrawn -0.5; weight = specificity(3/2/1) x materiality(1-3) x 0.5^(quarters/8)",
+   "mode": "annual_report",
+   "comparable_with_concall": false
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_20753_GULFPETRO_2021_2022_19082022183625.zip",
+   "https://nsearchives.nseindia.in/annual_reports/AR_22837_GULFPETRO_2022_2023_21082023151755_08212023160000.zip",
+   "https://nsearchives.nseindia.in/annual_reports/AR_25073_GULFPETRO_2023_2024_22082024154517.pdf",
+   "https://nsearchives.nseindia.in/annual_reports/AR_27575_GULFPETRO_2024_2025_A_22082025160920.pdf",
+   "https://nsearchives.nseindia.in/annual_reports/AR_30150_GULFPETRO_2025_2026_A_8290922_03082026171335.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:GULFPETRO",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2022-07-08:acquisition-since-most-of-the-business-and-commu",
+  "title": "since business communication clients online acquisition expected impacted signif: acquisition by 2025-03-31",
+  "body": "Management Discussion & Analysis Report (annual report) on 2022-07-08 (volunteered): \"Since most of the business and communication with clients is online, business acquisition is not expected to be impacted in any significant manner.\" Metric: since business communication clients online acquisition expected impacted signif. Target: acquisition by 2025-03-31. Deadline: 2025-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: COVID-era expectation; vague.",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "capacity-commissioning",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2022-07-08",
+  "data": {
+   "symbol": "REPRO",
+   "said_on": "2022-07-08",
+   "speaker": "Management Discussion & Analysis Report (annual report)",
+   "quote": "Since most of the business and communication with clients is online, business acquisition is not expected to be impacted in any significant manner.",
+   "source_doc": "ARFY22 annual report (Management Discussion & Analysis Report)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_20296_REPRO_2021_2022_08072022191724_07082022200010.zip",
+   "category": "capacity_commissioning",
+   "metric": "since business communication clients online acquisition expected impacted signif",
+   "target": "acquisition by 2025-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2025-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [
+    "acquisition"
+   ],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "suggested_status": "silently-dropped?",
+   "suggestion_basis": "not mentioned in any annual report filed after the deadline (read it: maybe done, or immaterial)",
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline passed; no later report mentions it",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "COVID-era expectation; vague.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_20296_REPRO_2021_2022_08072022191724_07082022200010.zip"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2023-07-18:by-leveraging-technology-as-a-strategic-tool-you",
+  "title": "leveraging technology strategic growth trajectory deliver quality content consum: milestone by 2026-03-31",
+  "body": "Directors’ Report (annual report) on 2023-07-18 (volunteered): \"By leveraging technology as a strategic tool, your Company aims to continue its growth trajectory and deliver high-quality content to consumers through a wide array of online channels.\" Metric: leveraging technology strategic growth trajectory deliver quality content consum. Target: milestone by 2026-03-31. Deadline: 2026-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Vague.",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "capacity-commissioning",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2023-07-18",
+  "data": {
+   "symbol": "REPRO",
+   "said_on": "2023-07-18",
+   "speaker": "Directors’ Report (annual report)",
+   "quote": "By leveraging technology as a strategic tool, your Company aims to continue its growth trajectory and deliver high-quality content to consumers through a wide array of online channels.",
+   "source_doc": "ARFY23 annual report (Directors’ Report)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_22432_REPRO_2022_2023_18072023194749_07182023200003.zip",
+   "category": "capacity_commissioning",
+   "metric": "leveraging technology strategic growth trajectory deliver quality content consum",
+   "target": "milestone by 2026-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2026-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "suggested_status": "silently-dropped?",
+   "suggestion_basis": "not mentioned in any annual report filed after the deadline (read it: maybe done, or immaterial)",
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline passed; no later report mentions it",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Vague.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_22432_REPRO_2022_2023_18072023194749_07182023200003.zip"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2023-07-18:completion-reach-truck-proposed-for-warehouse-el",
+  "title": "reach truck proposed warehouse electrically operated completed expecting impleme: completion by soon",
+  "body": "Conservation Of Energy (annual report) on 2023-07-18 (volunteered): \"Reach truck proposed for warehouse (Electrically operated) We have also completed Solar Project report and expecting to implement it soon.\" Metric: reach truck proposed warehouse electrically operated completed expecting impleme. Target: completion by soon. Deadline: 2026-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Solar project 'soon' (AR FY23); AR FY25 energy annexure still says 'Solar Project: Under review'. Hand view: missed/slipping, but 'soon' has no date.",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "capacity-commissioning",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2023-07-18",
+  "data": {
+   "symbol": "REPRO",
+   "said_on": "2023-07-18",
+   "speaker": "Conservation Of Energy (annual report)",
+   "quote": "Reach truck proposed for warehouse (Electrically operated) We have also completed Solar Project report and expecting to implement it soon.",
+   "source_doc": "ARFY23 annual report (Conservation Of Energy)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_22432_REPRO_2022_2023_18072023194749_07182023200003.zip",
+   "category": "capacity_commissioning",
+   "metric": "reach truck proposed warehouse electrically operated completed expecting impleme",
+   "target": "completion by soon",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2026-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": "soon",
+   "deadline_assumed": null,
+   "chain_key": null,
+   "asset": null,
+   "milestones": [
+    "completion"
+   ],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "suggested_status": "silently-dropped?",
+   "suggestion_basis": "not mentioned in any annual report filed after the deadline (read it: maybe done, or immaterial)",
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline passed; no later report mentions it",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Solar project 'soon' (AR FY23); AR FY25 energy annexure still says 'Solar Project: Under review'. Hand view: missed/slipping, but 'soon' has no date.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_22432_REPRO_2022_2023_18072023194749_07182023200003.zip"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2023-07-18:surat-we-will-go-for-recertification-of-iso14001",
+  "title": "Surat capacity commissioning: milestone by 2026-03-31",
+  "body": "Management Discussion & Analysis Report (annual report) on 2023-07-18 (volunteered): \"We will go for recertification of ISO14001-2015 at Surat facility in June 2023.\" Metric: Surat capacity commissioning. Target: milestone by 2026-03-31. Deadline: 2026-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Stale at filing: the June-2023 date had passed when the July-2023 report was filed.",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "capacity-commissioning",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2023-07-18",
+  "data": {
+   "symbol": "REPRO",
+   "said_on": "2023-07-18",
+   "speaker": "Management Discussion & Analysis Report (annual report)",
+   "quote": "We will go for recertification of ISO14001-2015 at Surat facility in June 2023.",
+   "source_doc": "ARFY23 annual report (Management Discussion & Analysis Report)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_22432_REPRO_2022_2023_18072023194749_07182023200003.zip",
+   "category": "capacity_commissioning",
+   "metric": "Surat capacity commissioning",
+   "target": "milestone by 2026-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2026-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": "surat",
+   "milestones": [],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": "in June 2023",
+   "suggested_status": "silently-dropped?",
+   "suggestion_basis": "not mentioned in any annual report filed after the deadline (read it: maybe done, or immaterial)",
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline passed; no later report mentions it",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Stale at filing: the June-2023 date had passed when the July-2023 report was filed.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_22432_REPRO_2022_2023_18072023194749_07182023200003.zip"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2023-07-18:in-terms-of-future-strategy-and-vision-pertainin",
+  "title": "terms future strategy vision pertaining marketing sales unlocking potential book: milestone by 2026-03-31",
+  "body": "Management Discussion & Analysis Report (annual report) on 2023-07-18 (volunteered): \"In terms of future strategy and vision pertaining to marketing and sales, your Company aims to continue unlocking the potential of the books-on-demand industry and further expand its presence in the global market.\" Metric: terms future strategy vision pertaining marketing sales unlocking potential book. Target: milestone by 2026-03-31. Deadline: 2026-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Vague.",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "capacity-commissioning",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2023-07-18",
+  "data": {
+   "symbol": "REPRO",
+   "said_on": "2023-07-18",
+   "speaker": "Management Discussion & Analysis Report (annual report)",
+   "quote": "In terms of future strategy and vision pertaining to marketing and sales, your Company aims to continue unlocking the potential of the books-on-demand industry and further expand its presence in the global market.",
+   "source_doc": "ARFY23 annual report (Management Discussion & Analysis Report)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_22432_REPRO_2022_2023_18072023194749_07182023200003.zip",
+   "category": "capacity_commissioning",
+   "metric": "terms future strategy vision pertaining marketing sales unlocking potential book",
+   "target": "milestone by 2026-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2026-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "suggested_status": "silently-dropped?",
+   "suggestion_basis": "not mentioned in any annual report filed after the deadline (read it: maybe done, or immaterial)",
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline passed; no later report mentions it",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Vague.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_22432_REPRO_2022_2023_18072023194749_07182023200003.zip"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2023-07-18:by-leveraging-technology-and-innovation-your-com",
+  "title": "leveraging technology innovation drive future direction industry providing publi: milestone by 2026-03-31",
+  "body": "Management Discussion & Analysis Report (annual report) on 2023-07-18 (volunteered): \"By leveraging technology and innovation, your Company aims to drive the future direction of the industry, providing publishers with the tools and platforms they need to reach new readers and expand their market presence.\" Metric: leveraging technology innovation drive future direction industry providing publi. Target: milestone by 2026-03-31. Deadline: 2026-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Vague.",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "capacity-commissioning",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2023-07-18",
+  "data": {
+   "symbol": "REPRO",
+   "said_on": "2023-07-18",
+   "speaker": "Management Discussion & Analysis Report (annual report)",
+   "quote": "By leveraging technology and innovation, your Company aims to drive the future direction of the industry, providing publishers with the tools and platforms they need to reach new readers and expand their market presence.",
+   "source_doc": "ARFY23 annual report (Management Discussion & Analysis Report)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_22432_REPRO_2022_2023_18072023194749_07182023200003.zip",
+   "category": "capacity_commissioning",
+   "metric": "leveraging technology innovation drive future direction industry providing publi",
+   "target": "milestone by 2026-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2026-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "suggested_status": "silently-dropped?",
+   "suggestion_basis": "not mentioned in any annual report filed after the deadline (read it: maybe done, or immaterial)",
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline passed; no later report mentions it",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Vague.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_22432_REPRO_2022_2023_18072023194749_07182023200003.zip"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2025-07-22:capacity-new-addition-in-binding-capacity-with",
+  "title": "addition binding capacity bindwel planned installed april: capacity by 2028-03-31",
+  "body": "Conservation Of Energy (annual report) on 2025-07-22 (volunteered): \" | New Addition in binding Capacity with new Bindwel planned to be installed in April 2025\" Metric: addition binding capacity bindwel planned installed april. Target: capacity by 2028-03-31. Deadline: 2028-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Planned for April 2025 but still 'planned' in the July-2025 report (stale at filing); AR FY26 (filed 26-Oct-2026) reports the Bindwel binding capacity installed and commissioned during FY26. Late, delivered.",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "capacity-commissioning",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2025-07-22",
+  "data": {
+   "symbol": "REPRO",
+   "said_on": "2025-07-22",
+   "speaker": "Conservation Of Energy (annual report)",
+   "quote": " | New Addition in binding Capacity with new Bindwel planned to be installed in April 2025",
+   "source_doc": "ARFY25 annual report (Conservation Of Energy; table row )",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_27078_REPRO_2024_2025_A_22072025200020.pdf",
+   "category": "capacity_commissioning",
+   "metric": "addition binding capacity bindwel planned installed april",
+   "target": "capacity by 2028-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [
+    "capacity"
+   ],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 2,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": "in April 2025",
+   "status": "partly",
+   "status_basis": "ar-evidence(auto): deadline 2028-03-31 not reached",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "human",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Planned for April 2025 but still 'planned' in the July-2025 report (stale at filing); AR FY26 (filed 26-Oct-2026) reports the Bindwel binding capacity installed and commissioned during FY26. Late, delivered.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23",
+   "human_status": "partly",
+   "score": 0.5,
+   "weight": 1.257
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_27078_REPRO_2024_2025_A_22072025200020.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2025-07-22:commissioning-in-the-years-ahead-repro-s-growth",
+  "title": "years ahead repro growth terms marketing sales guided several strategic prioriti: commissioning by 2028-03-31",
+  "body": "Management Discussion & Analysis Report (annual report) on 2025-07-22 (volunteered): \"In the years ahead, Repro’s growth in terms of marketing and sales will be guided by several key strategic priorities which include expanding global accessibility, boosting GMV and reader engagement by refining operational efficiency and optimising customer acquisition processes.\" Metric: years ahead repro growth terms marketing sales guided several strategic prioriti. Target: commissioning by 2028-03-31. Deadline: 2028-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Vague; hand item R4.",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "capacity-commissioning",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2025-07-22",
+  "data": {
+   "symbol": "REPRO",
+   "said_on": "2025-07-22",
+   "speaker": "Management Discussion & Analysis Report (annual report)",
+   "quote": "In the years ahead, Repro’s growth in terms of marketing and sales will be guided by several key strategic priorities which include expanding global accessibility, boosting GMV and reader engagement by refining operational efficiency and optimising customer acquisition processes.",
+   "source_doc": "ARFY25 annual report (Management Discussion & Analysis Report)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_27078_REPRO_2024_2025_A_22072025200020.pdf",
+   "category": "capacity_commissioning",
+   "metric": "years ahead repro growth terms marketing sales guided several strategic prioriti",
+   "target": "commissioning by 2028-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [
+    "commissioning",
+    "acquisition"
+   ],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline 2028-03-31 not reached",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Vague; hand item R4.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_27078_REPRO_2024_2025_A_22072025200020.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2026-10-26:as-revenues-grow-the-benefits-of-automation-proc",
+  "title": "revenues benefits automation process efficiency intelligent decision making expe: milestone by 2029-03-31",
+  "body": "Management Discussion & Analysis Report (annual report) on 2026-10-26 (volunteered): \"As revenues grow, the benefits of automation, process efficiency, and intelligent decision-making are expected to lead to greater financial resilience.\" Metric: revenues benefits automation process efficiency intelligent decision making expe. Target: milestone by 2029-03-31. Deadline: 2029-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Vague.",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker",
+   "revenue-growth"
+  ],
+  "date": "2026-10-26",
+  "data": {
+   "symbol": "REPRO",
+   "said_on": "2026-10-26",
+   "speaker": "Management Discussion & Analysis Report (annual report)",
+   "quote": "As revenues grow, the benefits of automation, process efficiency, and intelligent decision-making are expected to lead to greater financial resilience.",
+   "source_doc": "ARFY26 annual report (Management Discussion & Analysis Report)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_32224_REPRO_2025_2026_A_4225185_26102026182004.pdf",
+   "category": "revenue_growth",
+   "metric": "revenues benefits automation process efficiency intelligent decision making expe",
+   "target": "milestone by 2029-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2029-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline 2029-03-31 not reached",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Vague.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_32224_REPRO_2025_2026_A_4225185_26102026182004.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2026-10-26:the-certification-audit-is-in-progress-and-the",
+  "title": "certification audit progress expects receive renewed: milestone by 2029-03-31",
+  "body": "Management Discussion & Analysis Report (annual report) on 2026-10-26 (volunteered): \"The certification audit is in progress, and the Company expects to receive the renewed certification by the end of May 2026.\" Metric: certification audit progress expects receive renewed. Target: milestone by 2029-03-31. Deadline: 2029-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Stale at filing (report filed 26-Oct-2026).",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "new-product",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2026-10-26",
+  "data": {
+   "symbol": "REPRO",
+   "said_on": "2026-10-26",
+   "speaker": "Management Discussion & Analysis Report (annual report)",
+   "quote": "The certification audit is in progress, and the Company expects to receive the renewed certification by the end of May 2026.",
+   "source_doc": "ARFY26 annual report (Management Discussion & Analysis Report)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_32224_REPRO_2025_2026_A_4225185_26102026182004.pdf",
+   "category": "new_product",
+   "metric": "certification audit progress expects receive renewed",
+   "target": "milestone by 2029-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2029-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": "end of May 2026",
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline 2029-03-31 not reached",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Stale at filing (report filed 26-Oct-2026).",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_32224_REPRO_2025_2026_A_4225185_26102026182004.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2026-10-26:rewari-additionally-the-rewari-manufacturing-fac",
+  "title": "Rewari capacity commissioning: milestone by 2029-03-31",
+  "body": "Management Discussion & Analysis Report (annual report) on 2026-10-26 (volunteered): \"Additionally, the Rewari manufacturing facility is scheduled to undergo assessment for the Disney FAMA certification.\" Metric: Rewari capacity commissioning. Target: milestone by 2029-03-31. Deadline: 2029-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Checkable next year (Disney FAMA assessment).",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "capacity-commissioning",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2026-10-26",
+  "data": {
+   "symbol": "REPRO",
+   "said_on": "2026-10-26",
+   "speaker": "Management Discussion & Analysis Report (annual report)",
+   "quote": "Additionally, the Rewari manufacturing facility is scheduled to undergo assessment for the Disney FAMA certification.",
+   "source_doc": "ARFY26 annual report (Management Discussion & Analysis Report)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_32224_REPRO_2025_2026_A_4225185_26102026182004.pdf",
+   "category": "capacity_commissioning",
+   "metric": "Rewari capacity commissioning",
+   "target": "milestone by 2029-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2029-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": "rewari",
+   "milestones": [],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline 2029-03-31 not reached",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Checkable next year (Disney FAMA assessment).",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_32224_REPRO_2025_2026_A_4225185_26102026182004.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2026-10-26:commissioning-we-will-continue-to-achieve-this-b",
+  "title": "achieve optimising customer channel acquisition frameworks driving intense opera: commissioning by 2029-03-31",
+  "body": "Management Discussion & Analysis Report (annual report) on 2026-10-26 (volunteered): \"We will continue to achieve this by optimising customer and channel acquisition frameworks and driving intense operational efficiencies across our value chain.\" Metric: achieve optimising customer channel acquisition frameworks driving intense opera. Target: commissioning by 2029-03-31. Deadline: 2029-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Vague.",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "capacity-commissioning",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2026-10-26",
+  "data": {
+   "symbol": "REPRO",
+   "said_on": "2026-10-26",
+   "speaker": "Management Discussion & Analysis Report (annual report)",
+   "quote": "We will continue to achieve this by optimising customer and channel acquisition frameworks and driving intense operational efficiencies across our value chain.",
+   "source_doc": "ARFY26 annual report (Management Discussion & Analysis Report)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_32224_REPRO_2025_2026_A_4225185_26102026182004.pdf",
+   "category": "capacity_commissioning",
+   "metric": "achieve optimising customer channel acquisition frameworks driving intense opera",
+   "target": "commissioning by 2029-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2029-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [
+    "commissioning",
+    "acquisition"
+   ],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 2,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline 2029-03-31 not reached",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Vague.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_32224_REPRO_2025_2026_A_4225185_26102026182004.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2026-10-26:it-will-continue-to-deepen-its-commitment-to",
+  "title": "deepen commitment transforming online buying engaging meaningful experience: milestone by 2029-03-31",
+  "body": "Management Discussion & Analysis Report (annual report) on 2026-10-26 (volunteered): \"It will continue to deepen its commitment to transforming online book buying into an engaging and meaningful experience.\" Metric: deepen commitment transforming online buying engaging meaningful experience. Target: milestone by 2029-03-31. Deadline: 2029-03-31 (vague). Status as of 2026-11-23: pending [llm/manual].  Hand review: Vague.",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "capacity-commissioning",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2026-10-26",
+  "data": {
+   "symbol": "REPRO",
+   "said_on": "2026-10-26",
+   "speaker": "Management Discussion & Analysis Report (annual report)",
+   "quote": "It will continue to deepen its commitment to transforming online book buying into an engaging and meaningful experience.",
+   "source_doc": "ARFY26 annual report (Management Discussion & Analysis Report)",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_32224_REPRO_2025_2026_A_4225185_26102026182004.pdf",
+   "category": "capacity_commissioning",
+   "metric": "deepen commitment transforming online buying engaging meaningful experience",
+   "target": "milestone by 2029-03-31",
+   "target_low": null,
+   "target_high": null,
+   "unit": null,
+   "comparator": null,
+   "deadline": "2029-03-31",
+   "deadline_precision": "vague",
+   "deadline_raw": null,
+   "deadline_assumed": "vague: FY+2 default",
+   "chain_key": null,
+   "asset": null,
+   "milestones": [],
+   "acknowledges_revision": false,
+   "specificity": "vague",
+   "materiality": 2,
+   "volunteered": true,
+   "prompted": false,
+   "tier": "B",
+   "mode": "annual_report",
+   "stale_at_filing": null,
+   "status": "pending",
+   "status_basis": "ar-evidence(auto): deadline 2029-03-31 not reached",
+   "chain": {
+    "chain_key": null,
+    "supersedes": null,
+    "restates": null,
+    "change": null,
+    "goalpost_move": false
+   },
+   "auto_status_final": "not-auto-scorable",
+   "auto_status_basis": "numbers",
+   "status_source": "llm/manual",
+   "status_as_of": "2026-11-23",
+   "hand_review": "Vague.",
+   "review": "AR mode (ar_run.py) auto-extracted; confirmed as a company forward statement by a hand read on 2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_32224_REPRO_2025_2026_A_4225185_26102026182004.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2025-07-22:content-monetisation-share-of-turnover",
+  "title": "Content monetisation share of turnover",
+  "body": "ARFY25 annual report (filed 2025-07-22), hand read: \"It will continue to play an increasingly significant role in our overall turnover.\" Status as of 2026-11-23: pending. Vague; segment split not disclosed in the AR. Missed by the AR-mode pipeline. Research, not advice.",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker",
+   "revenue-growth"
+  ],
+  "date": "2025-07-22",
+  "data": {
+   "said_on": "2025-07-22",
+   "speaker": "ARFY25 annual report (hand read)",
+   "quote": "It will continue to play an increasingly significant role in our overall turnover.",
+   "category": "revenue_growth",
+   "metric": "Content monetisation share of turnover",
+   "target": "Content monetisation share of turnover",
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "specificity": "vague",
+   "materiality": 2,
+   "volunteered": true,
+   "status": "pending",
+   "status_source": "human",
+   "human_status": "pending",
+   "evidence": "Vague; segment split not disclosed in the AR.",
+   "source_doc": "ARFY25 annual report",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_27078_REPRO_2024_2025_A_22072025200020.pdf",
+   "mode": "annual_report",
+   "review": "hand read 2026-11-23; missed by the AR-mode pipeline (recall miss)",
+   "status_as_of": "2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_27078_REPRO_2024_2025_A_22072025200020.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2025-07-22:content-monetisation-key-driver",
+  "title": "Content monetisation as growth driver",
+  "body": "ARFY25 annual report (filed 2025-07-22), hand read: \"Moving forward, content monetisation will remain the key driver of growth, powered by technology, talent, and innovative ways of connecting books to readers.\" Status as of 2026-11-23: pending. Restated in AR FY26 ('the focus is on content monetisation'). Missed by the AR-mode pipeline. Research, not advice.",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "no-concall",
+   "promise-tracker",
+   "revenue-growth"
+  ],
+  "date": "2025-07-22",
+  "data": {
+   "said_on": "2025-07-22",
+   "speaker": "ARFY25 annual report (hand read)",
+   "quote": "Moving forward, content monetisation will remain the key driver of growth, powered by technology, talent, and innovative ways of connecting books to readers.",
+   "category": "revenue_growth",
+   "metric": "Content monetisation as growth driver",
+   "target": "Content monetisation as growth driver",
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "status": "pending",
+   "status_source": "human",
+   "human_status": "pending",
+   "evidence": "Restated in AR FY26 ('the focus is on content monetisation').",
+   "source_doc": "ARFY25 annual report",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_27078_REPRO_2024_2025_A_22072025200020.pdf",
+   "mode": "annual_report",
+   "review": "hand read 2026-11-23; missed by the AR-mode pipeline (recall miss)",
+   "status_as_of": "2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_27078_REPRO_2024_2025_A_22072025200020.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2025-07-22:expand-sales-marketing-teams",
+  "title": "Sales and marketing team expansion",
+  "body": "ARFY25 annual report (filed 2025-07-22), hand read: \"Hence expanding sales and marketing teams across different segments aim will be key in driving growth in the global and Indian book publishing markets.\" Status as of 2026-11-23: pending. Vague. Missed by the AR-mode pipeline. Research, not advice.",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "no-concall",
+   "people",
+   "promise-tracker"
+  ],
+  "date": "2025-07-22",
+  "data": {
+   "said_on": "2025-07-22",
+   "speaker": "ARFY25 annual report (hand read)",
+   "quote": "Hence expanding sales and marketing teams across different segments aim will be key in driving growth in the global and Indian book publishing markets.",
+   "category": "people",
+   "metric": "Sales and marketing team expansion",
+   "target": "Sales and marketing team expansion",
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "status": "pending",
+   "status_source": "human",
+   "human_status": "pending",
+   "evidence": "Vague.",
+   "source_doc": "ARFY25 annual report",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_27078_REPRO_2024_2025_A_22072025200020.pdf",
+   "mode": "annual_report",
+   "review": "hand read 2026-11-23; missed by the AR-mode pipeline (recall miss)",
+   "status_as_of": "2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_27078_REPRO_2024_2025_A_22072025200020.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2025-07-22:top5-online-book-seller",
+  "title": "Rank among top-5 online book sellers (BRSR target)",
+  "body": "ARFY25 annual report (filed 2025-07-22), hand read: \"The Company aims to position itself as the topnotch seller of Books online. ... Visibility of the e-commerce platform in the ranking of top 5 sellers for books online.\" Status as of 2026-11-23: pending. Not reported in AR FY26 BRSR. Missed by the AR-mode pipeline. Research, not advice.",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "no-concall",
+   "other",
+   "promise-tracker"
+  ],
+  "date": "2025-07-22",
+  "data": {
+   "said_on": "2025-07-22",
+   "speaker": "ARFY25 annual report (hand read)",
+   "quote": "The Company aims to position itself as the topnotch seller of Books online. ... Visibility of the e-commerce platform in the ranking of top 5 sellers for books online.",
+   "category": "other",
+   "metric": "Rank among top-5 online book sellers (BRSR target)",
+   "target": "Rank among top-5 online book sellers (BRSR target)",
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "specificity": "range",
+   "materiality": 2,
+   "volunteered": true,
+   "status": "pending",
+   "status_source": "human",
+   "human_status": "pending",
+   "evidence": "Not reported in AR FY26 BRSR.",
+   "source_doc": "ARFY25 annual report",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_27078_REPRO_2024_2025_A_22072025200020.pdf",
+   "mode": "annual_report",
+   "review": "hand read 2026-11-23; missed by the AR-mode pipeline (recall miss)",
+   "status_as_of": "2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_27078_REPRO_2024_2025_A_22072025200020.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2025-07-22:data-analytics-phase1",
+  "title": "Phase 1 of the data analytics platform",
+  "body": "ARFY25 annual report (filed 2025-07-22), hand read: \"Phase-1 of data analytic platform in activation.\" Status as of 2026-11-23: delivered. AR FY26 BRSR: 'The first phase of its data analytics platform was operationalised'. Missed by the AR-mode pipeline. Research, not advice.",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "new-product",
+   "no-concall",
+   "promise-tracker"
+  ],
+  "date": "2025-07-22",
+  "data": {
+   "said_on": "2025-07-22",
+   "speaker": "ARFY25 annual report (hand read)",
+   "quote": "Phase-1 of data analytic platform in activation.",
+   "category": "new_product",
+   "metric": "Phase 1 of the data analytics platform",
+   "target": "Phase 1 of the data analytics platform",
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "specificity": "range",
+   "materiality": 1,
+   "volunteered": true,
+   "status": "delivered",
+   "status_source": "human",
+   "human_status": "delivered",
+   "evidence": "AR FY26 BRSR: 'The first phase of its data analytics platform was operationalised'.",
+   "source_doc": "ARFY25 annual report",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_27078_REPRO_2024_2025_A_22072025200020.pdf",
+   "mode": "annual_report",
+   "review": "hand read 2026-11-23; missed by the AR-mode pipeline (recall miss)",
+   "status_as_of": "2026-11-23",
+   "score": 1.0,
+   "weight": 1.257
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_27078_REPRO_2024_2025_A_22072025200020.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "promise",
+  "id": "promise:REPRO:2025-07-22:plant-assessment-corrective-actions",
+  "title": "Plant assessment corrective actions (BRSR)",
+  "body": "ARFY25 annual report (filed 2025-07-22), hand read: \"The assessments for the plant locations are still on-going and corrective actions are in process at different stages. It is expected to be completed in the next year.\" Status as of 2026-11-23: pending. Not checked. Missed by the AR-mode pipeline. Research, not advice.",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "no-concall",
+   "other",
+   "promise-tracker"
+  ],
+  "date": "2025-07-22",
+  "data": {
+   "said_on": "2025-07-22",
+   "speaker": "ARFY25 annual report (hand read)",
+   "quote": "The assessments for the plant locations are still on-going and corrective actions are in process at different stages. It is expected to be completed in the next year.",
+   "category": "other",
+   "metric": "Plant assessment corrective actions (BRSR)",
+   "target": "Plant assessment corrective actions (BRSR)",
+   "deadline": "2028-03-31",
+   "deadline_precision": "vague",
+   "specificity": "vague",
+   "materiality": 1,
+   "volunteered": true,
+   "status": "pending",
+   "status_source": "human",
+   "human_status": "pending",
+   "evidence": "Not checked.",
+   "source_doc": "ARFY25 annual report",
+   "source_url": "https://nsearchives.nseindia.in/annual_reports/AR_27078_REPRO_2024_2025_A_22072025200020.pdf",
+   "mode": "annual_report",
+   "review": "hand read 2026-11-23; missed by the AR-mode pipeline (recall miss)",
+   "status_as_of": "2026-11-23"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_27078_REPRO_2024_2025_A_22072025200020.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:REPRO:credibility-ar-2026-11",
+    "rel": "part_of"
+   }
+  ]
+ },
+ {
+  "type": "analysis",
+  "id": "analysis:REPRO:credibility-ar-2026-11",
+  "title": "REPRO: management credibility from annual reports (AR mode, 2026-11-23)",
+  "body": "AR-mode promise tracker (no earnings calls): last 5 annual reports, hand-confirmed records only. 19 promises, 2 scored; MCS 0.75 (scale -1.5..+1), weighted delivery 75.0%, hit rate 50.0%. Most annual-report statements are vague (no date, no number), so n is tiny and the score is NOT comparable with concall MCS. See research_notes/Promise tracker pilot/AR_mode_validation.md. Research, not advice.",
+  "tickers": [
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "no-concall",
+   "process",
+   "promise-tracker"
+  ],
+  "date": "2026-11-23",
+  "data": {
+   "n": 19,
+   "n_scored": 2,
+   "mcs": 0.75,
+   "weighted_delivery_ratio_pct": 75.0,
+   "hit_rate_pct": 50.0,
+   "status_counts": {
+    "pending": 17,
+    "partly": 1,
+    "delivered": 1
+   },
+   "candour_index_pct": 0.0,
+   "candour_known_n": 0,
+   "n_shortfalls": 1,
+   "goalpost_moves_counted": 0,
+   "restatements": 0,
+   "status_sources": {
+    "human": 2
+   },
+   "avg_delivery_ratio_auto": null,
+   "by_category": {
+    "capacity/capex": {
+     "n": 11,
+     "n_scored": 1,
+     "mcs": 0.5,
+     "weighted_delivery_ratio_pct": 50.0,
+     "hit_rate_pct": 0.0
+    },
+    "new_product": {
+     "n": 2,
+     "n_scored": 1,
+     "mcs": 1.0,
+     "weighted_delivery_ratio_pct": 100.0,
+     "hit_rate_pct": 100.0
+    },
+    "other": {
+     "n": 2,
+     "n_scored": 0
+    },
+    "people": {
+     "n": 1,
+     "n_scored": 0
+    },
+    "revenue_growth": {
+     "n": 3,
+     "n_scored": 0
+    }
+   },
+   "symbol": "REPRO",
+   "as_of": "2026-11-23",
+   "status_source": "hybrid",
+   "formula": "score: delivered +1, partly +0.5, missed -1, moved-goalpost -1.5, silently-dropped -1.5, withdrawn -0.5; weight = specificity(3/2/1) x materiality(1-3) x 0.5^(quarters/8)",
+   "mode": "annual_report",
+   "comparable_with_concall": false
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/annual_reports/AR_20296_REPRO_2021_2022_08072022191724_07082022200010.zip",
+   "https://nsearchives.nseindia.in/annual_reports/AR_22432_REPRO_2022_2023_18072023194749_07182023200003.zip",
+   "https://nsearchives.nseindia.in/annual_reports/AR_24566_REPRO_2023_2024_18072024161428.pdf",
+   "https://nsearchives.nseindia.in/annual_reports/AR_27078_REPRO_2024_2025_A_22072025200020.pdf",
+   "https://nsearchives.nseindia.in/annual_reports/AR_32224_REPRO_2025_2026_A_4225185_26102026182004.pdf"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   }
+  ]
+ },
+ {
+  "type": "insight",
+  "id": "insight:promise-tracker-ar-mode-validation-2026-11",
+  "title": "Promise tracker AR mode (no-concall companies): what annual reports can and cannot score (Nov 2026)",
+  "body": "Validated on SUNFLAG plus two seeded-random no-concall NSE small caps (GULFPETRO, REPRO). Annual reports carry few checkable promises: hand reads found 7 (GULFPETRO FY25) and 8 (REPRO FY25) forward statements, almost all undated; the pipeline recovered 3/7 and 2/8 at the promise stage (zone 5/7, 3/8). Auto-scored n was 5 (SUNFLAG), 0, 0. The most useful AR-mode outputs are not the MCS but (1) the asset status tracker (SUNFLAG: 17/17 hand-ledger mine-status cells reproduced; the unchanged Belgaon 5.391 MT reserve flagged) and (2) disclosure-quality flags: stale forward dates at filing (REPRO x3), 'done during the year' text repeated across years (SUNFLAG Blooming mill), identical sentences copied year to year. Treat AR-mode MCS as non-comparable with concall MCS. Research, not advice.",
+  "tickers": [
+   "SUNFLAG",
+   "GULFPETRO",
+   "REPRO"
+  ],
+  "tags": [
+   "ar-mode",
+   "governance",
+   "india",
+   "lesson",
+   "no-concall",
+   "process",
+   "promise-tracker"
+  ],
+  "date": "2026-11-23",
+  "data": {
+   "as_of": "2026-11-23",
+   "recall_promise_stage": {
+    "GULFPETRO": "3/7",
+    "REPRO": "2/8"
+   },
+   "recall_zone": {
+    "GULFPETRO": "5/7",
+    "REPRO": "3/8"
+   },
+   "sunflag_ledger_cells": "17/17",
+   "precision_promise_stage": "28/48 (58%) hand-confirmed company forward statements"
+  },
+  "sources": [
+   "research_notes/Promise tracker pilot/AR_mode_validation.md"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "company:SUNFLAG",
+    "rel": "about"
+   },
+   {
+    "to": "company:GULFPETRO",
+    "rel": "about"
+   },
+   {
+    "to": "company:REPRO",
+    "rel": "about"
+   }
+  ]
+ }
+]

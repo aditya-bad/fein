@@ -1,0 +1,843 @@
+{
+ "input": {
+  "company": "Automotive Axles Ltd",
+  "ticker": "AUTOAXLES",
+  "market": "india",
+  "practice": false,
+  "currency": "INR",
+  "units": "INR cr",
+  "as_of": "2026-11-23",
+  "price": 1776.3,
+  "shares": 1.5112,
+  "net_debt": -393.9,
+  "non_operating_value": 0.0,
+  "other_income_recurring_post_tax": 0.0,
+  "treasury_income_post_tax": 23.0,
+  "base": {
+   "fy": "TTM Sep-2026",
+   "revenue": 2406.0,
+   "ebitda": 284.0,
+   "ebit": 246.0,
+   "pat": 208.0,
+   "fcf": 110.0,
+   "eps": 137.6,
+   "eps_normalised": 68.9,
+   "eps_forward": null,
+   "pe_trailing": 12.9,
+   "sbc": 0.0
+  },
+  "tax_rate": 0.25,
+  "roiic": 0.18,
+  "terminal_roic": 0.15,
+  "incremental_roic_5y": 0.21,
+  "years": 10,
+  "coe": 0.125,
+  "terminal_growth": 0.05,
+  "payout_of_fcf": 0.45,
+  "dispersion": 0.35,
+  "base_case": {
+   "name": "base",
+   "growth": 0.05,
+   "growth_end": 0.06,
+   "margin_end": 0.068,
+   "roiic": 0.18,
+   "exit_pe": 16.0,
+   "prob": 0.0
+  },
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.35,
+    "growth": -0.03,
+    "growth_end": 0.05,
+    "margin_end": 0.055,
+    "roiic": 0.15,
+    "exit_pe": 14.0
+   },
+   {
+    "name": "base",
+    "prob": 0.45,
+    "growth": 0.05,
+    "growth_end": 0.06,
+    "margin_end": 0.068,
+    "roiic": 0.18,
+    "exit_pe": 16.0
+   },
+   {
+    "name": "bull",
+    "prob": 0.17,
+    "growth": 0.11,
+    "growth_end": 0.07,
+    "margin_end": 0.08,
+    "roiic": 0.22,
+    "exit_pe": 18.0
+   }
+  ],
+  "blowup": {
+   "prob": 0.03,
+   "multiple": 0.3,
+   "note": "Customer A (66% of revenue, almost certainly Ashok Leyland) dual-sources or in-sources axles during a post-pre-buy M&HCV downturn (FY20-21 analogue: revenue -53%, EPS -81%, price -80% peak to trough 2018-20), and the annual MHVSIL services fee steps up"
+  },
+  "twin_engine": {
+   "targets": [
+    2,
+    3,
+    5
+   ],
+   "horizon": 5,
+   "exit_pes": null,
+   "hist_eps_cagr": 0.044,
+   "hist_eps_note": "Peak-to-peak EPS FY19 80.43 -> FY26 108.77 = 4.4%/yr [SCR]; FY16->FY26 16.8%/yr starts from a weak base and is not used"
+  },
+  "pe_history": [
+   {
+    "date": "FY17",
+    "pe": 21.6
+   },
+   {
+    "date": "FY18",
+    "pe": 26.1
+   },
+   {
+    "date": "FY19",
+    "pe": 16.0
+   },
+   {
+    "date": "FY20",
+    "pe": 14.1
+   },
+   {
+    "date": "FY21",
+    "pe": 70.3
+   },
+   {
+    "date": "FY22",
+    "pe": 34.8
+   },
+   {
+    "date": "FY23",
+    "pe": 22.1
+   },
+   {
+    "date": "FY24",
+    "pe": 16.0
+   },
+   {
+    "date": "FY25",
+    "pe": 15.7
+   },
+   {
+    "date": "FY26",
+    "pe": 14.2
+   }
+  ],
+  "sector_pes": {
+   "Jamna Auto (CV springs)": 20.8,
+   "GNA Axles": 15.6,
+   "Wheels India (CV wheels)": 29.7
+  },
+  "market_pe": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)"
+  },
+  "notes": [
+   "Price Rs 1,776.30 = NSE bhavcopy close 23-Nov-2026 = Yahoo AUTOAXLES.NS close 23-Nov-2026 (two sources). Shares 1,51,11,975 [AR26; NSE pledge API totIssuedShares 15,111,975].",
+   "Net cash 393.9 at 30-Sep-2026 [Q2FY27 SoAL]: cash 30.82 + other bank balances 206.70 + current MF investments 169.67 = 407.2 less lease liabilities 13.29 (115.45+17.47 mn). Screener Sep-2026: cash equivalents 238 + investments 170 - borrowings 13 = 395 (second source).",
+   "Treasury income post-tax 23 [EST]: 407 x ~7.5% x 0.75; FY26 interest on deposits 19.5 + MF gains/FV 7.5 = 27.0 pre-tax [AR26 n.22].",
+   "Base = TTM Q3FY26..Q2FY27 [SCR quarterly, cross-checked to Q2FY27 results]: revenue 562+664+517+663 = 2,406; core EBITDA (ex other income) 64+77+60+83 = 284; D&A 38 -> core EBIT 246; PAT 199 reported + 9 post-tax add-back of the Q3FY26 labour-code exceptional (Rs 11.99 cr pre-tax [AR26 n.25]) = 208; EPS 137.6 adj (131.3 reported).",
+   "FCF 110 [EST]: FY26 CFO 173 - capex ~72 (company: 'more than INR 70 crores') = ~101 [SCR FCF 101]; H1 FY27 CFO 86 - capex 45 = 41 with inventory build for the pre-buy. Not a clean run-rate.",
+   "eps_normalised 68.9 = 10-year mean reported EPS FY17-FY26 (32.7, 55.5, 80.4, 27.2, 15.0, 49.2, 107.2, 110.0, 102.9, 108.8) [SCR]: two full M&HCV cycles.",
+   "ROIIC 18% base [EST]: cross-cycle FY19->FY26 dNOPAT 30 / dIC 143 = 21%; FY18->FY26 22%; through-cycle average ROIC FY16-26 15.6% (min 4.5% FY21, max 21.9% FY23). terminal_roic 15% = through-cycle average. incremental_roic_5y 0.21 is the peak-to-peak window (a trough-to-peak FY21->FY26 window would give ~59% and is NOT used, per README v1.3 cyclicals guidance).",
+   "Scenario design (cycle-position at year 5 = FY31-32; written before outputs): bear = the post-April-2027 pre-buy hangover plus one more downturn leaves FY31 revenue ~flat on TTM and NOPAT margin falling toward 5.5% by year 10 (OPM ~9%, the FY16-26 average is 10.0%); base = mid-cycle, revenue +5-6%/yr (industry 500k by 2030 is management's view, i.e. roughly flat volume from FY27 plus tonnage/content and price), NOPAT margin 6.8% (OPM ~10.7%); bull = management's Rs 4,000-5,000 cr by 2030 aspiration delivered partly (revenue ~2x by year 6-7), NOPAT 8%.",
+   "Exit P/Es 14/16/18 [EST]: below the own FY-end median 21.6 because that median is inflated by trough-year P/Es (FY21 70x, FY22 35x); peers JAMNAAUTO 20.8, GNA 15.6, WHEELS 29.7 [SCR 23-Nov-2026]; RKFORGE 71 and BHARATFORG 84 excluded (depressed/one-off EPS). At the FY19 peak the stock traded at 16x trailing.",
+   "Own P/E history = FY-end close [YH] / FY reported EPS [SCR] (FY17-FY26). Cyclical: high P/E at troughs, low at peaks.",
+   "Payout of FCF 0.45 [EST]: dividend Rs 32/share = Rs 48 cr vs FCF ~101-110; payout ~29-30% of PAT for 5 years [SCR].",
+   "Dispersion 0.35 (cyclical, single-customer 66%)."
+  ],
+  "sources": [
+   "research_notes/Deep dives/AUTOAXLES_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_29891_AUTOAXLES_2025_2026_A_16112201_18072026164730.pdf",
+   "https://nsearchives.nseindia.in/annual_reports/AR_27028_AUTOAXLES_2024_2025_A_18072025200747.pdf",
+   "https://nsearchives.nseindia.in/corporate/AUTOAXLES_12112026175115_BMOutcome12112026.pdf",
+   "https://nsearchives.nseindia.in/corporate/AUTOAXLES_17112026155524_CallTranscription_Q2_17112026.pdf",
+   "https://www.screener.in/company/AUTOAXLES/consolidated/",
+   "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_23112026.csv"
+  ],
+  "_warnings": [],
+  "non_operating_growth": null,
+  "hurdle_cagr": 0.12,
+  "cash_tax_rate": null,
+  "cash_tax_rate_end": null,
+  "_inc_roic_method": "given",
+  "nopat_margin": 0.07668329177057356,
+  "_nopat_margin_method": "base.ebit x (1 - tax) / revenue",
+  "_eps_method": "given"
+ },
+ "snapshot": {
+  "mcap": 2684.34456,
+  "ev": 2290.44456,
+  "pe": 12.9,
+  "ev_ebitda": 8.064945633802816,
+  "p_fcf": 24.403132363636363,
+  "fcf_yield": 0.04097834593931563,
+  "ev_sales": 0.9519719700748129
+ },
+ "base": {
+  "rows": [
+   {
+    "t": 1,
+    "g": 0.05,
+    "revenue": 2526.3,
+    "margin": 0.07581496259351621,
+    "nopat": 191.53134,
+    "reinv_rate": 0.2777777777777778,
+    "fcf": 138.32819,
+    "eps": 142.2639433501788
+   },
+   {
+    "t": 2,
+    "g": 0.051111111111111114,
+    "revenue": 2655.422,
+    "margin": 0.07494663341645885,
+    "nopat": 199.0149392,
+    "reinv_rate": 0.28395061728395066,
+    "fcf": 142.50452436543208,
+    "eps": 147.22787379931702
+   },
+   {
+    "t": 3,
+    "g": 0.052222222222222225,
+    "revenue": 2794.094037777778,
+    "margin": 0.0740783042394015,
+    "nopat": 206.981748204,
+    "reinv_rate": 0.29012345679012347,
+    "fcf": 146.93148792259262,
+    "eps": 152.5123211274722
+   },
+   {
+    "t": 4,
+    "g": 0.05333333333333334,
+    "revenue": 2943.112386459259,
+    "margin": 0.07320997506234414,
+    "nopat": 215.46518441835852,
+    "reinv_rate": 0.29629629629629634,
+    "fcf": 151.62364829440045,
+    "eps": 158.1394513641872
+   },
+   {
+    "t": 5,
+    "g": 0.05444444444444445,
+    "revenue": 3103.348505277597,
+    "margin": 0.07234164588528678,
+    "nopat": 224.50133862742595,
+    "reinv_rate": 0.30246913580246915,
+    "fcf": 156.59661274629093,
+    "eps": 164.13320381173924
+   },
+   {
+    "t": 6,
+    "g": 0.05555555555555555,
+    "revenue": 3275.756755570797,
+    "margin": 0.07147331670822943,
+    "nopat": 234.12920005003366,
+    "reinv_rate": 0.30864197530864196,
+    "fcf": 161.86710126915906,
+    "eps": 170.51944032688635
+   },
+   {
+    "t": 7,
+    "g": 0.056666666666666664,
+    "revenue": 3461.3829717198087,
+    "margin": 0.07060498753117207,
+    "nopat": 244.39090155888843,
+    "reinv_rate": 0.3148148148148148,
+    "fcf": 167.4530251422013,
+    "eps": 177.32610797682838
+   },
+   {
+    "t": 8,
+    "g": 0.057777777777777775,
+    "revenue": 3661.3739878636197,
+    "margin": 0.06973665835411472,
+    "nopat": 255.33198689828782,
+    "reinv_rate": 0.32098765432098764,
+    "fcf": 173.37357135068928,
+    "eps": 184.58341628682774
+   },
+   {
+    "t": 9,
+    "g": 0.058888888888888886,
+    "revenue": 3876.988233815589,
+    "margin": 0.06886832917705736,
+    "nopat": 267.0017019019902,
+    "reinv_rate": 0.3271604938271605,
+    "fcf": 179.64929325504278,
+    "eps": 192.32403040732254
+   },
+   {
+    "t": 10,
+    "g": 0.06,
+    "revenue": 4109.607527844524,
+    "margin": 0.068,
+    "nopat": 279.45331189342767,
+    "reinv_rate": 0.3333333333333333,
+    "fcf": 186.3022079289518,
+    "eps": 200.58328164799428
+   }
+  ],
+  "pv_fcf": 860.7532108499255,
+  "pv_tv": 803.1946612451418,
+  "tv_share": 0.4827042209163944,
+  "pv_oi": 0.0,
+  "ev": 1663.9478720950674,
+  "equity": 2057.8478720950675,
+  "value_ps": 1361.7309900046766,
+  "cum_dist_ps_5y": 219.15895215585113,
+  "value5_ps": 1892.2506652759835,
+  "dcf_pe5": 11.528749950231854,
+  "max_reinv_rate": 0.3333333333333333
+ },
+ "reverse": {
+  "g_flat_margin": 0.1256000556945801,
+  "g_base_margin": 0.15846057510375983,
+  "g_fade_start": 0.2610638523101807,
+  "m_needed_base_growth": 0.10351474380493167,
+  "implied_coe_base": 0.10400320213317872,
+  "roiic_implied_base": null,
+  "gordon_g_on_fcf": 0.07344704932489672,
+  "path_case": "fade",
+  "path": {
+   "rows": [
+    {
+     "t": 1,
+     "g": 0.2610638523101807,
+     "revenue": 3034.119628658295,
+     "margin": 0.07581496259351621,
+     "nopat": 230.03166615098192,
+     "reinv_rate": 1.4503547350565595,
+     "fcf": -103.59585006404441,
+     "eps": 167.80151373243712
+    },
+    {
+     "t": 2,
+     "g": 0.23761231316460507,
+     "revenue": 3755.063812041925,
+     "margin": 0.07494663341645885,
+     "nopat": 281.4293909765167,
+     "reinv_rate": 1.3200684064700283,
+     "fcf": -90.07665670368426,
+     "eps": 201.89403050937779
+    },
+    {
+     "t": 3,
+     "g": 0.21416077401902944,
+     "revenue": 4559.2511845196705,
+     "margin": 0.0740783042394015,
+     "nopat": 337.7415963506998,
+     "reinv_rate": 1.1897820778834969,
+     "fcf": -64.09730194312507,
+     "eps": 239.24636104506885
+    },
+    {
+     "t": 4,
+     "g": 0.1907092348734538,
+     "revenue": 5428.742489515304,
+     "margin": 0.07320997506234414,
+     "nopat": 397.43810227730347,
+     "reinv_rate": 1.0594957492969654,
+     "fcf": -23.645877694152155,
+     "eps": 278.8435248638138
+    },
+    {
+     "t": 5,
+     "g": 0.16725769572787816,
+     "revenue": 6336.741449011659,
+     "margin": 0.07234164588528678,
+     "nopat": 458.4103059710205,
+     "reinv_rate": 0.9292094207104342,
+     "fcf": 32.451131111995636,
+     "eps": 319.2868690859764
+    },
+    {
+     "t": 6,
+     "g": 0.14380615658230253,
+     "revenue": 7248.003882049797,
+     "margin": 0.07147331670822943,
+     "nopat": 518.0388769642215,
+     "reinv_rate": 0.798923092123903,
+     "fcf": 104.1656555395715,
+     "eps": 358.8389711268968
+    },
+    {
+     "t": 7,
+     "g": 0.12035461743672687,
+     "revenue": 8120.334616453812,
+     "margin": 0.07060498753117207,
+     "nopat": 573.3361243436664,
+     "reinv_rate": 0.6686367635373716,
+     "fcf": 189.98251374345728,
+     "eps": 395.51807200931125
+    },
+    {
+     "t": 8,
+     "g": 0.09690307829115125,
+     "revenue": 8907.220037542382,
+     "margin": 0.06973665835411472,
+     "nopat": 621.159760643018,
+     "reinv_rate": 0.5383504349508402,
+     "fcf": 286.75813332688944,
+     "eps": 427.23986764140017
+    },
+    {
+     "t": 9,
+     "g": 0.07345153914557562,
+     "revenue": 9561.469058808181,
+     "margin": 0.06886832917705736,
+     "nopat": 658.4823985582507,
+     "reinv_rate": 0.408064106364309,
+     "fcf": 389.77936703395136,
+     "eps": 451.99626811639945
+    },
+    {
+     "t": 10,
+     "g": 0.04999999999999999,
+     "revenue": 10039.54251174859,
+     "margin": 0.068,
+     "nopat": 682.6888907989041,
+     "reinv_rate": 0.27777777777777773,
+     "fcf": 493.05308779920864,
+     "eps": 468.0526255841013
+    }
+   ],
+   "pv_fcf": 328.28469808058094,
+   "pv_tv": 1962.159863720489,
+   "tv_share": 0.8566720611554827,
+   "pv_oi": 0.0,
+   "ev": 2290.44456180107,
+   "equity": 2684.34456180107,
+   "value_ps": 1776.3000011918143,
+   "cum_dist_ps_5y": 9.66318753334968,
+   "value5_ps": 3061.9744145564164,
+   "dcf_pe5": 9.590041780678114,
+   "max_reinv_rate": 1.4503547350565595
+  }
+ },
+ "scenarios": {
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.35,
+    "growth": -0.03,
+    "growth_end": 0.05,
+    "margin_end": 0.055,
+    "roiic": 0.15,
+    "exit_pe": 14.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 11.832898008234134,
+    "value_ps": 1107.3411670772273,
+    "value_vs_price": -0.37660239425928765,
+    "eps5": 113.99124038484429,
+    "eps_cagr5": -0.03694606718986637,
+    "dist_ps_5y": 258.5445393440387,
+    "mult5": 1.0439801298946454,
+    "tv_share": 0.3273031568952517,
+    "nonop5_ps": 0.0
+   },
+   {
+    "name": "base",
+    "prob": 0.45,
+    "growth": 0.05,
+    "growth_end": 0.06,
+    "margin_end": 0.068,
+    "roiic": 0.18,
+    "exit_pe": 16.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 11.528749950231854,
+    "value_ps": 1361.7309900046766,
+    "value_vs_price": -0.23338907278912535,
+    "eps5": 164.13320381173924,
+    "eps_cagr5": 0.035894679757390024,
+    "dist_ps_5y": 219.15895215585113,
+    "mult5": 1.6018072471675275,
+    "tv_share": 0.4827042209163944,
+    "nonop5_ps": 0.0
+   },
+   {
+    "name": "bull",
+    "prob": 0.17,
+    "growth": 0.11,
+    "growth_end": 0.07,
+    "margin_end": 0.08,
+    "roiic": 0.22,
+    "exit_pe": 18.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 12.204183935136932,
+    "value_ps": 1765.462006879897,
+    "value_vs_price": -0.006101442954513869,
+    "eps5": 217.57930083026196,
+    "eps_cagr5": 0.09597293296318266,
+    "dist_ps_5y": 205.8314572131882,
+    "mult5": 2.3206996972121283,
+    "tv_share": 0.5755209800259072,
+    "nonop5_ps": 0.0
+   }
+  ],
+  "blowup": {
+   "prob": 0.03,
+   "multiple": 0.3,
+   "note": "Customer A (66% of revenue, almost certainly Ashok Leyland) dual-sources or in-sources axles during a post-pre-buy M&HCV downturn (FY20-21 analogue: revenue -53%, EPS -81%, price -80% peak to trough 2018-20), and the annual MHVSIL services fee steps up"
+  },
+  "pw_value": 1316.4635951487164,
+  "pw_vs_price": -0.2588731660481245,
+  "bear_value": 1107.3411670772273,
+  "downside_bear": -0.37660239425928765,
+  "p_value_below_price": 1.0,
+  "p_ge_3x": 0.056248283294332076,
+  "p_ge_2x": 0.24236224037544699,
+  "p_ge_5x": 0.0026646942521210294,
+  "p_le_half": 0.03639934336685531,
+  "p_blowup": 0.03,
+  "ev_mult5": 1.489725255214575,
+  "ev_cagr5": 0.08298199427556585,
+  "median_mult5": 1.4344218632591594,
+  "hurdle_mult5": 1.7623416832000007,
+  "exit_bet": {
+   "own_median": 18.8,
+   "n_hist": 10,
+   "rows": [
+    {
+     "name": "bear",
+     "prob": 0.35,
+     "exit_pe": 14.0,
+     "dcf_pe5": 11.832898008234134,
+     "own_median": 18.8,
+     "mult_stated": 1.0439801298946454,
+     "mult_dcf": 0.904909790378878,
+     "mult_own": 1.3520125308670334,
+     "stated_vs_dcf": 1.1831421170247431,
+     "stated_vs_own": 0.7446808510638298
+    },
+    {
+     "name": "base",
+     "prob": 0.45,
+     "exit_pe": 16.0,
+     "dcf_pe5": 11.528749950231854,
+     "own_median": 18.8,
+     "mult_stated": 1.6018072471675275,
+     "mult_dcf": 1.1886559800888559,
+     "mult_own": 1.8605321082117598,
+     "stated_vs_dcf": 1.3878347669148836,
+     "stated_vs_own": 0.851063829787234
+    },
+    {
+     "name": "bull",
+     "prob": 0.17,
+     "exit_pe": 18.0,
+     "dcf_pe5": 12.204183935136932,
+     "own_median": 18.8,
+     "mult_stated": 2.3206996972121283,
+     "mult_dcf": 1.6107691634432229,
+     "mult_own": 2.418691838553236,
+     "stated_vs_dcf": 1.4749040243630218,
+     "stated_vs_own": 0.9574468085106382
+    }
+   ],
+   "ev_stated": 1.489725255214575,
+   "ev_dcf": 1.1344443754579403,
+   "ev_own": 1.7306214470528039,
+   "hurdle": 1.7623416832000007
+  }
+ },
+ "twin": {
+  "pe0": 25.780841799709723,
+  "eps0": 68.9,
+  "horizon": 5.0,
+  "exit_pes": [
+   12.9,
+   18.8,
+   19.3,
+   20.8,
+   25.8
+  ],
+  "table": [
+   {
+    "target": 2,
+    "cells": [
+     {
+      "exit_pe": 12.9,
+      "eps_cagr": 0.31931188822379664,
+      "rerating_share": -0.9989283059035969
+     },
+     {
+      "exit_pe": 18.8,
+      "eps_cagr": 0.22358416535713377,
+      "rerating_share": -0.4555667096492137
+     },
+     {
+      "exit_pe": 19.3,
+      "eps_cagr": 0.21717761337386787,
+      "rerating_share": -0.41769852405877045
+     },
+     {
+      "exit_pe": 20.8,
+      "eps_cagr": 0.19909267760372895,
+      "rerating_share": -0.3097158431857589
+     },
+     {
+      "exit_pe": 25.8,
+      "eps_cagr": 0.14852770745649946,
+      "rerating_share": 0.0010716940964030823
+     }
+    ]
+   },
+   {
+    "target": 3,
+    "cells": [
+     {
+      "exit_pe": 12.9,
+      "eps_cagr": 0.43075650018424105,
+      "rerating_share": -0.6302535898793098
+     },
+     {
+      "exit_pe": 18.8,
+      "eps_cagr": 0.3269424870143087,
+      "rerating_share": -0.28743059185433806
+     },
+     {
+      "exit_pe": 19.3,
+      "eps_cagr": 0.31999476223774614,
+      "rerating_share": -0.2635384268515615
+     },
+     {
+      "exit_pe": 20.8,
+      "eps_cagr": 0.30038215991110695,
+      "rerating_share": -0.195408940618367
+     },
+     {
+      "exit_pe": 25.8,
+      "eps_cagr": 0.2455458771749821,
+      "rerating_share": 0.0006761636921475824
+     }
+    ]
+   },
+   {
+    "target": 5,
+    "cells": [
+     {
+      "exit_pe": 12.9,
+      "eps_cagr": 0.5846577449877812,
+      "rerating_share": -0.4302150045486466
+     },
+     {
+      "exit_pe": 18.8,
+      "eps_cagr": 0.46967683804322924,
+      "rerating_share": -0.19620190248454417
+     },
+     {
+      "exit_pe": 19.3,
+      "eps_cagr": 0.4619817719185564,
+      "rerating_share": -0.17989296265396762
+     },
+     {
+      "exit_pe": 20.8,
+      "eps_cagr": 0.4402595136780576,
+      "rerating_share": -0.1333873533240414
+     },
+     {
+      "exit_pe": 25.8,
+      "eps_cagr": 0.3795246925306788,
+      "rerating_share": 0.0004615535247464546
+     }
+    ]
+   }
+  ],
+  "hist_eps_cagr": 0.044,
+  "hist_eps_note": "Peak-to-peak EPS FY19 80.43 -> FY26 108.77 = 4.4%/yr [SCR]; FY16->FY26 16.8%/yr starts from a weak base and is not used"
+ },
+ "temperature": {
+  "pes": {
+   "trailing (given)": 12.9,
+   "normalised EPS": 25.780841799709723
+  },
+  "n_hist": 10,
+  "own_median": 18.8,
+  "sector_median": 20.8,
+  "sector": {
+   "Jamna Auto (CV springs)": 20.8,
+   "GNA Axles": 15.6,
+   "Wheels India (CV wheels)": 29.7
+  },
+  "rows": [
+   {
+    "basis": "trailing (given)",
+    "pe": 12.9,
+    "vs_own": 0.6861702127659575,
+    "own_band": "COLD",
+    "pctile": 0.0,
+    "vs_sector": 0.6201923076923077,
+    "sector_band": "COLD"
+   },
+   {
+    "basis": "normalised EPS",
+    "pe": 25.780841799709723,
+    "vs_own": 1.3713213723249853,
+    "own_band": "WARM",
+    "pctile": 0.7,
+    "vs_sector": 1.2394635480629674,
+    "sector_band": "WARM"
+   }
+  ],
+  "market": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)",
+   "note": "around the long-run average"
+  }
+ },
+ "sensitivity": {
+  "coe_x_growth": {
+   "rows": [
+    [
+     0.105,
+     [
+      1539.0562679967497,
+      1626.9774215873038,
+      1749.5003716335732,
+      1903.563322060096,
+      2080.148408056256
+     ]
+    ],
+    [
+     0.115,
+     [
+      1373.3042213970873,
+      1437.9531393910113,
+      1525.9466074152188,
+      1634.5621187907798,
+      1757.107023599395
+     ]
+    ],
+    [
+     0.125,
+     [
+      1250.1577797867483,
+      1298.1577126607733,
+      1361.7309900046766,
+      1438.4279776713463,
+      1523.1838581023962
+     ]
+    ],
+    [
+     0.135,
+     [
+      1154.6870823312945,
+      1190.300057865716,
+      1235.9283789548854,
+      1289.3495806884832,
+      1346.6823133133014
+     ]
+    ],
+    [
+     0.145,
+     [
+      1078.2399157699658,
+      1104.3625394183132,
+      1136.422874250408,
+      1172.3922092065159,
+      1209.2741141728923
+     ]
+    ]
+   ],
+   "cols": [
+    -0.06,
+    -0.03,
+    0.0,
+    0.03,
+    0.06
+   ]
+  },
+  "tg_x_margin": {
+   "rows": [
+    [
+     0.04,
+     [
+      1113.7655853800798,
+      1227.475702708639,
+      1341.1858200371978,
+      1454.8959373657565,
+      1568.6060546943156
+     ]
+    ],
+    [
+     0.05,
+     [
+      1128.2680582983003,
+      1244.9995241514885,
+      1361.7309900046766,
+      1478.4624558578646,
+      1595.193921711053
+     ]
+    ],
+    [
+     0.060000000000000005,
+     [
+      1146.4082752595525,
+      1266.9189529796681,
+      1387.429630699784,
+      1507.9403084198996,
+      1628.4509861400156
+     ]
+    ]
+   ],
+   "cols": [
+    0.048,
+    0.058,
+    0.068,
+    0.078,
+    0.08800000000000001
+   ]
+  }
+ },
+ "version": "1.3 (2026-11-23; cash-tax input, reinvestment-realism check, exit-multiple bet line; 1.2 non-operating growth; 1.1 bank mode)",
+ "generated": "2026-11-23",
+ "realism": {
+  "history": 0.21,
+  "method": "given",
+  "rows": [
+   {
+    "label": "default ROIIC (input)",
+    "roiic": 0.18,
+    "gap": -0.03,
+    "flag": false
+   },
+   {
+    "label": "scenario bear",
+    "roiic": 0.15,
+    "gap": -0.06,
+    "flag": true
+   },
+   {
+    "label": "scenario base",
+    "roiic": 0.18,
+    "gap": -0.03,
+    "flag": false
+   },
+   {
+    "label": "scenario bull",
+    "roiic": 0.22,
+    "gap": 0.010000000000000009,
+    "flag": false
+   },
+   {
+    "label": "implied by price on the base-case path",
+    "roiic": null,
+    "gap": null,
+    "flag": false
+   }
+  ],
+  "flagged": [
+   "scenario bear"
+  ]
+ }
+}
