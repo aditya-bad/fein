@@ -1,0 +1,727 @@
+[
+ {
+  "type": "analysis",
+  "id": "analysis:sunflag-live-deepdive-2026-11",
+  "title": "Sunflag Iron & Steel - LIVE deep dive #1 (random draw, protocol v1.3 stages 2-7): method test, no verdict; card rule output size 0; 6 live calls",
+  "body": "LIVE method test (L9, L21): company drawn at random to measure whether the deep-dive method has forecasting skill; no buy/sell verdict. Research, not advice. SELECTION: universe.csv 1,547 -> 810 in Rs 1,000-20,000 cr (NSE close 20-Nov-2026) -> 741 after removing 69 financials -> random.Random(20261123).shuffle. Walk: NRBBEARING skipped (PEAD Q2 SUE -0.09 quintile 2, event 04-Nov-2026); VSTIND skipped (SUE -1.30 quintile 1 after adding the missing Q2 FY26 EPS and bonus-adjusting); HINDWAREAP skipped by a judgment scoreability rule (NCLT-sanctioned composite scheme dissolves the listed entity; deviation flagged); SUNFLAG = subject. S2: all hard rules pass (unmodified audits FY25/FY26, auditor rotation after a 5-year term, CRISIL AA-/Stable, tiny RPTs); no promoter encumbrance (SHP XBRL; NSE pledge API returned 0 rows for all symbols on 23-Nov-2026); solvency 0 flags; PEAD quintile 4. KEY FINDING: Sunflag holds 6.00 cr Lloyds Metals & Energy shares (10.66%, from a 2022 arbitral award) worth Rs 10,343 cr pre-tax / ~Rs 9,016 cr post-tax vs a Rs 6,643 cr market cap (156% / 136%). At our steel DCF (Rs 93/123/170 per share) the market applies a 45/52/61% discount to the post-tax stake - inside the Indian holdco range, so no claimable mispricing. Reasons verified: no monetisation/payout policy, 74 lakh LMEL shares pledged to Indian Bank, a 10-asset mining programme with weak delivery (0 of 5 milestones on pace; Belgaon reserve figure stale then cut 5.39 -> 3.5 MT), no earnings calls (~1% institutions). Steel business: 467.5k t rolled FY26, Rs 84.3k/t revenue, ~Rs 10.2k/t EBITDA, OPM 12.1%; carbon basket 24% of sales (+/-240 bp per 10%), power 6.9% (Rs 5.8/kWh; renewable share 10% -> 30%), minimum wage not a driver (10 bp per 10% step); operating ROCE ~14% pre-tax (~CoE after tax), net debt Rs 26 cr Sep-2026. VALUATION (worksheet v1.2): base IRR 11.7% vs CoE 12.5%; stub (55% discount) = 5.4x EV/EBITDA, 12.5x P/E (KSL 12.6x); price needs NOPAT margin 8.2% vs 6.9% (growth irrelevant at ROIIC ~ CoE); 5-yr EV 1.38x vs hurdle 1.76x; P(>=3x) 6% vs base 44%. CARD: size 0 (EV below hurdle); 6 open soft flags with a written variant view; review 2027-02-15. CALLS (live, to 2027-09-30): FY27 revenue >= 4,300 cr 0.63 (base 0.42); FY27 OPM >= 11.0% 0.68 (0.58); FY27 PAT >= 240 cr 0.65 (0.55); Bajna EC by Sep-2027 0.35 (0.50); LMEL stake reduced 0.08 (0.15); beats Nifty 500 0.46 (0.44); plus card 5-yr calls. METHOD LESSONS: (1) selection needs a scoreability rule (schemes that dissolve the entity); (2) promise tracker needs an AR-status mode for companies without calls; (3) worksheet gained non_operating_growth so holdco-like stocks get a correct 5-yr multiple (regression-checked); (4) stub analysis + implied-discount range beats trailing P/E when a stake exceeds the market cap; (5) NSE pledge API can return 0 rows for all symbols - use SHP XBRL encumbrance flags.",
+  "tickers": [
+   "SUNFLAG",
+   "LLOYDSME"
+  ],
+  "tags": [
+   "deep-dive",
+   "live",
+   "method-test",
+   "india",
+   "sector-metals-mining",
+   "holdco-discount",
+   "stage-4",
+   "stage-5",
+   "stage-6",
+   "no-verdict"
+  ],
+  "date": "2026-11-23",
+  "data": {
+   "verdict": null,
+   "purpose": "live method test (strategy_review 3.2b)",
+   "selection_seed": 20261123,
+   "selection_skips": {
+    "NRBBEARING": "PEAD Q2 (SUE -0.09)",
+    "VSTIND": "PEAD Q1 (SUE -1.30)",
+    "HINDWAREAP": "scheme dissolves listed entity (judgment rule)"
+   },
+   "price": 368.6,
+   "price_date": "2026-11-20",
+   "mcap_cr": 6643,
+   "lmel_shares_cr": 6.0,
+   "lmel_price": 1723.8,
+   "stake_pretax_cr": 10343,
+   "stake_posttax_cr": 9016,
+   "implied_discount_range": [
+    0.45,
+    0.52,
+    0.61
+   ],
+   "stub_ev_ebitda_at_55pct": 5.4,
+   "stub_pe_at_55pct": 12.5,
+   "irr_base": 0.117,
+   "ev_mult5": 1.38,
+   "p_ge3x_5y": 0.064,
+   "fy26": {
+    "revenue": 3939,
+    "ebitda": 477,
+    "opm_pct": 12.1,
+    "pat": 202,
+    "rolled_t": 467540,
+    "ebitda_per_t": 10200
+   },
+   "net_debt_sep26_cr": 26,
+   "sue_q2fy27": 1.04,
+   "pead_quintile": 4,
+   "promise_tracker": "not runnable (no calls); hand AR-status ledger n=5",
+   "card_rule_output": "size 0 (EV vs hurdle)",
+   "open_soft_flags": 6,
+   "tools_changed": [
+    "tools/valuation/worksheet.py v1.2 (non_operating_growth, dcf_pe5 ex non-op)"
+   ]
+  },
+  "sources": [
+   "research_notes/Deep dives/SUNFLAG_live.md",
+   "tools/valuation/live/SUNFLAG_worksheet.md",
+   "tools/decision/live/SUNFLAG_card.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_31025_SUNFLAG_2025_2026_A_4883414_01092026183814.pdf",
+   "https://nsearchives.nseindia.in/corporate/SUNFLAG_13112026171507_SE_outcome_BM_13112026_.pdf"
+  ],
+  "links": [
+   {
+    "to": "strategy:deep-dive-protocol",
+    "rel": "applies"
+   },
+   {
+    "to": "analysis:federalbnk-dryrun-stages2-6-2026-11",
+    "rel": "follows"
+   },
+   {
+    "to": "theme:sector-metals-mining",
+    "rel": "sector"
+   },
+   {
+    "to": "insight:group-holdco-discount",
+    "rel": "applies"
+   },
+   {
+    "to": "decision:adopt-disqualifiers-v3",
+    "rel": "applies"
+   },
+   {
+    "to": "decision:card:SUNFLAG:2026-11-23",
+    "rel": "produced"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:SUNFLAG:variant-view-2026-11",
+  "title": "Variant view (live #1): Sunflag's ~50% discount on its LMEL stake is justified and persists absent a distribution event; the steel business is safe, the risk is LMEL",
+  "body": "Method-test variant-perception record (not a recommendation). MARKET PRICES: Sunflag as a discounted LMEL proxy - at our steel DCF the post-tax stake carries a 45-61% (central 52%) discount; equivalently, at a 55% discount steel trades at 5.4x EV/EBITDA, 12.5x P/E. OUR VIEW: no claimable mispricing; the discount is explained by no monetisation/payout policy, collateral use of the stake (74 lakh shares pledged), a mining programme with weak delivery, and no investor communication; underweighted by the market: near-zero net debt, AA- rating, ~14% pre-tax operating ROCE. PROVES US WRONG: (a) LMEL sale + buyback/special dividend (gap closes); (b) stake proceeds or new debt into mining, borrowings > Rs 1,000 cr (discount widens); (c) FY27 OPM < 9%. SCORED BY: thesis:paper-call:SUNFLAG:fy27-revenue-4300cr-plus, fy27-opm-11pct-plus, fy27-net-profit-240cr-plus, bajna-ec-granted-by-sep27, lmel-stake-reduced-by-sep27, beats-nifty500-to-sep27, and the card's 5-year calls. Market-cap/stake ratio on 20-Nov-2026: 0.64 (3-yr range 0.46-1.12).",
+  "tickers": [
+   "SUNFLAG",
+   "LLOYDSME"
+  ],
+  "tags": [
+   "variant-perception",
+   "live",
+   "deepdive-generated",
+   "india",
+   "holdco-discount",
+   "stage-6"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "market_implied_discount": 0.52,
+   "discount_range": [
+    0.45,
+    0.61
+   ],
+   "mcap_to_pretax_stake": 0.64,
+   "review_date": "2027-02-15",
+   "resolve_by": "2027-09-30",
+   "falsifiers": [
+    "LMEL sale with distribution",
+    "borrowings > Rs 1,000 cr",
+    "FY27 OPM < 9%"
+   ]
+  },
+  "sources": [
+   "research_notes/Deep dives/SUNFLAG_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:sunflag-live-deepdive-2026-11",
+    "rel": "generated_by"
+   },
+   {
+    "to": "insight:group-holdco-discount",
+    "rel": "applies"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:SUNFLAG:fy27-revenue-4300cr-plus",
+  "title": "Paper call: Sunflag Iron & Steel FY27 consolidated revenue from operations is >= Rs 4,300 cr",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #1, company drawn at random (method test, L9/L21). Probability 0.63 (naive base rate 0.42) that: Sunflag Iron & Steel FY27 consolidated revenue from operations is >= Rs 4,300 cr. Our reasoning: H1 FY27 Rs 2,201 cr (+10.3% YoY; Q2 +15%); needs H2 >= Rs 2,099 cr (+8.0% vs H2 FY26 Rs 1,943 cr), against a soft Q3 FY26 base (Rs 942 cr) and volumes growing ~4%/yr. Naive base: share of Sunflag's own last 12 fiscal years with revenue growth >= 9.2% (5 of 12: FY15, FY18, FY22, FY23, FY26) [SCR]. Resolution: YES if consolidated revenue from operations for FY27 (1-Apr-2026 to 31-Mar-2027), as first reported in the audited FY27 results, is >= Rs 4,300 cr (NSE integrated-filing XBRL and screener.in agree; standalone only if no consolidated filing). Source: NSE integrated-filing XBRL (FY27 results) + screener.in consolidated. Resolve by 2027-05-31; score with Brier vs the base rate to test whether deep-dive probabilities beat naive base rates.",
+  "tickers": [
+   "SUNFLAG"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "method-test",
+   "sector-metals-mining",
+   "cat-revenue"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.63,
+   "base_rate_probability": 0.42,
+   "method": "deep-dive protocol v1.3 (live #1)",
+   "made_on": "2026-11-23",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if consolidated revenue from operations for FY27 (1-Apr-2026 to 31-Mar-2027), as first reported in the audited FY27 results, is >= Rs 4,300 cr (NSE integrated-filing XBRL and screener.in agree; standalone only if no consolidated filing).",
+   "resolution_source": "NSE integrated-filing XBRL (FY27 results) + screener.in consolidated",
+   "base_rate_reasoning": "share of Sunflag's own last 12 fiscal years with revenue growth >= 9.2% (5 of 12: FY15, FY18, FY22, FY23, FY26) [SCR].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/SUNFLAG_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:sunflag-live-deepdive-2026-11",
+    "rel": "generated_by"
+   },
+   {
+    "to": "thesis:SUNFLAG:variant-view-2026-11",
+    "rel": "tests"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:SUNFLAG:fy27-opm-11pct-plus",
+  "title": "Paper call: Sunflag Iron & Steel FY27 consolidated operating margin (revenue minus operating expenses excl. finance cost and D&A, over revenue) is >= 11.0%",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #1, company drawn at random (method test, L9/L21). Probability 0.68 (naive base rate 0.58) that: Sunflag Iron & Steel FY27 consolidated operating margin (revenue minus operating expenses excl. finance cost and D&A, over revenue) is >= 11.0%. Our reasoning: H1 FY27 OPM 10.8%; H2 ran 1.5-2.5 pp above H1 in FY25 and FY26; carbon basket (coke+coking coal+coal = 24% of sales) is the swing factor (+/-240 bp per 10%). Naive base: share of Sunflag's own last 12 fiscal years with OPM >= 11.0% (7 of 12) [SCR]. Resolution: YES if FY27 consolidated operating profit / revenue from operations >= 11.0%, operating profit = revenue - (total expenses - finance costs - depreciation), other income excluded, as first reported (NSE XBRL and screener OPM agree). Source: NSE integrated-filing XBRL (FY27 results) + screener.in consolidated. Resolve by 2027-05-31; score with Brier vs the base rate to test whether deep-dive probabilities beat naive base rates.",
+  "tickers": [
+   "SUNFLAG"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "method-test",
+   "sector-metals-mining",
+   "cat-margin"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.68,
+   "base_rate_probability": 0.58,
+   "method": "deep-dive protocol v1.3 (live #1)",
+   "made_on": "2026-11-23",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if FY27 consolidated operating profit / revenue from operations >= 11.0%, operating profit = revenue - (total expenses - finance costs - depreciation), other income excluded, as first reported (NSE XBRL and screener OPM agree).",
+   "resolution_source": "NSE integrated-filing XBRL (FY27 results) + screener.in consolidated",
+   "base_rate_reasoning": "share of Sunflag's own last 12 fiscal years with OPM >= 11.0% (7 of 12) [SCR].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/SUNFLAG_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:sunflag-live-deepdive-2026-11",
+    "rel": "generated_by"
+   },
+   {
+    "to": "thesis:SUNFLAG:variant-view-2026-11",
+    "rel": "tests"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:SUNFLAG:fy27-net-profit-240cr-plus",
+  "title": "Paper call: Sunflag Iron & Steel FY27 consolidated net profit is >= Rs 240 cr",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #1, company drawn at random (method test, L9/L21). Probability 0.65 (naive base rate 0.55) that: Sunflag Iron & Steel FY27 consolidated net profit is >= Rs 240 cr. Our reasoning: H1 FY27 consolidated PAT ~Rs 125 cr; H2 at ~12.3% OPM gives ~Rs 140 cr; FY26 was depressed by a Rs 25 cr prior-year deferred-tax charge that should not recur. Naive base: share of Sunflag's own last 11 years with PAT growth >= 19% (6 of 11) [SCR]. Resolution: YES if FY27 consolidated profit for the period (after tax, incl. share of JVs; before OCI) as first reported in the audited FY27 results is >= Rs 240 cr. Source: NSE integrated-filing XBRL (FY27 results; ProfitLossForPeriod). Resolve by 2027-05-31; score with Brier vs the base rate to test whether deep-dive probabilities beat naive base rates.",
+  "tickers": [
+   "SUNFLAG"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "method-test",
+   "sector-metals-mining",
+   "cat-profit"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.65,
+   "base_rate_probability": 0.55,
+   "method": "deep-dive protocol v1.3 (live #1)",
+   "made_on": "2026-11-23",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if FY27 consolidated profit for the period (after tax, incl. share of JVs; before OCI) as first reported in the audited FY27 results is >= Rs 240 cr.",
+   "resolution_source": "NSE integrated-filing XBRL (FY27 results; ProfitLossForPeriod)",
+   "base_rate_reasoning": "share of Sunflag's own last 11 years with PAT growth >= 19% (6 of 11) [SCR].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/SUNFLAG_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:sunflag-live-deepdive-2026-11",
+    "rel": "generated_by"
+   },
+   {
+    "to": "thesis:SUNFLAG:variant-view-2026-11",
+    "rel": "tests"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:SUNFLAG:bajna-ec-granted-by-sep27",
+  "title": "Paper call: Environment Clearance for Sunflag's Bajna iron-ore block (Chhatarpur, MP) is granted on or before 30-Sep-2027",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #1, company drawn at random (method test, L9/L21). Probability 0.35 (naive base rate 0.50) that: Environment Clearance for Sunflag's Bajna iron-ore block (Chhatarpur, MP) is granted on or before 30-Sep-2027. Our reasoning: hand ledger of 5 mine-status statements FY24-FY26: 0 reached production on any stated pace; Lohardongri reversed after 7 years; Bajna was already 'pending' in FY25. Naive base: management's own AR26 statement ('EC and Stage I clearances are likely to be in place during the end of Sep-2026') taken with one year of slack = coin flip. Resolution: YES if a Sunflag filing (Reg-30, quarterly results notes, or the FY2026-27 Annual Report mine-status table) or the MoEF&CC Parivesh record shows the Environment Clearance for the Bajna iron-ore block granted on or before 30-Sep-2027. NO otherwise (including 'listed/pending' language in the FY27 AR). Source: NSE announcements + FY2026-27 Annual Report (board's report, 'Present Status of Coal and Mineral Mines') + parivesh.nic.in. Resolve by 2027-09-30; score with Brier vs the base rate to test whether deep-dive probabilities beat naive base rates.",
+  "tickers": [
+   "SUNFLAG"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "method-test",
+   "sector-metals-mining",
+   "cat-project",
+   "event"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.35,
+   "base_rate_probability": 0.5,
+   "method": "deep-dive protocol v1.3 (live #1)",
+   "made_on": "2026-11-23",
+   "resolve_by": "2027-09-30",
+   "resolution_rule": "YES if a Sunflag filing (Reg-30, quarterly results notes, or the FY2026-27 Annual Report mine-status table) or the MoEF&CC Parivesh record shows the Environment Clearance for the Bajna iron-ore block granted on or before 30-Sep-2027. NO otherwise (including 'listed/pending' language in the FY27 AR).",
+   "resolution_source": "NSE announcements + FY2026-27 Annual Report (board's report, 'Present Status of Coal and Mineral Mines') + parivesh.nic.in",
+   "base_rate_reasoning": "management's own AR26 statement ('EC and Stage I clearances are likely to be in place during the end of Sep-2026') taken with one year of slack = coin flip.",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/SUNFLAG_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:sunflag-live-deepdive-2026-11",
+    "rel": "generated_by"
+   },
+   {
+    "to": "thesis:SUNFLAG:variant-view-2026-11",
+    "rel": "tests"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:SUNFLAG:lmel-stake-reduced-by-sep27",
+  "title": "Paper call: Sunflag sells or transfers any of its 6.00 crore Lloyds Metals & Energy shares on or before 30-Sep-2027",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #1, company drawn at random (method test, L9/L21). Probability 0.08 (naive base rate 0.15) that: Sunflag sells or transfers any of its 6.00 crore Lloyds Metals & Energy shares on or before 30-Sep-2027. Our reasoning: no stated monetisation intent in 4 annual reports; 74 lakh shares pledged to Indian Bank as collateral; dividend Re 1 (~9% payout); the stake funds nothing yet, but the mining programme could create a reason in 2027-28. Naive base: rough annual rate of a stake sale/transfer event at Indian holdcos/opcos with a large listed stake [EST, unverified; insight:group-holdco-discount says catalysts are rare]. Resolution: YES if any filing up to 30-Sep-2027 (Sunflag Reg-30 or results notes, SAST Reg 29(2) disclosures, LMEL shareholding patterns up to the quarter ended 30-Jun-2027, or the Sep-2027 LMEL SHP if filed by the check date) shows Sunflag holding fewer than 6,00,00,000 LMEL shares, or a sale/transfer agreement. Pledge or invocation counts as YES only if shares are actually transferred. Source: NSE announcements (SUNFLAG, LLOYDSME) + LMEL shareholding pattern XBRL + Sunflag FY27 AR note 4. Resolve by 2027-09-30; score with Brier vs the base rate to test whether deep-dive probabilities beat naive base rates.",
+  "tickers": [
+   "SUNFLAG"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "method-test",
+   "sector-metals-mining",
+   "event",
+   "holdco-discount"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.08,
+   "base_rate_probability": 0.15,
+   "method": "deep-dive protocol v1.3 (live #1)",
+   "made_on": "2026-11-23",
+   "resolve_by": "2027-09-30",
+   "resolution_rule": "YES if any filing up to 30-Sep-2027 (Sunflag Reg-30 or results notes, SAST Reg 29(2) disclosures, LMEL shareholding patterns up to the quarter ended 30-Jun-2027, or the Sep-2027 LMEL SHP if filed by the check date) shows Sunflag holding fewer than 6,00,00,000 LMEL shares, or a sale/transfer agreement. Pledge or invocation counts as YES only if shares are actually transferred.",
+   "resolution_source": "NSE announcements (SUNFLAG, LLOYDSME) + LMEL shareholding pattern XBRL + Sunflag FY27 AR note 4",
+   "base_rate_reasoning": "rough annual rate of a stake sale/transfer event at Indian holdcos/opcos with a large listed stake [EST, unverified; insight:group-holdco-discount says catalysts are rare].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/SUNFLAG_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:sunflag-live-deepdive-2026-11",
+    "rel": "generated_by"
+   },
+   {
+    "to": "thesis:SUNFLAG:variant-view-2026-11",
+    "rel": "tests"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:SUNFLAG:beats-nifty500-to-sep27",
+  "title": "Paper call: SUNFLAG's price return from 20-Nov-2026 (close Rs 368.60) to 30-Sep-2027 beats the Nifty 500 (close 24,088.80 on 20-Nov-2026)",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #1, company drawn at random (method test, L9/L21). Probability 0.46 (naive base rate 0.44) that: SUNFLAG's price return from 20-Nov-2026 (close Rs 368.60) to 30-Sep-2027 beats the Nifty 500 (close 24,088.80 on 20-Nov-2026). Our reasoning: no edge claimed on LMEL (beta 0.73, weekly corr 0.54 over 2 years); the market-cap/stake ratio (0.64) sits a little below its 3-year average (~0.71), a slight tailwind if it mean-reverts; high-beta to the market (1.5 vs Nifty 500). Naive base: share of Indian small caps that beat the broad index over ~10 months, typically a little below half because returns are right-skewed [EST, unverified]. Resolution: YES if (SUNFLAG.NS close on the last trading day on or before 30-Sep-2027 / 368.60) > (^CRSLDX close on the same day / 24,088.80); split-adjusted closes, dividends ignored (Rs 1/yr, ~0.3%). Source: Yahoo v8 daily closes SUNFLAG.NS and ^CRSLDX (NSE bhavcopy as check). Resolve by 2027-09-30; score with Brier vs the base rate to test whether deep-dive probabilities beat naive base rates.",
+  "tickers": [
+   "SUNFLAG"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "method-test",
+   "sector-metals-mining",
+   "price-relative"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.46,
+   "base_rate_probability": 0.44,
+   "method": "deep-dive protocol v1.3 (live #1)",
+   "made_on": "2026-11-23",
+   "resolve_by": "2027-09-30",
+   "resolution_rule": "YES if (SUNFLAG.NS close on the last trading day on or before 30-Sep-2027 / 368.60) > (^CRSLDX close on the same day / 24,088.80); split-adjusted closes, dividends ignored (Rs 1/yr, ~0.3%).",
+   "resolution_source": "Yahoo v8 daily closes SUNFLAG.NS and ^CRSLDX (NSE bhavcopy as check)",
+   "base_rate_reasoning": "share of Indian small caps that beat the broad index over ~10 months, typically a little below half because returns are right-skewed [EST, unverified].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/SUNFLAG_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:sunflag-live-deepdive-2026-11",
+    "rel": "generated_by"
+   },
+   {
+    "to": "thesis:SUNFLAG:variant-view-2026-11",
+    "rel": "tests"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:SUNFLAG:card-2026-11-23-5y-ge3x",
+  "title": "Paper call: Sunflag Iron & Steel 5-year outcome ≥3.0x from 2026-11-20 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.06 (base rate 0.444, class india_survivors_2020_25_mcap_ge400) that: YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-20 (entry INR 368.60) to the last close on or before 2031-11-20 is ≥ 3.0. Model: worksheet scenarios bear 30%→0.70x, base 50%→1.54x, bull 18%→2.22x with σ=0.40; reverse DCF base-case IRR 11.7%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.38x vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "SUNFLAG"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india",
+   "deepdive-generated",
+   "live",
+   "sector-metals-mining"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.0641,
+   "base_rate_probability": 0.444,
+   "base_rate_reasoning": "India, random NSE sample, mcap >= Rs 400 cr at T0, 5 yrs from 30-Sep-2020. Survivors only (firms delisted before mid-2023 absent -> loss rates understated); T0 was six months after the Mar-2020 low and 2020-25 was a strong small/mid-cap bull market (-> x3 overstated). One snapshot. Treat as an upper bound for P(>=3x) and a lower bound for P(<=0.5x).",
+   "method": "decision-card-v1",
+   "made_on": "2026-11-23",
+   "resolve_by": "2031-11-20",
+   "entry_date": "2026-11-20",
+   "entry_price": 368.6,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-20 (entry INR 368.60) to the last close on or before 2031-11-20 is ≥ 3.0.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null,
+   "live": true
+  },
+  "sources": [
+   "research_notes/Deep dives/SUNFLAG_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_31025_SUNFLAG_2025_2026_A_4883414_01092026183814.pdf",
+   "https://nsearchives.nseindia.in/corporate/SUNFLAG_13112026171507_SE_outcome_BM_13112026_.pdf",
+   "https://www.screener.in/company/SUNFLAG/consolidated/",
+   "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_20112026.csv"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "analysis:sunflag-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:SUNFLAG:card-2026-11-23-5y-le0p5x",
+  "title": "Paper call: Sunflag Iron & Steel 5-year outcome ≤0.5x from 2026-11-20 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.08 (base rate 0.020, class india_survivors_2020_25_mcap_ge400) that: YES if the total-return multiple from 2026-11-20 (entry INR 368.60) to the last close on or before 2031-11-20 is ≤ 0.5, or the stock is delisted/suspended below that level. Model: worksheet scenarios bear 30%→0.70x, base 50%→1.54x, bull 18%→2.22x with σ=0.40; reverse DCF base-case IRR 11.7%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.38x vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "SUNFLAG"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india",
+   "deepdive-generated",
+   "live",
+   "sector-metals-mining"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.0818,
+   "base_rate_probability": 0.02,
+   "base_rate_reasoning": "India, random NSE sample, mcap >= Rs 400 cr at T0, 5 yrs from 30-Sep-2020. Survivors only (firms delisted before mid-2023 absent -> loss rates understated); T0 was six months after the Mar-2020 low and 2020-25 was a strong small/mid-cap bull market (-> x3 overstated). One snapshot. Treat as an upper bound for P(>=3x) and a lower bound for P(<=0.5x).",
+   "method": "decision-card-v1",
+   "made_on": "2026-11-23",
+   "resolve_by": "2031-11-20",
+   "entry_date": "2026-11-20",
+   "entry_price": 368.6,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple from 2026-11-20 (entry INR 368.60) to the last close on or before 2031-11-20 is ≤ 0.5, or the stock is delisted/suspended below that level.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null,
+   "live": true
+  },
+  "sources": [
+   "research_notes/Deep dives/SUNFLAG_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_31025_SUNFLAG_2025_2026_A_4883414_01092026183814.pdf",
+   "https://nsearchives.nseindia.in/corporate/SUNFLAG_13112026171507_SE_outcome_BM_13112026_.pdf",
+   "https://www.screener.in/company/SUNFLAG/consolidated/",
+   "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_20112026.csv"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "analysis:sunflag-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:SUNFLAG:card-2026-11-23-5y-blowup",
+  "title": "Paper call: Sunflag Iron & Steel 5-year outcome blow-up from 2026-11-20 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.02 (base rate n/a, class india_survivors_2020_25_mcap_ge400) that: YES if between 2026-11-20 and 2031-11-20: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples). Model: worksheet scenarios bear 30%→0.70x, base 50%→1.54x, bull 18%→2.22x with σ=0.40; reverse DCF base-case IRR 11.7%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.38x vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "SUNFLAG"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india",
+   "deepdive-generated",
+   "live",
+   "sector-metals-mining"
+  ],
+  "date": "2026-11-23",
+  "status": "open",
+  "data": {
+   "probability": 0.02,
+   "base_rate_probability": null,
+   "base_rate_reasoning": "India, random NSE sample, mcap >= Rs 400 cr at T0, 5 yrs from 30-Sep-2020. Survivors only (firms delisted before mid-2023 absent -> loss rates understated); T0 was six months after the Mar-2020 low and 2020-25 was a strong small/mid-cap bull market (-> x3 overstated). One snapshot. Treat as an upper bound for P(>=3x) and a lower bound for P(<=0.5x).",
+   "method": "decision-card-v1",
+   "made_on": "2026-11-23",
+   "resolve_by": "2031-11-20",
+   "entry_date": "2026-11-20",
+   "entry_price": 368.6,
+   "currency": "INR",
+   "resolution_rule": "YES if between 2026-11-20 and 2031-11-20: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples).",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null,
+   "live": true
+  },
+  "sources": [
+   "research_notes/Deep dives/SUNFLAG_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_31025_SUNFLAG_2025_2026_A_4883414_01092026183814.pdf",
+   "https://nsearchives.nseindia.in/corporate/SUNFLAG_13112026171507_SE_outcome_BM_13112026_.pdf",
+   "https://www.screener.in/company/SUNFLAG/consolidated/",
+   "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_20112026.csv"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "analysis:sunflag-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ]
+ },
+ {
+  "type": "decision",
+  "id": "decision:card:SUNFLAG:2026-11-23",
+  "title": "Decision card SUNFLAG 2026-11-23 (paper)",
+  "body": "Decision card v1 for Sunflag Iron & Steel. Rule output: size 0: blocked by Expected value vs hurdle (EV 1.38x vs hurdle 1.76x → below hurdle → size 0). Thesis: Method-test thesis: about three quarters of Sunflag's value is a 10.66% stake in Lloyds Metals & Energy (post-tax ~Rs 9,016 cr vs a Rs 6,643 cr market cap); the special-steel business compounds ~8%/yr at ~7% NOPAT margin with ROIIC close to the cost of equity, and the market's ~50% discount on the stake persists over 5 years unless the stake is monetised and distributed. Variant view: Market (reverse DCF): at Rs 368.60 the price implies either a 45-61% discount on the post-tax LMEL stake (if the steel business is worth our bear-to-bull DCF of Rs 93-170/share) or, at a 55% discount, 5.4x EV/EBITDA and 12.5x P/E for steel (KSL 12.6x). Our view: the gap is NOT a mispricing we can claim. The discount sits inside the Indian holdco base range (insight:group-holdco-discount) and is justified by three things we verified: no stated monetisation or payout policy (dividend Re 1, ~9% payout), the stake already serves as loan collateral (74 lakh LMEL shares pledged to Indian Bank), and management is spending on a 10-block mining programme with a weak delivery record (Lohardongri LOI 2019, still not operating; Belgaon reserve figure stale for a year). What we add that the market may underweight: the steel balance sheet is now near debt-free (net debt Rs 26 cr at Sep-2026, CRISIL AA-/Stable) and the business earns a ~14% pre-tax ROCE, so the bear case is LMEL-driven, not steel-driven. What would prove us wrong: (a) a board decision to sell LMEL shares with a buyback/special dividend (gap closes; our 'persists' call fails), or (b) LMEL proceeds or new debt going into mining capex (discount widens; our steel-is-safe view fails). Departure from the outside view (card §5): our P(>=3x in 5y) is far below the base class and P(<=0.5x) above it on purpose. The class is survivors of the 2020-25 small-cap bull run (x3 overstated, losses understated, per its caveats); Sunflag's 5-year outcome is ~75% a single listed stock (LMEL, already up ~3.2x in 3 years) held at a discount, plus a steel business whose ROIIC is close to the cost of equity, so a 3x needs LMEL to roughly triple again or the discount to close; the fatter left tail is single-stock concentration (beta 0.73 to LMEL). These 5-year card calls are the cleanest test in this file of whether our structural adjustment beats the naive class. Checked by paper calls thesis:paper-call:SUNFLAG:* (6 operating/event/price calls to 2027-09-30, plus the 3 card calls). Open soft flags: 6. P(≥3x) 6% vs base 44%; P(≤0.5x) 8% vs base 2.0%; EV 5-yr multiple 1.38x vs hurdle 1.76x. Review 2027-02-15.",
+  "tickers": [
+   "SUNFLAG"
+  ],
+  "tags": [
+   "decision-card",
+   "stage-6",
+   "india",
+   "live",
+   "deepdive-generated",
+   "sector-metals-mining"
+  ],
+  "date": "2026-11-23",
+  "data": {
+   "gates": [
+    {
+     "gate": "Stage 2 hard filters",
+     "result": "passed (7 rules)",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 3 PEAD avoid flag",
+     "result": "clear",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 4 soft flags",
+     "result": "6 open, variant view written",
+     "blocks": false
+    },
+    {
+     "gate": "Expected value vs hurdle",
+     "result": "EV 1.38x vs hurdle 1.76x → below hurdle → size 0",
+     "blocks": true
+    }
+   ],
+   "size_after_gates": 0.0,
+   "rule_size": 0.0,
+   "kelly_f_star": 0.0,
+   "open_soft_flags": 6,
+   "review_date": "2027-02-15",
+   "kill_criteria": [
+    {
+     "if": "LMEL shares sold or transferred and the proceeds not distributed (buyback/special dividend) within 6 months",
+     "measure": "LMEL SHP (Sunflag line) + Sunflag Reg-30 + FY27 AR n.4",
+     "by": "2027-09-30"
+    },
+    {
+     "if": "Consolidated borrowings above Rs 1,000 cr at any half-year end (debt-funded mining)",
+     "measure": "Half-year statement of assets and liabilities",
+     "by": "2027-09-30"
+    },
+    {
+     "if": "FY27 consolidated OPM below 9%",
+     "measure": "screener / NSE XBRL FY27",
+     "by": "2027-05-31"
+    },
+    {
+     "if": "Any promoter encumbrance, or LMEL shares pledged by the company rise above 74 lakh",
+     "measure": "SHP XBRL quarterly; FY27 AR n.15",
+     "by": "2027-09-30"
+    },
+    {
+     "if": "Modified audit opinion, auditor resignation or a rating 'issuer not cooperating'",
+     "measure": "Reg-30 / AR / rating letters",
+     "by": "2027-09-30"
+    }
+   ],
+   "override_log": [
+    {
+     "date": "2026-11-23",
+     "flag": "FY23 other income Rs 1,201 cr",
+     "decision": "excluded from EPS history and the base year",
+     "why": "AR FY23: settlement of past-period claims on LMEL via arbitral award (22/28-Apr-2022) paid in 6 cr OFCDs converted 1:1 into LMEL shares"
+    },
+    {
+     "date": "2026-11-23",
+     "flag": "Screener ROCE 4% / ROE 2%",
+     "decision": "replaced by operating ROCE ~14% pre-tax on ~Rs 2,540 cr operating capital",
+     "why": "Denominator includes the Rs 11,369 cr LMEL mark (Sep-2026)"
+    },
+    {
+     "date": "2026-11-23",
+     "flag": "Promise tracker not runnable",
+     "decision": "hand ledger of AR mine-status statements used as the credibility read (n=5, not comparable with transcript-based scores)",
+     "why": "No earnings calls since at least 2017"
+    }
+   ],
+   "paper_calls": [
+    "thesis:paper-call:SUNFLAG:card-2026-11-23-5y-ge3x",
+    "thesis:paper-call:SUNFLAG:card-2026-11-23-5y-le0p5x",
+    "thesis:paper-call:SUNFLAG:card-2026-11-23-5y-blowup"
+   ],
+   "practice": false
+  },
+  "sources": [
+   "research_notes/Deep dives/SUNFLAG_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_31025_SUNFLAG_2025_2026_A_4883414_01092026183814.pdf",
+   "https://nsearchives.nseindia.in/corporate/SUNFLAG_13112026171507_SE_outcome_BM_13112026_.pdf",
+   "https://www.screener.in/company/SUNFLAG/consolidated/",
+   "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_20112026.csv"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "thesis:paper-call:SUNFLAG:card-2026-11-23-5y-ge3x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:SUNFLAG:card-2026-11-23-5y-le0p5x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:SUNFLAG:card-2026-11-23-5y-blowup",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:sunflag-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ]
+ }
+]

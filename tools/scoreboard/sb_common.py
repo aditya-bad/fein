@@ -39,6 +39,8 @@ METHOD_MAP = {
     "base rate": "base-rate", "base-rate": "base-rate",
     "flags-judgment context": "flags-judgment", "flags-judgment": "flags-judgment",
     "valuation-temperature": "valuation-temperature",
+    "deep-dive protocol v1.3 (live #1)": "deep-dive", "deep-dive": "deep-dive",
+    "decision-card-v1": "decision-card",
 }
 # tags that look like sectors but are method names
 NOT_SECTOR = {"sector-cycle"}

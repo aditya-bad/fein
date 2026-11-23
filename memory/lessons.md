@@ -237,3 +237,11 @@ Useful by-product: NSE annual_reports fetch works (tools/nse_fetch.py annual_rep
 **Scorecard of signal tests (honest):** survived = Indian PEAD avoid leg; failed/not proven = US insider clusters,
 Indian promoter buying, PEAD long leg, Lazy Prices US v1/v2, India AR text. Edge is likelier in human-depth work
 (promise tracking, deep dives) combined with the few proven filters than in mechanical text/flow signals.
+
+## L33 (2026-11-23) — First live deep dive: depth finds the real story, but "hidden value" isn't automatically mispricing
+SUNFLAG (random draw): the key fact was a 10.66% stake in Lloyds Metals worth ~₹9,016 cr post-tax vs ₹6,643 cr market
+cap — but the implied 45–61% holding-company discount has verified causes (no plan to monetise, pledged shares,
+no concalls, mining milestones that never arrive, 1% institutional ownership), so it's not a claimable mispricing.
+Card: size 0 (EV below hurdle). 6 live calls + 3 card calls now test whether deep-dive probabilities beat base rates.
+Tools: worksheet v1.2 handles non-operating stakes; promise tracker needs an annual-report-status mode for firms
+without concalls; NSE pledge API sometimes returns empty → XBRL fallback.

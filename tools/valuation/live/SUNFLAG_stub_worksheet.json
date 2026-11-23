@@ -1,0 +1,609 @@
+{
+ "input": {
+  "company": "Sunflag Iron & Steel - steel-business STUB (supplementary; not used for paper calls)",
+  "ticker": "SUNFLAG",
+  "market": "india",
+  "practice": false,
+  "currency": "INR",
+  "units": "INR cr",
+  "as_of": "2026-11-20",
+  "price": 140.43,
+  "shares": 18.022,
+  "net_debt": 26.0,
+  "non_operating_value": 0.0,
+  "other_income_recurring_post_tax": 0.0,
+  "treasury_income_post_tax": 0.0,
+  "base": {
+   "fy": "FY26",
+   "revenue": 3939.0,
+   "ebitda": 477.0,
+   "ebit": 364.0,
+   "pat": 202.0,
+   "fcf": 262.0,
+   "eps": 11.23,
+   "pe_trailing": 12.5,
+   "eps_normalised": null,
+   "eps_forward": null,
+   "sbc": null
+  },
+  "tax_rate": 0.25,
+  "roiic": 0.12,
+  "terminal_roic": 0.12,
+  "years": 10,
+  "coe": 0.125,
+  "terminal_growth": 0.05,
+  "payout_of_fcf": 0.1,
+  "dispersion": 0.4,
+  "base_case": {
+   "name": "base",
+   "growth": 0.08,
+   "growth_end": 0.06,
+   "margin_end": 0.07,
+   "roiic": 0.12,
+   "exit_pe": 12.0,
+   "prob": 0.0
+  },
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.3,
+    "growth": 0.03,
+    "growth_end": 0.04,
+    "margin_end": 0.05,
+    "roiic": 0.1,
+    "exit_pe": 9.0
+   },
+   {
+    "name": "base",
+    "prob": 0.5,
+    "growth": 0.08,
+    "growth_end": 0.06,
+    "margin_end": 0.07,
+    "roiic": 0.12,
+    "exit_pe": 12.0
+   },
+   {
+    "name": "bull",
+    "prob": 0.18,
+    "growth": 0.12,
+    "growth_end": 0.07,
+    "margin_end": 0.085,
+    "roiic": 0.15,
+    "exit_pe": 16.0
+   }
+  ],
+  "blowup": {
+   "prob": 0.02,
+   "multiple": 0.25,
+   "note": "LMEL (10.66% stake = ~1.36x Sunflag's market cap pre-tax) falls >70% (Gadchiroli iron-ore mining/regulatory shock) while the steel spread collapses and mining-block capex is debt-funded"
+  },
+  "twin_engine": {
+   "targets": [
+    2,
+    3,
+    5
+   ],
+   "horizon": 5,
+   "hist_eps_cagr": 0.076,
+   "hist_eps_note": "Consolidated EPS FY21 7.80 -> FY26 11.23 [SCR]; FY23 61.89 incl. the LMEL arbitral-award gain excluded"
+  },
+  "pe_history": [
+   {
+    "date": "FY17",
+    "pe": 10.2
+   },
+   {
+    "date": "FY18",
+    "pe": 10.5
+   },
+   {
+    "date": "FY19",
+    "pe": 7.9
+   },
+   {
+    "date": "FY20",
+    "pe": 4.7
+   },
+   {
+    "date": "FY21",
+    "pe": 8.0
+   },
+   {
+    "date": "FY22",
+    "pe": 5.2
+   },
+   {
+    "date": "FY23",
+    "pe": 12.3
+   }
+  ],
+  "sector_pes": {
+   "Kalyani Steels": 12.6,
+   "Vardhman Special Steels": 39.0,
+   "Usha Martin": 25.4,
+   "Mukand (one-off inflated EPS)": 3.1
+  },
+  "market_pe": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)"
+  },
+  "notes": [
+   "STUB = (market cap 6,643 - stake valued at a 55% discount to post-tax value 4,112) / 18.022 = Rs 140.43 per share: what the market pays for the steel business IF the stake carries a 55% holdco discount. Supplementary view for the variant-perception section only; the card and its paper calls use SUNFLAG.json at the real price.",
+   "Own P/E history restricted to FY17-FY23 (steel-only years before the LMEL stake entered the price).",
+   "Net debt 26 cr at 30-Sep-2026 [Q2 FY27 consolidated SoAL: borrowings 30.67 + 362.13 = 392.8 cr; cash 322.8 + other bank 44.1 = 366.9 cr]; lease liabilities 42.7 cr excluded (rent inside EBITDA is small).",
+   "Base FY26 consolidated [SCR; AR26 P&L]: revenue 3,939, EBITDA 477 (12.1%), D&A 113, EBIT 364 (core, ex other income 9), PAT 202 (after exceptional -8.7 and prior-year deferred tax -25.1), FCF 262, EPS 11.23 (includes ~0.25/share of LMEL dividend: 6 cr pre-tax [AR26 n.25b]).",
+   "ROIIC 12% [EST]: operating capital ~2,540 cr (FA 1,577 + CWIP 214 + NWC ~750) vs FY26 EBIT 364 -> pre-tax ROCE ~14%, post-tax ~10.7%; the steel business earns roughly its cost of capital through the cycle (screener ROCE 4% is diluted by the LMEL mark)."
+  ],
+  "sources": [
+   "research_notes/Deep dives/SUNFLAG_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_31025_SUNFLAG_2025_2026_A_4883414_01092026183814.pdf",
+   "https://nsearchives.nseindia.in/corporate/SUNFLAG_13112026171507_SE_outcome_BM_13112026_.pdf",
+   "https://www.screener.in/company/SUNFLAG/consolidated/",
+   "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_20112026.csv"
+  ],
+  "_warnings": [],
+  "non_operating_growth": null,
+  "hurdle_cagr": 0.12,
+  "nopat_margin": 0.06930693069306931,
+  "_nopat_margin_method": "base.ebit x (1 - tax) / revenue",
+  "_eps_method": "given"
+ },
+ "snapshot": {
+  "mcap": 2530.82946,
+  "ev": 2556.82946,
+  "pe": 12.5,
+  "ev_ebitda": 5.360229475890985,
+  "p_fcf": 9.659654427480916,
+  "fcf_yield": 0.10352337213586885,
+  "ev_sales": 0.649106235085047
+ },
+ "base": {
+  "rows": [
+   {
+    "t": 1,
+    "g": 0.08,
+    "revenue": 4254.12,
+    "margin": 0.06937623762376238,
+    "nopat": 295.13484,
+    "reinv_rate": 0.6666666666666667,
+    "fcf": 98.37827999999998,
+    "eps": 12.140528399999999
+   },
+   {
+    "t": 2,
+    "g": 0.07777777777777778,
+    "revenue": 4584.996,
+    "margin": 0.06944554455445545,
+    "nopat": 318.40754400000003,
+    "reinv_rate": 0.6481481481481481,
+    "fcf": 112.03228400000002,
+    "eps": 13.097863440000003
+   },
+   {
+    "t": 3,
+    "g": 0.07555555555555556,
+    "revenue": 4931.41792,
+    "margin": 0.06951485148514852,
+    "nopat": 342.80678432,
+    "reinv_rate": 0.6296296296296297,
+    "fcf": 126.96547567407407,
+    "eps": 14.10153914986667
+   },
+   {
+    "t": 4,
+    "g": 0.07333333333333333,
+    "revenue": 5293.055234133333,
+    "margin": 0.06958415841584159,
+    "nopat": 368.3127939157334,
+    "reinv_rate": 0.6111111111111112,
+    "fcf": 143.23275318945184,
+    "eps": 15.150742401735112
+   },
+   {
+    "t": 5,
+    "g": 0.07111111111111111,
+    "revenue": 5669.450273005037,
+    "margin": 0.06965346534653466,
+    "nopat": 394.8968581246578,
+    "reinv_rate": 0.5925925925925926,
+    "fcf": 160.88390516189764,
+    "eps": 16.24429200271028
+   },
+   {
+    "t": 6,
+    "g": 0.06888888888888889,
+    "revenue": 6060.012402923163,
+    "margin": 0.06972277227722773,
+    "nopat": 422.5208647661873,
+    "reinv_rate": 0.5740740740740741,
+    "fcf": 179.96259054856125,
+    "eps": 17.38062018800104
+   },
+   {
+    "t": 7,
+    "g": 0.06666666666666667,
+    "revenue": 6464.013229784707,
+    "margin": 0.0697920792079208,
+    "nopat": 451.1369233341822,
+    "reinv_rate": 0.5555555555555556,
+    "fcf": 200.50529925963653,
+    "eps": 18.557756956200976
+   },
+   {
+    "t": 8,
+    "g": 0.06444444444444444,
+    "revenue": 6880.5829712597215,
+    "margin": 0.06986138613861387,
+    "nopat": 480.6870638139465,
+    "reinv_rate": 0.5370370370370371,
+    "fcf": 222.5403073212715,
+    "eps": 19.773317679965636
+   },
+   {
+    "t": 9,
+    "g": 0.06222222222222222,
+    "revenue": 7308.708133915881,
+    "margin": 0.06993069306930694,
+    "nopat": 511.10302524601855,
+    "reinv_rate": 0.5185185185185185,
+    "fcf": 246.08664178512007,
+    "eps": 21.024494408471753
+   },
+   {
+    "t": 10,
+    "g": 0.06,
+    "revenue": 7747.230621950835,
+    "margin": 0.07,
+    "nopat": 542.3061435365585,
+    "reinv_rate": 0.5,
+    "fcf": 271.15307176827923,
+    "eps": 22.308051252437917
+   }
+  ],
+  "pv_fcf": 876.0099418985657,
+  "pv_tv": 1363.842216649869,
+  "tv_share": 0.6088983201166834,
+  "pv_oi": 0.0,
+  "ev": 2239.8521585484345,
+  "equity": 2213.8521585484345,
+  "value_ps": 122.84164679549632,
+  "cum_dist_ps_5y": 3.5594978250217717,
+  "value5_ps": 210.1775949277084,
+  "dcf_pe5": 12.938550654755609,
+  "max_reinv_rate": 0.6666666666666667
+ },
+ "reverse": {
+  "g_flat_margin": null,
+  "g_base_margin": null,
+  "g_fade_start": null,
+  "m_needed_base_growth": 0.08203725051879882,
+  "implied_coe_base": 0.11685779701232912,
+  "gordon_g_on_fcf": 0.020435320163001272,
+  "path_case": "flat-growth",
+  "path": null
+ },
+ "scenarios": {
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.3,
+    "growth": 0.03,
+    "growth_end": 0.04,
+    "margin_end": 0.05,
+    "roiic": 0.1,
+    "exit_pe": 9.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 13.155226192346927,
+    "value_ps": 93.14010941036577,
+    "value_vs_price": -0.33675062728501204,
+    "eps5": 11.326670692898574,
+    "eps_cagr5": 0.001715753080887561,
+    "dist_ps_5y": 5.157892866916154,
+    "mult5": 0.7626428049775925,
+    "tv_share": 0.4098673587259048,
+    "nonop5_ps": 0.0
+   },
+   {
+    "name": "base",
+    "prob": 0.5,
+    "growth": 0.08,
+    "growth_end": 0.06,
+    "margin_end": 0.07,
+    "roiic": 0.12,
+    "exit_pe": 12.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 12.938550654755609,
+    "value_ps": 122.84164679549632,
+    "value_vs_price": -0.1252464089190607,
+    "eps5": 16.24429200271028,
+    "eps_cagr5": 0.07662437045684811,
+    "dist_ps_5y": 3.5594978250217717,
+    "mult5": 1.4134515549209223,
+    "tv_share": 0.6088983201166834,
+    "nonop5_ps": 0.0
+   },
+   {
+    "name": "bull",
+    "prob": 0.18,
+    "growth": 0.12,
+    "growth_end": 0.07,
+    "margin_end": 0.085,
+    "roiic": 0.15,
+    "exit_pe": 16.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 14.186040981709276,
+    "value_ps": 169.82673749104768,
+    "value_vs_price": 0.20933374272625271,
+    "eps5": 20.95772703174651,
+    "eps_cagr5": 0.13290341166408837,
+    "dist_ps_5y": 3.198232847652529,
+    "mult5": 2.4106093096603054,
+    "tv_share": 0.6753387430342173,
+    "nonop5_ps": 0.0
+   }
+  ],
+  "blowup": {
+   "prob": 0.02,
+   "multiple": 0.25,
+   "note": "LMEL (10.66% stake = ~1.36x Sunflag's market cap pre-tax) falls >70% (Gadchiroli iron-ore mining/regulatory shock) while the steel spread collapses and mining-block capex is debt-funded"
+  },
+  "pw_value": 120.63381896924648,
+  "pw_vs_price": -0.1409683189543084,
+  "bear_value": 93.14010941036577,
+  "downside_bear": -0.33675062728501204,
+  "p_value_below_price": 0.8200000000000001,
+  "p_ge_3x": 0.06767494213089702,
+  "p_ge_2x": 0.22111365807015237,
+  "p_ge_5x": 0.006531938076103021,
+  "p_le_half": 0.06603473406267454,
+  "p_blowup": 0.02,
+  "ev_mult5": 1.3744282946925939,
+  "ev_cagr5": 0.06567411611396912,
+  "median_mult5": 1.2762620981420882,
+  "hurdle_mult5": 1.7623416832000007
+ },
+ "twin": {
+  "pe0": 12.5,
+  "eps0": 11.2344,
+  "horizon": 5.0,
+  "exit_pes": [
+   6.2,
+   8.0,
+   9.4,
+   12.5,
+   19.0
+  ],
+  "table": [
+   {
+    "target": 2,
+    "cells": [
+     {
+      "exit_pe": 6.2,
+      "eps_cagr": 0.3216293170857001,
+      "rerating_share": -1.0115879742752119
+     },
+     {
+      "exit_pe": 8.0,
+      "eps_cagr": 0.25594321575479007,
+      "rerating_share": -0.6438561897747247
+     },
+     {
+      "exit_pe": 9.4,
+      "eps_cagr": 0.21608079807078617,
+      "rerating_share": -0.4111954329844497
+     },
+     {
+      "exit_pe": 12.5,
+      "eps_cagr": 0.1486983549970351,
+      "rerating_share": 0.0
+     },
+     {
+      "exit_pe": 19.0,
+      "eps_cagr": 0.05642162229904302,
+      "rerating_share": 0.6040713236688608
+     }
+    ]
+   },
+   {
+    "target": 3,
+    "cells": [
+     {
+      "exit_pe": 6.2,
+      "eps_cagr": 0.433269686366734,
+      "rerating_share": -0.6382409513253092
+     },
+     {
+      "exit_pe": 8.0,
+      "eps_cagr": 0.36203496371333044,
+      "rerating_share": -0.40622802715002454
+     },
+     {
+      "exit_pe": 9.4,
+      "eps_cagr": 0.31880529700333615,
+      "rerating_share": -0.25943543320258755
+     },
+     {
+      "exit_pe": 12.5,
+      "eps_cagr": 0.2457309396155174,
+      "rerating_share": 0.0
+     },
+     {
+      "exit_pe": 19.0,
+      "eps_cagr": 0.14565942786618935,
+      "rerating_share": 0.3811265713819784
+     }
+    ]
+   },
+   {
+    "target": 5,
+    "cells": [
+     {
+      "exit_pe": 6.2,
+      "eps_cagr": 0.5874412654178269,
+      "rerating_share": -0.43566722694928434
+     },
+     {
+      "exit_pe": 8.0,
+      "eps_cagr": 0.5085440841362907,
+      "rerating_share": -0.2772937677064278
+     },
+     {
+      "exit_pe": 9.4,
+      "eps_cagr": 0.46066436025846014,
+      "rerating_share": -0.17709223377324135
+     },
+     {
+      "exit_pe": 12.5,
+      "eps_cagr": 0.3797296614612149,
+      "rerating_share": 0.0
+     },
+     {
+      "exit_pe": 19.0,
+      "eps_cagr": 0.26889382312968335,
+      "rerating_share": 0.26015935850854355
+     }
+    ]
+   }
+  ],
+  "hist_eps_cagr": 0.076,
+  "hist_eps_note": "Consolidated EPS FY21 7.80 -> FY26 11.23 [SCR]; FY23 61.89 incl. the LMEL arbitral-award gain excluded"
+ },
+ "temperature": {
+  "pes": {
+   "trailing (given)": 12.5
+  },
+  "n_hist": 7,
+  "own_median": 8.0,
+  "sector_median": 19.0,
+  "sector": {
+   "Kalyani Steels": 12.6,
+   "Vardhman Special Steels": 39.0,
+   "Usha Martin": 25.4,
+   "Mukand (one-off inflated EPS)": 3.1
+  },
+  "rows": [
+   {
+    "basis": "trailing (given)",
+    "pe": 12.5,
+    "vs_own": 1.5625,
+    "own_band": "HOT",
+    "pctile": 1.0,
+    "vs_sector": 0.6578947368421053,
+    "sector_band": "COLD"
+   }
+  ],
+  "market": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)",
+   "note": "around the long-run average"
+  }
+ },
+ "sensitivity": {
+  "coe_x_growth": {
+   "rows": [
+    [
+     0.105,
+     [
+      163.09645002898546,
+      168.607790735513,
+      175.7041368217605,
+      183.84224853175712,
+      192.22559269044535
+     ]
+    ],
+    [
+     0.115,
+     [
+      139.92006203602472,
+      142.40515561492904,
+      145.08272321824398,
+      147.47645390041964,
+      149.09656182892633
+     ]
+    ],
+    [
+     0.125,
+     [
+      122.81780496870104,
+      123.19206228686475,
+      122.84164679549632,
+      121.34343895202137,
+      118.41542229020627
+     ]
+    ],
+    [
+     0.135,
+     [
+      109.65265463068535,
+      108.5014694854893,
+      106.00648075078057,
+      101.78837210280835,
+      95.71047027320594
+     ]
+    ],
+    [
+     0.145,
+     [
+      99.18687325233454,
+      96.90510134204463,
+      92.85666796630233,
+      86.6992458660013,
+      78.40007814387492
+     ]
+    ]
+   ],
+   "cols": [
+    -0.06,
+    -0.03,
+    0.0,
+    0.03,
+    0.06
+   ]
+  },
+  "tg_x_margin": {
+   "rows": [
+    [
+     0.04,
+     [
+      93.55343545588978,
+      108.15211704495269,
+      122.75079863401557,
+      137.34948022307847,
+      151.94816181214136
+     ]
+    ],
+    [
+     0.05,
+     [
+      93.61832699980461,
+      108.22998689765048,
+      122.84164679549632,
+      137.4533066933422,
+      152.06496659118807
+     ]
+    ],
+    [
+     0.060000000000000005,
+     [
+      93.53346882699289,
+      108.12815709027643,
+      122.72284535355992,
+      137.31753361684343,
+      151.912221880127
+     ]
+    ]
+   ],
+   "cols": [
+    0.05,
+    0.060000000000000005,
+    0.07,
+    0.08,
+    0.09000000000000001
+   ]
+  }
+ },
+ "version": "1.2 (2026-11-23; non_operating_growth adds non-operating value to the 5-year multiple; 1.1 added bank mode)",
+ "generated": "2026-11-23"
+}

@@ -37,7 +37,7 @@ import math
 import os
 import sys
 
-VERSION = "1.1 (2026-11-22; adds bank mode via bank.py)"
+VERSION = "1.2 (2026-11-23; non_operating_growth adds non-operating value to the 5-year multiple; 1.1 added bank mode)"
 
 MARKET_DEFAULTS = {
     # cost of equity, terminal growth, hurdle CAGR (what an index fund is assumed to earn)
@@ -141,6 +141,11 @@ def normalise(d):
         d[k] = _num(d[k], k)
     d["net_debt"] = _num(d.get("net_debt", 0.0), "net_debt") or 0.0
     d["non_operating_value"] = _num(d.get("non_operating_value", 0.0), "non_operating_value") or 0.0
+    # v1.2 (2026-11-23, live deep dive #1, a holdco-like stock): optional growth of the non-operating value to year 5.
+    # When set (a number, e.g. 0.12 = the stake compounds at 12%/yr), the 5-year multiple adds non_operating_value x
+    # (1+g)^5 per share on top of EPS5 x exit P/E (which values the operating business only). None = old behaviour
+    # (non-operating value ignored in the 5-year multiple; still counted in the DCF value). Scenario key: nonop_growth.
+    d["non_operating_growth"] = _num(d.get("non_operating_growth"), "non_operating_growth")
     d["other_income_recurring_post_tax"] = _num(d.get("other_income_recurring_post_tax", 0.0), "oi") or 0.0
     # interest on the net cash already counted in net_debt: held flat in the EPS path (not grown, not valued twice)
     d["treasury_income_post_tax"] = _num(d.get("treasury_income_post_tax", 0.0), "treasury") or 0.0
@@ -225,6 +230,10 @@ def _fill_case(c, d):
     me = _num(c.get("margin_end"), "margin_end")
     c["margin_end"] = d["nopat_margin"] if me is None else me
     c["roiic"] = _num(c.get("roiic"), "roiic") or d["roiic"]
+    if c.get("nonop_growth") is not None:
+        c["nonop_growth"] = _num(c.get("nonop_growth"), "nonop_growth")
+    else:
+        c.pop("nonop_growth", None)
     if isinstance(c.get("exit_pe"), str) and c["exit_pe"].lower() == "dcf":
         c["exit_pe"] = "dcf"
     else:
@@ -285,7 +294,10 @@ def project(d, g_start, g_end, m_end, roiic=None, coe=None, tg=None, years=None)
                    for t in range(1, 6))
     eq5 = pv5 + d["non_operating_value"] - d["net_debt"] + retained
     eps5 = rows[4]["eps"]
-    dcf_pe5 = (eq5 / d["shares"]) / eps5 if eps5 and eps5 > 0 else None
+    # v1.2: when non_operating_growth is set, EPS covers the operating business only, so the DCF-consistent P/E
+    # must leave the non-operating value out (it is added separately to the 5-year multiple).
+    eq5_op = eq5 - d["non_operating_value"] if d.get("non_operating_growth") is not None else eq5
+    dcf_pe5 = (eq5_op / d["shares"]) / eps5 if eps5 and eps5 > 0 else None
     return {"rows": rows, "pv_fcf": pv, "pv_tv": pv_tv, "tv_share": pv_tv / ev if ev else None, "pv_oi": pv_oi,
             "ev": ev, "equity": equity, "value_ps": equity / d["shares"], "cum_dist_ps_5y": cum_dist / d["shares"],
             "value5_ps": eq5 / d["shares"], "dcf_pe5": dcf_pe5,
@@ -384,14 +396,17 @@ def scenario_analysis(d):
         eps5 = p["rows"][4]["eps"]
         mult5 = None
         exit_pe = p["dcf_pe5"] if s["exit_pe"] == "dcf" else s["exit_pe"]
+        nog = s.get("nonop_growth", d.get("non_operating_growth"))
+        nonop5_ps = (d["non_operating_value"] * (1 + nog) ** 5 / d["shares"]) if nog is not None else 0.0
         if exit_pe and eps5:
-            mult5 = (eps5 * exit_pe + p["cum_dist_ps_5y"]) / price
+            mult5 = (eps5 * exit_pe + p["cum_dist_ps_5y"] + nonop5_ps) / price
         res.append({"name": s["name"], "prob": s["prob"], "growth": s["growth"], "growth_end": s["growth_end"],
                     "margin_end": s["margin_end"], "roiic": s["roiic"], "exit_pe": exit_pe,
                     "exit_pe_is_dcf": s["exit_pe"] == "dcf", "dcf_pe5": p["dcf_pe5"],
                     "value_ps": p["value_ps"], "value_vs_price": p["value_ps"] / price - 1, "eps5": eps5,
                     "eps_cagr5": (eps5 / d["base"]["eps"]) ** 0.2 - 1 if eps5 and d["base"]["eps"] > 0 else None,
-                    "dist_ps_5y": p["cum_dist_ps_5y"], "mult5": mult5, "tv_share": p["tv_share"]})
+                    "dist_ps_5y": p["cum_dist_ps_5y"], "mult5": mult5, "tv_share": p["tv_share"],
+                    "nonop5_ps": nonop5_ps})
     bl = d["blowup"]
     out = {"scenarios": res, "blowup": bl}
     if not res:

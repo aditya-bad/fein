@@ -1,0 +1,51 @@
+# Sunflag Iron & Steel (NSE: SUNFLAG) - LIVE deep dive #1 (method test, randomly selected; L9: no buy/sell verdict).
+# Scenarios, probabilities and the holdco-discount assumption were written BEFORE reading the worksheet outputs (protocol L8 step 2).
+# Source file: research_notes/Deep dives/SUNFLAG_live.md
+{
+ "company": "Sunflag Iron & Steel", "ticker": "SUNFLAG", "market": "india", "practice": false,
+ "currency": "INR", "units": "INR cr", "as_of": "2026-11-20",
+ "price": 368.60,
+ "shares": 18.022,
+ "net_debt": 26.0,
+ "non_operating_value": 4112.0,
+ "non_operating_growth": 0.10,
+ "other_income_recurring_post_tax": 0.0,
+ "treasury_income_post_tax": 0.0,
+ "base": {"fy": "FY26", "revenue": 3939.0, "ebitda": 477.0, "ebit": 364.0, "pat": 202.0, "fcf": 262.0,
+          "eps": 11.23, "pe_trailing": 32.8},
+ "tax_rate": 0.25,
+ "roiic": 0.12, "terminal_roic": 0.12,
+ "years": 10, "coe": 0.125, "terminal_growth": 0.05,
+ "payout_of_fcf": 0.10,
+ "dispersion": 0.40,
+ "base_case": {"name": "base", "growth": 0.08, "growth_end": 0.06, "margin_end": 0.070, "roiic": 0.12, "exit_pe": 12},
+ "scenarios": [
+  {"name": "bear", "prob": 0.30, "growth": 0.03, "growth_end": 0.04, "margin_end": 0.050, "roiic": 0.10, "exit_pe": 9,  "nonop_growth": -0.08},
+  {"name": "base", "prob": 0.50, "growth": 0.08, "growth_end": 0.06, "margin_end": 0.070, "roiic": 0.12, "exit_pe": 12, "nonop_growth": 0.10},
+  {"name": "bull", "prob": 0.18, "growth": 0.12, "growth_end": 0.07, "margin_end": 0.085, "roiic": 0.15, "exit_pe": 16, "nonop_growth": 0.16}
+ ],
+ "blowup": {"prob": 0.02, "multiple": 0.25, "note": "LMEL (10.66% stake = ~1.56x Sunflag's market cap pre-tax, 1.36x post-tax) falls >70% (Gadchiroli iron-ore mining/regulatory shock) while the steel spread collapses and mining-block capex is debt-funded"},
+ "twin_engine": {"targets": [2, 3, 5], "horizon": 5, "hist_eps_cagr": 0.076, "hist_eps_note": "Consolidated EPS FY21 7.80 -> FY26 11.23 [SCR]; FY23 61.89 incl. the LMEL arbitral-award gain excluded"},
+ "pe_history": [
+  {"date": "FY17", "pe": 10.2}, {"date": "FY18", "pe": 10.5}, {"date": "FY19", "pe": 7.9}, {"date": "FY20", "pe": 4.7},
+  {"date": "FY21", "pe": 8.0}, {"date": "FY22", "pe": 5.2}, {"date": "FY23", "pe": 12.3}, {"date": "FY24", "pe": 23.4},
+  {"date": "FY25", "pe": 26.1}, {"date": "FY26", "pe": 17.3}
+ ],
+ "sector_pes": {"Kalyani Steels": 12.6, "Vardhman Special Steels": 39.0, "Usha Martin": 25.4, "Mukand (one-off inflated EPS)": 3.1},
+ "market_pe": {"index": "Nifty 50", "pe": 20.6, "as_of": "2026-11 (insight:india-valuation-forward-returns)"},
+ "notes": [
+  "Price 368.60 = NSE close 20-Nov-2026 [NSE bhavcopy sec_bhavdata_full_20112026] = Yahoo v8 close 20-Nov-2026; screener 23-Nov intraday 363. Shares 18.022 cr [AR26 n.32: 18,02,19,448].",
+  "NON-OPERATING VALUE (the core of this file): 6.00 cr shares of Lloyds Metals & Energy (LMEL, 10.66%) [AR26 n.4] x 1,723.80 (NSE close 20-Nov-2026, Yahoo same) = 10,343 cr pre-tax. Cost 1,226 cr [AR26 n.40: 1,22,610 lakh]. Tax on the gain at 12.5% LTCG x 1.12 surcharge x 1.04 cess = 14.56% [EST, statutory rates] = 1,327 cr -> post-tax 9,016 cr (Rs 500/share). Other JV/associate investments ~55 cr at book [AR26 n.4, EST].",
+  "HOLDCO DISCOUNT ASSUMPTION (written before outputs): the market is assumed to keep valuing the stake at a persistent 55% discount to post-tax value (insight:group-holdco-discount: 40-70% commonly cited, unverified) -> non_operating_value = 0.45 x 9,016 + 55 = 4,112 cr. Sensitivity to d = 0.3/0.45/0.55/0.65/0.75 is in the deep-dive file (section 8.2).",
+  "non_operating_growth: the stake compounds with LMEL; per-scenario bear -8%/yr, base +10%/yr, bull +16%/yr (no edge claimed on LMEL; base ~ CoE less LMEL dividend). The 5-year multiple adds the (discounted) stake at year 5 to EPS5 x exit P/E (worksheet v1.2).",
+  "Net debt 26 cr at 30-Sep-2026 [Q2 FY27 consolidated SoAL: borrowings 30.67 + 362.13 = 392.8 cr; cash 322.8 + other bank 44.1 = 366.9 cr]; lease liabilities 42.7 cr excluded (rent inside EBITDA is small).",
+  "Base FY26 consolidated [SCR; AR26 P&L]: revenue 3,939, EBITDA 477 (12.1%), D&A 113, EBIT 364 (core, ex other income 9), PAT 202 (after exceptional -8.7 and prior-year deferred tax -25.1), FCF 262, EPS 11.23 (includes ~0.25/share of LMEL dividend: 6 cr pre-tax [AR26 n.25b]).",
+  "ROIIC 12% [EST]: operating capital ~2,540 cr (FA 1,577 + CWIP 214 + NWC ~750) vs FY26 EBIT 364 -> pre-tax ROCE ~14%, post-tax ~10.7%; the steel business earns roughly its cost of capital through the cycle (screener ROCE 4% is diluted by the LMEL mark).",
+  "pe_history: FY-end close [Yahoo v8] / consolidated EPS [SCR]. FY23 uses core EPS ~12.0 (ex the 1,201 cr arbitral-award gain). From FY23 the price includes the LMEL stake, so the own-history band is NOT like-for-like (pre-FY23 median ~8x is the steel-only band).",
+  "Trailing P/E 32.8 (price / FY26 EPS) is meaningless for this stock: the temperature block reads it against peers, but the LMEL stake is ~156% of the market cap pre-tax (~136% post-tax). Use the stub P/E in the deep-dive file instead.",
+  "Peer P/Es: screener top ratios 23-Nov-2026 (KSL 12.6, VSSL 39.0, USHAMART 25.4, MUKANDLTD 3.09 one-off). Single-source."
+ ],
+ "sources": ["research_notes/Deep dives/SUNFLAG_live.md", "https://nsearchives.nseindia.in/annual_reports/AR_31025_SUNFLAG_2025_2026_A_4883414_01092026183814.pdf",
+             "https://nsearchives.nseindia.in/corporate/SUNFLAG_13112026171507_SE_outcome_BM_13112026_.pdf", "https://www.screener.in/company/SUNFLAG/consolidated/",
+             "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_20112026.csv"]
+}

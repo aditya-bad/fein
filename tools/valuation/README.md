@@ -45,6 +45,7 @@ The input is JSON. Lines that start with `#` or `//` are comments. `--json` dump
 - `net_debt` is negative for net cash. Leave out lease liabilities when rent sits inside the margin you use (Indian pre-Ind AS 116 EBITDA; US retailers with occupancy in COGS).
 - Use the **economic** margin: pre-Ind AS 116 for Indian retailers, core (ex other income) for cash-rich companies, and after SBC.
 - Every input needs a source tag or an `[EST]` with its method in `notes` (stock-research-analyst rule).
+- **Holdco-like stocks (v1.2, 2026-11-23):** put a listed stake (post-tax, after any discount you assume) in `non_operating_value` and set `non_operating_growth` (or per-scenario `nonop_growth`). The 5-year multiple then adds the stake at year 5 to EPS₅ × exit P/E, and the DCF-consistent P/E leaves the stake out. Without the key, behaviour is unchanged. Example: `live/SUNFLAG.json` (plus the steel-only stub `live/SUNFLAG_stub.json`).
 
 ## Bank / NBFC mode (v1.1, 2026-11-22)
 Lenders are valued on book and ROE, not revenue/EBIT/FCF. Put `"mode": "bank"` in the input
