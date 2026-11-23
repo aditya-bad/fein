@@ -16,6 +16,7 @@ Usage:
   python3 tools/nse_fetch.py insider KPITTECH                  # PIT Reg 7 disclosures
   python3 tools/nse_fetch.py results KPITTECH                  # quarterly result filings (old feed; stale after Q3 FY25)
   python3 tools/nse_fetch.py integrated KPITTECH               # integrated filings since Q3 FY25 (XBRL links)
+  python3 tools/nse_fetch.py annual_reports KPITTECH [--download DIR]  # AR list + submission time (+ PDFs/ZIPs)
   python3 tools/nse_fetch.py bulk --from 01-11-2026 --to 19-11-2026
   python3 tools/nse_fetch.py block --from 01-11-2026 --to 19-11-2026
 Options: --out FILE (write JSON), --raw (print full JSON instead of a summary).
@@ -70,6 +71,35 @@ def announcements(symbol=None, frm=None, to=None):
                from_date=frm, to_date=to)
 
 
+def _stamp(fn):
+    """Submission time from an AR file name: AR_<id>_<SYM>_<fy1>_<fy2>[_A_<n>]_<DDMMYYYYhhmmss>[_<MMDDYYYYhhmmss>].<ext>.
+    The first stamp is the company's upload (DDMMYYYY); a second one on older ZIPs is dissemination (MMDDYYYY)."""
+    import datetime as dt, re
+    st = re.findall(r"_(\d{14})(?=[_.])", os.path.basename(fn))
+    out = []
+    for i, x in enumerate(st):
+        for f in (("%d%m%Y%H%M%S", "%m%d%Y%H%M%S") if i else ("%d%m%Y%H%M%S",)):
+            try:
+                out.append(dt.datetime.strptime(x, f)); break
+            except ValueError:
+                pass
+    return max(out).strftime("%Y-%m-%d %H:%M:%S") if out else None
+
+
+def annual_reports(symbol):
+    """api/annual-reports (tested 2026-11-22). broadcast_dttm is '-' for most pre-FY24 rows, so `submitted` =
+    broadcast time if present, else the latest time stamp in the file name (upload / dissemination)."""
+    import datetime as dt
+    rows = api("annual-reports", index="equities", symbol=symbol).get("data", [])
+    for r in rows:
+        b = r.get("broadcast_dttm") or "-"
+        try:
+            r["submitted"] = dt.datetime.strptime(b, "%d-%b-%Y %H:%M:%S").strftime("%Y-%m-%d %H:%M:%S")
+        except ValueError:
+            r["submitted"] = _stamp(r.get("fileName") or "")
+    return rows
+
+
 def transcripts(symbol):
     rows = announcements(symbol)
     return [r for r in rows if "ranscript" in (r.get("attchmntText") or "")
@@ -95,6 +125,7 @@ COMMANDS = {
                            symbol=a.symbol, **{"from": a.frm, "to": a.to}),
     "announcements": lambda a: announcements(a.symbol, a.frm, a.to),
     "transcripts": lambda a: transcripts(a.symbol),
+    "annual_reports": lambda a: annual_reports(a.symbol),
 }
 
 
@@ -106,7 +137,7 @@ def main():
     p.add_argument("--to")
     p.add_argument("--out")
     p.add_argument("--raw", action="store_true")
-    p.add_argument("--download", metavar="DIR", help="transcripts: save PDFs here")
+    p.add_argument("--download", metavar="DIR", help="transcripts / annual_reports: save files here")
     a = p.parse_args()
     data = COMMANDS[a.cmd](a)
     if a.out:
@@ -120,15 +151,18 @@ def main():
         for r in (rows[:15] if isinstance(rows, list) else []):
             if a.cmd == "integrated":
                 print(r.get("qe_Date"), "|", r.get("consolidated"), "|", r.get("broadcast_Date"), "|", r.get("xbrl"))
+            elif a.cmd == "annual_reports":
+                print(r.get("fromYr"), "-", r.get("toYr"), "|", r.get("submitted"), "|", r.get("submission_type"),
+                      "|", r.get("attFileSize"), "|", r.get("fileName"))
             elif a.cmd in ("announcements", "transcripts"):
                 print(r.get("an_dt"), "|", r.get("symbol"), "|", r.get("desc"), "|",
                       (r.get("attchmntText") or "")[:90], "|", r.get("attchmntFile"))
             else:
                 print(json.dumps(r, ensure_ascii=False)[:220])
-    if a.cmd == "transcripts" and a.download:
+    if a.cmd in ("transcripts", "annual_reports") and a.download:
         os.makedirs(a.download, exist_ok=True)
         for r in rows:
-            url = r.get("attchmntFile")
+            url = r.get("attchmntFile") or r.get("fileName")
             if not url:
                 continue
             fn = os.path.join(a.download, os.path.basename(urllib.parse.urlparse(url).path))
