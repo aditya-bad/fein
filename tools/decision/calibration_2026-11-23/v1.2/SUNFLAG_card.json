@@ -1,0 +1,251 @@
+{
+ "worksheet": "../../../valuation/live/SUNFLAG.json",
+ "decision_date": "2026-11-23",
+ "practice": false,
+ "analyst": "Claude",
+ "deep_dive": "research_notes/Deep dives/SUNFLAG_live.md",
+ "thesis": "Method-test thesis: about three quarters of Sunflag's value is a 10.66% stake in Lloyds Metals & Energy (post-tax ~Rs 9,016 cr vs a Rs 6,643 cr market cap); the special-steel business compounds ~8%/yr at ~7% NOPAT margin with ROIIC close to the cost of equity, and the market's ~50% discount on the stake persists over 5 years unless the stake is monetised and distributed.",
+ "variant_view": "Market (reverse DCF): at Rs 368.60 the price implies either a 45-61% discount on the post-tax LMEL stake (if the steel business is worth our bear-to-bull DCF of Rs 93-170/share) or, at a 55% discount, 5.4x EV/EBITDA and 12.5x P/E for steel (KSL 12.6x). Our view: the gap is NOT a mispricing we can claim. The discount sits inside the Indian holdco base range (insight:group-holdco-discount) and is justified by three things we verified: no stated monetisation or payout policy (dividend Re 1, ~9% payout), the stake already serves as loan collateral (74 lakh LMEL shares pledged to Indian Bank), and management is spending on a 10-block mining programme with a weak delivery record (Lohardongri LOI 2019, still not operating; Belgaon reserve figure stale for a year). What we add that the market may underweight: the steel balance sheet is now near debt-free (net debt Rs 26 cr at Sep-2026, CRISIL AA-/Stable) and the business earns a ~14% pre-tax ROCE, so the bear case is LMEL-driven, not steel-driven. What would prove us wrong: (a) a board decision to sell LMEL shares with a buyback/special dividend (gap closes; our 'persists' call fails), or (b) LMEL proceeds or new debt going into mining capex (discount widens; our steel-is-safe view fails). Departure from the outside view (card §5): our P(>=3x in 5y) is far below the base class and P(<=0.5x) above it on purpose. The class is survivors of the 2020-25 small-cap bull run (x3 overstated, losses understated, per its caveats); Sunflag's 5-year outcome is ~75% a single listed stock (LMEL, already up ~3.2x in 3 years) held at a discount, plus a steel business whose ROIIC is close to the cost of equity, so a 3x needs LMEL to roughly triple again or the discount to close; the fatter left tail is single-stock concentration (beta 0.73 to LMEL). These 5-year card calls are the cleanest test in this file of whether our structural adjustment beats the naive class. Checked by paper calls thesis:paper-call:SUNFLAG:* (6 operating/event/price calls to 2027-09-30, plus the 3 card calls).",
+ "stage2": {
+  "source": "S2 checklist in research_notes/Deep dives/SUNFLAG_live.md section 1 (AR FY26/FY25 auditor's reports + CARO, 584 NSE announcements to 23-Nov-2026, SHP XBRL 30-Sep-2026, CRISIL letter 14-Nov-2025, tools/detectors/solvency_screen.py run 23-Nov-2026).",
+  "hard": [
+   {
+    "rule": "H1a fake-cash signal",
+    "status": "pass",
+    "evidence": "Cash + bank Rs 367 cr (Sep-2026) vs interest income Rs 9.9 cr FY26 on a smaller FY26 average balance (consistent); the big asset (LMEL stake) is a listed, observable price; CRISIL AA-/Stable assigned 14-Nov-2025"
+   },
+   {
+    "rule": "H1b economics implausible",
+    "status": "pass",
+    "evidence": "Rolled products 467,540 t [AR26 board report] x ~Rs 84k/t = revenue Rs 3,939 cr; EBITDA ~Rs 10.2k/t; BRSR energy 2.30 m GJ / 4,032 MJ/t = ~571k t equivalent (cross-foots with SMS 497.5k t + DRI)"
+   },
+   {
+    "rule": "H1c profits unverifiable by outsiders",
+    "status": "pass",
+    "evidence": "Auto/forging/bearing customers, no customer >=10% [AR26 n.35]; listed SBQ peers (KSL, VSSL, Mukand) report comparable spreads"
+   },
+   {
+    "rule": "H2 auditor exit / qualified opinion",
+    "status": "pass",
+    "evidence": "Unmodified opinions FY25 (B P & Co.) and FY26 (Lodha & Co LLP); change = completion of the 5-year term at the Sep-2025 AGM; CARO 3(xviii): no resignation; Q2 FY27 limited review unmodified"
+   },
+   {
+    "rule": "H3 rating 'issuer not cooperating'",
+    "status": "pass",
+    "evidence": "CRISIL AA-/Stable + A1+ on Rs 1,850 cr facilities, letter 14-Nov-2025 (valid to 01-Jan-2027); CARE rating letter 26-Nov-2024 earlier; no INC tag"
+   },
+   {
+    "rule": "H4 SME/Telegram pump",
+    "status": "pass",
+    "evidence": "Main board since 1984 listing; NSE volume/price queries 05-May-2026 and 29-Sep-2026 answered 'market driven' (watch item, not a pump pattern); no promoter selling in SAST filings"
+   },
+   {
+    "rule": "H5 related-party cash leakage to promoter entities",
+    "status": "pass",
+    "evidence": "RPTs tiny: Daido royalty Rs 2.4 cr, rent to Haryana Televisions Rs 0.57 cr, wire-rod sales to 49% JV Ramesh Sunwire Rs 32.7 cr (0.8% of sales) [AR26 n.39]; directors' commission Rs 8.2 cr FY26 (2.7% of PBT) graded below"
+   }
+  ],
+  "graded": [
+   {
+    "rule": "G1 promoter pledge > 25% (v3: >50% strong red)",
+    "status": "clear",
+    "evidence": "SHP 30-Sep-2026 XBRL: promoter encumbrance flags all false (pledge, NDU, other); nse_fetch pledge returned 0 rows on 23-Nov-2026 (the endpoint returned 0 rows for every symbol that day, so the SHP XBRL is the source)"
+   },
+   {
+    "rule": "G2 accounting-trouble events in 5 years",
+    "status": "clear",
+    "evidence": "None in 584 announcements; one SOP fine (Jun-2025) for a late secretarial compliance report after the PCS resigned on the due date"
+   },
+   {
+    "rule": "G3 dilution",
+    "status": "clear",
+    "evidence": "18.02 cr shares unchanged FY16-FY27"
+   },
+   {
+    "rule": "G4 solvency set (S1/S5 India)",
+    "status": "clear",
+    "evidence": "solvency_screen 23-Nov-2026: grade blank, 0 flags, interest cover 5.2x FY26; net debt Rs 26 cr Sep-2026"
+   },
+   {
+    "rule": "Q CFO/PAT 5y (question)",
+    "status": "clear",
+    "evidence": "FY22-26 CFO Rs 1,147 cr vs PAT ex the FY23 award gain ~Rs 940 cr = 1.2x"
+   },
+   {
+    "rule": "Q CARO 3(ii)(b) stock statements vs books (question)",
+    "status": "fired",
+    "evidence": "Mismatch both years: FY25 up to Rs 168 cr (provisional DP statements), FY26 within Rs 19-31 cr; shrinking, kept as a question"
+   }
+  ]
+ },
+ "stage3": {
+  "pead": {
+   "applicable": true,
+   "quintile": 4,
+   "event_date": "2026-11-13",
+   "note": "Q2 FY27 consolidated SUE +1.04 (basis C, 8 prior seasonal changes) vs fixed cut-points -> quintile 4; Q1 FY27 SUE +0.26 (Q3). Not in the avoid window."
+  },
+  "credibility": {
+   "score": null,
+   "peer_median": null,
+   "n": 5,
+   "category": "mining milestones (AR board-report status tables FY24-FY26)",
+   "note": "No earnings calls exist (0 transcripts in 584 NSE filings, fetch.py 23-Nov-2026), so the promise-tracker pipeline has nothing to score. Hand ledger of 5 mine-status statements FY24->FY26: 0 reached production; 2 moved one statutory step (Bhivkund ML executed Apr-2026; Surjagad-6 drilling May-2026); 1 reversed (Lohardongri: LOI 2019 -> PIL in the High Court 2026); 1 dated promise open (Bajna EC + Stage-I 'likely by end Sep-2026'); 1 disclosure inconsistency (Belgaon extractable reserve 5.391 MT repeated FY24 and FY25, then 3.5 MT FY26)."
+  },
+  "detectors": [
+   {
+    "name": "KMP churn",
+    "date": "2025-02 to 2026-09",
+    "detail": "COO ceased Feb-2025; CEO (appointed Nov-2024) resigned Nov-2025, new CEO Nov-2025; 3 independent directors left Aug-2025 to Sep-2026",
+    "severity": "med"
+   },
+   {
+    "name": "Exchange surveillance",
+    "date": "2026-05-05 / 2026-09-29",
+    "detail": "Volume spurt and price-movement queries; company: no undisclosed information",
+    "severity": "low"
+   },
+   {
+    "name": "Company-level pledge of the LMEL stake",
+    "date": "FY26 AR n.15",
+    "detail": "74 lakh of 600 lakh LMEL shares pledged to Indian Bank as additional security",
+    "severity": "low"
+   }
+  ]
+ },
+ "stage4": {
+  "soft_flags": [
+   {
+    "flag": "P/B 0.55 and 'cheap vs stake' look (good-but-misleading): the LMEL stake is 156% of market cap pre-tax",
+    "status": "open",
+    "changes_mind": "Board policy to monetise and distribute; or two consecutive years of discount < 30%",
+    "review": "FY27 AR (Sep-2027)"
+   },
+   {
+    "flag": "Mining diversification: 10 blocks, commercial coal (Tambia South), weak delivery record",
+    "status": "open",
+    "changes_mind": "One block producing on the stated timeline (Bhivkund or Bajna) with capex funded from steel cash flow",
+    "review": "2027-09-30"
+   },
+   {
+    "flag": "No earnings calls; ~1.1% institutional ownership; sparse disclosure",
+    "status": "open",
+    "changes_mind": "First investor call / presentation",
+    "review": "each quarter"
+   },
+   {
+    "flag": "Belgaon coal reserve figure stale (5.391 MT in FY24 and FY25) then cut to 3.5 MT",
+    "status": "open",
+    "changes_mind": "Reserve reconciliation in the FY27 AR",
+    "review": "FY27 AR"
+   },
+   {
+    "flag": "Commission on sales Rs 3.4 cr -> 16.5 cr (5x) in FY26",
+    "status": "open",
+    "changes_mind": "Counterparty and export link (exports Rs 48 -> 114 cr) disclosed; ratio to export sales stable",
+    "review": "FY27 AR"
+   },
+   {
+    "flag": "Directors' commission Rs 4.2 cr -> 8.2 cr",
+    "status": "watch",
+    "changes_mind": "Commission > 5% of PBT",
+    "review": "FY27 AR"
+   },
+   {
+    "flag": "74 lakh LMEL shares pledged by the company to Indian Bank",
+    "status": "watch",
+    "changes_mind": "Pledged share count rises, or margin-call language",
+    "review": "FY27 AR n.15"
+   },
+   {
+    "flag": "H1 FY27 CFO Rs 339 cr flattered by payables +Rs 191 cr (good-but-misleading)",
+    "status": "adjusted",
+    "changes_mind": "-",
+    "review": "-"
+   },
+   {
+    "flag": "FY23 EPS 61.9 = arbitral-award settlement in LMEL OFCDs; FY26 Q4 tax 58% (prior-year deferred tax)",
+    "status": "adjusted",
+    "changes_mind": "-",
+    "review": "-"
+   },
+   {
+    "flag": "CARO 3(ii)(b) stock-statement mismatch",
+    "status": "watch",
+    "changes_mind": "Mismatch > Rs 50 cr again",
+    "review": "FY27 AR"
+   },
+   {
+    "flag": "KMP and independent-director churn",
+    "status": "watch",
+    "changes_mind": "CFO or another CEO exit within 12 months",
+    "review": "each quarter"
+   }
+  ],
+  "override_log": [
+   {
+    "date": "2026-11-23",
+    "flag": "FY23 other income Rs 1,201 cr",
+    "decision": "excluded from EPS history and the base year",
+    "why": "AR FY23: settlement of past-period claims on LMEL via arbitral award (22/28-Apr-2022) paid in 6 cr OFCDs converted 1:1 into LMEL shares"
+   },
+   {
+    "date": "2026-11-23",
+    "flag": "Screener ROCE 4% / ROE 2%",
+    "decision": "replaced by operating ROCE ~14% pre-tax on ~Rs 2,540 cr operating capital",
+    "why": "Denominator includes the Rs 11,369 cr LMEL mark (Sep-2026)"
+   },
+   {
+    "date": "2026-11-23",
+    "flag": "Promise tracker not runnable",
+    "decision": "hand ledger of AR mine-status statements used as the credibility read (n=5, not comparable with transcript-based scores)",
+    "why": "No earnings calls since at least 2017"
+   }
+  ]
+ },
+ "base_rate_class": "india_nonfin_1000_20000cr_5y",
+ "sizing": {
+  "tier": "speculative",
+  "kelly_fraction": 0.25,
+  "max_pct_at_cost": null,
+  "portfolio_value": 1.0,
+  "adv_value": null,
+  "adv_pct": 0.1,
+  "days_to_exit": 5
+ },
+ "kill_criteria": [
+  {
+   "if": "LMEL shares sold or transferred and the proceeds not distributed (buyback/special dividend) within 6 months",
+   "measure": "LMEL SHP (Sunflag line) + Sunflag Reg-30 + FY27 AR n.4",
+   "by": "2027-09-30"
+  },
+  {
+   "if": "Consolidated borrowings above Rs 1,000 cr at any half-year end (debt-funded mining)",
+   "measure": "Half-year statement of assets and liabilities",
+   "by": "2027-09-30"
+  },
+  {
+   "if": "FY27 consolidated OPM below 9%",
+   "measure": "screener / NSE XBRL FY27",
+   "by": "2027-05-31"
+  },
+  {
+   "if": "Any promoter encumbrance, or LMEL shares pledged by the company rise above 74 lakh",
+   "measure": "SHP XBRL quarterly; FY27 AR n.15",
+   "by": "2027-09-30"
+  },
+  {
+   "if": "Modified audit opinion, auditor resignation or a rating 'issuer not cooperating'",
+   "measure": "Reg-30 / AR / rating letters",
+   "by": "2027-09-30"
+  }
+ ],
+ "pre_mortem": [
+  "LMEL fell 50% on an iron-ore royalty or Gadchiroli mining shock; Sunflag fell ~35% with it although steel did fine (beta to LMEL 0.73, weekly corr 0.54 over 2 years).",
+  "The board sold part of the LMEL stake to fund Tambia South / Bhivkund mining capex instead of returning cash; the market widened the discount to 70%.",
+  "A steel-import surge (China/Korea/Japan, flagged in AR26) compressed the SBQ spread; OPM fell to 8-9% and the steel stub de-rated to 4x EBITDA.",
+  "A promoter-family or trust (Zedra, Jersey) restructuring or a Daido exit created supply overhang in an illiquid stock (ADV Rs 13.5 cr)."
+ ],
+ "review_date": "2027-02-15",
+ "_calibration_note": "Re-run 2026-11-23 with worksheet v1.3 / card v1.1 / base_rates v2. Base-rate class india_survivors_2020_25_mcap_ge400 -> india_nonfin_1000_20000cr_5y. NOT a new decision: no paper calls are written from this file (the live card and its calls stand as made)."
+}

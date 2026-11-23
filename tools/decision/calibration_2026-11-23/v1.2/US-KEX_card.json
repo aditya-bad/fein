@@ -1,0 +1,245 @@
+{
+ "worksheet": "../US-KEX_v13.json",
+ "decision_date": "2026-11-23",
+ "practice": false,
+ "analyst": "Claude",
+ "deep_dive": "research_notes/Deep dives/US-KEX_live.md",
+ "thesis": "Method-test thesis: Kirby is a cyclical, capital-heavy tank-barge operator (28% of the ~4,004-barge US inland fleet, Jones Act protected) plus an engine/power-generation distributor riding data-center backup and prime-power demand; over 5 years it compounds EPS ~4-9%/yr (pricing on a near-fixed fleet plus ~4-5%/yr buybacks) at a return on total capital close to its cost of capital (~10%), so shareholder returns track EPS plus buybacks minus any de-rating from today's ~17x forward P/E.",
+ "variant_view": "Market (reverse DCF): at $122.89 (19.4x FY25 EPS, 17.0x the FY26 guide, 9.5x EV/EBITDA, FCF yield 6.3%) the worksheet's NOPAT-based DCF cannot reproduce the price at a 10% ROIIC; even at a 20% ROIIC (sensitivity file, written after the outputs) the price needs ~11%/yr revenue growth for 10 years or a 17% NOPAT margin (FY25 11.1%). On reported FCF the price is consistent with ~3.8% perpetual FCF growth at a 9.5% cost of equity, i.e. roughly fair if 2025's cash taxes (bonus depreciation, deferred tax $82M) persist. Our view: NO claimable mispricing, with a mild negative tilt. What the market appears to price: an inland up-cycle (utilization low-90%, term renewals 'north of inflation', newbuilds 60-70/yr only matching retirements) plus a power-generation growth story (backlog > $1.5bn, book-to-bill > 1). What we verified that cuts against it: (1) ROTC 10.4% over 2023-25 (proxy) - the business earns about its cost of capital even at good points of the cycle; (2) contract escalators slowed from +9.5% (Jan-2024) to +3-5% (Jan-2025) and term renewals were flat to low-single-digit in 2025-26 - the rate cycle has been decelerating, not accelerating; (3) 2026 inland margins are capped by fuel ($3.91/gal Q3-26 vs $2.46) with a ~120-day escalator lag, and the Jones Act waiver (17-Mar-2026, now extended to 14-Feb-2027) adds foreign-flag competition risk in coastal; (4) 21 open-market insider sales, 0 buys in 12 months (weak signal, L14); (5) receivables +36% YoY vs revenue +12% (fuel-related, but CFO 9M-26 $313M vs $358M). What would prove us wrong: FY2026 EPS above the top of the guide (>= $7.28) with 2027 term renewals up high-single digits and power-gen revenue growth > 20% - i.e. a genuine margin step-up, not a buyback-driven EPS line. Departure from the outside view: the US seasoned-stock 5-year distribution is NOT on file (base_rates.json us_seasoned_5y), so the card's 5-year probabilities are compared with an EST naive class in the deep-dive file (P(>=3x) ~10%, P(<=0.5x) ~12% for US mid caps [EST, unverified]); our P(>=3x) is lower on purpose (a ~10%-ROTC cyclical at 17x forward needs a re-rating and a supercycle to triple). Checked by thesis:paper-call:US-KEX:* (6 calls to 2027-09-30, plus the 3 card calls).",
+ "stage2": {
+  "source": "S2 checklist in research_notes/Deep dives/US-KEX_live.md section 1 (SEC submissions to 23-Nov-2026; EDGAR full-text search on CIK 56047; 10-K FY2025 Items 9A/auditor report; solvency flags per tools/backtests/solvency_us/s3_flags.py at T=2026-11-23).",
+  "hard": [
+   {
+    "rule": "H1a fake-cash signal",
+    "status": "pass",
+    "evidence": "Cash is small ($38M at Sep-2026); value sits in a physical fleet (1,148 inland barges active, 294 towboats operated) and receivables; KPMG ICFR opinion effective FY2025"
+   },
+   {
+    "rule": "H1b economics implausible",
+    "status": "pass",
+    "evidence": "Inland revenue $460.1M Q3-26 = 4,183M ton-miles x 11.0 c/tm (company-stated, re-derived); fleet 28% of the ~4,004-barge industry; peers private but the ton-mile identity cross-foots"
+   },
+   {
+    "rule": "H1c profits unverifiable by outsiders",
+    "status": "pass",
+    "evidence": "Customers are large refiners/chemical makers (five KMT customers ~17% of revenue); dealer/distributor roles for MTU, Allison, Cummins, EMD (~12% of revenue) are verifiable with the OEMs"
+   },
+   {
+    "rule": "H2 auditor exit / qualified opinion",
+    "status": "pass",
+    "evidence": "KPMG, unqualified FS and ICFR opinions FY2025; no 8-K 4.01 in the submissions file; one 8-K 4.02 on 10-Jul-2020 (Q1-2020 goodwill impairment understated; outside the 3-year window, graded below)"
+   },
+   {
+    "rule": "H3 rating 'issuer not cooperating'",
+    "status": "pass",
+    "evidence": "US equivalent: investment-grade-priced revolver (SOFR + 87.5-150 bp by rating), $750M facility amended 26-Mar-2026 to 2031; covenants ICR >= 2.5x, debt/cap <= 60% vs 23.7%"
+   },
+   {
+    "rule": "H4 SME/Telegram pump",
+    "status": "pass",
+    "evidence": "NYSE, ~$77M/day ADV (6 months), ~70% of float held by large institutions (BlackRock 10.4%, Vanguard entities ~10%, DFA 5.2%)"
+   },
+   {
+    "rule": "H5 related-party cash leakage",
+    "status": "pass",
+    "evidence": "No Item 404 transactions found in the 2026 proxy text; CEO pay $6.7M (66:1 median); widely held"
+   }
+  ],
+  "graded": [
+   {
+    "rule": "G1 pledge / insider encumbrance (US: n/a)",
+    "status": "clear",
+    "evidence": "No pledging disclosed; insiders are small holders"
+   },
+   {
+    "rule": "G2 accounting-trouble events in 5 years",
+    "status": "fired",
+    "evidence": "8-K 4.02 on 10-Jul-2020 (6.4 years ago, just outside 5y): Q1-2020 restated for ASU 2017-04 goodwill impairment error; company flagged a likely material weakness then; none since (FTS 'material weakness' 0 hits since Nov-2023)"
+   },
+   {
+    "rule": "G3 dilution",
+    "status": "clear",
+    "evidence": "Shares 60.2M (2021) -> 52.0M (Oct-2026); 5.2M still authorised (5-Nov-2026)"
+   },
+   {
+    "rule": "G4 solvency set (S1/S5 US, graded red)",
+    "status": "clear",
+    "evidence": "S1 0, S2 0 (EBIT/interest 10.7x), S3 0, S4 0 (buybacks 354 < FCF 406 in 2025), S5 0"
+   },
+   {
+    "rule": "Q CFO/NI (question)",
+    "status": "clear",
+    "evidence": "CFO/NI 1.89x FY2025; but 9M-2026 CFO $313M vs $358M with receivables +$187M since Dec-2025"
+   },
+   {
+    "rule": "Q receivables growth vs revenue (question)",
+    "status": "fired",
+    "evidence": "AR $711M Sep-2026 vs $524M Sep-2025 (+36%) vs revenue +12%; company: timing of collections and fuel-related receivables"
+   }
+  ]
+ },
+ "stage3": {
+  "pead": {
+   "applicable": true,
+   "quintile": 5,
+   "event_date": "2026-10-28",
+   "note": "US SUE proxy (SEC calendar-quarter EPS frames, seasonal random walk) CY2026Q3 +2.58 vs frame cut-points (-0.576/0.048/0.589/1.670, n=821) -> quintile 5; CY2026Q2 0.00 -> quintile 2. Not in an avoid window. US cut-points are uncalibrated (no US PEAD test on file)."
+  },
+  "credibility": {
+   "score": 0.792,
+   "peer_median": 0.84,
+   "n": 12,
+   "category": "near-term guidance in 8-K Ex-99.1 releases, last 6 calls (Q2-25..Q3-26); peer = US industrials ledger (WTS 100, AOS 65.9, SSD 79.4, LECO 88.5)",
+   "note": "Hand ledger (deep dive section 7): 12 resolved items, credit 9.5 (delivered 9, partly 1, missed 2: inland utilization 'low-90%' for Q3-25 came in mid-80%, inland margins 'remain in the 20% range' came in high-teens in Q3-25). All company-level financial ranges (FY25 EPS growth, KDS revenue/margin, CFO, capex) were met; 8 FY2026 items are open and tracking at or above the top. Different sector from the peer set, so the comparison is indicative only."
+  },
+  "detectors": [
+   {
+    "name": "Insider open-market sales",
+    "date": "2025-11 to 2026-11",
+    "detail": "21 sales by 10 insiders, $22.2M, 0 buys; CEO sold 29,451 (Nov-25), 34,152 (Feb-26), 18,310 (2-Nov-26 at $141.32); 8-insider cluster after Feb-2026 vesting (mostly option exercise-and-sell)",
+    "severity": "low"
+   },
+   {
+    "name": "Controller retirement",
+    "date": "2026-10-08",
+    "detail": "VP & Controller (30 years) retiring after the FY2026 10-K; 'no disagreement' stated",
+    "severity": "low"
+   },
+   {
+    "name": "Jones Act waiver",
+    "date": "2026-03-17 to 2027-02-14",
+    "detail": "Federal waiver extended three times; 10-Q risk factor added",
+    "severity": "med"
+   },
+   {
+    "name": "Vanguard 13G/A at 0%",
+    "date": "2026-03-27",
+    "detail": "Reporting realignment (Vanguard Portfolio Management 5.03% and Vanguard Capital Management 5.17% filed separately); not a sale",
+    "severity": "low"
+   }
+  ]
+ },
+ "stage4": {
+  "soft_flags": [
+   {
+    "flag": "Cyclical peak risk: inland utilization low-90%, record EPS, P/E 17x forward on near-peak margins (inland ~20%)",
+    "status": "open",
+    "changes_mind": "2027 term renewals up >= high-single digits with utilization held >= 90% through a refinery-maintenance year",
+    "review": "2027-04-30 (Q1-27 release)"
+   },
+   {
+    "flag": "Return on capital ~ cost of capital (ROTC 10.4% 2023-25); growth via barge acquisitions at $4-8M per barge-equivalent",
+    "status": "open",
+    "changes_mind": "ROTC > 12% in the 2026-28 performance award, or acquisitions bought below replacement cost with disclosed returns",
+    "review": "2027 proxy (Mar-2027)"
+   },
+   {
+    "flag": "Receivables +36% YoY vs revenue +12%; 9M CFO down 12%",
+    "status": "open",
+    "changes_mind": "FY2026 CFO inside the $575-675M guide and AR/revenue back to 2025 levels",
+    "review": "FY2026 10-K (Feb-2027)"
+   },
+   {
+    "flag": "Jones Act waiver (foreign-flag competition in coastal; political precedent)",
+    "status": "open",
+    "changes_mind": "Waiver lapses on 14-Feb-2027 without renewal",
+    "review": "2027-02-15"
+   },
+   {
+    "flag": "Power-generation concentration: new 10-K risk factor on data-center demand; 10-Q risk factor on government priorities; backlog > $1.5bn",
+    "status": "watch",
+    "changes_mind": "Backlog disclosed in a filing (not only on the call) and book-to-bill < 1 for two quarters",
+    "review": "each quarter"
+   },
+   {
+    "flag": "Insider selling, 0 buys (weak, L14)",
+    "status": "watch",
+    "changes_mind": "Open-market buys by >= 2 insiders",
+    "review": "each quarter"
+   },
+   {
+    "flag": "2020 restatement (8-K 4.02, goodwill impairment); Controller retiring Q1-2027",
+    "status": "watch",
+    "changes_mind": "Any new material weakness or a 4.01/4.02",
+    "review": "FY2026 10-K"
+   },
+   {
+    "flag": "Trailing P/E vs own history looks 'normal' (19.4 vs median 21.5) - good-but-misleading: the own band is full of depressed-EPS years",
+    "status": "adjusted",
+    "changes_mind": "-",
+    "review": "-"
+   },
+   {
+    "flag": "FY2025 FCF $406M > NOPAT $374M - good-but-misleading: deferred tax $82M (bonus depreciation) and capex ~ D&A",
+    "status": "adjusted",
+    "changes_mind": "-",
+    "review": "-"
+   }
+  ],
+  "override_log": [
+   {
+    "date": "2026-11-23",
+    "flag": "FY2024 EPS 4.91",
+    "decision": "use adjusted 5.46 as the base for growth comparisons",
+    "why": "$56.3M impairment of conventional frac inventory and a Louisiana tax-law credit (PR-Q4-25 reconciliation); proxy also uses 16% growth on 5.46"
+   },
+   {
+    "date": "2026-11-23",
+    "flag": "Worksheet DCF far below price",
+    "decision": "kept the pre-registered card input (ROIIC 10%); recorded a post-output ROIIC 20% sensitivity and the cash-tax explanation in the deep dive",
+    "why": "Protocol L8 step 2: scenarios fixed before outputs; the gap is a method finding (NOPAT vs cash tax, pricing-led growth), not a reason to re-fit"
+   },
+   {
+    "date": "2026-11-23",
+    "flag": "Vanguard 0% 13G/A",
+    "decision": "ignored as a sale",
+    "why": "Realignment into two Vanguard entities filing separately (FIVE lesson)"
+   }
+  ]
+ },
+ "base_rate_class": "us_float_500m_10b_5y",
+ "sizing": {
+  "tier": "satellite",
+  "kelly_fraction": 0.25,
+  "max_pct_at_cost": null,
+  "portfolio_value": 1.0,
+  "adv_value": 76.7,
+  "adv_pct": 0.1,
+  "days_to_exit": 5
+ },
+ "kill_criteria": [
+  {
+   "if": "FY2026 or any 2027 quarter shows inland utilization below 85% (company language 'mid-80%' or lower) for two consecutive quarters",
+   "measure": "8-K Item 2.02 Ex-99.1",
+   "by": "2027-09-30"
+  },
+  {
+   "if": "Debt-to-capitalization above 35% (buybacks/acquisitions funded with debt)",
+   "measure": "8-K Ex-99.1 / 10-Q balance sheet",
+   "by": "2027-09-30"
+  },
+  {
+   "if": "Jones Act waiver made permanent, or statutory change to coastwise cabotage",
+   "measure": "Federal Register / DHS / KEX 10-Q risk factors",
+   "by": "2027-09-30"
+  },
+  {
+   "if": "Any 8-K 4.01/4.02, material weakness, or Controller/CFO exit with disagreement",
+   "measure": "EDGAR submissions / 10-K Item 9A",
+   "by": "2027-09-30"
+  },
+  {
+   "if": "FY2026 CFO below $500M (working-capital drain persists)",
+   "measure": "10-K FY2026 cash-flow statement",
+   "by": "2027-03-01"
+  }
+ ],
+ "pre_mortem": [
+  "A US recession and lower refinery runs after the Middle East shock faded pushed inland utilization to the low-80s in 2027; spot rates fell 10-15%, inland margins went back to the low-teens and the P/E de-rated to 13x on lower EPS.",
+  "Data-center capex paused (financing or policy) and power-gen orders slipped; KDS margins fell back to mid-single digits while the inventory built for 2026 deliveries had to be worked down.",
+  "The Jones Act waiver was extended repeatedly and widened to inland-adjacent trades; coastal pricing broke and Washington's precedent weighed on the multiple.",
+  "Management kept buying back stock at $135-145 with revolver debt; when the cycle turned, debt/cap rose toward 35% just as earnings fell."
+ ],
+ "review_date": "2027-02-15",
+ "_calibration_note": "Re-run 2026-11-23 with worksheet v1.3 / card v1.1 / base_rates v2. Base-rate class us_seasoned_5y -> us_float_500m_10b_5y. NOT a new decision: no paper calls are written from this file (the live card and its calls stand as made)."
+}

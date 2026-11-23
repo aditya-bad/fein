@@ -33,7 +33,7 @@ Last updated: 2026-11-19
 - Weekly change detectors: pledge, SAST, insider (PIT), bulk/block, auditor/CFO exits, rating actions.
 
 ## Pending implementation
-- decision_card.py: add the survival cap (decision:pead-avoid-plus-redflag-survival-cap) after the calibration task lands.
+- ~~decision_card.py: add the survival cap~~ DONE 23-Nov (card v1.2: survival cap + tail anchoring to base rates, 20 tests).
 - Pre-register: survival cap for any red-flag firm regardless of earnings (group C showed 2.5× halving risk).
 
 ## Dated reminders

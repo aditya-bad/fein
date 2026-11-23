@@ -33,7 +33,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "..", "valuation"))
 import worksheet as ws  # noqa: E402
 
-CARD_VERSION = "1.1 (2026-11-23; market-specific PEAD gate, base-rate CIs/size band, v1.3 worksheet lines)"
+CARD_VERSION = "1.2 (2026-11-23; India survival cap, outside-view tail anchoring in the EV/Kelly gate)"
 PEAD_AVOID_QUINTILES = (1, 2)          # L19: bottom two SUE quintiles
 # v1.1 (L34): the avoid gate is calibrated for India only (bottom two quintiles: L17, L19, L31, confirmed 3 times).
 # US: no PEAD back-test on file and the SUE proxy cut-points are uncalibrated -> quintile shown, never blocks.
@@ -42,6 +42,19 @@ PEAD_AVOID_CAL_DAYS = 92               # ~63 trading days
 OPEN_FLAG_LIMIT = 3                    # insight:flag-override-template: 3+ open soft flags -> need variant view
 CREDIBILITY_GAP = -0.15                # sector-adjusted credibility this far below peers counts as an open flag
 EDGE_CLAIM_RATIO = 2.0                 # model P(>=3x) > 2x base rate (or P(<=0.5x) < 0.5x) = an edge claim
+# v1.2 survival cap (L35, decision:pead-avoid-plus-redflag-survival-cap): India only. In the PEAD avoid window
+# (bottom-two SUE quintile, <=63 trading days) AND (promoter pledge > 25% of promoter holding OR interest cover < 1.5x)
+# -> 0 new money (hold-review if already owned) + a mandatory balance-sheet question. S5-India alone is NOT a trigger.
+SURVIVAL_PLEDGE = 0.25                 # fraction of the promoter holding pledged (strictly above)
+SURVIVAL_ICR = 1.5                     # interest cover, x (strictly below)
+SURVIVAL_QUESTION = ("Balance-sheet question (mandatory): can the company service its debt and can the promoter meet a "
+                     "margin call through a 12-month stress (no refinancing, a further 30% share-price fall)? Answer from "
+                     "the debt schedule, maturity profile, pledge-lender terms and rating letters, not from management.")
+# v1.2 tail anchoring (L36): anchored P = w*base + (1-w)*model for P(blow-up) and P(<=0.5x); w defaults to 0.5,
+# can go below 0.5 only with a written evidence note, never below 0.25. The anchored tails feed the EV gate and Kelly.
+ANCHOR_WEIGHT_DEFAULT = 0.5
+ANCHOR_WEIGHT_MIN = 0.25
+ANCHOR_FALLBACK_LOSS_MULT = 0.35       # extra <=0.5x mass with no model outcome in that bucket goes here
 TIER_CAPS = {"core": 0.05, "satellite": 0.04, "speculative": 0.02}  # strategy:position-sizing, strategy:thorp-kelly
 # 5-point Gauss-Hermite (probabilists') nodes/weights: integrates a lognormal scenario for the Kelly sum
 GH = [(0.0, 0.533333), (1.355626, 0.222076), (-1.355626, 0.222076), (2.856970, 0.011257), (-2.856970, 0.011257)]
@@ -61,7 +74,10 @@ TEMPLATE = {
     "stage4": {"soft_flags": [{"flag": "", "status": "open|cleared|confirmed|adjusted|watch",
                                "changes_mind": "", "review": ""}],
                "override_log": [{"date": "", "flag": "", "decision": "", "why": ""}]},
-    "base_rate_class": "india_survivors_2020_25_mcap_ge400",
+    "survival": {"pledge_pct_of_promoter": None, "interest_cover": None, "already_owned": False, "as_of": "",
+                 "source": "", "note": "India only; checked when the PEAD avoid flag is active (card v1.2)"},
+    "tail_anchor": {"base_weight": 0.5, "evidence": None},
+    "base_rate_class": "india_nonfin_1000_20000cr_5y",
     "sizing": {"tier": "satellite", "kelly_fraction": 0.25, "max_pct_at_cost": None,
                "portfolio_value": 1.0, "adv_value": None, "adv_pct": 0.10, "days_to_exit": 5},
     "kill_criteria": [{"if": "", "measure": "", "by": "YYYY-MM-DD"}],
@@ -131,6 +147,108 @@ def _outcomes(sc, sigma):
     if bl["prob"]:
         out.append((bl["prob"], bl["multiple"]))
     return out
+
+
+def survival_cap(market, pead_active, surv):
+    """v1.2 survival cap (L35). Returns dict(status, triggered, blocks, reasons, already_owned, text).
+    status: 'n/a' (not India or PEAD not active), 'clear', 'TRIGGERED', 'UNCHECKED'.
+    UNCHECKED (PEAD active, a needed input missing) is treated as triggered until checked, like a stage-2 unknown.
+    S5-India is deliberately not an input (L35: no signal on its own)."""
+    surv = surv or {}
+    owned = bool(surv.get("already_owned"))
+    if market != "india" or not pead_active:
+        return {"status": "n/a", "triggered": False, "blocks": False, "reasons": [], "already_owned": owned}
+    pl, icr = surv.get("pledge_pct_of_promoter"), surv.get("interest_cover")
+    reasons, missing = [], []
+    if pl is None:
+        missing.append("promoter pledge")
+    elif pl > SURVIVAL_PLEDGE:
+        reasons.append("promoter pledge %s of promoter holding (> %s)" % (pct(pl, 0), pct(SURVIVAL_PLEDGE, 0)))
+    if icr is None:
+        missing.append("interest cover")
+    elif icr < SURVIVAL_ICR:
+        reasons.append("interest cover %sx (< %sx)" % (num(icr, 2), num(SURVIVAL_ICR, 1)))
+    if reasons:
+        status = "TRIGGERED"
+    elif missing:
+        status = "UNCHECKED"
+        reasons = ["not checked: %s" % ", ".join(missing)]
+    else:
+        status = "clear"
+    trig = status in ("TRIGGERED", "UNCHECKED")
+    return {"status": status, "triggered": trig, "blocks": trig, "reasons": reasons, "already_owned": owned}
+
+
+def anchor_weight(spec):
+    """Weight on the base rate. Default 0.5; below 0.5 only with a written evidence note; floor 0.25; max 1.
+    Returns (weight, note)."""
+    spec = spec or {}
+    w = spec.get("base_weight")
+    ev = (spec.get("evidence") or "").strip()
+    if w is None:
+        return ANCHOR_WEIGHT_DEFAULT, "default"
+    w = float(w)
+    if w > 1:
+        return 1.0, "capped at 1.0"
+    if w < ANCHOR_WEIGHT_DEFAULT and not ev:
+        return ANCHOR_WEIGHT_DEFAULT, "requested %.2f ignored: no written evidence note" % w
+    if w < ANCHOR_WEIGHT_MIN:
+        return ANCHOR_WEIGHT_MIN, "requested %.2f raised to the %.2f floor; evidence: %s" % (w, ANCHOR_WEIGHT_MIN, ev)
+    return w, ("evidence: %s" % ev) if w < ANCHOR_WEIGHT_DEFAULT else "stated"
+
+
+def anchor_p(p_model, p_base, w):
+    """Outside-view-anchored probability = w*base + (1-w)*model. None base -> model (no anchor)."""
+    if p_model is None:
+        return None
+    if p_base is None:
+        return p_model
+    return w * p_base + (1 - w) * p_model
+
+
+def _outcomes_tagged(sc, sigma):
+    """Like _outcomes but each item is (prob, multiple, is_blowup); the blow-up point is always present."""
+    out = []
+    for r in sc["scenarios"]:
+        if not r.get("mult5"):
+            return None
+        for z, w in GH:
+            out.append((r["prob"] * w, r["mult5"] * math.exp(sigma * z), False))
+    bl = sc["blowup"]
+    out.append((bl["prob"] or 0.0, bl["multiple"], True))
+    return out
+
+
+def anchor_outcomes(outs, pa, pl):
+    """Reweight a tagged outcome list so that P(blow-up) = pa and P(multiple <= 0.5) = pl.
+    Groups: A = blow-up point; B = other outcomes <= 0.5x; C = outcomes > 0.5x. Each group is scaled in proportion
+    (shape kept). If the blow-up multiple is <= 0.5, the <=0.5x target is floored at pa (a blow-up is a <=0.5x
+    outcome in the model). If B has no mass but needs some, a point at ANCHOR_FALLBACK_LOSS_MULT is added.
+    Returns (outcomes as (prob, multiple), effective pl)."""
+    bl_mult = [m for _, m, b in outs if b][0]
+    bl_in_loss = bl_mult <= 0.5
+    if bl_in_loss:
+        pl = max(pl, pa)
+        tgt = {"A": pa, "B": pl - pa, "C": 1 - pl}
+    else:
+        pl = min(pl, 1 - pa)
+        tgt = {"A": pa, "B": pl, "C": 1 - pa - pl}
+    grp = lambda m, b: "A" if b else ("B" if m <= 0.5 else "C")  # noqa: E731
+    mass = {"A": 0.0, "B": 0.0, "C": 0.0}
+    for p, m, b in outs:
+        mass[grp(m, b)] += p
+    res = []
+    for p, m, b in outs:
+        g = grp(m, b)
+        if g == "A":
+            res.append((tgt["A"], m))
+        elif mass[g] > 0:
+            res.append((p * tgt[g] / mass[g], m))
+    if mass["B"] <= 0 and tgt["B"] > 0:
+        res.append((tgt["B"], ANCHOR_FALLBACK_LOSS_MULT))
+    if mass["C"] <= 0 and tgt["C"] > 0:   # degenerate: nothing above 0.5x in the model; keep mass at 1x
+        res.append((tgt["C"], 1.0))
+    return [(p, m) for p, m in res if p > 0], pl
 
 
 def _pe_stage5_lines(lines, wd, wres):
@@ -298,6 +416,7 @@ def build(card, card_path):
     t3 = []
     extra_open = []
     pe = s3.get("pead") or {}
+    pead_active = False
     if pe.get("applicable") is False:
         t3.append("- **Earnings-surprise (PEAD) avoid flag:** not applicable. %s" % pe.get("note", ""))
         gates.append(("Stage 3 PEAD avoid flag", "n/a", False))
@@ -320,11 +439,39 @@ def build(card, card_path):
                           % (wd["market"].upper(), q), False))
         else:
             active = q in gate_q and until is not None and dd <= until
+            pead_active = active
             t3.append("- **Earnings-surprise (PEAD):** SUE quintile %d (event %s). Avoid flag %s%s. Rule L19: bottom two "
                     "quintiles = avoid/exit for ≥63 trading days." % (q, pe.get("event_date"),
                                                                      "**ACTIVE**" if active else "not active",
                                                                      (" until %s" % until) if active else ""))
             gates.append(("Stage 3 PEAD avoid flag", ("ACTIVE until %s → WAIT" % until) if active else "clear", active))
+    # v1.2 survival cap (India): PEAD avoid window + pledge > 25% or interest cover < 1.5x
+    sv_in = card.get("survival") or s3.get("survival") or {}
+    sv = survival_cap(wd["market"], pead_active, sv_in)
+    if sv["status"] == "n/a":
+        t3.append("- **Survival cap (v1.2):** not applicable (%s)." % (
+            "India only" if wd["market"] != "india" else "PEAD avoid flag not active"))
+        gates.append(("Stage 3 survival cap", "n/a", False))
+    else:
+        if sv["status"] == "clear":
+            t3.append("- **Survival cap (v1.2):** clear: PEAD avoid flag active, but pledge %s of promoter holding and "
+                      "interest cover %sx are inside the limits (> %s / < %sx)."
+                      % (pct(sv_in.get("pledge_pct_of_promoter"), 0), num(sv_in.get("interest_cover"), 2),
+                         pct(SURVIVAL_PLEDGE, 0), num(SURVIVAL_ICR, 1)))
+            gates.append(("Stage 3 survival cap", "clear", False))
+        else:
+            act = ("**already owned → HOLD-REVIEW: no additions, review against the balance-sheet question**"
+                   if sv["already_owned"] else "**0 new money**")
+            t3.append("- **Survival cap (v1.2): %s** (%s). PEAD avoid window plus a red flag roughly triples 12-month "
+                      "halving risk (L35: 17.6%% vs 6.1%%). Rule: %s (independent of the EV gate). %s%s%s"
+                      % (sv["status"], "; ".join(sv["reasons"]), act,
+                         "Unchecked inputs are treated as triggered until checked. " if sv["status"] == "UNCHECKED" else "",
+                         ("Source: %s %s. " % (sv_in.get("source", ""), sv_in.get("as_of", ""))) if sv_in.get("source") else "",
+                         sv_in.get("note", "") if sv_in.get("note") else ""))
+            t3.append("  - %s" % SURVIVAL_QUESTION)
+            gates.append(("Stage 3 survival cap", "%s (%s) → %s; balance-sheet question open"
+                          % (sv["status"], "; ".join(sv["reasons"]),
+                             "hold-review, no new money" if sv["already_owned"] else "0 new money"), True))
     cr = s3.get("credibility") or {}
     if cr.get("score") is None:
         t3.append("- **Promise credibility:** not scored. %s" % cr.get("note", ""))
@@ -406,7 +553,30 @@ def build(card, card_path):
         prow.append([label, pct(p, 0), bcell, mult(ratio) if ratio else "n/a"])
         if ratio is not None and (ratio > EDGE_CLAIM_RATIO or ratio < 1 / EDGE_CLAIM_RATIO):
             edge_claims.append("%s is %.2fx the base rate" % (label, ratio))
-    ptxt = [_table(["Event", "Model (worksheet)", "Base rate", "Model ÷ base"], prow), ""]
+    # v1.2 tail anchoring (L36)
+    aw, aw_note = anchor_weight(card.get("tail_anchor"))
+    anc = {"p_blowup": anchor_p(sc.get("p_blowup"), br("p_blowup"), aw),
+           "p_le_half": anchor_p(sc.get("p_le_half"), br("p_le_half"), aw)}
+    anchored_on = cls is not None and any(br(k) is not None for k in anc)
+    if anchored_on:
+        for row, key in ((prow[1], "p_le_half"), (prow[2], "p_blowup")):
+            row.append(pct(anc[key], 1) if br(key) is not None else "n/a (no base rate)")
+        prow[0].append("not anchored")
+    hdr = ["Event", "Model (worksheet)", "Base rate", "Model ÷ base"] + (
+        ["Anchored (w=%.2f on base)" % aw] if anchored_on else [])
+    ptxt = [_table(hdr, prow), ""]
+    if anchored_on:
+        ptxt.append("**Outside-view anchoring (v1.2, L36):** anchored P = %.2f × base rate + %.2f × model for P(≤0.5x) "
+                    "and P(blow-up) (weight: %s). The expected-value gate and Kelly use the anchored tails; the "
+                    "paper calls keep the raw model probability (with the anchored one alongside), so Brier scoring "
+                    "can tell which was better. This is a calibration safeguard, not a change to the hurdle. The "
+                    "default weight is 0.5; a lower weight needs a written evidence note, never below %.2f."
+                    % (aw, 1 - aw, aw_note, ANCHOR_WEIGHT_MIN))
+        ptxt.append("")
+    else:
+        ptxt.append("**Outside-view anchoring (v1.2):** no base rate on file for the tails → raw model tails used in "
+                    "the EV gate and Kelly (nothing to anchor to).")
+        ptxt.append("")
     if cls:
         ptxt.append("Base-rate class: **%s** (n=%s, %s-yr horizon). Source: %s. Caveats: %s%s"
                     % (cls["label"], cls.get("n"), cls.get("horizon_years"), cls["source"], cls["caveats"], cls_note))
@@ -435,8 +605,19 @@ def build(card, card_path):
             gates.append(("Outside-view check", "model departs from base rate with no variant view → shrink", False))
     F["probabilities"] = "\n".join(ptxt)
 
-    # --- expected value
+    # --- anchored outcome distribution (v1.2): used by the EV gate and Kelly
     hurdle = sc.get("hurdle_mult5")
+    touts = _outcomes_tagged(sc, wd["dispersion"]) if sc.get("scenarios") else None
+    outs_raw = [(p, m) for p, m, _ in touts] if touts else None
+    outs_anc, ev_anc, pl_eff = outs_raw, sc.get("ev_mult5"), anc["p_le_half"]
+    if touts and anchored_on:
+        pa = anc["p_blowup"] if br("p_blowup") is not None else sc.get("p_blowup") or 0.0
+        pl_t = anc["p_le_half"] if br("p_le_half") is not None else sc.get("p_le_half") or 0.0
+        outs_anc, pl_eff = anchor_outcomes(touts, pa, pl_t)
+        # keep the worksheet's EV convention (scenario mult5 as the mean): shift it by the reweighting effect
+        ev_anc = sc["ev_mult5"] + (sum(p * m for p, m in outs_anc) - sum(p * m for p, m in outs_raw))
+
+    # --- expected value
     evtxt = []
     if sc.get("ev_mult5") is not None:
         evtxt.append(_table(["EV of 5-yr multiple", "EV CAGR", "Median multiple", "Hurdle (index %s/yr)" %
@@ -448,9 +629,18 @@ def build(card, card_path):
         evtxt.append("Two views on purpose: the 5-year multiple uses the exit P/E each scenario states (how the "
                      "market might pay); the DCF value uses this worksheet's cost of equity (what the cash flows "
                      "justify). When they disagree, the card says so; the gap itself is information.")
-        below = sc["ev_mult5"] < hurdle
-        gates.append(("Expected value vs hurdle", "EV %s vs hurdle %s → %s" % (
-            mult(sc["ev_mult5"]), mult(hurdle), "below hurdle → size 0" if below else "above hurdle"), below))
+        if anchored_on:
+            evtxt.append("")
+            evtxt.append("**Anchored EV (v1.2, used by the gate):** %s (raw model %s). Tails reweighted to P(blow-up) %s "
+                         "and P(≤0.5x) %s%s; the rest of the distribution is scaled in proportion, its shape kept."
+                         % (mult(ev_anc), mult(sc["ev_mult5"]), pct(anc["p_blowup"] if br("p_blowup") is not None
+                                                                     else sc.get("p_blowup"), 1),
+                            pct(pl_eff, 1), " (floored at the anchored blow-up: a blow-up ends ≤0.5x in the model)"
+                            if anc["p_le_half"] is not None and pl_eff > anc["p_le_half"] + 1e-12 else ""))
+        below = ev_anc < hurdle
+        gates.append(("Expected value vs hurdle", "EV %s%s vs hurdle %s → %s" % (
+            mult(ev_anc), (" anchored (raw %s)" % mult(sc["ev_mult5"])) if anchored_on else "", mult(hurdle),
+            "below hurdle → size 0" if below else "above hurdle"), below))
     else:
         evtxt.append("_No scenario multiples: give exit_pe for every scenario in the worksheet input._")
         gates.append(("Expected value vs hurdle", "not computable → size 0", True))
@@ -461,10 +651,10 @@ def build(card, card_path):
     tier = sz.get("tier", "satellite")
     cap = sz.get("max_pct_at_cost") or TIER_CAPS.get(tier, 0.04)
     kf = sz.get("kelly_fraction", 0.25)
-    outs = _outcomes(sc, wd["dispersion"]) if sc.get("scenarios") else None
-    f_star = None
-    if outs and hurdle:
-        f_star, _ = _kelly(outs, hurdle)
+    f_star = f_star_raw = None
+    if outs_anc and hurdle:
+        f_star, _ = _kelly(outs_anc, hurdle)
+        f_star_raw = _kelly(outs_raw, hurdle)[0] if anchored_on else f_star
     kelly_size = f_star * kf if f_star is not None else None
     liq = None
     if sz.get("adv_value") and sz.get("portfolio_value"):
@@ -473,8 +663,10 @@ def build(card, card_path):
     rule_size = min(cands) if cands and kelly_size is not None else 0.0
     blocked = [g for g in gates if g[2]]
     final = 0.0 if blocked else rule_size
+    sv_owned_note = (sv["triggered"] and sv["already_owned"])
     srows = [
-        ["Full Kelly f* (5-yr bet vs index hurdle, scenario outcomes)", pct(f_star, 1)],
+        ["Full Kelly f* (5-yr bet vs index hurdle, %s)" % ("anchored outcomes; raw model %s" % pct(f_star_raw, 1)
+                                                            if anchored_on else "scenario outcomes"), pct(f_star, 1)],
         ["× Kelly fraction %.2f" % kf, pct(kelly_size, 1)],
         ["Cap: max %% at cost (%s tier)" % tier, pct(cap, 1)],
         ["Cap: liquidity (%s of ADV × %s days ÷ portfolio)" % (pct(sz.get("adv_pct", 0.10), 0),
@@ -490,6 +682,12 @@ def build(card, card_path):
                 "5-point Gauss-Hermite on the same σ, blow-up as a point mass), with H = the index hurdle "
                 "multiple. Fractional Kelly because the inputs are opinions (strategy:thorp-kelly); tier caps from "
                 "strategy:position-sizing (max 5% at cost, satellites 3.5–4%, speculative 1–3%).")
+    if sv["triggered"]:
+        stxt.append("")
+        stxt.append("**Survival cap (v1.2):** %s. Chosen policy: 0 new money rather than a minimum size, because the "
+                    "red flag is a solvency risk, not a valuation question; the cap lapses when the PEAD window ends "
+                    "or the red flag clears; the balance-sheet question must be answered on the card either way."
+                    % ("already owned → hold-review (no additions)" if sv_owned_note else "0 new money"))
     if practice:
         stxt.append("")
         stxt.append("_Practice mode: this is the mechanical output of the rule on illustrative inputs, NOT a "
@@ -527,6 +725,8 @@ def build(card, card_path):
     resolve = _add_years(entry, 5)
     slug_date = dd.isoformat()
     calls = []
+    anc_by_key = {"ge3x": None, "le0p5x": anc["p_le_half"] if anchored_on and br("p_le_half") is not None else None,
+                  "blowup": anc["p_blowup"] if anchored_on and br("p_blowup") is not None else None}
     specs = [
         ("ge3x", "≥3.0x", sc.get("p_ge_3x"), br("p_ge_3x"),
          "YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from "
@@ -559,8 +759,10 @@ def build(card, card_path):
                         wd["dispersion"], pct(rv.get("implied_coe_base", rv.get("irr_base"))), head)),
             "tickers": [tick], "tags": tags, "date": slug_date, "status": "open",
             "data": {"probability": round(p, 4), "base_rate_probability": b,
+                     "anchored_probability": round(anc_by_key[key], 4) if anc_by_key[key] is not None else None,
+                     "anchor_weight": aw if anc_by_key[key] is not None else None,
                      "base_rate_reasoning": (cls["label"] + ". " + cls["caveats"]) if cls else "no class chosen",
-                     "method": "decision-card-v1", "made_on": slug_date, "resolve_by": resolve.isoformat(),
+                     "method": "decision-card-v1", "card_version": CARD_VERSION.split(" ")[0], "made_on": slug_date, "resolve_by": resolve.isoformat(),
                      "entry_date": entry.isoformat(), "entry_price": wd["price"], "currency": wd.get("currency"),
                      "resolution_rule": rule,
                      "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
@@ -580,6 +782,9 @@ def build(card, card_path):
         "tickers": [tick], "tags": ["decision-card", "stage-6", tags_mkt] + (["practice-example"] if practice else []),
         "date": slug_date,
         "data": {"gates": [{"gate": g[0], "result": g[1], "blocks": g[2]} for g in gates], "size_after_gates": final,
+                 "survival_cap": sv, "anchor_weight": aw if anchored_on else None, "ev_mult5_raw": sc.get("ev_mult5"),
+                 "ev_mult5_anchored": ev_anc, "p_blowup_anchored": anc["p_blowup"] if anchored_on else None,
+                 "p_le_half_anchored": anc["p_le_half"] if anchored_on else None,
                  "rule_size": rule_size, "kelly_f_star": f_star, "open_soft_flags": n_open, "review_date": rd,
                  "kill_criteria": kc, "override_log": log, "paper_calls": ids, "practice": practice},
         "sources": wd.get("sources") or [],

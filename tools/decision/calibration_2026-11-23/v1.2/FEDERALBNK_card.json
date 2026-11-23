@@ -1,0 +1,272 @@
+{
+ "worksheet": "../../../valuation/examples/FEDERALBNK.json",
+ "decision_date": "2026-11-22",
+ "practice": true,
+ "analyst": "Claude",
+ "deep_dive": "research_notes/Deep dives/FEDERALBNK_dryrun.md",
+ "thesis": "TEST THESIS (illustrative): a granular Kerala/NRI deposit franchise plus a mix shift to mid-yield secured loans lifts RoA from ~1.25% to ~1.4% and ROE on diluted book from ~10% to ~14%.",
+ "variant_view": null,
+ "stage2": {
+  "source": "Dry-run §2 (AR FY26 notes 1.4.5/1.4.9/AS-18, NSE/BSE Reg-30 filings Jan-2025..Nov-2026, rating letters, NSE shareholding/pledge API).",
+  "hard": [
+   {
+    "rule": "H1a fake-cash signal (bank form: cash/RBI balances and investments verifiable; HTM/AFS marks)",
+    "status": "pass",
+    "evidence": "Cash+RBI Rs 16,801 cr and investments Rs 84,045 cr (Sep-26 XBRL); audited, unmodified opinion FY26"
+   },
+   {
+    "rule": "H1b economics implausible",
+    "status": "pass",
+    "evidence": "NIM 3.32%, RoA 1.32%, C/I 52% sit inside the mid-size private-bank range; yield 8.70% vs CoD 5.18% re-derived"
+   },
+   {
+    "rule": "H1c profits outsiders cannot verify",
+    "status": "pass",
+    "evidence": "Profit is spread + fees on a supervised balance sheet; one-offs (Rs 456 cr IT-refund interest, Rs 238 cr Q2 treasury) are disclosed and backed by IT orders filed on NSE"
+   },
+   {
+    "rule": "H2 auditor exit / qualified opinion",
+    "status": "pass",
+    "evidence": "May-2026 change = RBI-mandated rotation on term completion (Suri & Co, MSKA -> Price Waterhouse LLP, K S Aiyar); FY26 opinion unmodified"
+   },
+   {
+    "rule": "H3 rating 'issuer not cooperating'",
+    "status": "pass",
+    "evidence": "CARE AA+/Stable reaffirmed 9-Oct-2026; IND AA+/Stable 22-Sep-2026; CRISIL AAA FD 30-Dec-2025; S&P BBB-/Stable first rating 9-Jul-2026"
+   },
+   {
+    "rule": "H4 pump pattern",
+    "status": "pass",
+    "evidence": "Nifty constituent, 100% public float, MF 37% / FII ~29%"
+   },
+   {
+    "rule": "H5 related-party cash leakage",
+    "status": "pass",
+    "evidence": "No promoter. AS-18 FY26: loans Rs 1,126 cr + NCDs Rs 235 cr to the 60.6% subsidiary Fedbank Financial (listed); KMP-relative balances ~Rs 1 cr"
+   },
+   {
+    "rule": "EXIT trigger: RBI NPA divergence",
+    "status": "pass",
+    "evidence": "AR FY26 note 1.4.5: divergence for FY25 and FY24 below the disclosure threshold"
+   },
+   {
+    "rule": "EXIT trigger: restatement / delayed results",
+    "status": "pass",
+    "evidence": "No restatement filings Jan-2025..Nov-2026; results 16 days after quarter-end"
+   }
+  ],
+  "graded": [
+   {
+    "rule": "Pledge > 25% of promoter holding",
+    "status": "clear",
+    "evidence": "No promoter (NSE shareholding 30-Sep-2026: promoter 0%); pledge API 0 rows"
+   },
+   {
+    "rule": "Accounting-trouble events within 5 yrs",
+    "status": "clear",
+    "evidence": "RBI penalty Rs 27.3 lakh (Feb-2025, deposit-interest directions); GST order set aside (13-Nov-2026). Minor"
+   },
+   {
+    "rule": "Solvency: capital (CET1 vs floor)",
+    "status": "clear",
+    "evidence": "CET1 15.76% (Sep-26 XBRL) vs management floor 12%; leverage ratio 8.42% (FY26)"
+   },
+   {
+    "rule": "Solvency: funding concentration (lender form)",
+    "status": "fired",
+    "evidence": "Kerala = 58.8% of deposits (Ind-Ra, Q1FY27); NR deposits 34.7% of deposits; FCNR(B) +239% YoY via the 2026 special window. Granular (<Rs 3 cr) share fell 85% -> 81% in one quarter"
+   },
+   {
+    "rule": "Frauds reported (value trend)",
+    "status": "fired",
+    "evidence": "Rs 207 cr FY26 vs Rs 79 cr FY25 (AR note 1.4.9); count fell 3,803 -> 510. A question, not a disqualifier"
+   }
+  ]
+ },
+ "stage3": {
+  "pead": {
+   "applicable": true,
+   "quintile": 5,
+   "event_date": "2026-10-16",
+   "note": "SUE +2.91 on consolidated EPS 6.07 vs 4.04 (8 prior seasonal changes), fixed v2 cut-points -> provisional quintile 5. Not a buy signal (L19). Q2 includes Rs 238 cr treasury income (vs 113)."
+  },
+  "credibility": {
+   "score": 0.93,
+   "n": 9,
+   "peer_median": null,
+   "note": "Pipeline + manual LLM step on 6 calls (Q4FY25-Q2FY27, Q2FY26 transcript blocked): 29 promises, 9 resolved, MCS +0.93. NOT USABLE (L18): no bank peer base, n_resolved < 5 per category, and guidance looks conservative (NIM guided -5-10 bps, delivered +12). 3 unacknowledged goalpost changes (C/I ceiling 53.5 -> 55 -> 56; CASA 36% '3 years' -> 'at some point')."
+  },
+  "detectors": [
+   {
+    "name": "CEO tenure",
+    "date": "2027-09",
+    "detail": "MD & CEO KVS Manian appointed for 3 years from Sep-2024 (Ind-Ra); RBI re-approval or succession inside the 5-yr window",
+    "severity": "med"
+   },
+   {
+    "name": "M&A rumours",
+    "date": "2026-09-25 / 2026-10-19",
+    "detail": "Jana SFB 'final stages' report; company: no material event. MFI-type acquisition questioned on the Q2 call",
+    "severity": "med"
+   },
+   {
+    "name": "Regulatory transition",
+    "date": "2027-04-01",
+    "detail": "ECL provisioning: one-time 1.5-2% of net worth guided",
+    "severity": "med"
+   },
+   {
+    "name": "Capital overhang",
+    "date": "2027",
+    "detail": "Blackstone warrants: Rs 4,647 cr due on exercise (27.3 cr shares, ~10% dilution at Rs 227)",
+    "severity": "low"
+   },
+   {
+    "name": "Auditor rotation",
+    "date": "2026-05-15",
+    "detail": "RBI-mandated rotation; new joint auditors audit FY27",
+    "severity": "low"
+   }
+  ]
+ },
+ "stage4": {
+  "soft_flags": [
+   {
+    "flag": "Loan/deposit/retail growth inflated by the FCNR special window (Rs 9,438 cr loans against FCNR deposits; Rs 14,922 cr mobilised)",
+    "status": "open",
+    "changes_mind": "Core retail (ex FCNR-backed) growing >= 12% for two quarters; NIM ex-FCNR disclosed",
+    "review": "Q4 FY27"
+   },
+   {
+    "flag": "GNPA 'decadal low' is write-off driven (Q2 write-offs Rs 498 cr > fresh slippage Rs 420 cr)",
+    "status": "open",
+    "changes_mind": "GNPA flat or lower with write-offs below slippages for two quarters",
+    "review": "Q4 FY27"
+   },
+   {
+    "flag": "Kerala 59% of deposits; NR deposits 35%; Gulf remittance cycle",
+    "status": "open",
+    "changes_mind": "Kerala share < 50% and NR share stable through a Gulf slowdown",
+    "review": "FY27 AR"
+   },
+   {
+    "flag": "Opex +25% YoY in Q2; C/I guidance ceiling drifted 53.5% -> 56% then 'around 52%'",
+    "status": "open",
+    "changes_mind": "FY27 C/I <= 53% with opex growth <= revenue growth",
+    "review": "Q4 FY27"
+   },
+   {
+    "flag": "Gold loans +37% YoY, LTV up from ~55% to ~61% in a quarter, PSU price competition",
+    "status": "open",
+    "changes_mind": "LTV back below 60% and gold credit cost < 20 bps through a gold-price fall",
+    "review": "each quarter"
+   },
+   {
+    "flag": "Excess capital (Rs 4,647 cr to come) + inorganic appetite (Jana SFB / MFI rumours)",
+    "status": "open",
+    "changes_mind": "Capital deployed organically at RoRWA >= 2.2%; any deal priced < 1.5x book with disclosed asset quality",
+    "review": "2027-09-30"
+   },
+   {
+    "flag": "Valuation HOT: P/B 2.24x diluted vs own 10-yr median 1.38x and peer median 1.48x",
+    "status": "open",
+    "changes_mind": "ROE on diluted book >= 15% sustained (justifies ~1.4x at CoE 12.5%; more at lower CoE)",
+    "review": "stage 5"
+   },
+   {
+    "flag": "Fintech-partner dependence (AR: 'resumption of business with a key fintech partner')",
+    "status": "open",
+    "changes_mind": "Partner list, share of cards/deposits sourced via partners, any RBI direction",
+    "review": "ground check"
+   },
+   {
+    "flag": "ESOP fair-value cost called 'one-time' while the policy change is recurring",
+    "status": "open",
+    "changes_mind": "Q3/Q4 FY27 employee cost without a Rs 30 cr+/qtr step",
+    "review": "Q3 FY27"
+   },
+   {
+    "flag": "PCR 87% partly a one-time buffer funded by IT-refund interest (Q4 FY26)",
+    "status": "adjusted",
+    "changes_mind": "-",
+    "review": "-"
+   },
+   {
+    "flag": "Q2 FY27 treasury Rs 238 cr (management: 'may not repeat')",
+    "status": "adjusted",
+    "changes_mind": "-",
+    "review": "-"
+   },
+   {
+    "flag": "CEO 3-yr term ends Sep-2027",
+    "status": "watch",
+    "changes_mind": "RBI re-approval or a named internal successor",
+    "review": "2027-06-30"
+   },
+   {
+    "flag": "ECL transition 1.5-2% of net worth on 1-Apr-2027",
+    "status": "watch",
+    "changes_mind": "Gross impact > 2.5% of NW or no use of the buffer",
+    "review": "2027-07-31"
+   }
+  ],
+  "override_log": [
+   {
+    "date": "2026-11-22",
+    "flag": "Q4 FY26 one-offs",
+    "decision": "use company 'excl one-off' NIM 3.20 / C/I 52.86 / credit cost 47 bps / PAT 1,145 for trend and scoring",
+    "why": "IT orders on NSE (19-Feb, 26/27-Mar-2026) total Rs 1,499 cr refund incl. interest; Rs 456 cr interest booked; ~Rs 470 cr buffer provision"
+   },
+   {
+    "date": "2026-11-22",
+    "flag": "Q2 FY27 treasury",
+    "decision": "normalised PAT removes ~Rs 104 cr post-tax treasury above a Rs 100 cr/qtr run-rate",
+    "why": "Fee table slide 20: treasury 238 vs 12-126 in the prior four quarters"
+   }
+  ]
+ },
+ "base_rate_class": null,
+ "sizing": {
+  "tier": "satellite",
+  "kelly_fraction": 0.25,
+  "portfolio_value": null,
+  "adv_value": 290,
+  "adv_pct": 0.1,
+  "days_to_exit": 5
+ },
+ "kill_criteria": [
+  {
+   "if": "Core retail growth (ex FCNR-backed loans) below 8% YoY in Q4 FY27",
+   "measure": "investor deck retail mix slide",
+   "by": "2027-05-15"
+  },
+  {
+   "if": "Gross slippage ratio above 1.0% annualised in any quarter of FY28",
+   "measure": "investor deck slippage slide",
+   "by": "2028-05-15"
+  },
+  {
+   "if": "FY27 cost-to-income above 54% (company definition)",
+   "measure": "Q4 FY27 deck",
+   "by": "2027-05-15"
+  },
+  {
+   "if": "An acquisition at > 2x book or into unsecured MFI/SFB without disclosed asset quality",
+   "measure": "Reg-30 filings",
+   "by": "2028-03-31"
+  },
+  {
+   "if": "RBI divergence disclosure appears, or an RBI direction on a fintech partnership",
+   "measure": "AR note 'Divergence'; Reg-30",
+   "by": "2027-08-31"
+  }
+ ],
+ "pre_mortem": [
+  "The FCNR window closed and its loans ran off; underlying loan growth was ~12%, not 18-22%, and NIM gains reversed as term deposits repriced up after the Oct-2026 repo hike.",
+  "A Gulf slowdown cut NRI remittances; Kerala deposits (59%) grew slower and CASA stalled at ~32%, so the 36% target and the RoA path both slipped.",
+  "Gold prices fell 20%; LTVs near 60-65% forced auctions and the gold book's credit cost rose while PSU banks undercut pricing.",
+  "The bank used the Blackstone capital to buy an SFB/MFI at a premium; credit cost rose to 80-100 bps and the market de-rated it from 2.2x to its 1.4x median book."
+ ],
+ "review_date": "2027-02-15",
+ "_calibration_note": "Re-run 2026-11-23 with worksheet v1.3 / card v1.1 / base_rates v2. Base-rate class india_survivors_2020_25_mcap_ge400 -> None. NOT a new decision: no paper calls are written from this file (the practice card and its calls stand as made). No bank/NBFC class exists (both panels exclude financials), so base_rate_class is null and the card shows n/a."
+}
