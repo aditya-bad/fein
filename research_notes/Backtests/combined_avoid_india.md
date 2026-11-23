@@ -96,3 +96,78 @@ seed 1); all events 2018–2025 primary, 2018–21 / 2022–25 shown.
   itself is unchanged.
 - 2026-11-23: `c3_flags.py` was run once on the partial cache purely to debug the code (it prints coverage counts
   only; no flag × outcome table was produced or looked at).
+- 2026-11-23: fetch complete. Screener: 557 of 557 event firms have a standalone page and cash-flow schedule (159
+  cached, 398 fetched; 869 requests, one stream ≥ 1.55 s). BSE: SHP lists + needed June-quarter XBRLs, 2,988 + 9
+  requests (one stream ≥ 1.6 s; 1 list retried after a connection reset; 5 files failed). D1 probe succeeded:
+  `/XBRL1/<XbrlFile>` serves the June-2025 XBRL; 418 fetched (same stream). The screener and BSE streams ran in
+  parallel (different hosts, one stream each). A usage-limit pause came after the fetch. Next: `c3_flags.py` (full),
+  then `c4_analyze.py`, run once.
+- 2026-11-23: `c3_flags.py` (full) and `c4_analyze.py` ran once, unchanged. One post-hoc check (`c5_posthoc.py`,
+  labelled exploratory) added after reading the primary tables: halving ratio A ÷ C.
+
+---
+
+# RESULTS (written 2026-11-23 after the run; everything above is the unchanged pre-registration and log)
+
+## Coverage
+10,242 events (557 firms). Annual flags known for all 10,242 (S2 unknown 79, S5 unknown 11). Pledge known for
+9,564: 133 events have no BSE code, 515 no June-quarter SHP in the 15-month window, 30 no XBRL or a parse failure.
+**RED known for 9,623 events (619 unknown, excluded).** RED fires on 2,531 (26%): S2 (interest cover < 1.5x) on 20% of
+events, B25 on 7%, S5-India on 3%. Halving outcome known for all events (the price data reach Nov-2026; the last entry
+is Nov-2025).
+
+## Verdicts (13 weeks; all events 2018–2025; 32 fiscal quarters; 5,000-draw quarter bootstrap)
+| group | n | 13-week excess vs size-matched controls | P(price ≤ 0.5× within 12 months) |
+|---|---|---|---|
+| **A** bottom-two SUE + red flag | 989 | −1.71% [−4.27, +1.08], t −1.25 | **17.6%** (174) |
+| **B** bottom-two SUE, no flag | 2,861 | −1.13% [−1.92, −0.33], t −2.76 | 8.3% (238) |
+| **C** red flag, quintiles 3–5 | 1,542 | +0.56% [−1.13, +2.33] | 15.1% (233) |
+| **D** neither | 4,231 | +1.22% [+0.59, +1.85], t 3.71 | 6.1% (257) |
+
+| hypothesis | result | verdict |
+|---|---|---|
+| **H1** A − B ≤ −2 pp at 13 weeks, CI < 0 | **−0.58 pp [−3.49, +2.58]**, t −0.37 | **NOT SUPPORTED** |
+| **H2** P(halving) A ÷ D ≥ 2×, CI > 1 | **2.90× [2.46, 3.59]** | **SUPPORTED** |
+
+No group is below 50 events in the primary test (smallest: A, 989).
+
+## What sits behind the verdicts
+- **The red flag adds no extra drift after a miss.** A lags controls a little more than B on average, but the
+  difference is noise (CI −3.5 to +2.6 pp). The interaction (A − B) − (C − D) is +0.08 pp [−2.79, +2.92]. The
+  miss itself still matters: B − D = −2.35 pp [−3.25, −1.41], t −4.8, the known avoid leg.
+- **The halving risk comes from the flag, not from the combination.** C (flag without a miss) halves 15.1% of the
+  time, 2.49× D [2.08, 3.07]. A ÷ C = 1.16× [0.93, 1.45] (post-hoc): adding the miss to a flagged firm does not
+  clearly raise the halving rate. A ÷ B = 2.11× [1.65, 2.89]: among misses, the flag doubles the halving risk.
+- **Sensitivities agree** (H1 not supported and H2 supported in every one): unknown treated as unflagged (A ÷ D 2.71×),
+  live firms only (2.72×), financials excluded (3.26×; A − B −0.22 pp), 2018–21 (2.51×; A − B −3.12 pp
+  [−6.84, +1.13] — the only period that points toward H1, and its CI includes 0), 2022–25 (2.66×; A − B +1.96 pp),
+  26 weeks (A − B −0.91 pp [−4.28, +2.36]).
+- **By component:** pledge is the strongest halving signal. B50: A halves 29.1% (251 events), A ÷ D 3.91×
+  [2.91, 5.14]; C 25.8%. B25: A 26.3%, 3.71×. S2 alone 2.41×. **S5-India alone carries no signal here** (A ÷ D
+  1.05× [0.42, 1.81]; A has 110 events). For drift, B50's A − B is −2.0 pp, but the CI is −7.4 to +3.5 (251 events).
+
+## Decision-card rule (as pre-registered: H1 not supported, H2 supported → a tail-risk rule)
+1. **Keep the PEAD avoid gate as it is** (bottom-two SUE = WAIT for ≥ 63 trading days). The red flag does not make
+   the 13-week drift worse, so there is no "EXIT" escalation.
+2. **Add a survival cap:** bottom-two SUE **and** a red flag (pledge > 25% or interest cover < 1.5x) → no new money /
+   minimum size, and a deep-dive question on the balance sheet. About 1 in 6 such events halved within a year
+   (1 in 4 with pledge > 50%), against 1 in 16 for clean firms with no miss.
+3. **The honest refinement:** C shows the same halving risk without a miss. So the stage-2 red flag is the tail-risk
+   signal on its own (≈ 2.5× base), and the miss adds little to it. The pre-registered rule ties the cap to the
+   combination. The data say the cap could apply to any red-flag firm. **That broader rule was not pre-registered, so it is a
+   proposal for a future test, not an adopted rule.** S5-India should not trigger the cap (no signal here).
+
+## Caveats
+- Pledge comes from one June-quarter SHP per year (0–15 months stale, pre-registered). This dilutes the flags, so the
+  true halving gaps are probably a little larger.
+- S2 fires on 20% of events, including banks and NBFCs (their interest cover is structurally < 1.5x). The verdicts
+  are the same with financials excluded.
+- Restated standalone screener annuals (holdco debt under-flagged); weekly closes; price returns only; dead firms
+  are a 39% sample and most failures were below the ₹500 cr floor (L31).
+- Halving is about the path, and events overlap (the same firm appears in several quarters). The quarter bootstrap
+  handles the time clustering but not the firm clustering, so the halving CIs are somewhat too narrow.
+- 2018–21 includes the IL&FS/NBFC squeeze and COVID: halving rates there are about 2–3× those of 2022–25.
+
+Scripts: `tools/backtests/combined_avoid/` (common3, c1_fetch_screener, c2_fetch_bse, c2b_june2025, c3_flags,
+c4_analyze, c5_posthoc). Outputs: `research_notes/Backtests/combined_avoid_outputs/` (results.json, tables.md,
+events_flags.tsv, c3_coverage.json, posthoc_A_over_C.json). Caches: scratchpad `bt_comb/` (sc/, shp/, status_sc.json).

@@ -254,3 +254,11 @@ overvalued (L21). A gate that never opens can't be tested. **Next:** add cash-ta
 build real US/India 5-year base-rate classes from the survivorship-free panels, reconcile the PEAD avoid rule
 (bottom-two quintiles for India; US uncalibrated), then re-run all 6 cards to see which, if any, open — without
 changing the hurdle just to make cards open.
+
+## L35 (2026-11-23) — Red flags carry the tail risk; earnings misses carry the drift
+Pre-registered combined test (10,242 PEAD events, 2018–25, incl. dead firms): an earnings miss + red flag did NOT drift
+more than a miss alone (H1 not supported), but halved within 12 months 17.6% of the time vs 6.1% for clean firms
+(2.9×, H2 supported). Most of that comes from the flag itself (flag without miss: 2.5×); pledge >50% is strongest
+(3.9×); S5-India alone showed nothing. **Rule:** keep the PEAD WAIT gate; add a survival cap — bottom-two result plus
+pledge >25% or interest cover <1.5x → no new money / minimum size and a balance-sheet question
+(decision:pead-avoid-plus-redflag-survival-cap). Proposal to test: cap any red-flag firm regardless of results.

@@ -1,0 +1,143 @@
+[
+ {
+  "type": "insight",
+  "id": "insight:bt-india-combined-avoid-2026",
+  "title": "Pre-registered India test: PEAD miss + stage-2 red flag (pledge>25% / interest cover<1.5x / S5) does NOT deepen 13-week drift (H1 not supported) but nearly triples 12-month halving risk vs clean firms (H2 supported, 2.9x) - and most of that risk is the flag's own",
+  "body": "Event set = PEAD survivorship check (10,242 events, 557 firms incl. sampled dead firms, 2018-2025, weekly closes). Flags as of event: pledge from latest June-quarter BSE SHP XBRL filed before the event (<=15 months; budget rule), S2/S5-India from latest standalone screener annual ending <= event-6m. RED = B25 or S2 or S5 (known for 9,623 events). Groups: A bottom-two SUE+RED 989; B bottom-two no flag 2,861; C RED in Q3-5 1,542; D neither 4,231. 13w excess vs size-matched controls: A -1.71%, B -1.13%, C +0.56%, D +1.22%. H1 A-B = -0.58pp [-3.49,+2.58] -> NOT SUPPORTED; interaction +0.08pp. P(price<=0.5x in 12m): A 17.6%, B 8.3%, C 15.1%, D 6.1%. H2 A/D = 2.90x [2.46,3.59] -> SUPPORTED. But C/D = 2.49x and A/C = 1.16x [0.93,1.45] (post-hoc): the flag carries the tail risk, the miss adds little. Pledge>50%: A halves 29.1%, A/D 3.91x. S5-India alone: no signal (1.05x). All sensitivities (unknown-as-clean, live-only, no financials, 2018-21, 2022-25, 26w) give the same verdicts. Decision card (pre-registered branch): keep PEAD WAIT gate unchanged; add survival cap - bottom-two SUE + pledge>25% or ICR<1.5x => no new money / minimum size + balance-sheet question. A broader 'any red-flag firm' cap is suggested by C but NOT pre-registered -> future test. Research, not SEBI-registered advice.",
+  "tickers": [],
+  "tags": [
+   "backtest",
+   "pead",
+   "pledge",
+   "solvency",
+   "stage-2",
+   "stage-3",
+   "stage-6",
+   "india",
+   "survivorship-free",
+   "pre-registered",
+   "avoid-leg",
+   "tail-risk"
+  ],
+  "date": "2026-11-23",
+  "confidence": "single-source",
+  "data": {
+   "events": 10242,
+   "firms": 557,
+   "red_known": 9623,
+   "red_fired": 2531,
+   "n": {
+    "A": 989,
+    "B": 2861,
+    "C": 1542,
+    "D": 4231
+   },
+   "excess13": {
+    "A": -0.0171,
+    "B": -0.0113,
+    "C": 0.0056,
+    "D": 0.0122
+   },
+   "H1_A_minus_B": {
+    "pp": -0.58,
+    "ci": [
+     -3.49,
+     2.58
+    ],
+    "t": -0.37,
+    "verdict": "not supported"
+   },
+   "interaction_pp": 0.08,
+   "B_minus_D_pp": {
+    "pp": -2.35,
+    "ci": [
+     -3.25,
+     -1.41
+    ]
+   },
+   "halve12": {
+    "A": 0.176,
+    "B": 0.083,
+    "C": 0.151,
+    "D": 0.061
+   },
+   "H2_A_over_D": {
+    "ratio": 2.9,
+    "ci": [
+     2.46,
+     3.59
+    ],
+    "verdict": "supported"
+   },
+   "C_over_D": {
+    "ratio": 2.49,
+    "ci": [
+     2.08,
+     3.07
+    ]
+   },
+   "A_over_C_posthoc": {
+    "ratio": 1.16,
+    "ci": [
+     0.93,
+     1.45
+    ]
+   },
+   "B50": {
+    "A_halve": 0.291,
+    "A_over_D": 3.91,
+    "ci": [
+     2.91,
+     5.14
+    ]
+   },
+   "S5_only_A_over_D": 1.05,
+   "pledge_method": "latest June-quarter BSE SHP XBRL filed before event, <=15 months old"
+  },
+  "links": [
+   {
+    "to": "insight:bt-india-pead-survivorship-2026",
+    "rel": "builds_on"
+   },
+   {
+    "to": "insight:bt-solvency-india-2026-summary",
+    "rel": "related"
+   }
+  ],
+  "sources": [
+   "research_notes/Backtests/combined_avoid_india.md",
+   "research_notes/Backtests/combined_avoid_outputs/tables.md",
+   "https://www.bseindia.com/",
+   "https://www.screener.in/"
+  ]
+ },
+ {
+  "type": "decision",
+  "id": "decision:pead-avoid-plus-redflag-survival-cap",
+  "title": "Decision card: keep PEAD avoid gate unchanged; add survival cap when a bottom-two SUE result coincides with pledge>25% or interest cover<1.5x (no new money / minimum size)",
+  "body": "From the pre-registered combined-avoid test (insight:bt-india-combined-avoid-2026), branch 'H1 not supported, H2 supported'. The red flag does not deepen 13-week drift after a miss, so no EXIT escalation. It roughly triples 12-month halving risk (17.6% vs 6.1%; 29% with pledge>50%), so the combination caps the position size and blocks new money, and a balance-sheet deep-dive question is opened. S5-India is not a trigger (no signal). Open question for a future pre-registered test: apply the cap to any red-flag firm regardless of earnings (C halves 15.1%, 2.5x base). Research, not SEBI-registered advice.",
+  "tags": [
+   "decision-card",
+   "stage-6",
+   "pead",
+   "pledge",
+   "solvency",
+   "india",
+   "tail-risk"
+  ],
+  "date": "2026-11-23",
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "insight:bt-india-combined-avoid-2026",
+    "rel": "based_on"
+   }
+  ],
+  "sources": [
+   "research_notes/Backtests/combined_avoid_india.md",
+   "research_notes/Backtests/combined_avoid_outputs/tables.md",
+   "https://www.bseindia.com/",
+   "https://www.screener.in/"
+  ]
+ }
+]

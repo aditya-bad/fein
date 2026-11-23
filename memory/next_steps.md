@@ -32,5 +32,9 @@ Last updated: 2026-11-19
 - Text-change ("lazy prices") diff of annual reports/concalls year over year.
 - Weekly change detectors: pledge, SAST, insider (PIT), bulk/block, auditor/CFO exits, rating actions.
 
+## Pending implementation
+- decision_card.py: add the survival cap (decision:pead-avoid-plus-redflag-survival-cap) after the calibration task lands.
+- Pre-register: survival cap for any red-flag firm regardless of earnings (group C showed 2.5× halving risk).
+
 ## Dated reminders
 - Feb 2027: Q3 FY27 results — re-check all watchlist kill criteria.
