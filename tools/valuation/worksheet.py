@@ -20,6 +20,9 @@ Model (deliberately simple and transparent, so every number can be re-derived by
   equity    = PV(FCF) + PV(TV) + PV(recurring non-operating income) + non-operating assets - net debt
   EPS_t     = EPS_0 * (NOPAT_t + OI_t) / (NOPAT_0 + OI_0)
   5-yr multiple = (EPS_5 * exit P/E + cumulative distributed FCF per share) / price
+  v1.3 optional: cash tax (FCF_t += NOPAT_t * (t_book - t_cash,t) / (1 - t_book); EPS stays on book tax),
+  a reinvestment-realism check (ROIIC used / implied by price vs the last-5y incremental ROIC), and an
+  exit-multiple bet table (exit P/E used vs DCF-consistent P/E vs own median; 5-yr EV under each).
 
 Usage:
   python3 worksheet.py input.json                 # Markdown to stdout
@@ -37,7 +40,7 @@ import math
 import os
 import sys
 
-VERSION = "1.2 (2026-11-23; non_operating_growth adds non-operating value to the 5-year multiple; 1.1 added bank mode)"
+VERSION = "1.3 (2026-11-23; cash-tax input, reinvestment-realism check, exit-multiple bet line; 1.2 non-operating growth; 1.1 bank mode)"
 
 MARKET_DEFAULTS = {
     # cost of equity, terminal growth, hurdle CAGR (what an index fund is assumed to earn)
@@ -77,9 +80,15 @@ TEMPLATE = {
     "base": {"fy": "FY26", "revenue": 1000.0, "ebitda": 150.0, "ebit": 120.0, "pat": 90.0, "fcf": 60.0,
              "eps": None, "eps_normalised": None, "eps_forward": None, "pe_trailing": None, "sbc": 0.0},
     "tax_rate": 0.25,
+    "# cash_tax_rate": "v1.3 optional: cash tax rate when it differs from book tax (accelerated/bonus depreciation). "
+                       "Or give deferred_tax_share (deferred tax / total tax expense). cash_tax_rate_end = rate in "
+                       "year N and the terminal value (default: same as cash_tax_rate)",
     "nopat_margin": None,
     "# nopat_margin": "if null: (ebit - sbc_if_not_expensed) * (1 - tax) / revenue",
     "roiic": 0.25, "terminal_roic": None,
+    "# incremental_roic_5y": "v1.3 optional: company's last-5y incremental ROIC (dNOPAT / dInvested capital), or give "
+                             "roic_history [{fy, nopat, invested_capital}] and the worksheet derives it; >5 pts gap "
+                             "to the ROIIC used or implied is flagged",
     "years": 10, "coe": None, "terminal_growth": None, "hurdle_cagr": None,
     "payout_of_fcf": 0.0,
     "dispersion": 0.30,
@@ -166,6 +175,8 @@ def normalise(d):
     d["years"] = int(d.get("years", 10))
     if d["years"] < 5:
         raise ValueError("years must be >= 5 (the 5-year outcome is read from the projection)")
+    _cash_tax(d)
+    _roic_history(d)
     d["roiic"] = _num(d.get("roiic", 0.25), "roiic")
     d["terminal_roic"] = _num(d.get("terminal_roic"), "terminal_roic") or d["roiic"]
     d["payout_of_fcf"] = _num(d.get("payout_of_fcf", 0.0), "payout_of_fcf") or 0.0
@@ -219,6 +230,44 @@ def normalise(d):
     return d
 
 
+def _cash_tax(d):
+    """v1.3 (Kirby lesson, L34): cash tax below book tax (bonus depreciation, deferred tax). None = old behaviour."""
+    ct = _num(d.get("cash_tax_rate"), "cash_tax_rate")
+    share = _num(d.get("deferred_tax_share"), "deferred_tax_share")
+    if ct is None and share is not None:
+        ct = d["tax_rate"] * (1 - share)
+        d["_cash_tax_method"] = "tax_rate x (1 - deferred_tax_share %.2f)" % share
+    elif ct is not None:
+        d["_cash_tax_method"] = "given"
+    d["cash_tax_rate"] = ct
+    if ct is None:
+        d["cash_tax_rate_end"] = None
+        return
+    if not (-0.5 < ct < 0.9) or d["tax_rate"] >= 0.99:
+        raise ValueError("cash_tax_rate must be a fraction and tax_rate < 1")
+    ce = _num(d.get("cash_tax_rate_end"), "cash_tax_rate_end")
+    d["cash_tax_rate_end"] = ct if ce is None else ce
+
+
+def _roic_history(d):
+    """v1.3: last-5y incremental ROIC, given or derived from roic_history (first vs last of the last 6 points)."""
+    h = _num(d.get("incremental_roic_5y"), "incremental_roic_5y")
+    d["_inc_roic_method"] = "given" if h is not None else None
+    hist = d.get("roic_history") or []
+    if h is None and len(hist) >= 2:
+        pts = [p for p in hist if p.get("nopat") is not None and p.get("invested_capital") is not None][-6:]
+        if len(pts) >= 2:
+            dn = float(pts[-1]["nopat"]) - float(pts[0]["nopat"])
+            dic = float(pts[-1]["invested_capital"]) - float(pts[0]["invested_capital"])
+            if dic > 0:
+                h = dn / dic
+                d["_inc_roic_method"] = "dNOPAT / dIC, %s -> %s (roic_history)" % (pts[0].get("fy"), pts[-1].get("fy"))
+            else:
+                d["_warnings"].append("roic_history: invested capital did not grow over the window, so incremental "
+                                      "ROIC is undefined (no realism check)")
+    d["incremental_roic_5y"] = h
+
+
 def _fill_case(c, d):
     c = dict(c)
     c["name"] = str(c.get("name", "base"))
@@ -255,6 +304,9 @@ def project(d, g_start, g_end, m_end, roiic=None, coe=None, tg=None, years=None)
     m0 = d["nopat_margin"]
     oi0 = d["other_income_recurring_post_tax"]
     nopat0 = rev0 * m0
+    tb = d["tax_rate"]
+    ct0 = d.get("cash_tax_rate")
+    ct_end = d.get("cash_tax_rate_end")
     rows = []
     rev = rev0
     pv = 0.0
@@ -266,6 +318,11 @@ def project(d, g_start, g_end, m_end, roiic=None, coe=None, tg=None, years=None)
         nopat = rev * m
         reinv_rate = g / roiic if roiic else 0.0
         fcf = nopat * (1 - reinv_rate)
+        tax_shield = 0.0
+        if ct0 is not None:   # v1.3: deferred (cash < book) tax adds to FCF; NOPAT/EPS stay on book tax
+            ct = ct0 + (ct_end - ct0) * (t - 1) / (n - 1) if n > 1 else ct0
+            tax_shield = nopat * (tb - ct) / (1 - tb)
+            fcf += tax_shield
         oi = oi0 * (1 + tg) ** t
         disc = (1 + r) ** t
         pv += fcf / disc
@@ -276,10 +333,16 @@ def project(d, g_start, g_end, m_end, roiic=None, coe=None, tg=None, years=None)
             eps = (d["base"]["eps"] - tre_ps) * (nopat + oi) / denom + tre_ps
         if t <= 5:
             cum_dist += max(fcf, 0.0) * d["payout_of_fcf"]
-        rows.append({"t": t, "g": g, "revenue": rev, "margin": m, "nopat": nopat, "reinv_rate": reinv_rate,
-                     "fcf": fcf, "eps": eps})
+        row = {"t": t, "g": g, "revenue": rev, "margin": m, "nopat": nopat, "reinv_rate": reinv_rate,
+               "fcf": fcf, "eps": eps}
+        if ct0 is not None:
+            row["tax_shield"] = tax_shield
+        rows.append(row)
     nopat_n1 = rows[-1]["nopat"] * (1 + tg)
-    tv = nopat_n1 * (1 - tg / troic) / (r - tg)
+    if ct0 is None:
+        tv = nopat_n1 * (1 - tg / troic) / (r - tg)
+    else:
+        tv = nopat_n1 * ((1 - tg / troic) + (tb - ct_end) / (1 - tb)) / (r - tg)
     pv_tv = tv / (1 + r) ** n
     pv_oi = oi0 * (1 + tg) / (r - tg) if oi0 else 0.0
     ev = pv + pv_tv
@@ -361,6 +424,14 @@ def reverse_dcf(d):
     out["implied_coe_base"] = _solve(
         lambda r: -project(d, bc["growth"], bc["growth_end"], bc["margin_end"], roiic=bc["roiic"], coe=r)["value_ps"],
         d["terminal_growth"] + 0.011, 0.40, -price)
+    # v1.3: ROIIC the price implies on the base-case growth and margin path (only with a realism history)
+    if d.get("incremental_roic_5y") is not None:
+        if min(bc["growth"], bc["growth_end"]) > 0:
+            out["roiic_implied_base"] = _solve(
+                lambda x: project(d, bc["growth"], bc["growth_end"], bc["margin_end"], roiic=x)["value_ps"],
+                0.01, 3.0, price, steps=300)
+        else:
+            out["roiic_implied_base"] = None
     # Gordon sanity check on trailing FCF: price = FCF*(1+g)/(r-g) -> g = (P*r - F)/(P + F)
     fcf = d["base"].get("fcf")
     mcap = price * d["shares"]
@@ -445,7 +516,34 @@ def scenario_analysis(d):
                 hi = mid
         out["median_mult5"] = math.sqrt(lo * hi)
         out["hurdle_mult5"] = (1 + d["hurdle_cagr"]) ** 5
+        out["exit_bet"] = exit_bet(d, res, bl)
     return out
+
+
+def exit_bet(d, res, bl):
+    """v1.3 (L21): make the exit multiple visible as a bet. For each scenario: the exit P/E used, the P/E the DCF
+    itself justifies at year 5, and the stock's own median P/E (n >= MIN_HISTORY_POINTS); then the EV of the 5-year
+    multiple if every scenario exited at each of the three. Display only: the card's gate still uses the stated exit."""
+    price = d["price"]
+    hist = [p["pe"] for p in (d.get("pe_history") or []) if p.get("pe")]
+    own = _median(hist) if len(hist) >= MIN_HISTORY_POINTS else None
+    rows = []
+    for r in res:
+        def m(pe):
+            if not pe or not r["eps5"]:
+                return None
+            return (r["eps5"] * pe + r["dist_ps_5y"] + r["nonop5_ps"]) / price
+        rows.append({"name": r["name"], "prob": r["prob"], "exit_pe": r["exit_pe"], "dcf_pe5": r["dcf_pe5"],
+                     "own_median": own, "mult_stated": r["mult5"], "mult_dcf": m(r["dcf_pe5"]), "mult_own": m(own),
+                     "stated_vs_dcf": (r["exit_pe"] / r["dcf_pe5"]) if r["exit_pe"] and r["dcf_pe5"] and r["dcf_pe5"] > 0 else None,
+                     "stated_vs_own": (r["exit_pe"] / own) if r["exit_pe"] and own else None})
+
+    def ev(key):
+        if any(x[key] is None for x in rows):
+            return None
+        return sum(x["prob"] * x[key] for x in rows) + bl["prob"] * bl["multiple"]
+    return {"own_median": own, "n_hist": len(hist), "rows": rows, "ev_stated": ev("mult_stated"),
+            "ev_dcf": ev("mult_dcf"), "ev_own": ev("mult_own"), "hurdle": (1 + d["hurdle_cagr"]) ** 5}
 
 
 def twin_engine(d):
@@ -582,10 +680,32 @@ def run(d):
             "ev_sales": ev_mkt / b["revenue"]}
     bc = d["base_case"]
     base = project(d, bc["growth"], bc["growth_end"], bc["margin_end"], roiic=bc["roiic"])
-    return {"input": d, "snapshot": snap, "base": base, "reverse": reverse_dcf(d),
-            "scenarios": scenario_analysis(d), "twin": twin_engine(d), "temperature": temperature(d),
-            "sensitivity": sensitivity(d), "version": VERSION,
-            "generated": _dt.date.today().isoformat()}
+    rv = reverse_dcf(d)
+    out = {"input": d, "snapshot": snap, "base": base, "reverse": rv,
+           "scenarios": scenario_analysis(d), "twin": twin_engine(d), "temperature": temperature(d),
+           "sensitivity": sensitivity(d), "version": VERSION,
+           "generated": _dt.date.today().isoformat()}
+    if d.get("incremental_roic_5y") is not None:
+        out["realism"] = realism(d, rv)
+    return out
+
+
+REALISM_GAP = 0.05   # v1.3: ROIIC used/implied this far (either way) from the last-5y incremental ROIC is flagged
+
+
+def realism(d, rv):
+    """v1.3: compare each ROIIC the worksheet uses (and the one the price implies) with what the company earned on
+    its incremental capital over the last ~5 years."""
+    h = d["incremental_roic_5y"]
+    items = [("default ROIIC (input)", d["roiic"])]
+    items += [("scenario %s" % s["name"], s["roiic"]) for s in d["scenarios"]]
+    items.append(("implied by price on the base-case path", rv.get("roiic_implied_base")))
+    rows = []
+    for label, x in items:
+        gap = (x - h) if x is not None else None
+        rows.append({"label": label, "roiic": x, "gap": gap, "flag": gap is not None and abs(gap) > REALISM_GAP})
+    return {"history": h, "method": d.get("_inc_roic_method"), "rows": rows,
+            "flagged": [r["label"] for r in rows if r["flag"]]}
 
 
 # ----------------------------------------------------------------------------- markdown
@@ -628,6 +748,11 @@ def render(res, heading_level=2):
              "terminal growth %s, %d-year explicit period, ROIIC %s, terminal ROIC %s.*"
              % (res["version"], u, cur, pct(d["coe"]), MARKET_DEFAULTS[d["market"]]["coe_range"],
                 pct(d["terminal_growth"]), d["years"], pct(d["roiic"], 0), pct(d["terminal_roic"], 0)))
+    if d.get("cash_tax_rate") is not None:
+        L.append("*Cash tax (v1.3): %s in year 1 → %s in year %d and the terminal value, vs book tax %s (%s). FCF adds "
+                 "NOPAT × (book − cash) ÷ (1 − book); EPS stays on book tax.*"
+                 % (pct(d["cash_tax_rate"]), pct(d["cash_tax_rate_end"]), d["years"], pct(d["tax_rate"]),
+                    d.get("_cash_tax_method")))
     L.append("")
     for w in d.get("_warnings", []):
         L.append("> Warning: %s" % w)
@@ -659,6 +784,9 @@ def render(res, heading_level=2):
              % (d["years"], pct(d["base_case"]["growth"]), pct(d["base_case"]["growth_end"]),
                 _na(rv["m_needed_base_growth"], RANGES["m"])))
     L.append("| Gordon check: perpetual FCF growth implied by trailing FCF yield | %s |" % pct(rv["gordon_g_on_fcf"]))
+    if rv.get("roiic_implied_base") is not None or "roiic_implied_base" in rv:
+        L.append("| ROIIC the price implies on the base-case growth and margin path | %s |"
+                 % _na(rv.get("roiic_implied_base"), (0.01, 3.0)))
     L.append("| Expected return (IRR) the price offers if the base case happens | %s (vs cost of equity %s) |"
              % (_na(rv["implied_coe_base"], (d["terminal_growth"] + 0.011, 0.40)), pct(d["coe"])))
     L.append("")
@@ -687,6 +815,25 @@ def render(res, heading_level=2):
                  "consensus number." % (num(last["revenue"]), u, d["years"], last["revenue"] / b["revenue"],
                                         pct(p["tv_share"], 0)))
         L.append("")
+
+    if res.get("realism"):
+        rz = res["realism"]
+        L.append("Reinvestment realism (v1.3): last-5y incremental ROIC **%s** (%s). Flag when a ROIIC used or implied "
+                 "differs by more than %s:" % (pct(rz["history"]), rz["method"], pct(REALISM_GAP, 0)))
+        L.append("")
+        L.append("| ROIIC | Value | Gap vs history | Flag |")
+        L.append("|---|---|---|---|")
+        for r in rz["rows"]:
+            L.append("| %s | %s | %s | %s |" % (r["label"], pct(r["roiic"]) if r["roiic"] is not None else
+                                                 "none in tested range 1-300%",
+                                                 ("%+.1f pts" % (100 * r["gap"])) if r["gap"] is not None else "n/a",
+                                                 "**FLAG**" if r["flag"] else "ok"))
+        L.append("")
+        if rz["flagged"]:
+            L.append("> **Reinvestment-realism flag:** %s. Either the business will earn on new capital what it has "
+                     "not earned recently, or the path is mis-specified (e.g. pricing-led growth that needs little "
+                     "capital). Say which in the deep dive." % "; ".join(rz["flagged"]))
+            L.append("")
 
     # (b) scenarios
     sc = res["scenarios"]
@@ -730,6 +877,26 @@ def render(res, heading_level=2):
                          "Those 5-year multiples assume the market keeps paying more than this worksheet's own cost of "
                          "equity justifies. Show the card both ways (set `exit_pe` to \"dcf\" to test)."
                          % ", ".join(r["name"] for r in gap))
+                L.append("")
+            eb = sc.get("exit_bet")
+            if eb:
+                L.append("**Exit-multiple bet (v1.3, L21).** The 5-year multiple is a bet on the P/E the market pays in "
+                         "year 5. Own median P/E: %s." % ("%s (n=%d)" % (num(eb["own_median"]), eb["n_hist"])
+                                                         if eb["own_median"] else
+                                                         "n/a (n=%d < %d)" % (eb["n_hist"], MIN_HISTORY_POINTS)))
+                L.append("")
+                L.append("| Scenario | Exit P/E used | DCF-consistent P/E yr5 | Own median P/E | Used ÷ DCF | Used ÷ own | "
+                         "5-yr multiple at used | at DCF P/E | at own median |")
+                L.append("|---|---|---|---|---|---|---|---|---|")
+                for x in eb["rows"]:
+                    L.append("| %s | %s | %s | %s | %s | %s | %s | %s | %s |" % (
+                        x["name"], num(x["exit_pe"]), num(x["dcf_pe5"]), num(x["own_median"]), mult(x["stated_vs_dcf"]),
+                        mult(x["stated_vs_own"]), mult(x["mult_stated"]), mult(x["mult_dcf"]), mult(x["mult_own"])))
+                L.append("| **EV (incl. blow-up)** | | | | | | **%s** | **%s** | **%s** |"
+                         % (mult(eb["ev_stated"]), mult(eb["ev_dcf"]), mult(eb["ev_own"])))
+                L.append("")
+                L.append("Hurdle %s. The card's gate uses the stated exit; the other two columns show how much of the "
+                         "answer is the multiple bet." % mult(eb["hurdle"]))
                 L.append("")
             L.append("Base rates for these probabilities live in the decision card (stage 6), not here.")
             L.append("")
