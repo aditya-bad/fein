@@ -39,7 +39,10 @@ def pledge_at(code, ev):
         if fd < ev and (ev - qe).days <= 456 and (best is None or fd > best[0]): best = (fd, x)
     if not best: return None, "no_june_shp_in_window", None
     u = best[1].get("xbrlurl") or ""
-    if not u.endswith(".xml"): return None, "no_xml", best[0]
+    if not u.endswith(".xml"):                       # D1: June-2025 listed as HTML; XBRL fetched by name (c2b)
+        nm = best[1].get("XbrlFile") or ""
+        if not (nm.endswith(".xml") and find(code, nm)): return None, "no_xml", best[0]
+        u = nm
     p = find(code, os.path.basename(u))
     if not p or not os.path.exists(p): return None, "xml_not_fetched", best[0]
     v, s = pledge_from(p)
