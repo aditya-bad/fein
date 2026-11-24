@@ -1,0 +1,839 @@
+{
+ "input": {
+  "company": "Indraprastha Medical Corporation Ltd (Indraprastha Apollo Hospitals, Sarita Vihar)",
+  "ticker": "INDRAMEDCO",
+  "market": "india",
+  "practice": false,
+  "currency": "INR",
+  "units": "INR cr",
+  "as_of": "2026-11-23",
+  "price": 355.85,
+  "shares": 9.1673,
+  "net_debt": -521.4,
+  "non_operating_value": 0.0,
+  "other_income_recurring_post_tax": 0.0,
+  "treasury_income_post_tax": 23.0,
+  "base": {
+   "fy": "TTM Sep-2026",
+   "revenue": 1556.0,
+   "ebitda": 280.0,
+   "ebit": 233.0,
+   "pat": 192.0,
+   "fcf": 115.0,
+   "eps": 20.95,
+   "eps_normalised": null,
+   "eps_forward": null,
+   "pe_trailing": 17.0,
+   "sbc": 0.0
+  },
+  "tax_rate": 0.25,
+  "roiic": 0.3,
+  "terminal_roic": 0.25,
+  "incremental_roic_5y": 0.4,
+  "years": 10,
+  "coe": 0.125,
+  "terminal_growth": 0.05,
+  "payout_of_fcf": 0.35,
+  "dispersion": 0.3,
+  "base_case": {
+   "name": "base",
+   "growth": 0.09,
+   "growth_end": 0.07,
+   "margin_end": 0.1,
+   "roiic": 0.3,
+   "exit_pe": 20.0,
+   "prob": 0.0
+  },
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.2,
+    "growth": -0.08,
+    "growth_end": 0.05,
+    "margin_end": 0.05,
+    "roiic": 0.15,
+    "exit_pe": 14.0
+   },
+   {
+    "name": "base",
+    "prob": 0.45,
+    "growth": 0.09,
+    "growth_end": 0.07,
+    "margin_end": 0.1,
+    "roiic": 0.3,
+    "exit_pe": 20.0
+   },
+   {
+    "name": "bull",
+    "prob": 0.15,
+    "growth": 0.11,
+    "growth_end": 0.08,
+    "margin_end": 0.12,
+    "roiic": 0.35,
+    "exit_pe": 28.0
+   }
+  ],
+  "blowup": {
+   "prob": 0.2,
+   "multiple": 0.25,
+   "note": "Lease not renewed / hospital handed to GNCTD or AIIMS (SC 25-Mar-2025 warning; GNCTD affidavit 27-Jan-2026): IMCL keeps ~Rs 521 cr net cash (Rs 57/share) plus uncertain compensation for a building whose ownership 'will be decided at a future date' (net book Rs 127 cr) and equipment; ~0.2-0.3x of Rs 356"
+  },
+  "twin_engine": {
+   "targets": [
+    2,
+    3,
+    5
+   ],
+   "horizon": 5,
+   "exit_pes": null,
+   "hist_eps_cagr": 0.224,
+   "hist_eps_note": "FY16 2.66 -> FY26 20.03 = 22.4%/yr [SCR]; driven by OPM 10% -> 18% and ARPP, from a low base; not repeatable at the same rate"
+  },
+  "pe_history": [
+   {
+    "date": "FY17",
+    "pe": 18.6
+   },
+   {
+    "date": "FY18",
+    "pe": 21.1
+   },
+   {
+    "date": "FY19",
+    "pe": 12.4
+   },
+   {
+    "date": "FY20",
+    "pe": 7.1
+   },
+   {
+    "date": "FY21",
+    "pe": 214.8
+   },
+   {
+    "date": "FY22",
+    "pe": 9.1
+   },
+   {
+    "date": "FY23",
+    "pe": 8.2
+   },
+   {
+    "date": "FY24",
+    "pe": 12.7
+   },
+   {
+    "date": "FY25",
+    "pe": 22.0
+   },
+   {
+    "date": "FY26",
+    "pe": 18.6
+   }
+  ],
+  "sector_pes": {
+   "Artemis Medicare": 44.3,
+   "Shalby": 33.3,
+   "Yatharth Hospital": 54.9,
+   "Jupiter Life Line": 51.3,
+   "Narayana Hrudayalaya": 44.6,
+   "Apollo Hospitals": 58.8
+  },
+  "market_pe": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)"
+  },
+  "notes": [
+   "Price Rs 355.85 = NSE bhavcopy close 23-Nov-2026; screener.in 24-Nov-2026 shows Rs 356 / mcap Rs 3,262 cr (second source). Yahoo v8 has no bar after 18-Nov-2026 (Rs 358.00). Shares 9,16,73,000 [AR26 n.30.M; NSE pledge API totIssuedShares].",
+   "Net cash 521.4 at 30-Sep-2026 [Q2FY27 XBRL]: cash 6.48 + other bank balances 196.85 + current investments 142.16 + non-current investments 210.90 = 556.4, less lease liabilities ~35 (screener borrowings Sep-2026 35). No bank debt ('There are no Loans and Debt Securities').",
+   "Treasury income post-tax 23 [EST]: TTM other income 31 x 0.75; FY26 interest income 27.61 + MF gains 1.14 [AR26 n.23].",
+   "Base = TTM Q3FY26..Q2FY27 [SCR quarterly; Q2FY27 XBRL revenue 412.85 / PAT 53.58 / EPS 5.84 agree]: revenue 372+365+406+413 = 1,556; EBITDA (ex other income) 62+61+80+77 = 280; D&A 46 -> EBIT 233 (incl. ~3 lease interest in finance cost ignored); PAT 192; EPS 20.95.",
+   "FCF 115 [EST]: FY26 CFO 167 - capex ~59 [SCR FCF 108]; FY25 120; FY24 131.",
+   "eps_normalised not used: not a cyclical (FY20-21 COVID dip only). 10-yr mean EPS Rs 8.02 would give 44x but EPS has grown structurally (OPM 10% -> 18%).",
+   "ROIIC: invested capital ex cash is only ~Rs 220-320 cr because the land is leased from GNCTD at Re 1/month (Rs 12/yr, AR26 n.30.D) and GNCTD funded Rs 15.48 cr of the building; ROIC ~50%+ is partly a land subsidy whose price is the free-treatment obligation. incremental_roic_5y 0.40 [EST]; base roiic 0.30, terminal 0.25 assume part of the subsidy is clawed back.",
+   "Scenarios (5-yr, legal outcome; written before outputs): blow-up 20% = non-renewal/handover; bear 20% = renewal with enforced EWS (33% IPD / 40% OPD free incl. medicines) and/or market lease rent -> revenue down, NOPAT margin to 5%; base 45% = litigation continues or renewal on IMCL's own ask (10% IPD / 25% OPD incl. medicines), revenue +9%/yr (TTM +11%, ARPP-led), NOPAT margin 11.2% -> 10%; bull 15% = 30-year renewal on near-current terms and a re-rating toward (but below) peers.",
+   "Exit P/Es 14/20/28 [EST]: own FY-end median 15.6 (FY17-26, includes FY20-23 single-digit years when the lease dispute was dormant and margins 10-14%); peers 33-59x [SCR 24-Nov-2026]; the discount to peers is the lease risk, so a bull exit below peers.",
+   "Dispersion 0.30."
+  ],
+  "sources": [
+   "research_notes/Deep dives/INDRAMEDCO_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_30962_INDRAMEDCO_2025_2026_A_5876360_01092026125250.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1748879_29102026043325_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/INDRAMEDCO_09022026115023_IMCLUPDATE09022026.pdf",
+   "https://www.screener.in/company/INDRAMEDCO/",
+   "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_23112026.csv"
+  ],
+  "_warnings": [],
+  "non_operating_growth": null,
+  "hurdle_cagr": 0.12,
+  "cash_tax_rate": null,
+  "cash_tax_rate_end": null,
+  "_inc_roic_method": "given",
+  "nopat_margin": 0.11230719794344474,
+  "_nopat_margin_method": "base.ebit x (1 - tax) / revenue",
+  "_eps_method": "given"
+ },
+ "snapshot": {
+  "mcap": 3262.183705,
+  "ev": 2740.783705,
+  "pe": 17.0,
+  "ev_ebitda": 9.788513232142856,
+  "p_fcf": 28.366814826086955,
+  "fcf_yield": 0.035252459824300426,
+  "ev_sales": 1.7614291163239073
+ },
+ "base": {
+  "rows": [
+   {
+    "t": 1,
+    "g": 0.09,
+    "revenue": 1696.0400000000002,
+    "margin": 0.11107647814910027,
+    "nopat": 188.39015000000003,
+    "reinv_rate": 0.3,
+    "fcf": 131.873105,
+    "eps": 22.389422778633932
+   },
+   {
+    "t": 2,
+    "g": 0.08777777777777777,
+    "revenue": 1844.9146222222223,
+    "margin": 0.1098457583547558,
+    "nopat": 202.65604577777782,
+    "reinv_rate": 0.29259259259259257,
+    "fcf": 143.3603879390947,
+    "eps": 23.89487948843191
+   },
+   {
+    "t": 3,
+    "g": 0.08555555555555555,
+    "revenue": 2002.7573176790124,
+    "margin": 0.10861503856041131,
+    "nopat": 217.52956328685187,
+    "reinv_rate": 0.2851851851851852,
+    "fcf": 155.49335449763856,
+    "eps": 25.464457528334098
+   },
+   {
+    "t": 4,
+    "g": 0.08333333333333333,
+    "revenue": 2169.65376081893,
+    "margin": 0.10738431876606684,
+    "nopat": 232.98679106377574,
+    "reinv_rate": 0.2777777777777778,
+    "fcf": 168.2682379905047,
+    "eps": 27.0956335606092
+   },
+   {
+    "t": 5,
+    "g": 0.0811111111111111,
+    "revenue": 2345.6367880853545,
+    "margin": 0.10615359897172237,
+    "nopat": 248.99778693573165,
+    "reinv_rate": 0.27037037037037037,
+    "fcf": 181.6761630605153,
+    "eps": 28.78524783660376
+   },
+   {
+    "t": 6,
+    "g": 0.0788888888888889,
+    "revenue": 2530.68146803431,
+    "margin": 0.1049228791773779,
+    "nopat": 265.52638590699326,
+    "reinv_rate": 0.262962962962963,
+    "fcf": 195.70278072404315,
+    "eps": 30.529483923313894
+   },
+   {
+    "t": 7,
+    "g": 0.07666666666666667,
+    "revenue": 2724.700380583607,
+    "margin": 0.10369215938303343,
+    "nopat": 282.53006613448724,
+    "reinv_rate": 0.2555555555555556,
+    "fcf": 210.3279381223405,
+    "eps": 32.323854560004996
+   },
+   {
+    "t": 8,
+    "g": 0.07444444444444445,
+    "revenue": 2927.5391866937202,
+    "margin": 0.10246143958868895,
+    "nopat": 299.95987952093816,
+    "reinv_rate": 0.24814814814814817,
+    "fcf": 225.52539089907572,
+    "eps": 34.16319433381951
+   },
+   {
+    "t": 9,
+    "g": 0.07222222222222223,
+    "revenue": 3138.972572399378,
+    "margin": 0.10123071979434448,
+    "nopat": 317.7604529186941,
+    "reinv_rate": 0.24074074074074078,
+    "fcf": 241.2625661049344,
+    "eps": 36.041659806814685
+   },
+   {
+    "t": 10,
+    "g": 0.07,
+    "revenue": 3358.7006524673347,
+    "margin": 0.1,
+    "nopat": 335.8700652467335,
+    "reinv_rate": 0.23333333333333336,
+    "fcf": 257.500383355829,
+    "eps": 37.9527376539945
+   }
+  ],
+  "pv_fcf": 985.0988873117552,
+  "pv_tv": 1158.4147983092628,
+  "tv_share": 0.5404279926366075,
+  "pv_oi": 0.0,
+  "ev": 2143.513685621018,
+  "equity": 2664.913685621018,
+  "value_ps": 290.69777203986104,
+  "cum_dist_ps_5y": 29.805388388152856,
+  "value5_ps": 426.3401000457393,
+  "dcf_pe5": 14.811062335325762,
+  "max_reinv_rate": 0.3
+ },
+ "reverse": {
+  "g_flat_margin": 0.1100453681945801,
+  "g_base_margin": 0.12772071456909184,
+  "g_fade_start": 0.1935931491851807,
+  "m_needed_base_growth": 0.13628471755981447,
+  "implied_coe_base": 0.10940761817932128,
+  "roiic_implied_base": null,
+  "gordon_g_on_fcf": 0.07969719931047789,
+  "path_case": "fade",
+  "path": {
+   "rows": [
+    {
+     "t": 1,
+     "g": 0.1935931491851807,
+     "revenue": 1857.2309401321413,
+     "margin": 0.11107647814910027,
+     "nopat": 206.29467193942074,
+     "reinv_rate": 0.6453104972839356,
+     "fcf": 73.17055460316678,
+     "eps": 24.278857771662096
+    },
+    {
+     "t": 2,
+     "g": 0.17763835483127172,
+     "revenue": 2187.146388878951,
+     "margin": 0.1098457583547558,
+     "nopat": 240.248753719274,
+     "reinv_rate": 0.5921278494375725,
+     "fcf": 97.9907758494233,
+     "eps": 27.861976633369625
+    },
+    {
+     "t": 3,
+     "g": 0.16168356047736276,
+     "revenue": 2540.772004318106,
+     "margin": 0.10861503856041131,
+     "nopat": 275.9660492222246,
+     "reinv_rate": 0.5389452015912093,
+     "fcf": 127.2354711918232,
+     "eps": 31.631164562985237
+    },
+    {
+     "t": 4,
+     "g": 0.1457287661234538,
+     "revenue": 2911.0355735083986,
+     "margin": 0.10738431876606684,
+     "nopat": 312.59957196498607,
+     "reinv_rate": 0.48576255374484606,
+     "fcf": 160.75040558772866,
+     "eps": 35.497040458597446
+    },
+    {
+     "t": 5,
+     "g": 0.12977397176954483,
+     "revenue": 3288.812221845018,
+     "margin": 0.10615359897172237,
+     "nopat": 349.1192536910353,
+     "reinv_rate": 0.4325799058984828,
+     "fcf": 198.09727978201872,
+     "eps": 39.35090289742227
+    },
+    {
+     "t": 6,
+     "g": 0.11381917741563587,
+     "revenue": 3663.1421236099077,
+     "margin": 0.1049228791773779,
+     "nopat": 384.34741844508585,
+     "reinv_rate": 0.37939725805211955,
+     "fcf": 238.52706174760965,
+     "eps": 43.06847365701431
+    },
+    {
+     "t": 7,
+     "g": 0.09786438306172691,
+     "revenue": 4021.633267604416,
+     "margin": 0.10369215938303343,
+     "nopat": 417.0118377645466,
+     "reinv_rate": 0.3262146102057564,
+     "fcf": 280.97648365699894,
+     "eps": 46.515496543073624
+    },
+    {
+     "t": 8,
+     "g": 0.08190958870781795,
+     "revenue": 4351.043594487572,
+     "margin": 0.10246143958868895,
+     "nopat": 445.8141904043403,
+     "reinv_rate": 0.2730319623593932,
+     "fcf": 324.09266715057913,
+     "eps": 49.5549618325291
+    },
+    {
+     "t": 9,
+     "g": 0.06595479435390897,
+     "revenue": 4638.015779986892,
+     "margin": 0.10123071979434448,
+     "nopat": 469.5096758256011,
+     "reinv_rate": 0.21984931451302991,
+     "fcf": 366.2882954381078,
+     "eps": 52.05550775512899
+    },
+    {
+     "t": 10,
+     "g": 0.05000000000000002,
+     "revenue": 4869.916568986237,
+     "margin": 0.1,
+     "nopat": 486.99165689862366,
+     "reinv_rate": 0.16666666666666674,
+     "fcf": 405.826380748853,
+     "eps": 53.90035269980745
+    }
+   ],
+   "pv_fcf": 1061.151009922577,
+   "pv_tv": 1679.6326924523362,
+   "tv_share": 0.6128293491372265,
+   "pv_oi": 0.0,
+   "ev": 2740.7837023749134,
+   "equity": 3262.1837023749135,
+   "value_ps": 355.84999971364675,
+   "cum_dist_ps_5y": 25.093055802139805,
+   "value5_ps": 555.33135832915,
+   "dcf_pe5": 14.11229012398411,
+   "max_reinv_rate": 0.6453104972839356
+  }
+ },
+ "scenarios": {
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.2,
+    "growth": -0.08,
+    "growth_end": 0.05,
+    "margin_end": 0.05,
+    "roiic": 0.15,
+    "exit_pe": 14.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 14.728888951508148,
+    "value_ps": 164.03570674648205,
+    "value_vs_price": -0.5390313144682253,
+    "eps5": 12.747976144954194,
+    "eps_cagr5": -0.09457716573971786,
+    "dist_ps_5y": 31.629749690725383,
+    "mult5": 0.5904212890827149,
+    "tv_share": 0.23275739470958362,
+    "nonop5_ps": 0.0
+   },
+   {
+    "name": "base",
+    "prob": 0.45,
+    "growth": 0.09,
+    "growth_end": 0.07,
+    "margin_end": 0.1,
+    "roiic": 0.3,
+    "exit_pe": 20.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 14.811062335325762,
+    "value_ps": 290.69777203986104,
+    "value_vs_price": -0.1830890205427539,
+    "eps5": 28.78524783660376,
+    "eps_cagr5": 0.06560730527239289,
+    "dist_ps_5y": 29.805388388152856,
+    "mult5": 1.7015887174939666,
+    "tv_share": 0.5404279926366075,
+    "nonop5_ps": 0.0
+   },
+   {
+    "name": "bull",
+    "prob": 0.15,
+    "growth": 0.11,
+    "growth_end": 0.08,
+    "margin_end": 0.12,
+    "roiic": 0.35,
+    "exit_pe": 28.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 16.135630886836235,
+    "value_ps": 358.1802596520837,
+    "value_vs_price": 0.0065484323509446,
+    "eps5": 33.69245383595392,
+    "eps_cagr5": 0.09968860001033009,
+    "dist_ps_5y": 32.85824394368621,
+    "mult5": 2.7434226537878206,
+    "tv_share": 0.577580060918049,
+    "nonop5_ps": 0.0
+   }
+  ],
+  "blowup": {
+   "prob": 0.2,
+   "multiple": 0.25,
+   "note": "Lease not renewed / hospital handed to GNCTD or AIIMS (SC 25-Mar-2025 warning; GNCTD affidavit 27-Jan-2026): IMCL keeps ~Rs 521 cr net cash (Rs 57/share) plus uncertain compensation for a building whose ownership 'will be decided at a future date' (net book Rs 127 cr) and equipment; ~0.2-0.3x of Rs 356"
+  },
+  "pw_value": 235.1406777150464,
+  "pw_vs_price": -0.3392140572852427,
+  "bear_value": 164.03570674648205,
+  "downside_bear": -0.5390313144682253,
+  "p_value_below_price": 0.8500000000000001,
+  "p_ge_3x": 0.07064213072377629,
+  "p_ge_2x": 0.2608815666090711,
+  "p_ge_5x": 0.003479845554340044,
+  "p_le_half": 0.2579614755708418,
+  "p_blowup": 0.2,
+  "ev_mult5": 1.345312578757001,
+  "ev_cagr5": 0.06112034299486768,
+  "median_mult5": 1.350401952785281,
+  "hurdle_mult5": 1.7623416832000007,
+  "exit_bet": {
+   "own_median": 15.65,
+   "n_hist": 10,
+   "rows": [
+    {
+     "name": "bear",
+     "prob": 0.2,
+     "exit_pe": 14.0,
+     "dcf_pe5": 14.728888951508148,
+     "own_median": 15.65,
+     "mult_stated": 0.5904212890827149,
+     "mult_dcf": 0.616533018648955,
+     "mult_own": 0.6495309157208332,
+     "stated_vs_dcf": 0.9505129712154212,
+     "stated_vs_own": 0.8945686900958466
+    },
+    {
+     "name": "base",
+     "prob": 0.45,
+     "exit_pe": 20.0,
+     "dcf_pe5": 14.811062335325762,
+     "own_median": 15.65,
+     "mult_stated": 1.7015887174939666,
+     "mult_dcf": 1.2818476561300889,
+     "mult_own": 1.3497106000590182,
+     "stated_vs_dcf": 1.350342031327364,
+     "stated_vs_own": 1.2779552715654952
+    },
+    {
+     "name": "bull",
+     "prob": 0.15,
+     "exit_pe": 28.0,
+     "dcf_pe5": 16.135630886836235,
+     "own_median": 15.65,
+     "mult_stated": 2.7434226537878206,
+     "mult_dcf": 1.6200849872485832,
+     "mult_own": 1.5741046690357314,
+     "stated_vs_dcf": 1.7352900668323388,
+     "stated_vs_own": 1.7891373801916932
+    }
+   ],
+   "ev_stated": 1.345312578757001,
+   "ev_dcf": 0.9931507970756186,
+   "ev_own": 1.0233916535260845,
+   "hurdle": 1.7623416832000007
+  }
+ },
+ "twin": {
+  "pe0": 17.0,
+  "eps0": 20.93235294117647,
+  "horizon": 5.0,
+  "exit_pes": [
+   8.5,
+   12.8,
+   15.7,
+   17.0,
+   48.0
+  ],
+  "table": [
+   {
+    "target": 2,
+    "cells": [
+     {
+      "exit_pe": 8.5,
+      "eps_cagr": 0.3195079107728942,
+      "rerating_share": -1.0
+     },
+     {
+      "exit_pe": 12.8,
+      "eps_cagr": 0.21577662574706125,
+      "rerating_share": -0.4093909361377018
+     },
+     {
+      "exit_pe": 15.7,
+      "eps_cagr": 0.1671209181396749,
+      "rerating_share": -0.11477018724607485
+     },
+     {
+      "exit_pe": 17.0,
+      "eps_cagr": 0.1486983549970351,
+      "rerating_share": 0.0
+     },
+     {
+      "exit_pe": 48.0,
+      "eps_cagr": -0.06664354376687665,
+      "rerating_share": 1.497499659470817
+     }
+    ]
+   },
+   {
+    "target": 3,
+    "cells": [
+     {
+      "exit_pe": 8.5,
+      "eps_cagr": 0.43096908110525556,
+      "rerating_share": -0.6309297535714574
+     },
+     {
+      "exit_pe": 12.8,
+      "eps_cagr": 0.3184754307046771,
+      "rerating_share": -0.25829692245174846
+     },
+     {
+      "exit_pe": 15.7,
+      "eps_cagr": 0.2657096892968174,
+      "rerating_share": -0.07241192595651602
+     },
+     {
+      "exit_pe": 17.0,
+      "eps_cagr": 0.2457309396155174,
+      "rerating_share": 0.0
+     },
+     {
+      "exit_pe": 48.0,
+      "eps_cagr": 0.012198729249942586,
+      "rerating_share": 0.944817091123264
+     }
+    ]
+   },
+   {
+    "target": 5,
+    "cells": [
+     {
+      "exit_pe": 8.5,
+      "eps_cagr": 0.5848931924611136,
+      "rerating_share": -0.43067655807339306
+     },
+     {
+      "exit_pe": 12.8,
+      "eps_cagr": 0.4602990114482932,
+      "rerating_share": -0.17631507928222967
+     },
+     {
+      "exit_pe": 15.7,
+      "eps_cagr": 0.4018574521884053,
+      "rerating_share": -0.04942882921257835
+     },
+     {
+      "exit_pe": 17.0,
+      "eps_cagr": 0.3797296614612149,
+      "rerating_share": 0.0
+     },
+     {
+      "exit_pe": 48.0,
+      "eps_cagr": 0.12107724519592478,
+      "rerating_share": 0.6449379990569697
+     }
+    ]
+   }
+  ],
+  "hist_eps_cagr": 0.224,
+  "hist_eps_note": "FY16 2.66 -> FY26 20.03 = 22.4%/yr [SCR]; driven by OPM 10% -> 18% and ARPP, from a low base; not repeatable at the same rate"
+ },
+ "temperature": {
+  "pes": {
+   "trailing (given)": 17.0
+  },
+  "n_hist": 10,
+  "own_median": 15.65,
+  "sector_median": 47.95,
+  "sector": {
+   "Artemis Medicare": 44.3,
+   "Shalby": 33.3,
+   "Yatharth Hospital": 54.9,
+   "Jupiter Life Line": 51.3,
+   "Narayana Hrudayalaya": 44.6,
+   "Apollo Hospitals": 58.8
+  },
+  "rows": [
+   {
+    "basis": "trailing (given)",
+    "pe": 17.0,
+    "vs_own": 1.0862619808306708,
+    "own_band": "NORMAL",
+    "pctile": 0.5,
+    "vs_sector": 0.35453597497393113,
+    "sector_band": "COLD"
+   }
+  ],
+  "market": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)",
+   "note": "around the long-run average"
+  }
+ },
+ "sensitivity": {
+  "coe_x_growth": {
+   "rows": [
+    [
+     0.105,
+     [
+      310.32240088943786,
+      339.4270938557868,
+      381.0476961639154,
+      429.8069782354759,
+      486.8600595960886
+     ]
+    ],
+    [
+     0.115,
+     [
+      273.5186183569755,
+      296.4368053476085,
+      328.84400090999753,
+      366.5948334708925,
+      410.5373837739043
+     ]
+    ],
+    [
+     0.125,
+     [
+      246.4079076849554,
+      264.8762355929568,
+      290.69777203986104,
+      320.5993910223849,
+      355.2153272973937
+     ]
+    ],
+    [
+     0.135,
+     [
+      225.5777815040596,
+      240.71419865465984,
+      261.6375072266961,
+      285.7167991654362,
+      313.43173274196727
+     ]
+    ],
+    [
+     0.145,
+     [
+      209.0518729306925,
+      221.61658943878797,
+      238.78582836221545,
+      258.41564361083283,
+      280.8708475796388
+     ]
+    ]
+   ],
+   "cols": [
+    -0.06,
+    -0.03,
+    0.0,
+    0.03,
+    0.06
+   ]
+  },
+  "tg_x_margin": {
+   "rows": [
+    [
+     0.04,
+     [
+      246.46093846392142,
+      263.37614025166675,
+      280.2913420394121,
+      297.2065438271575,
+      314.1217456149028
+     ]
+    ],
+    [
+     0.05,
+     [
+      254.78608246428055,
+      272.7419272520708,
+      290.69777203986104,
+      308.6536168276513,
+      326.6094616154416
+     ]
+    ],
+    [
+     0.060000000000000005,
+     [
+      265.5617201853106,
+      284.8645196882296,
+      304.16731919114864,
+      323.47011869406765,
+      342.7729181969866
+     ]
+    ]
+   ],
+   "cols": [
+    0.08,
+    0.09000000000000001,
+    0.1,
+    0.11,
+    0.12000000000000001
+   ]
+  }
+ },
+ "version": "1.3 (2026-11-23; cash-tax input, reinvestment-realism check, exit-multiple bet line; 1.2 non-operating growth; 1.1 bank mode)",
+ "generated": "2026-11-24",
+ "realism": {
+  "history": 0.4,
+  "method": "given",
+  "rows": [
+   {
+    "label": "default ROIIC (input)",
+    "roiic": 0.3,
+    "gap": -0.10000000000000003,
+    "flag": true
+   },
+   {
+    "label": "scenario bear",
+    "roiic": 0.15,
+    "gap": -0.25,
+    "flag": true
+   },
+   {
+    "label": "scenario base",
+    "roiic": 0.3,
+    "gap": -0.10000000000000003,
+    "flag": true
+   },
+   {
+    "label": "scenario bull",
+    "roiic": 0.35,
+    "gap": -0.050000000000000044,
+    "flag": true
+   },
+   {
+    "label": "implied by price on the base-case path",
+    "roiic": null,
+    "gap": null,
+    "flag": false
+   }
+  ],
+  "flagged": [
+   "default ROIIC (input)",
+   "scenario bear",
+   "scenario base",
+   "scenario bull"
+  ]
+ }
+}

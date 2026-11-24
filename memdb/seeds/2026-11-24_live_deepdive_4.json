@@ -1,0 +1,807 @@
+[
+ {
+  "type": "analysis",
+  "id": "analysis:indramedco-live-deepdive-2026-11",
+  "title": "Indraprastha Medical (INDRAMEDCO) - LIVE deep dive #4, first healthcare draw (protocol v1.4 stages 2-7): method test, no verdict; card v1.3 size 0; 7 live calls",
+  "body": "LIVE method test (L9, L21): random draw (Random(20261201)) from 102 pharma/healthcare + IT-services names (44 NSE-index-classified + 58 hand-classified before the shuffle) in the India Rs 1,000-20,000 cr band; no buy/sell verdict. Research, not advice. SKIPS: EXPLEOSOL (PEAD Q2 FY27 SUE -0.32 -> quintile 2, event 14-Nov-2026, inside the avoid window), 63MOONS (governance: NSEL payment-default legacy and ongoing NSEL creditor scheme/litigation naming the group; also PEAD quintile 2 in window). SUBJECT: INDRAMEDCO (Indraprastha Apollo Hospitals, one ~700-bed hospital at Sarita Vihar, Delhi; GNCTD 26% + Apollo 22.45% = promoters 51%). Passed S2: pledge 0, unmodified audit FY26 (KAM: free-treatment litigation), no debt, solvency 0 flags, PEAD Q2 FY27 SUE +1.27 -> Q5. KEY FINDING (the whole case): the hospital land is leased from the Delhi government at Re 1/month (rent Rs 12/yr) in return for free treatment (lease: 33% IPD / 40% OPD per GNCTD); the lease EXPIRED 31-Jul-2023 and the JV agreement 10-Mar-2018 (per GNCTD affidavits reported in the press); GNCTD told the SC on 27-Jan-2026 that renewal is 'contrary to public interest'; the SC (25-Mar-2025) warned it could hand the hospital to AIIMS; GNCTD says EWS delivery was 7-10% vs the lease terms. The FY26 AR and the Q2 FY27 results notes do not mention the expiry or the affidavit (board 'noted' it on 03-Feb-2026), while the AR says the company 'remained compliant with the lease'. GNCTD did not vote its 26% at the Sep-2026 AGM and has not nominated its 3 directors incl. the Chairman; the MD's term ended 04-Nov-2026 with no successor announced. VALUATION: Rs 355.85, 17.0x trailing, 9.8x EV/EBITDA net of Rs 521 cr cash vs hospital peers 33-59x (median 48x): the discount is the lease risk; ROIC ~50% is partly the land subsidy. Price-implied P(workable renewal) ~50% [EST]. Worksheet v1.3 (legal-outcome scenarios): EV 1.35x raw / 1.39x anchored (w=0.3, raw tails ABOVE class) vs hurdle 1.76x -> card v1.3 size 0. Unit check: 63,236 discharges x 3.23 ALOS x Rs 69,714/bed-day = Rs 1,424 cr = sale of services (~560 occupied beds). Calls: 7 live (Q3 revenue, FY27 OPM, FY27 PAT, lease renewal disclosed, handover/non-renewal, MD by Mar-27, beats Nifty 500) + 3 card calls.",
+  "tickers": [
+   "INDRAMEDCO"
+  ],
+  "tags": [
+   "deep-dive",
+   "live",
+   "method-test",
+   "india",
+   "sector-healthcare",
+   "stage-4",
+   "stage-5",
+   "stage-6",
+   "stage-7"
+  ],
+  "date": "2026-11-24",
+  "status": "done",
+  "data": {
+   "seed": 20261201,
+   "frame_in_range": 809,
+   "eligible": 102,
+   "skips": [
+    "EXPLEOSOL: PEAD q2 in window",
+    "63MOONS: governance (NSEL) + PEAD q2 in window"
+   ],
+   "price": 355.85,
+   "pe_trailing": 17.0,
+   "ev_ebitda": 9.8,
+   "net_cash_cr": 521.4,
+   "peer_pe_median": 48.0,
+   "ev_raw": 1.35,
+   "ev_anchored": 1.39,
+   "hurdle": 1.76,
+   "card_version": "1.3",
+   "size": 0
+  },
+  "sources": [
+   "research_notes/Deep dives/INDRAMEDCO_live.md",
+   "tools/valuation/live/INDRAMEDCO_worksheet.md",
+   "tools/decision/live/INDRAMEDCO_card.md"
+  ],
+  "confidence": "verified"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:INDRAMEDCO:variant-view-2026-11",
+  "title": "Indraprastha Medical (INDRAMEDCO) variant view, Nov 2026: cheap because the hospital's land lease has expired and the Delhi government opposes renewal; no claimable mispricing",
+  "body": "Market prices a ~50% chance [EST] that IMCL keeps its hospital on workable terms (17x P/E vs peers ~48x; net cash 16% of mcap). Our view: no edge on the SC/GNCTD outcome; the evidence we found leans negative versus the company's own presentation (expiry and affidavit absent from AR FY26 and results notes; GNCTD abstained at the AGM and left its board seats empty; MD term ended without a successor; ROIC flattered by Re 1 land). Positive: net cash Rs 57/share, no debt, ARPP-led growth. Proves us wrong: a disclosed 30-year renewal near IMCL's own ask (10% IPD / 25% OPD incl. medicines) without a retrospective claim. Scored by thesis:paper-call:INDRAMEDCO:*.",
+  "tickers": [
+   "INDRAMEDCO"
+  ],
+  "tags": [
+   "variant-perception",
+   "live",
+   "deepdive-generated",
+   "india",
+   "sector-healthcare",
+   "stage-6"
+  ],
+  "date": "2026-11-24",
+  "status": "open",
+  "data": {
+   "market_view": "~50% chance of a workable lease renewal [EST, two-state price read]",
+   "our_view": "no edge on the legal outcome; disclosure and governance evidence leans negative",
+   "proves_wrong": "disclosed 30-year renewal near IMCL's ask"
+  },
+  "sources": [
+   "research_notes/Deep dives/INDRAMEDCO_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:indramedco-live-deepdive-2026-11",
+    "rel": "found_in"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:INDRAMEDCO:q3fy27-revenue-400cr-plus",
+  "title": "Paper call: Indraprastha Medical Q3 FY27 revenue from operations is >= Rs 400 cr (+7.5% YoY)",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #4, company drawn at random from pharma/healthcare + IT services names in the Rs 1,000-20,000 cr band (method test, L9/L21). Probability 0.4 (naive base rate 0.77) that: Indraprastha Medical (INDRAMEDCO) Q3 FY27 (Oct-Dec 2026) revenue from operations is >= Rs 400 cr. Our reasoning: Q2 FY27 Rs 412.85 cr; Q3/Q2 ratio was 0.965 (FY24), 0.929 (FY25), 0.976 (FY26), mean 0.957 -> ~Rs 395 cr central estimate; discharges fell 2% in FY26 so growth is price/mix only. Naive base: 10 of the last 13 quarters (Q2 FY24-Q2 FY27) grew >= 7.5% YoY [SCR]. Resolution: YES if standalone revenue from operations for the quarter ended 31-Dec-2026, as first reported, is >= Rs 400 cr. Source: NSE integrated-filing XBRL / screener quarterly. Resolve by 2027-02-28; score with Brier vs the base rate.",
+  "tickers": [
+   "INDRAMEDCO"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "sector-healthcare",
+   "method-test",
+   "cat-revenue"
+  ],
+  "date": "2026-11-24",
+  "status": "open",
+  "data": {
+   "probability": 0.4,
+   "base_rate_probability": 0.77,
+   "method": "deep-dive protocol v1.4 (live #4, healthcare/IT frame)",
+   "made_on": "2026-11-24",
+   "resolve_by": "2027-02-28",
+   "resolution_rule": "YES if standalone revenue from operations for the quarter ended 31-Dec-2026, as first reported, is >= Rs 400 cr.",
+   "resolution_source": "NSE integrated-filing XBRL / screener quarterly",
+   "base_rate_reasoning": "10 of the last 13 quarters (Q2 FY24-Q2 FY27) grew >= 7.5% YoY [SCR].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/INDRAMEDCO_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:indramedco-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:INDRAMEDCO:fy27-opm-18pct-plus",
+  "title": "Paper call: Indraprastha Medical FY27 operating margin (resolver definition) is >= 18.0%",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #4, company drawn at random from pharma/healthcare + IT services names in the Rs 1,000-20,000 cr band (method test, L9/L21). Probability 0.55 (naive base rate 0.23) that: Indraprastha Medical FY27 operating profit (revenue - materials - employee - other expenses, ex other income) / revenue from operations is >= 18.0%. Our reasoning: H1 FY27 OPM 19.2% (Q1 19.7%, Q2 18.6%); H2 is seasonally weaker (H2 FY26 16.7%); central estimate ~18.1%. Naive base: 2 of 11 fiscal years FY16-FY26 had OPM >= 18.0% (FY25 18.07%, FY26 18.005%); Laplace (2+1)/(11+2) = 0.23 [SCR, AR26]. Resolution: YES if FY27 OPM (resolver definition: operating profit ex other income / revenue from operations, standalone) >= 18.0% (rounded to 1 dp). Source: NSE integrated-filing XBRL / screener annual. Resolve by 2027-05-31; score with Brier vs the base rate.",
+  "tickers": [
+   "INDRAMEDCO"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "sector-healthcare",
+   "method-test",
+   "cat-margin"
+  ],
+  "date": "2026-11-24",
+  "status": "open",
+  "data": {
+   "probability": 0.55,
+   "base_rate_probability": 0.23,
+   "method": "deep-dive protocol v1.4 (live #4, healthcare/IT frame)",
+   "made_on": "2026-11-24",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if FY27 OPM (resolver definition: operating profit ex other income / revenue from operations, standalone) >= 18.0% (rounded to 1 dp).",
+   "resolution_source": "NSE integrated-filing XBRL / screener annual",
+   "base_rate_reasoning": "2 of 11 fiscal years FY16-FY26 had OPM >= 18.0% (FY25 18.07%, FY26 18.005%); Laplace (2+1)/(11+2) = 0.23 [SCR, AR26].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/INDRAMEDCO_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:indramedco-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:INDRAMEDCO:fy27-net-profit-210cr-plus",
+  "title": "Paper call: Indraprastha Medical FY27 net profit is >= Rs 210 cr (+14%)",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #4, company drawn at random from pharma/healthcare + IT services names in the Rs 1,000-20,000 cr band (method test, L9/L21). Probability 0.4 (naive base rate 0.7) that: Indraprastha Medical FY27 profit for the year is >= Rs 210 cr. Our reasoning: H1 FY27 Rs 109.4 cr; H2 needs Rs 100.6 cr vs H2 FY26 Rs 82.7 cr (+22%); central estimate ~Rs 205-208 cr; any exceptional for the lease/free-treatment matter would push it below. Naive base: 7 of 10 fiscal years FY17-FY26 had PAT growth >= 14% [SCR]. Resolution: YES if profit for the year FY27 (standalone), as first reported in the audited FY27 results, is >= Rs 210 cr. Source: NSE integrated-filing XBRL (FY27 results). Resolve by 2027-05-31; score with Brier vs the base rate.",
+  "tickers": [
+   "INDRAMEDCO"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "sector-healthcare",
+   "method-test",
+   "cat-profit"
+  ],
+  "date": "2026-11-24",
+  "status": "open",
+  "data": {
+   "probability": 0.4,
+   "base_rate_probability": 0.7,
+   "method": "deep-dive protocol v1.4 (live #4, healthcare/IT frame)",
+   "made_on": "2026-11-24",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if profit for the year FY27 (standalone), as first reported in the audited FY27 results, is >= Rs 210 cr.",
+   "resolution_source": "NSE integrated-filing XBRL (FY27 results)",
+   "base_rate_reasoning": "7 of 10 fiscal years FY17-FY26 had PAT growth >= 14% [SCR].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/INDRAMEDCO_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:indramedco-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:INDRAMEDCO:lease-renewal-disclosed-by-nov27",
+  "title": "Paper call: Indraprastha Medical discloses an executed renewal or extension of the Sarita Vihar land lease by 30-Nov-2027",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #4, company drawn at random from pharma/healthcare + IT services names in the Rs 1,000-20,000 cr band (method test, L9/L21). Probability 0.15 (naive base rate 0.25) that: IMCL files (Reg-30, results note or AR) that the lease of the hospital land from the Government of NCT of Delhi has been renewed or extended (any tenor, any terms), or the Supreme Court orders a renewal on stated terms, between 24-Nov-2026 and 30-Nov-2027. Our reasoning: GNCTD's 27-Jan-2026 affidavit opposes renewal; the case has run since 2009; no disclosure of progress since 09-Feb-2026; the company has not even disclosed the expiry. Courts rarely close such matters within a year. Naive base: [EST] a dispute open ~3.3 years since expiry with an active Supreme Court bench: a ~25%/yr resolution hazard, all resolutions assumed renewals. Resolution: YES if an NSE/BSE filing or a Supreme Court order dated 24-Nov-2026..30-Nov-2027 states the lease has been renewed/extended or directs renewal on stated terms; NO otherwise (including continued pendency). Source: NSE/BSE announcements (INDRAMEDCO); SC case SLP(C) 29482/2009. Resolve by 2027-11-30; score with Brier vs the base rate.",
+  "tickers": [
+   "INDRAMEDCO"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "sector-healthcare",
+   "method-test",
+   "cat-legal"
+  ],
+  "date": "2026-11-24",
+  "status": "open",
+  "data": {
+   "probability": 0.15,
+   "base_rate_probability": 0.25,
+   "method": "deep-dive protocol v1.4 (live #4, healthcare/IT frame)",
+   "made_on": "2026-11-24",
+   "resolve_by": "2027-11-30",
+   "resolution_rule": "YES if an NSE/BSE filing or a Supreme Court order dated 24-Nov-2026..30-Nov-2027 states the lease has been renewed/extended or directs renewal on stated terms; NO otherwise (including continued pendency).",
+   "resolution_source": "NSE/BSE announcements (INDRAMEDCO); SC case SLP(C) 29482/2009",
+   "base_rate_reasoning": "[EST] a dispute open ~3.3 years since expiry with an active Supreme Court bench: a ~25%/yr resolution hazard, all resolutions assumed renewals.",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/INDRAMEDCO_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:indramedco-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:INDRAMEDCO:handover-or-nonrenewal-by-nov27",
+  "title": "Paper call: Indraprastha Medical: a final order or decision to hand over the hospital or refuse the lease renewal by 30-Nov-2027",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #4, company drawn at random from pharma/healthcare + IT services names in the Rs 1,000-20,000 cr band (method test, L9/L21). Probability 0.1 (naive base rate 0.05) that: Between 24-Nov-2026 and 30-Nov-2027 the Supreme Court orders, or GNCTD formally decides (disclosed by IMCL), that the lease will not be renewed or that the hospital be handed over to the government/AIIMS/another operator. Our reasoning: GNCTD already says renewal is 'contrary to public interest' and the SC has threatened an AIIMS takeover; but closing or transferring a running 700-bed hospital is drastic and a year is short. Naive base: [EST] court-ordered takeovers of running private hospitals are rare; ~5%/yr given an active hostile government affidavit. Resolution: YES if an NSE/BSE filing or SC order dated in the window records refusal of renewal or a handover direction (even if stayed later); NO otherwise. Source: NSE/BSE announcements; SC orders. Resolve by 2027-11-30; score with Brier vs the base rate.",
+  "tickers": [
+   "INDRAMEDCO"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "sector-healthcare",
+   "method-test",
+   "cat-legal"
+  ],
+  "date": "2026-11-24",
+  "status": "open",
+  "data": {
+   "probability": 0.1,
+   "base_rate_probability": 0.05,
+   "method": "deep-dive protocol v1.4 (live #4, healthcare/IT frame)",
+   "made_on": "2026-11-24",
+   "resolve_by": "2027-11-30",
+   "resolution_rule": "YES if an NSE/BSE filing or SC order dated in the window records refusal of renewal or a handover direction (even if stayed later); NO otherwise.",
+   "resolution_source": "NSE/BSE announcements; SC orders",
+   "base_rate_reasoning": "[EST] court-ordered takeovers of running private hospitals are rare; ~5%/yr given an active hostile government affidavit.",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/INDRAMEDCO_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:indramedco-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:INDRAMEDCO:md-appointed-by-mar27",
+  "title": "Paper call: Indraprastha Medical appoints a Managing Director by 31-Mar-2027",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #4, company drawn at random from pharma/healthcare + IT services names in the Rs 1,000-20,000 cr band (method test, L9/L21). Probability 0.7 (naive base rate 0.8) that: IMCL announces the appointment (or re-appointment) of a Managing Director between 05-Nov-2026 and 31-Mar-2027. Our reasoning: MD's 2-year term ended 04-Nov-2026 with no successor named in the 05-Nov-2026 filing; the Chairman seat (GNCTD nominee) is also vacant; Apollo controls operations and usually fills roles, but board approvals may be slowed by the dispute. Naive base: [EST] listed Indian companies usually fill an MD vacancy within ~5 months. Resolution: YES if a Reg-30 filing dated 05-Nov-2026..31-Mar-2027 announces an MD appointment/re-appointment (whole-time CEO without the MD title = NO). Source: NSE/BSE announcements. Resolve by 2027-03-31; score with Brier vs the base rate.",
+  "tickers": [
+   "INDRAMEDCO"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "sector-healthcare",
+   "method-test",
+   "cat-governance"
+  ],
+  "date": "2026-11-24",
+  "status": "open",
+  "data": {
+   "probability": 0.7,
+   "base_rate_probability": 0.8,
+   "method": "deep-dive protocol v1.4 (live #4, healthcare/IT frame)",
+   "made_on": "2026-11-24",
+   "resolve_by": "2027-03-31",
+   "resolution_rule": "YES if a Reg-30 filing dated 05-Nov-2026..31-Mar-2027 announces an MD appointment/re-appointment (whole-time CEO without the MD title = NO).",
+   "resolution_source": "NSE/BSE announcements",
+   "base_rate_reasoning": "[EST] listed Indian companies usually fill an MD vacancy within ~5 months.",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/INDRAMEDCO_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:indramedco-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:INDRAMEDCO:beats-nifty500-to-sep27",
+  "title": "Paper call: Indraprastha Medical price return beats the Nifty 500 from 23-Nov-2026 to 30-Sep-2027",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #4, company drawn at random from pharma/healthcare + IT services names in the Rs 1,000-20,000 cr band (method test, L9/L21). Probability 0.4 (naive base rate 0.44) that: INDRAMEDCO price return from 23-Nov-2026 (Rs 355.85) to 30-Sep-2027 exceeds the Nifty 500 price return (23,748.15). Our reasoning: A binary legal overhang with a hostile government affidavit; no dated catalyst in our favour; but the stock is already 43% below its Nov-2025 high (Rs 622.8) and peers trade at ~48x. Naive base: share of small caps beating the index over ~10 months, skewed below 0.5 [EST, as in live deep dives #1 and #3]. Resolution: YES if INDRAMEDCO.NS close on 30-Sep-2027 / 355.85 > ^CRSLDX close on 30-Sep-2027 / 23,748.15; price return, last close on or before 30-Sep-2027. Source: Yahoo v8 daily closes (INDRAMEDCO.NS, ^CRSLDX); NSE bhavcopy. Resolve by 2027-09-30; score with Brier vs the base rate.",
+  "tickers": [
+   "INDRAMEDCO"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "sector-healthcare",
+   "method-test",
+   "price-relative"
+  ],
+  "date": "2026-11-24",
+  "status": "open",
+  "data": {
+   "probability": 0.4,
+   "base_rate_probability": 0.44,
+   "method": "deep-dive protocol v1.4 (live #4, healthcare/IT frame)",
+   "made_on": "2026-11-24",
+   "resolve_by": "2027-09-30",
+   "resolution_rule": "YES if INDRAMEDCO.NS close on 30-Sep-2027 / 355.85 > ^CRSLDX close on 30-Sep-2027 / 23,748.15; price return, last close on or before 30-Sep-2027.",
+   "resolution_source": "Yahoo v8 daily closes (INDRAMEDCO.NS, ^CRSLDX); NSE bhavcopy",
+   "base_rate_reasoning": "share of small caps beating the index over ~10 months, skewed below 0.5 [EST, as in live deep dives #1 and #3].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/INDRAMEDCO_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:indramedco-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:INDRAMEDCO:card-2026-11-24-5y-ge3x",
+  "title": "Paper call: Indraprastha Medical Corporation Ltd (Indraprastha Apollo Hospitals, Sarita Vihar) 5-year outcome ≥3.0x from 2026-11-23 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.07 (base rate 0.213, class india_nonfin_1000_20000cr_5y) that: YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-23 (entry INR 355.85) to the last close on or before 2031-11-23 is ≥ 3.0. Model: worksheet scenarios bear 20%→0.59x, base 45%→1.70x, bull 15%→2.74x with σ=0.30; reverse DCF base-case IRR 10.9%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.39x anchored (raw 1.35x) vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "INDRAMEDCO"
+  ],
+  "tags": [
+   "decision-card",
+   "deepdive-generated",
+   "india",
+   "live",
+   "method-test",
+   "paper-call",
+   "sector-healthcare",
+   "stage-6",
+   "valuation"
+  ],
+  "date": "2026-11-24",
+  "status": "open",
+  "data": {
+   "probability": 0.0706,
+   "base_rate_probability": 0.2129,
+   "anchored_probability": null,
+   "anchor_weight": null,
+   "base_rate_reasoning": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted). n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "method": "decision-card-v1",
+   "card_version": "1.3",
+   "made_on": "2026-11-24",
+   "resolve_by": "2031-11-23",
+   "entry_date": "2026-11-23",
+   "entry_price": 355.85,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-23 (entry INR 355.85) to the last close on or before 2031-11-23 is ≥ 3.0.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/INDRAMEDCO_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_30962_INDRAMEDCO_2025_2026_A_5876360_01092026125250.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1748879_29102026043325_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/INDRAMEDCO_09022026115023_IMCLUPDATE09022026.pdf",
+   "https://www.screener.in/company/INDRAMEDCO/",
+   "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_23112026.csv"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "analysis:indramedco-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:INDRAMEDCO:card-2026-11-24-5y-le0p5x",
+  "title": "Paper call: Indraprastha Medical Corporation Ltd (Indraprastha Apollo Hospitals, Sarita Vihar) 5-year outcome ≤0.5x from 2026-11-23 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.26 (base rate 0.113, class india_nonfin_1000_20000cr_5y) that: YES if the total-return multiple from 2026-11-23 (entry INR 355.85) to the last close on or before 2031-11-23 is ≤ 0.5, or the stock is delisted/suspended below that level. Model: worksheet scenarios bear 20%→0.59x, base 45%→1.70x, bull 15%→2.74x with σ=0.30; reverse DCF base-case IRR 10.9%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.39x anchored (raw 1.35x) vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "INDRAMEDCO"
+  ],
+  "tags": [
+   "decision-card",
+   "deepdive-generated",
+   "india",
+   "live",
+   "method-test",
+   "paper-call",
+   "sector-healthcare",
+   "stage-6",
+   "valuation"
+  ],
+  "date": "2026-11-24",
+  "status": "open",
+  "data": {
+   "probability": 0.258,
+   "base_rate_probability": 0.1127,
+   "anchored_probability": 0.2144,
+   "anchor_weight": 0.3,
+   "base_rate_reasoning": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted). n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "method": "decision-card-v1",
+   "card_version": "1.3",
+   "made_on": "2026-11-24",
+   "resolve_by": "2031-11-23",
+   "entry_date": "2026-11-23",
+   "entry_price": 355.85,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple from 2026-11-23 (entry INR 355.85) to the last close on or before 2031-11-23 is ≤ 0.5, or the stock is delisted/suspended below that level.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/INDRAMEDCO_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_30962_INDRAMEDCO_2025_2026_A_5876360_01092026125250.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1748879_29102026043325_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/INDRAMEDCO_09022026115023_IMCLUPDATE09022026.pdf",
+   "https://www.screener.in/company/INDRAMEDCO/",
+   "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_23112026.csv"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "analysis:indramedco-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:INDRAMEDCO:card-2026-11-24-5y-blowup",
+  "title": "Paper call: Indraprastha Medical Corporation Ltd (Indraprastha Apollo Hospitals, Sarita Vihar) 5-year outcome blow-up from 2026-11-23 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.20 (base rate 0.154, class india_nonfin_1000_20000cr_5y) that: YES if between 2026-11-23 and 2031-11-23: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples). Model: worksheet scenarios bear 20%→0.59x, base 45%→1.70x, bull 15%→2.74x with σ=0.30; reverse DCF base-case IRR 10.9%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.39x anchored (raw 1.35x) vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "INDRAMEDCO"
+  ],
+  "tags": [
+   "decision-card",
+   "deepdive-generated",
+   "india",
+   "live",
+   "method-test",
+   "paper-call",
+   "sector-healthcare",
+   "stage-6",
+   "valuation"
+  ],
+  "date": "2026-11-24",
+  "status": "open",
+  "data": {
+   "probability": 0.2,
+   "base_rate_probability": 0.1537,
+   "anchored_probability": 0.1861,
+   "anchor_weight": 0.3,
+   "base_rate_reasoning": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted). n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "method": "decision-card-v1",
+   "card_version": "1.3",
+   "made_on": "2026-11-24",
+   "resolve_by": "2031-11-23",
+   "entry_date": "2026-11-23",
+   "entry_price": 355.85,
+   "currency": "INR",
+   "resolution_rule": "YES if between 2026-11-23 and 2031-11-23: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples).",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/INDRAMEDCO_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_30962_INDRAMEDCO_2025_2026_A_5876360_01092026125250.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1748879_29102026043325_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/INDRAMEDCO_09022026115023_IMCLUPDATE09022026.pdf",
+   "https://www.screener.in/company/INDRAMEDCO/",
+   "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_23112026.csv"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "analysis:indramedco-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ]
+ },
+ {
+  "type": "decision",
+  "id": "decision:card:INDRAMEDCO:2026-11-24",
+  "title": "Decision card INDRAMEDCO 2026-11-24 (paper)",
+  "body": "Decision card v1 for Indraprastha Medical Corporation Ltd (Indraprastha Apollo Hospitals, Sarita Vihar). Rule output: size 0: blocked by Expected value vs hurdle (EV 1.39x anchored (raw 1.35x) vs hurdle 1.76x → below hurdle → size 0). Thesis: Method-test thesis: Indraprastha Medical (one ~700-bed Apollo-run hospital in Delhi) earns a ~50% ROIC partly because its land is leased from the Delhi government at Re 1/month in exchange for a free-treatment obligation it has under-delivered (7-10% vs 33% IPD / 40% OPD per GNCTD). The lease expired 31-Jul-2023 and the JV agreement 10-Mar-2018; GNCTD told the Supreme Court on 27-Jan-2026 that renewal would be 'contrary to public interest'. The 5-year outcome is a legal/political binary layered on a good operating business, not an operating-earnings call. Variant view: Market: at Rs 356 the stock trades at 17.0x trailing P/E and 9.8x EV/EBITDA net of Rs 521 cr cash, against hospital peers at 33-59x (median 48x) - a ~65% discount that IS the lease risk. A simple two-state read (going concern at ~30x = ~Rs 630/share vs handover value ~Rs 60-90/share) puts the price-implied probability of a workable renewal at roughly 50% [EST]. Our view: no claimable mispricing - we have no edge on a Supreme Court / Delhi-government outcome, and the evidence we found leans NEGATIVE relative to how the company presents it: (1) the FY26 annual report, the Q2 FY27 results notes and the MD&A do not mention that the lease and JV agreement have expired or the January affidavit (only a 3-Feb-2026 board-outcome paragraph 'noted' it), while the contingent-liability note says the company 'has remained compliant with the applicable requirements under the lease'; (2) the Delhi government (26% holder, a promoter) did not vote its shares at the 24-Sep-2026 AGM (promoter votes polled 21.44m of 46.75m) and has not nominated its 3 directors including the Chairman; (3) the MD's term ended 4-Nov-2026 with no successor announced; (4) ROIC is flattered by the land subsidy, so any renewal on market or stricter-EWS terms compresses margins. Positive offsets: Rs 521 cr net cash (16% of market cap, Rs 57/share), no debt, steady ARPP-led growth (+11% TTM revenue, 18% OPM), and courts and governments usually prefer stricter terms to closing a 700-bed hospital. What would prove us wrong: a 30-year renewal on terms close to IMCL's own ask (10% IPD / 25% OPD incl. medicines) with no retrospective claim. Departure from the outside view: our raw P(blow-up) 20% and P(<=0.5x) 26% are ABOVE the class base rates (15% / 11%) because of a specific, dated legal threat; anchored at w=0.3 (evidence note). Checked by paper calls thesis:paper-call:INDRAMEDCO:*. Open soft flags: 6. P(≥3x) 7% vs base 21%; P(≤0.5x) 26% vs base 11.3%; EV 5-yr multiple 1.35x vs hurdle 1.76x. Review 2027-02-15.",
+  "tickers": [
+   "INDRAMEDCO"
+  ],
+  "tags": [
+   "decision-card",
+   "deepdive-generated",
+   "india",
+   "live",
+   "method-test",
+   "sector-healthcare",
+   "stage-6"
+  ],
+  "date": "2026-11-24",
+  "data": {
+   "gates": [
+    {
+     "gate": "Stage 2 hard filters",
+     "result": "passed (7 rules)",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 3 PEAD avoid flag",
+     "result": "clear",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 3 survival cap",
+     "result": "clear",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 4 soft flags",
+     "result": "6 open, variant view written",
+     "blocks": false
+    },
+    {
+     "gate": "Expected value vs hurdle",
+     "result": "EV 1.39x anchored (raw 1.35x) vs hurdle 1.76x → below hurdle → size 0",
+     "blocks": true
+    }
+   ],
+   "size_after_gates": 0.0,
+   "survival_cap": {
+    "status": "clear",
+    "triggered": false,
+    "blocks": false,
+    "mode": null,
+    "cap_size": null,
+    "reasons": [],
+    "already_owned": false
+   },
+   "anchor_weight": 0.3,
+   "ev_mult5_raw": 1.345312578757001,
+   "ev_mult5_anchored": 1.3920291046411684,
+   "p_blowup_anchored": 0.18611,
+   "p_le_half_anchored": 0.21438303289958927,
+   "rule_size": 0.0,
+   "kelly_f_star": 0.0,
+   "open_soft_flags": 6,
+   "review_date": "2027-02-15",
+   "kill_criteria": [
+    {
+     "if": "SC order or GNCTD decision refusing lease renewal / directing handover",
+     "measure": "Reg-30 filing; SC order on SLP(C) 29482/2009",
+     "by": "2027-11-30"
+    },
+    {
+     "if": "Renewal or order requiring free treatment above 20% of IPD including medicines, or a retrospective recovery claim > Rs 200 cr",
+     "measure": "Reg-30; AR FY27 contingent-liability note",
+     "by": "2027-11-30"
+    },
+    {
+     "if": "No MD appointed by 31-Mar-2027",
+     "measure": "Reg-30",
+     "by": "2027-03-31"
+    },
+    {
+     "if": "Modified audit opinion or emphasis of matter on going concern / lease",
+     "measure": "AR FY27",
+     "by": "2027-09-30"
+    }
+   ],
+   "override_log": [
+    {
+     "date": "2026-11-24",
+     "flag": "Hand classification of an unindexed name",
+     "decision": "INDRAMEDCO entered the frame via the pre-registered hand list (Healthcare)",
+     "why": "482 in-range names lacked an index industry; list written before the shuffle"
+    },
+    {
+     "date": "2026-11-24",
+     "flag": "Expired lease vs S0 scoreability",
+     "decision": "kept as subject: the listed entity survives the call horizon even if it loses the hospital (rule a is about the entity ceasing to exist); the lease risk goes into tails and calls",
+     "why": "Pre-registered rule wording; disclosed"
+    },
+    {
+     "date": "2026-11-24",
+     "flag": "Credibility score",
+     "decision": "no score used; AR-mode disclosure flags instead (L37)",
+     "why": "No concalls; n=3 generic promises"
+    }
+   ],
+   "paper_calls": [
+    "thesis:paper-call:INDRAMEDCO:card-2026-11-24-5y-ge3x",
+    "thesis:paper-call:INDRAMEDCO:card-2026-11-24-5y-le0p5x",
+    "thesis:paper-call:INDRAMEDCO:card-2026-11-24-5y-blowup"
+   ],
+   "practice": false
+  },
+  "sources": [
+   "research_notes/Deep dives/INDRAMEDCO_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_30962_INDRAMEDCO_2025_2026_A_5876360_01092026125250.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1748879_29102026043325_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/INDRAMEDCO_09022026115023_IMCLUPDATE09022026.pdf",
+   "https://www.screener.in/company/INDRAMEDCO/",
+   "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_23112026.csv"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "thesis:paper-call:INDRAMEDCO:card-2026-11-24-5y-ge3x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:INDRAMEDCO:card-2026-11-24-5y-le0p5x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:INDRAMEDCO:card-2026-11-24-5y-blowup",
+    "rel": "about"
+   },
+   {
+    "to": "analysis:indramedco-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ]
+ },
+ {
+  "type": "event",
+  "id": "event:indramedco-gnctd-affidavit-2026-01",
+  "title": "Delhi government affidavit opposes renewal of Indraprastha Apollo's land lease and JV agreement (27-Jan-2026)",
+  "body": "In SLP(C) 29482/2009 (free-treatment matter), GNCTD told the Supreme Court that the lease of the Sarita Vihar land expired 31-Jul-2023 and the JV agreement with Apollo on 10-Mar-2018; IMCL proposed a 30-year renewal on 09-May-2025; GNCTD's 27-Jan-2026 affidavit says renewal now would be 'contrary to public interest and contractual discipline' (press reports). IMCL's board 'noted' the affidavit on 03-Feb-2026 (NSE filing 09-Feb-2026) without describing it. Earlier: SC 25-Mar-2025 warned of an AIIMS takeover; GNCTD (Nov-2025) said EWS delivery was 9-10% OPD / 7-9% IPD vs the lease's 40%/33%.",
+  "tickers": [
+   "INDRAMEDCO"
+  ],
+  "tags": [
+   "governance",
+   "legal",
+   "lease",
+   "india",
+   "sector-healthcare",
+   "disclosure-quality"
+  ],
+  "date": "2026-01-27",
+  "status": "open",
+  "data": {
+   "lease_expiry": "2023-07-31",
+   "jv_expiry": "2018-03-10",
+   "renewal_proposal": "2025-05-09",
+   "hearing_listed": "2026-03-19 (outcome not found)"
+  },
+  "sources": [
+   "https://nsearchives.nseindia.in/corporate/INDRAMEDCO_09022026115023_IMCLUPDATE09022026.pdf",
+   "https://medicalbuyer.co.in/apollo-hospital-faces-lease-denial-for-ignoring-ews-treatment-mandate/",
+   "https://theprint.in/india/indraprastha-apollo-hospital-attended-only-9-10-percent-ews-opd-patients-in-5-yrs-delhi-govt-to-sc/2782606/",
+   "https://www.livelaw.in/top-stories/supreme-court-warns-indraprastha-apollo-hospital-free-treatment-to-poor-patients-joint-inspection-ordered-287728"
+  ],
+  "links": [
+   {
+    "to": "analysis:indramedco-live-deepdive-2026-11",
+    "rel": "found_in"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:subsidised-input-roic-and-renewal-risk",
+  "title": "High ROIC built on a government-granted input (land at Re 1, a licence, a concession) is a renewal bet: find the expiry date and the counterparty's stance before trusting the return",
+  "body": "Technique (INDRAMEDCO, live deep dive #4, Nov 2026): IMCL's ~50% ROIC rests on Delhi-government land at Re 1/month in exchange for a free-treatment duty. The lease expired in 2023 and the government's affidavit opposes renewal; the annual report never states the expiry. Rule: when ROIC is far above peers, list every government-granted input (land, mining lease, spectrum, concession, PPP agreement), its expiry date, the reciprocal obligation and its delivery record, and the counterparty's latest filing; read court and government filings, not the company's contingent-liability note. Treat the stock as an option on renewal terms, with tails above the class base rate.",
+  "tickers": [
+   "INDRAMEDCO"
+  ],
+  "tags": [
+   "technique",
+   "deep-dive",
+   "india",
+   "governance",
+   "looks-good-flag",
+   "l5",
+   "l7"
+  ],
+  "date": "2026-11-24",
+  "status": "active",
+  "data": {
+   "land_rent_per_year_inr": 12,
+   "pe": 17.0,
+   "peer_pe_median": 48.0
+  },
+  "sources": [
+   "research_notes/Deep dives/INDRAMEDCO_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:indramedco-live-deepdive-2026-11",
+    "rel": "found_in"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:promoter-abstention-vote-signal",
+  "title": "A promoter that stops voting its shares (and leaves its board seats empty) is a dated governance signal: read the Reg-44 promoter 'votes polled' line",
+  "body": "INDRAMEDCO, 24-Sep-2026 AGM: promoter and promoter group held 46,753,000 shares but polled 21,442,500 (45.9%) - the Delhi government's 26% stake did not vote on any resolution, and the AR says GNCTD had not nominated its 3 directors including the Chairman, while it was opposing the lease renewal in court. Cheap check: in every deep dive, compare promoter shares held vs votes polled on each AGM/postal-ballot resolution; a co-promoter abstaining signals a broken JV before any filing says so.",
+  "tickers": [
+   "INDRAMEDCO"
+  ],
+  "tags": [
+   "technique",
+   "governance",
+   "vote-results",
+   "india",
+   "l5"
+  ],
+  "date": "2026-11-24",
+  "status": "active",
+  "data": {
+   "promoter_shares": 46753000,
+   "promoter_votes_polled": 21442500
+  },
+  "sources": [
+   "research_notes/Deep dives/INDRAMEDCO_live.md",
+   "https://nsearchives.nseindia.in/corporate/ (INDRAMEDCO AGM voting results 25-Sep-2026)"
+  ],
+  "links": [
+   {
+    "to": "analysis:indramedco-live-deepdive-2026-11",
+    "rel": "found_in"
+   }
+  ],
+  "confidence": "single-source"
+ }
+]

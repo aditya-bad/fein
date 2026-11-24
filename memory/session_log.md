@@ -65,3 +65,10 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
 - 22-Nov-2026: stage 5–6 templates (worksheet + decision card, L21); Federal Bank end-to-end dry run (19 gaps,
   14 fixed incl. range-parsing bug; protocol v1.3; bank valuation mode; L22); stage-7 resolver + scoreboard
   (27 tests pass, nothing resolved yet — first due 31-Jan-2027). Still running: US solvency-flags test.
+
+- 24-Nov-2026: deep-dive protocol v1.4 committed (holdco >20% mcap trigger = untested rule of thumb). Pi deployment bundle
+  finished (install/healthcheck/uninstall/jobs; dry-run tested, not yet on a real Pi; no inbound ports, no auto-push,
+  SB_AUTO_APPLY=0). Pre-registered general survival-cap test PASSED → card v1.3 size cap ≤1%/no additions for Indian
+  pledge>25% or ICR<1.5x outside PEAD window (L39). Live deep dive #4 INDRAMEDCO (healthcare draw): size 0 (EV below hurdle);
+  expired govt land lease undisclosed in AR; 10 calls ingested with resolver specs (L40). Next: split pledge-vs-ICR rule prereg,
+  industry map for the universe, ar_run ZIP fix, card flag for licence/lease risk, live dive #5 (IT or bank/NBFC).

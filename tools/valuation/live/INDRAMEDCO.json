@@ -1,0 +1,74 @@
+# LIVE deep dive #4 (method test; company drawn at random from pharma/healthcare + IT names in the Rs 1,000-20,000 cr band, see research_notes/Deep dives/INDRAMEDCO_live.md section 0). No verdict (L9/L21).
+# Scenarios and probabilities were written BEFORE the worksheet was run (protocol L8 step 2). They are LEGAL-OUTCOME scenarios: the Delhi land lease expired 31-Jul-2023 and the JV agreement 10-Mar-2018; GNCTD's 27-Jan-2026 affidavit says renewal is "contrary to public interest".
+{
+ "company": "Indraprastha Medical Corporation Ltd (Indraprastha Apollo Hospitals, Sarita Vihar)",
+ "ticker": "INDRAMEDCO",
+ "market": "india",
+ "practice": false,
+ "currency": "INR",
+ "units": "INR cr",
+ "as_of": "2026-11-23",
+ "price": 355.85,
+ "shares": 9.1673,
+ "net_debt": -521.4,
+ "non_operating_value": 0.0,
+ "other_income_recurring_post_tax": 0.0,
+ "treasury_income_post_tax": 23.0,
+ "base": {
+  "fy": "TTM Sep-2026",
+  "revenue": 1556.0,
+  "ebitda": 280.0,
+  "ebit": 233.0,
+  "pat": 192.0,
+  "fcf": 115.0,
+  "eps": 20.95,
+  "eps_normalised": null,
+  "eps_forward": null,
+  "pe_trailing": 17.0,
+  "sbc": 0.0
+ },
+ "tax_rate": 0.25,
+ "roiic": 0.30,
+ "terminal_roic": 0.25,
+ "incremental_roic_5y": 0.40,
+ "years": 10,
+ "coe": 0.125,
+ "terminal_growth": 0.05,
+ "payout_of_fcf": 0.35,
+ "dispersion": 0.30,
+ "base_case": {"name": "base", "growth": 0.09, "growth_end": 0.07, "margin_end": 0.10, "roiic": 0.30, "exit_pe": 20},
+ "scenarios": [
+  {"name": "bear", "prob": 0.20, "growth": -0.08, "growth_end": 0.05, "margin_end": 0.05, "roiic": 0.15, "exit_pe": 14},
+  {"name": "base", "prob": 0.45, "growth": 0.09, "growth_end": 0.07, "margin_end": 0.10, "roiic": 0.30, "exit_pe": 20},
+  {"name": "bull", "prob": 0.15, "growth": 0.11, "growth_end": 0.08, "margin_end": 0.12, "roiic": 0.35, "exit_pe": 28}
+ ],
+ "blowup": {"prob": 0.20, "multiple": 0.25, "note": "Lease not renewed / hospital handed to GNCTD or AIIMS (SC 25-Mar-2025 warning; GNCTD affidavit 27-Jan-2026): IMCL keeps ~Rs 521 cr net cash (Rs 57/share) plus uncertain compensation for a building whose ownership 'will be decided at a future date' (net book Rs 127 cr) and equipment; ~0.2-0.3x of Rs 356"},
+ "twin_engine": {"targets": [2, 3, 5], "horizon": 5, "exit_pes": null, "hist_eps_cagr": 0.224, "hist_eps_note": "FY16 2.66 -> FY26 20.03 = 22.4%/yr [SCR]; driven by OPM 10% -> 18% and ARPP, from a low base; not repeatable at the same rate"},
+ "pe_history": [
+  {"date": "FY17", "pe": 18.6}, {"date": "FY18", "pe": 21.1}, {"date": "FY19", "pe": 12.4}, {"date": "FY20", "pe": 7.1},
+  {"date": "FY21", "pe": 214.8}, {"date": "FY22", "pe": 9.1}, {"date": "FY23", "pe": 8.2}, {"date": "FY24", "pe": 12.7},
+  {"date": "FY25", "pe": 22.0}, {"date": "FY26", "pe": 18.6}
+ ],
+ "sector_pes": {"Artemis Medicare": 44.3, "Shalby": 33.3, "Yatharth Hospital": 54.9, "Jupiter Life Line": 51.3, "Narayana Hrudayalaya": 44.6, "Apollo Hospitals": 58.8},
+ "market_pe": {"index": "Nifty 50", "pe": 20.6, "as_of": "2026-11 (insight:india-valuation-forward-returns)"},
+ "notes": [
+  "Price Rs 355.85 = NSE bhavcopy close 23-Nov-2026; screener.in 24-Nov-2026 shows Rs 356 / mcap Rs 3,262 cr (second source). Yahoo v8 has no bar after 18-Nov-2026 (Rs 358.00). Shares 9,16,73,000 [AR26 n.30.M; NSE pledge API totIssuedShares].",
+  "Net cash 521.4 at 30-Sep-2026 [Q2FY27 XBRL]: cash 6.48 + other bank balances 196.85 + current investments 142.16 + non-current investments 210.90 = 556.4, less lease liabilities ~35 (screener borrowings Sep-2026 35). No bank debt ('There are no Loans and Debt Securities').",
+  "Treasury income post-tax 23 [EST]: TTM other income 31 x 0.75; FY26 interest income 27.61 + MF gains 1.14 [AR26 n.23].",
+  "Base = TTM Q3FY26..Q2FY27 [SCR quarterly; Q2FY27 XBRL revenue 412.85 / PAT 53.58 / EPS 5.84 agree]: revenue 372+365+406+413 = 1,556; EBITDA (ex other income) 62+61+80+77 = 280; D&A 46 -> EBIT 233 (incl. ~3 lease interest in finance cost ignored); PAT 192; EPS 20.95.",
+  "FCF 115 [EST]: FY26 CFO 167 - capex ~59 [SCR FCF 108]; FY25 120; FY24 131.",
+  "eps_normalised not used: not a cyclical (FY20-21 COVID dip only). 10-yr mean EPS Rs 8.02 would give 44x but EPS has grown structurally (OPM 10% -> 18%).",
+  "ROIIC: invested capital ex cash is only ~Rs 220-320 cr because the land is leased from GNCTD at Re 1/month (Rs 12/yr, AR26 n.30.D) and GNCTD funded Rs 15.48 cr of the building; ROIC ~50%+ is partly a land subsidy whose price is the free-treatment obligation. incremental_roic_5y 0.40 [EST]; base roiic 0.30, terminal 0.25 assume part of the subsidy is clawed back.",
+  "Scenarios (5-yr, legal outcome; written before outputs): blow-up 20% = non-renewal/handover; bear 20% = renewal with enforced EWS (33% IPD / 40% OPD free incl. medicines) and/or market lease rent -> revenue down, NOPAT margin to 5%; base 45% = litigation continues or renewal on IMCL's own ask (10% IPD / 25% OPD incl. medicines), revenue +9%/yr (TTM +11%, ARPP-led), NOPAT margin 11.2% -> 10%; bull 15% = 30-year renewal on near-current terms and a re-rating toward (but below) peers.",
+  "Exit P/Es 14/20/28 [EST]: own FY-end median 15.6 (FY17-26, includes FY20-23 single-digit years when the lease dispute was dormant and margins 10-14%); peers 33-59x [SCR 24-Nov-2026]; the discount to peers is the lease risk, so a bull exit below peers.",
+  "Dispersion 0.30."
+ ],
+ "sources": [
+  "research_notes/Deep dives/INDRAMEDCO_live.md",
+  "https://nsearchives.nseindia.in/annual_reports/AR_30962_INDRAMEDCO_2025_2026_A_5876360_01092026125250.pdf",
+  "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1748879_29102026043325_WEB.xml",
+  "https://nsearchives.nseindia.in/corporate/INDRAMEDCO_09022026115023_IMCLUPDATE09022026.pdf",
+  "https://www.screener.in/company/INDRAMEDCO/",
+  "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_23112026.csv"
+ ]
+}

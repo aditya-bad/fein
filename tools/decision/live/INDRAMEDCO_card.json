@@ -1,0 +1,71 @@
+# LIVE deep dive #4 (method test; random draw from pharma/healthcare + IT services, Rs 1,000-20,000 cr; see research_notes/Deep dives/INDRAMEDCO_live.md section 0). L9/L21: no buy/sell verdict; the card's paper calls are LIVE. Card v1.3.
+{
+ "worksheet": "../../valuation/live/INDRAMEDCO.json",
+ "decision_date": "2026-11-24", "practice": false, "analyst": "Claude",
+ "deep_dive": "research_notes/Deep dives/INDRAMEDCO_live.md",
+ "thesis": "Method-test thesis: Indraprastha Medical (one ~700-bed Apollo-run hospital in Delhi) earns a ~50% ROIC partly because its land is leased from the Delhi government at Re 1/month in exchange for a free-treatment obligation it has under-delivered (7-10% vs 33% IPD / 40% OPD per GNCTD). The lease expired 31-Jul-2023 and the JV agreement 10-Mar-2018; GNCTD told the Supreme Court on 27-Jan-2026 that renewal would be 'contrary to public interest'. The 5-year outcome is a legal/political binary layered on a good operating business, not an operating-earnings call.",
+ "variant_view": "Market: at Rs 356 the stock trades at 17.0x trailing P/E and 9.8x EV/EBITDA net of Rs 521 cr cash, against hospital peers at 33-59x (median 48x) - a ~65% discount that IS the lease risk. A simple two-state read (going concern at ~30x = ~Rs 630/share vs handover value ~Rs 60-90/share) puts the price-implied probability of a workable renewal at roughly 50% [EST]. Our view: no claimable mispricing - we have no edge on a Supreme Court / Delhi-government outcome, and the evidence we found leans NEGATIVE relative to how the company presents it: (1) the FY26 annual report, the Q2 FY27 results notes and the MD&A do not mention that the lease and JV agreement have expired or the January affidavit (only a 3-Feb-2026 board-outcome paragraph 'noted' it), while the contingent-liability note says the company 'has remained compliant with the applicable requirements under the lease'; (2) the Delhi government (26% holder, a promoter) did not vote its shares at the 24-Sep-2026 AGM (promoter votes polled 21.44m of 46.75m) and has not nominated its 3 directors including the Chairman; (3) the MD's term ended 4-Nov-2026 with no successor announced; (4) ROIC is flattered by the land subsidy, so any renewal on market or stricter-EWS terms compresses margins. Positive offsets: Rs 521 cr net cash (16% of market cap, Rs 57/share), no debt, steady ARPP-led growth (+11% TTM revenue, 18% OPM), and courts and governments usually prefer stricter terms to closing a 700-bed hospital. What would prove us wrong: a 30-year renewal on terms close to IMCL's own ask (10% IPD / 25% OPD incl. medicines) with no retrospective claim. Departure from the outside view: our raw P(blow-up) 20% and P(<=0.5x) 26% are ABOVE the class base rates (15% / 11%) because of a specific, dated legal threat; anchored at w=0.3 (evidence note). Checked by paper calls thesis:paper-call:INDRAMEDCO:*.",
+ "stage2": {
+  "source": "S2 checklist in research_notes/Deep dives/INDRAMEDCO_live.md section 1 (AR FY26 auditor's report + CARO, 517 NSE announcements to 23-Nov-2026, NSE pledge API 23-Nov-2026 + SHP XBRL 30-Sep-2026, ICRA rating filing 27-May-2026, solvency_screen run 24-Nov-2026).",
+  "hard": [
+   {"rule": "H1a fake-cash signal", "status": "pass", "evidence": "Liquid assets Rs 556 cr at 30-Sep-2026 (cash 6.5 + other bank 196.9 + current investments 142.2 + non-current investments 210.9) [Q2FY27 XBRL]; FY26 interest income Rs 27.6 cr on ~Rs 450 cr average (~6%) [AR26 n.23] - consistent"},
+   {"rule": "H1b economics implausible", "status": "pass", "evidence": "Company KPIs cross-foot: 63,236 discharges x ALOS 3.23 = 204,252 bed-days x Rs 69,714 per bed-day = Rs 1,424 cr = sale of services Rs 1,424.95 cr [AR26 MD&A, n.22]; OPM 18% vs listed hospital peers 15-27%"},
+   {"rule": "H1c profits unverifiable by outsiders", "status": "pass", "evidence": "Single visible hospital; 607k OPD visits; payers include insurers/TPAs (Family Health Plan Rs 26 cr) and cash; debtor days 28"},
+   {"rule": "H2 auditor exit / qualified opinion", "status": "pass", "evidence": "AR FY26 auditor's opinion unmodified; one KAM = free-treatment litigation (SLP 29482/2009); no statutory-auditor resignation; Q2 FY27 limited review filed"},
+   {"rule": "H3 rating 'issuer not cooperating'", "status": "pass", "evidence": "Credit-rating filings 09-Apr-2024, 28-Apr-2025, 27-May-2026; no INC/withdrawal; no debt outstanding"},
+   {"rule": "H4 SME/Telegram pump", "status": "pass", "evidence": "Main board since 1990s; NSE volume-spurt queries 16/19-Nov-2026 and price-movement query 09-Oct-2025 (routine); 6-month ADV Rs 11.6 cr mean / 5.5 cr median [YH]"},
+   {"rule": "H5 related-party cash leakage to promoter entities", "status": "pass", "evidence": "Apollo-group purchases/services ~Rs 82 cr FY26 (5.6% of revenue; Sindoori/Apollo Sindoori housekeeping & food 35.2, reimbursements 19.2, pharmacy consumables 16.7, Vitamed 10.4) vs income from Apollo (pharmacy commission 38.7 + licence fee 1.6) [AR26 n.30.L]; graded as a soft flag (pharmacy economics sit with Apollo)"}
+  ],
+  "graded": [
+   {"rule": "G1 promoter pledge > 25% (v3: >50% strong red)", "status": "clear", "evidence": "NSE pledge API 23-Nov-2026: promoter shares pledged 0 (0.00%); SHP XBRL 30-Sep-2026 encumbrance flags false; promoters 51.00% (GNCTD 26.00%, AHEL 22.45%, Reddy family ~0.9%)"},
+   {"rule": "G2 accounting-trouble events in 5 years", "status": "clear", "evidence": "None found"},
+   {"rule": "G3 dilution", "status": "clear", "evidence": "9,16,73,000 shares unchanged for 10+ years"},
+   {"rule": "G4 solvency set (S1/S5 India)", "status": "clear", "evidence": "solvency_screen 24-Nov-2026: grade blank, 0 flags; ICR ~41x (EBIT/finance cost incl. bank charges); no borrowings"},
+   {"rule": "Q CFO/PAT 5y (question)", "status": "clear", "evidence": "FY22-26 CFO Rs 762 cr vs PAT Rs 614 cr = 1.24x [SCR]"},
+   {"rule": "Q other-income share", "status": "clear", "evidence": "FY26 other income Rs 28.8 cr = 11.7% of PBT (all treasury)"}
+  ]
+ },
+ "stage3": {
+  "pead": {"applicable": true, "quintile": 5, "event_date": "2026-10-29", "note": "Q2 FY27 SUE +1.27 -> quintile 5 (live_tracker.sue_for on eps_history.csv, fixed cut-points); Q1 FY27 +1.07 -> Q4. Not in the avoid window."},
+  "credibility": {"score": null, "peer_median": null, "n": 3, "category": "AR mode (no concall transcripts on NSE)", "note": "ar_run.py v1.4 on FY24-26 ARs: 17 candidates, 3 scored (all generic), MCS not meaningful (L37). Disclosure-quality flags are the read: the lease/JV expiry and the GNCTD affidavit are absent from AR FY26 and Q2 FY27 notes; the free-treatment note is boiler-plate carried since FY10; the FY26 note adds 'remained compliant with the applicable requirements under the lease'."},
+  "detectors": [
+   {"name": "Lease of hospital land expired; government opposes renewal", "date": "2026-01-27", "detail": "Lease expired 31-Jul-2023, JV agreement 10-Mar-2018 (GNCTD affidavits per press); IMCL renewal proposal 09-May-2025; GNCTD affidavit 27-Jan-2026: renewal 'contrary to public interest'; IMCL board 'noted' it 03-Feb-2026 (filed 09-Feb-2026); SC hearing listed 19-Mar-2026, outcome not found", "severity": "high"},
+   {"name": "Supreme Court warning", "date": "2025-03-25", "detail": "Bench (Surya Kant J) warned it could hand the hospital to AIIMS if poor patients are not treated free; ordered joint inspection", "severity": "high"},
+   {"name": "Delhi government abstains at AGM; board seats vacant", "date": "2026-09-24", "detail": "Promoter votes polled 21,442,500 of 46,753,000 (GNCTD's 23.8m not voted); GNCTD yet to nominate 3 directors incl. Chairman [AR26]", "severity": "med"},
+   {"name": "MD term ended", "date": "2026-11-04", "detail": "MD Shivakumar Pattabhiraman's 2-year term ended; no successor announced in the 05-Nov-2026 filing", "severity": "med"}
+  ]
+ },
+ "stage4": {
+  "soft_flags": [
+   {"flag": "Land lease (Re 1/month) expired 31-Jul-2023; JV agreement expired 2018; GNCTD affidavit opposes renewal; SC threatened AIIMS takeover", "status": "open", "changes_mind": "Executed lease renewal (any term) or an SC order fixing EWS terms short of 33% IPD", "review": "2027-05-31"},
+   {"flag": "Disclosure: AR FY26 and Q2 FY27 notes omit the lease/JV expiry and the affidavit; note says 'remained compliant with the lease' while GNCTD alleges 7-10% EWS delivery vs 33%/40%", "status": "open", "changes_mind": "A full Reg-30 disclosure of the lease status and hearing outcomes", "review": "2027-02-15"},
+   {"flag": "ROIC ~50% is partly a land subsidy (rent Rs 12/yr; GNCTD funded Rs 15.48 cr of the building; building ownership 'to be decided') - looks-good flag", "status": "open", "changes_mind": "Renewal at a disclosed rent with margin still >= 16%", "review": "2027-11-30"},
+   {"flag": "Apollo keeps in-hospital pharmacy economics; IMCL books a commission (Rs 38.7 cr, +29% YoY); pricing formula not disclosed", "status": "open", "changes_mind": "AGM RPT annex disclosing commission rate and term", "review": "AR FY27"},
+   {"flag": "Advertising/marketing Rs 105 cr = 7.1% of revenue (+23% YoY), high for one hospital; composition undisclosed (agent/facilitator commissions?)", "status": "watch", "changes_mind": "Breakdown in AR FY27 or ratio back below 6%", "review": "AR FY27"},
+   {"flag": "Leadership gap: MD term ended 04-Nov-2026; Chairman seat vacant (GNCTD nominee)", "status": "watch", "changes_mind": "MD appointed by Q3 FY27 results", "review": "2027-02-15"},
+   {"flag": "Discharges -2% FY26; growth is price/mix (revenue per patient +11%) - ceiling on a single fixed site", "status": "watch", "changes_mind": "Discharges growing again with ARPP", "review": "AR FY27"}
+  ],
+  "override_log": [
+   {"date": "2026-11-24", "flag": "Hand classification of an unindexed name", "decision": "INDRAMEDCO entered the frame via the pre-registered hand list (Healthcare)", "why": "482 in-range names lacked an index industry; list written before the shuffle"},
+   {"date": "2026-11-24", "flag": "Expired lease vs S0 scoreability", "decision": "kept as subject: the listed entity survives the call horizon even if it loses the hospital (rule a is about the entity ceasing to exist); the lease risk goes into tails and calls", "why": "Pre-registered rule wording; disclosed"},
+   {"date": "2026-11-24", "flag": "Credibility score", "decision": "no score used; AR-mode disclosure flags instead (L37)", "why": "No concalls; n=3 generic promises"}
+  ]
+ },
+ "survival": {"pledge_pct_of_promoter": 0.0, "interest_cover": 41.0, "already_owned": false, "is_financial": false, "as_of": "2026-11-24", "source": "NSE pledge API 23-Nov-2026; FY26 EBIT 252 / finance costs 6.0", "note": "No pledge, no debt; survival cap not triggered. The real survival risk here is legal (lease), which the cap does not measure."},
+ "tail_anchor": {"base_weight": 0.3, "evidence": "Weighted LESS toward the class (w=0.3 < 0.5) because the raw tails are ABOVE the class rates for a specific, dated, documented reason: land lease expired 31-Jul-2023; GNCTD affidavit 27-Jan-2026 opposing renewal; SC 25-Mar-2025 warning of an AIIMS takeover. Anchoring at 0.5 would pull P(blow-up) DOWN toward 15% on no evidence."},
+ "base_rate_class": "india_nonfin_1000_20000cr_5y",
+ "sizing": {"tier": "satellite", "kelly_fraction": 0.25, "max_pct_at_cost": null, "portfolio_value": 1.0, "adv_value": null, "adv_pct": 0.10, "days_to_exit": 5},
+ "kill_criteria": [
+  {"if": "SC order or GNCTD decision refusing lease renewal / directing handover", "measure": "Reg-30 filing; SC order on SLP(C) 29482/2009", "by": "2027-11-30"},
+  {"if": "Renewal or order requiring free treatment above 20% of IPD including medicines, or a retrospective recovery claim > Rs 200 cr", "measure": "Reg-30; AR FY27 contingent-liability note", "by": "2027-11-30"},
+  {"if": "No MD appointed by 31-Mar-2027", "measure": "Reg-30", "by": "2027-03-31"},
+  {"if": "Modified audit opinion or emphasis of matter on going concern / lease", "measure": "AR FY27", "by": "2027-09-30"}
+ ],
+ "pre_mortem": [
+  "The Supreme Court accepted GNCTD's position in 2027; the hospital was transferred to a government operator against compensation for equipment only; IMCL became a cash shell worth ~Rs 60-80/share and minority holders waited years for distribution.",
+  "A renewal came with a market-linked lease rent and a monitored 33% IPD free quota including medicines; EBITDA margin fell from 18% to ~8% and the P/E stayed in the teens on halved earnings.",
+  "Apollo prioritised its own Delhi-NCR hospitals for growth and referrals; IMCL's discharges kept falling while ARPP growth slowed.",
+  "A retrospective claim for under-delivered free treatment since 2009 (or for medicines) was booked as a large exceptional item."
+ ],
+ "review_date": "2027-02-15"
+}

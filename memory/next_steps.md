@@ -8,9 +8,10 @@ Last updated: 2026-11-24
   own read-only Kite MCP wrapper, Screener.in credentials (stored on Pi only).
 
 ## In flight (24-Nov-2026)
-- Pi deployment bundle (deploy/pi/: healthcheck, install, uninstall, jobs) — finishing.
-- Live deep dive #4 (pharma/IT draw, protocol v1.4) → decision card + paper calls.
-- Pre-registered test: survival cap for any red-flag firm regardless of earnings.
+- ~~Pi bundle, live dive #4, survival-cap test~~ DONE 24-Nov (see session_log).
+- Next queue: (1) cached industry map for full universe; (2) ar_run.py BadZipFile fix for ZIP annual reports;
+  (3) card: manual "core-asset licence/lease threat" trigger + flag when anchoring lowers tails (L40);
+  (4) prereg split rule pledge vs ICR (L39); (5) live dive #5 — IT or bank/NBFC.
 - Deep-dive protocol v1.4 committed; ">20% of mcap" holdco trigger is an untested rule of thumb (insight:holdco-stake-20pct-trigger).
 
 ## Build plan (after answers) — don't start stock-picking before step 1

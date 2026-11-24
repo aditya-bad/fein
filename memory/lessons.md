@@ -295,3 +295,12 @@ with pledge >25% or interest cover <1.5x, regardless of earnings surprise: 12-mo
 red-flag firm = starter size (≤1%) and no additions; inside the PEAD window, 0 new money (v1.2). Pledge is bad on both tails
 (fewer winners too); weak interest cover mostly widens the spread — a split rule needs its own pre-registered test.
 S1/S5 alone add nothing (too few events, ~1.0–1.2×). Caveat: event sample not blind; only the snapshot panel is a true replication.
+
+## L40 (2026-11-24) — Very high ROIC can be a government concession, not a moat (INDRAMEDCO live dive #4)
+IMCL's ~54% ROIC rests on land leased at ₹1/month; the lease expired Jul-2023 and the government counterparty opposes renewal
+in the Supreme Court — yet the FY26 annual report never mentions the expiry. **Rule:** for any government-granted input (land,
+lease, licence, PPP), record expiry, the obligation given in return and compliance with it, and the counterparty's own filings;
+treat the stock as an option on renewal. Add "material external fact absent from the AR" as a disclosure flag. Read vote results
+as promoter shares held vs votes polled (a co-promoter abstaining revealed the broken JV). Card v1.3's survival cap cannot see
+legal/licence risk → candidate manual trigger. Tail anchoring can *lower* well-documented tails; flag when it does.
+Process: sector frames need a full industry map (NSE index lists left 60% of the band unclassified).
