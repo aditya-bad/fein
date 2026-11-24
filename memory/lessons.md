@@ -286,3 +286,12 @@ renewed annually below the vote threshold); a switch to direct OEM pricing infla
 materials ratio). Credibility 43% vs 60% sector median. Card size 0 (EV 1.40× anchored vs 1.76× hurdle).
 **Rules:** for cheap-tercile names, value on normalised (cycle-average) earnings; read vote *results*, not just
 notices; when a related-party channel changes, check growth against the materials ratio.
+
+## L39 (2026-11-24) — Red-flag firms are high-variance, not just bad: cap size, don't veto
+Pre-registered test (`research_notes/Backtests/survival_cap_general_india.md`, prereg committed before results). Indian non-financials
+with pledge >25% or interest cover <1.5x, regardless of earnings surprise: 12-month halving 17.8% vs 7.1% (RR 2.49×, CI 1.96–3.13);
+5-year failure, survivorship-free panel 2.36× (CI 1.58–3.66); 3-year failure 5.2×. But they also produced more 3× winners in 2018–21
+(1.37×; 1.07× in 2022–25), and the cap would have flagged ~31% of eventual triplers. **Rule (card v1.3):** outside the PEAD window,
+red-flag firm = starter size (≤1%) and no additions; inside the PEAD window, 0 new money (v1.2). Pledge is bad on both tails
+(fewer winners too); weak interest cover mostly widens the spread — a split rule needs its own pre-registered test.
+S1/S5 alone add nothing (too few events, ~1.0–1.2×). Caveat: event sample not blind; only the snapshot panel is a true replication.

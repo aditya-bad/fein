@@ -33,7 +33,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "..", "valuation"))
 import worksheet as ws  # noqa: E402
 
-CARD_VERSION = "1.2 (2026-11-23; India survival cap, outside-view tail anchoring in the EV/Kelly gate)"
+CARD_VERSION = "1.3 (2026-11-24; general India survival cap outside the PEAD window, L39)"
 PEAD_AVOID_QUINTILES = (1, 2)          # L19: bottom two SUE quintiles
 # v1.1 (L34): the avoid gate is calibrated for India only (bottom two quintiles: L17, L19, L31, confirmed 3 times).
 # US: no PEAD back-test on file and the SUE proxy cut-points are uncalibrated -> quintile shown, never blocks.
@@ -47,6 +47,10 @@ EDGE_CLAIM_RATIO = 2.0                 # model P(>=3x) > 2x base rate (or P(<=0.
 # -> 0 new money (hold-review if already owned) + a mandatory balance-sheet question. S5-India alone is NOT a trigger.
 SURVIVAL_PLEDGE = 0.25                 # fraction of the promoter holding pledged (strictly above)
 SURVIVAL_ICR = 1.5                     # interest cover, x (strictly below)
+# v1.3 general survival cap (L39, survival_cap_general_india.md): India, OUTSIDE the PEAD window, the same trigger
+# (pledge > 25% or, for non-financials, interest cover < 1.5x) caps the position at the starter size, no additions.
+# Inside the PEAD window the v1.2 rule (0 new money) still applies. Interest cover is not applied to lenders.
+SURVIVAL_MIN_SIZE = 0.01               # starter size, fraction of portfolio at cost
 SURVIVAL_QUESTION = ("Balance-sheet question (mandatory): can the company service its debt and can the promoter meet a "
                      "margin call through a 12-month stress (no refinancing, a further 30% share-price fall)? Answer from "
                      "the debt schedule, maturity profile, pledge-lender terms and rating letters, not from management.")
@@ -150,22 +154,25 @@ def _outcomes(sc, sigma):
 
 
 def survival_cap(market, pead_active, surv):
-    """v1.2 survival cap (L35). Returns dict(status, triggered, blocks, reasons, already_owned, text).
-    status: 'n/a' (not India or PEAD not active), 'clear', 'TRIGGERED', 'UNCHECKED'.
-    UNCHECKED (PEAD active, a needed input missing) is treated as triggered until checked, like a stage-2 unknown.
-    S5-India is deliberately not an input (L35: no signal on its own)."""
+    """Survival cap v1.3 (L35 + L39). Returns dict(status, triggered, blocks, mode, cap_size, reasons, already_owned).
+    status: 'n/a' (not India), 'clear', 'TRIGGERED', 'UNCHECKED'. mode: 'block' (PEAD avoid window active: 0 new money,
+    v1.2) or 'cap' (no PEAD window: size <= SURVIVAL_MIN_SIZE, no additions, v1.3). UNCHECKED (a needed input missing)
+    is treated as triggered until checked, like a stage-2 unknown. Interest cover is skipped for lenders
+    (surv['is_financial']). S5-India / S1 are deliberately not inputs (L35, L39: no incremental signal)."""
     surv = surv or {}
     owned = bool(surv.get("already_owned"))
-    if market != "india" or not pead_active:
-        return {"status": "n/a", "triggered": False, "blocks": False, "reasons": [], "already_owned": owned}
-    pl, icr = surv.get("pledge_pct_of_promoter"), surv.get("interest_cover")
+    if market != "india":
+        return {"status": "n/a", "triggered": False, "blocks": False, "mode": None, "cap_size": None, "reasons": [],
+                "already_owned": owned}
+    fin = bool(surv.get("is_financial"))
+    pl, icr = surv.get("pledge_pct_of_promoter"), (None if fin else surv.get("interest_cover"))
     reasons, missing = [], []
     if pl is None:
         missing.append("promoter pledge")
     elif pl > SURVIVAL_PLEDGE:
         reasons.append("promoter pledge %s of promoter holding (> %s)" % (pct(pl, 0), pct(SURVIVAL_PLEDGE, 0)))
     if icr is None:
-        missing.append("interest cover")
+        if not fin: missing.append("interest cover")
     elif icr < SURVIVAL_ICR:
         reasons.append("interest cover %sx (< %sx)" % (num(icr, 2), num(SURVIVAL_ICR, 1)))
     if reasons:
@@ -176,7 +183,9 @@ def survival_cap(market, pead_active, surv):
     else:
         status = "clear"
     trig = status in ("TRIGGERED", "UNCHECKED")
-    return {"status": status, "triggered": trig, "blocks": trig, "reasons": reasons, "already_owned": owned}
+    mode = ("block" if pead_active else "cap") if trig else None
+    return {"status": status, "triggered": trig, "blocks": mode == "block", "mode": mode,
+            "cap_size": SURVIVAL_MIN_SIZE if mode == "cap" else None, "reasons": reasons, "already_owned": owned}
 
 
 def anchor_weight(spec):
@@ -445,16 +454,26 @@ def build(card, card_path):
                                                                      "**ACTIVE**" if active else "not active",
                                                                      (" until %s" % until) if active else ""))
             gates.append(("Stage 3 PEAD avoid flag", ("ACTIVE until %s → WAIT" % until) if active else "clear", active))
-    # v1.2 survival cap (India): PEAD avoid window + pledge > 25% or interest cover < 1.5x
+    # survival cap (India): pledge > 25% or interest cover < 1.5x. PEAD avoid window -> 0 new money (v1.2);
+    # otherwise -> starter size, no additions (v1.3, L39)
     sv_in = card.get("survival") or s3.get("survival") or {}
     sv = survival_cap(wd["market"], pead_active, sv_in)
     if sv["status"] == "n/a":
-        t3.append("- **Survival cap (v1.2):** not applicable (%s)." % (
-            "India only" if wd["market"] != "india" else "PEAD avoid flag not active"))
+        t3.append("- **Survival cap (v1.3):** not applicable (India only).")
         gates.append(("Stage 3 survival cap", "n/a", False))
+    elif sv["mode"] == "cap":
+        t3.append("- **Survival cap (v1.3, general): %s** (%s). Outside the PEAD window a red flag still roughly "
+                  "2.5x the 12-month halving risk and 5x the 3-year failure risk (L39: 17.8%% vs 7.1%%; 14.4%% vs 2.8%%), "
+                  "but flagged firms also produce more 3x winners, so the rule is a size cap, not a veto: **at most "
+                  "%s of the portfolio at cost, no additions while the flag stands**. %s"
+                  % (sv["status"], "; ".join(sv["reasons"]), pct(SURVIVAL_MIN_SIZE, 0),
+                     "Unchecked inputs are treated as triggered until checked. " if sv["status"] == "UNCHECKED" else ""))
+        t3.append("  - %s" % SURVIVAL_QUESTION)
+        gates.append(("Stage 3 survival cap", "%s (%s) → size cap %s, no additions; balance-sheet question open"
+                      % (sv["status"], "; ".join(sv["reasons"]), pct(SURVIVAL_MIN_SIZE, 0)), False))
     else:
         if sv["status"] == "clear":
-            t3.append("- **Survival cap (v1.2):** clear: PEAD avoid flag active, but pledge %s of promoter holding and "
+            t3.append("- **Survival cap (v1.3):** clear: pledge %s of promoter holding and "
                       "interest cover %sx are inside the limits (> %s / < %sx)."
                       % (pct(sv_in.get("pledge_pct_of_promoter"), 0), num(sv_in.get("interest_cover"), 2),
                          pct(SURVIVAL_PLEDGE, 0), num(SURVIVAL_ICR, 1)))
@@ -663,6 +682,8 @@ def build(card, card_path):
     rule_size = min(cands) if cands and kelly_size is not None else 0.0
     blocked = [g for g in gates if g[2]]
     final = 0.0 if blocked else rule_size
+    if sv["mode"] == "cap":               # v1.3 general survival cap: starter size, no additions if already owned
+        final = 0.0 if sv["already_owned"] else min(final, SURVIVAL_MIN_SIZE)
     sv_owned_note = (sv["triggered"] and sv["already_owned"])
     srows = [
         ["Full Kelly f* (5-yr bet vs index hurdle, %s)" % ("anchored outcomes; raw model %s" % pct(f_star_raw, 1)
@@ -682,7 +703,14 @@ def build(card, card_path):
                 "5-point Gauss-Hermite on the same σ, blow-up as a point mass), with H = the index hurdle "
                 "multiple. Fractional Kelly because the inputs are opinions (strategy:thorp-kelly); tier caps from "
                 "strategy:position-sizing (max 5% at cost, satellites 3.5–4%, speculative 1–3%).")
-    if sv["triggered"]:
+    if sv["mode"] == "cap":
+        stxt.append("")
+        stxt.append("**Survival cap (v1.3, general):** red flag outside the PEAD window → size capped at %s of the "
+                    "portfolio at cost, no additions (%s). A size cap, not a veto: flagged firms halve and fail far more "
+                    "often but also produce more 3x winners (L39). The cap lapses when the flag clears."
+                    % (pct(SURVIVAL_MIN_SIZE, 0), "already owned → hold, 0 new money" if sv["already_owned"]
+                       else "final size %s" % pct(final, 1)))
+    if sv["mode"] == "block":
         stxt.append("")
         stxt.append("**Survival cap (v1.2):** %s. Chosen policy: 0 new money rather than a minimum size, because the "
                     "red flag is a solvency risk, not a valuation question; the cap lapses when the PEAD window ends "

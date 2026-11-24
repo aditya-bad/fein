@@ -38,7 +38,7 @@ Last updated: 2026-11-24
 
 ## Pending implementation
 - ~~decision_card.py: add the survival cap~~ DONE 23-Nov (card v1.2: survival cap + tail anchoring to base rates, 20 tests).
-- Pre-register: survival cap for any red-flag firm regardless of earnings (group C showed 2.5× halving risk).
+- ~~Pre-register: survival cap for any red-flag firm~~ DONE 24-Nov: adopted as size cap (card v1.3, L39). Follow-up: pre-register split rule (pledge stricter than interest cover).
 
 ## Dated reminders
 - Feb 2027: Q3 FY27 results — re-check all watchlist kill criteria.

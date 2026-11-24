@@ -24,9 +24,29 @@ class TestSurvivalCap(unittest.TestCase):
         self.assertEqual(r["status"], "n/a")
         self.assertFalse(r["blocks"])
 
-    def test_pead_inactive_never_triggers(self):
+    def test_pead_inactive_caps_not_blocks(self):
+        # v1.3 (L39): outside the PEAD window the red flag caps size instead of blocking
         r = dc.survival_cap("india", False, {"pledge_pct_of_promoter": 0.9, "interest_cover": 0.5})
-        self.assertEqual(r["status"], "n/a")
+        self.assertEqual(r["status"], "TRIGGERED")
+        self.assertEqual(r["mode"], "cap")
+        self.assertFalse(r["blocks"])
+        self.assertEqual(r["cap_size"], dc.SURVIVAL_MIN_SIZE)
+
+    def test_pead_inactive_clear(self):
+        r = dc.survival_cap("india", False, {"pledge_pct_of_promoter": 0.1, "interest_cover": 4.0})
+        self.assertEqual(r["status"], "clear")
+        self.assertIsNone(r["mode"])
+
+    def test_pead_inactive_unchecked_caps(self):
+        r = dc.survival_cap("india", False, {"interest_cover": 4.0})
+        self.assertEqual(r["status"], "UNCHECKED")
+        self.assertEqual(r["mode"], "cap")
+
+    def test_financial_skips_interest_cover(self):
+        r = dc.survival_cap("india", False, {"pledge_pct_of_promoter": 0.0, "interest_cover": 1.1, "is_financial": True})
+        self.assertEqual(r["status"], "clear")
+        r = dc.survival_cap("india", False, {"pledge_pct_of_promoter": 0.0, "is_financial": True})
+        self.assertEqual(r["status"], "clear")
 
     def test_pledge_trigger(self):
         r = dc.survival_cap("india", True, {"pledge_pct_of_promoter": 0.30, "interest_cover": 5.0})
@@ -140,6 +160,22 @@ class TestBuildIntegration(unittest.TestCase):
         self.assertEqual(dec["survival_cap"]["status"], "TRIGGERED")
         self.assertIn("Balance-sheet question", F["stage3"])
         self.assertIn("Stage 3 survival cap", F["gate_log"])
+
+    def test_general_cap_limits_size(self):
+        def m(c):
+            c["survival"] = {"pledge_pct_of_promoter": 0.40, "interest_cover": 4.0}
+        F, recs, _ = self._build(m)
+        dec = recs[-1]["data"]
+        self.assertEqual(dec["survival_cap"]["mode"], "cap")
+        self.assertGreater(dec["size_after_gates"], 0)
+        self.assertLessEqual(dec["size_after_gates"], dc.SURVIVAL_MIN_SIZE)
+        self.assertIn("Balance-sheet question", F["stage3"])
+
+    def test_general_cap_owned_no_additions(self):
+        def m(c):
+            c["survival"] = {"pledge_pct_of_promoter": 0.0, "interest_cover": 1.2, "already_owned": True}
+        F, recs, _ = self._build(m)
+        self.assertEqual(recs[-1]["data"]["size_after_gates"], 0.0)
 
     def test_survival_clear_when_flags_clear(self):
         def m(c):
