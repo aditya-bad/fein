@@ -1,13 +1,17 @@
 # Next steps
 
-Last updated: 2026-11-19
+Last updated: 2026-11-24
 
-## Waiting on the user (asked 2026-11-19)
-1. Work / industry / domain they understand from the inside
-2. City and what they can physically check (dealers, factories, markets, network)
-3. Time horizon, rough capital, separate income
-4. Hours per week available
-5. Which data access they can give (Screener login, Kite/Trendlyne MCP, transcript API)
+## Waiting on the user
+- ~~Q1–4 (work, city, horizon/capital, hours)~~ superseded 20-Nov-2026: user said capital/job don't matter; proceed without.
+- Infra (user will provide later, see `My Requirements/requirements.md` List 2): Raspberry Pi + Remote Control,
+  own read-only Kite MCP wrapper, Screener.in credentials (stored on Pi only).
+
+## In flight (24-Nov-2026)
+- Pi deployment bundle (deploy/pi/: healthcheck, install, uninstall, jobs) — finishing.
+- Live deep dive #4 (pharma/IT draw, protocol v1.4) → decision card + paper calls.
+- Pre-registered test: survival cap for any red-flag firm regardless of earnings.
+- Deep-dive protocol v1.4 committed; ">20% of mcap" holdco trigger is an untested rule of thumb (insight:holdco-stake-20pct-trigger).
 
 ## Build plan (after answers) — don't start stock-picking before step 1
 1. Personalise the edge thesis in `mission_and_edge.md` around the user's domain.
