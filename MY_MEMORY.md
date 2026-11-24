@@ -1,7 +1,7 @@
 # My Memory — everything we've learned and decided
 
 *Your plain-language copy. Claude updates this at the end of every session.*
-*Last updated: 22 Nov 2026.*
+*Last updated: 24 Nov 2026.*
 
 ---
 
@@ -15,9 +15,9 @@ before trusting it. Your branch is the default, so every new session loads this 
 | 1 Universe | NSE/BSE/SEC fetch tools; lists of failed Indian companies. Full scale waits for your Pi / Kite / Screener. |
 | 2 Hard filters | Fraud & governance rules **tested**: catch frauds, miss debt blow-ups → solvency flags added. **Promoter pledge >50% = strongest red flag** (2.4× failure risk, 5× liquidation risk) once failed companies are included. |
 | 3 Signals | **Earnings-miss "avoid" signal proven in two periods.** Insider buying: no edge (US & India). Promise tracker across 3 sectors + 2 markets. |
-| 4 Deep dive | "Security-guard depth" protocol v1.3, practised on retail, a manufacturer, a US retailer and a bank. |
+| 4 Deep dive | "Security-guard depth" protocol v1.4 (one-page checklist). 4 live dives on randomly drawn stocks; latest: Indraprastha Apollo Hospitals — its cheap price hides an expired government land lease the annual report never mentions. |
 | 5 Valuation | Worksheet: what the price assumes, scenarios, how much growth a 3×/5× needs. |
-| 6 Decision | Card: gates, probabilities, kill criteria, position size by rule. |
+| 6 Decision | Card v1.3: gates, probabilities, kill criteria, position size by rule. **New (tested 24 Nov):** any company with promoter pledge >25% or weak interest cover gets at most a tiny starter position — they halve 2.5× more often, though some do triple. |
 | 7 Scorekeeping | **115 dated predictions** open; automatic resolver + scoreboard; first results from 31 Jan 2027. |
 
 **What 7 honest tests showed:** rules for *picking winners* from public data have all failed (0 of 6).
@@ -127,6 +127,10 @@ India, small size by itself has not).
   big beats were only slightly ahead after costs — not reliable. A live tracker starts with the Jan–Feb 2027 results.
 - **Blind historical drills don't work for an AI** (it recognised 19/20 companies). So we test skill with
   dated predictions about the future instead: 42+ open, scored from Jan 2027.
+
+## 5d. Your Raspberry Pi is ready to set up (24 Nov 2026)
+When you have the Pi: follow `deploy/pi/README.md` — run `install.sh`, then `healthcheck.sh`. It schedules all the nightly checks.
+Nothing on the Pi accepts incoming connections, passwords stay only on the Pi, and it never pushes to GitHub unless you turn that on.
 
 ## 5b. New things we learned in the knowledge scout
 - **Valuation timing matters.** Since 2004, every negative 5-year Nifty return started at P/E ≥ 24.5;
