@@ -12,12 +12,13 @@ the evidence for the previous one's promises.
 
 Cache layout (an AR-mode cache root is separate from the concall cache, so the two never mix):
     <ar_root>/<SYMBOL>/ar_list.json          NSE api/annual-reports rows (+ submitted)
-    <ar_root>/<SYMBOL>/txt/AR_FY26.txt       pdftotext -layout output (ZIPs: all PDFs inside, name order)
+    <ar_root>/<SYMBOL>/txt/AR_FY26.txt       pdftotext -layout output (ZIPs: most likely AR PDF inside, or its numbered parts)
     <ar_root>/<SYMBOL>/manifest.json         one row per document: file, url, filed, call_date (= submission
                                              date), quarter ("ARFY26"), fy, kind, words, skip
 <ar_root> = --cache if given, else $PT_CACHE/ar, else ~/.cache/fein_promise_tracker/ar.
 PDFs and ZIPs are untrusted data. They are written to <SYMBOL>/pdf/, converted, and DELETED (unless
 --keep-pdf); ZIP members are read in memory and only *.pdf members are used (no path is taken from the archive).
+File type is detected by magic bytes; a corrupt ZIP/PDF skips that year with a WARNING instead of crashing.
 
 Optional extra documents from the NSE announcement list (each counts as its own dated "call", kind shown in
 the manifest): --presentations (investor presentations), --outcomes ("Outcome of Board Meeting" PDFs, which
@@ -28,9 +29,11 @@ import datetime as dt
 import io
 import os
 import re
+import subprocess
 import sys
 import urllib.parse
 import zipfile
+import zlib
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -88,23 +91,69 @@ def pdf_bytes_to_text(data, pdir, stem):
                 os.remove(x)
 
 
+ZIP_MAX_MEMBER = 400 * 2 ** 20
+_LIKELY = re.compile(r"annual|integrated|\bar\b|\bar[\s_-]*20\d\d|report", re.I)
+_UNLIKELY = re.compile(r"notice|agm|brsr|business\s*responsib|cover|letter|intimation|proxy|attendance|e-?voting", re.I)
+_PART = re.compile(r"part[\s_-]*\d+|vol(ume)?[\s_-]*\d+", re.I)
+
+
+def pick_zip_members(infos):
+    """Choose which ZIP members hold the annual report. `infos` = zipfile.ZipInfo list (or objects with
+    .filename / .file_size / .is_dir()). Rule: the most likely PDF (name looks like an annual report and not like
+    a notice/BRSR/cover letter), ties broken by size (largest). If that file is one of several numbered parts
+    ("Part 1", "Vol 2"), all numbered parts are returned in name order. Returns [] if there is no usable PDF."""
+    pdfs = [i for i in infos if not i.is_dir() and i.filename.lower().endswith(".pdf")
+            and "__macosx" not in i.filename.lower() and 0 < i.file_size <= ZIP_MAX_MEMBER]
+    if not pdfs:
+        return []
+
+    def score(i):
+        b = os.path.basename(i.filename)
+        return (bool(_LIKELY.search(b)) - bool(_UNLIKELY.search(b)), i.file_size)
+    best = max(pdfs, key=score)
+    if _PART.search(os.path.basename(best.filename)):
+        parts = [i for i in pdfs if _PART.search(os.path.basename(i.filename))
+                 and not _UNLIKELY.search(os.path.basename(i.filename))]
+        if len(parts) > 1:
+            return sorted(i.filename for i in parts)
+    return [best.filename]
+
+
 def extract(data, url, pdir, stem, keep=False):
-    """PDF or ZIP bytes -> text (ZIP: every .pdf member in name order, joined)."""
+    """PDF or ZIP bytes -> (text, n_pdfs). The type is detected by magic bytes, not by the URL extension (NSE
+    sometimes lists an AR as .zip, or a .pdf link serves a ZIP). ZIP: the most likely annual-report PDF (or all its
+    numbered parts) is used; see pick_zip_members. Raises ValueError for anything unusable, including corrupt or
+    encrypted ZIPs and PDFs pdftotext cannot read, so the caller can skip that year with a warning."""
     if keep:
         with open(os.path.join(pdir, stem + os.path.splitext(urllib.parse.urlparse(url).path)[1]), "wb") as f:
             f.write(data)
-    if data.startswith(b"%PDF"):
-        return pdf_bytes_to_text(data, pdir, stem), 1
-    if data.startswith(b"PK"):
-        parts = []
-        with zipfile.ZipFile(io.BytesIO(data)) as z:
-            names = sorted(n for n in z.namelist() if n.lower().endswith(".pdf"))
-            for i, n in enumerate(names):
-                if z.getinfo(n).file_size > 400 * 2 ** 20:
-                    continue
-                parts.append(pdf_bytes_to_text(z.read(n), pdir, f"{stem}_part{i:02d}"))
-        return "\n\f\n".join(parts), len(parts)
-    raise ValueError("neither PDF nor ZIP")
+    head = data[:1024]
+    try:
+        if head.lstrip().startswith(b"%PDF") or b"%PDF-" in head:
+            return pdf_bytes_to_text(data, pdir, stem), 1
+        if data.startswith(b"PK"):
+            with zipfile.ZipFile(io.BytesIO(data)) as z:
+                names = pick_zip_members(z.infolist())
+                if not names:
+                    raise ValueError("ZIP holds no usable PDF (members: %s)"
+                                     % ", ".join(n for n in z.namelist()[:8]))
+                parts = []
+                for i, n in enumerate(names):
+                    blob = z.read(n)
+                    if b"%PDF" not in blob[:1024]:
+                        print(f"  warning: ZIP member {os.path.basename(n)!r} is not a PDF; ignored")
+                        continue
+                    parts.append(pdf_bytes_to_text(blob, pdir, f"{stem}_part{i:02d}"))
+                if not parts:
+                    raise ValueError("ZIP members named .pdf are not PDFs")
+            return "\n\f\n".join(parts), len(parts)
+    except (zipfile.BadZipFile, zlib.error, EOFError, NotImplementedError, RuntimeError, OSError) as e:
+        raise ValueError(f"corrupt or unreadable archive/PDF ({type(e).__name__}: {e})") from e
+    except subprocess.CalledProcessError as e:
+        raise ValueError(f"pdftotext failed (exit {e.returncode})") from e
+    except subprocess.TimeoutExpired as e:
+        raise ValueError("pdftotext timed out") from e
+    raise ValueError("neither PDF nor ZIP (first bytes %r)" % data[:8])
 
 
 def add_doc(manifest, sym, root, key, url, filed, kind, label, fy, keep=False):
@@ -112,11 +161,14 @@ def add_doc(manifest, sym, root, key, url, filed, kind, label, fy, keep=False):
     txt = os.path.join(tdir, key + ".txt")
     nparts = None
     if not os.path.exists(txt) or os.path.getsize(txt) == 0:
-        data = FE.http_get(url)
         try:
+            data = FE.http_get(url)
             text, nparts = extract(data, url, pdir, key, keep)
         except ValueError as e:
-            print(f"  skip {key}: {e}")
+            print(f"  WARNING: skipping {key} ({label}): {e}", file=sys.stderr)
+            return
+        except Exception as e:  # network errors etc.: one bad year must not stop the run
+            print(f"  WARNING: skipping {key} ({label}): download failed ({type(e).__name__}: {e})", file=sys.stderr)
             return
         with open(txt, "w") as f:
             f.write(text)

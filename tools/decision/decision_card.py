@@ -33,7 +33,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "..", "valuation"))
 import worksheet as ws  # noqa: E402
 
-CARD_VERSION = "1.3 (2026-11-24; general India survival cap outside the PEAD window, L39)"
+CARD_VERSION = "1.4 (2026-11-24; manual core-asset threat trigger + anchoring-lowered-tails warning, L40)"
 PEAD_AVOID_QUINTILES = (1, 2)          # L19: bottom two SUE quintiles
 # v1.1 (L34): the avoid gate is calibrated for India only (bottom two quintiles: L17, L19, L31, confirmed 3 times).
 # US: no PEAD back-test on file and the SUE proxy cut-points are uncalibrated -> quintile shown, never blocks.
@@ -56,6 +56,13 @@ SURVIVAL_QUESTION = ("Balance-sheet question (mandatory): can the company servic
                      "the debt schedule, maturity profile, pledge-lender terms and rating letters, not from management.")
 # v1.2 tail anchoring (L36): anchored P = w*base + (1-w)*model for P(blow-up) and P(<=0.5x); w defaults to 0.5,
 # can go below 0.5 only with a written evidence note, never below 0.25. The anchored tails feed the EV gate and Kelly.
+# v1.4 (L40): a manual survival input `survival.core_asset_threat` = {"description", "source", "date"} (a government
+# land lease / licence / concession / PPP the business depends on is expiring, contested or being withdrawn) fires the
+# survival cap exactly like a red flag in both modes (PEAD window -> 0 new money; otherwise starter size, no additions).
+# The pledge / interest-cover screen cannot see legal or licence risk. Tail anchoring that LOWERS a model tail (base
+# rate below our documented estimate) is flagged on the card: ANCHOR_LOWERED_WARNING.
+CORE_ASSET_THREAT_REASON = "core-asset licence/lease threat (L40)"
+ANCHOR_LOWERED_WARNING = "anchoring lowered documented tails — check evidence note"
 ANCHOR_WEIGHT_DEFAULT = 0.5
 ANCHOR_WEIGHT_MIN = 0.25
 ANCHOR_FALLBACK_LOSS_MULT = 0.35       # extra <=0.5x mass with no model outcome in that bucket goes here
@@ -79,7 +86,8 @@ TEMPLATE = {
                                "changes_mind": "", "review": ""}],
                "override_log": [{"date": "", "flag": "", "decision": "", "why": ""}]},
     "survival": {"pledge_pct_of_promoter": None, "interest_cover": None, "already_owned": False, "as_of": "",
-                 "source": "", "note": "India only; checked when the PEAD avoid flag is active (card v1.2)"},
+                 "source": "", "note": "India only; PEAD window -> 0 new money (v1.2), else starter-size cap (v1.3)",
+                 "core_asset_threat": None},   # v1.4 optional: {"description": "", "source": "", "date": ""}
     "tail_anchor": {"base_weight": 0.5, "evidence": None},
     "base_rate_class": "india_nonfin_1000_20000cr_5y",
     "sizing": {"tier": "satellite", "kelly_fraction": 0.25, "max_pct_at_cost": None,
@@ -153,8 +161,23 @@ def _outcomes(sc, sigma):
     return out
 
 
+def core_asset_threat_reason(surv):
+    """v1.4 (L40): reason text for a manual core-asset threat, or None. Accepts a dict (description, source, date)
+    or a plain string; empty / None / a dict without a description means no threat."""
+    t = (surv or {}).get("core_asset_threat")
+    if not t:
+        return None
+    if isinstance(t, str):
+        t = {"description": t}
+    desc = (t.get("description") or "").strip()
+    if not desc:
+        return None
+    meta = ", ".join(x for x in ((t.get("source") or "").strip(), str(t.get("date") or "").strip()) if x)
+    return "%s: %s%s" % (CORE_ASSET_THREAT_REASON, desc, (" [%s]" % meta) if meta else "")
+
+
 def survival_cap(market, pead_active, surv):
-    """Survival cap v1.3 (L35 + L39). Returns dict(status, triggered, blocks, mode, cap_size, reasons, already_owned).
+    """Survival cap v1.4 (L35 + L39 + L40). A manual surv['core_asset_threat'] (v1.4) triggers it like a red flag. Returns dict(status, triggered, blocks, mode, cap_size, reasons, already_owned).
     status: 'n/a' (not India), 'clear', 'TRIGGERED', 'UNCHECKED'. mode: 'block' (PEAD avoid window active: 0 new money,
     v1.2) or 'cap' (no PEAD window: size <= SURVIVAL_MIN_SIZE, no additions, v1.3). UNCHECKED (a needed input missing)
     is treated as triggered until checked, like a stage-2 unknown. Interest cover is skipped for lenders
@@ -175,8 +198,13 @@ def survival_cap(market, pead_active, surv):
         if not fin: missing.append("interest cover")
     elif icr < SURVIVAL_ICR:
         reasons.append("interest cover %sx (< %sx)" % (num(icr, 2), num(SURVIVAL_ICR, 1)))
+    cat = core_asset_threat_reason(surv)
+    if cat:
+        reasons.append(cat)
     if reasons:
         status = "TRIGGERED"
+        if missing:
+            reasons.append("also not checked: %s" % ", ".join(missing))
     elif missing:
         status = "UNCHECKED"
         reasons = ["not checked: %s" % ", ".join(missing)]
@@ -460,6 +488,9 @@ def build(card, card_path):
     sv = survival_cap(wd["market"], pead_active, sv_in)
     if sv["status"] == "n/a":
         t3.append("- **Survival cap (v1.3):** not applicable (India only).")
+        if core_asset_threat_reason(sv_in):
+            t3.append("  - **Core-asset threat recorded (L40), not applied (survival cap is India only): %s.** "
+                      "Weigh it by hand." % core_asset_threat_reason(sv_in))
         gates.append(("Stage 3 survival cap", "n/a", False))
     elif sv["mode"] == "cap":
         t3.append("- **Survival cap (v1.3, general): %s** (%s). Outside the PEAD window a red flag still roughly "
@@ -581,6 +612,8 @@ def build(card, card_path):
         for row, key in ((prow[1], "p_le_half"), (prow[2], "p_blowup")):
             row.append(pct(anc[key], 1) if br(key) is not None else "n/a (no base rate)")
         prow[0].append("not anchored")
+    lowered = [lbl for lbl, key in (("P(≤0.5x)", "p_le_half"), ("P(blow-up)", "p_blowup"))
+               if anchored_on and br(key) is not None and sc.get(key) is not None and anc[key] < sc[key] - 1e-12]
     hdr = ["Event", "Model (worksheet)", "Base rate", "Model ÷ base"] + (
         ["Anchored (w=%.2f on base)" % aw] if anchored_on else [])
     ptxt = [_table(hdr, prow), ""]
@@ -592,6 +625,14 @@ def build(card, card_path):
                     "default weight is 0.5; a lower weight needs a written evidence note, never below %.2f."
                     % (aw, 1 - aw, aw_note, ANCHOR_WEIGHT_MIN))
         ptxt.append("")
+        if lowered:
+            ptxt.append("> **WARNING: %s** (%s: the class base rate is below our model tail, so anchoring made the card "
+                        "more optimistic, L40). If the model tail rests on company-specific evidence (a lease expiry, a "
+                        "licence dispute, a debt wall), the raw tail is the honest number: write that evidence in the "
+                        "deep dive and size off the raw tail by hand; the mechanical size below uses the anchored one."
+                        % (ANCHOR_LOWERED_WARNING, ", ".join(lowered)))
+            ptxt.append("")
+            gates.append(("Tail anchoring (v1.4 warning)", "%s: %s" % (ANCHOR_LOWERED_WARNING, ", ".join(lowered)), False))
     else:
         ptxt.append("**Outside-view anchoring (v1.2):** no base rate on file for the tails → raw model tails used in "
                     "the EV gate and Kelly (nothing to anchor to).")
@@ -813,6 +854,7 @@ def build(card, card_path):
                  "survival_cap": sv, "anchor_weight": aw if anchored_on else None, "ev_mult5_raw": sc.get("ev_mult5"),
                  "ev_mult5_anchored": ev_anc, "p_blowup_anchored": anc["p_blowup"] if anchored_on else None,
                  "p_le_half_anchored": anc["p_le_half"] if anchored_on else None,
+                 "anchor_lowered_tails": lowered,
                  "rule_size": rule_size, "kelly_f_star": f_star, "open_soft_flags": n_open, "review_date": rd,
                  "kill_criteria": kc, "override_log": log, "paper_calls": ids, "practice": practice},
         "sources": wd.get("sources") or [],

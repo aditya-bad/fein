@@ -125,6 +125,36 @@ class TestAnchoring(unittest.TestCase):
         self.assertLess(sum(p * m for p, m in res), sum(p * m for p, m, _ in outs))
 
 
+class TestCoreAssetThreat(unittest.TestCase):
+    """v1.4 (L40): manual core-asset licence/lease threat triggers the survival cap like a red flag."""
+    T = {"description": "land lease expired Jul-2023; lessor opposes renewal in the Supreme Court",
+         "source": "SC filing", "date": "2026-11-24"}
+
+    def test_triggers_cap_outside_pead(self):
+        r = dc.survival_cap("india", False, {"pledge_pct_of_promoter": 0.0, "interest_cover": 20.0,
+                                             "core_asset_threat": self.T})
+        self.assertEqual(r["status"], "TRIGGERED")
+        self.assertEqual(r["mode"], "cap")
+        self.assertTrue(any("core-asset licence/lease threat (L40)" in x for x in r["reasons"]))
+
+    def test_triggers_block_in_pead(self):
+        r = dc.survival_cap("india", True, {"pledge_pct_of_promoter": 0.0, "interest_cover": 20.0,
+                                            "core_asset_threat": self.T})
+        self.assertEqual(r["mode"], "block")
+        self.assertTrue(r["blocks"])
+
+    def test_missing_inputs_still_listed(self):
+        r = dc.survival_cap("india", False, {"core_asset_threat": self.T})
+        self.assertEqual(r["status"], "TRIGGERED")
+        self.assertTrue(any("not checked" in x for x in r["reasons"]))
+
+    def test_empty_threat_ignored(self):
+        for t in (None, {}, {"description": "  "}):
+            r = dc.survival_cap("india", False, {"pledge_pct_of_promoter": 0.0, "interest_cover": 20.0,
+                                                 "core_asset_threat": t})
+            self.assertEqual(r["status"], "clear")
+
+
 class TestBuildIntegration(unittest.TestCase):
     """End-to-end on the fictional SYNTHETIC card (every gate clears in v1.1)."""
 
@@ -197,6 +227,60 @@ class TestBuildIntegration(unittest.TestCase):
         calls = {r["id"].rsplit("-", 1)[-1]: r["data"] for r in recs[:-1]}
         self.assertIsNotNone(calls["blowup"]["anchored_probability"])
         self.assertNotEqual(calls["blowup"]["probability"], calls["blowup"]["anchored_probability"])
+
+    def test_core_asset_threat_caps_card(self):
+        def m(c):
+            c["survival"] = {"pledge_pct_of_promoter": 0.0, "interest_cover": 9.0,
+                             "core_asset_threat": TestCoreAssetThreat.T}
+        F, recs, _ = self._build(m)
+        dec = recs[-1]["data"]
+        self.assertEqual(dec["survival_cap"]["mode"], "cap")
+        self.assertLessEqual(dec["size_after_gates"], dc.SURVIVAL_MIN_SIZE)
+        self.assertIn("core-asset licence/lease threat (L40)", F["stage3"])
+        self.assertIn("core-asset licence/lease threat (L40)", F["gate_log"])
+
+    def test_core_asset_threat_blocks_in_pead(self):
+        def m(c):
+            self._pead_active(c)
+            c["survival"] = {"pledge_pct_of_promoter": 0.0, "interest_cover": 9.0,
+                             "core_asset_threat": TestCoreAssetThreat.T}
+        F, recs, _ = self._build(m)
+        self.assertEqual(recs[-1]["data"]["size_after_gates"], 0.0)
+        self.assertIn("core-asset licence/lease threat (L40)", F["stage3"])
+
+    def _build_with_blowup(self, p_blowup):
+        """SYNTHETIC worksheet copy with a fat documented blow-up tail, on the India v2 class (base blow-up ~15%)."""
+        tmp = tempfile.mkdtemp()
+        def m(c):
+            w = dc._load_json(c["worksheet"])
+            w["blowup"] = {"prob": p_blowup, "multiple": 0.1}
+            rest = 1 - p_blowup
+            tot = sum(x["prob"] for x in w["scenarios"])
+            for x in w["scenarios"]:
+                x["prob"] = x["prob"] * rest / tot
+            path = os.path.join(tmp, "ws.json")
+            with open(path, "w") as f:
+                json.dump(w, f)
+            c["worksheet"] = path
+            c["base_rate_class"] = "india_nonfin_1000_20000cr_5y"
+        try:
+            return self._build(m)
+        finally:
+            import shutil
+            shutil.rmtree(tmp)
+
+    def test_anchor_lowered_warning(self):
+        # base class blow-up 15%: a model blow-up above that gets LOWERED by anchoring -> warning
+        F, recs, _ = self._build_with_blowup(0.40)
+        self.assertIn(dc.ANCHOR_LOWERED_WARNING, F["probabilities"])
+        self.assertIn(dc.ANCHOR_LOWERED_WARNING, F["gate_log"])
+        self.assertIn("P(blow-up)", recs[-1]["data"]["anchor_lowered_tails"])
+
+    def test_no_warning_when_anchoring_raises_tails(self):
+        F, recs, _ = self._build(lambda c: c.update(base_rate_class="india_nonfin_1000_20000cr_5y"))
+        if recs[-1]["data"]["anchor_lowered_tails"]:
+            self.skipTest("synthetic worksheet tails already above the base rate")
+        self.assertNotIn(dc.ANCHOR_LOWERED_WARNING, F["probabilities"])
 
 
 if __name__ == "__main__":

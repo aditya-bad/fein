@@ -40,7 +40,10 @@ mode, tag `ar-mode`), plus **`_assets.md/.json`**: the asset x report status tab
 - **Separate cache root** (`--cache`, default `$PT_CACHE/ar`). The concall modules are not edited; AR mode only adds
   `ar_fetch.py`, `ar_sections.py`, `ar_run.py` and `regress_concall.py`.
 - **`ar_fetch.py`:** `nse_fetch.annual_reports` list (one row per FY; a later "Revised" upload wins), downloads PDF or
-  ZIP (only `*.pdf` members, read in memory), `pdftotext -layout`, then **deletes the PDF**. Fewer than 8,000 words =
+  ZIP (type by magic bytes, not URL; from a ZIP only the most likely AR PDF is used: name looks like an annual report
+  and not a notice/BRSR/cover letter, ties by size; numbered parts are joined; read in memory), `pdftotext -layout`, then
+  **deletes the PDF**. A corrupt/encrypted ZIP, a ZIP with no PDF or an unreadable PDF skips that year with a WARNING
+  (tests: `python3 -m unittest discover -s tools/promise_tracker/tests`). Fewer than 8,000 words =
   scanned/partial, skipped. `--presentations` / `--outcomes` add investor presentations / board-meeting outcomes.
 - **`ar_sections.py`:** keeps the Chairman's/MD's message, the Board's (Directors') Report, the MD&A and the
   energy-conservation/technology-absorption annexure. It cuts the Notice, the other annexures, the BRSR, the CG report,

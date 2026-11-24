@@ -1,0 +1,26 @@
+symbol,industry,sector,source,as_of,macro,basic_industry,isin,bse_code
+20MICRONS,Minerals & Mining,Metals & Mining,bse_comheader,2026-11-24,Commodities,Industrial Minerals,INE144J01027,533022
+360ONE,Capital Markets,Financial Services,bse_comheader,2026-11-24,Financial Services,Stockbroking & Allied,INE466L01038,542772
+3IINFOLTD,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE748C01038,532628
+3MINDIA,Diversified,Diversified,bse_comheader,2026-11-24,Diversified,Diversified,INE470A01017,523395
+5PAISA,Capital Markets,Financial Services,bse_comheader,2026-11-24,Financial Services,Stockbroking & Allied,INE618L01018,540776
+63MOONS,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE111B01023,526881
+A2ZINFRA,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Diversified Commercial Services,INE619I01012,533292
+AAKASH,Oil,"Oil, Gas & Consumable Fuels",screener,2026-11-24,Energy,Offshore Support Solution Drilling,INE087Z01024,
+AARON,Industrial Manufacturing,Capital Goods,screener,2026-11-24,Industrials,Industrial Products,INE721Z01010,
+AARTECH,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Heavy Electrical Equipment,INE01C001026,542580
+AARTIDRUGS,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE767A01016,524348
+AARTIIND,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE769A01020,524208
+AARTIPHARM,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE0LRU01027,543748
+AARTISURF,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE09EO01013,543210
+AAVAS,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Housing Finance Company,INE216P01012,541988
+ABAN,Oil,"Oil, Gas & Consumable Fuels",bse_comheader,2026-11-24,Energy,Offshore Support Solution Drilling,INE421A01028,523204
+ABB,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Heavy Electrical Equipment,INE117A01022,500002
+ABCAPITAL,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Investment Company,INE674K01013,540691
+ABFRL,Retailing,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Speciality Retail,INE647O01011,535755
+ABREL,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE055A01016,500040
+ABSLAMC,Capital Markets,Financial Services,bse_comheader,2026-11-24,Financial Services,Asset Management Company,INE404A01024,543374
+ACC,Cement & Cement Products,Construction Materials,bse_comheader,2026-11-24,Commodities,Cement & Cement Products,INE012A01025,500410
+ACCELYA,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE793A01012,532268
+ACCURACY,Transport Services,Services,bse_comheader,2026-11-24,Services,Logistics Solution Provider,INE648Z01023,544598
+ACE,"Agricultural, Commercial & Construction Vehicles",Capital Goods,bse_comheader,2026-11-24,Industrials,Construction Vehicles,INE731H01025,532762

@@ -19,7 +19,7 @@ python3 tools/decision/decision_card.py my_card.json -o card.md --calls paper_ca
 | `decision_card.md` | The template. Every `{{field}}` must be filled, and an unknown placeholder is an error |
 | `decision_card.py` | The assembler, the gates and the sizing rule. It writes the paper calls |
 | `base_rates.json` | The reference classes shown next to every probability, each with its source, biases, 95% CI and size band. `null` means no honest number on file. **v2 (2026-11-23):** `india_nonfin_1000_20000cr_5y` and `us_float_500m_10b_5y`, survivorship-free (method: `research_notes/Backtests/base_rates_5y.md`; script `tools/backtests/base_rates_5y/build.py`). Old classes keep a `_deprecated` suffix; an old card that names the old key resolves to it and prints "Deprecated class" |
-| `tests/test_decision_card.py` | Unit tests (synthetic inputs) for the v1.2 survival cap and tail anchoring: `python3 -m unittest discover -s tools/decision/tests` |
+| `tests/test_decision_card.py` | Unit tests (synthetic inputs) for the survival cap (v1.2–v1.4, incl. the core-asset threat trigger), tail anchoring and the anchoring-lowered warning: `python3 -m unittest discover -s tools/decision/tests` |
 | `calibration_2026-11-23/v1.2/` | The same 6 cards (plus the US-KEX persistent-tax variant) re-run with card v1.2, no calls written. All still size 0; see the v1.2 changelog below |
 | `calibration_2026-11-23/` | All 6 cards re-run with worksheet v1.3, card v1.1 and base rates v2 (no calls written). Results and reasons in its README: all 6 still size 0 |
 | `examples/` | Cards for VMM, CUMMINSIND and US-FIVE (TEST MATERIAL, no verdict), plus a fictional SYNTHETIC card that exercises the path where every gate clears |
@@ -30,6 +30,24 @@ It also prints base-rate CIs and the size-band warning, and applies the market-s
 
 Bank/NBFC worksheets (`"mode": "bank"`, v1.1) are supported: the stage-5 block then reports reverse P/B, implied CoE,
 residual-income scenarios, P/B temperature and book stress. Example: `examples/FEDERALBNK_card.json` (practice).
+
+## Changelog: card v1.4 (2026-11-24, L40)
+Two additions from the INDRAMEDCO live dive (a ~54% ROIC that rests on an expired government land lease).
+Neither changes a threshold; the six calibration cards are unaffected unless they set the new input.
+
+**1. Manual core-asset threat trigger.** New optional input `survival.core_asset_threat` =
+`{"description": "...", "source": "...", "date": "YYYY-MM-DD"}` (a plain string is also accepted). Use it when a
+government-granted input the business depends on (land lease, licence, concession, PPP) has expired, is contested
+or is being withdrawn. When the description is non-empty it fires the survival cap exactly like a pledge /
+interest-cover red flag, in both modes (PEAD window → 0 new money; otherwise starter size ≤1%, no additions), with
+reason text `core-asset licence/lease threat (L40): <description> [<source>, <date>]`. Missing pledge / interest-cover
+inputs are still listed (`also not checked: ...`). The pledge/ICR screen cannot see legal or licence risk, hence a
+manual input. India only like the rest of the cap; on a non-India card the threat is printed in stage 3 but not applied.
+
+**2. Anchoring-lowered-tails warning.** When outside-view anchoring *lowers* our raw P(≤0.5x) or P(blow-up) (base
+rate below the model), the card prints `WARNING: anchoring lowered documented tails — check evidence note` in §5 and
+adds a non-blocking `Tail anchoring (v1.4 warning)` row to the gate log. The decision record carries
+`anchor_lowered_tails` (list of the lowered events). The mechanical size still uses the anchored tails.
 
 ## Changelog: card v1.2 (2026-11-23)
 Two safeguards from the 2026-11-23 back-tests. Neither changes the hurdle or any v1.1 gate threshold.
@@ -86,6 +104,7 @@ the written rule → dated kill criteria → pre-mortem → gate log and review 
 | Stage 3 PEAD avoid flag | **India only:** SUE quintile 1–2 and decision date ≤ event + 92 calendar days (~63 trading days). **US: no gate.** The quintile is shown but never blocks, because the US SUE proxy cut-points are uncalibrated and no US PEAD back-test exists (card v1.1, 2026-11-23) | L17, L19, L31, L34 |
 | Stage 4 soft flags | ≥3 open (deep-dive open flags + fired graded stage-2 flags + high-severity detectors + credibility ≥15 pts below peers) and no written variant view | `insight:flag-override-template` |
 | Stage 3 survival cap (v1.2) | **India only:** PEAD avoid flag active AND (promoter pledge > 25% of promoter holding OR interest cover < 1.5x), or either input unchecked while the flag is active → 0 new money (hold-review if owned) + balance-sheet question | L35, `decision:pead-avoid-plus-redflag-survival-cap` |
+| Stage 3 survival cap, manual trigger (v1.4) | `survival.core_asset_threat` with a description (government lease / licence / concession threat) → same as a red flag: PEAD window → 0 new money, otherwise starter size, no additions | L40 |
 | Expected value | **anchored** EV of the 5-year multiple < hurdle multiple (index CAGR^5); v1.2 uses outside-view-anchored tails (raw EV shown alongside) | L36 |
 | Kill criteria | missing or undated | — |
 | Outside-view check (note only) | model P is >2x or <0.5x the base rate | `insight:lit-base-rate-neglect-outside-view` |
