@@ -9,8 +9,8 @@ Last updated: 2026-11-24
 
 ## In flight (24-Nov-2026)
 - ~~Pi bundle, live dive #4, survival-cap test~~ DONE 24-Nov (see session_log).
-- Next queue: (1) cached industry map for full universe; (2) ar_run.py BadZipFile fix for ZIP annual reports;
-  (3) card: manual "core-asset licence/lease threat" trigger + flag when anchoring lowers tails (L40);
+- Next queue: ~~(1) industry map~~ DONE 24-Nov (1547/1547, BSE+screener; NSE industryInfo 403); ~~(2) AR zip fix~~ DONE;
+  ~~(3) card v1.4 core-asset threat + anchoring warning~~ DONE (India-only for now; decide whether US cards apply it);
   (4) prereg split rule pledge vs ICR (L39); ~~(5) live dive #5~~ DONE (UTKARSHBNK).
 - From L41: India lender base-rate class; bank.py `cet1_book` input + J-curve/bear-only dilution; resolver reading banking XBRL
   tags (InterestEarned, ProfitLossForThePeriod, PercentageOfGrossNpa); bse_fetch HTTP 400 beyond page 1; prereg test of

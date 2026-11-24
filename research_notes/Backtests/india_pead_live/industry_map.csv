@@ -724,3 +724,825 @@ KAYA,Leisure Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discre
 KAYNES,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Industrial Products,INE918Z01012,543664
 KCP,Cement & Cement Products,Construction Materials,bse_comheader,2026-11-24,Commodities,Cement & Cement Products,INE805C01028,590066
 KCPSUGIND,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Sugar,INE790B01024,533192
+KDDL,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,"Gems, Jewellery And Watches",INE291D01011,532054
+KEC,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE389H01022,532714
+KECL,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Other Electrical Equipment,INE134B01017,533193
+KEI,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Cables - Electricals,INE878B01027,517569
+KELLTONTEC,IT - Services,Information Technology,bse_comheader,2026-11-24,Information Technology,IT Enabled Services,INE164B01030,519602
+KERNEX,Transport Services,Services,bse_comheader,2026-11-24,Services,Transport Related Services,INE202H01019,532686
+KESORAMIND,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE087A01019,502937
+KFINTECH,Capital Markets,Financial Services,bse_comheader,2026-11-24,Financial Services,"Depositories, Clearing Houses and Other Intermediaries",INE138Y01010,543720
+KHADIM,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Footwear,INE834I01025,540775
+KHAICHEM,Fertilizers & Agrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Fertilizers,INE745B01028,507794
+KICL,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Investment Company,INE029L01018,533302
+KILITCH,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE729D01010,524500
+KIMS,Healthcare Services,Healthcare,bse_comheader,2026-11-24,Healthcare,Hospital,INE967H01025,543308
+KINGFA,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Plastic Products - Industrial,INE473D01015,524019
+KIOCL,Ferrous Metals,Metals & Mining,bse_comheader,2026-11-24,Commodities,Sponge Iron,INE880L01014,540680
+KIRIINDUS,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Dyes And Pigments,INE415I01015,532967
+KIRLOSBROS,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,"Compressors, Pumps & Diesel Engines",INE732A01036,500241
+KIRLOSENG,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,"Compressors, Pumps & Diesel Engines",INE146L01010,533293
+KIRLOSIND,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE250A01039,500243
+KIRLPNU,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,"Compressors, Pumps & Diesel Engines",INE811A01038,505283
+KITEX,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Garments & Apparels,INE602G01020,521248
+KKCL,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Garments & Apparels,INE401H01017,532732
+KMSUGAR,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Sugar,INE157H01023,532673
+KNRCON,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE634I01029,532942
+KOHINOOR,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Other Agricultural Products,INE080B01012,512559
+KOLTEPATIL,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE094I01018,532924
+KOPRAN,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE082A01010,524280
+KOTARISUG,Agricultural Food & other Products,Fast Moving Consumer Goods,screener,2026-11-24,Fast Moving Consumer Goods,Sugar,INE419A01022,
+KOTHARIPET,Chemicals & Petrochemicals,Chemicals,screener,2026-11-24,Commodities,Petrochemicals,INE720A01015,532096
+KOTHARIPRO,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Trading & Distributors,INE823A01017,530299
+KPIGREEN,Power,Power,bse_comheader,2026-11-24,Utilities,Power Generation,INE542W01025,542323
+KPIL,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE220B01022,522287
+KPITTECH,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE04I401011,542651
+KPRMILL,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE930H01031,532889
+KRBL,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Other Agricultural Products,INE001B01026,530813
+KREBSBIO,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE268B01013,524518
+KRISHANA,Fertilizers & Agrochemicals,Chemicals,screener,2026-11-24,Commodities,Fertilizers,INE506W01020,
+KRITI,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Plastic Products - Industrial,INE479D01038,526423
+KRITIKA,Industrial Products,Capital Goods,screener,2026-11-24,Industrials,Iron & Steel Products,INE00Z501029,
+KRITINUT,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Edible Oil,INE798K01010,533210
+KRSNAA,Healthcare Services,Healthcare,bse_comheader,2026-11-24,Healthcare,Healthcare Service Provider,INE08LI01020,543328
+KSB,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,"Compressors, Pumps & Diesel Engines",INE999A01023,500249
+KSCL,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Other Agricultural Products,INE455I01029,532899
+KSHITIJPOL,Chemicals & Petrochemicals,Chemicals,screener,2026-11-24,Commodities,Printing Inks,INE013801027,
+KSL,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE907A01026,500235
+KSOLVES,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE0D6I01023,543599
+KTKBANK,Banks,Financial Services,bse_comheader,2026-11-24,Financial Services,Private Sector Bank,INE614B01018,532652
+KUANTUM,"Paper, Forest & Jute Products",Forest Materials,bse_comheader,2026-11-24,Commodities,Paper & Paper Products,INE529I01021,532937
+LAL,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Garments & Apparels,INE740X01023,540952
+LALPATHLAB,Healthcare Services,Healthcare,bse_comheader,2026-11-24,Healthcare,Healthcare Service Provider,INE600L01024,539524
+LANDMARK,Automobiles,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto -Dealer,INE559R01029,543714
+LAOPALA,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Glass - Consumer,INE059D01020,526947
+LATENTVIEW,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE0I7C01011,543398
+LATTEYS,Industrial Products,Capital Goods,screener,2026-11-24,Industrials,"Compressors, Pumps & Diesel Engines",INE262Z01023,
+LAURUSLABS,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE947Q01028,540222
+LEMONTREE,Leisure Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Hotels & Resorts,INE970X01018,541233
+LGBBROSLTD,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE337A01034,500250
+LGHL,Consumer Durables,Consumer Durables,screener,2026-11-24,Consumer Discretionary,"Gems, Jewellery And Watches",INE258Y01016,
+LIBERTSHOE,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Footwear,INE557B01019,526596
+LICHSGFIN,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Housing Finance Company,INE115A01026,500253
+LIKHITHA,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE060901027,543240
+LINC,Household Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Stationary,INE802B01027,531241
+LINCOLN,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE405C01035,531633
+LINDEINDIA,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Industrial Gases,INE473A01011,523457
+LLOYDSENGG,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Industrial Products,INE093R01011,539992
+LLOYDSME,Minerals & Mining,Metals & Mining,bse_comheader,2026-11-24,Commodities,Industrial Minerals,INE281B01032,512455
+LMW,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Industrial Products,INE269B01029,500252
+LODHA,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE670K01029,543287
+LOKESHMACH,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Industrial Products,INE397H01017,532740
+LORDSCHLO,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Commodity Chemicals,INE846D01012,500284
+LOYALTEX,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE970D01010,514036
+LTF,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Non Banking Financial Company (NBFC),INE498L01015,533519
+LTFOODS,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Other Agricultural Products,INE818H01020,532783
+LTTS,IT - Services,Information Technology,bse_comheader,2026-11-24,Information Technology,IT Enabled Services,INE010V01017,540115
+LUMAXIND,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE162B01018,517206
+LUMAXTECH,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE872H01027,532796
+LUPIN,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE326A01037,500257
+LUXIND,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Garments & Apparels,INE150G01020,539542
+LXCHEM,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE576O01020,543277
+LYKALABS,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE933A01014,500259
+M&MFIN,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Non Banking Financial Company (NBFC),INE774D01024,532720
+MAANALU,Non - Ferrous Metals,Metals & Mining,bse_comheader,2026-11-24,Commodities,Aluminium,INE215I01027,532906
+MACPOWER,Industrial Manufacturing,Capital Goods,screener,2026-11-24,Industrials,Industrial Products,INE155Z01011,
+MADRASFERT,Fertilizers & Agrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Fertilizers,INE414A01015,590134
+MAGADSUGAR,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Sugar,INE347W01011,540650
+MAGNUM,"Paper, Forest & Jute Products",Forest Materials,bse_comheader,2026-11-24,Commodities,Paper & Paper Products,INE387I01016,532896
+MAHABANK,Banks,Financial Services,bse_comheader,2026-11-24,Financial Services,Public Sector Bank,INE457A01014,532525
+MAHAPEXLTD,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Other Financial Services,INE843B01013,523384
+MAHASTEEL,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE451L01014,513554
+MAHEPC,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Industrial Products,INE215D01010,523754
+MAHLIFE,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE813A01018,532313
+MAHLOG,Transport Services,Services,bse_comheader,2026-11-24,Services,Logistics Solution Provider,INE766P01016,540768
+MAHSCOOTER,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Investment Company,INE288A01013,500266
+MAHSEAMLES,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE271B01025,500265
+MAITHANALL,Ferrous Metals,Metals & Mining,bse_comheader,2026-11-24,Commodities,Ferro & Silica Manganese,INE683C01011,590078
+MALLCOM,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Other Industrial Products,INE389C01015,539400
+MANAKALUCO,Non - Ferrous Metals,Metals & Mining,bse_comheader,2026-11-24,Commodities,Aluminium,INE859Q01017,539045
+MANAKCOAT,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE830Q01018,539046
+MANAKSIA,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE015D01022,532932
+MANAKSTEEL,Ferrous Metals,Metals & Mining,bse_comheader,2026-11-24,Commodities,Iron & Steel,INE824Q01011,539044
+MANALIPETC,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Petrochemicals,INE201A01024,500268
+MANAPPURAM,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Non Banking Financial Company (NBFC),INE522D01027,531213
+MANGLMCEM,Cement & Cement Products,Construction Materials,bse_comheader,2026-11-24,Commodities,Cement & Cement Products,INE347A01017,502157
+MANINDS,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE993A01026,513269
+MANINFRA,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE949H01023,533169
+MANKIND,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE634S01028,543904
+MANOMAY,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE784W01015,540396
+MANORAMA,Food Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Other Food Products,INE00VM01036,541974
+MANORG,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Commodity Chemicals,INE370D01013,514418
+MANYAVAR,Retailing,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Speciality Retail,INE825V01034,543463
+MAPMYINDIA,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Software Products,INE0BV301023,543425
+MARALOVER,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE882A01013,521018
+MARATHON,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE182D01020,503101
+MARICO,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Edible Oil,INE196A01026,531642
+MARINE,Industrial Manufacturing,Capital Goods,screener,2026-11-24,Industrials,Industrial Products,INE01JE01028,
+MARKSANS,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE750C01026,524404
+MASFIN,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Non Banking Financial Company (NBFC),INE348L01012,540749
+MASTEK,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE759A01021,523704
+MATRIMONY,Retailing,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Internet & Catalogue Retail,INE866R01028,540704
+MAWANASUG,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Sugar,INE636A01039,523371
+MAXESTATES,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE03EI01018,544008
+MAXHEALTH,Healthcare Services,Healthcare,bse_comheader,2026-11-24,Healthcare,Hospital,INE027H01010,543220
+MAXIND,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Holding Company,INE0CG601016,543223
+MAYURUNIQ,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Leather And Leather Products,INE040D01038,522249
+MAZDA,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Industrial Products,INE885E01042,523792
+MAZDOCK,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Ship Building & Allied Services,INE249Z01020,543237
+MBAPL,Fertilizers & Agrochemicals,Chemicals,screener,2026-11-24,Commodities,Fertilizers,INE900L01028,
+MBECL,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE748A01024,532629
+MBLINFRA,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE912H01013,533152
+MCLEODRUSS,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Tea & Coffee,INE942G01012,532654
+MEDANTA,Healthcare Services,Healthcare,bse_comheader,2026-11-24,Healthcare,Hospital,INE474Q01031,543654
+MEDICAMEQ,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE646B01010,531146
+MEDICO,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE630Y01024,540937
+MEDPLUS,Retailing,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Pharmacy Retail,INE804L01022,543427
+MEGASTAR,Food Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Other Food Products,INE00EM01016,541352
+MENONBE,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE071D01033,523828
+METROBRAND,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Footwear,INE317I01021,543426
+METROPOLIS,Healthcare Services,Healthcare,bse_comheader,2026-11-24,Healthcare,Healthcare Service Provider,INE112L01020,542650
+MFSL,Insurance,Financial Services,bse_comheader,2026-11-24,Financial Services,Life Insurance,INE180A01020,500271
+MGEL,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Other Agricultural Products,INE0APB01032,544273
+MGL,Gas,"Oil, Gas & Consumable Fuels",bse_comheader,2026-11-24,Energy,LPG/CNG/PNG/LNG Supplier,INE002S01010,539957
+MHRIL,Leisure Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Hotels & Resorts,INE998I01010,533088
+MICEL,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Other Industrial Products,INE287C01037,532850
+MIDHANI,Aerospace & Defense,Capital Goods,bse_comheader,2026-11-24,Industrials,Aerospace & Defense,INE099Z01011,541195
+MINDACORP,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE842C01021,538962
+MINDTECK,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE110B01017,517344
+MIRZAINT,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Leather And Leather Products,INE771A01026,526642
+MITTAL,Textiles & Apparels,Textiles,screener,2026-11-24,Consumer Discretionary,Garments & Apparels,INE997Y01027,
+MKPL,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Edible Oil,INE964W01021,543919
+MMFL,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE227C01017,522241
+MMP,Non - Ferrous Metals,Metals & Mining,screener,2026-11-24,Commodities,Aluminium,INE511Y01018,
+MMTC,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Trading & Distributors,INE123F01029,513377
+MODIRUBBER,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Tyres & Rubber Products,INE832A01018,500890
+MODISONLTD,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Other Electrical Equipment,INE737D01021,506261
+MOIL,Minerals & Mining,Metals & Mining,bse_comheader,2026-11-24,Commodities,Industrial Minerals,INE490G01020,533286
+MOKSH,Consumer Durables,Consumer Durables,screener,2026-11-24,Consumer Discretionary,"Gems, Jewellery And Watches",INE514Y01020,
+MOL,Fertilizers & Agrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Pesticides & Agrochemicals,INE0CT101020,543331
+MOLDTECH,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE835B01035,526263
+MOLDTKPAC,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Packaging,INE893J01029,533080
+MONARCH,Capital Markets,Financial Services,bse_comheader,2026-11-24,Financial Services,Stockbroking & Allied,INE903D01011,511551
+MONTECARLO,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Garments & Apparels,INE950M01013,538836
+MOREPENLAB,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE083A01026,500288
+MOTILALOFS,Capital Markets,Financial Services,bse_comheader,2026-11-24,Financial Services,Stockbroking & Allied,INE338I01027,532892
+MOTISONS,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,"Gems, Jewellery And Watches",INE0FRK01020,544053
+MPHASIS,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE356A01018,526299
+MPSLTD,Printing & Publication,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,Printing & Publication,INE943D01017,532440
+MRF,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Tyres & Rubber Products,INE883A01011,500290
+MRPL,Petroleum Products,"Oil, Gas & Consumable Fuels",bse_comheader,2026-11-24,Energy,Refineries & Marketing,INE103A01014,500109
+MSPL,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE752G01015,532650
+MSTCLTD,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Trading & Distributors,INE255X01014,542597
+MSUMI,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE0FS801015,543498
+MTARTECH,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Other Electrical Equipment,INE864I01014,543270
+MTNL,Telecom - Services,Telecommunication,bse_comheader,2026-11-24,Telecommunication,Telecom - Cellular & Fixed line services,INE153A01019,500108
+MUFIN,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Non Banking Financial Company (NBFC),INE08KJ01020,542774
+MUFTI,Retailing,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Speciality Retail,INE220Q01020,544058
+MUKANDLTD,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE304A01026,500460
+MUNJALAU,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE672B01032,520059
+MUNJALSHOW,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE577A01027,520043
+MURUDCERA,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Ceramics,INE692B01014,515037
+MUTHOOTCAP,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Non Banking Financial Company (NBFC),INE296G01013,511766
+MUTHOOTFIN,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Non Banking Financial Company (NBFC),INE414G01012,533398
+MUTHOOTMF,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Microfinance Institutions,INE046W01019,544055
+MVGJL,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,"Gems, Jewellery And Watches",INE0KNT01012,543995
+NACLIND,Fertilizers & Agrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Pesticides & Agrochemicals,INE295D01020,524709
+NAHARCAP,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Investment Company,INE049I01012,532952
+NAHARINDUS,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE289A01011,519136
+NAHARPOLY,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Packaging,INE308A01027,523391
+NAHARSPING,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE290A01027,500296
+NAM-INDIA,Capital Markets,Financial Services,bse_comheader,2026-11-24,Financial Services,Asset Management Company,INE298J01013,540767
+NATCOPHARM,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE987B01026,524816
+NATHBIOGEN,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Other Agricultural Products,INE448G01010,537291
+NATIONALUM,Non - Ferrous Metals,Metals & Mining,bse_comheader,2026-11-24,Commodities,Aluminium,INE139A01034,532234
+NAVA,Power,Power,bse_comheader,2026-11-24,Utilities,Power Generation,INE725A01030,513023
+NAVINFLUOR,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE048G01026,532504
+NAVKARCORP,Transport Services,Services,bse_comheader,2026-11-24,Services,Logistics Solution Provider,INE278M01019,539332
+NAVNETEDUL,Household Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Stationary,INE060A01024,508989
+NAZARA,Entertainment,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,Digital Entertainment,INE418L01047,543280
+NBIFIN,Finance,Financial Services,screener,2026-11-24,Financial Services,Non Banking Financial Company (NBFC),INE365I01020,
+NCC,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE868B01028,500294
+NCLIND,Cement & Cement Products,Construction Materials,bse_comheader,2026-11-24,Commodities,Cement & Cement Products,INE732C01016,502168
+NDGL,Finance,Financial Services,screener,2026-11-24,Financial Services,Non Banking Financial Company (NBFC),INE756C01015,
+NDL,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE875G01048,532641
+NDLVENTURE,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Other Financial Services,INE353A01023,500189
+NDRAUTO,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE07OG01012,543214
+NDTV,Entertainment,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,TV Broadcasting & Software Production,INE155G01029,532529
+NECCLTD,Transport Services,Services,bse_comheader,2026-11-24,Services,Logistics Solution Provider,INE553C01016,534615
+NECLIFE,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE023H01027,532649
+NELCAST,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Castings & Forgings,INE189I01024,532864
+NELCO,IT - Hardware,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers Hardware & Equipments,INE045B01015,504112
+NEOGEN,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE136S01016,542665
+NESCO,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Diversified Commercial Services,INE317F01035,505355
+NETWEB,IT - Services,Information Technology,bse_comheader,2026-11-24,Information Technology,IT Enabled Services,INE0NT901020,543945
+NETWORK18,Entertainment,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,Media & Entertainment,INE870H01013,532798
+NEUEON,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Heavy Electrical Equipment,INE333I01044,532887
+NEULANDLAB,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE794A01010,524558
+NEWGEN,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE619B01017,540900
+NFL,Fertilizers & Agrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Fertilizers,INE870D01012,523630
+NGIL,Food Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Packaged Foods,INE236Y01012,541418
+NGLFINE,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE887E01022,524774
+NH,Healthcare Services,Healthcare,bse_comheader,2026-11-24,Healthcare,Hospital,INE410P01011,539551
+NHPC,Power,Power,bse_comheader,2026-11-24,Utilities,Power Generation,INE848E01016,533098
+NIITLTD,Other Consumer Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Education,INE161A01038,500304
+NIITMTS,Other Consumer Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Education,INE342G01023,543952
+NILAINFRA,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE937C01029,530377
+NILASPACES,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE00S901012,542231
+NILKAMAL,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Plastic Products - Consumer,INE310A01015,523385
+NINSYS,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE395U01014,539843
+NIPPOBATRY,Household Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Household Products,INE567A01028,504058
+NIRAJ,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE368I01016,532986
+NITCO,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Ceramics,INE858F01012,532722
+NITINSPIN,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE229H01012,532698
+NITIRAJ,Consumer Durables,Consumer Durables,screener,2026-11-24,Consumer Discretionary,Consumer Electronics,INE439T01012,
+NLCINDIA,Power,Power,bse_comheader,2026-11-24,Utilities,Power Generation,INE589A01014,513683
+NMDC,Minerals & Mining,Metals & Mining,bse_comheader,2026-11-24,Commodities,Industrial Minerals,INE584A01023,526371
+NOCIL,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE163A01018,500730
+NOIDATOLL,Transport Infrastructure,Services,bse_comheader,2026-11-24,Services,"Road Assets–Toll, Annuity, Hybrid-Annuity",INE781B01015,532481
+NRAIL,"Paper, Forest & Jute Products",Forest Materials,bse_comheader,2026-11-24,Commodities,Paper & Paper Products,INE740D01017,516082
+NRBBEARING,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE349A01021,530367
+NRL,Metals & Minerals Trading,Metals & Mining,screener,2026-11-24,Commodities,Trading - Metals,INE0JM501013,
+NSIL,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Investment Company,INE023A01030,532256
+NSLNISP,Ferrous Metals,Metals & Mining,bse_comheader,2026-11-24,Commodities,Iron & Steel,INE0NNS01018,543768
+NUCLEUS,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Software Products,INE096B01018,531209
+NURECA,Healthcare Equipment & Supplies,Healthcare,bse_comheader,2026-11-24,Healthcare,Medical Equipment & Supplies,INE0DSF01015,543264
+NUVAMA,Capital Markets,Financial Services,bse_comheader,2026-11-24,Financial Services,Stockbroking & Allied,INE531F01023,543988
+NUVOCO,Cement & Cement Products,Construction Materials,bse_comheader,2026-11-24,Commodities,Cement & Cement Products,INE118D01016,543334
+NYKAA,Retailing,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,E-Retail/ E-Commerce,INE388Y01029,543384
+OAL,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE959C01023,500078
+OBEROIRLTY,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE093I01010,533273
+OFSS,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Software Products,INE881D01027,532466
+OIL,Oil,"Oil, Gas & Consumable Fuels",bse_comheader,2026-11-24,Energy,Oil Exploration & Production,INE274J01014,533106
+OILCOUNTUB,Oil,"Oil, Gas & Consumable Fuels",bse_comheader,2026-11-24,Energy,Oil Equipment & Services,INE591A01010,500313
+OLECTRA,Automobiles,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Passenger Cars & Utility Vehicles,INE260D01016,532439
+OMAXAUTO,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE090B01011,520021
+OMAXE,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE800H01010,532880
+OMINFRAL,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE239D01028,531092
+ONEPOINT,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Business Process Outsourcing (BPO)/ Knowledge Process Outsourcing (KPO),INE840Y01029,544748
+ONIDA,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Consumer Electronics,INE831A01028,500279
+ONMOBILE,Media,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,Web based media and service,INE809I01019,532944
+ONWARDTEC,IT - Services,Information Technology,bse_comheader,2026-11-24,Information Technology,IT Enabled Services,INE229A01017,517536
+OPTIEMUS,Telecom -  Equipment & Accessories,Telecommunication,bse_comheader,2026-11-24,Telecommunication,Telecom -  Equipment & Accessories,INE350C01017,530135
+ORBTEXP,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE231G01010,512626
+ORCHPHARMA,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE191A01027,524372
+ORICONENT,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Packaging,INE730A01022,513121
+ORIENTCEM,Cement & Cement Products,Construction Materials,bse_comheader,2026-11-24,Commodities,Cement & Cement Products,INE876N01018,535754
+ORIENTCER,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Electrodes & Refractories,INE569C01020,504879
+ORIENTELEC,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Household Appliances,INE142Z01019,541301
+ORIENTHOT,Leisure Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Hotels & Resorts,INE750A01020,500314
+ORIENTPPR,"Paper, Forest & Jute Products",Forest Materials,bse_comheader,2026-11-24,Commodities,Paper & Paper Products,INE592A01026,502420
+ORISSAMINE,Minerals & Mining,Metals & Mining,bse_comheader,2026-11-24,Commodities,Industrial Minerals,INE725E01024,590086
+OSWALAGRO,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Trading & Distributors,INE142A01012,500317
+OSWALGREEN,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Investment Company,INE143A01010,539290
+OSWALSEEDS,Agricultural Food & other Products,Fast Moving Consumer Goods,screener,2026-11-24,Fast Moving Consumer Goods,Other Agricultural Products,INE00IK01029,
+PAGEIND,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Garments & Apparels,INE761H01022,532827
+PAISALO,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Non Banking Financial Company (NBFC),INE420C01059,532900
+PAKKA,"Paper, Forest & Jute Products",Forest Materials,bse_comheader,2026-11-24,Commodities,Paper & Paper Products,INE551D01018,516030
+PALREDTEC,IT - Services,Information Technology,bse_comheader,2026-11-24,Information Technology,IT Enabled Services,INE218G01033,532521
+PANACEABIO,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE922B01023,531349
+PANACHE,IT - Services,Information Technology,screener,2026-11-24,Information Technology,IT Enabled Services,INE895W01019,
+PANAMAPET,Petroleum Products,"Oil, Gas & Consumable Fuels",bse_comheader,2026-11-24,Energy,Lubricants,INE305C01029,524820
+PANSARI,Realty,Realty,screener,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE697V01011,
+PAR,Pharmaceuticals & Biotechnology,Healthcare,screener,2026-11-24,Healthcare,Pharmaceuticals,INE04LG01015,
+PARACABLES,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Cables - Electricals,INE074B01023,530555
+PARADEEP,Fertilizers & Agrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Fertilizers,INE088F01024,543530
+PARAGMILK,Food Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Dairy Products,INE883N01014,539889
+PARAS,Aerospace & Defense,Capital Goods,bse_comheader,2026-11-24,Industrials,Aerospace & Defense,INE045601023,543367
+PASUPTAC,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Petrochemicals,INE818B01023,500456
+PATANJALI,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Edible Oil,INE619A01035,500368
+PATELENG,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE244B01030,531120
+PAVNAIND,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE07S101038,543915
+PAYTM,Financial Technology (Fintech),Financial Services,bse_comheader,2026-11-24,Financial Services,Financial Technology (Fintech),INE982J01020,543396
+PCBL,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Carbon Black,INE602A01031,506590
+PCJEWELLER,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,"Gems, Jewellery And Watches",INE785M01021,534809
+PDMJEPAPER,"Paper, Forest & Jute Products",Forest Materials,bse_comheader,2026-11-24,Commodities,Paper & Paper Products,INE865T01018,539785
+PDSL,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Trading - Textile Products,INE111Q01021,538730
+PENIND,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Industrial Products,INE932A01024,513228
+PENINLAND,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE138A01028,503031
+PERSISTENT,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE262H01021,533179
+PETRONET,Gas,"Oil, Gas & Consumable Fuels",bse_comheader,2026-11-24,Energy,LPG/CNG/PNG/LNG Supplier,INE347G01014,532522
+PFC,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Financial Institution,INE134E01011,532810
+PFIZER,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE182A01018,500680
+PFOCUS,Entertainment,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,Media & Entertainment,INE367G01038,532748
+PFS,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Non Banking Financial Company (NBFC),INE560K01014,533344
+PGEL,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Consumer Electronics,INE457L01029,533581
+PGHH,Personal Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Personal Care,INE179A01014,500459
+PGHL,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE199A01012,500126
+PGIL,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Garments & Apparels,INE940H01022,532808
+PHOENIXLTD,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE211B01039,503100
+PIGL,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Other Electrical Equipment,INE557Z01018,543912
+PIIND,Fertilizers & Agrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Pesticides & Agrochemicals,INE603J01030,523642
+PILANIINVS,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Investment Company,INE417C01014,539883
+PILITA,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Plastic Products - Consumer,INE600A01035,500327
+PITTIENG,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Industrial Products,INE450D01021,513519
+PIXTRANS,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Rubber,INE751B01018,500333
+PLASTIBLEN,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE083C01022,523648
+PLAZACABLE,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Cables - Electricals,INE0INJ01017,544003
+PNB,Banks,Financial Services,bse_comheader,2026-11-24,Financial Services,Public Sector Bank,INE160A01022,532461
+PNBGILTS,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Investment Company,INE859A01011,532366
+PNBHOUSING,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Housing Finance Company,INE572E01012,540173
+PNCINFRA,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE195J01029,539150
+POCL,Diversified Metals,Metals & Mining,bse_comheader,2026-11-24,Commodities,Diversified Metals,INE063E01061,532626
+PODDARMENT,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Dyes And Pigments,INE371C01013,524570
+POKARNA,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Granites & Marbles,INE637C01025,532486
+POLICYBZR,Financial Technology (Fintech),Financial Services,bse_comheader,2026-11-24,Financial Services,Financial Technology (Fintech),INE417T01026,543390
+POLYCAB,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Cables - Electricals,INE455K01017,542652
+POLYMED,Healthcare Equipment & Supplies,Healthcare,bse_comheader,2026-11-24,Healthcare,Medical Equipment & Supplies,INE205C01021,531768
+POLYPLEX,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Packaging,INE633B01018,524051
+PONNIERODE,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Sugar,INE838E01017,532460
+POONAWALLA,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Non Banking Financial Company (NBFC),INE511C01022,524000
+POWERINDIA,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Heavy Electrical Equipment,INE07Y701011,543187
+POWERMECH,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE211R01019,539302
+PPAP,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE095I01015,532934
+PPL,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Plastic Products - Industrial,INE050001010,542684
+PPLPHARMA,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE0DK501011,543635
+PRAJIND,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Industrial Products,INE074A01025,522205
+PRAKASH,Ferrous Metals,Metals & Mining,bse_comheader,2026-11-24,Commodities,Iron & Steel,INE603A01013,506022
+PRAXIS,Retailing,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Speciality Retail,INE546Y01022,540901
+PRECAM,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE484I01029,539636
+PRECOT,Textiles & Apparels,Textiles,screener,2026-11-24,Consumer Discretionary,Other Textile Products,INE283A01014,521184
+PRECWIRE,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,"Aluminium, Copper & Zinc Products",INE372C01037,523539
+PREMEXPLN,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Explosives,INE863B01029,526247
+PREMIERPOL,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Plastic Products - Industrial,INE309M01020,514354
+PRESTIGE,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE811K01011,533274
+PRICOLLTD,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE726V01018,540293
+PRIMESECU,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Other Financial Services,INE032B01021,500337
+PRINCEPIPE,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Plastic Products - Industrial,INE689W01016,542907
+PRITIKAUTO,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE583R01029,539359
+PRIVISCL,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE959A01019,530117
+PROZONER,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE195N01013,534675
+PRSMJOHNSN,Cement & Cement Products,Construction Materials,bse_comheader,2026-11-24,Commodities,Cement & Cement Products,INE010A01011,500338
+PRUDENT,Capital Markets,Financial Services,bse_comheader,2026-11-24,Financial Services,Financial Products Distributor,INE00F201020,543527
+PSB,Banks,Financial Services,bse_comheader,2026-11-24,Financial Services,Public Sector Bank,INE608A01012,533295
+PSPPROJECT,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE488V01015,540544
+PTC,Power,Power,bse_comheader,2026-11-24,Utilities,Power Trading,INE877F01012,532524
+PTCIL,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Castings & Forgings,INE596F01018,539006
+PTL,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Diversified Commercial Services,INE034D01049,509220
+PUNJABCHEM,Fertilizers & Agrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Pesticides & Agrochemicals,INE277B01014,506618
+PURVA,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE323I01011,532891
+PVP,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE362A01016,517556
+PVRINOX,Entertainment,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,"Film Production, Distribution & Exhibition",INE191H01014,532689
+PYRAMID,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Packaging,INE0MIS01010,543969
+QUESS,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Diversified Commercial Services,INE615P01015,539978
+QUICKHEAL,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Software Products,INE306L01010,539678
+RACE,Other Utilities,Utilities,bse_comheader,2026-11-24,Utilities,Waste Management,INE084Q01012,537785
+RADHIKAJWE,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,"Gems, Jewellery And Watches",INE583V01021,540125
+RADIANTCMS,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Diversified Commercial Services,INE855R01021,543732
+RADICO,Beverages,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Breweries & Distilleries,INE944F01028,532497
+RADIOCITY,Entertainment,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,Media & Entertainment,INE919I01024,540366
+RAILTEL,Telecom - Services,Telecommunication,bse_comheader,2026-11-24,Telecommunication,Other Telecom Services,INE0DD101019,543265
+RAIN,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Petrochemicals,INE855B01025,500339
+RAINBOW,Healthcare Services,Healthcare,bse_comheader,2026-11-24,Healthcare,Hospital,INE961O01016,543524
+RAJMET,Industrial Products,Capital Goods,screener,2026-11-24,Industrials,"Aluminium, Copper & Zinc Products",INE00KV01022,
+RAJRATAN,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE451D01029,517522
+RAJRILTD,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE533D01032,530699
+RAJTV,Entertainment,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,TV Broadcasting & Software Production,INE952H01027,532826
+RALLIS,Fertilizers & Agrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Pesticides & Agrochemicals,INE613A01020,500355
+RAMANEWS,"Paper, Forest & Jute Products",Forest Materials,bse_comheader,2026-11-24,Commodities,Paper & Paper Products,INE278B01020,500356
+RAMAPHO,Fertilizers & Agrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Fertilizers,INE809A01032,524037
+RAMASTEEL,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE230R01035,539309
+RAMCOCEM,Cement & Cement Products,Construction Materials,bse_comheader,2026-11-24,Commodities,Cement & Cement Products,INE331A01037,500260
+RAMCOIND,Other Construction Materials,Construction Materials,bse_comheader,2026-11-24,Commodities,Other Construction Materials,INE614A01028,532369
+RAMCOSYS,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Software Products,INE246B01019,532370
+RAMKY,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE874I01013,533262
+RAMRAT,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Other Electrical Equipment,INE207E01023,522281
+RANASUG,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Sugar,INE625B01014,507490
+RANEHOLDIN,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Holding Company,INE384A01010,505800
+RATEGAIN,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE0CLI01024,543417
+RATNAMANI,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE703B01027,520111
+RATNAVEER,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE05CZ01011,543978
+RAYMOND,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Industrial Products,INE301A01014,500330
+RBA,Leisure Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Restaurants,INE07T201019,543248
+RBLBANK,Banks,Financial Services,bse_comheader,2026-11-24,Financial Services,Private Sector Bank,INE976G01028,540065
+RBZJEWEL,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,"Gems, Jewellery And Watches",INE0PEQ01016,544060
+RCF,Fertilizers & Agrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Fertilizers,INE027A01015,524230
+RCOM,Telecom - Services,Telecommunication,bse_comheader,2026-11-24,Telecommunication,Telecom - Cellular & Fixed line services,INE330H01018,532712
+RECLTD,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Financial Institution,INE020B01018,532955
+REDINGTON,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Trading & Distributors,INE891D01026,532805
+REDTAPE,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Footwear,INE0LXT01019,543957
+REFEX,Other Utilities,Utilities,bse_comheader,2026-11-24,Utilities,Waste Management,INE056I01025,532884
+RELAXO,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Footwear,INE131B01039,530517
+RELIGARE,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Investment Company,INE621H01010,532915
+RELINFRA,Power,Power,bse_comheader,2026-11-24,Utilities,Integrated Power Utilities,INE036A01016,500390
+REMSONSIND,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE474C01023,530919
+RENUKA,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Sugar,INE087H01022,532670
+REPCOHOME,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Housing Finance Company,INE612J01015,535322
+REPL,Construction,Construction,screener,2026-11-24,Industrials,Civil Construction,INE364Z01019,
+REPRO,Printing & Publication,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,Printing & Publication,INE461B01014,532687
+RESPONIND,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,"Furniture, Home Furnishing",INE688D01026,505509
+RGL,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,"Gems, Jewellery And Watches",INE722H01024,532923
+RHIM,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Electrodes & Refractories,INE743M01012,534076
+RHL,Leisure Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Hotels & Resorts,INE508K01013,543901
+RICOAUTO,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE209B01025,520008
+RIIL,Transport Services,Services,bse_comheader,2026-11-24,Services,Logistics Solution Provider,INE046A01015,523445
+RISHABH,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Other Electrical Equipment,INE0N2P01017,543977
+RITCO,Transport Services,Services,bse_comheader,2026-11-24,Services,Logistics Solution Provider,INE01EG01016,542383
+RITES,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE320J01015,541556
+RKFORGE,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE399G01023,532527
+RML,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE050H01012,532661
+ROHLTD,Leisure Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Hotels & Resorts,INE283H01019,532699
+ROLEXRINGS,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE645S01024,543325
+ROSSARI,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE02A801020,543213
+ROSSELLIND,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Tea & Coffee,INE847C01020,533168
+ROTO,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,"Compressors, Pumps & Diesel Engines",INE535D01037,517500
+ROUTE,Telecom - Services,Telecommunication,bse_comheader,2026-11-24,Telecommunication,Other Telecom Services,INE450U01017,543228
+RPGLIFE,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE105J01010,532983
+RPOWER,Power,Power,bse_comheader,2026-11-24,Utilities,Power Generation,INE614G01033,532939
+RPPINFRA,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE324L01013,533284
+RPPL,Industrial Products,Capital Goods,screener,2026-11-24,Industrials,Packaging,INE760W01023,
+RPSGVENT,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Business Process Outsourcing (BPO)/ Knowledge Process Outsourcing (KPO),INE425Y01011,542333
+RRKABEL,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Cables - Electricals,INE777K01022,543981
+RSSOFTWARE,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE165B01029,517447
+RSWM,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE611A01016,500350
+RSYSTEMS,IT - Services,Information Technology,bse_comheader,2026-11-24,Information Technology,IT Enabled Services,INE411H01032,532735
+RTNINDIA,Retailing,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,E-Retail/ E-Commerce,INE834M01019,534597
+RTNPOWER,Power,Power,bse_comheader,2026-11-24,Utilities,Power Generation,INE399K01017,533122
+RUBYMILLS,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE301D01026,503169
+RUCHINFRA,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Diversified Commercial Services,INE413B01023,509020
+RUCHIRA,"Paper, Forest & Jute Products",Forest Materials,bse_comheader,2026-11-24,Commodities,Paper & Paper Products,INE803H01014,532785
+RUPA,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Garments & Apparels,INE895B01021,533552
+RUSHIL,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Plywood Boards/ Laminates,INE573K01025,533470
+RUSTOMJEE,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE263M01029,543669
+RVHL,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE09E501017,543251
+RVNL,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE415G01027,542649
+S&SPOWER,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Other Electrical Equipment,INE902B01017,517273
+SADBHAV,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE226H01026,532710
+SADBHIN,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE764L01010,539346
+SADHNANIQ,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Commodity Chemicals,INE888C01040,506642
+SAFARI,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Plastic Products - Consumer,INE429E01023,523025
+SAGCEM,Cement & Cement Products,Construction Materials,bse_comheader,2026-11-24,Commodities,Cement & Cement Products,INE229C01021,502090
+SAHYADRI,Other Construction Materials,Construction Materials,bse_comheader,2026-11-24,Commodities,Other Construction Materials,INE280H01015,532841
+SAIL,Ferrous Metals,Metals & Mining,bse_comheader,2026-11-24,Commodities,Iron & Steel,INE114A01011,500113
+SAKAR,Pharmaceuticals & Biotechnology,Healthcare,screener,2026-11-24,Healthcare,Pharmaceuticals,INE732S01012,
+SAKHTISUG,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Sugar,INE623A01011,507315
+SAKSOFT,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE667G01023,590051
+SAKUMA,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Trading & Distributors,INE190H01024,532713
+SALASAR,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Industrial Products,INE170V01027,540642
+SALZERELEC,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Other Electrical Equipment,INE457F01013,517059
+SAMHI,Leisure Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Hotels & Resorts,INE08U801020,543984
+SAMMAANCAP,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Housing Finance Company,INE148I01020,535789
+SANDESH,Media,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,Print Media,INE583B01015,526725
+SANDHAR,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE278H01035,541163
+SANDUMA,Ferrous Metals,Metals & Mining,bse_comheader,2026-11-24,Commodities,Iron & Steel,INE149K01016,504918
+SANGAMIND,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE495C01010,514234
+SANGHVIMOV,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Diversified Commercial Services,INE989A01032,530073
+SANOFI,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE058A01010,500674
+SANSERA,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE953O01021,543358
+SAPPHIRE,Leisure Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Restaurants,INE806T01020,543397
+SARDAEN,Ferrous Metals,Metals & Mining,bse_comheader,2026-11-24,Commodities,Iron & Steel,INE385C01021,504614
+SAREGAMA,Entertainment,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,Media & Entertainment,INE979A01025,532163
+SARLAPOLY,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE453D01025,526885
+SARVESHWAR,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Other Agricultural Products,INE324X01026,543688
+SASKEN,IT - Services,Information Technology,bse_comheader,2026-11-24,Information Technology,IT Enabled Services,INE231F01020,532663
+SATIA,"Paper, Forest & Jute Products",Forest Materials,bse_comheader,2026-11-24,Commodities,Paper & Paper Products,INE170E01023,539201
+SATIN,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Microfinance Institutions,INE836B01017,539404
+SBC,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Garments & Apparels,INE04AK01028,542725
+SBCL,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE386D01027,513097
+SBFC,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Non Banking Financial Company (NBFC),INE423Y01016,543959
+SBGLP,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE05ST01028,543218
+SBICARD,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Non Banking Financial Company (NBFC),INE018E01016,543066
+SCHAEFFLER,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE513A01022,505790
+SCHAND,Printing & Publication,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,Printing & Publication,INE807K01035,540497
+SCHNEIDER,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Heavy Electrical Equipment,INE839M01018,534139
+SCI,Transport Services,Services,bse_comheader,2026-11-24,Services,Shipping,INE109A01011,523598
+SCPL,Food Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Dairy Products,INE501Y01019,540757
+SDBL,Beverages,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Breweries & Distilleries,INE480C01038,507514
+SEAMECLTD,Transport Services,Services,bse_comheader,2026-11-24,Services,Shipping,INE497B01018,526807
+SECURKLOUD,IT - Services,Information Technology,bse_comheader,2026-11-24,Information Technology,IT Enabled Services,INE650K01021,512161
+SEJALLTD,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Glass - Industrial,INE955I01044,532993
+SEMAC,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE617A01013,505368
+SENCO,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,"Gems, Jewellery And Watches",INE602W01027,543936
+SEPC,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE964H01014,532945
+SERVOTECH,Electrical Equipment,Capital Goods,screener,2026-11-24,Industrials,Other Electrical Equipment,INE782X01033,
+SESHAPAPER,"Paper, Forest & Jute Products",Forest Materials,bse_comheader,2026-11-24,Commodities,Paper & Paper Products,INE630A01024,502450
+SFL,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,"Furniture, Home Furnishing",INE916U01025,540203
+SGIL,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Castings & Forgings,INE00QT01015,541929
+SHAH,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE482J01021,533275
+SHAILY,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Plastic Products - Consumer,INE151G01028,501423
+SHAKTIPUMP,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,"Compressors, Pumps & Diesel Engines",INE908D01010,531431
+SHALBY,Healthcare Services,Healthcare,bse_comheader,2026-11-24,Healthcare,Hospital,INE597J01018,540797
+SHALPAINTS,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Paints,INE849C01026,509874
+SHANKARA,Retailing,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Speciality Retail,INE274V01019,540425
+SHANTIGEAR,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Industrial Products,INE631A01022,522034
+SHARDACROP,Fertilizers & Agrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Pesticides & Agrochemicals,INE221J01015,538666
+SHARDAMOTR,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE597I01028,535602
+SHAREINDIA,Capital Markets,Financial Services,bse_comheader,2026-11-24,Financial Services,Stockbroking & Allied,INE932X01026,540725
+SHEMAROO,Entertainment,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,Media & Entertainment,INE363M01019,538685
+SHILPAMED,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE790G01031,530549
+SHIVALIK,Fertilizers & Agrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Pesticides & Agrochemicals,INE788J01021,539148
+SHIVAMAUTO,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE637H01024,532776
+SHK,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE500L01026,539450
+SHOPERSTOP,Retailing,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Diversified Retail,INE498B01024,532638
+SHRADHA,Realty,Realty,screener,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE715Y01031,
+SHREDIGCEM,Cement & Cement Products,Construction Materials,bse_comheader,2026-11-24,Commodities,Cement & Cement Products,INE232A01011,502180
+SHREEPUSHK,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Dyes And Pigments,INE712K01011,539334
+SHREERAMA,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Packaging,INE879A01019,532310
+SHREYANIND,"Paper, Forest & Jute Products",Forest Materials,bse_comheader,2026-11-24,Commodities,Paper & Paper Products,INE231C01019,516016
+SHRIPISTON,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE526E01018,544344
+SHRIRAMPPS,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE217L01019,543419
+SHYAMCENT,Ferrous Metals,Metals & Mining,bse_comheader,2026-11-24,Commodities,Ferro & Silica Manganese,INE979R01011,539252
+SICALLOG,Transport Services,Services,bse_comheader,2026-11-24,Services,Logistics Solution Provider,INE075B01020,520086
+SIEMENS,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Heavy Electrical Equipment,INE003A01024,500550
+SIGACHI,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE0D0K01022,543389
+SIGMA,IT - Services,Information Technology,bse_comheader,2026-11-24,Information Technology,IT Enabled Services,INE0A0S01028,543917
+SIGMAADV,Aerospace & Defense,Capital Goods,bse_comheader,2026-11-24,Industrials,Aerospace & Defense,INE933B01012,532408
+SIGNATURE,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE903U01023,543990
+SIKKO,Fertilizers & Agrochemicals,Chemicals,screener,2026-11-24,Commodities,Pesticides & Agrochemicals,INE112X01025,
+SILINV,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Investment Company,INE923A01015,521194
+SILVERTUC,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE625X01026,543525
+SIMPLEXINF,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE059B01024,523838
+SINDHUTRAD,Consumable Fuels,"Oil, Gas & Consumable Fuels",bse_comheader,2026-11-24,Energy,Coal,INE325D01025,532029
+SIRCA,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Paints,INE792Z01011,543686
+SIS,Other Consumer Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Other Consumer Services,INE285J01028,540673
+SIYSIL,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE076B01028,503811
+SJS,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE284S01014,543387
+SJVN,Power,Power,bse_comheader,2026-11-24,Utilities,Power Generation,INE002L01015,533206
+SKFINDIA,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE640A01023,500472
+SKIPPER,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Heavy Electrical Equipment,INE439E01022,538562
+SKMEGGPROD,Food Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Meat Products including Poultry,INE411D01023,532143
+SKYGOLD,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,"Gems, Jewellery And Watches",INE01IU01018,541967
+SMCGLOBAL,Capital Markets,Financial Services,bse_comheader,2026-11-24,Financial Services,Stockbroking & Allied,INE103C01036,543263
+SMLMAH,"Agricultural, Commercial & Construction Vehicles",Capital Goods,bse_comheader,2026-11-24,Industrials,Commercial Vehicles,INE294B01019,505192
+SMLT,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE017W01010,540393
+SMSPHARMA,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE812G01025,532815
+SNOWMAN,Transport Services,Services,bse_comheader,2026-11-24,Services,Logistics Solution Provider,INE734N01019,538635
+SOBHA,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE671H01015,532784
+SOFTTECH,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE728Z01015,543470
+SOLARA,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE624Z01016,541540
+SOLARINDS,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Explosives,INE343H01029,532725
+SOMANYCERA,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Ceramics,INE355A01028,531548
+SOMATEX,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE314C01013,521034
+SONACOMS,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE073K01018,543300
+SONATSOFTW,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE269A01021,532221
+SOTL,Petroleum Products,"Oil, Gas & Consumable Fuels",bse_comheader,2026-11-24,Energy,Lubricants,INE035D01020,524667
+SOUTHBANK,Banks,Financial Services,bse_comheader,2026-11-24,Financial Services,Private Sector Bank,INE683A01023,532218
+SOUTHWEST,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Diversified Commercial Services,INE980Y01015,543986
+SPAL,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Garments & Apparels,INE212I01016,540048
+SPANDANA,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Microfinance Institutions,INE572J01011,542759
+SPARC,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE232I01014,532872
+SPCENET,Commercial Services & Supplies,Services,screener,2026-11-24,Services,Trading & Distributors,INE970N01027,
+SPECIALITY,Leisure Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Restaurants,INE247M01014,534425
+SPENCERS,Retailing,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Diversified Retail,INE020801028,542337
+SPIC,Fertilizers & Agrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Fertilizers,INE147A01011,590030
+SPLPETRO,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Petrochemicals,INE663A01033,500405
+SPORTKING,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE885H01029,539221
+SREEL,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Footwear,INE099F01013,535601
+SRF,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Commodity Chemicals,INE647A01010,503806
+SRGHFL,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Housing Finance Company,INE559N01010,534680
+SRHHYPOLTD,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Commodity Chemicals,INE917H01012,532842
+SSWL,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE802C01033,513262
+STAR,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE939A01011,532531
+STARCEMENT,Cement & Cement Products,Construction Materials,bse_comheader,2026-11-24,Commodities,Cement & Cement Products,INE460H01021,540575
+STARPAPER,"Paper, Forest & Jute Products",Forest Materials,bse_comheader,2026-11-24,Commodities,Paper & Paper Products,INE733A01018,516022
+STARTECK,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Non Banking Financial Company (NBFC),INE992I01013,512381
+STCINDIA,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Trading & Distributors,INE655A01013,512531
+STEELCAS,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Castings & Forgings,INE124E01038,513517
+STEELXIND,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE503B01021,534748
+STEL,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Investment Company,INE577L01016,533316
+STERTOOLS,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE334A01023,530759
+STLTECH,Telecom -  Equipment & Accessories,Telecommunication,bse_comheader,2026-11-24,Telecommunication,Telecom -  Equipment & Accessories,INE089C01029,532374
+STOVEKRAFT,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Household Appliances,INE00IN01015,543260
+STYLAMIND,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Plywood Boards/ Laminates,INE239C01020,526951
+STYRENIX,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE189B01011,506222
+SUBEXLTD,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Software Products,INE754A01055,532348
+SUBROS,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Other Industrial Products,INE287B01021,517168
+SUDARCOLOR,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Dyes And Pigments,INE492A01029,506390
+SUDARSCHEM,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Dyes And Pigments,INE659A01023,506655
+SUKHJITS,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Other Agricultural Products,INE450E01029,524542
+SULA,Beverages,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Breweries & Distilleries,INE142Q01026,543711
+SUMEETINDS,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE235C01036,514211
+SUMICHEM,Fertilizers & Agrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Pesticides & Agrochemicals,INE258G01013,542920
+SUMIT,Realty,Realty,screener,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE748Z01013,
+SUMMITSEC,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Investment Company,INE519C01017,533306
+SUNCLAY,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE0Q3R01026,544066
+SUNDARMFIN,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Non Banking Financial Company (NBFC),INE660A01013,590071
+SUNDRMBRAK,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE073D01013,590072
+SUNDRMFAST,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE387A01021,500403
+SUNDROP,Food Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Packaged Foods,INE209A01019,500215
+SUNFLAG,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE947A01014,500404
+SUNTECK,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE805D01034,512179
+SUNTV,Entertainment,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,TV Broadcasting & Software Production,INE424H01027,532733
+SUPRAJIT,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE399C01030,532509
+SUPREMEIND,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Plastic Products - Industrial,INE195A01028,509930
+SUPREMEINF,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE550H01011,532904
+SUPRIYA,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE07RO01027,543434
+SURAJEST,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE843S01025,544054
+SURANAT&P,Power,Power,bse_comheader,2026-11-24,Utilities,Power Generation,INE130B01031,517530
+SURYAROSNI,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE335A01020,500336
+SURYODAY,Banks,Financial Services,bse_comheader,2026-11-24,Financial Services,Other Bank,INE428Q01011,543279
+SUTLEJTEX,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE645H01027,532782
+SUVEN,Healthcare Services,Healthcare,bse_comheader,2026-11-24,Healthcare,"Healthcare Research, Analytics & Technology",INE495B01038,530239
+SUVIDHAA,Financial Technology (Fintech),Financial Services,bse_comheader,2026-11-24,Financial Services,Financial Technology (Fintech),INE018401013,543281
+SUZLON,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Heavy Electrical Equipment,INE040H01021,532667
+SVLL,Transport Services,Services,bse_comheader,2026-11-24,Services,Logistics Solution Provider,INE00CE01017,544997
+SVPGLOB,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE308E01029,505590
+SWANCORP,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Petrochemicals,INE665A01038,503310
+SWARAJENG,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,"Compressors, Pumps & Diesel Engines",INE277A01016,500407
+SWELECTES,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Heavy Electrical Equipment,INE409B01013,532051
+SWSOLAR,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE00M201021,542760
+SYMPHONY,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Household Appliances,INE225D01027,517385
+SYNCOMF,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE312C01025,524470
+SYNGENE,Healthcare Services,Healthcare,bse_comheader,2026-11-24,Healthcare,"Healthcare Research, Analytics & Technology",INE398R01022,539268
+SYRMA,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Industrial Products,INE0DYJ01015,543573
+TAJGVK,Leisure Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Hotels & Resorts,INE586B01026,532390
+TAKE,Healthcare Services,Healthcare,bse_comheader,2026-11-24,Healthcare,"Healthcare Research, Analytics & Technology",INE142I01023,532890
+TALBROAUTO,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE187D01029,505160
+TANLA,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Software Products,INE483C01032,532790
+TARC,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE0EK901012,543249
+TARIL,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Heavy Electrical Equipment,INE763I01026,532928
+TARSONS,Healthcare Equipment & Supplies,Healthcare,bse_comheader,2026-11-24,Healthcare,Medical Equipment & Supplies,INE144Z01023,543399
+TASTYBITE,Food Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Packaged Foods,INE488B01017,519091
+TATACHEM,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Commodity Chemicals,INE092A01019,500770
+TATACOMM,Telecom - Services,Telecommunication,bse_comheader,2026-11-24,Telecommunication,Telecom - Cellular & Fixed line services,INE151A01013,500483
+TATACONSUM,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Tea & Coffee,INE192A01025,500800
+TATAELXSI,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE670A01012,500408
+TATAINVEST,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Investment Company,INE672A01026,501301
+TATAPOWER,Power,Power,bse_comheader,2026-11-24,Utilities,Integrated Power Utilities,INE245A01021,500400
+TATATECH,IT - Services,Information Technology,bse_comheader,2026-11-24,Information Technology,IT Enabled Services,INE142M01025,544028
+TATVA,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE0GK401011,543321
+TBZ,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,"Gems, Jewellery And Watches",INE760L01018,534369
+TCI,Transport Services,Services,bse_comheader,2026-11-24,Services,Logistics Solution Provider,INE688A01022,532349
+TCIEXP,Transport Services,Services,bse_comheader,2026-11-24,Services,Logistics Solution Provider,INE586V01016,540212
+TCPLPACK,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Packaging,INE822C01015,523301
+TDPOWERSYS,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Heavy Electrical Equipment,INE419M01035,533553
+TEAMLEASE,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Diversified Commercial Services,INE985S01024,539658
+TECHNOE,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE285K01026,542141
+TEGA,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Industrial Products,INE011K01018,543413
+TEJASNET,Telecom -  Equipment & Accessories,Telecommunication,bse_comheader,2026-11-24,Telecommunication,Telecom -  Equipment & Accessories,INE010J01012,540595
+TEMBO,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE869Y01028,544987
+TERASOFT,IT - Services,Information Technology,bse_comheader,2026-11-24,Information Technology,IT Enabled Services,INE482B01010,533982
+TEXINFRA,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Diversified Commercial Services,INE435C01024,505400
+TEXRAIL,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Railway Wagons,INE621L01012,533326
+TFCILTD,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Financial Institution,INE305A01023,526650
+THANGAMAYL,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,"Gems, Jewellery And Watches",INE085J01014,533158
+THEINVEST,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Other Financial Services,INE924D01017,530023
+THEJO,Industrial Manufacturing,Capital Goods,screener,2026-11-24,Industrials,Industrial Products,INE121N01019,
+THEMISMED,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE083B01024,530199
+THERMAX,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Heavy Electrical Equipment,INE152A01029,500411
+THOMASCOOK,Leisure Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,"Tour, Travel Related Services",INE332A01027,500413
+THOMASCOTT,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Garments & Apparels,INE480M01011,533941
+THYROCARE,Healthcare Services,Healthcare,bse_comheader,2026-11-24,Healthcare,Healthcare Service Provider,INE594H01019,539871
+TI,Beverages,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Breweries & Distilleries,INE133E01013,507205
+TICL,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE388G01026,532738
+TIIL,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE545H01011,532804
+TIINDIA,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE974X01010,540762
+TIL,"Agricultural, Commercial & Construction Vehicles",Capital Goods,bse_comheader,2026-11-24,Industrials,Construction Vehicles,INE806C01018,505196
+TIMETECHNO,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Plastic Products - Industrial,INE508G01029,532856
+TIMKEN,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Abrasives & Bearings,INE325A01013,522113
+TIPSMUSIC,Entertainment,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,Media & Entertainment,INE716B01029,532375
+TIRUMALCHM,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Commodity Chemicals,INE338A01024,500412
+TIRUPATIFL,Industrial Products,Capital Goods,screener,2026-11-24,Industrials,Castings & Forgings,INE319Y01024,
+TITAGARH,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Railway Wagons,INE615H01020,532966
+TMB,Banks,Financial Services,bse_comheader,2026-11-24,Financial Services,Private Sector Bank,INE668A01016,543596
+TNPETRO,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Petrochemicals,INE148A01019,500777
+TNPL,"Paper, Forest & Jute Products",Forest Materials,bse_comheader,2026-11-24,Commodities,Paper & Paper Products,INE107A01015,531426
+TORNTPHARM,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE685A01028,500420
+TORNTPOWER,Power,Power,bse_comheader,2026-11-24,Utilities,Integrated Power Utilities,INE813H01021,532779
+TPHQ,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE065J01024,533048
+TPLPLASTEH,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Packaging,INE413G01022,526582
+TRACXN,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Data Processing Services,INE0HMF01019,543638
+TRANSWORLD,Transport Services,Services,bse_comheader,2026-11-24,Services,Shipping,INE757B01015,520151
+TREJHARA,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE00CA01015,542233
+TREL,Transport Services,Services,bse_comheader,2026-11-24,Services,Logistics Solution Provider,INE0O3901029,543955
+TRENT,Retailing,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Speciality Retail,INE849A01020,500251
+TRF,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Industrial Products,INE391D01019,505854
+TRIDENT,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE064C01022,521064
+TRITURBINE,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Heavy Electrical Equipment,INE152M01016,533655
+TRIVENI,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Sugar,INE256C01024,532356
+TRU,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Non Banking Financial Company (NBFC),INE615R01029,540268
+TSFINV,Finance,Financial Services,screener,2026-11-24,Financial Services,Investment Company,INE202Z01029,
+TTKHLTCARE,Diversified,Diversified,bse_comheader,2026-11-24,Diversified,Diversified,INE910C01018,507747
+TTKPRESTIG,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Household Appliances,INE690A01028,517506
+TTL,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE592B01024,514142
+TTML,Telecom - Services,Telecommunication,bse_comheader,2026-11-24,Telecommunication,Telecom - Cellular & Fixed line services,INE517B01013,532371
+TVSELECT,IT - Hardware,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers Hardware & Equipments,INE236G01019,532513
+TVSHLTD,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Investment Company,INE105A01035,520056
+TVSMOTOR,Automobiles,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,2/3 Wheelers,INE494B01023,532343
+TVSSCS,Transport Services,Services,bse_comheader,2026-11-24,Services,Logistics Solution Provider,INE395N01027,543965
+TVSSRICHAK,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Tyres & Rubber Products,INE421C01016,509243
+TVTODAY,Entertainment,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,TV Broadcasting & Software Production,INE038F01029,532515
+UBL,Beverages,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Breweries & Distilleries,INE686F01025,532478
+UCAL,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE139B01016,500464
+UCOBANK,Banks,Financial Services,bse_comheader,2026-11-24,Financial Services,Public Sector Bank,INE691A01018,532505
+UDS,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Diversified Commercial Services,INE851I01011,543996
+UFBL,Leisure Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Restaurants,INE382M01027,543283
+UFLEX,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Packaging,INE516A01017,500148
+UFO,Entertainment,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,"Film Production, Distribution & Exhibition",INE527H01019,539141
+UGARSUGAR,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Sugar,INE071E01023,530363
+UGROCAP,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Non Banking Financial Company (NBFC),INE583D01011,511742
+UJJIVANSFB,Banks,Financial Services,bse_comheader,2026-11-24,Financial Services,Other Bank,INE551W01018,542904
+UMAEXPORTS,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Trading & Distributors,INE0GIU01018,543513
+UNICHEMLAB,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE351A01035,506690
+UNIDT,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Industrial Products,INE961D01019,522014
+UNIENTER,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Trading - Chemicals,INE037A01022,500429
+UNIONBANK,Banks,Financial Services,bse_comheader,2026-11-24,Financial Services,Public Sector Bank,INE692A01016,532477
+UNIPARTS,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE244O01017,543689
+UNITDSPR,Beverages,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Breweries & Distilleries,INE854D01024,532432
+UNITECH,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE694A01020,507878
+UNITEDPOLY,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE368U01029,544756
+UNIVCABLES,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Cables - Electricals,INE279A01012,504212
+UNIVPHOTO,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Consumer Electronics,INE03V001013,542933
+UNOMINDA,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE405E01023,532539
+UPL,Fertilizers & Agrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Pesticides & Agrochemicals,INE628A01036,512070
+URAVIDEF,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE568Z01015,543930
+URJA,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Other Electrical Equipment,INE550C01020,526987
+USHAMART,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE228A01035,517146
+USK,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE0N0Y01013,543861
+UTIAMC,Capital Markets,Financial Services,bse_comheader,2026-11-24,Financial Services,Asset Management Company,INE094J01016,543238
+UTKARSHBNK,Banks,Financial Services,bse_comheader,2026-11-24,Financial Services,Other Bank,INE735W01017,543942
+UTTAMSUGAR,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Sugar,INE786F01031,532729
+V2RETAIL,Retailing,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Speciality Retail,INE945H01021,532867
+VADILALIND,Food Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Dairy Products,INE694D01016,519156
+VAIBHAVGBL,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,"Gems, Jewellery And Watches",INE884A01027,532156
+VAISHALI,Pharmaceuticals & Biotechnology,Healthcare,screener,2026-11-24,Healthcare,Pharmaceuticals,INE972X01022,
+VAKRANGEE,IT - Services,Information Technology,bse_comheader,2026-11-24,Information Technology,IT Enabled Services,INE051B01021,511431
+VALIANTLAB,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE0JWS01017,543998
+VALIANTORG,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE565V01010,540145
+VARDHACRLC,Textiles & Apparels,Textiles,screener,2026-11-24,Consumer Discretionary,Other Textile Products,INE116G01013,
+VARDMNPOLY,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE835A01029,514175
+VARROC,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE665L01035,541578
+VASCONEQ,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE893I01013,533156
+VCL,Textiles & Apparels,Textiles,screener,2026-11-24,Consumer Discretionary,Garments & Apparels,INE098201036,
+VEEDOL,Petroleum Products,"Oil, Gas & Consumable Fuels",bse_comheader,2026-11-24,Energy,Lubricants,INE484C01030,590005
+VENKEYS,Food Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Meat Products including Poultry,INE398A01010,523261
+VENUSPIPES,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE0JA001018,543528
+VENUSREM,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE411B01019,526953
+VERANDA,Other Consumer Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,E-Learning,INE0IQ001011,543514
+VESUVIUS,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Electrodes & Refractories,INE386A01023,520113
+VGL,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE273D01027,514274
+VGUARD,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Household Appliances,INE951I01027,532953
+VHL,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Investment Company,INE701A01023,500439
+VIDHIING,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE632C01026,531717
+VIJAYA,Healthcare Services,Healthcare,bse_comheader,2026-11-24,Healthcare,Healthcare Service Provider,INE043W01024,543350
+VIKASECO,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE806A01020,530961
+VIKASLIFE,Commercial Services & Supplies,Services,bse_comheader,2026-11-24,Services,Trading & Distributors,INE161L01027,542655
+VIMTALABS,Healthcare Services,Healthcare,bse_comheader,2026-11-24,Healthcare,"Healthcare Research, Analytics & Technology",INE579C01029,524394
+VINATIORGA,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE410B01037,524200
+VINDHYATEL,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE707A01012,517015
+VINNY,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Garments & Apparels,INE01KI01027,543670
+VINYLINDIA,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Trading - Chemicals,INE250B01029,524129
+VIPCLOTHNG,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Garments & Apparels,INE450G01024,532613
+VIPIND,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Plastic Products - Consumer,INE054A01027,507880
+VIPULLTD,Realty,Realty,bse_comheader,2026-11-24,Consumer Discretionary,"Residential, Commercial Projects",INE946H01037,511726
+VIRINCHI,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Software Products,INE539B01017,532372
+VISACHROME,Ferrous Metals,Metals & Mining,bse_comheader,2026-11-24,Commodities,Ferro & Silica Manganese,INE286H01012,532721
+VISAKAIND,Cement & Cement Products,Construction Materials,bse_comheader,2026-11-24,Commodities,Cement & Cement Products,INE392A01021,509055
+VISHNU,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE270I01022,516072
+VISHWARAJ,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Sugar,INE430N01022,542852
+VIYASH,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE807F01027,512529
+VLEGOV,IT - Services,Information Technology,bse_comheader,2026-11-24,Information Technology,IT Enabled Services,INE03HW01020,543958
+VLSFINANCE,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Investment Company,INE709A01018,511333
+VMART,Retailing,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Diversified Retail,INE665J01013,534976
+VOLTAMP,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Heavy Electrical Equipment,INE540H01012,532757
+VOLTAS,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Household Appliances,INE226A01021,500575
+VPRPL,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE0AE001013,543974
+VRLLOG,Transport Services,Services,bse_comheader,2026-11-24,Services,Logistics Solution Provider,INE366I01010,539118
+VSSL,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE050M01012,534392
+VSTIND,Cigarettes & Tobacco Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Cigarettes & Tobacco Products,INE710A01016,509966
+VSTTILLERS,"Agricultural, Commercial & Construction Vehicles",Capital Goods,bse_comheader,2026-11-24,Industrials,Tractors,INE764D01017,531266
+VTL,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE825A01020,502986
+WAAREEINDO,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Heavy Electrical Equipment,INE866K01023,533257
+WABAG,Other Utilities,Utilities,bse_comheader,2026-11-24,Utilities,Water Supply & Management,INE956G01038,533269
+WALCHANNAG,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Industrial Products,INE711A01022,507410
+WANBURY,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE107F01022,524212
+WEALTH,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Other Financial Services,INE658T01017,544536
+WEBELSOLAR,Electrical Equipment,Capital Goods,bse_comheader,2026-11-24,Industrials,Other Electrical Equipment,INE855C01023,517498
+WEL,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Household Appliances,INE02WG01024,543449
+WELCORP,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Iron & Steel Products,INE191B01025,532144
+WELENT,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE625G01013,532553
+WELINV,Finance,Financial Services,bse_comheader,2026-11-24,Financial Services,Investment Company,INE389K01018,533252
+WELSPUNLIV,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Other Textile Products,INE192B01031,514162
+WENDT,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Abrasives & Bearings,INE274C01019,505412
+WESTLIFE,Leisure Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Restaurants,INE274F01020,505533
+WHEELS,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE715A01015,590073
+WHIRLPOOL,Consumer Durables,Consumer Durables,bse_comheader,2026-11-24,Consumer Discretionary,Household Appliances,INE716A01013,500238
+WINDLAS,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE0H5O01029,543329
+WINDMACHIN,Industrial Manufacturing,Capital Goods,bse_comheader,2026-11-24,Industrials,Industrial Products,INE052A01021,522029
+WOCKPHARMA,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE049B01025,532300
+WONDERLA,Leisure Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Amusement Parks/ Other Recreation,INE066O01014,538268
+WSI,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE100D01014,504220
+WSTCSTPAPR,"Paper, Forest & Jute Products",Forest Materials,bse_comheader,2026-11-24,Commodities,Paper & Paper Products,INE976A01021,500444
+XCHANGING,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE692G01013,532616
+XELPMOC,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Software Products,INE01P501012,542367
+XPROINDIA,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,Packaging,INE445C01015,590013
+YASHO,Chemicals & Petrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Specialty Chemicals,INE616Z01012,541167
+YATHARTH,Healthcare Services,Healthcare,bse_comheader,2026-11-24,Healthcare,Hospital,INE0JO301016,543950
+YATRA,Leisure Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,"Tour, Travel Related Services",INE0JR601024,543992
+YESBANK,Banks,Financial Services,bse_comheader,2026-11-24,Financial Services,Private Sector Bank,INE528G01035,532648
+YUKEN,Industrial Products,Capital Goods,bse_comheader,2026-11-24,Industrials,"Compressors, Pumps & Diesel Engines",INE384C01016,522108
+ZAGGLE,IT - Services,Information Technology,bse_comheader,2026-11-24,Information Technology,IT Enabled Services,INE07K301024,543985
+ZEEL,Entertainment,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,TV Broadcasting & Software Production,INE256A01028,505537
+ZEELEARN,Other Consumer Services,Consumer Services,bse_comheader,2026-11-24,Consumer Discretionary,Education,INE565L01011,533287
+ZEEMEDIA,Entertainment,"Media, Entertainment & Publication",bse_comheader,2026-11-24,Consumer Discretionary,TV Broadcasting & Software Production,INE966H01019,532794
+ZENSARTECH,IT - Software,Information Technology,bse_comheader,2026-11-24,Information Technology,Computers - Software & Consulting,INE520A01027,504067
+ZENTEC,Aerospace & Defense,Capital Goods,bse_comheader,2026-11-24,Industrials,Aerospace & Defense,INE251B01027,533339
+ZFCVINDIA,Auto Components,Automobile and Auto Components,bse_comheader,2026-11-24,Consumer Discretionary,Auto Components & Equipments,INE342J01019,533023
+ZIMLAB,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE518E01015,541400
+ZODIAC,Construction,Construction,bse_comheader,2026-11-24,Industrials,Civil Construction,INE761Y01019,543416
+ZODIACLOTH,Textiles & Apparels,Textiles,bse_comheader,2026-11-24,Consumer Discretionary,Garments & Apparels,INE206B01013,521163
+ZOTA,Pharmaceuticals & Biotechnology,Healthcare,screener,2026-11-24,Healthcare,Pharmaceuticals,INE358U01012,
+ZUARI,Fertilizers & Agrochemicals,Chemicals,bse_comheader,2026-11-24,Commodities,Fertilizers,INE840M01016,534742
+ZUARIIND,Agricultural Food & other Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Sugar,INE217A01012,500780
+ZYDUSLIFE,Pharmaceuticals & Biotechnology,Healthcare,bse_comheader,2026-11-24,Healthcare,Pharmaceuticals,INE010B01027,532321
+ZYDUSWELL,Food Products,Fast Moving Consumer Goods,bse_comheader,2026-11-24,Fast Moving Consumer Goods,Packaged Foods,INE768C01028,531335

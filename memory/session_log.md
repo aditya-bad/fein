@@ -75,3 +75,4 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
 - 24-Nov-2026 (later): live dive #5 UTKARSHBNK (first live lender; card v1.4 size 0, EV 1.29x vs 1.76x hurdle; 11 calls with specs;
   GNPA fall driven by write-offs/ARC sales, CET1 book below price; Bihar MFI Act unmentioned in filings) → L41. Card v1.4 (manual
   core-asset threat trigger, anchoring-lowered-tails warning) and industry map / AR-zip fix in progress (agent still running).
+- 24-Nov-2026 (end): industry map 100% (1,547), AR-zip handling (10 tests), card v1.4 (33 tests). Day's net: protocol v1.4, card v1.3→v1.4, Pi bundle, 2 live dives (21 calls), L39–L41.
