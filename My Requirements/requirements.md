@@ -123,6 +123,11 @@ for each. List 1 above still stands.*
 6. **Cron jobs** (I'll give the exact lines when the detector scripts are ready in `tools/detectors/README.md`). They run without
    Claude, so they cost none of my usage.
 7. **Gemini CLI:** `sudo npm install -g @google/gemini-cli`, then run `gemini` once and log in. Check `gemini -p "say ok"` prints a reply.
+8. **Pi deployment (added 24 Nov 2026): one command.** After step 3, run `deploy/pi/install.sh --dry-run`, then
+   `deploy/pi/install.sh`, then `deploy/pi/healthcheck.sh`. It installs the packages, creates `~/fein-data` (with
+   `secrets/` at `chmod 700`), and schedules every unattended job (detectors, solvency, PEAD live tracker,
+   scoreboard, weekly `git pull`, log rotation). Nothing is pushed to GitHub unless you opt in. Step by step, outputs,
+   sharing alerts with me and troubleshooting: `deploy/pi/README.md`. This replaces the hand-written cron lines in step 6.
 
 ## C2. Kite: your own MCP wrapper (not the official one). Tools I'd like it to expose
 All **read-only**. No order, position, funds, holdings or profile tools. The access token stays on the Pi.
