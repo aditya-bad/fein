@@ -1,14 +1,47 @@
 # Deep-dive protocol (sector-agnostic) at "security-guard depth"
 
-**Version 1.3 · 2026-11-22.** Built from the Vishal Mega Mart practice run (`VMM_practice.md`, a retailer). Revised after the Cummins India practice run (`CUMMINSIND_practice.md`, a manufacturer and MNC subsidiary), then after the Five Below practice run (`FIVE_practice.md`, the first US filer), then after the Federal Bank end-to-end dry run (`FEDERALBNK_dryrun.md`, the first lender; stages 2→6). Links: `insight:flag-override-template`, `strategy:fisher-scuttlebutt`, `insight:lender-blowup-signals`, `decision:adopt-disqualifiers-v2`, `research_notes/Templates/valuation_and_decision.md`, lessons L9, L10, L12, L13, L18, L19, L21. The changelog is at the bottom.
+**Version 1.4 · 2026-11-23** (v1.3 · 2026-11-22). v1.4 adds the lessons of the first three live dives (`SUNFLAG_live.md`, `US-KEX_live.md`, `AUTOAXLES_live.md`; lessons L33–L38). Built from the Vishal Mega Mart practice run (`VMM_practice.md`, a retailer). Revised after the Cummins India practice run (`CUMMINSIND_practice.md`, a manufacturer and MNC subsidiary), then after the Five Below practice run (`FIVE_practice.md`, the first US filer), then after the Federal Bank end-to-end dry run (`FEDERALBNK_dryrun.md`, the first lender; stages 2→6). Links: `insight:flag-override-template`, `strategy:fisher-scuttlebutt`, `insight:lender-blowup-signals`, `decision:adopt-disqualifiers-v2`, `research_notes/Templates/valuation_and_decision.md`, lessons L9, L10, L12, L13, L18, L19, L21. The changelog is at the bottom.
 
-**Where a deep dive sits in the machine (v1.3).** Run in this order: **S2 checklist** (below) → stage-3 signals (PEAD quintile, credibility vs peers) → layers L1–L7 → **L8 valuation and decision** → paper calls. A deep dive is not finished until L8 has produced a worksheet and a card.
+**Where a deep dive sits in the machine (v1.3; S0 added in v1.4).** Run in this order: **S0 selection** (live dives only) → **S2 checklist** (below) → stage-3 signals (PEAD quintile, credibility vs peers) → layers L1–L7 → **L8 valuation and decision** → paper calls. A deep dive is not finished until L8 has produced a worksheet and a card.
 
 **What "security-guard depth" means:** you can rebuild the business's economics from its smallest operating unit (a store, a plant, a branch, a truck, a salesperson). You can express every major cost line in physical terms: people × wage, square feet × rent, kWh × tariff, tonnes × freight. And you can name the one or two micro-drivers (a wage notification, a tariff order, a commodity, a related-party contract) that move margins before the P&L shows it.
 
 It is **not** collecting trivia. Each deep fact must end in a number that (a) changes a model line, or (b) can be checked on the ground.
 
 ---
+
+## Deep-dive checklist (one page; v1.4)
+Run top to bottom. Each line names its mandatory output. Details are in the sections below.
+
+| Step | Do | Mandatory output |
+|---|---|---|
+| S0 Selection (live dives) | Seeded random draw from a written frame; skip rules fixed before the frame is built | Seed(s), frame counts, ordered skip log with reasons; entity exists through the call horizon |
+| Rule zero | Edge question | 3 lines (consensus, key variable, layer) |
+| S2 | Every disqualifier-v2 rule, dated source | pass / fail / unknown table, before L1 |
+| Stage 3 | PEAD quintile + event date; credibility vs peer median (or, no concalls, AR-mode asset table + disclosure flags) | Signal block for the card |
+| L1 Map | Unit by business type; peers. **Flag non-operating stakes and cyclicality here** | Value chain; holdco / cyclical flags |
+| L2 Financials | 10-yr re-derivation; concentration; core PBT. **Cyclicals: normalised EPS and peak-cycle test** | Re-derived tables; trailing vs normalised P/E |
+| L3 Units | Unit P&L, payback two ways | Unit table |
+| L4 Costs | Rank by weight; top-3 in physical terms; materials ratio by quarter (manufacturers) | Cost-driver table with bps sensitivity |
+| L5 Governance | RPT table; parent-take table; **fees/royalties followed to the parent; vote results**; ownership supply | RPT + parent-take + vote-result tables |
+| L6 Scuttlebutt | Hypothesis-led site list | Surprises-vs-model list |
+| L7 Synthesis | Override table incl. "looks good" flags; **holdco discount causes** | Open-flag count; variant view or size 0 |
+| L8 Valuation + decision | Worksheet v1.3 (cash tax, ROIIC realism, exit-bet table, non-op stakes, normalised base) + card v1.2 (survival cap, tail anchoring) | Worksheet, card, paper calls (live: ingested) |
+| Close | Method lessons + open items; memdb seed | "What the method taught"; analysis record (no verdict on method tests) |
+
+## S0 Selection and scoreability for live dives (v1.4; `decision:live-dd-selection-rules`)
+A live dive tests the method, so the subject must be drawn, not chosen (L9, L21).
+- **Write the rules first:** the frame (universe, size band, exclusions), the ordering (`random.Random(seed)` shuffle
+  or a seeded walk), and the skip checks in order. Date them before the frame is built or any name is seen.
+- **Walk the draw and log every skip** with its reason (e.g. SUNFLAG run: HINDWAREAP skipped; AUTOAXLES run: JPPOWER
+  skipped, PEAD quintile 1). Record seeds and frame counts in the analysis record.
+- **Skip checks:** stage-2 hard filters and solvency flags; the PEAD/SUE avoid window; and **scoreability**: the
+  listed entity must exist through the call horizon. Skip on a sanctioned/pending scheme, merger, tender offer or
+  delisting that dissolves it (India: NCLT scheme; US: DEFM14A/PREM14A, SC TO-T, SC 13E3, Form 25/15, 8-K 1.01/2.01
+  sale without a later termination).
+- **A sampled frame changes what you get.** A "cheapest tercile" frame mostly selects cycle position (L38): expect
+  peak-cycle cyclicals and apply the cyclicals rule below.
+- Tool notes: if the NSE pledge API returns empty, read the shareholding-pattern XBRL encumbrance flags.
 
 ## Rule zero: edge before depth
 Before starting, write 3 lines:
@@ -53,6 +86,42 @@ For a 1-day screen, do L1–L2 plus the L4 top-3 costs plus the L5 RPT table onl
 
 **L5 parent-take table (v1.1), for MNC subsidiaries and group companies.** By year: royalty (rate × eligible base); technical, support and cost-allocation fees; reimbursements paid and received; purchases from group companies (share of purchases) with the pricing formula; sales to group companies (share of revenue, share of exports) with the pricing formula; dividends to the parent; and stock-based pay in *parent* shares. Total it as % of sales and % of EBITDA. List every **agreement renewal date** (royalty agreements often run for 3 years) as a dated watch item. Read the **AGM/postal-ballot RPT annex**: SEBI's Jun-2025 "minimum information" standard makes companies disclose pricing formulas (e.g. "cost plus at least 11%"), royalty rates, uniform-rate confirmations and sunset clauses.
 
+**L2/L7 holding-company and non-operating stakes (v1.4, L33).** When listed stakes, investments or surplus
+assets are large (rule of thumb: > 20% of market cap), value them **separately** (post-tax, at market, net of any
+pledge) and run a **stub analysis**: market cap − stake value = price paid for the operating business. Report the
+implied holdco discount as a range, not one number. Before calling it mispricing, list the **verified causes** of the
+discount (no monetisation plan, pledged shares, no concalls, missed milestones, low institutional ownership, tax
+leakage). A discount with verified causes is not a claimable edge; a variant view must say which cause will change,
+and when. In L8 use the worksheet's `non_operating_growth` input (v1.2), which keeps the stake out of the DCF-consistent P/E.
+
+**L2 cyclicals: normalised earnings and the peak-cycle test (v1.4, L38).** Mandatory whenever the stock screens
+cheap (trailing P/E or EV/EBITDA in the bottom tercile) or the business is cyclical. Compute (1) **normalised EPS** =
+10-year (full-cycle) average EPS, adjusted for share count, and the P/E on it next to the trailing P/E; (2) where the
+cycle is now: industry volume vs last peak, capacity utilisation, record-margin quarters, pre-buy or regulatory pull-
+forwards; (3) the **last down-cycle**: revenue, EPS and price peak-to-trough. If trailing says COLD and normalised says
+WARM, the cheapness is cycle position, not mispricing (AUTOAXLES: 12.9x trailing vs 25.8x normalised; last cycle
+revenue −53%, EPS −81%, price −80%). ROIIC and ROIC for cyclicals use **full-cycle (peak-to-peak) windows**, with
+impairments added back; never a trough-to-peak window (AUTOAXLES 59%, Kirby 128%: both wrong).
+
+**L5 related parties: follow the money and the votes (v1.4, L16, L38).**
+- **Follow fees and royalties to the parent.** Total technical/royalty/support fees as % of sales and % of core
+  EBITDA, with the agreement term and renewal date. Watch for short (annual) agreements sized below the
+  material-RPT approval threshold.
+- **Read shareholder vote *results*, not just notices** (Reg-44 voting results; US 8-K Item 5.07). A large "against"
+  vote by minorities on an RPT is a hard governance signal; track what the company does next (restructure below
+  the threshold, renew annually).
+- **When a related-party channel changes** (direct sales replace a related distributor, a fee replaces a margin),
+  re-derive like-for-like growth from the **materials ratio** before using revenue growth: a gross-up shows as a
+  falling materials/revenue ratio (AUTOAXLES 71.0% → 67.5% ≈ 5% fake growth).
+
+**Stage 3 for no-concall companies: annual-report mode (v1.4, L37).** About a quarter of Indian small caps hold no
+calls [EST]. Run `tools/promise_tracker/pipeline/ar_run.py SYMBOL` (pipeline v1.4) and put in the deep dive (a) the
+**asset × year status table** (`_assets.md`) and (b) the **disclosure-quality flags**: forward dates already past at
+filing (`stale_at_filing`), unchanged quantities across years, the same "completed during the year" sentence in
+consecutive reports, outlook text copied year to year, assets that vanish from status tables. AR-mode scores are not
+comparable with concall credibility (n is usually ≤ 5); report the table and flags plus a human read, not a score
+against a concall peer median.
+
 **S2 checklist (v1.3, before L1; ~1 hour).** Fill every disqualifier-v2 rule as pass / fail / unknown with a dated
 source *before* starting the layers, so the card never shows "incomplete" (H3 was never checked in the first three
 practice runs). Hard at entry: H1a, H1b, H1c, H2, H3, H4, H5. Hard at exit: auditor exit on denied information,
@@ -74,6 +143,23 @@ auditor's report and notes. Lenders: use the bank form of each rule (adaptation 
    detector alerts, the L7 override table, base-rate class, sizing tier, dated kill criteria, pre-mortem, review date.
 5. Run the card with `--calls`. Practice runs: paper calls tagged `practice-example`, **not ingested** (L21).
 6. Write the variant view or accept size 0: ≥3 open soft flags without one blocks the card.
+
+**L8 additions (v1.4): worksheet v1.3 and card v1.2 inputs.** Fill these every time (`tools/valuation/README.md`,
+`tools/decision/README.md`):
+- **Cash tax** (`cash_tax_rate` or `deferred_tax_share`, optional `cash_tax_rate_end`) for capex-heavy filers with
+  accelerated/bonus depreciation; fade the deferral unless capex keeps growing (L34, Kirby).
+- **ROIIC realism**: `incremental_roic_5y` or `roic_history`; read the **price-implied ROIIC** and the >5-pt flag.
+  Cyclicals: full-cycle window (above). Pricing-led growth: separate price from volume in the scenarios.
+- **Exit-multiple bet table** (always printed): exit P/E used vs DCF-consistent vs own median. The exit multiple is
+  the binding choice (L21, L36); write why the chosen one is defensible.
+- **Non-operating stakes** (`non_operating_growth`) and, for cyclicals, the normalised EPS beside the trailing base.
+- **Card v1.2 survival cap (India, L35):** fill `survival` (`pledge_pct_of_promoter`, interest cover). PEAD avoid
+  flag + pledge > 25% or interest cover < 1.5x (or either unchecked) → 0 new money and a balance-sheet question.
+- **Card v1.2 tail anchoring (L36):** P(≤0.5x) and P(blow-up) are anchored to the class base rate (`w` = 0.5
+  default). A `w` below 0.5 needs a written `tail_anchor.evidence` note; above 0.5 deserves one (AUTOAXLES used 0.6
+  on its own last-cycle drawdown). Start the scenario tails from the base rates (India ₹1,000–20,000 cr: P(≥3x) 21%,
+  P(≤0.5x) 11%, blow-up 15%; US $0.5–10B: 7% / 14% / 11%), not from the story.
+- Live dives: paper calls **are** ingested and scored (Brier vs base rate); practice runs stay `practice-example`.
 
 ---
 
@@ -145,7 +231,7 @@ and DLG/FLDG arrangements as off-balance-sheet risk; collection staff per ₹ cr
 | L2 | Annual-report notes (not the front half); screener.in (re-derive, never trust "Borrowings" or "ROCE" blindly); quarterly results; `tools/nse_fetch.py results` |
 | L3 | DRHP KPIs (stores, area, payback, cohort data); investor presentations; call transcripts (`nse_fetch.py transcripts`); broker *analyst-meet* notes (they relay closed-door numbers) |
 | L4 | **AR note "Other expenses"** (security, manpower, housekeeping, power, freight lines); **BRSR** (headcount, *% of employees at minimum wage*, median pay, attrition, energy GJ, water); state labour-department wage notifications; SERC tariff orders (power); freight indices; commodity prices |
-| L5 | AR related-party note (Ind AS 24) by year; **AGM-notice and postal-ballot material-RPT annexes (pricing formulas, royalty rate, sunset clause; v1.1)**; Form AOC-2; DRHP risk factors ("our Promoters provide us services…"); shareholding pattern; SAST/insider/pledge (`nse_fetch.py sast/insider/pledge`); block/bulk deals; ESOP grant intimations (Reg 30); AGM/postal-ballot notices (pay, strike prices); MCA filings of promoter entities |
+| L5 | AR related-party note (Ind AS 24) by year; **Reg-44 voting results of AGMs/postal ballots (v1.4)**; **AGM-notice and postal-ballot material-RPT annexes (pricing formulas, royalty rate, sunset clause; v1.1)**; Form AOC-2; DRHP risk factors ("our Promoters provide us services…"); shareholding pattern; SAST/insider/pledge (`nse_fetch.py sast/insider/pledge`); block/bulk deals; ESOP grant intimations (Reg 30); AGM/postal-ballot notices (pay, strike prices); MCA filings of promoter entities |
 | L4 (manufacturers, v1.1) | Materials ratio by quarter from results; commodity series (BigMint, SteelOrbis, Mysteel for pig iron and steel; LME for Cu/Al; freight indices); BRSR energy, water and waste plus *physical-output intensity*; regulatory notifications (CPCB, CAQM, NGT, BIS/QCO orders); SPCB consent-to-operate orders (permitted capacity) |
 | L6 | Store/plant visits; B2B channel checks (OEM/dealer price sheets by product node, lead times, parts prices); GeM/railway/defence tender results; MCA filings of private channel partners and sister companies; job portals (AmbitionBox, Indeed, Naukri) for pay and attrition reviews; Google Maps (reviews, competitor distances); landlord/broker rent quotes; dealer and supplier calls; app-store reviews; quick-commerce price checks by PIN code |
 | L7 | memdb `insight:flag-override-template`; our false-alarm case base (`--tag false-alarm`) |
@@ -263,6 +349,12 @@ For every flag, good or bad, fill: flag | context questions | clearing evidence 
 - [ ] memdb seed: an analysis record (no verdict if practice), insight records for new techniques
 - [ ] **S2 checklist (v1.3):** every disqualifier-v2 rule pass/fail/unknown with a dated source, filled before L1
 - [ ] **L8 (v1.3):** worksheet run (bank mode for lenders) + decision card + paper calls; extra inputs collected (two-source dated close, 10 FY-end P/Es or P/Bs, 3+ peers, 6-month ADV, pending dilution)
+- [ ] **Live dives (v1.4):** selection rules dated before the frame; seeds, frame counts and skip log; scoreability through the call horizon
+- [ ] **Holdco / non-operating stakes (v1.4):** separate stake valuation, stub analysis, discount range with verified causes
+- [ ] **Cyclicals or cheap screens (v1.4):** trailing vs normalised (10-yr) P/E, cycle-position evidence, last down-cycle drawdowns, full-cycle ROIIC window
+- [ ] **Related parties (v1.4):** fees/royalties to the parent as % of sales and core EBITDA with renewal dates; vote-results table; materials-ratio like-for-like growth if a channel changed
+- [ ] **No-concall companies (v1.4):** AR-mode asset × year table and disclosure flags (no cross-mode credibility comparison)
+- [ ] **L8 (v1.4):** cash-tax and ROIIC-realism inputs set or explicitly n/a; exit-bet table read; card `survival` filled (India); tail anchor `w` with evidence if ≠ 0.5
 - [ ] **Lenders (v1.3):** NPA walk with write-offs; growth ex special funding windows; per-outlet table; Schedule-16 cost table incl. DICGC and the PSL-shortfall line; funding-concentration table (state, NRI, top-20, bulk, period-end vs average); bad-but-benign / good-but-misleading table
 
 ## Common traps seen so far
@@ -292,6 +384,14 @@ For every flag, good or bad, fill: flag | context questions | clearing evidence 
 
 ---
 
+- (v1.4) **"Hidden value" is not mispricing.** SUNFLAG's Lloyds Metals stake exceeded its market cap, but the 45–61% discount had verified causes (L33).
+- (v1.4) **"Cheap" is often peak-cycle.** The cheapest EV/EBITDA tercile drew a truck-axle maker at a record peak (L38).
+- (v1.4) **A sales-model change can fake growth** (direct OEM sales replacing a related channel; materials ratio exposes it).
+- (v1.4) **Our tails are too thin.** Every card's P(blow-up) was 0.07–0.18× the class base rate before anchoring (L36).
+- (v1.4) **Tool notes:** screener's "consolidated" URL can silently show standalone data (quarters marked "(S)"); the NSE pledge API can return 0 rows (use SHP XBRL); `sec_fetch.py frames` per-share units are `USD-per-shares`.
+
+---
+
 ## Changelog
 - **v1 · 2026-11-20.** First version, from the Vishal Mega Mart practice run (retailer).
 - **v1.1 · 2026-11-21.** From the Cummins India practice run (manufacturer, 51% MNC subsidiary):
@@ -315,3 +415,12 @@ For every flag, good or bad, fill: flag | context questions | clearing evidence 
   - Replaced the one-line "Lender" row in the unit table.
   - Three deliverable lines; seven traps/tool notes.
   - Tools changed with it: `tools/valuation/bank.py` (+ `worksheet.py` dispatch), `tools/decision/decision_card.py` (bank stage-5 text), `tools/promise_tracker/pipeline/` (bank measures, cover-letter handling, `--local`, quarter detection, range-parse and chain fixes, `bank_kpis.py`), `tools/nse_fetch.py integrated`.
+- **v1.4 · 2026-11-23.** From the first three live dives (SUNFLAG, US-KEX, AUTOAXLES; lessons L33–L38):
+  - Added a one-page **deep-dive checklist** at the top (every layer and its mandatory output).
+  - Added **S0 selection and scoreability** for live dives: rules written first, seeded draw, logged skips, entity must exist through the call horizon (`decision:live-dd-selection-rules`).
+  - Added **holding-company / non-operating stakes** (separate valuation, stub analysis, discount explained by verified causes before calling mispricing; L33).
+  - Added **cyclicals**: normalised (10-yr) EPS and the peak-cycle test whenever the stock screens cheap; full-cycle ROIIC windows (L38; valuation README v1.3 calibration note).
+  - L5: follow fees/royalties to the parent; read shareholder vote results; materials-ratio check when a related-party channel changes (L16, L38).
+  - Stage 3 for no-concall companies: annual-report mode asset × year table and disclosure flags (L37; promise-tracker pipeline v1.4).
+  - L8: worksheet v1.3 inputs (cash tax, ROIIC realism, exit-multiple bet table) and card v1.2 (India survival cap, tail anchoring to base rates; L34–L36).
+  - Six deliverable lines; five traps/tool notes. No earlier text removed.
