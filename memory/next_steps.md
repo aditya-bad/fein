@@ -11,7 +11,10 @@ Last updated: 2026-11-24
 - ~~Pi bundle, live dive #4, survival-cap test~~ DONE 24-Nov (see session_log).
 - Next queue: (1) cached industry map for full universe; (2) ar_run.py BadZipFile fix for ZIP annual reports;
   (3) card: manual "core-asset licence/lease threat" trigger + flag when anchoring lowers tails (L40);
-  (4) prereg split rule pledge vs ICR (L39); (5) live dive #5 — IT or bank/NBFC.
+  (4) prereg split rule pledge vs ICR (L39); ~~(5) live dive #5~~ DONE (UTKARSHBNK).
+- From L41: India lender base-rate class; bank.py `cet1_book` input + J-curve/bear-only dilution; resolver reading banking XBRL
+  tags (InterestEarned, ProfitLossForThePeriod, PercentageOfGrossNpa); bse_fetch HTTP 400 beyond page 1; prereg test of
+  insight:lender-blowup-signals before making it a gate.
 - Deep-dive protocol v1.4 committed; ">20% of mcap" holdco trigger is an untested rule of thumb (insight:holdco-stake-20pct-trigger).
 
 ## Build plan (after answers) — don't start stock-picking before step 1

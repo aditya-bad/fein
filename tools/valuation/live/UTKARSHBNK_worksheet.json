@@ -1,0 +1,602 @@
+{
+ "mode": "bank",
+ "input": {
+  "mode": "bank",
+  "company": "Utkarsh Small Finance Bank Ltd",
+  "ticker": "UTKARSHBNK",
+  "market": "india",
+  "practice": false,
+  "currency": "INR",
+  "units": "INR cr",
+  "as_of": "2026-11-23",
+  "price": 11.71,
+  "shares": 177.952,
+  "book_value": 2676.33,
+  "book_adjustments": [],
+  "dilution": [
+   {
+    "name": "[EST] equity raise 'sometime next financial year' (MD, Q2 FY27 call 04-Nov-2026) to fund 25-30% growth with CRAR 17.05% vs 15% floor: Rs 500 cr at ~Rs 11",
+    "shares": 45.45,
+    "cash_in": 500.0
+   }
+  ],
+  "base": {
+   "fy": "TTM to Sep-2026",
+   "pat": -666.8,
+   "pat_normalised": -207.5,
+   "roe_reported": -0.247,
+   "dps": 0.0,
+   "pe_trailing": null,
+   "loans": 19302.24,
+   "assets": 29089.97,
+   "net_npa": 529.06,
+   "cet1": 0.1278,
+   "eps": -0.9288189004574713
+  },
+  "coe": 0.125,
+  "terminal_growth": 0.05,
+  "hurdle_cagr": 0.12,
+  "years": 10,
+  "dispersion": 0.35,
+  "payout": 0.0,
+  "base_case": {
+   "roe_start": 0.04,
+   "roe_end": 0.13,
+   "exit_pb": 0.9,
+   "name": "base",
+   "payout": 0.0,
+   "prob": 0.0
+  },
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.3,
+    "roe_start": -0.04,
+    "roe_end": 0.08,
+    "exit_pb": 0.6,
+    "payout": 0.0
+   },
+   {
+    "name": "base",
+    "prob": 0.4,
+    "roe_start": 0.04,
+    "roe_end": 0.13,
+    "exit_pb": 0.9,
+    "payout": 0.0
+   },
+   {
+    "name": "bull",
+    "prob": 0.15,
+    "roe_start": 0.1,
+    "roe_end": 0.15,
+    "exit_pb": 1.4,
+    "payout": 0.05
+   }
+  ],
+  "blowup": {
+   "prob": 0.15,
+   "multiple": 0.15,
+   "note": "a second microfinance-cycle loss (FY26 lost Rs 1,151 cr = 60% of today's CET1 of Rs 1,907 cr) at 10.9x leverage forces a deeply discounted raise or an RBI-led merger; DTA (Rs 495 cr) written off"
+  },
+  "stress_loss_rates": [
+   0.01,
+   0.02,
+   0.03,
+   0.05
+  ],
+  "pb_history": [
+   {
+    "date": "Mar-2024",
+    "pb": 1.74
+   },
+   {
+    "date": "Mar-2025",
+    "pb": 0.82
+   },
+   {
+    "date": "Mar-2026",
+    "pb": 0.66
+   }
+  ],
+  "sector_pbs": {
+   "UJJIVANSFB": 1.59,
+   "EQUITASBNK": 1.01,
+   "ESAFSFB": 1.08,
+   "SURYODAY": 0.69,
+   "JSFB": 0.91,
+   "CAPITALSFB": 0.85,
+   "AUBANK": 3.44
+  },
+  "market_pe": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)"
+  },
+  "notes": [
+   "Price Rs 11.71 = NSE bhavcopy 23-Nov-2026 close (sec_bhavdata_full_23112026) and Yahoo v8 UTKARSHBNK.NS 23-Nov-2026 11.71; screener 'Current Price' Rs 11.7 (3 sources).",
+   "Shares 177.952 cr = paid-up capital Rs 1,779.52 cr / FV 10 (Q2 FY27 banking XBRL); includes 67.79 cr rights shares at Rs 14 allotted 05-Nov-2025 (8:13).",
+   "Book Rs 2,676.33 cr = capital 1,779.52 + reserves 896.81 (Q2 FY27 XBRL; deck 'net worth 2,676'; BVPS 15.0 in deck). Screener shows reserves 846 for Sep-2026 (BVPS 14.8) - unexplained Rs 50 cr gap; XBRL used.",
+   "Book INCLUDES deferred tax assets Rs 495.45 cr and intangibles Rs 245.67 cr, both deducted from CET1 (Pillar 3 DF-11, 30-Sep-2026): CET1 book Rs 1,906.7 cr = Rs 10.71/share. See UTKARSHBNK_cet1book.json for the same scenarios on CET1 book.",
+   "PAT TTM -666.8 = Q3 FY26 -375.02 + Q4 FY26 -188.02 + Q1 FY27 -33.92 + Q2 FY27 -69.85 (XBRL; screener -667). pat_normalised = H1 FY27 x 2 (-103.77 x 2).",
+   "Dilution [EST]: management said no equity this FY, 'sometime in the next financial year ... We may not require this'. 25-30% loan growth on CRAR 17.05% (cushion Rs 306 cr over 15%) needs capital; Rs 500 cr at Rs 11 assumed in ALL scenarios (conservative for bull, light for bear).",
+   "ROE paths are linear year 1 -> year 10 (tool limitation): base 4% -> 13% passes ~8% in year 5 - slower than guidance (FY28 ROE ~15%). Base-rate class for anchoring is the India NON-financial class (no lender class on file) - disclosed on the card.",
+   "pb_history: Yahoo March-end close / BVPS from screener balance sheets (single source; listed Jul-2023 so only 3 FY-ends, < 10 required). sector_pbs: screener price / book value, 24-Nov-2026 (single source).",
+   "dispersion 0.35 (vs 0.30 default): a 10.9x-levered lender's outcome around each scenario is wider [EST]."
+  ],
+  "sources": [
+   "NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1752247_03112026084750_WEB.xml (Q2 FY27) and six earlier quarters",
+   "Utkarsh SFB investor presentation Q2 FY27 (NSE, 03-Nov-2026); press release 03-Nov-2026; Q2 FY27 call transcript (NSE, 11-Nov-2026)",
+   "Basel III Pillar 3 disclosures as on 30-Sep-2026 (utkarsh.bank.in)",
+   "Annual report FY2025-26 (NSE, 10-Jul-2026)",
+   "screener.in UTKARSHBNK and SFB peers (fetched 24-Nov-2026)",
+   "NSE bhavcopy 23-Nov-2026; Yahoo Finance chart API UTKARSHBNK.NS"
+  ],
+  "_warnings": [
+   "fully diluted: +45.45 cr shares, +500 cash to be received; BVPS 15.04 -> 14.22"
+  ],
+  "_book_undiluted": 2676.33,
+  "_shares_diluted": 223.402,
+  "_book_diluted": 3176.33,
+  "_bvps_undiluted": 15.039617424923575,
+  "_bvps": 14.218001629349782
+ },
+ "snapshot": {
+  "mcap": 2083.81792,
+  "mcap_diluted": 2616.03742,
+  "pb": 0.8236037880195068,
+  "pb_undiluted": 0.7786102311747805,
+  "bvps": 14.218001629349782,
+  "bvps_undiluted": 15.039617424923575,
+  "pe": -12.60740925301205,
+  "roe_reported": -0.247,
+  "ev": null
+ },
+ "reverse": {
+  "pb": 0.8236037880195068,
+  "pb_undiluted": 0.7786102311747805,
+  "roe_implied_gordon": 0.11177028410146302,
+  "roe_now": -0.06532696539717221,
+  "coe_implied_at_current_roe": -0.09002724013022718,
+  "roe_implied_10y_then_coe": 0.10337809039064078,
+  "irr_base": 0.12028484653351812,
+  "justified_pb_base": 1.0666666666666667,
+  "base": {
+   "rows": [
+    {
+     "t": 1,
+     "roe": 0.04,
+     "bvps_open": 14.218001629349782,
+     "eps": 0.5687200651739913,
+     "dps": 0.0,
+     "ri": -1.2085301384947313,
+     "bvps": 14.786721694523774
+    },
+    {
+     "t": 2,
+     "roe": 0.05,
+     "bvps_open": 14.786721694523774,
+     "eps": 0.7393360847261887,
+     "dps": 0.0,
+     "ri": -1.109004127089283,
+     "bvps": 15.526057779249962
+    },
+    {
+     "t": 3,
+     "roe": 0.06,
+     "bvps_open": 15.526057779249962,
+     "eps": 0.9315634667549977,
+     "dps": 0.0,
+     "ri": -1.0091937556512476,
+     "bvps": 16.45762124600496
+    },
+    {
+     "t": 4,
+     "roe": 0.07,
+     "bvps_open": 16.45762124600496,
+     "eps": 1.1520334872203473,
+     "dps": 0.0,
+     "ri": -0.9051691685302726,
+     "bvps": 17.609654733225305
+    },
+    {
+     "t": 5,
+     "roe": 0.08,
+     "bvps_open": 17.609654733225305,
+     "eps": 1.4087723786580244,
+     "dps": 0.0,
+     "ri": -0.7924344629951388,
+     "bvps": 19.01842711188333
+    },
+    {
+     "t": 6,
+     "roe": 0.09,
+     "bvps_open": 19.01842711188333,
+     "eps": 1.7116584400694996,
+     "dps": 0.0,
+     "ri": -0.6656449489159166,
+     "bvps": 20.73008555195283
+    },
+    {
+     "t": 7,
+     "roe": 0.1,
+     "bvps_open": 20.73008555195283,
+     "eps": 2.073008555195283,
+     "dps": 0.0,
+     "ri": -0.5182521387988206,
+     "bvps": 22.803094107148112
+    },
+    {
+     "t": 8,
+     "roe": 0.11000000000000001,
+     "bvps_open": 22.803094107148112,
+     "eps": 2.5083403517862926,
+     "dps": 0.0,
+     "ri": -0.3420464116072214,
+     "bvps": 25.311434458934404
+    },
+    {
+     "t": 9,
+     "roe": 0.12,
+     "bvps_open": 25.311434458934404,
+     "eps": 3.037372135072128,
+     "dps": 0.0,
+     "ri": -0.12655717229467214,
+     "bvps": 28.348806594006533
+    },
+    {
+     "t": 10,
+     "roe": 0.13,
+     "bvps_open": 28.348806594006533,
+     "eps": 3.685344857220849,
+     "dps": 0.0,
+     "ri": 0.1417440329700328,
+     "bvps": 32.03415145122738
+    }
+   ],
+   "value_ps": 10.522446435072451,
+   "pv_ri": -4.353208096469359,
+   "tv": 0.6576529021920288,
+   "tv_share": 0.06250000000000006,
+   "bvps5": 19.01842711188333,
+   "eps5": 1.4087723786580244,
+   "cum_div5": 0.0,
+   "rim_pb5": 0.9970219953356163,
+   "justified_pb_terminal": 1.0666666666666667
+  }
+ },
+ "scenarios": {
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.3,
+    "roe_start": -0.04,
+    "roe_end": 0.08,
+    "exit_pb": 0.6,
+    "exit_pb_is_rim": false,
+    "rim_pb5": 0.28759311656453446,
+    "value_ps": 2.119874006139907,
+    "value_vs_price": -0.8189689149325443,
+    "bvps5": 13.282938891224887,
+    "eps5": 0.17477551172664318,
+    "dist_ps_5y": 0.0,
+    "mult5": 0.6805946485683118,
+    "tv_share": -1.5,
+    "exit_pe": null,
+    "dcf_pe5": null
+   },
+   {
+    "name": "base",
+    "prob": 0.4,
+    "roe_start": 0.04,
+    "roe_end": 0.13,
+    "exit_pb": 0.9,
+    "exit_pb_is_rim": false,
+    "rim_pb5": 0.9970219953356163,
+    "value_ps": 10.522446435072451,
+    "value_vs_price": -0.10141362638151574,
+    "bvps5": 19.01842711188333,
+    "eps5": 1.4087723786580244,
+    "dist_ps_5y": 0.0,
+    "mult5": 1.4617066097946196,
+    "tv_share": 0.06250000000000006,
+    "exit_pe": null,
+    "dcf_pe5": null
+   },
+   {
+    "name": "bull",
+    "prob": 0.15,
+    "roe_start": 0.1,
+    "roe_end": 0.15,
+    "exit_pb": 1.4,
+    "exit_pb_is_rim": false,
+    "rim_pb5": 1.4058125241890413,
+    "value_ps": 18.65236125910296,
+    "value_vs_price": 0.592857494372584,
+    "bvps5": 23.479666651143503,
+    "eps5": 2.5711929632909762,
+    "dist_ps_5y": 0.4874560537786169,
+    "mult5": 2.848760833935057,
+    "tv_share": 0.24009879593237765,
+    "exit_pe": null,
+    "dcf_pe5": null
+   }
+  ],
+  "blowup": {
+   "prob": 0.15,
+   "multiple": 0.15,
+   "note": "a second microfinance-cycle loss (FY26 lost Rs 1,151 cr = 60% of today's CET1 of Rs 1,907 cr) at 10.9x leverage forces a deeply discounted raise or an RBI-led merger; DTA (Rs 495 cr) written off"
+  },
+  "pw_value": 7.9062699647363965,
+  "pw_vs_price": -0.32482750087648193,
+  "bear_value": 2.119874006139907,
+  "downside_bear": -0.8189689149325443,
+  "p_value_below_price": 0.85,
+  "p_ge_3x": 0.07418041915072905,
+  "p_ge_2x": 0.20096595894596372,
+  "p_ge_5x": 0.008187546876677885,
+  "p_le_half": 0.20718101369231284,
+  "p_blowup": 0.15,
+  "ev_mult5": 1.2386751635785997,
+  "ev_cagr5": 0.04373797733629203,
+  "median_mult5": 1.0804716373755188,
+  "hurdle_mult5": 1.7623416832000007
+ },
+ "twin": {
+  "pb0": 0.8236037880195068,
+  "exit_pbs": [
+   0.49,
+   0.66,
+   0.82
+  ],
+  "table": [
+   {
+    "target": 2,
+    "cells": [
+     {
+      "exit_pb": 0.49,
+      "bv_cagr": 0.27441375489608366,
+      "rerating_share": -0.7491687161774715
+     },
+     {
+      "exit_pb": 0.66,
+      "bv_cagr": 0.20071760713472386,
+      "rerating_share": -0.3194844409342262
+     },
+     {
+      "exit_pb": 0.82,
+      "bv_cagr": 0.14970625919093572,
+      "rerating_share": -0.006326555674596084
+     }
+    ]
+   },
+   {
+    "target": 3,
+    "cells": [
+     {
+      "exit_pb": 0.49,
+      "bv_cagr": 0.3820657420108655,
+      "rerating_share": -0.4726728334812972
+     },
+     {
+      "exit_pb": 0.66,
+      "bv_cagr": 0.3021443501176564,
+      "rerating_share": -0.20157223958854614
+     },
+     {
+      "exit_pb": 0.82,
+      "bv_cagr": 0.24682398326187438,
+      "rerating_share": -0.003991612212729013
+     }
+    ]
+   },
+   {
+    "target": 5,
+    "cells": [
+     {
+      "exit_pb": 0.49,
+      "bv_cagr": 0.5307295000077088,
+      "rerating_share": -0.3226494040995761
+     },
+     {
+      "exit_pb": 0.66,
+      "bv_cagr": 0.4422112562412337,
+      "rerating_share": -0.13759445937955478
+     },
+     {
+      "exit_pb": 0.82,
+      "bv_cagr": 0.3809402798156214,
+      "rerating_share": -0.0027246992223947347
+     }
+    ]
+   }
+  ],
+  "pe0": null
+ },
+ "temperature": {
+  "rows": [
+   {
+    "basis": "P/B (fully diluted)",
+    "pe": 0.8236037880195068,
+    "pb": 0.8236037880195068,
+    "vs_own": null,
+    "own_band": "INSUFFICIENT HISTORY (n=3 < 5)",
+    "vs_sector": 0.8154492950688187,
+    "sector_band": "COOL"
+   }
+  ],
+  "own_median": 0.82,
+  "n_hist": 3,
+  "sector_median": 1.01,
+  "sector": {
+   "UJJIVANSFB": 1.59,
+   "EQUITASBNK": 1.01,
+   "ESAFSFB": 1.08,
+   "SURYODAY": 0.69,
+   "JSFB": 0.91,
+   "CAPITALSFB": 0.85,
+   "AUBANK": 3.44
+  },
+  "pe": -12.60740925301205,
+  "market": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)",
+   "note": "around the long-run average"
+  }
+ },
+ "stress": {
+  "leverage": 9.158358860697724,
+  "rows": [
+   {
+    "loss_rate": 0.01,
+    "post_tax_loss": 144.76680000000002,
+    "pct_of_book": 0.04557675052655109,
+    "bvps_after": 13.569991316102811
+   },
+   {
+    "loss_rate": 0.02,
+    "post_tax_loss": 289.53360000000004,
+    "pct_of_book": 0.09115350105310217,
+    "bvps_after": 12.921981002855837
+   },
+   {
+    "loss_rate": 0.03,
+    "post_tax_loss": 434.3004000000001,
+    "pct_of_book": 0.13673025157965327,
+    "bvps_after": 12.273970689608866
+   },
+   {
+    "loss_rate": 0.05,
+    "post_tax_loss": 723.8340000000001,
+    "pct_of_book": 0.22788375263275543,
+    "bvps_after": 10.977950063114925
+   }
+  ],
+  "net_npa_pct_book": 0.16656329789411048
+ },
+ "sensitivity": {
+  "coe_x_roe": {
+   "rows": [
+    [
+     0.105,
+     [
+      9.353307999508626,
+      13.027684071612219,
+      17.167922407997985,
+      21.814561481389607,
+      27.010815811708074
+     ]
+    ],
+    [
+     0.115,
+     [
+      7.232503873100246,
+      10.073738137396068,
+      13.275203309401663,
+      16.868246016534727,
+      20.886282156434817
+     ]
+    ],
+    [
+     0.125,
+     [
+      5.732766031707692,
+      7.984839665440445,
+      10.522446435072451,
+      13.370432906056259,
+      16.555285828522692
+     ]
+    ],
+    [
+     0.135,
+     [
+      4.629916561094297,
+      6.448744149025194,
+      8.498175007232474,
+      10.798275805843396,
+      13.370437866674
+     ]
+    ],
+    [
+     0.145,
+     [
+      3.794654442607104,
+      5.28535564549165,
+      6.965058035003879,
+      8.85020814488624,
+      10.958338186203738
+     ]
+    ]
+   ],
+   "cols": [
+    0.1,
+    0.115,
+    0.13,
+    0.14500000000000002,
+    0.16
+   ]
+  },
+  "justified_pb": {
+   "rows": [
+    [
+     0.105,
+     [
+      0.9090909090909093,
+      1.181818181818182,
+      1.4545454545454548,
+      1.7272727272727277,
+      2.0000000000000004
+     ]
+    ],
+    [
+     0.115,
+     [
+      0.7692307692307693,
+      1.0,
+      1.2307692307692308,
+      1.4615384615384617,
+      1.6923076923076923
+     ]
+    ],
+    [
+     0.125,
+     [
+      0.6666666666666667,
+      0.8666666666666667,
+      1.0666666666666667,
+      1.2666666666666668,
+      1.4666666666666668
+     ]
+    ],
+    [
+     0.135,
+     [
+      0.5882352941176471,
+      0.7647058823529411,
+      0.9411764705882353,
+      1.1176470588235294,
+      1.2941176470588234
+     ]
+    ],
+    [
+     0.145,
+     [
+      0.5263157894736843,
+      0.6842105263157896,
+      0.8421052631578949,
+      1.0000000000000002,
+      1.1578947368421055
+     ]
+    ]
+   ],
+   "cols": [
+    0.1,
+    0.115,
+    0.13,
+    0.14500000000000002,
+    0.16
+   ]
+  }
+ },
+ "version": "1.1-bank (2026-11-22)"
+}

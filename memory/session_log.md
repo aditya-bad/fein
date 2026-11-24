@@ -72,3 +72,6 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
   pledge>25% or ICR<1.5x outside PEAD window (L39). Live deep dive #4 INDRAMEDCO (healthcare draw): size 0 (EV below hurdle);
   expired govt land lease undisclosed in AR; 10 calls ingested with resolver specs (L40). Next: split pledge-vs-ICR rule prereg,
   industry map for the universe, ar_run ZIP fix, card flag for licence/lease risk, live dive #5 (IT or bank/NBFC).
+- 24-Nov-2026 (later): live dive #5 UTKARSHBNK (first live lender; card v1.4 size 0, EV 1.29x vs 1.76x hurdle; 11 calls with specs;
+  GNPA fall driven by write-offs/ARC sales, CET1 book below price; Bihar MFI Act unmentioned in filings) → L41. Card v1.4 (manual
+  core-asset threat trigger, anchoring-lowered-tails warning) and industry map / AR-zip fix in progress (agent still running).

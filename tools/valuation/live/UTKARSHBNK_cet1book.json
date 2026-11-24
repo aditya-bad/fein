@@ -1,0 +1,41 @@
+// SENSITIVITY of UTKARSHBNK.json: same scenarios on CET1 book (net worth less DTA 495.45 and intangibles 245.67). LIVE deep dive #5 2026-11-24 (method test; random draw, seed 20261202; research_notes/Deep dives/UTKARSHBNK_live.md). Bank mode (tools/valuation/bank.py). L9/L21: no buy/sell verdict. Scenarios and probabilities were written BEFORE the outputs were read.
+{
+ "mode": "bank",
+ "company": "Utkarsh Small Finance Bank Ltd", "ticker": "UTKARSHBNK", "market": "india", "practice": false,
+ "currency": "INR", "units": "INR cr", "as_of": "2026-11-23",
+ "price": 11.71,
+ "shares": 177.952,
+ "book_value": 1906.7,
+ "book_adjustments": [],
+ "dilution": [{"name": "[EST] equity raise 'sometime next financial year' (MD, Q2 FY27 call 04-Nov-2026) to fund 25-30% growth with CRAR 17.05% vs 15% floor: Rs 500 cr at ~Rs 11", "shares": 45.45, "cash_in": 500.0}],
+ "base": {"fy": "TTM to Sep-2026", "pat": -666.8, "pat_normalised": -207.5, "roe_reported": -0.247, "dps": 0.0,
+          "pe_trailing": null, "loans": 19302.24, "assets": 29089.97, "net_npa": 529.06, "cet1": 0.1278},
+ "coe": 0.125, "terminal_growth": 0.05, "hurdle_cagr": 0.12, "years": 10, "dispersion": 0.35,
+ "payout": 0.0,
+ "base_case": {"roe_start": 0.04, "roe_end": 0.13, "exit_pb": 0.9},
+ "scenarios": [
+  {"name": "bear", "prob": 0.30, "roe_start": -0.04, "roe_end": 0.08, "exit_pb": 0.6, "payout": 0.0},
+  {"name": "base", "prob": 0.40, "roe_start": 0.04, "roe_end": 0.13, "exit_pb": 0.9, "payout": 0.0},
+  {"name": "bull", "prob": 0.15, "roe_start": 0.10, "roe_end": 0.15, "exit_pb": 1.4, "payout": 0.05}
+ ],
+ "blowup": {"prob": 0.15, "multiple": 0.15, "note": "a second microfinance-cycle loss (FY26 lost Rs 1,151 cr = 60% of today's CET1 of Rs 1,907 cr) at 10.9x leverage forces a deeply discounted raise or an RBI-led merger; DTA (Rs 495 cr) written off"},
+ "stress_loss_rates": [0.01, 0.02, 0.03, 0.05],
+ "pb_history": [{"date": "Mar-2024", "pb": 1.74}, {"date": "Mar-2025", "pb": 0.82}, {"date": "Mar-2026", "pb": 0.66}],
+ "sector_pbs": {"UJJIVANSFB": 1.59, "EQUITASBNK": 1.01, "ESAFSFB": 1.08, "SURYODAY": 0.69, "JSFB": 0.91, "CAPITALSFB": 0.85, "AUBANK": 3.44},
+ "market_pe": {"index": "Nifty 50", "pe": 20.6, "as_of": "2026-11 (insight:india-valuation-forward-returns)"},
+ "notes": [
+  "Price Rs 11.71 = NSE bhavcopy 23-Nov-2026 close (sec_bhavdata_full_23112026) and Yahoo v8 UTKARSHBNK.NS 23-Nov-2026 11.71; screener 'Current Price' Rs 11.7 (3 sources).",
+  "Shares 177.952 cr = paid-up capital Rs 1,779.52 cr / FV 10 (Q2 FY27 banking XBRL); includes 67.79 cr rights shares at Rs 14 allotted 05-Nov-2025 (8:13).",
+  "Book Rs 2,676.33 cr = capital 1,779.52 + reserves 896.81 (Q2 FY27 XBRL; deck 'net worth 2,676'; BVPS 15.0 in deck). Screener shows reserves 846 for Sep-2026 (BVPS 14.8) - unexplained Rs 50 cr gap; XBRL used.",
+  "Book INCLUDES deferred tax assets Rs 495.45 cr and intangibles Rs 245.67 cr, both deducted from CET1 (Pillar 3 DF-11, 30-Sep-2026): CET1 book Rs 1,906.7 cr = Rs 10.71/share. See UTKARSHBNK_cet1book.json for the same scenarios on CET1 book.",
+  "PAT TTM -666.8 = Q3 FY26 -375.02 + Q4 FY26 -188.02 + Q1 FY27 -33.92 + Q2 FY27 -69.85 (XBRL; screener -667). pat_normalised = H1 FY27 x 2 (-103.77 x 2).",
+  "Dilution [EST]: management said no equity this FY, 'sometime in the next financial year ... We may not require this'. 25-30% loan growth on CRAR 17.05% (cushion Rs 306 cr over 15%) needs capital; Rs 500 cr at Rs 11 assumed in ALL scenarios (conservative for bull, light for bear).",
+  "ROE paths are linear year 1 -> year 10 (tool limitation): base 4% -> 13% passes ~8% in year 5 - slower than guidance (FY28 ROE ~15%). Base-rate class for anchoring is the India NON-financial class (no lender class on file) - disclosed on the card.",
+  "pb_history: Yahoo March-end close / BVPS from screener balance sheets (single source; listed Jul-2023 so only 3 FY-ends, < 10 required). sector_pbs: screener price / book value, 24-Nov-2026 (single source).",
+  "dispersion 0.35 (vs 0.30 default): a 10.9x-levered lender's outcome around each scenario is wider [EST]."
+ ],
+ "sources": ["NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1752247_03112026084750_WEB.xml (Q2 FY27) and six earlier quarters",
+             "Utkarsh SFB investor presentation Q2 FY27 (NSE, 03-Nov-2026); press release 03-Nov-2026; Q2 FY27 call transcript (NSE, 11-Nov-2026)",
+             "Basel III Pillar 3 disclosures as on 30-Sep-2026 (utkarsh.bank.in)", "Annual report FY2025-26 (NSE, 10-Jul-2026)",
+             "screener.in UTKARSHBNK and SFB peers (fetched 24-Nov-2026)", "NSE bhavcopy 23-Nov-2026; Yahoo Finance chart API UTKARSHBNK.NS"]
+}

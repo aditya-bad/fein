@@ -1,0 +1,296 @@
+[
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:UTKARSHBNK:card-2026-11-24-5y-ge3x",
+  "title": "Paper call: Utkarsh Small Finance Bank Ltd 5-year outcome ≥3.0x from 2026-11-23 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.07 (base rate 0.213, class india_nonfin_1000_20000cr_5y) that: YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-23 (entry INR 11.71) to the last close on or before 2031-11-23 is ≥ 3.0. Model: worksheet scenarios bear 30%→0.68x, base 40%→1.46x, bull 15%→2.85x with σ=0.35; reverse DCF base-case IRR 12.0%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.29x anchored (raw 1.24x) vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "UTKARSHBNK"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india"
+  ],
+  "date": "2026-11-24",
+  "status": "open",
+  "data": {
+   "probability": 0.0742,
+   "base_rate_probability": 0.2129,
+   "anchored_probability": null,
+   "anchor_weight": null,
+   "base_rate_reasoning": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted). n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "method": "decision-card-v1",
+   "card_version": "1.4",
+   "made_on": "2026-11-24",
+   "resolve_by": "2031-11-23",
+   "entry_date": "2026-11-23",
+   "entry_price": 11.71,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-23 (entry INR 11.71) to the last close on or before 2031-11-23 is ≥ 3.0.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1752247_03112026084750_WEB.xml (Q2 FY27) and six earlier quarters",
+   "Utkarsh SFB investor presentation Q2 FY27 (NSE, 03-Nov-2026); press release 03-Nov-2026; Q2 FY27 call transcript (NSE, 11-Nov-2026)",
+   "Basel III Pillar 3 disclosures as on 30-Sep-2026 (utkarsh.bank.in)",
+   "Annual report FY2025-26 (NSE, 10-Jul-2026)",
+   "screener.in UTKARSHBNK and SFB peers (fetched 24-Nov-2026)",
+   "NSE bhavcopy 23-Nov-2026; Yahoo Finance chart API UTKARSHBNK.NS"
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:UTKARSHBNK:card-2026-11-24-5y-le0p5x",
+  "title": "Paper call: Utkarsh Small Finance Bank Ltd 5-year outcome ≤0.5x from 2026-11-23 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.21 (base rate 0.113, class india_nonfin_1000_20000cr_5y) that: YES if the total-return multiple from 2026-11-23 (entry INR 11.71) to the last close on or before 2031-11-23 is ≤ 0.5, or the stock is delisted/suspended below that level. Model: worksheet scenarios bear 30%→0.68x, base 40%→1.46x, bull 15%→2.85x with σ=0.35; reverse DCF base-case IRR 12.0%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.29x anchored (raw 1.24x) vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "UTKARSHBNK"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india"
+  ],
+  "date": "2026-11-24",
+  "status": "open",
+  "data": {
+   "probability": 0.2072,
+   "base_rate_probability": 0.1127,
+   "anchored_probability": 0.1788,
+   "anchor_weight": 0.3,
+   "base_rate_reasoning": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted). n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "method": "decision-card-v1",
+   "card_version": "1.4",
+   "made_on": "2026-11-24",
+   "resolve_by": "2031-11-23",
+   "entry_date": "2026-11-23",
+   "entry_price": 11.71,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple from 2026-11-23 (entry INR 11.71) to the last close on or before 2031-11-23 is ≤ 0.5, or the stock is delisted/suspended below that level.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1752247_03112026084750_WEB.xml (Q2 FY27) and six earlier quarters",
+   "Utkarsh SFB investor presentation Q2 FY27 (NSE, 03-Nov-2026); press release 03-Nov-2026; Q2 FY27 call transcript (NSE, 11-Nov-2026)",
+   "Basel III Pillar 3 disclosures as on 30-Sep-2026 (utkarsh.bank.in)",
+   "Annual report FY2025-26 (NSE, 10-Jul-2026)",
+   "screener.in UTKARSHBNK and SFB peers (fetched 24-Nov-2026)",
+   "NSE bhavcopy 23-Nov-2026; Yahoo Finance chart API UTKARSHBNK.NS"
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:UTKARSHBNK:card-2026-11-24-5y-blowup",
+  "title": "Paper call: Utkarsh Small Finance Bank Ltd 5-year outcome blow-up from 2026-11-23 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.15 (base rate 0.154, class india_nonfin_1000_20000cr_5y) that: YES if between 2026-11-23 and 2031-11-23: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples). Model: worksheet scenarios bear 30%→0.68x, base 40%→1.46x, bull 15%→2.85x with σ=0.35; reverse DCF base-case IRR 12.0%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.29x anchored (raw 1.24x) vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "UTKARSHBNK"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india"
+  ],
+  "date": "2026-11-24",
+  "status": "open",
+  "data": {
+   "probability": 0.15,
+   "base_rate_probability": 0.1537,
+   "anchored_probability": 0.1511,
+   "anchor_weight": 0.3,
+   "base_rate_reasoning": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted). n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "method": "decision-card-v1",
+   "card_version": "1.4",
+   "made_on": "2026-11-24",
+   "resolve_by": "2031-11-23",
+   "entry_date": "2026-11-23",
+   "entry_price": 11.71,
+   "currency": "INR",
+   "resolution_rule": "YES if between 2026-11-23 and 2031-11-23: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples).",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1752247_03112026084750_WEB.xml (Q2 FY27) and six earlier quarters",
+   "Utkarsh SFB investor presentation Q2 FY27 (NSE, 03-Nov-2026); press release 03-Nov-2026; Q2 FY27 call transcript (NSE, 11-Nov-2026)",
+   "Basel III Pillar 3 disclosures as on 30-Sep-2026 (utkarsh.bank.in)",
+   "Annual report FY2025-26 (NSE, 10-Jul-2026)",
+   "screener.in UTKARSHBNK and SFB peers (fetched 24-Nov-2026)",
+   "NSE bhavcopy 23-Nov-2026; Yahoo Finance chart API UTKARSHBNK.NS"
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "decision",
+  "id": "decision:card:UTKARSHBNK:2026-11-24",
+  "title": "Decision card UTKARSHBNK 2026-11-24 (paper)",
+  "body": "Decision card v1 for Utkarsh Small Finance Bank Ltd. Rule output: size 0: blocked by Expected value vs hurdle (EV 1.29x anchored (raw 1.24x) vs hurdle 1.76x → below hurdle → size 0). Thesis: Method-test thesis: Utkarsh SFB (a microfinance-born small finance bank, 1,110 outlets, GLP Rs 20,062 cr, 52% secured) lost Rs 1,151 cr in FY26 in the 2024-26 microfinance cycle, was recapitalised by a Rs 950 cr rights issue at Rs 14 (Nov-2025) and is now at PPOP +Rs 85 cr/quarter with GNPA 5.9%. The 5-year outcome depends on whether ROE climbs from about -8% (H1 FY27 annualised) to the low teens before another microfinance or MSME credit shock, and at what price the next equity raise happens. Variant view: Market: Rs 11.71 = 0.78x reported book (0.82x after an assumed Rs 500 cr raise) but 1.09x CET1 book (net worth less DTA Rs 495 cr and intangibles Rs 246 cr). The Gordon read says the price needs ~11% ROE forever on reported book, ~13% on CET1 book - roughly management's FY28 target of ~15% haircut for execution risk, so the market already prices a recovery. Our view: no claimable mispricing, and the evidence leans NEGATIVE versus the company's framing: (1) the GNPA fall from 12.4% to 5.9% is mostly write-offs and ARC sales (FY26 write-offs + ARC Rs 1,743 cr > fresh slippage Rs 1,724 cr; ARC sale of Rs 1,515 cr principal for Rs 207 cr consideration), not cures; (2) Q2 FY27 PPOP (+34% QoQ) leaned on a 16% QoQ drop in personnel cost (Rs 241 -> 202 cr) while headcount rose by 164 - unexplained, unasked on the call; (3) Tier-1 fell from 15.13% to 12.78% in one quarter (intangibles deduction 53 -> 246 after the new core banking system was capitalised; DTA 495) - nobody asked; total-CRAR cushion over the 15% floor is only Rs 306 cr while management guides 25-30% loan growth, so an equity raise below book is likely; (4) loan-growth guidance has a record of misses (Nov-2025: ~25% for 2-3 years -> FY26 -1.7%; FY27 25-30% guided vs +3.8% in H1); (5) the reverse merger of the promoter holdco will turn 42.7% of the bank (held by BII, RBL Bank, NMI, Faering, Hero, responsAbility via UCL) into directly held liquid shares - a supply overhang. Positive offsets: NIM 5.1% -> 6.3%, cost of funds -50 bp, CASA + retail TD 82%, LCR 177%, X-bucket collection 99.5%, SMA down, no RBI divergence or penalty, CGFMU guarantee on ~Rs 6,500 cr of the microfinance book, and SFB peers that went through the same cycle (ESAF, Suryoday) recovered to profit. What would prove us wrong: two consecutive profitable quarters with credit cost < 2.5% and an equity raise at or above book. Departure from the outside view: P(blow-up) at the class rate (15%), P(<=0.5x) above it (21% vs 11%) because a 10.9x-levered lender with CET1 book Rs 1,907 cr lost 60% of that in one year last cycle; tails anchored at w = 0.3 with an evidence note (the class is non-financial). Checked by paper calls thesis:paper-call:UTKARSHBNK:*. Open soft flags: 8. P(≥3x) 7% vs base 21%; P(≤0.5x) 21% vs base 11.3%; EV 5-yr multiple 1.24x vs hurdle 1.76x. Review 2027-02-15.",
+  "tickers": [
+   "UTKARSHBNK"
+  ],
+  "tags": [
+   "decision-card",
+   "stage-6",
+   "india"
+  ],
+  "date": "2026-11-24",
+  "data": {
+   "gates": [
+    {
+     "gate": "Stage 2 hard filters",
+     "result": "passed (7 rules)",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 3 PEAD avoid flag",
+     "result": "clear",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 3 survival cap",
+     "result": "clear",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 4 soft flags",
+     "result": "8 open, variant view written",
+     "blocks": false
+    },
+    {
+     "gate": "Tail anchoring (v1.4 warning)",
+     "result": "anchoring lowered documented tails — check evidence note: P(≤0.5x)",
+     "blocks": false
+    },
+    {
+     "gate": "Expected value vs hurdle",
+     "result": "EV 1.29x anchored (raw 1.24x) vs hurdle 1.76x → below hurdle → size 0",
+     "blocks": true
+    }
+   ],
+   "size_after_gates": 0.0,
+   "survival_cap": {
+    "status": "clear",
+    "triggered": false,
+    "blocks": false,
+    "mode": null,
+    "cap_size": null,
+    "reasons": [],
+    "already_owned": false
+   },
+   "anchor_weight": 0.3,
+   "ev_mult5_raw": 1.2386751635785997,
+   "ev_mult5_anchored": 1.2879963933622778,
+   "p_blowup_anchored": 0.15111,
+   "p_le_half_anchored": 0.17883670958461897,
+   "anchor_lowered_tails": [
+    "P(≤0.5x)"
+   ],
+   "rule_size": 0.0,
+   "kelly_f_star": 0.0,
+   "open_soft_flags": 8,
+   "review_date": "2027-02-15",
+   "kill_criteria": [
+    {
+     "if": "CRAR below 16.0% or Tier-1 below 11% at any quarter-end",
+     "measure": "Quarterly press release / Pillar 3",
+     "by": "2027-11-30"
+    },
+    {
+     "if": "A quarterly loss larger than Rs 150 cr, or credit cost above 5% in any quarter of FY28",
+     "measure": "Results XBRL / deck",
+     "by": "2028-03-31"
+    },
+    {
+     "if": "Equity raise priced below Rs 10 (below CET1 book per share)",
+     "measure": "Reg-30 board outcome",
+     "by": "2028-03-31"
+    },
+    {
+     "if": "Bihar or UP microfinance collection efficiency below 98% for two months, or a state action restricting bank MFI recovery",
+     "measure": "Deck CE table; state gazette; Reg-30",
+     "by": "2027-11-30"
+    },
+    {
+     "if": "RBI divergence, supervisory action or an auditor emphasis of matter on DTA recoverability",
+     "measure": "AR FY27 notes 18.4.5 / auditor report",
+     "by": "2027-09-30"
+    }
+   ],
+   "override_log": [
+    {
+     "date": "2026-11-24",
+     "flag": "Lender-blowup-signals rule ('two+ flags + discount to book = avoid')",
+     "decision": "recorded as fired; not used to change the card (method test, no verdict); the card's own gates decide size",
+     "why": "memdb rule is a heuristic, not a pre-registered card gate"
+    },
+    {
+     "date": "2026-11-24",
+     "flag": "Base-rate class",
+     "decision": "india_nonfin_1000_20000cr_5y used for anchoring although the subject is a lender",
+     "why": "No lender class on file; disclosed; candidate work item"
+    },
+    {
+     "date": "2026-11-24",
+     "flag": "Survival cap core-asset threat (v1.4)",
+     "decision": "not set: the Bihar Act exempts scheduled banks from registration; CGFMU is a credit enhancement, not the core licence",
+     "why": "L40 checked; no expiring or contested licence/lease for the core business found"
+    },
+    {
+     "date": "2026-11-24",
+     "flag": "Credibility score",
+     "decision": "manual guidance-bias table, no score",
+     "why": "No bank peer median (L18)"
+    }
+   ],
+   "paper_calls": [
+    "thesis:paper-call:UTKARSHBNK:card-2026-11-24-5y-ge3x",
+    "thesis:paper-call:UTKARSHBNK:card-2026-11-24-5y-le0p5x",
+    "thesis:paper-call:UTKARSHBNK:card-2026-11-24-5y-blowup"
+   ],
+   "practice": false
+  },
+  "sources": [
+   "NSE integrated-filing XBRL INTEGRATED_FILING_BANKING_1752247_03112026084750_WEB.xml (Q2 FY27) and six earlier quarters",
+   "Utkarsh SFB investor presentation Q2 FY27 (NSE, 03-Nov-2026); press release 03-Nov-2026; Q2 FY27 call transcript (NSE, 11-Nov-2026)",
+   "Basel III Pillar 3 disclosures as on 30-Sep-2026 (utkarsh.bank.in)",
+   "Annual report FY2025-26 (NSE, 10-Jul-2026)",
+   "screener.in UTKARSHBNK and SFB peers (fetched 24-Nov-2026)",
+   "NSE bhavcopy 23-Nov-2026; Yahoo Finance chart API UTKARSHBNK.NS"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "thesis:paper-call:UTKARSHBNK:card-2026-11-24-5y-ge3x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:UTKARSHBNK:card-2026-11-24-5y-le0p5x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:UTKARSHBNK:card-2026-11-24-5y-blowup",
+    "rel": "about"
+   }
+  ]
+ }
+]

@@ -304,3 +304,11 @@ treat the stock as an option on renewal. Add "material external fact absent from
 as promoter shares held vs votes polled (a co-promoter abstaining revealed the broken JV). Card v1.3's survival cap cannot see
 legal/licence risk → candidate manual trigger. Tail anchoring can *lower* well-documented tails; flag when it does.
 Process: sector frames need a full industry map (NSE index lists left 60% of the band unclassified).
+
+## L41 (2026-11-24) — Lenders: read capital-adequacy book and the bad-loan walk, not reported GNPA (UTKARSHBNK live dive #5)
+Utkarsh SFB's GNPA "improvement" 12.4%→5.9% came mostly from write-offs + ARC sales (₹1,743 cr removed vs ₹1,724 cr new bad loans;
+one ARC sale at 13.6% of face). Tier-1 fell 15.1%→12.8% in one quarter on DTA + capitalised-software deductions — CET1 book ₹10.71
+vs reported ₹15.04/share; nobody asked on the call. **Rules:** (1) value lenders on CET1 book (Pillar 3 deductions) beside reported
+book; (2) always build the GNPA walk (new NPAs, recoveries, upgrades, write-offs, ARC sales) before crediting asset-quality gains;
+(3) generalise L40 to state law — any state >~15% of the book → search that state's gazette; (4) we have no India lender base-rate
+class yet, so lender tails are anchored to the wrong class — build one before trusting lender cards.
