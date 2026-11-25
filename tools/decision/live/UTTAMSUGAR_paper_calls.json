@@ -1,0 +1,296 @@
+[
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:UTTAMSUGAR:card-2026-11-25-5y-ge3x",
+  "title": "Paper call: Uttam Sugar Mills Ltd (integrated sugar, distillery, co-generation; western UP + Uttarakhand) 5-year outcome ≥3.0x from 2026-11-23 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.01 (base rate 0.213, class india_nonfin_1000_20000cr_5y) that: YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-23 (entry INR 348.50) to the last close on or before 2031-11-23 is ≥ 3.0. Model: worksheet scenarios bear 30%→0.38x, base 45%→0.81x, bull 15%→1.58x with σ=0.40; reverse DCF base-case IRR 7.5%; card rule output: size 0: blocked by Expected value vs hurdle (EV 0.89x anchored (raw 0.74x) vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "UTTAMSUGAR"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india"
+  ],
+  "date": "2026-11-25",
+  "status": "open",
+  "data": {
+   "probability": 0.0084,
+   "base_rate_probability": 0.2129,
+   "anchored_probability": null,
+   "anchor_weight": null,
+   "base_rate_reasoning": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted). n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "method": "decision-card-v1",
+   "card_version": "1.5",
+   "made_on": "2026-11-25",
+   "resolve_by": "2031-11-23",
+   "entry_date": "2026-11-23",
+   "entry_price": 348.5,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-23 (entry INR 348.50) to the last close on or before 2031-11-23 is ≥ 3.0.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/UTTAMSUGAR_live.md",
+   "https://nsearchives.nseindia.in/corporate/UTTAMSUGAR_24082026174953_AR_31032026_Signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1750793_31102026070927_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/UTTAMSUGAR_31102026184438_Presentation_signed.pdf",
+   "https://www.screener.in/company/UTTAMSUGAR/consolidated/",
+   "https://nsearchives.nseindia.in/products/content/sec_bhavdata_full_24112026.csv"
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:UTTAMSUGAR:card-2026-11-25-5y-le0p5x",
+  "title": "Paper call: Uttam Sugar Mills Ltd (integrated sugar, distillery, co-generation; western UP + Uttarakhand) 5-year outcome ≤0.5x from 2026-11-23 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.38 (base rate 0.113, class india_nonfin_1000_20000cr_5y) that: YES if the total-return multiple from 2026-11-23 (entry INR 348.50) to the last close on or before 2031-11-23 is ≤ 0.5, or the stock is delisted/suspended below that level. Model: worksheet scenarios bear 30%→0.38x, base 45%→0.81x, bull 15%→1.58x with σ=0.40; reverse DCF base-case IRR 7.5%; card rule output: size 0: blocked by Expected value vs hurdle (EV 0.89x anchored (raw 0.74x) vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "UTTAMSUGAR"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india"
+  ],
+  "date": "2026-11-25",
+  "status": "open",
+  "data": {
+   "probability": 0.3788,
+   "base_rate_probability": 0.1127,
+   "anchored_probability": 0.2458,
+   "anchor_weight": 0.5,
+   "base_rate_reasoning": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted). n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "method": "decision-card-v1",
+   "card_version": "1.5",
+   "made_on": "2026-11-25",
+   "resolve_by": "2031-11-23",
+   "entry_date": "2026-11-23",
+   "entry_price": 348.5,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple from 2026-11-23 (entry INR 348.50) to the last close on or before 2031-11-23 is ≤ 0.5, or the stock is delisted/suspended below that level.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/UTTAMSUGAR_live.md",
+   "https://nsearchives.nseindia.in/corporate/UTTAMSUGAR_24082026174953_AR_31032026_Signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1750793_31102026070927_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/UTTAMSUGAR_31102026184438_Presentation_signed.pdf",
+   "https://www.screener.in/company/UTTAMSUGAR/consolidated/",
+   "https://nsearchives.nseindia.in/products/content/sec_bhavdata_full_24112026.csv"
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:UTTAMSUGAR:card-2026-11-25-5y-blowup",
+  "title": "Paper call: Uttam Sugar Mills Ltd (integrated sugar, distillery, co-generation; western UP + Uttarakhand) 5-year outcome blow-up from 2026-11-23 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.10 (base rate 0.154, class india_nonfin_1000_20000cr_5y) that: YES if between 2026-11-23 and 2031-11-23: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples). Model: worksheet scenarios bear 30%→0.38x, base 45%→0.81x, bull 15%→1.58x with σ=0.40; reverse DCF base-case IRR 7.5%; card rule output: size 0: blocked by Expected value vs hurdle (EV 0.89x anchored (raw 0.74x) vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "UTTAMSUGAR"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india"
+  ],
+  "date": "2026-11-25",
+  "status": "open",
+  "data": {
+   "probability": 0.1,
+   "base_rate_probability": 0.1537,
+   "anchored_probability": 0.1269,
+   "anchor_weight": 0.5,
+   "base_rate_reasoning": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted). n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "method": "decision-card-v1",
+   "card_version": "1.5",
+   "made_on": "2026-11-25",
+   "resolve_by": "2031-11-23",
+   "entry_date": "2026-11-23",
+   "entry_price": 348.5,
+   "currency": "INR",
+   "resolution_rule": "YES if between 2026-11-23 and 2031-11-23: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples).",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/UTTAMSUGAR_live.md",
+   "https://nsearchives.nseindia.in/corporate/UTTAMSUGAR_24082026174953_AR_31032026_Signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1750793_31102026070927_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/UTTAMSUGAR_31102026184438_Presentation_signed.pdf",
+   "https://www.screener.in/company/UTTAMSUGAR/consolidated/",
+   "https://nsearchives.nseindia.in/products/content/sec_bhavdata_full_24112026.csv"
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "decision",
+  "id": "decision:card:UTTAMSUGAR:2026-11-25",
+  "title": "Decision card UTTAMSUGAR 2026-11-25 (paper)",
+  "body": "Decision card v1 for Uttam Sugar Mills Ltd (integrated sugar, distillery, co-generation; western UP + Uttarakhand). Rule output: size 0: blocked by Expected value vs hurdle (EV 0.89x anchored (raw 0.74x) vs hurdle 1.76x → below hurdle → size 0). Thesis: Method-test thesis: Uttam Sugar Mills crushes cane at four mills (27,000 TCD: Barkatpur 8,500, Shermau 6,000, Khaikheri 5,500 in western UP; Libberheri 7,000 in Uttarakhand), sells sugar (FY26 36.8 lakh qtl at Rs 4,143/qtl, incl. a branded/specialty line), ethanol/ENA (847 lakh BL from 300 KLPD of molasses distilleries + a 40 KLPD grain distillery at 83.7%-owned UDL) and surplus power (1,006 lakh kWh to UPPCL/UPCL). Every major price is administered: cane cost is the state-set SAP (Rs 390-405/qtl for SS 2025-26, ~74% of capacity in UP), sugar has a Rs 31/kg MSP frozen since 2019 plus monthly release quotas and an export ban (13-May-2026), and ethanol is sold to OMCs at government-fixed feedstock prices. At a 9.42% recovery the SAP alone costs ~Rs 4,150 per qtl of sugar - about the sugar price - so profit comes from by-products and recovery. Group ROIC ~9% on seasonal-average capital (full-cycle ROIIC ~5.6%) is below a 12.5% cost of equity; EPS FY17 27.95 -> FY26 26.30. Variant view: Market: at Rs 348.50 (mcap Rs 1,329 cr) the stock trades at 14.7x reported TTM EPS (23.72) and 15.2x core / 10-year-average EPS (22.9-23.0) - HOT vs its own 10-year FY-end median (8.0x; 90th percentile) and NORMAL vs UP-sugar peers (Balrampur 31x, Triveni 15.5x, Dhampur 11.4x). The price rose from ~Rs 187 (2026 low) to 389 in 2026 on a domestic sugar-price spike (Rs 48 -> 56/kg Jul-Aug 2026, stock limits imposed) despite H1 FY27 PBT -62% after a flood-hit crush (-25%). Our read: no mispricing we can claim; the price already capitalises a good 2026-27 season. (1) Core EPS ~= reported (other income 5% of PBT, exceptionals -1.35 cr) - L44 check passes, unlike SHK. (2) Group ROIC ~9% and ROIIC ~5.6% < CoE, so the DCF is near zero and every scenario above 1x is an exit-multiple bet (L21); our base exit 9x (FY22-26 median) implies de-rating from 15x. (3) A material government-input change is missing from the company's own disclosures (L40): the ESY 2026-27 OMC tender (BPCL, 16-Oct-2026) seeks no ethanol from cane juice, syrup or B-heavy molasses, while three UP units ran on B-heavy and Barkatpur on syrup in SS 2025-26 and the 300 KLPD rating is 'based on B-heavy/syrup'; the 31-Oct-2026 results deck does not mention it. (4) The 2026-27 UP SAP is not yet announced (farmers ask Rs 500 vs 390-400). Evidence for the other side: ratings upgraded twice (CARE A Stable Sep-2025; India Ratings A Stable Jun-2026), debt falls to ~Rs 30 cr net each September, recovery improving (9.42% vs 8.94%), C-heavy ethanol stays eligible and lost B-heavy diversion returns as extra sugar into a tight market (closing stock ~4.25 mt), and an MSP hike (ISMA asks Rs 40-41/kg) would lift every miller. Departure from the outside view: raw P(blow-up) 10% < class 15% (A-rated, no pledge) and raw P(<=0.5x) far above 11% because the price sits at 1.9x the own-history P/E median; default w=0.5. Checked by paper calls thesis:paper-call:UTTAMSUGAR:*. Open soft flags: 4. P(≥3x) 1% vs base 21%; P(≤0.5x) 38% vs base 11.3%; EV 5-yr multiple 0.74x vs hurdle 1.76x. Review 2027-02-15.",
+  "tickers": [
+   "UTTAMSUGAR"
+  ],
+  "tags": [
+   "decision-card",
+   "stage-6",
+   "india"
+  ],
+  "date": "2026-11-25",
+  "data": {
+   "gates": [
+    {
+     "gate": "Stage 2 hard filters",
+     "result": "passed (7 rules)",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 3 PEAD avoid flag",
+     "result": "clear",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 3 survival cap",
+     "result": "clear",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 4 soft flags",
+     "result": "4 open, variant view written",
+     "blocks": false
+    },
+    {
+     "gate": "Tail anchoring (v1.4 warning)",
+     "result": "anchoring lowered documented tails — check evidence note: P(≤0.5x)",
+     "blocks": false
+    },
+    {
+     "gate": "Expected value vs hurdle",
+     "result": "EV 0.89x anchored (raw 0.74x) vs hurdle 1.76x → below hurdle → size 0",
+     "blocks": true
+    }
+   ],
+   "size_after_gates": 0.0,
+   "survival_cap": {
+    "status": "clear",
+    "triggered": false,
+    "blocks": false,
+    "mode": null,
+    "cap_size": null,
+    "reasons": [],
+    "already_owned": false
+   },
+   "anchor_weight": 0.5,
+   "ev_mult5_raw": 0.7432669201075877,
+   "ev_mult5_anchored": 0.8885438887377477,
+   "p_blowup_anchored": 0.12685000000000002,
+   "p_le_half_anchored": 0.24575293025512307,
+   "anchor_lowered_tails": [
+    "P(≤0.5x)"
+   ],
+   "rule_size": 0.0,
+   "kelly_f_star": 0.0,
+   "open_soft_flags": 4,
+   "review_date": "2027-02-15",
+   "kill_criteria": [
+    {
+     "if": "UP SAP for SS 2026-27 raised by more than Rs 20/qtl without a sugar MSP increase",
+     "measure": "UP cane department notification / news",
+     "by": "2027-03-31"
+    },
+    {
+     "if": "FY27 consolidated EBITDA margin (resolver basis) below 8%",
+     "measure": "FY27 consolidated XBRL / screener",
+     "by": "2027-05-31"
+    },
+    {
+     "if": "Net debt above Rs 900 cr at 31-Mar-2027",
+     "measure": "Q4 FY27 consolidated XBRL",
+     "by": "2027-05-31"
+    },
+    {
+     "if": "Rating downgrade below A by CARE or India Ratings",
+     "measure": "Reg-30",
+     "by": "2027-11-30"
+    },
+    {
+     "if": "UDL 160 KLPD not commissioned by 30-Jun-2027",
+     "measure": "Reg-30 / AR FY27",
+     "by": "2027-06-30"
+    }
+   ],
+   "override_log": [
+    {
+     "date": "2026-11-25",
+     "flag": "Survival cap core-asset threat (v1.4)",
+     "decision": "not set",
+     "why": "L40 checked: the B-heavy/syrup ethanol exclusion is a withdrawn government input, but it does not remove a licence or lease the business depends on - C-heavy molasses ethanol stays eligible, diverted sucrose returns as saleable sugar, and the distillery is 25% of segment EBIT. The SAP is an annual administered price, not a concession. Weighed in the bear case and the blow-up note instead. Lesson candidate: the trigger is binary; partial input withdrawals need a graded field."
+    },
+    {
+     "date": "2026-11-25",
+     "flag": "Both-flags balance-sheet question (L39 addendum)",
+     "decision": "not triggered",
+     "why": "Pledge 0% and TTM ICR 4.1x: neither flag fires."
+    },
+    {
+     "date": "2026-11-25",
+     "flag": "L41 state-law check (UP ~74% of capacity)",
+     "decision": "done",
+     "why": "UP cane SAP 2026-27 pending (searched 25-Nov-2026; latest coverage 04/10-Nov-2026 says no decision); FRP 2026-27 Rs 365/qtl at 10.25% recovery (GoI, May-2026). UP molasses reservation for country liquor not verified this run (open item)."
+    },
+    {
+     "date": "2026-11-25",
+     "flag": "Credibility",
+     "decision": "not scored",
+     "why": "No concalls; AR mode gives n=2 dated promises (L37). Disclosure flags reported instead."
+    }
+   ],
+   "paper_calls": [
+    "thesis:paper-call:UTTAMSUGAR:card-2026-11-25-5y-ge3x",
+    "thesis:paper-call:UTTAMSUGAR:card-2026-11-25-5y-le0p5x",
+    "thesis:paper-call:UTTAMSUGAR:card-2026-11-25-5y-blowup"
+   ],
+   "practice": false
+  },
+  "sources": [
+   "research_notes/Deep dives/UTTAMSUGAR_live.md",
+   "https://nsearchives.nseindia.in/corporate/UTTAMSUGAR_24082026174953_AR_31032026_Signed.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1750793_31102026070927_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/UTTAMSUGAR_31102026184438_Presentation_signed.pdf",
+   "https://www.screener.in/company/UTTAMSUGAR/consolidated/",
+   "https://nsearchives.nseindia.in/products/content/sec_bhavdata_full_24112026.csv"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "thesis:paper-call:UTTAMSUGAR:card-2026-11-25-5y-ge3x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:UTTAMSUGAR:card-2026-11-25-5y-le0p5x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:UTTAMSUGAR:card-2026-11-25-5y-blowup",
+    "rel": "about"
+   }
+  ]
+ }
+]

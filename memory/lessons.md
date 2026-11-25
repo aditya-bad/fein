@@ -351,3 +351,12 @@ interest) before valuation temperature. When ROIIC < cost of equity and net debt
 whole EV above 1x is an exit-multiple bet (L21). L42 again: 2/2 draws in this frame family had group ROIC < CoE. SHK missed both
 margin numbers and dates → L26's pattern is a tendency, not a law. Check whether promoters vote on their own relatives' re-appointment.
 Open: pollution-board scraper (no structured source); chemicals/F&F peer credibility ledger.
+
+## L45 (2026-11-25) — When the government sets every price, track the price calendar (UTTAMSUGAR live dive #8)
+Uttam Sugar: the UP cane price alone ≈ the sugar realisation; each ₹10/qtl moves EBITDA 15–19%. The Oct-2026 OMC ethanol tender
+excludes cane-juice/B-heavy ethanol (the company's distillery feedstock) — absent from its Oct-31 results deck. **Rules:** for any
+business with administered prices, keep a dated table (last value, next decision date, whether the company's filings mention it).
+Seasonal balance sheets need average capital (net debt ₹30 cr Sep vs ₹712 cr Mar). When core EPS = reported, valuation temperature
+(15.2x vs own 10-yr median 8.0x) can be the binding read. Card can't express *partial* loss of a government input (core-asset trigger
+is yes/no). Cyclical upside tail (model 0.8% ≥3x vs a stock that did 12.7x in 2020–23) is likely too thin → covered by pre-registered fix (3).
+Frame hygiene: industry_map's FMCG includes agri-commodity processors. 8/8 live cards size 0; 3/3 recent draws ROIC < CoE.

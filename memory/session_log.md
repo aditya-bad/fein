@@ -81,3 +81,4 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
 - 25-Nov-2026: India lender base rates (P≥3x 11%, P≤0.5x 25%, blow-up 27%) → card v1.5; bank.py v1.2 (CET1 book, scenario dilution, J-curve). UTKARSHBNK addendum (calls unchanged).
 - 25-Nov-2026: card no-machine audit → partial structural bias (L43); 6 fixes pre-registered, none applied.
 - 25-Nov-2026: live dive #7 SHK (Chemicals draw, walk #1; card size 0, EV 1.59x; 9 calls, 5 auto) → L44. 7/7 live cards size 0 (see L43).
+- 25-Nov-2026: tool fixes (core EPS, below-net-debt note, card fraction validation, nse_fetch --limit; 126 tests). Live dive #8 UTTAMSUGAR (FMCG-map draw; size 0, EV 0.89x anchored; 10 calls) → L45. Hit 5-hr limit once; resumed.
