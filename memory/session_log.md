@@ -84,3 +84,4 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
 - 25-Nov-2026: tool fixes (core EPS, below-net-debt note, card fraction validation, nse_fetch --limit; 126 tests). Live dive #8 UTTAMSUGAR (FMCG-map draw; size 0, EV 0.89x anchored; 10 calls) → L45. Hit 5-hr limit once; resumed.
 - 25-Nov-2026: scoring-season dry run: 191 open calls all specced; Jan–Jul 2027: 81 auto / 68 assisted / 4 human; 5 specs fixed; no data gaps; runbook research_notes/Scoreboard/scoring_season_runbook.md. Card-fix prereg amended (tails evaluated on historical panels; card tails final 2031).
 - 25-Nov-2026: card-fix historical test (L48): σ too narrow; fix 3 passes, fix 4 fails on lender Brier; v1.6 patch ready. Promise-tracker forward test running (prereg committed).
+- 25-Nov-2026: promise forward test cohort 1 — 12 cos (Capital Goods, Chemicals, Healthcare), 38 calls with P_cred vs P_base (L49: under-powered). Total open calls 229. News layer being built.

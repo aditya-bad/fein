@@ -1,0 +1,899 @@
+{
+ "past": [
+  {
+   "sym": "JASH",
+   "said_on": "2025-02-13",
+   "group": "revenue",
+   "y": 1,
+   "title": "FY25 consolidated revenue Rs 675 cr",
+   "evidence": "FY25 consolidated sales Rs 735 cr (screener)"
+  },
+  {
+   "sym": "JASH",
+   "said_on": "2025-08-08",
+   "group": "revenue",
+   "y": 0,
+   "title": "FY26 consolidated revenue Rs 860 cr (restated Rs 825 cr in Nov-25 without saying so)",
+   "evidence": "FY26 Rs 736 cr (screener) = 86%"
+  },
+  {
+   "sym": "JASH",
+   "said_on": "2025-08-08",
+   "group": "revenue",
+   "y": 0,
+   "title": "Consolidated order book Rs 1,100 cr by 31-Mar-2026",
+   "evidence": "Q4FY26 call: Rs 899 cr as on 1-May-2026"
+  },
+  {
+   "sym": "JASH",
+   "said_on": "2025-05-06",
+   "group": "other",
+   "y": 0,
+   "title": "Waterfront (US sub) to break even in FY26",
+   "evidence": "Q4FY26 call: \"minor increase in revenue and reduction in losses\""
+  },
+  {
+   "sym": "JASH",
+   "said_on": "2025-05-06",
+   "group": "dates",
+   "y": 0,
+   "title": "Pithampur SEZ plant commissioned Dec-2025/Jan-2026",
+   "evidence": "Q3FY26 call (16-Feb-26): plant ready, commercial production \"from the beginning of April\""
+  },
+  {
+   "sym": "KIRLOSBROS",
+   "said_on": "2025-05-15",
+   "group": "revenue",
+   "y": 0,
+   "title": "Double-digit revenue growth (FY26; \"that hasn't changed\")",
+   "evidence": "FY26 consolidated sales +1.0% (4,492 -> 4,538, screener); Q4FY26 call: double-digit growth \"impacted\" by Q1-Q3"
+  },
+  {
+   "sym": "RISHABH",
+   "said_on": "2025-02-07",
+   "group": "margin",
+   "y": 1,
+   "title": "Lumel Alucast EBITDA breakeven in the next 1-2 quarters",
+   "evidence": "Q4FY25 call: \"for Q4 it is at breakeven\"; Q1FY26 \"successful turnaround of Lumel Alucast\""
+  },
+  {
+   "sym": "RISHABH",
+   "said_on": "2025-05-27",
+   "group": "margin",
+   "y": 1,
+   "title": "Lumel Alucast positive EBITDA by end FY26",
+   "evidence": "Q4FY26 call: Alucast adjusted EBITDA margin FY26 1.4%"
+  },
+  {
+   "sym": "RISHABH",
+   "said_on": "2025-08-14",
+   "group": "dates",
+   "y": 0,
+   "title": "Nashik MIDC/Trishala buildings complete by Mar-2026",
+   "evidence": "Q4FY26 call: capex complete, facilities \"almost ready and under commissioning\"; Q1FY27 \"partial commissioning\""
+  },
+  {
+   "sym": "RISHABH",
+   "said_on": "2025-11-17",
+   "group": "margin",
+   "y": 1,
+   "title": "FY26 consolidated EBITDA ~Rs 100 cr (raised to Rs 115-120 cr adjusted, Feb-26)",
+   "evidence": "FY26 operating profit ~Rs 127 cr (screener 775 x 16.4%)"
+  },
+  {
+   "sym": "ANUP",
+   "said_on": "2025-01-31",
+   "group": "revenue",
+   "y": 1,
+   "title": "FY25 revenue growth ~30%",
+   "evidence": "Q4FY25 call: FY25 revenue Rs 751 cr, +36.5%"
+  },
+  {
+   "sym": "ANUP",
+   "said_on": "2025-01-31",
+   "group": "margin",
+   "y": 1,
+   "title": "FY25 EBITDA margin ~23%",
+   "evidence": "Q4FY25 call: EBITDA Rs 172.8 cr at 23%"
+  },
+  {
+   "sym": "ANUP",
+   "said_on": "2025-05-13",
+   "group": "revenue",
+   "y": 0,
+   "title": "FY26 revenue growth ~25% (cut to 15-20% in Aug-25, acknowledged)",
+   "evidence": "FY26 sales +12.1% (733 -> 822, screener)"
+  },
+  {
+   "sym": "ANUP",
+   "said_on": "2025-05-13",
+   "group": "margin",
+   "y": 1,
+   "title": "FY26 EBITDA margin over 20%",
+   "evidence": "FY26 OPM 21.5% (screener)"
+  },
+  {
+   "sym": "ANUP",
+   "said_on": "2025-05-13",
+   "group": "dates",
+   "y": 1,
+   "title": "Kheda Phase-2 expansion commissioned by Q3FY26",
+   "evidence": "Q3FY26 call (4-Feb-26): \"completed Phase 2 as planned\", Kheda fully operational"
+  },
+  {
+   "sym": "ANUP",
+   "said_on": "2025-11-10",
+   "group": "revenue",
+   "y": 1,
+   "title": "Pending order book Rs 700-750 cr at 1-Apr-2026",
+   "evidence": "Q4FY26 call: pending order book ~Rs 770 cr"
+  },
+  {
+   "sym": "NEOGEN",
+   "said_on": "2025-02-03",
+   "group": "revenue",
+   "y": 0,
+   "title": "FY26 standalone revenue Rs 950-1,000 cr (withdrawn after Mar-25 Dahej fire)",
+   "evidence": "Q4FY25 call: revised to Rs 775-850 cr (acknowledged) -> withdrawn = 0"
+  },
+  {
+   "sym": "NEOGEN",
+   "said_on": "2025-02-03",
+   "group": "margin",
+   "y": 1,
+   "title": "EBITDA margin 18% +/- 1-1.5% (FY25)",
+   "evidence": "FY25 OPM 17.5% (screener)"
+  },
+  {
+   "sym": "NEOGEN",
+   "said_on": "2025-05-19",
+   "group": "dates",
+   "y": 0,
+   "title": "Dahej salts +1,100 t commissioned by Sep-2025",
+   "evidence": "Q3FY26 call: timeline now Mar-2026 (was Dec-2025)"
+  },
+  {
+   "sym": "GALAXYSURF",
+   "said_on": "2025-05-19",
+   "group": "revenue",
+   "y": 0,
+   "title": "FY26 volume growth ~8%",
+   "evidence": "Q4FY26 call: AMET -15% in Q4, RoW +4% FY, India flattish-to-up: group volume well below 8% (inferred from regional data; single-source)"
+  },
+  {
+   "sym": "GALAXYSURF",
+   "said_on": "2025-05-19",
+   "group": "margin",
+   "y": 1,
+   "title": "FY26 EBITDA/MT Rs 20,500-21,500",
+   "evidence": "Quarterly EBITDA/MT ~20,000-20,160 in FY26 (Q1, Q3, Q4 calls) = >=95% of 20,500 (amount rule)"
+  },
+  {
+   "sym": "YASHO",
+   "said_on": "2025-02-12",
+   "group": "revenue",
+   "y": 0,
+   "title": "FY26 revenue Rs 950-1,000 cr (= 40-50% growth, restated May/Jul-25)",
+   "evidence": "FY26 sales Rs 830 cr, +22.8% (screener)"
+  },
+  {
+   "sym": "YASHO",
+   "said_on": "2025-05-05",
+   "group": "balance_sheet",
+   "y": 0,
+   "title": "Net debt/EBITDA ~3.5x by FY26",
+   "evidence": "Q1FY27 call: 3.75x at end of Q4FY26"
+  },
+  {
+   "sym": "YASHO",
+   "said_on": "2025-05-05",
+   "group": "other",
+   "y": 0,
+   "title": "70% capacity utilisation by Q4FY26",
+   "evidence": "Q3FY26 call: \"could not achieve the full utilization in FY26 what we anticipated\""
+  },
+  {
+   "sym": "YASHO",
+   "said_on": "2025-05-05",
+   "group": "balance_sheet",
+   "y": 0,
+   "title": "Working capital 110-115 days by FY26",
+   "evidence": "Q1FY26 call already re-set to ~150 days by March (unacknowledged move)"
+  },
+  {
+   "sym": "TATVA",
+   "said_on": "2025-05-05",
+   "group": "revenue",
+   "y": 1,
+   "title": "FY26 \"a year of good growth\" with H2 recovery",
+   "evidence": "FY26 sales +32% (383 -> 506, screener)"
+  },
+  {
+   "sym": "KRSNAA",
+   "said_on": "2025-05-13",
+   "group": "balance_sheet",
+   "y": 0,
+   "title": "Receivables ~90-100 days by FY26",
+   "evidence": "Q4FY26 call: 139 days"
+  },
+  {
+   "sym": "KRSNAA",
+   "said_on": "2025-08-12",
+   "group": "revenue",
+   "y": 1,
+   "title": "Retail ~8% of revenue by FY26",
+   "evidence": "Q4FY26 call: retail ~8% of FY26 revenue"
+  },
+  {
+   "sym": "KRSNAA",
+   "said_on": "2025-11-10",
+   "group": "margin",
+   "y": 0,
+   "title": "Retail (RPL) business breakeven in Q4FY26",
+   "evidence": "Q2FY27 call: \"operationally breakeven in the month of September [2026] more or less\""
+  },
+  {
+   "sym": "ORCHPHARMA",
+   "said_on": "2025-05-26",
+   "group": "dates",
+   "y": 0,
+   "title": "Dhanuka Laboratories merger completed within FY26",
+   "evidence": "Q1FY27 call: merger effective 10-Jul-2026"
+  },
+  {
+   "sym": "ORCHPHARMA",
+   "said_on": "2025-05-26",
+   "group": "revenue",
+   "y": 0,
+   "title": "Combined business revenue > Rs 1,500 cr (FY26)",
+   "evidence": "Q1FY27 call: restated FY26 combined revenue below plan (screener FY26 Rs 1,233 cr)"
+  },
+  {
+   "sym": "ORCHPHARMA",
+   "said_on": "2025-05-26",
+   "group": "margin",
+   "y": 0,
+   "title": "Combined business EBITDA ~Rs 175 cr (FY26)",
+   "evidence": "FY26 operating profit ~Rs 48 cr (screener); combined gross margin fell to 32%"
+  },
+  {
+   "sym": "SYNGENE",
+   "said_on": "2025-04-24",
+   "group": "revenue",
+   "y": 0,
+   "title": "FY26 revenue growth mid-single-digit (constant currency)",
+   "evidence": "FY26 sales +2.7% reported (3,642 -> 3,739, screener); no cc beat found"
+  },
+  {
+   "sym": "SYNGENE",
+   "said_on": "2025-07-24",
+   "group": "margin",
+   "y": 1,
+   "title": "FY26 EBITDA margin in the mid-20s",
+   "evidence": "FY26 OPM 24.6% (screener)"
+  },
+  {
+   "sym": "SYNGENE",
+   "said_on": "2025-07-24",
+   "group": "dates",
+   "y": 0,
+   "title": "Bayview (US) biologics facility operational in FY26",
+   "evidence": "Q4FY26 call: \"moving toward operationalization\""
+  },
+  {
+   "sym": "SHILPAMED",
+   "said_on": "2025-05-26",
+   "group": "revenue",
+   "y": 1,
+   "title": "FY26 revenue to grow vs FY25",
+   "evidence": "FY26 sales +19.8% (1,281 -> 1,535, screener)"
+  }
+ ],
+ "credibility": {
+  "JASH": {
+   "N": 5,
+   "hits": 1,
+   "hit_rate": 0.2,
+   "sac": -0.188,
+   "w": 0.2,
+   "active": true,
+   "tercile": "bottom"
+  },
+  "KIRLOSBROS": {
+   "N": 1,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "sac": -0.366,
+   "w": 0.048,
+   "active": false,
+   "tercile": "bottom"
+  },
+  "RISHABH": {
+   "N": 4,
+   "hits": 3,
+   "hit_rate": 0.75,
+   "sac": 0.287,
+   "w": 0.167,
+   "active": true,
+   "tercile": "top"
+  },
+  "ANUP": {
+   "N": 6,
+   "hits": 5,
+   "hit_rate": 0.833,
+   "sac": 0.437,
+   "w": 0.231,
+   "active": true,
+   "tercile": "top"
+  },
+  "NEOGEN": {
+   "N": 3,
+   "hits": 1,
+   "hit_rate": 0.333,
+   "sac": -0.065,
+   "w": 0.13,
+   "active": true,
+   "tercile": "middle"
+  },
+  "GALAXYSURF": {
+   "N": 2,
+   "hits": 1,
+   "hit_rate": 0.5,
+   "sac": 0.25,
+   "w": 0.091,
+   "active": false,
+   "tercile": "middle"
+  },
+  "YASHO": {
+   "N": 4,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "sac": -0.454,
+   "w": 0.167,
+   "active": true,
+   "tercile": "bottom"
+  },
+  "TATVA": {
+   "N": 1,
+   "hits": 1,
+   "hit_rate": 1.0,
+   "sac": 0.778,
+   "w": 0.048,
+   "active": false,
+   "tercile": "top"
+  },
+  "KRSNAA": {
+   "N": 3,
+   "hits": 1,
+   "hit_rate": 0.333,
+   "sac": -0.132,
+   "w": 0.13,
+   "active": true,
+   "tercile": "middle"
+  },
+  "ORCHPHARMA": {
+   "N": 3,
+   "hits": 0,
+   "hit_rate": 0.0,
+   "sac": -0.409,
+   "w": 0.13,
+   "active": true,
+   "tercile": "bottom"
+  },
+  "SYNGENE": {
+   "N": 3,
+   "hits": 1,
+   "hit_rate": 0.333,
+   "sac": -0.065,
+   "w": 0.13,
+   "active": true,
+   "tercile": "middle"
+  },
+  "SHILPAMED": {
+   "N": 1,
+   "hits": 1,
+   "hit_rate": 1.0,
+   "sac": 0.778,
+   "w": 0.048,
+   "active": false,
+   "tercile": "top"
+  }
+ },
+ "calls": [
+  {
+   "id": "thesis:paper-call:JASH:fy27-revenue-831cr-plus-pft",
+   "sym": "JASH",
+   "group": "revenue",
+   "claim": "Jash Engineering (JASH) FY27 consolidated revenue >= Rs 831 cr (95% of the Rs 875 cr guide)",
+   "p_cred": 0.32,
+   "p_base": 0.36,
+   "p_raw": 0.17,
+   "due": "2027-03-31",
+   "resolve_by": "2027-06-15",
+   "auto": "structured",
+   "kind": "india_fin"
+  },
+  {
+   "id": "thesis:paper-call:JASH:fy27-pat-100cr-plus-pft",
+   "sym": "JASH",
+   "group": "other",
+   "claim": "Jash Engineering (JASH) FY27 consolidated net profit >= Rs 100 cr",
+   "p_cred": 0.52,
+   "p_base": 0.56,
+   "p_raw": 0.37,
+   "due": "2027-03-31",
+   "resolve_by": "2027-06-15",
+   "auto": "structured",
+   "kind": "india_fin"
+  },
+  {
+   "id": "thesis:paper-call:JASH:fy27-rodney-hunt-usd33mn-plus-pft",
+   "sym": "JASH",
+   "group": "revenue",
+   "claim": "Jash Engineering (JASH) FY27 Rodney Hunt (USA) revenue >= USD 33.25 mn (95% of 35)",
+   "p_cred": 0.32,
+   "p_base": 0.36,
+   "p_raw": 0.17,
+   "due": "2027-06-30",
+   "resolve_by": "2027-06-30",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:JASH:q3fy27-129cr-orders-finalised-pft",
+   "sym": "JASH",
+   "group": "revenue",
+   "claim": "Jash Engineering (JASH) finalises the ~Rs 129 cr of orders under negotiation by 31-Dec-2026",
+   "p_cred": 0.32,
+   "p_base": 0.36,
+   "p_raw": 0.17,
+   "due": "2026-12-31",
+   "resolve_by": "2027-03-15",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:KIRLOSBROS:fy27-standalone-revenue-growth-9p5pct-plus-pft",
+   "sym": "KIRLOSBROS",
+   "group": "revenue",
+   "claim": "Kirloskar Brothers (KIRLOSBROS) FY27 standalone revenue growth >= 9.5% (double-digit less 0.5 pp tolerance)",
+   "p_cred": 0.37,
+   "p_base": 0.37,
+   "p_raw": 0.05,
+   "due": "2027-03-31",
+   "resolve_by": "2027-06-15",
+   "auto": "structured",
+   "kind": "india_fin"
+  },
+  {
+   "id": "thesis:paper-call:RISHABH:fy27-eei-adj-ebitda-133cr-plus-pft",
+   "sym": "RISHABH",
+   "group": "margin",
+   "claim": "Rishabh Instruments (RISHABH) FY27 EEI adjusted EBITDA >= Rs 133 cr (95% of Rs 140 cr)",
+   "p_cred": 0.57,
+   "p_base": 0.52,
+   "p_raw": 0.81,
+   "due": "2027-06-30",
+   "resolve_by": "2027-06-30",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:RISHABH:fy27-eei-revenue-growth-19pct-plus-pft",
+   "sym": "RISHABH",
+   "group": "revenue",
+   "claim": "Rishabh Instruments (RISHABH) FY27 EEI segment revenue growth >= 19% (20% less tolerance)",
+   "p_cred": 0.41,
+   "p_base": 0.36,
+   "p_raw": 0.65,
+   "due": "2027-06-30",
+   "resolve_by": "2027-06-30",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:RISHABH:fy27-alucast-adj-ebitda-breakeven-pft",
+   "sym": "RISHABH",
+   "group": "margin",
+   "claim": "Rishabh Instruments (RISHABH) FY27 Lumel Alucast adjusted EBITDA margin >= -0.3% (breakeven)",
+   "p_cred": 0.57,
+   "p_base": 0.52,
+   "p_raw": 0.81,
+   "due": "2027-06-30",
+   "resolve_by": "2027-06-30",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:ANUP:fy27-revenue-798cr-plus-pft",
+   "sym": "ANUP",
+   "group": "revenue",
+   "claim": "The Anup Engineering (ANUP) FY27 consolidated revenue >= Rs 798 cr (95% of Rs 840 cr)",
+   "p_cred": 0.45,
+   "p_base": 0.35,
+   "p_raw": 0.78,
+   "due": "2027-03-31",
+   "resolve_by": "2027-06-15",
+   "auto": "structured",
+   "kind": "india_fin"
+  },
+  {
+   "id": "thesis:paper-call:ANUP:fy27-ebitda-114cr-plus-pft",
+   "sym": "ANUP",
+   "group": "margin",
+   "claim": "The Anup Engineering (ANUP) FY27 consolidated EBITDA >= Rs 114 cr (95% of Rs 120 cr)",
+   "p_cred": 0.64,
+   "p_base": 0.54,
+   "p_raw": 0.95,
+   "due": "2027-03-31",
+   "resolve_by": "2027-06-15",
+   "auto": "structured",
+   "kind": "india_fin"
+  },
+  {
+   "id": "thesis:paper-call:ANUP:opening-order-book-apr27-760cr-plus-pft",
+   "sym": "ANUP",
+   "group": "revenue",
+   "claim": "The Anup Engineering (ANUP) pending order book at 1-Apr-2027 >= Rs 760 cr (95% of Rs 800 cr)",
+   "p_cred": 0.45,
+   "p_base": 0.35,
+   "p_raw": 0.78,
+   "due": "2027-06-30",
+   "resolve_by": "2027-06-30",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:ANUP:fy27-mabel-revenue-62cr-plus-pft",
+   "sym": "ANUP",
+   "group": "revenue",
+   "claim": "The Anup Engineering (ANUP) FY27 Mabel Engineers revenue >= Rs 62 cr (95% of Rs 65 cr)",
+   "p_cred": 0.45,
+   "p_base": 0.35,
+   "p_raw": 0.78,
+   "due": "2027-06-30",
+   "resolve_by": "2027-06-30",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:NEOGEN:fy27-revenue-1100cr-plus-pft",
+   "sym": "NEOGEN",
+   "group": "revenue",
+   "claim": "Neogen Chemicals (NEOGEN) FY27 consolidated revenue >= Rs 1,100 cr",
+   "p_cred": 0.36,
+   "p_base": 0.37,
+   "p_raw": 0.3,
+   "due": "2027-03-31",
+   "resolve_by": "2027-06-15",
+   "auto": "structured",
+   "kind": "india_fin"
+  },
+  {
+   "id": "thesis:paper-call:NEOGEN:fy27-standalone-revenue-1000cr-plus-pft",
+   "sym": "NEOGEN",
+   "group": "revenue",
+   "claim": "Neogen Chemicals (NEOGEN) FY27 standalone (base business) revenue >= Rs 1,000 cr",
+   "p_cred": 0.36,
+   "p_base": 0.37,
+   "p_raw": 0.3,
+   "due": "2027-03-31",
+   "resolve_by": "2027-06-15",
+   "auto": "structured",
+   "kind": "india_fin"
+  },
+  {
+   "id": "thesis:paper-call:NEOGEN:fy27-standalone-opm-16p2pct-plus-pft",
+   "sym": "NEOGEN",
+   "group": "margin",
+   "claim": "Neogen Chemicals (NEOGEN) FY27 standalone operating margin >= 16.2% (18% - 1.5 pp - 0.3 pp tolerance)",
+   "p_cred": 0.55,
+   "p_base": 0.56,
+   "p_raw": 0.5,
+   "due": "2027-03-31",
+   "resolve_by": "2027-06-15",
+   "auto": "structured",
+   "kind": "india_fin"
+  },
+  {
+   "id": "thesis:paper-call:NEOGEN:fy27-battery-revenue-285cr-plus-pft",
+   "sym": "NEOGEN",
+   "group": "revenue",
+   "claim": "Neogen Chemicals (NEOGEN) FY27 battery-materials (Neogen Ionics + salts/electrolyte) revenue >= Rs 285 cr",
+   "p_cred": 0.36,
+   "p_base": 0.37,
+   "p_raw": 0.3,
+   "due": "2027-06-30",
+   "resolve_by": "2027-06-30",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:NEOGEN:fy27-working-capital-180-days-or-less-pft",
+   "sym": "NEOGEN",
+   "group": "balance_sheet",
+   "claim": "Neogen Chemicals (NEOGEN) working-capital days <= 180 at 31-Mar-2027",
+   "p_cred": 0.43,
+   "p_base": 0.44,
+   "p_raw": 0.37,
+   "due": "2027-06-30",
+   "resolve_by": "2027-06-30",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:GALAXYSURF:fy27-volume-growth-5p5pct-plus-pft",
+   "sym": "GALAXYSURF",
+   "group": "revenue",
+   "claim": "Galaxy Surfactants (GALAXYSURF) FY27 volume growth >= 5.5% (6% less 0.5 pp)",
+   "p_cred": 0.25,
+   "p_base": 0.25,
+   "p_raw": 0.5,
+   "due": "2027-06-30",
+   "resolve_by": "2027-06-30",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:GALAXYSURF:fy27-ebitda-per-mt-22800-plus-pft",
+   "sym": "GALAXYSURF",
+   "group": "margin",
+   "claim": "Galaxy Surfactants (GALAXYSURF) FY27 EBITDA per MT >= Rs 22,800 (95% of Rs 24,000)",
+   "p_cred": 0.25,
+   "p_base": 0.25,
+   "p_raw": 0.5,
+   "due": "2027-06-30",
+   "resolve_by": "2027-06-30",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:YASHO:fy27-opm-20pct-plus-pft",
+   "sym": "YASHO",
+   "group": "margin",
+   "claim": "Yasho Industries (YASHO) FY27 consolidated operating margin >= 20.0%",
+   "p_cred": 0.5,
+   "p_base": 0.58,
+   "p_raw": 0.12,
+   "due": "2027-03-31",
+   "resolve_by": "2027-06-15",
+   "auto": "structured",
+   "kind": "india_fin"
+  },
+  {
+   "id": "thesis:paper-call:YASHO:fy27-utilisation-69p7pct-plus-pft",
+   "sym": "YASHO",
+   "group": "other",
+   "claim": "Yasho Industries (YASHO) FY27 capacity utilisation >= 69.7% (70% less 0.3 pp)",
+   "p_cred": 0.45,
+   "p_base": 0.53,
+   "p_raw": 0.08,
+   "due": "2027-06-30",
+   "resolve_by": "2027-06-30",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:YASHO:fy27-capex-237cr-plus-pft",
+   "sym": "YASHO",
+   "group": "dates",
+   "claim": "Yasho Industries (YASHO) FY27 capex >= Rs 237.5 cr (95% of Rs 250 cr)",
+   "p_cred": 0.18,
+   "p_base": 0.26,
+   "p_raw": 0.05,
+   "due": "2027-06-30",
+   "resolve_by": "2027-06-30",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:TATVA:fy27-revenue-growth-23p75pct-plus-pft",
+   "sym": "TATVA",
+   "group": "revenue",
+   "claim": "Tatva Chintan Pharma Chem (TATVA) FY27 consolidated revenue growth >= 23.75% (25% less 5% of target)",
+   "p_cred": 0.22,
+   "p_base": 0.22,
+   "p_raw": 0.95,
+   "due": "2027-03-31",
+   "resolve_by": "2027-06-15",
+   "auto": "structured",
+   "kind": "india_fin"
+  },
+  {
+   "id": "thesis:paper-call:TATVA:two-pharma-products-commercial-by-dec26-pft",
+   "sym": "TATVA",
+   "group": "dates",
+   "claim": "Tatva Chintan Pharma Chem (TATVA) starts commercial production of the other two pharma products by 31-Dec-2026",
+   "p_cred": 0.22,
+   "p_base": 0.22,
+   "p_raw": 0.95,
+   "due": "2026-12-31",
+   "resolve_by": "2027-03-15",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:TATVA:hybrid-battery-commercial-supply-by-dec26-pft",
+   "sym": "TATVA",
+   "group": "dates",
+   "claim": "Tatva Chintan Pharma Chem (TATVA) begins commercial supply to its hybrid-battery electrolyte-salt customer by 31-Dec-2026",
+   "p_cred": 0.22,
+   "p_base": 0.22,
+   "p_raw": 0.95,
+   "due": "2026-12-31",
+   "resolve_by": "2027-03-15",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:KRSNAA:receivable-days-120-or-less-mar27-pft",
+   "sym": "KRSNAA",
+   "group": "balance_sheet",
+   "claim": "Krsnaa Diagnostics (KRSNAA) receivable days < 120 at 31-Mar-2027",
+   "p_cred": 0.43,
+   "p_base": 0.45,
+   "p_raw": 0.32,
+   "due": "2027-06-30",
+   "resolve_by": "2027-06-30",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:KRSNAA:fy27-cash-based-revenue-380cr-plus-pft",
+   "sym": "KRSNAA",
+   "group": "revenue",
+   "claim": "Krsnaa Diagnostics (KRSNAA) FY27 cash-based revenue >= Rs 380 cr (95% of Rs 400 cr)",
+   "p_cred": 0.34,
+   "p_base": 0.35,
+   "p_raw": 0.22,
+   "due": "2027-06-30",
+   "resolve_by": "2027-06-30",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:KRSNAA:retail-ebitda-positive-q4fy27-pft",
+   "sym": "KRSNAA",
+   "group": "margin",
+   "claim": "Krsnaa Diagnostics (KRSNAA) retail business EBITDA positive in Q4FY27",
+   "p_cred": 0.58,
+   "p_base": 0.59,
+   "p_raw": 0.46,
+   "due": "2027-06-30",
+   "resolve_by": "2027-06-30",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:KRSNAA:fy27-rajasthan-revenue-95cr-plus-pft",
+   "sym": "KRSNAA",
+   "group": "revenue",
+   "claim": "Krsnaa Diagnostics (KRSNAA) FY27 Rajasthan project revenue >= Rs 95 cr (95% of Rs 100 cr)",
+   "p_cred": 0.34,
+   "p_base": 0.35,
+   "p_raw": 0.22,
+   "due": "2027-06-30",
+   "resolve_by": "2027-06-30",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:ORCHPHARMA:fy27-ebitda-margin-11p7pct-plus-pft",
+   "sym": "ORCHPHARMA",
+   "group": "margin",
+   "claim": "Orchid Pharma (ORCHPHARMA) FY27 EBITDA margin >= 11.7% as the company reports it (12% less 0.3 pp)",
+   "p_cred": 0.54,
+   "p_base": 0.59,
+   "p_raw": 0.18,
+   "due": "2027-06-30",
+   "resolve_by": "2027-06-30",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:ORCHPHARMA:cefiderocol-plant-commissioned-by-dec26-pft",
+   "sym": "ORCHPHARMA",
+   "group": "dates",
+   "claim": "Orchid Pharma (ORCHPHARMA) commissions the cefiderocol plant by 31-Dec-2026",
+   "p_cred": 0.21,
+   "p_base": 0.26,
+   "p_raw": 0.05,
+   "due": "2026-12-31",
+   "resolve_by": "2027-03-15",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:SYNGENE:fy27-ebitda-margin-ex-fx-23p7pct-plus-pft",
+   "sym": "SYNGENE",
+   "group": "margin",
+   "claim": "Syngene International (SYNGENE) FY27 EBITDA margin excluding forex/hedge loss >= 23.7% (mid-20s low end 24% less 0.3 pp)",
+   "p_cred": 0.55,
+   "p_base": 0.56,
+   "p_raw": 0.5,
+   "due": "2027-06-30",
+   "resolve_by": "2027-06-30",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:SYNGENE:fy27-revenue-decline-3p5pct-or-better-pft",
+   "sym": "SYNGENE",
+   "group": "revenue",
+   "claim": "Syngene International (SYNGENE) FY27 consolidated revenue growth >= -3.5% (low-single-digit decline, -3% less 0.5 pp)",
+   "p_cred": 0.36,
+   "p_base": 0.37,
+   "p_raw": 0.3,
+   "due": "2027-03-31",
+   "resolve_by": "2027-06-15",
+   "auto": "structured",
+   "kind": "india_fin"
+  },
+  {
+   "id": "thesis:paper-call:SHILPAMED:peptide-block-commissioned-by-mar27-pft",
+   "sym": "SHILPAMED",
+   "group": "dates",
+   "claim": "Shilpa Medicare (SHILPAMED) commissions its integrated peptide manufacturing block by 31-Mar-2027",
+   "p_cred": 0.22,
+   "p_base": 0.22,
+   "p_raw": 0.95,
+   "due": "2027-03-31",
+   "resolve_by": "2027-06-14",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:SHILPAMED:aflibercept-india-launch-by-mar27-pft",
+   "sym": "SHILPAMED",
+   "group": "dates",
+   "claim": "Shilpa Medicare (SHILPAMED) launches its aflibercept biosimilar in India by 31-Mar-2027",
+   "p_cred": 0.22,
+   "p_base": 0.22,
+   "p_raw": 0.95,
+   "due": "2027-03-31",
+   "resolve_by": "2027-06-14",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:SHILPAMED:nor-udca-global-phase2-start-by-mar27-pft",
+   "sym": "SHILPAMED",
+   "group": "dates",
+   "claim": "Shilpa Medicare (SHILPAMED) starts the global Phase II study of Nor-UDCA by 31-Mar-2027",
+   "p_cred": 0.22,
+   "p_base": 0.22,
+   "p_raw": 0.95,
+   "due": "2027-03-31",
+   "resolve_by": "2027-06-14",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:SHILPAMED:two-biosimilars-human-studies-by-mar27-pft",
+   "sym": "SHILPAMED",
+   "group": "dates",
+   "claim": "Shilpa Medicare (SHILPAMED) puts two biosimilars into human studies (Europe/RoW) by 31-Mar-2027",
+   "p_cred": 0.22,
+   "p_base": 0.22,
+   "p_raw": 0.95,
+   "due": "2027-03-31",
+   "resolve_by": "2027-06-14",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  },
+  {
+   "id": "thesis:paper-call:SHILPAMED:two-nbe-phase1-by-mar27-pft",
+   "sym": "SHILPAMED",
+   "group": "dates",
+   "claim": "Shilpa Medicare (SHILPAMED) starts Phase I human studies for both NBE partnership programs (Alveolus Bio, mAb Tree) by 31-Mar-2027",
+   "p_cred": 0.22,
+   "p_base": 0.22,
+   "p_raw": 0.95,
+   "due": "2027-03-31",
+   "resolve_by": "2027-06-14",
+   "auto": "assisted",
+   "kind": "doc_scan"
+  }
+ ],
+ "td_rows": 169
+}

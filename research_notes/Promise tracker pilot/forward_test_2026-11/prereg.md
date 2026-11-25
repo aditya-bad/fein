@@ -86,3 +86,37 @@ capex, new_product, approval_regulatory, m&a, customer_win), **balance_sheet** (
   expected |ΔB| is ~0.002–0.015. INCONCLUSIVE is the most likely single-season result; the test is designed to be pooled.
 - **Voids:** a call is void only if the company is delisted/merged or stops publishing the metric and no document can decide it;
   voids are listed, never silently dropped. No call, threshold or probability is edited after this cohort is saved.
+
+## Frame and walk log (appended 2026-11-25 ~18:30 UTC, after the frame and the draw)
+Prereg text above this heading: sha256 990c8180d8ed16e407381071a1e6f4e44a2c4f62e0538f80f9f9dd5ea1435aec (saved 18:22 UTC, before the frame).
+Bhavcopy `sec_bhavdata_full_25112026.csv` -> HTTP 200, DATE1 = 25-Nov-2026 -> **frame close = 25-Nov-2026**. Universe 1,547, unpriced 0,
+in band 806, in-band missing from map 0. Eligible after exclusions: Capital Goods 148 (excluded present: HAPPYFORGE, HARSHA, SKIPPER,
+SUNFLAG), Chemicals 71 (SHK), Healthcare 66 (INDRAMEDCO). Full shuffled orders + mcaps: `selection_order.json`.
+Walk (transcript rows filed 2025-01-01..2026-11-25 / rows filed >= 2026-07-15; NSE `transcripts` list):
+
+| Sector | # | Symbol | Mcap Rs cr | Rows / recent | Result |
+|---|---|---|---|---|---|
+| Capital Goods | 1 | JASH (Jash Engineering) | 3,235 | 8 / 2 | ACCEPT |
+| | 2 | STEELXIND | 1,233 | 2 / 0 | skip (< 6) |
+| | 3 | KIRLOSBROS (Kirloskar Brothers) | 12,423 | 8 / 2 | ACCEPT |
+| | 4 | RISHABH (Rishabh Instruments) | 2,272 | 9 / 2 | ACCEPT |
+| | 5 | MUKANDLTD | 1,994 | 0 / 0 | skip |
+| | 6 | KSL | 3,552 | 0 / 0 | skip (0 transcript announcements in 2026 either) |
+| | 7 | YUKEN | 1,369 | 0 / 0 | skip |
+| | 8 | ANUP (The Anup Engineering) | 3,271 | 8 / 2 | ACCEPT (NSE files are cover letters with a link; all 8 website PDFs fetched from anupengg.com, so they count) |
+| Chemicals | 1 | NACLIND | 2,669 | 0 / 0 | skip |
+| | 2 | NEOGEN (Neogen Chemicals) | 7,474 | 10 / 2 | ACCEPT |
+| | 3 | GALAXYSURF (Galaxy Surfactants) | 7,071 | 8 / 1 | ACCEPT |
+| | 4 | YASHO (Yasho Industries) | 4,064 | 8 / 2 | ACCEPT |
+| | 5 | TATVA (Tatva Chintan Pharma Chem) | 3,650 | 7 / 1 | ACCEPT |
+| Healthcare | 1 | KRSNAA (Krsnaa Diagnostics) | 1,637 | 8 / 2 | ACCEPT |
+| | 2 | ORCHPHARMA (Orchid Pharma) | 5,695 | 8 / 2 | ACCEPT |
+| | 3 | MOREPENLAB | 5,021 | 2 / 0 | skip |
+| | 4 | SYNGENE (Syngene International) | 18,237 | 8 / 2 | ACCEPT (cover letters; 7 website PDFs fetched from syngeneintl.com) |
+| | 5 | LINCOLN | 1,005 | 1 / 0 | skip |
+| | 6 | SHILPAMED (Shilpa Medicare) | 16,682 | 8 / 2 | ACCEPT |
+
+Deviations / notes: (1) the transcript count used NSE filing dates (the listing ignores `--from/--to`); (2) GALAXYSURF and TATVA had no
+Q2 FY27 transcript on NSE by 25-Nov, so their latest call is Q1 FY27; (3) the past-promise ledgers were hand-built (Claude = the LLM
+step) from the pipeline's tier-A candidates plus targeted text search, not a full read of every call, so N per company is 1-6
+(lower than the pilots' 15-78); KIRLOSBROS, GALAXYSURF, TATVA and SHILPAMED have N < 3, so P_cred = P_base for them by rule.

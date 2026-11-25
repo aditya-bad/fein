@@ -383,3 +383,10 @@ panels but FAILED the pre-set Brier check on lenders (P(≤0.5x) 28.9% vs 25.2% 
 Fix (3) two-sided anchoring PASSED (historical half; live half pending to Sep-2027). Every variant under-predicts blow-ups
 (India 10.5% vs 15.5%, lenders 16% vs 27%, US 10% vs 15%) → next prereg. With fix (3), HARSHA's dated card would have opened
 (EV 1.58x → 1.87x) — dated cards are never re-issued. v1.6 patch (fix 1 mean/median + fix 5 shape warning) ready, apply after season.
+
+## L49 (2026-11-25) — The credibility forward test is under-powered: too few past promises per company
+Promise forward test (12 cos, 38 calls, `research_notes/Promise tracker pilot/forward_test_2026-11/`): only 1–6 scored past
+promises per company (36 total), so P_cred moves ≤ ±0.10 from the sector base rate and not at all for 4 companies → a single-season
+verdict will most likely be INCONCLUSIVE. Pooled with the 22-Nov cohort (38 calls) it is ~76 calls. **Rules:** next cohorts need
+≥10 scored past promises per company (read ≥12 calls, full pipeline, not tier-A shortcuts) — the bottleneck is reading volume
+(Gemini CLI + Pi). Again: margins met 8/10, revenue/orders 6/15, dates 1/6 (L18/L26 pattern holds).

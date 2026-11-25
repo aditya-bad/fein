@@ -1,4 +1,4 @@
-# Paper-call calendar (generated 2026-11-25 by tools/scoreboard/calls.py)
+# Paper-call calendar (generated 2026-11-26 by tools/scoreboard/calls.py)
 
 Every open call's resolve-by date. `check from` = first day the nightly resolver looks for data (results/filings can arrive before the resolve-by date; events can happen any time in their window). Not recommendations.
 
@@ -46,7 +46,11 @@ Every open call's resolve-by date. `check from` = first day the nightly resolver
 | 2027-03-01 | 2027-02-15 | `thesis:paper-call:US-WMT:fy27-adj-eps-at-or-above-2-89` | a | assisted | 0.58 | 0.35 |
 | 2027-03-10 | 2027-02-15 | `thesis:paper-call:US-HIMS:q4-2026-adj-ebitda-80m-plus` | a | assisted | 0.4 | 0.5 |
 | 2027-03-10 | 2027-02-20 | `thesis:paper-call:US-NVDA:q4fy27-revenue-above-top-of-guide` | a | structured | 0.72 | 0.85 |
+| 2027-03-15 | 2027-01-20 | `thesis:paper-call:JASH:q3fy27-129cr-orders-finalised-pft` | c | assisted | 0.32 | 0.36 |
+| 2027-03-15 | 2027-01-15 | `thesis:paper-call:ORCHPHARMA:cefiderocol-plant-commissioned-by-dec26-pft` | c | assisted | 0.21 | 0.26 |
 | 2027-03-15 | 2026-11-21 | `thesis:paper-call:SKIPPER:450kt-commissioned-by-q4-start` | c | assisted | 0.3 | - |
+| 2027-03-15 | 2027-01-20 | `thesis:paper-call:TATVA:hybrid-battery-commercial-supply-by-dec26-pft` | c | assisted | 0.22 | 0.22 |
+| 2027-03-15 | 2027-01-20 | `thesis:paper-call:TATVA:two-pharma-products-commercial-by-dec26-pft` | c | assisted | 0.22 | 0.22 |
 | 2027-03-15 | 2027-02-15 | `thesis:paper-call:US-AAON:fy2026-sales-growth-72pct-plus` | a | structured | 0.72 | 0.8 |
 | 2027-03-15 | 2027-02-25 | `thesis:paper-call:US-CRM:initial-fy28-revenue-guide-10pct-plus` | c | assisted | 0.3 | 0.25 |
 | 2027-03-15 | 2027-02-15 | `thesis:paper-call:US-KEX:jones-act-waiver-extended-past-feb27` | c | assisted | 0.55 | 0.5 |
@@ -136,17 +140,49 @@ Every open call's resolve-by date. `check from` = first day the nightly resolver
 | 2027-05-31 | 2027-04-15 | `thesis:paper-call:UTTAMSUGAR:fy27-revenue-2200cr-plus` | a | structured | 0.45 | 0.67 |
 | 2027-05-31 | 2027-04-01 | `thesis:paper-call:UTTAMSUGAR:udl-160klpd-by-mar27` | c | assisted | 0.35 | 0.4 |
 | 2027-06-05 | 2027-05-20 | `thesis:paper-call:US-DECK:fy27-eps-at-or-above-7-95` | a | structured | 0.52 | 0.4 |
+| 2027-06-14 | 2027-04-15 | `thesis:paper-call:SHILPAMED:aflibercept-india-launch-by-mar27-pft` | c | assisted | 0.22 | 0.22 |
+| 2027-06-14 | 2027-04-15 | `thesis:paper-call:SHILPAMED:nor-udca-global-phase2-start-by-mar27-pft` | c | assisted | 0.22 | 0.22 |
+| 2027-06-14 | 2027-04-15 | `thesis:paper-call:SHILPAMED:peptide-block-commissioned-by-mar27-pft` | c | assisted | 0.22 | 0.22 |
+| 2027-06-14 | 2027-04-15 | `thesis:paper-call:SHILPAMED:two-biosimilars-human-studies-by-mar27-pft` | c | assisted | 0.22 | 0.22 |
+| 2027-06-14 | 2027-04-15 | `thesis:paper-call:SHILPAMED:two-nbe-phase1-by-mar27-pft` | c | assisted | 0.22 | 0.22 |
+| 2027-06-15 | 2027-04-15 | `thesis:paper-call:ANUP:fy27-ebitda-114cr-plus-pft` | a | structured | 0.64 | 0.54 |
+| 2027-06-15 | 2027-04-15 | `thesis:paper-call:ANUP:fy27-revenue-798cr-plus-pft` | a | structured | 0.45 | 0.35 |
 | 2027-06-15 | 2027-04-15 | `thesis:paper-call:DIXON:vivo-jv-production-starts-q4fy27` | c | assisted | 0.45 | 0.55 |
 | 2027-06-15 | 2027-05-01 | `thesis:paper-call:ENDURANCE:chennai-disc-brake-sop-by-mar27-cred` | c | assisted | 0.33 | 0.47 |
 | 2027-06-15 | 2027-05-01 | `thesis:paper-call:ENDURANCE:fifth-forging-press-sop-by-mar27-cred` | c | assisted | 0.33 | 0.47 |
 | 2027-06-15 | 2027-04-15 | `thesis:paper-call:HAPPYFORGE:orders-500cr-by-mar27-cred` | a | assisted | 0.54 | 0.53 |
+| 2027-06-15 | 2027-04-15 | `thesis:paper-call:JASH:fy27-pat-100cr-plus-pft` | a | structured | 0.52 | 0.56 |
+| 2027-06-15 | 2027-04-15 | `thesis:paper-call:JASH:fy27-revenue-831cr-plus-pft` | a | structured | 0.32 | 0.36 |
+| 2027-06-15 | 2027-04-15 | `thesis:paper-call:KIRLOSBROS:fy27-standalone-revenue-growth-9p5pct-plus-pft` | a | structured | 0.37 | 0.37 |
+| 2027-06-15 | 2027-04-15 | `thesis:paper-call:NEOGEN:fy27-revenue-1100cr-plus-pft` | a | structured | 0.36 | 0.37 |
+| 2027-06-15 | 2027-04-15 | `thesis:paper-call:NEOGEN:fy27-standalone-opm-16p2pct-plus-pft` | a | structured | 0.55 | 0.56 |
+| 2027-06-15 | 2027-04-15 | `thesis:paper-call:NEOGEN:fy27-standalone-revenue-1000cr-plus-pft` | a | structured | 0.36 | 0.37 |
 | 2027-06-15 | 2027-02-01 | `thesis:paper-call:SANSERA:defence-facility-operational-by-mar27-cred` | c | assisted | 0.42 | 0.43 |
 | 2027-06-15 | 2027-04-15 | `thesis:paper-call:SANSERA:nichidai-jv-production-by-mar27-cred` | c | assisted | 0.42 | 0.43 |
+| 2027-06-15 | 2027-04-15 | `thesis:paper-call:SYNGENE:fy27-revenue-decline-3p5pct-or-better-pft` | a | structured | 0.36 | 0.37 |
+| 2027-06-15 | 2027-04-15 | `thesis:paper-call:TATVA:fy27-revenue-growth-23p75pct-plus-pft` | a | structured | 0.22 | 0.22 |
+| 2027-06-15 | 2027-04-15 | `thesis:paper-call:YASHO:fy27-opm-20pct-plus-pft` | a | structured | 0.5 | 0.58 |
+| 2027-06-30 | 2027-05-01 | `thesis:paper-call:ANUP:fy27-mabel-revenue-62cr-plus-pft` | a | assisted | 0.45 | 0.35 |
+| 2027-06-30 | 2027-05-01 | `thesis:paper-call:ANUP:opening-order-book-apr27-760cr-plus-pft` | a | assisted | 0.45 | 0.35 |
 | 2027-06-30 | 2026-11-21 | `thesis:paper-call:BHARTIARTL:prepaid-tariff-hike-by-jun27` | d | human | 0.35 | 0.3 |
 | 2027-06-30 | 2027-05-01 | `thesis:paper-call:ENDURANCE:fy27-driveshaft-revenue-100cr-cred` | a | assisted | 0.51 | 0.64 |
+| 2027-06-30 | 2027-05-01 | `thesis:paper-call:GALAXYSURF:fy27-ebitda-per-mt-22800-plus-pft` | a | assisted | 0.25 | 0.25 |
+| 2027-06-30 | 2027-05-01 | `thesis:paper-call:GALAXYSURF:fy27-volume-growth-5p5pct-plus-pft` | a | assisted | 0.25 | 0.25 |
 | 2027-06-30 | 2027-07-02 | `thesis:paper-call:GENUSPOWER:cold-valuation-beats-nifty-to-jun27` | b | structured | 0.52 | 0.45 |
 | 2027-06-30 | 2027-07-02 | `thesis:paper-call:HINDALCO:peak-cycle-cheap-vs-nifty-to-jun27` | b | structured | 0.42 | 0.48 |
+| 2027-06-30 | 2027-05-01 | `thesis:paper-call:JASH:fy27-rodney-hunt-usd33mn-plus-pft` | a | assisted | 0.32 | 0.36 |
+| 2027-06-30 | 2027-05-01 | `thesis:paper-call:KRSNAA:fy27-cash-based-revenue-380cr-plus-pft` | a | assisted | 0.34 | 0.35 |
+| 2027-06-30 | 2027-05-01 | `thesis:paper-call:KRSNAA:fy27-rajasthan-revenue-95cr-plus-pft` | a | assisted | 0.34 | 0.35 |
+| 2027-06-30 | 2027-05-01 | `thesis:paper-call:KRSNAA:receivable-days-120-or-less-mar27-pft` | a | assisted | 0.43 | 0.45 |
+| 2027-06-30 | 2027-05-01 | `thesis:paper-call:KRSNAA:retail-ebitda-positive-q4fy27-pft` | c | assisted | 0.58 | 0.59 |
+| 2027-06-30 | 2027-05-01 | `thesis:paper-call:NEOGEN:fy27-battery-revenue-285cr-plus-pft` | a | assisted | 0.36 | 0.37 |
+| 2027-06-30 | 2027-05-01 | `thesis:paper-call:NEOGEN:fy27-working-capital-180-days-or-less-pft` | a | assisted | 0.43 | 0.44 |
+| 2027-06-30 | 2027-05-01 | `thesis:paper-call:ORCHPHARMA:fy27-ebitda-margin-11p7pct-plus-pft` | a | assisted | 0.54 | 0.59 |
 | 2027-06-30 | 2027-04-15 | `thesis:paper-call:PERSISTENT:q4fy27-organic-revenue-500mn-cred` | a | assisted | 0.65 | 0.62 |
+| 2027-06-30 | 2027-05-01 | `thesis:paper-call:RISHABH:fy27-alucast-adj-ebitda-breakeven-pft` | a | assisted | 0.57 | 0.52 |
+| 2027-06-30 | 2027-05-01 | `thesis:paper-call:RISHABH:fy27-eei-adj-ebitda-133cr-plus-pft` | a | assisted | 0.57 | 0.52 |
+| 2027-06-30 | 2027-05-01 | `thesis:paper-call:RISHABH:fy27-eei-revenue-growth-19pct-plus-pft` | a | assisted | 0.41 | 0.36 |
+| 2027-06-30 | 2027-04-25 | `thesis:paper-call:SYNGENE:fy27-ebitda-margin-ex-fx-23p7pct-plus-pft` | a | assisted | 0.55 | 0.56 |
 | 2027-06-30 | 2027-07-02 | `thesis:paper-call:TITAN:cooler-valuation-beats-nifty-to-jun27` | b | structured | 0.45 | 0.48 |
 | 2027-06-30 | 2027-07-02 | `thesis:paper-call:US-ADBE:cold-valuation-beats-spy-to-jun27` | b | structured | 0.52 | 0.48 |
 | 2027-06-30 | 2026-11-21 | `thesis:paper-call:US-CAT:dividend-raise-7pct-by-jun27` | c | structured | 0.72 | 0.75 |
@@ -155,6 +191,8 @@ Every open call's resolve-by date. `check from` = first day the nightly resolver
 | 2027-06-30 | 2027-07-02 | `thesis:paper-call:US-PLTR:hot-valuation-beats-spy-to-jun27` | b | structured | 0.42 | 0.47 |
 | 2027-06-30 | 2027-07-02 | `thesis:paper-call:US-SNOW:hot-valuation-beats-spy-to-jun27` | b | structured | 0.43 | 0.48 |
 | 2027-06-30 | 2027-06-30 | `thesis:paper-call:UTKARSHBNK:reverse-merger-effective-by-jun27` | c | assisted | 0.6 | 0.65 |
+| 2027-06-30 | 2027-05-01 | `thesis:paper-call:YASHO:fy27-capex-237cr-plus-pft` | a | assisted | 0.18 | 0.26 |
+| 2027-06-30 | 2027-05-01 | `thesis:paper-call:YASHO:fy27-utilisation-69p7pct-plus-pft` | a | assisted | 0.45 | 0.53 |
 | 2027-07-31 | 2027-03-01 | `thesis:paper-call:SONACOMS:jv2-closed-by-jun27-cred` | c | assisted | 0.51 | 0.39 |
 | 2027-07-31 | 2027-01-15 | `thesis:paper-call:US-AOS:china-sale-closes-by-jun27-cred` | c | assisted | 0.65 | 0.82 |
 | 2027-08-31 | 2027-07-10 | `thesis:paper-call:AUTOAXLES:fy27-technical-fee-le-4p75pct` | c | assisted | 0.75 | 0.5 |
@@ -202,10 +240,10 @@ Every open call's resolve-by date. `check from` = first day the nightly resolver
 |---|---|
 | 2027-01 | 6 |
 | 2027-02 | 33 |
-| 2027-03 | 31 |
+| 2027-03 | 35 |
 | 2027-04 | 7 |
 | 2027-05 | 54 |
-| 2027-06 | 20 |
+| 2027-06 | 54 |
 | 2027-07 | 2 |
 | 2027-08 | 1 |
 | 2027-09 | 9 |
