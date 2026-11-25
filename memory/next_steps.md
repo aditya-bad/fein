@@ -51,6 +51,16 @@ Last updated: 2026-11-24
 - ~~decision_card.py: add the survival cap~~ DONE 23-Nov (card v1.2: survival cap + tail anchoring to base rates, 20 tests).
 - ~~Pre-register: survival cap for any red-flag firm~~ DONE 24-Nov: adopted as size cap (card v1.3, L39). Follow-up: pre-register split rule (pledge stricter than interest cover).
 
+## Priority queue (set 25-Nov-2026 after user Q&A)
+1. News layer (company news, ratings, SEBI/RBI, gazettes, courts excl. NCLT) — run each session until Pi. Stage 2/4.
+2. Historical-panel test of card fixes (3)/(4) — before 20-Jan-2027. Stage 6.
+3. Live deep dives ~1–2/week (IT, pharma, consumer, cap goods). Stages 4→7.
+4. Small macro module: monthly snapshot (repo, 10y G-sec, CPI, INR, crude, DXY, gold, FPI flows, Nifty EY vs G-sec);
+   sector-sensitivity checklist; prereg test EY–G-sec gap → 3–5y Nifty returns. Stage 5.
+5. Wealth-allocation test (100% equity vs fixed split rebalanced vs valuation bands vs new-money-to-underweight, India, 2 sources). Defence.
+6. Fortnightly/monthly flows (NSDL FPI sector, RBI credit, MF portfolios): prereg "heavy fund selling in small stock → further falls?". Stage 3.
+7. Promise tracker scale-up once Gemini CLI + Pi + Screener arrive. Stage 3.
+
 ## Scoring season (from 20-Jan-2027)
 - Follow research_notes/Scoreboard/scoring_season_runbook.md (daily 20-Jan→20-Feb and 15-May→7-Jun).
 - Before season: run historical-panel calibration test for card fixes (3)/(4) per amended decision:card-audit-fixes-prereg-2026-11-25.
