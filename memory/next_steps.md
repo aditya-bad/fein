@@ -7,7 +7,12 @@ Last updated: 2026-11-24
 - Infra (user will provide later, see `My Requirements/requirements.md` List 2): Raspberry Pi + Remote Control,
   own read-only Kite MCP wrapper, Screener.in credentials (stored on Pi only).
 
-## In flight (24-Nov-2026)
+- **25-Nov-2026: user deferred the Pi setup** ("will take a bit more time"); proceed with non-Pi work; remind before late-Jan 2027 results season.
+
+## In flight (25-Nov-2026)
+- Lender base rates + bank.py CET1 book; pre-registered pledge-vs-ICR split test; BSE pagination + resolver banking XBRL fix.
+
+## Done 24-Nov-2026
 - ~~Pi bundle, live dive #4, survival-cap test~~ DONE 24-Nov (see session_log).
 - Next queue: ~~(1) industry map~~ DONE 24-Nov (1547/1547, BSE+screener; NSE industryInfo 403); ~~(2) AR zip fix~~ DONE;
   ~~(3) card v1.4 core-asset threat + anchoring warning~~ DONE (India-only for now; decide whether US cards apply it);
