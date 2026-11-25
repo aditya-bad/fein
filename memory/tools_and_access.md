@@ -68,3 +68,9 @@ Calendar: research_notes/Scoreboard/calendar.md/.ics. First due 31-Jan-2027.
 ## Wanted (user offered to provide)
 Screener login, Kite MCP or Trendlyne MCP, US data API (Financial Datasets/Polygon),
 transcript API.
+
+## 25-Nov-2026 fixes
+- **BSE announcements:** HTTP 400 was the date window, not pagination — with a scrip code the range must be ≤1 calendar year;
+  without a scrip code, >1 day silently returns 0 rows. bse_fetch.py now splits windows, pages fully, dedupes NEWSID (`selftest [--live]`).
+- **Bank XBRL (IFBanking taxonomy):** scoreboard reads InterestEarned, ProfitLossForThePeriod, GNPA/NNPA, CET1/AT1, ROA, advances,
+  deposits. No total CRAR, loan portfolio, NIM or credit-cost tag → those calls stay assisted. NBFC filings have no GNPA tag.

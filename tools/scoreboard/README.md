@@ -33,7 +33,7 @@ scoreboard.py ──► research_notes/Scoreboard/scoreboard.md, history.csv,
 | `scoreboard.py` | metrics, groups, calibration, curriculum block |
 | `apply.sh` | applies unapplied resolution seeds to memdb, then refreshes the scoreboard |
 | `run_daily.sh` | cron wrapper: calls → resolve → apply → scoreboard, with a lock and a log under `state/` |
-| `tests/test_scoreboard.py` | 27 unit tests: synthetic calls with known Brier values, every resolver path, no network |
+| `tests/test_scoreboard.py` | 31 unit tests: synthetic calls with known Brier values, every resolver path, no network; `tests/fixtures/` holds a trimmed real banking XBRL (UTKARSHBNK Q2 FY27) |
 
 ## Resolution types (the 77 calls open on 2026-11-22)
 | Type | Meaning | Calls | Automation |
@@ -47,6 +47,15 @@ scoreboard.py ──► research_notes/Scoreboard/scoreboard.md, history.csv,
 first number that matches, and *proposes* an outcome; a human confirms. `human` = judgment queue (it still
 gathers documents). The heuristic classifier agrees with the curated type on 75 of the 77 calls. The two
 differences are deliberate: TRANSRAILL is kept as type a, and NTPC is kept as type d.
+
+**Banks (added 2026-11-25).** NSE files bank results in the IFBanking taxonomy, not Ind AS, so `india_fin`
+detects it (`InterestEarned` present, no `RevenueFromOperations`) and reads `sources.bank_period_values`:
+`net_profit_cr` (ProfitLossForThePeriod), `interest_earned_cr`, `interest_expended_cr`, `nii_cr`, `other_income_cr`,
+`opex_cr`, `ppop_cr`, `provisions_cr`, `pbt_cr`, `gnpa_pct` / `nnpa_pct` (PercentageOfGrossNpa / PercentageOfNpa,
+fraction x 100), `cet1_pct`, `at1_pct`, `roa_pct` (quarterly, not annualised), and `advances_cr` / `deposits_cr`
+(balance sheet at period end). Any `<x>_growth_pct` uses `<x>_cr`. Screener adds `net_profit_cr` as the second
+source. **Not tagged** (calls stay assisted): total CRAR (only CET1 and AT1 ratios), gross loan portfolio / AUM,
+NIM, credit cost. NBFC filings (Ind AS taxonomy) carry no GNPA tag either (SBICARD stays assisted).
 
 ## Rules that keep it honest (never resolve early on partial data)
 - **Check dates.** Before `check_from`, no network is used for a call. India Q3 FY27 results are checked from
