@@ -36,7 +36,7 @@ Written after 7 pre-registered signal tests, 3 stage-2 filter tests, 8 credibili
    methods earn their place.
 
 ## 4. Questions we can't answer yet (track them)
-- Is the card structurally a "no" machine? 6/6 live cards size 0 (25-Nov-2026). Random draws should mostly be fair-priced, but check whether the 1.76x hurdle + anchored tails can ever pass a typical name.
+- Is the card structurally a "no" machine? 6/6 live cards size 0 (25-Nov-2026). **Audited 25-Nov (L43): partial** — hurdle fair, mechanics add ~2pp hidden margin; fixes pre-registered for the Jan–Feb 2027 season. Random draws should mostly be fair-priced, but check whether the 1.76x hurdle + anchored tails can ever pass a typical name.
 - Does sector-adjusted credibility predict delivery better than the sector base rate? (38 calls, 2027)
 - Do our deep-dive probabilities beat base rates? (needs live decision cards, not practice)
 - Is the PEAD avoid leg still alive in 2027 live data? (live tracker; verdict ~Feb 2028)

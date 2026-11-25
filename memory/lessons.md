@@ -336,3 +336,10 @@ Process: take the frame close from the bhavcopy's date column, not the file name
 P(blow-up) 27% (permanent 20%) vs 15%; median 1.04x. No private bank tripled. Start years disagree hugely (2016 vs 2018 = the credit
 cycle), so treat as a cycle-average. Card v1.5 auto-selects it for Indian lenders. Never re-issue a dated card when a better base rate
 arrives — add an addendum; scoring must test what we actually said.
+
+## L43 (2026-11-25) — A card that scores a fairly priced stock 0 can't tell us the market is fair
+Audit: the 1.76x hurdle = 12% index CAGR over 5 yrs ≈ the India class median (49.6% of firms cleared it) — not too high. But the
+mechanics add an undeclared ~2pp margin (EV treats scenario multiples as means while probabilities treat them as medians; only the
+left tail is anchored), so a base IRR ≈ cost of equity scores 0 and the pass point is ~14%. All 6 live zeros were large gaps
+(price falls of 14–33% needed) driven by our own base cases below the cost of equity. **Rule:** read size-0 as "not cheap enough
+by our inputs", not "market fair"; only stage-7 scoring answers fairness. Fixes are pre-registered (decision:card-audit-fixes-prereg-2026-11-25), none applied before the Jan–Feb 2027 season.
