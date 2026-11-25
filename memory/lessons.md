@@ -375,3 +375,11 @@ SHK/INDRAMEDCO/AUTOAXLES 1, UTTAMSUGAR/SUNFLAG 0. **Rules:** show consensus forw
 cross-check; analyst count = coverage (fewer → more room for depth edge); forward EPS is often adjusted/non-GAAP (AVGO 37x trailing
 vs 14.9x forward) so the P/Es aren't like-for-like. SHK: 1 analyst implies ~₹9.9 forward EPS (12.9x) vs our core ₹3.4–3.9 — a dated
 disagreement we can score (our FY27 PAT ≥₹120 cr call at P=0.15). Before claiming data is unavailable, check.
+
+## L48 (2026-11-25) — Card σ=0.35 is too narrow; two-sided anchoring passes history; blow-ups still under-predicted
+Pre-registered leave-one-cohort-out test (`research_notes/Decision audits/card_fixes_historical_test.md`): the card's 50/80%
+intervals caught only 35/60% (India), 12/53% (lenders), 33/65% (US) of real 5-yr outcomes. Fix (4) wider σ improved log score on all
+panels but FAILED the pre-set Brier check on lenders (P(≤0.5x) 28.9% vs 25.2% real) → not adopted (re-test needs a new prereg).
+Fix (3) two-sided anchoring PASSED (historical half; live half pending to Sep-2027). Every variant under-predicts blow-ups
+(India 10.5% vs 15.5%, lenders 16% vs 27%, US 10% vs 15%) → next prereg. With fix (3), HARSHA's dated card would have opened
+(EV 1.58x → 1.87x) — dated cards are never re-issued. v1.6 patch (fix 1 mean/median + fix 5 shape warning) ready, apply after season.

@@ -53,7 +53,7 @@ Last updated: 2026-11-24
 
 ## Priority queue (set 25-Nov-2026 after user Q&A)
 1. News layer (company news, ratings, SEBI/RBI, gazettes, courts excl. NCLT) — run each session until Pi. Stage 2/4.
-2. Historical-panel test of card fixes (3)/(4) — before 20-Jan-2027. Stage 6.
+2. ~~Historical-panel test of card fixes~~ DONE 25-Nov (L48): fix 3 passes history, fix 4 fails. After season: apply v1.6 patch (tools/decision/patches/); write v1.6.1 fix-3 patch on a finer grid; prereg blow-up under-prediction test.
 3. Live deep dives ~1–2/week (IT, pharma, consumer, cap goods). Stages 4→7.
 4. Small macro module: monthly snapshot (repo, 10y G-sec, CPI, INR, crude, DXY, gold, FPI flows, Nifty EY vs G-sec);
    sector-sensitivity checklist; prereg test EY–G-sec gap → 3–5y Nifty returns. Stage 5.

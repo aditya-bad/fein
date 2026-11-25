@@ -1,0 +1,1723 @@
+{
+"frame_close": [
+"25-Nov-2026"
+],
+"order": {
+"Capital Goods": [
+[
+"JASH",
+3235.2,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"STEELXIND",
+1233.4,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"KIRLOSBROS",
+12422.7,
+"Industrial Products",
+"Compressors, Pumps & Diesel Engines"
+],
+[
+"RISHABH",
+2272.4,
+"Electrical Equipment",
+"Other Electrical Equipment"
+],
+[
+"MUKANDLTD",
+1994.2,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"KSL",
+3552.0,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"YUKEN",
+1368.7,
+"Industrial Products",
+"Compressors, Pumps & Diesel Engines"
+],
+[
+"ANUP",
+3270.9,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"APOLLOPIPE",
+2052.2,
+"Industrial Products",
+"Plastic Products - Industrial"
+],
+[
+"CYIENTDLM",
+5937.5,
+"Aerospace & Defense",
+"Aerospace & Defense"
+],
+[
+"WINDMACHIN",
+3078.3,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"ESABINDIA",
+7935.9,
+"Industrial Products",
+"Other Industrial Products"
+],
+[
+"JISLDVREQS",
+1341.6,
+"Industrial Products",
+"Plastic Products - Industrial"
+],
+[
+"ELGIEQUIP",
+17412.6,
+"Industrial Products",
+"Compressors, Pumps & Diesel Engines"
+],
+[
+"SEJALLTD",
+1008.5,
+"Industrial Products",
+"Glass - Industrial"
+],
+[
+"GMMPFAUDLR",
+5380.1,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"WEBELSOLAR",
+2698.6,
+"Electrical Equipment",
+"Other Electrical Equipment"
+],
+[
+"TRITURBINE",
+14240.0,
+"Electrical Equipment",
+"Heavy Electrical Equipment"
+],
+[
+"TIMETECHNO",
+9680.0,
+"Industrial Products",
+"Plastic Products - Industrial"
+],
+[
+"MICEL",
+1076.0,
+"Industrial Products",
+"Other Industrial Products"
+],
+[
+"LMW",
+17990.5,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"BBL",
+2727.1,
+"Electrical Equipment",
+"Heavy Electrical Equipment"
+],
+[
+"KIRLOSIND",
+3365.2,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"JYOTISTRUC",
+1358.4,
+"Electrical Equipment",
+"Heavy Electrical Equipment"
+],
+[
+"VESUVIUS",
+7435.9,
+"Industrial Products",
+"Electrodes & Refractories"
+],
+[
+"PENIND",
+2209.2,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"RAYMOND",
+7918.8,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"DYCL",
+1613.7,
+"Industrial Products",
+"Cables - Electricals"
+],
+[
+"ICEMAKE",
+1205.4,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"GPIL",
+13044.6,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"MSPL",
+1689.6,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"INOXINDIA",
+19398.9,
+"Industrial Products",
+"Other Industrial Products"
+],
+[
+"AEROFLEX",
+6205.7,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"PARACABLES",
+1718.3,
+"Industrial Products",
+"Cables - Electricals"
+],
+[
+"GANDHITUBE",
+1066.0,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"VSTTILLERS",
+2933.0,
+"Agricultural, Commercial & Construction Vehicles",
+"Tractors"
+],
+[
+"ATULAUTO",
+1082.1,
+"Agricultural, Commercial & Construction Vehicles",
+"Commercial Vehicles"
+],
+[
+"KABRAEXTRU",
+2506.0,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"MANAKCOAT",
+1635.8,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"MODISONLTD",
+1034.5,
+"Electrical Equipment",
+"Other Electrical Equipment"
+],
+[
+"HIRECT",
+2967.3,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"SERVOTECH",
+1416.5,
+"Electrical Equipment",
+"Other Electrical Equipment"
+],
+[
+"COSMOFIRST",
+2068.5,
+"Industrial Products",
+"Packaging"
+],
+[
+"STEELCAS",
+3609.8,
+"Industrial Products",
+"Castings & Forgings"
+],
+[
+"HEGAM",
+4992.1,
+"Industrial Products",
+"Electrodes & Refractories"
+],
+[
+"JTLIND",
+2919.8,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"MOLDTKPAC",
+1129.4,
+"Industrial Products",
+"Packaging"
+],
+[
+"ADOR",
+2434.1,
+"Industrial Products",
+"Other Industrial Products"
+],
+[
+"DVL",
+1031.5,
+"Industrial Products",
+"Packaging"
+],
+[
+"POLYPLEX",
+3140.3,
+"Industrial Products",
+"Packaging"
+],
+[
+"JWL",
+9507.3,
+"Industrial Manufacturing",
+"Railway Wagons"
+],
+[
+"CENTUM",
+5723.2,
+"Aerospace & Defense",
+"Aerospace & Defense"
+],
+[
+"ROTO",
+1315.2,
+"Industrial Products",
+"Compressors, Pumps & Diesel Engines"
+],
+[
+"USHAMART",
+13702.0,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"RHIM",
+7157.3,
+"Industrial Products",
+"Electrodes & Refractories"
+],
+[
+"XPROINDIA",
+2757.3,
+"Industrial Products",
+"Packaging"
+],
+[
+"MAHSEAMLES",
+6168.7,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"GVPIL",
+3486.9,
+"Electrical Equipment",
+"Heavy Electrical Equipment"
+],
+[
+"TDPOWERSYS",
+9171.4,
+"Electrical Equipment",
+"Heavy Electrical Equipment"
+],
+[
+"JISLJALEQS",
+1956.6,
+"Industrial Products",
+"Plastic Products - Industrial"
+],
+[
+"GOODLUCK",
+1689.2,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"PIXTRANS",
+2228.1,
+"Industrial Products",
+"Rubber"
+],
+[
+"ASTRAMICRO",
+15197.8,
+"Aerospace & Defense",
+"Aerospace & Defense"
+],
+[
+"MACPOWER",
+2044.0,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"MAHASTEEL",
+2278.3,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"SWARAJENG",
+4145.0,
+"Industrial Products",
+"Compressors, Pumps & Diesel Engines"
+],
+[
+"ELECTCAST",
+3916.8,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"THEJO",
+2146.9,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"EPL",
+7560.6,
+"Industrial Products",
+"Packaging"
+],
+[
+"MIDHANI",
+6966.2,
+"Aerospace & Defense",
+"Aerospace & Defense"
+],
+[
+"INGERRAND",
+12229.6,
+"Industrial Products",
+"Compressors, Pumps & Diesel Engines"
+],
+[
+"BORORENEW",
+5194.0,
+"Industrial Products",
+"Glass - Industrial"
+],
+[
+"KAMDHENU",
+1047.5,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"GRINDWELL",
+19749.1,
+"Industrial Products",
+"Abrasives & Bearings"
+],
+[
+"EIMCOELECO",
+1457.9,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"AVALON",
+11278.9,
+"Electrical Equipment",
+"Other Electrical Equipment"
+],
+[
+"JINDALSAW",
+15576.3,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"APOLLO",
+15603.5,
+"Aerospace & Defense",
+"Aerospace & Defense"
+],
+[
+"NELCAST",
+1274.2,
+"Industrial Products",
+"Castings & Forgings"
+],
+[
+"APCOTEXIND",
+2511.1,
+"Industrial Products",
+"Rubber"
+],
+[
+"UNIVCABLES",
+3786.6,
+"Industrial Products",
+"Cables - Electricals"
+],
+[
+"RAMRAT",
+4702.5,
+"Electrical Equipment",
+"Other Electrical Equipment"
+],
+[
+"MANINDS",
+5277.8,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"AXISCADES",
+7801.1,
+"Aerospace & Defense",
+"Aerospace & Defense"
+],
+[
+"PRECWIRE",
+6736.8,
+"Industrial Products",
+"Aluminium, Copper & Zinc Products"
+],
+[
+"WENDT",
+1379.0,
+"Industrial Products",
+"Abrasives & Bearings"
+],
+[
+"PITTIENG",
+3182.8,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"TITAGARH",
+10031.4,
+"Industrial Manufacturing",
+"Railway Wagons"
+],
+[
+"PARAS",
+10008.0,
+"Aerospace & Defense",
+"Aerospace & Defense"
+],
+[
+"DCXINDIA",
+1561.1,
+"Aerospace & Defense",
+"Aerospace & Defense"
+],
+[
+"RATNAMANI",
+16442.9,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"INOXWIND",
+9049.1,
+"Electrical Equipment",
+"Heavy Electrical Equipment"
+],
+[
+"SMLMAH",
+6731.0,
+"Agricultural, Commercial & Construction Vehicles",
+"Commercial Vehicles"
+],
+[
+"IFGLEXPOR",
+1265.4,
+"Industrial Products",
+"Electrodes & Refractories"
+],
+[
+"ZENTEC",
+15484.7,
+"Aerospace & Defense",
+"Aerospace & Defense"
+],
+[
+"HONDAPOWER",
+1899.5,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"AEROENTER",
+1333.1,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"INDOTECH",
+2424.3,
+"Electrical Equipment",
+"Heavy Electrical Equipment"
+],
+[
+"CARBORUNIV",
+18617.6,
+"Industrial Products",
+"Abrasives & Bearings"
+],
+[
+"VENUSPIPES",
+3550.7,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"AZAD",
+15213.1,
+"Electrical Equipment",
+"Heavy Electrical Equipment"
+],
+[
+"SBCL",
+5395.2,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"FINPIPE",
+8869.6,
+"Industrial Products",
+"Plastic Products - Industrial"
+],
+[
+"TEGA",
+11520.1,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"UFLEX",
+4264.7,
+"Industrial Products",
+"Packaging"
+],
+[
+"DYNAMATECH",
+8969.6,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"PRINCEPIPE",
+3107.9,
+"Industrial Products",
+"Plastic Products - Industrial"
+],
+[
+"ELECON",
+9864.6,
+"Electrical Equipment",
+"Heavy Electrical Equipment"
+],
+[
+"KIRLPNU",
+7859.8,
+"Industrial Products",
+"Compressors, Pumps & Diesel Engines"
+],
+[
+"HITECH",
+1674.6,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"PRAJIND",
+4178.1,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"GRWRHITECH",
+17719.8,
+"Industrial Products",
+"Plastic Products - Industrial"
+],
+[
+"AGI",
+4126.9,
+"Industrial Products",
+"Packaging"
+],
+[
+"HPL",
+1531.7,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"KINGFA",
+8361.2,
+"Industrial Products",
+"Plastic Products - Industrial"
+],
+[
+"TIL",
+1530.9,
+"Agricultural, Commercial & Construction Vehicles",
+"Construction Vehicles"
+],
+[
+"HUHTAMAKI",
+1627.7,
+"Industrial Products",
+"Packaging"
+],
+[
+"GALLANTT",
+13283.7,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"IDEAFORGE",
+3062.0,
+"Aerospace & Defense",
+"Aerospace & Defense"
+],
+[
+"GRAPHITE",
+15491.8,
+"Industrial Products",
+"Electrodes & Refractories"
+],
+[
+"TARIL",
+8644.3,
+"Electrical Equipment",
+"Heavy Electrical Equipment"
+],
+[
+"VSSL",
+3569.2,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"TEXRAIL",
+4580.5,
+"Industrial Manufacturing",
+"Railway Wagons"
+],
+[
+"ACE",
+14177.1,
+"Agricultural, Commercial & Construction Vehicles",
+"Construction Vehicles"
+],
+[
+"SHAKTIPUMP",
+4336.3,
+"Industrial Products",
+"Compressors, Pumps & Diesel Engines"
+],
+[
+"JAICORPLTD",
+1522.1,
+"Industrial Products",
+"Plastic Products - Industrial"
+],
+[
+"HLEGLAS",
+2631.3,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"MARINE",
+5606.2,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"VOLTAMP",
+9789.3,
+"Electrical Equipment",
+"Heavy Electrical Equipment"
+],
+[
+"SUBROS",
+4161.3,
+"Industrial Products",
+"Other Industrial Products"
+],
+[
+"JAYNECOIND",
+8508.8,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"BEML",
+17001.0,
+"Agricultural, Commercial & Construction Vehicles",
+"Construction Vehicles"
+],
+[
+"TIIL",
+6459.9,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"BAJEL",
+1779.2,
+"Electrical Equipment",
+"Heavy Electrical Equipment"
+],
+[
+"SIGMAADV",
+17339.6,
+"Aerospace & Defense",
+"Aerospace & Defense"
+],
+[
+"GREAVESCOT",
+7208.4,
+"Industrial Products",
+"Compressors, Pumps & Diesel Engines"
+],
+[
+"FINCABLES",
+17707.0,
+"Industrial Products",
+"Cables - Electricals"
+],
+[
+"MTARTECH",
+17368.1,
+"Electrical Equipment",
+"Other Electrical Equipment"
+],
+[
+"EKC",
+1114.8,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"KAYNES",
+18136.8,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"LLOYDSENGG",
+12696.6,
+"Industrial Manufacturing",
+"Industrial Products"
+],
+[
+"RATNAVEER",
+3395.2,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"GENUSPOWER",
+7320.1,
+"Electrical Equipment",
+"Other Electrical Equipment"
+],
+[
+"JINDALPOLY",
+2783.5,
+"Industrial Products",
+"Packaging"
+],
+[
+"SURYAROSNI",
+4645.7,
+"Industrial Products",
+"Iron & Steel Products"
+],
+[
+"TCPLPACK",
+3878.5,
+"Industrial Products",
+"Packaging"
+],
+[
+"KSB",
+11230.0,
+"Industrial Products",
+"Compressors, Pumps & Diesel Engines"
+],
+[
+"WALCHANNAG",
+1174.5,
+"Industrial Manufacturing",
+"Industrial Products"
+]
+],
+"Chemicals": [
+[
+"NACLIND",
+2669.4,
+"Fertilizers & Agrochemicals",
+"Pesticides & Agrochemicals"
+],
+[
+"NEOGEN",
+7474.2,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"GALAXYSURF",
+7070.5,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"YASHO",
+4063.5,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"TATVA",
+3649.6,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"BHAGCHEM",
+2262.9,
+"Fertilizers & Agrochemicals",
+"Pesticides & Agrochemicals"
+],
+[
+"SWANCORP",
+7158.4,
+"Chemicals & Petrochemicals",
+"Petrochemicals"
+],
+[
+"TIRUMALCHM",
+1441.3,
+"Chemicals & Petrochemicals",
+"Commodity Chemicals"
+],
+[
+"ANDHRSUGAR",
+1037.5,
+"Chemicals & Petrochemicals",
+"Commodity Chemicals"
+],
+[
+"RALLIS",
+3598.6,
+"Fertilizers & Agrochemicals",
+"Pesticides & Agrochemicals"
+],
+[
+"BODALCHEM",
+1682.2,
+"Chemicals & Petrochemicals",
+"Dyes And Pigments"
+],
+[
+"VINATIORGA",
+11837.4,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"IPL",
+1319.5,
+"Fertilizers & Agrochemicals",
+"Pesticides & Agrochemicals"
+],
+[
+"ROSSARI",
+2300.1,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"PARADEEP",
+14201.1,
+"Fertilizers & Agrochemicals",
+"Fertilizers"
+],
+[
+"MOL",
+1316.3,
+"Fertilizers & Agrochemicals",
+"Pesticides & Agrochemicals"
+],
+[
+"NFL",
+3060.7,
+"Fertilizers & Agrochemicals",
+"Fertilizers"
+],
+[
+"EXCELINDUS",
+1239.9,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"SHARDACROP",
+5885.1,
+"Fertilizers & Agrochemicals",
+"Pesticides & Agrochemicals"
+],
+[
+"INDOBORAX",
+1040.0,
+"Chemicals & Petrochemicals",
+"Commodity Chemicals"
+],
+[
+"FOSECOIND",
+4419.1,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"CAMLINFINE",
+1322.8,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"FCL",
+4837.3,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"GSFC",
+5473.4,
+"Fertilizers & Agrochemicals",
+"Fertilizers"
+],
+[
+"TATACHEM",
+16909.0,
+"Chemicals & Petrochemicals",
+"Commodity Chemicals"
+],
+[
+"CHAMBLFERT",
+14671.8,
+"Fertilizers & Agrochemicals",
+"Fertilizers"
+],
+[
+"INSECTICID",
+1637.6,
+"Fertilizers & Agrochemicals",
+"Pesticides & Agrochemicals"
+],
+[
+"SPIC",
+1187.2,
+"Fertilizers & Agrochemicals",
+"Fertilizers"
+],
+[
+"CHEMPLASTS",
+3960.1,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"EPIGRAL",
+3908.5,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"FINEORG",
+17115.9,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"DHANUKA",
+4151.8,
+"Fertilizers & Agrochemicals",
+"Pesticides & Agrochemicals"
+],
+[
+"ASTEC",
+1194.0,
+"Fertilizers & Agrochemicals",
+"Pesticides & Agrochemicals"
+],
+[
+"SHREEPUSHK",
+1668.3,
+"Chemicals & Petrochemicals",
+"Dyes And Pigments"
+],
+[
+"SUMICHEM",
+16496.8,
+"Fertilizers & Agrochemicals",
+"Pesticides & Agrochemicals"
+],
+[
+"ALKYLAMINE",
+7505.8,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"STYRENIX",
+3106.6,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"MBAPL",
+8550.2,
+"Fertilizers & Agrochemicals",
+"Fertilizers"
+],
+[
+"BASF",
+12657.1,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"KRISHANA",
+7585.9,
+"Fertilizers & Agrochemicals",
+"Fertilizers"
+],
+[
+"VISHNU",
+3450.6,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"PCBL",
+10351.0,
+"Chemicals & Petrochemicals",
+"Carbon Black"
+],
+[
+"ATUL",
+14976.1,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"GHCL",
+3968.0,
+"Chemicals & Petrochemicals",
+"Commodity Chemicals"
+],
+[
+"GUJALKALI",
+4211.8,
+"Chemicals & Petrochemicals",
+"Commodity Chemicals"
+],
+[
+"IGPL",
+1554.1,
+"Chemicals & Petrochemicals",
+"Commodity Chemicals"
+],
+[
+"NOCIL",
+2255.8,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"DCW",
+1348.0,
+"Chemicals & Petrochemicals",
+"Petrochemicals"
+],
+[
+"ACI",
+5295.7,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"AARTIIND",
+15783.8,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"ANURAS",
+14989.2,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"RAIN",
+5404.7,
+"Chemicals & Petrochemicals",
+"Petrochemicals"
+],
+[
+"PRIVISCL",
+14264.1,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"GOCLCORP",
+1609.4,
+"Chemicals & Petrochemicals",
+"Explosives"
+],
+[
+"KIRIINDUS",
+3058.0,
+"Chemicals & Petrochemicals",
+"Dyes And Pigments"
+],
+[
+"GNFC",
+6546.6,
+"Chemicals & Petrochemicals",
+"Commodity Chemicals"
+],
+[
+"OAL",
+1772.2,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"CLEAN",
+7348.2,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"BHAGERIA",
+1370.9,
+"Chemicals & Petrochemicals",
+"Dyes And Pigments"
+],
+[
+"VIDHIING",
+1475.1,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"MANALIPETC",
+1213.6,
+"Chemicals & Petrochemicals",
+"Petrochemicals"
+],
+[
+"BALAMINES",
+5615.1,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"SPLPETRO",
+13070.8,
+"Chemicals & Petrochemicals",
+"Petrochemicals"
+],
+[
+"BHARATRAS",
+1455.0,
+"Fertilizers & Agrochemicals",
+"Pesticides & Agrochemicals"
+],
+[
+"LXCHEM",
+4276.2,
+"Chemicals & Petrochemicals",
+"Specialty Chemicals"
+],
+[
+"DEEPAKFERT",
+17529.7,
+"Chemicals & Petrochemicals",
+"Commodity Chemicals"
+],
+[
+"SUDARSCHEM",
+8839.2,
+"Chemicals & Petrochemicals",
+"Dyes And Pigments"
+],
+[
+"BEPL",
+2651.6,
+"Chemicals & Petrochemicals",
+"Petrochemicals"
+],
+[
+"RCF",
+5658.7,
+"Fertilizers & Agrochemicals",
+"Fertilizers"
+],
+[
+"PUNJABCHEM",
+1061.6,
+"Fertilizers & Agrochemicals",
+"Pesticides & Agrochemicals"
+],
+[
+"PREMEXPLN",
+3038.0,
+"Chemicals & Petrochemicals",
+"Explosives"
+]
+],
+"Healthcare": [
+[
+"KRSNAA",
+1637.3,
+"Healthcare Services",
+"Healthcare Service Provider"
+],
+[
+"ORCHPHARMA",
+5694.5,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"MOREPENLAB",
+5020.6,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"SYNGENE",
+18237.1,
+"Healthcare Services",
+"Healthcare Research, Analytics & Technology"
+],
+[
+"LINCOLN",
+1005.0,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"SHILPAMED",
+16681.7,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"POLYMED",
+16590.5,
+"Healthcare Equipment & Supplies",
+"Medical Equipment & Supplies"
+],
+[
+"TARSONS",
+1566.6,
+"Healthcare Equipment & Supplies",
+"Medical Equipment & Supplies"
+],
+[
+"AARTIPHARM",
+9298.8,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"VIMTALABS",
+2154.9,
+"Healthcare Services",
+"Healthcare Research, Analytics & Technology"
+],
+[
+"COHANCE",
+18730.2,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"THYROCARE",
+8566.5,
+"Healthcare Services",
+"Healthcare Service Provider"
+],
+[
+"SOLARA",
+2938.0,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"SAKAR",
+2132.7,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"INDOCO",
+2143.8,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"SUPRIYA",
+4968.3,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"BLUEJET",
+8905.7,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"BLISSGVS",
+6841.7,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"ZOTA",
+4574.6,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"YATHARTH",
+10413.9,
+"Healthcare Services",
+"Hospital"
+],
+[
+"ERIS",
+18090.6,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"INNOVACAP",
+5523.9,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"JLHL",
+2017.8,
+"Healthcare Services",
+"Hospital"
+],
+[
+"HIKAL",
+2788.5,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"BAFNAPH",
+1200.0,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"NATCOPHARM",
+14335.2,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"AARTIDRUGS",
+4453.1,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"KOPRAN",
+1398.0,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"DCAL",
+1760.4,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"RPGLIFE",
+4208.8,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"INDSWFTLAB",
+2756.6,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"BAJAJHCARE",
+1160.3,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"CONCORDBIO",
+5742.4,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"SUVEN",
+7069.7,
+"Healthcare Services",
+"Healthcare Research, Analytics & Technology"
+],
+[
+"VENUSREM",
+1991.2,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"CAPLIPOINT",
+15388.5,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"SANOFI",
+7440.0,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"SMSPHARMA",
+4431.1,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"PFIZER",
+17444.0,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"SYNCOMF",
+2217.5,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"VIYASH",
+9998.6,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"AMRUTANJAN",
+1485.9,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"JUBLPHARMA",
+14478.3,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"METROPOLIS",
+11751.7,
+"Healthcare Services",
+"Healthcare Service Provider"
+],
+[
+"UNICHEMLAB",
+3548.9,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"ARTEMISMED",
+5116.4,
+"Healthcare Services",
+"Hospital"
+],
+[
+"JAGSNPHARM",
+1362.8,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"IOLCP",
+5202.6,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"STAR",
+8929.7,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"PANACEABIO",
+2013.1,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"HESTERBIO",
+1889.7,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"NGLFINE",
+1699.4,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"MARKSANS",
+12681.7,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"SPARC",
+6067.8,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"VIJAYA",
+16748.5,
+"Healthcare Services",
+"Healthcare Service Provider"
+],
+[
+"PGHL",
+9483.6,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"FDC",
+6062.7,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"HCG",
+9412.6,
+"Healthcare Services",
+"Hospital"
+],
+[
+"RAINBOW",
+12780.0,
+"Healthcare Services",
+"Hospital"
+],
+[
+"WINDLAS",
+1954.1,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"ASTRAZEN",
+15507.5,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"ALIVUS",
+17625.5,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"SIGACHI",
+1175.8,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+],
+[
+"ADVENZYMES",
+3128.9,
+"Pharmaceuticals & Biotechnology",
+"Biotechnology"
+],
+[
+"SHALBY",
+1365.2,
+"Healthcare Services",
+"Hospital"
+],
+[
+"GUFICBIO",
+4145.2,
+"Pharmaceuticals & Biotechnology",
+"Pharmaceuticals"
+]
+]
+}
+}
