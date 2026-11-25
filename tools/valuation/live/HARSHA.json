@@ -1,0 +1,72 @@
+# LIVE deep dive #6 (method test; company drawn at random from IT / Chemicals / Capital Goods names in the Rs 1,000-20,000 cr band, see research_notes/Deep dives/HARSHA_live.md section 0). No verdict (L9/L21).
+# Scenarios and probabilities were written BEFORE the worksheet was run (protocol L8 step 2). Key variable: return on the FY25-FY28 capex wave (Advantek Bhayla phases 1-2, China phase 2) vs a consolidated ROIC of ~11%.
+{
+ "company": "Harsha Engineers International Ltd (precision bearing cages, bushings, stampings; solar EPC)",
+ "ticker": "HARSHA",
+ "market": "india",
+ "practice": false,
+ "currency": "INR",
+ "units": "INR cr",
+ "as_of": "2026-11-23",
+ "price": 438.25,
+ "shares": 9.1044,
+ "net_debt": -95.0,
+ "non_operating_value": 0.0,
+ "other_income_recurring_post_tax": 0.0,
+ "treasury_income_post_tax": 22.0,
+ "base": {
+  "fy": "TTM Sep-2026",
+  "revenue": 1781.0,
+  "ebitda": 272.0,
+  "ebit": 220.0,
+  "pat": 163.2,
+  "fcf": 60.0,
+  "eps": 17.94,
+  "eps_normalised": 10.0,
+  "eps_forward": null,
+  "pe_trailing": 24.4,
+  "sbc": 0.0
+ },
+ "tax_rate": 0.27,
+ "roiic": 0.14,
+ "terminal_roic": 0.13,
+ "incremental_roic_5y": 0.11,
+ "years": 10,
+ "coe": 0.125,
+ "terminal_growth": 0.05,
+ "payout_of_fcf": 0.25,
+ "dispersion": 0.30,
+ "base_case": {"name": "base", "growth": 0.12, "growth_end": 0.09, "margin_end": 0.095, "roiic": 0.14, "exit_pe": 24},
+ "scenarios": [
+  {"name": "bear", "prob": 0.25, "growth": 0.03, "growth_end": 0.06, "margin_end": 0.07, "roiic": 0.08, "exit_pe": 15},
+  {"name": "base", "prob": 0.50, "growth": 0.12, "growth_end": 0.09, "margin_end": 0.095, "roiic": 0.14, "exit_pe": 24},
+  {"name": "bull", "prob": 0.20, "growth": 0.17, "growth_end": 0.12, "margin_end": 0.115, "roiic": 0.20, "exit_pe": 32}
+ ],
+ "blowup": {"prob": 0.05, "multiple": 0.30, "note": "Loss or in-sourcing of a top bearing-maker account (one customer = 12.6% of FY26 revenue; 'a limited number of large bearing manufacturers' per AR26 risk table) during a European industrial downturn, with Romania closure costs and the Advantek/China capex (~Rs 600 cr cumulative) stranded at low utilisation; net cash ~Rs 95 cr and CARE AA- (Mar-2024) make insolvency unlikely, so 'blow-up' here is mostly an -80% price path"},
+ "twin_engine": {"targets": [2, 3, 5], "horizon": 5, "exit_pes": null, "hist_eps_cagr": 0.139, "hist_eps_note": "Consolidated PAT FY22 92 -> FY26 155 = 13.9%/yr [SCR]; FY23-25 fell 123 -> 89 (European industrial slowdown + Romania impairment) before recovering; EPS CAGR from FY20 (2.84) is distorted by the 2022 IPO share issue"},
+ "pe_history": [
+  {"date": "FY23", "pe": 24.7}, {"date": "FY24", "pe": 32.8}, {"date": "FY25", "pe": 37.9}, {"date": "FY26", "pe": 18.4}
+ ],
+ "sector_pes": {"Rolex Rings": 22.1, "NRB Bearings": 28.2, "Schaeffler India": 43.4, "SKF India": 44.6, "Timken India": 50.5, "Sansera Engineering": 70.2},
+ "market_pe": {"index": "Nifty 50", "pe": 20.6, "as_of": "2026-11 (insight:india-valuation-forward-returns)"},
+ "notes": [
+  "Price Rs 438.25 = NSE bhavcopy close 23-Nov-2026 (the 24-Nov file carries 23-Nov data; 24-Nov was not a trading day) = Yahoo v8 close 23-Nov-2026 (two sources). screener.in 25-Nov-2026 intraday Rs 441 / mcap Rs 4,016 cr. Shares 9.1044 cr (universe.csv; equity capital Rs 91 cr at FV 10).",
+  "Net cash ~95 at 30-Sep-2026 [Q2FY27 consolidated XBRL]: cash 22.13 + other bank 21.78 + current investments 265.51 + non-current investments 224.04 = 533.5, less borrowings 222.67 + 215.81 = 438.5. Leases not material. Gross borrowing while holding ~Rs 490 cr of investments; management says the debt is 'backed by either lower interest rate or ... government subsidy' (Q2 FY27 call) - terms not disclosed in AR26.",
+  "Treasury income post-tax 22 [EST]: TTM other income 30 x 0.73.",
+  "Base = TTM Q3FY26..Q2FY27 [XBRL + SCR agree]: revenue 409.25 + 473.91 + 457.43 + 440.09 = 1,780.7; operating profit (ex other income) 57+73+67+75 = 272; D&A 53 -> EBIT 220; PAT 163.2; EPS 17.94.",
+  "FCF 60 [EST]: CFO FY23-26 137/136/206/68 (avg 137) less maintenance capex 25-30 (Q2 FY27 call) and part of growth capex; reported FCF FY23-26 63/62/-2/-47 [SCR].",
+  "eps_normalised 10.0 = mean consolidated PAT FY20-26 (22,45,92,123,111,89,155 = 91.0) / today's 9.104 cr shares; 43.8x on it. Not a classic cyclical: FY21 COVID revenue only -1%; the FY23-25 EPS dip (-28%) was a European industrial slowdown + Romania; protocol v1.4 rule applied because the business is industrial-cyclical, not because it screens cheap (it does not: 24.4x vs own median 28.8x and peer median 44x).",
+  "ROIIC: invested capital ex cash ~1,391 (equity 1,486 + debt 438 - liquid 533); NOPAT 220 x 0.73 = 160 -> ROIC ~11.5%. FY23->TTM: dNOPAT ~+46 on d(IC) ~+390 -> ROIIC ~11% [EST]; incremental_roic_5y 0.11. Management claims ~2x asset turn on productive capex (Q2 FY27 call) and Advantek runs at ~54% utilisation (Reg-30 28-May-2026); base roiic 0.14 assumes utilisation improves; terminal 0.13.",
+  "Scenarios (5-yr; written before outputs): blow-up 5% (raw; anchored to class later); bear 25% = European/industrial slowdown + customer in-sourcing, Romania closure, Advantek under-utilised: revenue +3%/yr, NOPAT margin 7%, exit 15x; base 50% = guidance roughly met (FY27 cons +10-12%, India mid-high teens), outsourcing contracts ramp with slips: +12% -> +9%, NOPAT margin 9.5%, exit 24x (~own FY23/FY26 average); bull 20% = outsourcing wave (bushings Rs 300 cr, stampings Rs 300 cr in 3-4 yrs per management) + Romania fixed: +17% -> +12%, 11.5%, exit 32x (below bearing-maker peers 43-50x).",
+  "Exit P/Es: own FY-end P/Es only exist for FY23-26 (listed 26-Sep-2022): 24.7/32.8/37.9/18.4, median 28.8. Closest peer by position in the chain (bearing-component supplier to the same customers) is Rolex Rings at 22.1x; bearing makers (customers with brands) 43-50x.",
+  "Dispersion 0.30."
+ ],
+ "sources": [
+  "research_notes/Deep dives/HARSHA_live.md",
+  "https://nsearchives.nseindia.in/annual_reports/AR_29478_HARSHA_2025_2026_A_15877505_29062026151738.pdf",
+  "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1751817_03112026042536_WEB.xml",
+  "https://nsearchives.nseindia.in/corporate/Harsha_06112026142552_Transcript_of_Earning_Call_Q2FY2027.pdf",
+  "https://www.screener.in/company/HARSHA/consolidated/",
+  "https://nsearchives.nseindia.in/products/content/sec_bhavdata_full_24112026.csv"
+ ]
+}

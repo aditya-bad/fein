@@ -320,3 +320,13 @@ with results, so the git timestamp doesn't prove order — the stage log does). 
 is consistently bad: 12m halving 4.2×, 3y failure 9.4×, stable across periods and the survivorship-free panel — yet still 23.5% triple.
 Card unchanged. Judgement rule until tested: when both flags fire, answer the balance-sheet question before even a starter position.
 Next: pre-register "both flags → 0 new money" on fresh 2026+ events.
+
+## L42 (2026-11-25) — A strong segment margin can hide a sub-par group ROIC; read dissent net of promoter votes (HARSHA live dive #6)
+Harsha's India engineering segment earns 22–24% EBITDA, but group ROIC ~11.5% and ROIIC ~11% (< 12.5% cost of equity) while
+₹600 cr of capex goes in at ~54% subsidiary utilisation. **Rules:** compute group ROIC and ROIIC before reading segment margins;
+rebuild capex payback two ways (current utilisation vs management's asset-turn claim). Report AGM dissent as
+votes against ÷ (votes cast − promoter shares): a "14%" against was ~92% of non-promoter votes. L40 for manufacturers: the
+government input is often subsidised financing or a dated rule (e.g. solar relaxations), possibly absent from the AR.
+Process: take the frame close from the bhavcopy's date column, not the file name; card input validation (credibility as fraction).
+**Pattern to watch:** 6 of 6 live cards = size 0 (EV below the 1.76x hurdle). Either the market is roughly fair on random draws
+(expected) or the hurdle/tails make the card structurally say no. Check at the first scoring season before changing anything.

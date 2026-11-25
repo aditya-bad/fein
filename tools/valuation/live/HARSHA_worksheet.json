@@ -1,0 +1,690 @@
+{
+ "input": {
+  "company": "Harsha Engineers International Ltd (precision bearing cages, bushings, stampings; solar EPC)",
+  "ticker": "HARSHA",
+  "market": "india",
+  "practice": false,
+  "currency": "INR",
+  "units": "INR cr",
+  "as_of": "2026-11-23",
+  "price": 438.25,
+  "shares": 9.1044,
+  "net_debt": -95.0,
+  "non_operating_value": 0.0,
+  "other_income_recurring_post_tax": 0.0,
+  "treasury_income_post_tax": 22.0,
+  "base": {
+   "fy": "TTM Sep-2026",
+   "revenue": 1781.0,
+   "ebitda": 272.0,
+   "ebit": 220.0,
+   "pat": 163.2,
+   "fcf": 60.0,
+   "eps": 17.94,
+   "eps_normalised": 10.0,
+   "eps_forward": null,
+   "pe_trailing": 24.4,
+   "sbc": 0.0
+  },
+  "tax_rate": 0.27,
+  "roiic": 0.14,
+  "terminal_roic": 0.13,
+  "incremental_roic_5y": 0.11,
+  "years": 10,
+  "coe": 0.125,
+  "terminal_growth": 0.05,
+  "payout_of_fcf": 0.25,
+  "dispersion": 0.3,
+  "base_case": {
+   "name": "base",
+   "growth": 0.12,
+   "growth_end": 0.09,
+   "margin_end": 0.095,
+   "roiic": 0.14,
+   "exit_pe": 24.0,
+   "prob": 0.0
+  },
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.25,
+    "growth": 0.03,
+    "growth_end": 0.06,
+    "margin_end": 0.07,
+    "roiic": 0.08,
+    "exit_pe": 15.0
+   },
+   {
+    "name": "base",
+    "prob": 0.5,
+    "growth": 0.12,
+    "growth_end": 0.09,
+    "margin_end": 0.095,
+    "roiic": 0.14,
+    "exit_pe": 24.0
+   },
+   {
+    "name": "bull",
+    "prob": 0.2,
+    "growth": 0.17,
+    "growth_end": 0.12,
+    "margin_end": 0.115,
+    "roiic": 0.2,
+    "exit_pe": 32.0
+   }
+  ],
+  "blowup": {
+   "prob": 0.05,
+   "multiple": 0.3,
+   "note": "Loss or in-sourcing of a top bearing-maker account (one customer = 12.6% of FY26 revenue; 'a limited number of large bearing manufacturers' per AR26 risk table) during a European industrial downturn, with Romania closure costs and the Advantek/China capex (~Rs 600 cr cumulative) stranded at low utilisation; net cash ~Rs 95 cr and CARE AA- (Mar-2024) make insolvency unlikely, so 'blow-up' here is mostly an -80% price path"
+  },
+  "twin_engine": {
+   "targets": [
+    2,
+    3,
+    5
+   ],
+   "horizon": 5,
+   "exit_pes": null,
+   "hist_eps_cagr": 0.139,
+   "hist_eps_note": "Consolidated PAT FY22 92 -> FY26 155 = 13.9%/yr [SCR]; FY23-25 fell 123 -> 89 (European industrial slowdown + Romania impairment) before recovering; EPS CAGR from FY20 (2.84) is distorted by the 2022 IPO share issue"
+  },
+  "pe_history": [
+   {
+    "date": "FY23",
+    "pe": 24.7
+   },
+   {
+    "date": "FY24",
+    "pe": 32.8
+   },
+   {
+    "date": "FY25",
+    "pe": 37.9
+   },
+   {
+    "date": "FY26",
+    "pe": 18.4
+   }
+  ],
+  "sector_pes": {
+   "Rolex Rings": 22.1,
+   "NRB Bearings": 28.2,
+   "Schaeffler India": 43.4,
+   "SKF India": 44.6,
+   "Timken India": 50.5,
+   "Sansera Engineering": 70.2
+  },
+  "market_pe": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)"
+  },
+  "notes": [
+   "Price Rs 438.25 = NSE bhavcopy close 23-Nov-2026 (the 24-Nov file carries 23-Nov data; 24-Nov was not a trading day) = Yahoo v8 close 23-Nov-2026 (two sources). screener.in 25-Nov-2026 intraday Rs 441 / mcap Rs 4,016 cr. Shares 9.1044 cr (universe.csv; equity capital Rs 91 cr at FV 10).",
+   "Net cash ~95 at 30-Sep-2026 [Q2FY27 consolidated XBRL]: cash 22.13 + other bank 21.78 + current investments 265.51 + non-current investments 224.04 = 533.5, less borrowings 222.67 + 215.81 = 438.5. Leases not material. Gross borrowing while holding ~Rs 490 cr of investments; management says the debt is 'backed by either lower interest rate or ... government subsidy' (Q2 FY27 call) - terms not disclosed in AR26.",
+   "Treasury income post-tax 22 [EST]: TTM other income 30 x 0.73.",
+   "Base = TTM Q3FY26..Q2FY27 [XBRL + SCR agree]: revenue 409.25 + 473.91 + 457.43 + 440.09 = 1,780.7; operating profit (ex other income) 57+73+67+75 = 272; D&A 53 -> EBIT 220; PAT 163.2; EPS 17.94.",
+   "FCF 60 [EST]: CFO FY23-26 137/136/206/68 (avg 137) less maintenance capex 25-30 (Q2 FY27 call) and part of growth capex; reported FCF FY23-26 63/62/-2/-47 [SCR].",
+   "eps_normalised 10.0 = mean consolidated PAT FY20-26 (22,45,92,123,111,89,155 = 91.0) / today's 9.104 cr shares; 43.8x on it. Not a classic cyclical: FY21 COVID revenue only -1%; the FY23-25 EPS dip (-28%) was a European industrial slowdown + Romania; protocol v1.4 rule applied because the business is industrial-cyclical, not because it screens cheap (it does not: 24.4x vs own median 28.8x and peer median 44x).",
+   "ROIIC: invested capital ex cash ~1,391 (equity 1,486 + debt 438 - liquid 533); NOPAT 220 x 0.73 = 160 -> ROIC ~11.5%. FY23->TTM: dNOPAT ~+46 on d(IC) ~+390 -> ROIIC ~11% [EST]; incremental_roic_5y 0.11. Management claims ~2x asset turn on productive capex (Q2 FY27 call) and Advantek runs at ~54% utilisation (Reg-30 28-May-2026); base roiic 0.14 assumes utilisation improves; terminal 0.13.",
+   "Scenarios (5-yr; written before outputs): blow-up 5% (raw; anchored to class later); bear 25% = European/industrial slowdown + customer in-sourcing, Romania closure, Advantek under-utilised: revenue +3%/yr, NOPAT margin 7%, exit 15x; base 50% = guidance roughly met (FY27 cons +10-12%, India mid-high teens), outsourcing contracts ramp with slips: +12% -> +9%, NOPAT margin 9.5%, exit 24x (~own FY23/FY26 average); bull 20% = outsourcing wave (bushings Rs 300 cr, stampings Rs 300 cr in 3-4 yrs per management) + Romania fixed: +17% -> +12%, 11.5%, exit 32x (below bearing-maker peers 43-50x).",
+   "Exit P/Es: own FY-end P/Es only exist for FY23-26 (listed 26-Sep-2022): 24.7/32.8/37.9/18.4, median 28.8. Closest peer by position in the chain (bearing-component supplier to the same customers) is Rolex Rings at 22.1x; bearing makers (customers with brands) 43-50x.",
+   "Dispersion 0.30."
+  ],
+  "sources": [
+   "research_notes/Deep dives/HARSHA_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_29478_HARSHA_2025_2026_A_15877505_29062026151738.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1751817_03112026042536_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/Harsha_06112026142552_Transcript_of_Earning_Call_Q2FY2027.pdf",
+   "https://www.screener.in/company/HARSHA/consolidated/",
+   "https://nsearchives.nseindia.in/products/content/sec_bhavdata_full_24112026.csv"
+  ],
+  "_warnings": [],
+  "non_operating_growth": null,
+  "hurdle_cagr": 0.12,
+  "cash_tax_rate": null,
+  "cash_tax_rate_end": null,
+  "_inc_roic_method": "given",
+  "nopat_margin": 0.0901740595171252,
+  "_nopat_margin_method": "base.ebit x (1 - tax) / revenue",
+  "_eps_method": "given"
+ },
+ "snapshot": {
+  "mcap": 3990.0033,
+  "ev": 3895.0033,
+  "pe": 24.4,
+  "ev_ebitda": 14.319865073529412,
+  "p_fcf": 66.500055,
+  "fcf_yield": 0.015037581547864885,
+  "ev_sales": 2.1869754632229084
+ },
+ "base": {
+  "rows": [
+   {
+    "t": 1,
+    "g": 0.12,
+    "revenue": 1994.7200000000003,
+    "margin": 0.09065665356541268,
+    "nopat": 180.83464,
+    "reinv_rate": 0.857142857142857,
+    "fcf": 25.83352000000003,
+    "eps": 19.895879037223178
+   },
+   {
+    "t": 2,
+    "g": 0.11666666666666667,
+    "revenue": 2227.4373333333338,
+    "margin": 0.09113924761370017,
+    "nopat": 203.0069626666667,
+    "reinv_rate": 0.8333333333333333,
+    "fcf": 33.8344937777778,
+    "eps": 22.039054359852173
+   },
+   {
+    "t": 3,
+    "g": 0.11333333333333333,
+    "revenue": 2479.8802311111117,
+    "margin": 0.09162184166198764,
+    "nopat": 227.21119387555558,
+    "reinv_rate": 0.8095238095238094,
+    "fcf": 43.27832264296299,
+    "eps": 24.378633835126685
+   },
+   {
+    "t": 4,
+    "g": 0.11,
+    "revenue": 2752.6670565333343,
+    "margin": 0.09210443571027513,
+    "nopat": 253.53284594026675,
+    "reinv_rate": 0.7857142857142857,
+    "fcf": 54.328466987200024,
+    "eps": 26.922883077932614
+   },
+   {
+    "t": 5,
+    "g": 0.10666666666666666,
+    "revenue": 3046.28487589689,
+    "margin": 0.0925870297585626,
+    "nopat": 282.04646845772453,
+    "reinv_rate": 0.7619047619047618,
+    "fcf": 67.15392106136302,
+    "eps": 29.679008047647436
+   },
+   {
+    "t": 6,
+    "g": 0.10333333333333333,
+    "revenue": 3361.067646406235,
+    "margin": 0.09306962380685008,
+    "nopat": 312.8133014404033,
+    "reinv_rate": 0.738095238095238,
+    "fcf": 81.92729323439136,
+    "eps": 32.65292820004786
+   },
+   {
+    "t": 7,
+    "g": 0.09999999999999999,
+    "revenue": 3697.1744110468585,
+    "margin": 0.09355221785513756,
+    "nopat": 345.8788659506956,
+    "reinv_rate": 0.7142857142857142,
+    "fcf": 98.82253312877022,
+    "eps": 35.849043598178554
+   },
+   {
+    "t": 8,
+    "g": 0.09666666666666666,
+    "revenue": 4054.5679374480546,
+    "margin": 0.09403481190342504,
+    "nopat": 381.27053334758585,
+    "reinv_rate": 0.6904761904761904,
+    "fcf": 118.01230794091948,
+    "eps": 39.269999955887535
+   },
+   {
+    "t": 9,
+    "g": 0.09333333333333332,
+    "revenue": 4432.994278276539,
+    "margin": 0.09451740595171253,
+    "nopat": 418.9951197814826,
+    "reinv_rate": 0.6666666666666665,
+    "fcf": 139.66503992716093,
+    "eps": 42.916456121847105
+   },
+   {
+    "t": 10,
+    "g": 0.09,
+    "revenue": 4831.963763321428,
+    "margin": 0.095,
+    "nopat": 459.03655751553566,
+    "reinv_rate": 0.6428571428571428,
+    "fcf": 163.9416276841199,
+    "eps": 46.78685898961798
+   }
+  ],
+  "pv_fcf": 379.8825068890488,
+  "pv_tv": 1217.8581866410962,
+  "tv_share": 0.7622376970009361,
+  "pv_oi": 0.0,
+  "ev": 1597.7406935301449,
+  "equity": 1692.7406935301449,
+  "value_ps": 185.9255627531902,
+  "cum_dist_ps_5y": 6.162644558381218,
+  "value5_ps": 315.2211866369459,
+  "dcf_pe5": 10.621014898169163,
+  "max_reinv_rate": 0.857142857142857
+ },
+ "reverse": {
+  "g_flat_margin": null,
+  "g_base_margin": null,
+  "g_fade_start": null,
+  "m_needed_base_growth": 0.2449536170959473,
+  "implied_coe_base": 0.0874520713043213,
+  "roiic_implied_base": null,
+  "gordon_g_on_fcf": 0.10793301044780418,
+  "path_case": "flat-growth",
+  "path": null
+ },
+ "scenarios": {
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.25,
+    "growth": 0.03,
+    "growth_end": 0.06,
+    "margin_end": 0.07,
+    "roiic": 0.08,
+    "exit_pe": 15.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 9.156267149208764,
+    "value_ps": 115.87511420902226,
+    "value_vs_price": -0.7355958603330923,
+    "eps5": 18.922565908856953,
+    "eps_cagr5": 0.010721531407267726,
+    "dist_ps_5y": 12.302517712287687,
+    "mult5": 0.6757353253739692,
+    "tv_share": 0.5348510146405462,
+    "nonop5_ps": 0.0
+   },
+   {
+    "name": "base",
+    "prob": 0.5,
+    "growth": 0.12,
+    "growth_end": 0.09,
+    "margin_end": 0.095,
+    "roiic": 0.14,
+    "exit_pe": 24.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 10.621014898169163,
+    "value_ps": 185.9255627531902,
+    "value_vs_price": -0.575754563027518,
+    "eps5": 29.679008047647436,
+    "eps_cagr5": 0.10592426902921459,
+    "dist_ps_5y": 6.162644558381218,
+    "mult5": 1.6393812611566905,
+    "tv_share": 0.7622376970009361,
+    "nonop5_ps": 0.0
+   },
+   {
+    "name": "bull",
+    "prob": 0.2,
+    "growth": 0.17,
+    "growth_end": 0.12,
+    "margin_end": 0.115,
+    "roiic": 0.2,
+    "exit_pe": 32.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 13.509946673459527,
+    "value_ps": 307.7014672709593,
+    "value_vs_price": -0.29788598455000725,
+    "eps5": 39.3279379104465,
+    "eps_cagr5": 0.1699727519395735,
+    "dist_ps_5y": 8.289694049586151,
+    "mult5": 2.8905503871851095,
+    "tv_share": 0.7768663172227656,
+    "nonop5_ps": 0.0
+   }
+  ],
+  "blowup": {
+   "prob": 0.05,
+   "multiple": 0.3,
+   "note": "Loss or in-sourcing of a top bearing-maker account (one customer = 12.6% of FY26 revenue; 'a limited number of large bearing manufacturers' per AR26 risk table) during a European industrial downturn, with Romania closure costs and the Advantek/China capex (~Rs 600 cr cumulative) stranded at low utilisation; net cash ~Rs 95 cr and CARE AA- (Mar-2024) make insolvency unlikely, so 'blow-up' here is mostly an -80% price path"
+  },
+  "pw_value": 190.04560338304253,
+  "pw_vs_price": -0.5663534435070336,
+  "bear_value": 115.87511420902226,
+  "downside_bear": -0.7355958603330923,
+  "p_value_below_price": 1.0,
+  "p_ge_3x": 0.10113496882613478,
+  "p_ge_2x": 0.30495092456571443,
+  "p_ge_5x": 0.006825830474442601,
+  "p_le_half": 0.08944253624022333,
+  "p_blowup": 0.05,
+  "ev_mult5": 1.5817345393588593,
+  "ev_cagr5": 0.0960407965048713,
+  "median_mult5": 1.5141635290815434,
+  "hurdle_mult5": 1.7623416832000007,
+  "exit_bet": {
+   "own_median": null,
+   "n_hist": 4,
+   "rows": [
+    {
+     "name": "bear",
+     "prob": 0.25,
+     "exit_pe": 15.0,
+     "dcf_pe5": 9.156267149208764,
+     "own_median": null,
+     "mult_stated": 0.6757353253739692,
+     "mult_dcf": 0.4234171963999824,
+     "mult_own": null,
+     "stated_vs_dcf": 1.6382221876626022,
+     "stated_vs_own": null
+    },
+    {
+     "name": "base",
+     "prob": 0.5,
+     "exit_pe": 24.0,
+     "dcf_pe5": 10.621014898169163,
+     "own_median": null,
+     "mult_stated": 1.6393812611566905,
+     "mult_dcf": 0.7333344693561371,
+     "mult_own": null,
+     "stated_vs_dcf": 2.2596710606381967,
+     "stated_vs_own": null
+    },
+    {
+     "name": "bull",
+     "prob": 0.2,
+     "exit_pe": 32.0,
+     "dcf_pe5": 13.509946673459527,
+     "own_median": null,
+     "mult_stated": 2.8905503871851095,
+     "mult_dcf": 1.2312790370720952,
+     "mult_own": null,
+     "stated_vs_dcf": 2.368625189532719,
+     "stated_vs_own": null
+    }
+   ],
+   "ev_stated": 1.5817345393588593,
+   "ev_dcf": 0.7337773411924832,
+   "ev_own": null,
+   "hurdle": 1.7623416832000007
+  }
+ },
+ "twin": {
+  "pe0": 43.825,
+  "eps0": 10.0,
+  "horizon": 5.0,
+  "exit_pes": [
+   21.9,
+   32.9,
+   43.8,
+   44.0
+  ],
+  "table": [
+   {
+    "target": 2,
+    "cells": [
+     {
+      "exit_pe": 21.9,
+      "eps_cagr": 0.31965850515147753,
+      "rerating_share": -1.0008232211583648
+     },
+     {
+      "exit_pe": 32.9,
+      "eps_cagr": 0.21649745444933788,
+      "rerating_share": -0.41366650702429675
+     },
+     {
+      "exit_pe": 43.8,
+      "eps_cagr": 0.1488294550181397,
+      "rerating_share": -0.00082322115836479
+     },
+     {
+      "exit_pe": 44.0,
+      "eps_cagr": 0.1477831605174953,
+      "rerating_share": 0.0057494327651213956
+     }
+    ]
+   },
+   {
+    "target": 3,
+    "cells": [
+     {
+      "exit_pe": 21.9,
+      "eps_cagr": 0.43113239645773005,
+      "rerating_share": -0.6314491482940393
+     },
+     {
+      "exit_pe": 32.9,
+      "eps_cagr": 0.31925714908416536,
+      "rerating_share": -0.2609945073376051
+     },
+     {
+      "exit_pe": 43.8,
+      "eps_cagr": 0.2458731138876089,
+      "rerating_share": -0.0005193947225819066
+     },
+     {
+      "exit_pe": 44.0,
+      "eps_cagr": 0.24473843703730047,
+      "rerating_share": 0.0036274881976737046
+     }
+    ]
+   },
+   {
+    "target": 5,
+    "cells": [
+     {
+      "exit_pe": 21.9,
+      "eps_cagr": 0.5850740750488499,
+      "rerating_share": -0.4310311001284108
+     },
+     {
+      "exit_pe": 32.9,
+      "eps_cagr": 0.46116481641531304,
+      "rerating_share": -0.1781564674354672
+     },
+     {
+      "exit_pe": 43.8,
+      "eps_cagr": 0.3798871288998593,
+      "rerating_share": -0.0003545420550177394
+     },
+     {
+      "exit_pe": 44.0,
+      "eps_cagr": 0.3786303990099946,
+      "rerating_share": 0.0024761459141568734
+     }
+    ]
+   }
+  ],
+  "hist_eps_cagr": 0.139,
+  "hist_eps_note": "Consolidated PAT FY22 92 -> FY26 155 = 13.9%/yr [SCR]; FY23-25 fell 123 -> 89 (European industrial slowdown + Romania impairment) before recovering; EPS CAGR from FY20 (2.84) is distorted by the 2022 IPO share issue"
+ },
+ "temperature": {
+  "pes": {
+   "trailing (given)": 24.4,
+   "normalised EPS": 43.825
+  },
+  "n_hist": 4,
+  "own_median": 28.75,
+  "sector_median": 44.0,
+  "sector": {
+   "Rolex Rings": 22.1,
+   "NRB Bearings": 28.2,
+   "Schaeffler India": 43.4,
+   "SKF India": 44.6,
+   "Timken India": 50.5,
+   "Sansera Engineering": 70.2
+  },
+  "rows": [
+   {
+    "basis": "trailing (given)",
+    "pe": 24.4,
+    "vs_own": null,
+    "own_band": "INSUFFICIENT HISTORY (n=4 < 5)",
+    "vs_sector": 0.5545454545454546,
+    "sector_band": "COLD"
+   },
+   {
+    "basis": "normalised EPS",
+    "pe": 43.825,
+    "vs_own": null,
+    "own_band": "INSUFFICIENT HISTORY (n=4 < 5)",
+    "vs_sector": 0.9960227272727273,
+    "sector_band": "NORMAL"
+   }
+  ],
+  "market": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)",
+   "note": "around the long-run average"
+  }
+ },
+ "sensitivity": {
+  "coe_x_growth": {
+   "rows": [
+    [
+     0.105,
+     [
+      237.49247984328267,
+      255.40643417006015,
+      275.34564427049474,
+      297.539260989959,
+      322.2296946862967
+     ]
+    ],
+    [
+     0.115,
+     [
+      201.05500746099534,
+      211.81949515947218,
+      223.29613321666426,
+      235.50044473589352,
+      248.43158402167109
+     ]
+    ],
+    [
+     0.125,
+     [
+      174.43564040951156,
+      180.26115976526668,
+      185.9255627531902,
+      191.30673360583506,
+      196.247746958335
+     ]
+    ],
+    [
+     0.135,
+     [
+      154.1609947723088,
+      156.4530035876398,
+      157.98700348032455,
+      158.55051216876558,
+      157.88468774252672
+     ]
+    ],
+    [
+     0.145,
+     [
+      138.22090863040296,
+      137.92107790479415,
+      136.44889023708055,
+      133.5323395707985,
+      128.84595071783022
+     ]
+    ]
+   ],
+   "cols": [
+    -0.06,
+    -0.03,
+    0.0,
+    0.03,
+    0.06
+   ]
+  },
+  "tg_x_margin": {
+   "rows": [
+    [
+     0.04,
+     [
+      150.49703326929819,
+      167.08721488564024,
+      183.6773965019823,
+      200.2675781183243,
+      216.85775973466636
+     ]
+    ],
+    [
+     0.05,
+     [
+      152.27190136235708,
+      169.09873205777365,
+      185.9255627531902,
+      202.7523934486068,
+      219.57922414402336
+     ]
+    ],
+    [
+     0.060000000000000005,
+     [
+      154.30276004576095,
+      171.40037189896472,
+      188.4979837521685,
+      205.59559560537224,
+      222.69320745857604
+     ]
+    ]
+   ],
+   "cols": [
+    0.075,
+    0.085,
+    0.095,
+    0.105,
+    0.115
+   ]
+  }
+ },
+ "version": "1.3 (2026-11-23; cash-tax input, reinvestment-realism check, exit-multiple bet line; 1.2 non-operating growth; 1.1 bank mode)",
+ "generated": "2026-11-25",
+ "realism": {
+  "history": 0.11,
+  "method": "given",
+  "rows": [
+   {
+    "label": "default ROIIC (input)",
+    "roiic": 0.14,
+    "gap": 0.030000000000000013,
+    "flag": false
+   },
+   {
+    "label": "scenario bear",
+    "roiic": 0.08,
+    "gap": -0.03,
+    "flag": false
+   },
+   {
+    "label": "scenario base",
+    "roiic": 0.14,
+    "gap": 0.030000000000000013,
+    "flag": false
+   },
+   {
+    "label": "scenario bull",
+    "roiic": 0.2,
+    "gap": 0.09000000000000001,
+    "flag": true
+   },
+   {
+    "label": "implied by price on the base-case path",
+    "roiic": null,
+    "gap": null,
+    "flag": false
+   }
+  ],
+  "flagged": [
+   "scenario bull"
+  ]
+ }
+}
