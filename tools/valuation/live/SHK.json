@@ -1,0 +1,75 @@
+# LIVE deep dive #7 (method test; company drawn at random, seed 20261204, from Chemicals / Information Technology names in the Rs 1,000-20,000 cr band per industry_map.csv; see research_notes/Deep dives/SHK_live.md section 0). No verdict (L9/L21).
+# Scenarios and probabilities were written BEFORE the worksheet was run (protocol L8 step 2). Key variable: whether ~Rs 2,330 cr of invested capital (55% of non-current assets now in Europe; Rs ~80 cr/yr of creative-centre opex) can earn above the ~3% full-cycle ROIIC of FY17-19 -> FY24-26.
+{
+ "company": "S H Kelkar and Company Ltd (fragrances and flavours; Keva)",
+ "ticker": "SHK",
+ "market": "india",
+ "practice": false,
+ "currency": "INR",
+ "units": "INR cr",
+ "as_of": "2026-11-23",
+ "price": 127.53,
+ "shares": 13.842,
+ "net_debt": 911.0,
+ "non_operating_value": 0.0,
+ "other_income_recurring_post_tax": 0.0,
+ "treasury_income_post_tax": -45.8,
+ "base": {
+  "fy": "TTM Sep-2026 (core: ex exceptional items and other income)",
+  "revenue": 2532.4,
+  "ebitda": 283.6,
+  "ebit": 145.2,
+  "pat": 47.3,
+  "fcf": 20.0,
+  "eps": 3.51,
+  "eps_normalised": 6.69,
+  "eps_forward": null,
+  "pe_trailing": 18.7,
+  "sbc": 0.0
+ },
+ "tax_rate": 0.35,
+ "roiic": 0.08,
+ "terminal_roic": 0.08,
+ "incremental_roic_5y": 0.03,
+ "years": 10,
+ "coe": 0.125,
+ "terminal_growth": 0.05,
+ "payout_of_fcf": 0.20,
+ "dispersion": 0.35,
+ "base_case": {"name": "base", "growth": 0.12, "growth_end": 0.08, "margin_end": 0.055, "roiic": 0.08, "exit_pe": 22},
+ "scenarios": [
+  {"name": "bear", "prob": 0.30, "growth": 0.06, "growth_end": 0.05, "margin_end": 0.035, "roiic": 0.04, "exit_pe": 14},
+  {"name": "base", "prob": 0.47, "growth": 0.12, "growth_end": 0.08, "margin_end": 0.055, "roiic": 0.08, "exit_pe": 22},
+  {"name": "bull", "prob": 0.15, "growth": 0.14, "growth_end": 0.11, "margin_end": 0.07, "roiic": 0.12, "exit_pe": 28}
+ ],
+ "blowup": {"prob": 0.08, "multiple": 0.25, "note": "Debt-funded working capital (inventory Rs 799 cr + receivables Rs 615 cr at Sep-2026 vs net debt Rs 911 cr), interest cover 2.4x TTM, CRISIL AA- outlook cut to Negative (28-Sep-2026), Europe holding 55% of non-current assets at low returns; a second input-cost shock (Middle East/crude-linked aroma chemicals) or a large European impairment with covenant pressure would put the equity on an -80% path (the stock already fell 343.8 -> 48.9, -86%, Sep-2016 -> 2020 without any revenue decline)"},
+ "twin_engine": {"targets": [2, 3, 5], "horizon": 5, "exit_pes": null, "hist_eps_cagr": 0.0, "hist_eps_note": "Consolidated EPS FY16 5.05 -> FY26 5.00 [SCR] = ~0%/yr over 10 years while revenue grew 925 -> 2,368 (+9.9%/yr) and invested capital roughly 2.6x"},
+ "pe_history": [
+  {"date": "FY17", "pe": 40.9}, {"date": "FY18", "pe": 39.9}, {"date": "FY19", "pe": 24.6}, {"date": "FY20", "pe": 30.1},
+  {"date": "FY21", "pe": 10.9}, {"date": "FY22", "pe": 13.4}, {"date": "FY23", "pe": 22.5}, {"date": "FY24", "pe": 23.2},
+  {"date": "FY25", "pe": 33.4}, {"date": "FY26", "pe": 22.5}
+ ],
+ "sector_pes": {"Privi Speciality Chemicals": 37.2, "Galaxy Surfactants": 29.9, "Oriental Aromatics": 170.0},
+ "market_pe": {"index": "Nifty 50", "pe": 20.6, "as_of": "2026-11 (insight:india-valuation-forward-returns)"},
+ "notes": [
+  "Price Rs 127.53 = NSE bhavcopy close 23-Nov-2026 (sec_bhavdata_full_24112026.csv, DATE1 23-Nov-2026) = Yahoo v8 SHK.NS close 23-Nov-2026 (two sources). screener.in 25-Nov-2026 Rs 126 / mcap Rs 1,742 cr. Shares 13.842 cr (138,420,801; universe.csv = SHP XBRL 30-Sep-2026).",
+  "Net debt 911 at 30-Sep-2026: borrowings non-current 203.48 + current 769.28 = 972.76 less cash 61.74 + other bank 0.34 [Q2FY27 consolidated XBRL] = 910.7 = company deck 'Net Debt 911' (two sources). Leases (~Rs 190 cr [EST] = screener borrowings 1,163 - 973) excluded; rent sits inside the margin.",
+  "treasury_income_post_tax -45.8 = TTM finance cost 60.9 (13.50 + 15.03 + 15.00 + 17.40, XBRL) x (1 - 0.25), held flat (management: H2 interest Rs 16-17 cr/quarter; debt 'peaked' Sep-2026).",
+  "Base = TTM Q3FY26..Q2FY27 [XBRL = screener]: revenue 583.80 + 649.94 + 662.42 + 636.19 = 2,532.4; operating profit 56.09 + 60.03 + 88.66 + 78.86 = 283.6; D&A 138.4 -> EBIT ex other income 145.2. Reported PAT 94.4 / EPS 6.82 (18.7x) includes exceptional gains of 63.0 (fire-insurance realisations 33.07 in Q3 FY26 and 29.95 in Q1 FY27) and other income 12.1. Core EPS: (EBIT 145.2 x 0.65 - 45.8) / 13.842 = 3.51 -> 36.3x; cross-check (PBT ex exceptional 96.4 less reported tax ex an assumed 25% on the exceptional) = 47.3 / 13.842 = 3.42; screener's 'Stock P/E 32.5' implies ~Rs 53.6 cr (ex-exceptional profit) = second route, ~3.9/share.",
+  "tax_rate 0.35: Indian rate 25.2% but group effective tax 38% FY26, 36% FY25, 51% on TTM core profit because European/US creative-centre losses get no tax shield [AR26; XBRL]; 0.35 assumes partial normalisation.",
+  "FCF 20 [EST]: CFO FY22-26 50/197/107/16/263 (avg 127) less capex ~Rs 150 cr/yr (Vanavate, Vashivali rebuild, Almere) [SCR; calls].",
+  "eps_normalised 6.69 = mean consolidated EPS FY17-26 (7.25, 6.49, 6.12, 2.53, 10.24, 10.73, 4.42, 8.84, 5.29, 5.00) [SCR]; per-share series, so the FY20/FY22 buybacks are already reflected; FY22 includes a negative tax charge (-13%) and FY24-26 include fire-related exceptional items of both signs. 19.1x on it.",
+  "ROIIC (full-cycle window, L38/L42): FY17-19 avg EBIT ex OI 131 on avg IC ~1,040 (equity + screener borrowings) -> ROIC ~8.8% after 30% tax; FY24-26 avg EBIT 181 on avg IC ~2,124 -> ~6.0%; dEBIT +50 x 0.7 / dIC +1,084 = ROIIC ~3% [EST]. TTM ROIC 145.2 x 0.70 / (equity 1,420.7 + net debt 910.7 = 2,331) = 4.4%; with management's Rs 80 cr creative-centre opex added back 6.8%. incremental_roic_5y 0.03; base ROIIC 0.08 assumes the new capacity and centres start to earn.",
+  "Scenarios (5-yr; written before outputs; tails started from the India 1,000-20,000 cr class 21%/11%/15%): blow-up 8% raw; bear 30% = margins stuck (EBITDA ~11%), Europe/US centres keep losing, growth +6%: NOPAT margin 3.5%, ROIIC 4%, exit 14x (FY21-22 trough P/Es 10.9-13.4); base 47% = guidance partly met (revenue +12-13%/yr, EBITDA drifts to ~14% by FY29 vs 15% promised '12-18 months'): +12% -> +8%, NOPAT margin 5.5%, ROIIC 8%, exit 22x (own 10-yr median 23.9x less a discount for sub-CoE returns); bull 15% = 15%+ EBITDA within 18 months, international ramps, debt falls: +14% -> +11%, 7.0%, ROIIC 12%, exit 28x (below Privi 37x).",
+  "Exit P/Es: own FY-end P/Es FY17-26 (reported EPS) 40.9/39.9/24.6/30.1/10.9/13.4/22.5/23.2/33.4/22.5, median 23.9. Peers [SCR 25-Nov-2026]: Privi Speciality 37.2 (aroma chemicals, ROCE 22%), Galaxy Surfactants 29.9 (FMCG-ingredient supplier), Oriental Aromatics 170 (depressed earnings; outlier). No listed Indian pure fragrance-and-flavour compounder.",
+  "Dispersion 0.35 (higher than default: 5-year price range 343.8 -> 48.9 -> 205)."
+ ],
+ "sources": [
+  "research_notes/Deep dives/SHK_live.md",
+  "https://nsearchives.nseindia.in/annual_reports/AR_29522_SHK_2025_2026_A_9351211_01072026182209.pdf",
+  "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1751494_02112026084816_WEB.xml",
+  "https://nsearchives.nseindia.in/corporate/aditya_joshi_keva_co_in_06112026112611_SHKConcallTranscriptIntimationQ2FY27FinalSigned.pdf",
+  "https://www.screener.in/company/SHK/consolidated/",
+  "https://nsearchives.nseindia.in/products/content/sec_bhavdata_full_24112026.csv"
+ ]
+}

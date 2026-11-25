@@ -80,3 +80,4 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
 - 25-Nov-2026: BSE fetch window fix; scoreboard bank XBRL path. Live dive #6 HARSHA (Capital Goods draw, no skips; card size 0, EV 1.58x vs 1.76x; 9 calls, 4 auto). L42. Watch: 6/6 live cards size 0.
 - 25-Nov-2026: India lender base rates (P≥3x 11%, P≤0.5x 25%, blow-up 27%) → card v1.5; bank.py v1.2 (CET1 book, scenario dilution, J-curve). UTKARSHBNK addendum (calls unchanged).
 - 25-Nov-2026: card no-machine audit → partial structural bias (L43); 6 fixes pre-registered, none applied.
+- 25-Nov-2026: live dive #7 SHK (Chemicals draw, walk #1; card size 0, EV 1.59x; 9 calls, 5 auto) → L44. 7/7 live cards size 0 (see L43).

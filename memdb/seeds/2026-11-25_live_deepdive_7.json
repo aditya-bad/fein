@@ -1,0 +1,802 @@
+[
+ {
+  "type": "analysis",
+  "id": "analysis:shk-live-deepdive-2026-11",
+  "title": "S H Kelkar (SHK) - LIVE deep dive #7, first Chemicals/IT-frame draw (protocol v1.4, stages 2-7): method test, no verdict; card v1.5 size 0; 6 live calls",
+  "body": "LIVE method test (L9, L21): random draw (Random(20261204)) from 110 Chemicals (72) / IT (38) names in the India Rs 1,000-20,000 cr band at the 23-Nov-2026 close (DATE1 of the 24-Nov bhavcopy), classified by industry_map.csv (0 unmapped; prereg sha256 25927bb9... written before the frame). SKIPS: none - SHK was walk #1. S2 passed: Deloitte unmodified FY25/FY26 (term-end rotation to BSR), CRISIL AA- reaffirmed with outlook cut to Negative (28-Sep-2026), pledge 8.3% of promoter holding, solvency not red (2 flags; TTM ICR 2.4x), PEAD Q3 (SUE +0.08). FINDINGS: (1) reported TTM EPS 6.82 (18.7x) includes Rs 63 cr of fire-insurance exceptional gains; core EPS ~3.4-3.9 (~33-37x); (2) group ROIC 4.4% TTM (6.8% adding back Rs 80 cr creative-centre opex), full-cycle ROIIC ~3% FY17-19 -> FY24-26, EPS flat FY16-FY26 while IC ~2.6x; 55% of non-current assets in Europe; Flavours 27% pre-tax on segment assets vs Fragrance 6%; (3) net debt Rs 911 cr, inventory Rs 799 cr; (4) credibility hand ledger 31% vs 60% peer median - margin guidance missed twice (FY26 '15%' -> 10.2%; H2 FY26 '14-15%' -> 9.4%) and plant dates slip ~1 yr; (5) dissent net of promoter votes (category split available): ~42% of non-promoter votes against Prabha Vaze (2025), 14.5% against chairman Ramesh Vaze (2026, died 15-Sep-2026); FY25 waiver of excess CEO pay; (6) promoter companies in materials (Keva Aromatics Rs 51 cr) and rent (Keva Constructions, 55% of rent); Mulund land ownership not disclosed (L40); (7) AR geography table (Europe Rs 187 cr) contradicts the deck (~Rs 450 cr). Chemicals checks: China-price cycle cuts both ways (compounder buys Chinese aroma chemicals; small ingredients arm competes); no pollution-board action found (no structured source). VALUATION (worksheet v1.3, core base): Rs 127.53; reverse DCF finds no path (year-10 NOPAT margin 33.4% needed vs 3.7%); scenario DCF value negative in every scenario (ROIIC < CoE with Rs 911 cr net debt); base IRR 7.3%; EV 1.59x raw = anchored vs hurdle 1.76x -> size 0. Calls: 6 live + 3 card calls.",
+  "tickers": [
+   "SHK"
+  ],
+  "tags": [
+   "deep-dive",
+   "live",
+   "method-test",
+   "india",
+   "sector-chemicals",
+   "stage-2",
+   "stage-3",
+   "stage-4",
+   "stage-5",
+   "stage-6",
+   "stage-7"
+  ],
+  "date": "2026-11-25",
+  "status": "done",
+  "data": {
+   "seed": 20261204,
+   "frame_close": "2026-11-23",
+   "frame_in_range": 809,
+   "eligible": 110,
+   "eligible_by_sector": {
+    "Chemicals": 72,
+    "Information Technology": 38
+   },
+   "skips": [],
+   "subject_walk_position": 1,
+   "prereg_sha256": "25927bb950aeee2df728e66110946571a4fd5fbc48de5ceb0c5a9822bad0351a",
+   "card_version": "1.5",
+   "worksheet_version": "1.3",
+   "rule_output": "size 0 (EV 1.59x vs hurdle 1.76x)",
+   "price": 127.53,
+   "pe_trailing_reported": 18.7,
+   "pe_core": 36.3,
+   "pe_normalised": 19.1,
+   "roic_est": 0.044,
+   "roiic_est": 0.03,
+   "base_irr": 0.073,
+   "ev_multiple": 1.59,
+   "credibility": 0.31,
+   "credibility_peer_median": 0.6,
+   "open_soft_flags": 4,
+   "verdict": null
+  },
+  "sources": [
+   "research_notes/Deep dives/SHK_live.md",
+   "research_notes/Deep dives/SHK_selection/prereg_selection.md",
+   "tools/valuation/live/SHK_worksheet.md",
+   "tools/decision/live/SHK_card.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_29522_SHK_2025_2026_A_9351211_01072026182209.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1751494_02112026084816_WEB.xml"
+  ],
+  "links": [
+   {
+    "to": "decision:live-dd-selection-rules",
+    "rel": "applies"
+   },
+   {
+    "to": "analysis:harsha-live-deepdive-2026-11",
+    "rel": "follows"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:SHK:variant-view-2026-11",
+  "title": "SHK variant view (method test): reported cheapness is insurance money plus a ten-year ROIC problem - no claimable mispricing",
+  "body": "Market sees a COOL-priced F&F franchise (18.7x reported, 19.1x normalised) with margins recovering. Our read: core P/E ~33-37x after removing Rs 63 cr of insurance exceptional gains; ROIC 4.4% (6.8% adjusted) and full-cycle ROIIC ~3% vs 12.5% CoE; management missed margin guidance twice. Testable, dated: H2 FY27 EBITDA >= ~14%, Vanavate commissioned by Mar-2027, net debt below Rs 850 cr by Mar-2027. No information edge on creative-centre client wins. Not a recommendation.",
+  "tickers": [
+   "SHK"
+  ],
+  "tags": [
+   "variant-view",
+   "live",
+   "method-test",
+   "india",
+   "sector-chemicals"
+  ],
+  "date": "2026-11-25",
+  "status": "open",
+  "data": {
+   "live": true,
+   "practice": false
+  },
+  "sources": [
+   "research_notes/Deep dives/SHK_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:shk-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:core-eps-before-temperature",
+  "title": "Compute core EPS (ex exceptional and other income, after interest) before any valuation-temperature read",
+  "body": "SHK live dive #7: reported TTM P/E 18.7x looked COOL, but Rs 63 cr of the Rs 159 cr TTM PBT was fire-insurance realisations booked as exceptional items; core EPS (EBIT ex OI x (1 - tax) - post-tax interest) / shares = Rs 3.5 -> ~36x. The v1.4 normalised-EPS rule did not catch it (10-yr average 19.1x agreed with the inflated trailing number). Rule candidate: show reported, core and normalised P/E side by side; exceptional + other income > 25% of PBT = good-but-misleading flag. Screener's 'Stock P/E' appears to exclude exceptional items (32.5x here) - a usable second route.",
+  "tickers": [
+   "SHK"
+  ],
+  "tags": [
+   "method",
+   "valuation",
+   "earnings-quality",
+   "lesson-candidate",
+   "deep-dive"
+  ],
+  "date": "2026-11-25",
+  "status": "candidate",
+  "data": {
+   "reported_pe": 18.7,
+   "core_pe": 36.3,
+   "normalised_pe": 19.1,
+   "exceptional_share_of_pbt": 0.4
+  },
+  "sources": [
+   "research_notes/Deep dives/SHK_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:shk-live-deepdive-2026-11",
+    "rel": "derived_from"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "insight",
+  "id": "insight:dcf-negative-when-roiic-below-coe-with-debt",
+  "title": "When ROIIC < CoE and net debt is large, the worksheet DCF goes negative: the equity is an option on ROIC improving",
+  "body": "SHK: ROIIC 4-12% across scenarios vs CoE 12.5% and net debt Rs 911 cr -> scenario DCF value per share -67 / -43 / -2; DCF-consistent exit P/E -11.5 / -1.7 / +3.5; EV at DCF exits -0.13x vs 1.59x at stated exits. Correct arithmetic (growth at sub-CoE returns consumes cash) but the exit-bet table prints n/a ratios. Tool candidate: say 'DCF value below net debt' explicitly and use the own-median column as the reference. Second live case (after HARSHA) where the whole EV above 1x is the exit-multiple bet.",
+  "tickers": [
+   "SHK"
+  ],
+  "tags": [
+   "method",
+   "valuation",
+   "tool-candidate",
+   "lesson-candidate"
+  ],
+  "date": "2026-11-25",
+  "status": "candidate",
+  "data": {
+   "dcf_value_ps": [
+    -66.8,
+    -42.7,
+    -1.6
+   ],
+   "dcf_pe5": [
+    -11.5,
+    -1.7,
+    3.5
+   ]
+  },
+  "sources": [
+   "research_notes/Deep dives/SHK_live.md",
+   "tools/valuation/live/SHK_worksheet.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:shk-live-deepdive-2026-11",
+    "rel": "derived_from"
+   },
+   {
+    "to": "insight:segment-margin-hides-group-roic",
+    "rel": "extends"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "company",
+  "id": "company:SHK",
+  "title": "S H Kelkar and Company Ltd (Keva) - fragrance & flavour compounder, India + Europe",
+  "body": "NSE SHK / BSE 539450. FY26 revenue Rs 2,368 cr (Fragrance 90%, Flavours 10%); promoters Vaze family 54.87% (Sep-2026; 8.3% of promoter shares pledged); chairman Ramesh Vaze died 15-Sep-2026; CEO Kedar Vaze; Group CFO Jagdish Agarwal (Dec-2025). Plants: Mulund (to be vacated), Vashivali (fire 23-Apr-2024, rebuilt), Vanavate (greenfield, Q4 FY27), Mahad, Vapi, Indonesia, Almere NL, Italy. CRISIL AA-/Negative (28-Sep-2026). Auditor BSR from FY27 (Deloitte before). Live deep dive #7 (2026-11-25).",
+  "tickers": [
+   "SHK"
+  ],
+  "tags": [
+   "company",
+   "india",
+   "sector-chemicals",
+   "fragrance-flavour"
+  ],
+  "date": "2026-11-25",
+  "status": "active",
+  "data": {
+   "mcap_cr_2026_11_23": 1765,
+   "price_2026_11_23": 127.53,
+   "shares_cr": 13.842,
+   "net_debt_cr_2026_09_30": 911,
+   "roic_ttm": 0.044
+  },
+  "sources": [
+   "research_notes/Deep dives/SHK_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:shk-live-deepdive-2026-11",
+    "rel": "analysed_in"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:SHK:q3fy27-revenue-650cr-plus",
+  "title": "Paper call: S H Kelkar Q3 FY27 consolidated revenue from operations is >= Rs 650 cr (+11.3% YoY)",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #7, company drawn at random (seed 20261204) from Chemicals / IT names in the Rs 1,000-20,000 cr band (method test, L9/L21). Probability 0.55 (naive base rate 0.54) that: S H Kelkar Q3 FY27 consolidated revenue from operations is >= Rs 650 cr (+11.3% YoY). Our reasoning: Q2 FY27 Rs 636.19 cr; Q3/Q2 ratio 1.04 (FY24), 1.00 (FY25), 1.054 (FY26) -> Rs 636-670 cr, central ~Rs 655 cr; ~Rs 25 cr/yr of exited low-margin business costs ~1 pt; price pass-through helps. Naive base: 7 of the last 13 quarters (Q2 FY24-Q2 FY27) grew >= 11.3% YoY [SCR]. Resolution: YES if consolidated revenue from operations for the quarter ended 31-Dec-2026, as first reported, is >= Rs 650 cr. Source: NSE integrated-filing XBRL (consolidated) / screener consolidated quarterly. Resolve by 2027-02-28; score with Brier vs the base rate.",
+  "tickers": [
+   "SHK"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "sector-chemicals",
+   "method-test",
+   "cat-revenue"
+  ],
+  "date": "2026-11-25",
+  "status": "open",
+  "data": {
+   "probability": 0.55,
+   "base_rate_probability": 0.54,
+   "method": "deep-dive protocol v1.4 (live #7, Chemicals/IT frame)",
+   "made_on": "2026-11-25",
+   "resolve_by": "2027-02-28",
+   "resolution_rule": "YES if consolidated revenue from operations for the quarter ended 31-Dec-2026, as first reported, is >= Rs 650 cr.",
+   "resolution_source": "NSE integrated-filing XBRL (consolidated) / screener consolidated quarterly",
+   "base_rate_reasoning": "7 of the last 13 quarters (Q2 FY24-Q2 FY27) grew >= 11.3% YoY [SCR].",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/SHK_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:shk-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:SHK:fy27-revenue-2700cr-plus",
+  "title": "Paper call: S H Kelkar FY27 consolidated revenue from operations is >= Rs 2,700 cr (+14.0%)",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #7, company drawn at random (seed 20261204) from Chemicals / IT names in the Rs 1,000-20,000 cr band (method test, L9/L21). Probability 0.50 (naive base rate 0.31) that: S H Kelkar FY27 consolidated revenue from operations is >= Rs 2,700 cr (+14.0%). Our reasoning: H1 FY27 Rs 1,298.6 cr (+14.5%); H2 needs Rs 1,401 cr = +13.6% vs H2 FY26 Rs 1,233.7 cr; inflation pricing continues and the CEO expects strong H2 demand, but his growth numbers have missed before (FY25 'well in excess of 12%' -> +10.0%). Naive base: 3 of 11 FYs (FY16-FY26) grew >= 14% [SCR] (Laplace 4/13 = 0.31). Resolution: YES if consolidated revenue from operations for FY ended 31-Mar-2027, as first reported, is >= Rs 2,700 cr. Source: NSE integrated-filing XBRL (consolidated) / screener consolidated. Resolve by 2027-05-31; score with Brier vs the base rate.",
+  "tickers": [
+   "SHK"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "sector-chemicals",
+   "method-test",
+   "cat-revenue"
+  ],
+  "date": "2026-11-25",
+  "status": "open",
+  "data": {
+   "probability": 0.5,
+   "base_rate_probability": 0.31,
+   "method": "deep-dive protocol v1.4 (live #7, Chemicals/IT frame)",
+   "made_on": "2026-11-25",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if consolidated revenue from operations for FY ended 31-Mar-2027, as first reported, is >= Rs 2,700 cr.",
+   "resolution_source": "NSE integrated-filing XBRL (consolidated) / screener consolidated",
+   "base_rate_reasoning": "3 of 11 FYs (FY16-FY26) grew >= 14% [SCR] (Laplace 4/13 = 0.31).",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/SHK_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:shk-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:SHK:fy27-opm-13pct-plus",
+  "title": "Paper call: S H Kelkar FY27 consolidated operating margin (resolver definition) is >= 13.0%",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #7, company drawn at random (seed 20261204) from Chemicals / IT names in the Rs 1,000-20,000 cr band (method test, L9/L21). Probability 0.35 (naive base rate 0.79) that: S H Kelkar FY27 consolidated operating margin (resolver definition) is >= 13.0%. Our reasoning: H1 FY27 12.90% (Q1 13.38, Q2 12.40); H2 needs >= 13.1% but H2 was weaker than H1 in FY25 (12.3% vs 15.6%) and FY26 (9.4% vs 11.1%); new-plant costs arrive in Q4 FY27; margin promises missed twice (credibility 31%). Naive base: 10 of 12 FYs (FY15-FY26) had OPM >= 13% [SCR] (Laplace 11/14 = 0.79). Resolution: YES if FY27 consolidated (revenue - (total expenses - finance costs - D&A)) / revenue, from the FY27 consolidated results as first reported, is >= 13.0% (rounded to 1 decimal). Source: NSE integrated-filing XBRL (consolidated) / screener consolidated. Resolve by 2027-05-31; score with Brier vs the base rate.",
+  "tickers": [
+   "SHK"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "sector-chemicals",
+   "method-test",
+   "cat-margin"
+  ],
+  "date": "2026-11-25",
+  "status": "open",
+  "data": {
+   "probability": 0.35,
+   "base_rate_probability": 0.79,
+   "method": "deep-dive protocol v1.4 (live #7, Chemicals/IT frame)",
+   "made_on": "2026-11-25",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if FY27 consolidated (revenue - (total expenses - finance costs - D&A)) / revenue, from the FY27 consolidated results as first reported, is >= 13.0% (rounded to 1 decimal).",
+   "resolution_source": "NSE integrated-filing XBRL (consolidated) / screener consolidated",
+   "base_rate_reasoning": "10 of 12 FYs (FY15-FY26) had OPM >= 13% [SCR] (Laplace 11/14 = 0.79).",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/SHK_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:shk-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:SHK:fy27-net-profit-120cr-plus",
+  "title": "Paper call: S H Kelkar FY27 consolidated net profit (as reported, incl. exceptional items) is >= Rs 120 cr",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #7, company drawn at random (seed 20261204) from Chemicals / IT names in the Rs 1,000-20,000 cr band (method test, L9/L21). Probability 0.15 (naive base rate 0.29) that: S H Kelkar FY27 consolidated net profit (as reported, incl. exceptional items) is >= Rs 120 cr. Our reasoning: H1 FY27 Rs 59.99 cr incl. Rs 29.95 cr insurance exceptional; H2 needs Rs 60 cr vs a Q2 run-rate of ~Rs 15 cr/quarter; little insurance claim appears left; central FY27 ~Rs 95-105 cr. Naive base: 3 of 12 FYs (FY15-FY26) had PAT >= Rs 120 cr [SCR] (Laplace 4/14 = 0.29). Resolution: YES if consolidated profit for the period (ProfitLossForPeriod) for FY ended 31-Mar-2027, as first reported, is >= Rs 120 cr. Source: NSE integrated-filing XBRL (consolidated) / screener consolidated. Resolve by 2027-05-31; score with Brier vs the base rate.",
+  "tickers": [
+   "SHK"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "sector-chemicals",
+   "method-test",
+   "cat-profit"
+  ],
+  "date": "2026-11-25",
+  "status": "open",
+  "data": {
+   "probability": 0.15,
+   "base_rate_probability": 0.29,
+   "method": "deep-dive protocol v1.4 (live #7, Chemicals/IT frame)",
+   "made_on": "2026-11-25",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if consolidated profit for the period (ProfitLossForPeriod) for FY ended 31-Mar-2027, as first reported, is >= Rs 120 cr.",
+   "resolution_source": "NSE integrated-filing XBRL (consolidated) / screener consolidated",
+   "base_rate_reasoning": "3 of 12 FYs (FY15-FY26) had PAT >= Rs 120 cr [SCR] (Laplace 4/14 = 0.29).",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/SHK_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:shk-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:SHK:vanavate-commissioned-by-mar27",
+  "title": "Paper call: S H Kelkar's Vanavate fragrance facility is commissioned / put to use on or before 31-Mar-2027",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #7, company drawn at random (seed 20261204) from Chemicals / IT names in the Rs 1,000-20,000 cr band (method test, L9/L21). Probability 0.30 (naive base rate 0.50) that: S H Kelkar's Vanavate fragrance facility is commissioned / put to use on or before 31-Mar-2027. Our reasoning: The Vanavate date moved in four successive documents (May-2025 'later this calendar year'; AR Jul-2026 Q2 FY27; Aug-2026 Q3; Nov-2026 'put to use in quarter 4'); 4 of 5 dated plant promises in our ledger were late. Naive base: [EST] coin-flip for a 'next quarter' plant date. Resolution: YES if a company document (Reg-30, results deck, press release or Q4 FY27 call transcript) dated on or before 31-May-2027 states that the Vanavate facility was commissioned, started commercial production or was put to use on or before 31-Mar-2027; otherwise NO. Source: NSE/BSE announcements, Q4 FY27 deck and call transcript. Resolve by 2027-05-31; score with Brier vs the base rate.",
+  "tickers": [
+   "SHK"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "sector-chemicals",
+   "method-test",
+   "cat-event"
+  ],
+  "date": "2026-11-25",
+  "status": "open",
+  "data": {
+   "probability": 0.3,
+   "base_rate_probability": 0.5,
+   "method": "deep-dive protocol v1.4 (live #7, Chemicals/IT frame)",
+   "made_on": "2026-11-25",
+   "resolve_by": "2027-05-31",
+   "resolution_rule": "YES if a company document (Reg-30, results deck, press release or Q4 FY27 call transcript) dated on or before 31-May-2027 states that the Vanavate facility was commissioned, started commercial production or was put to use on or before 31-Mar-2027; otherwise NO.",
+   "resolution_source": "NSE/BSE announcements, Q4 FY27 deck and call transcript",
+   "base_rate_reasoning": "[EST] coin-flip for a 'next quarter' plant date.",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/SHK_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:shk-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:SHK:beats-nifty500-to-sep27",
+  "title": "Paper call: S H Kelkar (SHK) beats the Nifty 500 from 23-Nov-2026 (Rs 127.53; 23,748.15) to 30-Sep-2027",
+  "body": "Deep-dive-generated forward test (NOT a recommendation; not buy/sell). Live deep dive #7, company drawn at random (seed 20261204) from Chemicals / IT names in the Rs 1,000-20,000 cr band (method test, L9/L21). Probability 0.42 (naive base rate 0.44) that: S H Kelkar (SHK) beats the Nifty 500 from 23-Nov-2026 (Rs 127.53; 23,748.15) to 30-Sep-2027. Our reasoning: PEAD Q3 (no drift signal); reported-EPS cheapness unwinds as insurance gains drop out of trailing numbers; net debt Rs 911 cr and CRISIL Negative outlook; upside if EBITDA reaches 14%. Naive base: [EST] as live #1/#3/#4/#6 (a random stock beats the index slightly less than half the time). Resolution: YES if SHK's price return (Yahoo SHK.NS close, split-adjusted) from the 23-Nov-2026 close (Rs 127.53) to the last close on or before 30-Sep-2027 exceeds the Nifty 500 (^CRSLDX) price return from 23,748.15 over the same dates. Source: Yahoo v8 SHK.NS and ^CRSLDX. Resolve by 2027-09-30; score with Brier vs the base rate.",
+  "tickers": [
+   "SHK"
+  ],
+  "tags": [
+   "paper-call",
+   "deepdive-generated",
+   "live",
+   "india",
+   "sector-chemicals",
+   "method-test",
+   "cat-price"
+  ],
+  "date": "2026-11-25",
+  "status": "open",
+  "data": {
+   "probability": 0.42,
+   "base_rate_probability": 0.44,
+   "method": "deep-dive protocol v1.4 (live #7, Chemicals/IT frame)",
+   "made_on": "2026-11-25",
+   "resolve_by": "2027-09-30",
+   "resolution_rule": "YES if SHK's price return (Yahoo SHK.NS close, split-adjusted) from the 23-Nov-2026 close (Rs 127.53) to the last close on or before 30-Sep-2027 exceeds the Nifty 500 (^CRSLDX) price return from 23,748.15 over the same dates.",
+   "resolution_source": "Yahoo v8 SHK.NS and ^CRSLDX",
+   "base_rate_reasoning": "[EST] as live #1/#3/#4/#6 (a random stock beats the index slightly less than half the time).",
+   "live": true,
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/SHK_live.md"
+  ],
+  "links": [
+   {
+    "to": "analysis:shk-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:SHK:card-2026-11-25-5y-ge3x",
+  "title": "Paper call: S H Kelkar and Company Ltd (fragrances and flavours; Keva) 5-year outcome \u22653.0x from 2026-11-23 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.14 (base rate 0.213, class india_nonfin_1000_20000cr_5y) that: YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-23 (entry INR 127.53) to the last close on or before 2031-11-23 is \u2265 3.0. Model: worksheet scenarios bear 30%\u21920.60x, base 47%\u21921.89x, bull 15%\u21923.30x with \u03c3=0.35; reverse DCF base-case IRR 7.3%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.59x anchored (raw 1.59x) vs hurdle 1.76x \u2192 below hurdle \u2192 size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "SHK"
+  ],
+  "tags": [
+   "decision-card",
+   "deepdive-generated",
+   "india",
+   "live",
+   "method-test",
+   "paper-call",
+   "sector-chemicals",
+   "stage-6",
+   "valuation"
+  ],
+  "date": "2026-11-25",
+  "status": "open",
+  "data": {
+   "probability": 0.1357,
+   "base_rate_probability": 0.2129,
+   "anchored_probability": null,
+   "anchor_weight": null,
+   "base_rate_reasoning": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted). n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "method": "decision-card-v1",
+   "card_version": "1.5",
+   "made_on": "2026-11-25",
+   "resolve_by": "2031-11-23",
+   "entry_date": "2026-11-23",
+   "entry_price": 127.53,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-23 (entry INR 127.53) to the last close on or before 2031-11-23 is \u2265 3.0.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/SHK_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_29522_SHK_2025_2026_A_9351211_01072026182209.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1751494_02112026084816_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/aditya_joshi_keva_co_in_06112026112611_SHKConcallTranscriptIntimationQ2FY27FinalSigned.pdf",
+   "https://www.screener.in/company/SHK/consolidated/",
+   "https://nsearchives.nseindia.in/products/content/sec_bhavdata_full_24112026.csv"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "analysis:shk-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:SHK:card-2026-11-25-5y-le0p5x",
+  "title": "Paper call: S H Kelkar and Company Ltd (fragrances and flavours; Keva) 5-year outcome \u22640.5x from 2026-11-23 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.17 (base rate 0.113, class india_nonfin_1000_20000cr_5y) that: YES if the total-return multiple from 2026-11-23 (entry INR 127.53) to the last close on or before 2031-11-23 is \u2264 0.5, or the stock is delisted/suspended below that level. Model: worksheet scenarios bear 30%\u21920.60x, base 47%\u21921.89x, bull 15%\u21923.30x with \u03c3=0.35; reverse DCF base-case IRR 7.3%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.59x anchored (raw 1.59x) vs hurdle 1.76x \u2192 below hurdle \u2192 size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "SHK"
+  ],
+  "tags": [
+   "decision-card",
+   "deepdive-generated",
+   "india",
+   "live",
+   "method-test",
+   "paper-call",
+   "sector-chemicals",
+   "stage-6",
+   "valuation"
+  ],
+  "date": "2026-11-25",
+  "status": "open",
+  "data": {
+   "probability": 0.1715,
+   "base_rate_probability": 0.1127,
+   "anchored_probability": 0.1421,
+   "anchor_weight": 0.5,
+   "base_rate_reasoning": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted). n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "method": "decision-card-v1",
+   "card_version": "1.5",
+   "made_on": "2026-11-25",
+   "resolve_by": "2031-11-23",
+   "entry_date": "2026-11-23",
+   "entry_price": 127.53,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple from 2026-11-23 (entry INR 127.53) to the last close on or before 2031-11-23 is \u2264 0.5, or the stock is delisted/suspended below that level.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/SHK_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_29522_SHK_2025_2026_A_9351211_01072026182209.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1751494_02112026084816_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/aditya_joshi_keva_co_in_06112026112611_SHKConcallTranscriptIntimationQ2FY27FinalSigned.pdf",
+   "https://www.screener.in/company/SHK/consolidated/",
+   "https://nsearchives.nseindia.in/products/content/sec_bhavdata_full_24112026.csv"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "analysis:shk-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ]
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:SHK:card-2026-11-25-5y-blowup",
+  "title": "Paper call: S H Kelkar and Company Ltd (fragrances and flavours; Keva) 5-year outcome blow-up from 2026-11-23 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.08 (base rate 0.154, class india_nonfin_1000_20000cr_5y) that: YES if between 2026-11-23 and 2031-11-23: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples). Model: worksheet scenarios bear 30%\u21920.60x, base 47%\u21921.89x, bull 15%\u21923.30x with \u03c3=0.35; reverse DCF base-case IRR 7.3%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.59x anchored (raw 1.59x) vs hurdle 1.76x \u2192 below hurdle \u2192 size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "SHK"
+  ],
+  "tags": [
+   "decision-card",
+   "deepdive-generated",
+   "india",
+   "live",
+   "method-test",
+   "paper-call",
+   "sector-chemicals",
+   "stage-6",
+   "valuation"
+  ],
+  "date": "2026-11-25",
+  "status": "open",
+  "data": {
+   "probability": 0.08,
+   "base_rate_probability": 0.1537,
+   "anchored_probability": 0.1169,
+   "anchor_weight": 0.5,
+   "base_rate_reasoning": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted). n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "method": "decision-card-v1",
+   "card_version": "1.5",
+   "made_on": "2026-11-25",
+   "resolve_by": "2031-11-23",
+   "entry_date": "2026-11-23",
+   "entry_price": 127.53,
+   "currency": "INR",
+   "resolution_rule": "YES if between 2026-11-23 and 2031-11-23: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples).",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/SHK_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_29522_SHK_2025_2026_A_9351211_01072026182209.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1751494_02112026084816_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/aditya_joshi_keva_co_in_06112026112611_SHKConcallTranscriptIntimationQ2FY27FinalSigned.pdf",
+   "https://www.screener.in/company/SHK/consolidated/",
+   "https://nsearchives.nseindia.in/products/content/sec_bhavdata_full_24112026.csv"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "analysis:shk-live-deepdive-2026-11",
+    "rel": "generated_by"
+   }
+  ]
+ },
+ {
+  "type": "decision",
+  "id": "decision:card:SHK:2026-11-25",
+  "title": "Decision card SHK 2026-11-25 (paper)",
+  "body": "Decision card v1 for S H Kelkar and Company Ltd (fragrances and flavours; Keva). Rule output: size 0: blocked by Expected value vs hurdle (EV 1.59x anchored (raw 1.59x) vs hurdle 1.76x \u2192 below hurdle \u2192 size 0). Thesis: Method-test thesis: S H Kelkar (Keva) is India's largest Indian-origin fragrance-and-flavour compounder (FY26 revenue Rs 2,368 cr: Fragrance 90%, Flavours 10%), selling blends to FMCG companies and blenders from Mumbai/Raigad (Mulund, Vashivali, Vanavate, Mahad), Vapi, Indonesia, the Netherlands (Holland Aromatics, Almere), Italy (CFF) and new creative centres in Germany, the UK and the US. Gross margin is steady at ~42-43%, but EBITDA margin fell from 16% (FY24) to 10% (FY26) and 12.9% (H1 FY27) as Rs ~80 cr/yr of creative-centre opex, higher insurance after the Apr-2024 Vashivali fire and FX losses hit; consolidated EPS was Rs 5.05 in FY16 and Rs 5.00 in FY26 while invested capital roughly 2.6x. The 5-year outcome depends on whether ~Rs 2,330 cr of invested capital (55% of non-current assets now in Europe) can earn more than the ~3% full-cycle ROIIC of the last eight years, with net debt of Rs 911 cr and interest cover of 2.4x. Variant view: Market: at Rs 127.53 the stock trades at 18.7x reported trailing EPS (Rs 6.82) and 19.1x 10-year average EPS - COOL vs its own 10-year FY-end median (23.9x) and COLD vs ingredient peers (Privi 37x, Galaxy 30x). Our read: the cheapness is mostly earnings quality and returns, not mispricing. (1) Rs 63 cr of TTM pre-tax profit is fire-insurance realisations booked as exceptional items; on core earnings (EBIT ex other income Rs 145 cr, effective tax ~35-51% because foreign losses are unshielded, interest Rs 61 cr) EPS is ~Rs 3.4-3.9 and the P/E ~33-37x (screener's ex-exceptional 32.5x agrees). (2) Group ROIC is ~4.4% (6.8% if the Rs 80 cr of creative-centre opex is added back, as management suggests) and full-cycle ROIIC ~3% against a 12.5% cost of equity; at those returns the worksheet's DCF value is below net debt, so every scenario above 1x is an exit-multiple bet (L21). (3) Management guided 15% EBITDA for FY26 (May-2025) and 14-15% for H2 FY26 (Nov-2025) and delivered 10.2% and 9.4%; plant dates slipped about a year (Vanavate: 'later this calendar year' in May-2025 -> Q4 FY27). Hand-ledger credibility 31% vs a 60% peer median. Evidence for the other side: Flavours earns ~27% pre-tax on segment assets and grew 47% in H1 FY27; H1 FY27 EBITDA +33%; gross margin held through an input-cost spike; Holland Aromatics and the creative centres are 'all cost in' with first sales in the US, UK and Germany; the CEO promises 15%+ EBITDA within 12-18 months and debt reduction from Mar-2027. No claimable edge: we cannot see client wins at the creative centres earlier than the market. The trackable question is dated and public: does H2 FY27 EBITDA reach ~14% and net debt fall below Rs 850 cr by Mar-2027? Departure from the outside view: raw P(<=0.5x) 17% is above the class 11% (leverage, sub-CoE returns, an 86% drawdown in 2016-20 without a revenue decline) and raw P(blow-up) 8% is below 15% (AA- rating, no pledge stress); default w=0.5 lowers the first and raises the second. Checked by paper calls thesis:paper-call:SHK:*. Open soft flags: 5. P(\u22653x) 14% vs base 21%; P(\u22640.5x) 17% vs base 11.3%; EV 5-yr multiple 1.59x vs hurdle 1.76x. Review 2027-02-15.",
+  "tickers": [
+   "SHK"
+  ],
+  "tags": [
+   "decision-card",
+   "stage-6",
+   "india"
+  ],
+  "date": "2026-11-25",
+  "data": {
+   "gates": [
+    {
+     "gate": "Stage 2 hard filters",
+     "result": "passed (7 rules)",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 3 PEAD avoid flag",
+     "result": "clear",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 3 survival cap",
+     "result": "clear",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 4 soft flags",
+     "result": "5 open, variant view written",
+     "blocks": false
+    },
+    {
+     "gate": "Tail anchoring (v1.4 warning)",
+     "result": "anchoring lowered documented tails \u2014 check evidence note: P(\u22640.5x)",
+     "blocks": false
+    },
+    {
+     "gate": "Expected value vs hurdle",
+     "result": "EV 1.59x anchored (raw 1.59x) vs hurdle 1.76x \u2192 below hurdle \u2192 size 0",
+     "blocks": true
+    }
+   ],
+   "size_after_gates": 0.0,
+   "survival_cap": {
+    "status": "clear",
+    "triggered": false,
+    "blocks": false,
+    "mode": null,
+    "cap_size": null,
+    "reasons": [],
+    "already_owned": false
+   },
+   "anchor_weight": 0.5,
+   "ev_mult5_raw": 1.5852553172529222,
+   "ev_mult5_anchored": 1.5934078017916675,
+   "p_blowup_anchored": 0.11685000000000001,
+   "p_le_half_anchored": 0.14208221969574292,
+   "anchor_lowered_tails": [
+    "P(\u22640.5x)"
+   ],
+   "rule_size": 0.0,
+   "kelly_f_star": 0.0,
+   "open_soft_flags": 5,
+   "review_date": "2027-02-15",
+   "kill_criteria": [
+    {
+     "if": "Consolidated EBITDA margin (resolver basis) below 12% in FY27",
+     "measure": "FY27 consolidated XBRL / screener",
+     "by": "2027-05-31"
+    },
+    {
+     "if": "Net debt above Rs 950 cr at 31-Mar-2027 (management: Sep-2026 was the peak)",
+     "measure": "AR FY27 / Q4 FY27 deck",
+     "by": "2027-05-31"
+    },
+    {
+     "if": "CRISIL downgrade below AA- or a rating withdrawal",
+     "measure": "Reg-30 / CRISIL site",
+     "by": "2027-11-30"
+    },
+    {
+     "if": "Impairment of European goodwill/intangibles (Rs 522 cr of goodwill + other intangibles at Sep-2026) above Rs 50 cr",
+     "measure": "AR FY27 / results notes",
+     "by": "2027-11-30"
+    },
+    {
+     "if": "Vanavate not commissioned by 30-Jun-2027",
+     "measure": "Reg-30 / Q4 FY27 call",
+     "by": "2027-06-30"
+    }
+   ],
+   "override_log": [
+    {
+     "date": "2026-11-25",
+     "flag": "Survival cap core-asset threat (v1.4)",
+     "decision": "not set",
+     "why": "L40 checked: no government lease/licence/subsidy found in AR26 or Reg-30s; plants need MPCB/GPCB consents (Vanavate and the rebuilt Vashivali need fresh consent-to-operate) - no public order retrieved, no closure direction found in NSE/BSE filings or a web search (25-Nov-2026). Mulund relocation is the company's own plan. Not existential on the evidence."
+    },
+    {
+     "date": "2026-11-25",
+     "flag": "Both-flags balance-sheet question (L39 addendum)",
+     "decision": "not triggered",
+     "why": "Pledge 8.3% of promoter holding (< 25%) and TTM ICR 2.4x (> 1.5x): neither flag fires. The balance-sheet question is still asked in the variant view (net debt and ICR are the second open flag)."
+    },
+    {
+     "date": "2026-11-25",
+     "flag": "Credibility peer median",
+     "decision": "auto-components median used",
+     "why": "No chemicals or F&F peer ledger on file (L18); disclosed. The -29 pt gap is large enough that the choice of peer set does not change the open-flag count."
+    },
+    {
+     "date": "2026-11-25",
+     "flag": "Tail anchoring lowers a tail (L40)",
+     "decision": "default w=0.5 kept",
+     "why": "Raw P(<=0.5x) 17% > class 11%, so anchoring lowers it; raw blow-up 8% < 15%, so anchoring raises it. Flagged as required; one weight for both tails is a tool limit (lesson candidate)."
+    }
+   ],
+   "paper_calls": [
+    "thesis:paper-call:SHK:card-2026-11-25-5y-ge3x",
+    "thesis:paper-call:SHK:card-2026-11-25-5y-le0p5x",
+    "thesis:paper-call:SHK:card-2026-11-25-5y-blowup"
+   ],
+   "practice": false
+  },
+  "sources": [
+   "research_notes/Deep dives/SHK_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_29522_SHK_2025_2026_A_9351211_01072026182209.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1751494_02112026084816_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/aditya_joshi_keva_co_in_06112026112611_SHKConcallTranscriptIntimationQ2FY27FinalSigned.pdf",
+   "https://www.screener.in/company/SHK/consolidated/",
+   "https://nsearchives.nseindia.in/products/content/sec_bhavdata_full_24112026.csv"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "thesis:paper-call:SHK:card-2026-11-25-5y-ge3x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:SHK:card-2026-11-25-5y-le0p5x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:SHK:card-2026-11-25-5y-blowup",
+    "rel": "about"
+   }
+  ]
+ }
+]

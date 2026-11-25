@@ -1,0 +1,727 @@
+{
+ "input": {
+  "company": "S H Kelkar and Company Ltd (fragrances and flavours; Keva)",
+  "ticker": "SHK",
+  "market": "india",
+  "practice": false,
+  "currency": "INR",
+  "units": "INR cr",
+  "as_of": "2026-11-23",
+  "price": 127.53,
+  "shares": 13.842,
+  "net_debt": 911.0,
+  "non_operating_value": 0.0,
+  "other_income_recurring_post_tax": 0.0,
+  "treasury_income_post_tax": -45.8,
+  "base": {
+   "fy": "TTM Sep-2026 (core: ex exceptional items and other income)",
+   "revenue": 2532.4,
+   "ebitda": 283.6,
+   "ebit": 145.2,
+   "pat": 47.3,
+   "fcf": 20.0,
+   "eps": 3.51,
+   "eps_normalised": 6.69,
+   "eps_forward": null,
+   "pe_trailing": 18.7,
+   "sbc": 0.0
+  },
+  "tax_rate": 0.35,
+  "roiic": 0.08,
+  "terminal_roic": 0.08,
+  "incremental_roic_5y": 0.03,
+  "years": 10,
+  "coe": 0.125,
+  "terminal_growth": 0.05,
+  "payout_of_fcf": 0.2,
+  "dispersion": 0.35,
+  "base_case": {
+   "name": "base",
+   "growth": 0.12,
+   "growth_end": 0.08,
+   "margin_end": 0.055,
+   "roiic": 0.08,
+   "exit_pe": 22.0,
+   "prob": 0.0
+  },
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.3,
+    "growth": 0.06,
+    "growth_end": 0.05,
+    "margin_end": 0.035,
+    "roiic": 0.04,
+    "exit_pe": 14.0
+   },
+   {
+    "name": "base",
+    "prob": 0.47,
+    "growth": 0.12,
+    "growth_end": 0.08,
+    "margin_end": 0.055,
+    "roiic": 0.08,
+    "exit_pe": 22.0
+   },
+   {
+    "name": "bull",
+    "prob": 0.15,
+    "growth": 0.14,
+    "growth_end": 0.11,
+    "margin_end": 0.07,
+    "roiic": 0.12,
+    "exit_pe": 28.0
+   }
+  ],
+  "blowup": {
+   "prob": 0.08,
+   "multiple": 0.25,
+   "note": "Debt-funded working capital (inventory Rs 799 cr + receivables Rs 615 cr at Sep-2026 vs net debt Rs 911 cr), interest cover 2.4x TTM, CRISIL AA- outlook cut to Negative (28-Sep-2026), Europe holding 55% of non-current assets at low returns; a second input-cost shock (Middle East/crude-linked aroma chemicals) or a large European impairment with covenant pressure would put the equity on an -80% path (the stock already fell 343.8 -> 48.9, -86%, Sep-2016 -> 2020 without any revenue decline)"
+  },
+  "twin_engine": {
+   "targets": [
+    2,
+    3,
+    5
+   ],
+   "horizon": 5,
+   "exit_pes": null,
+   "hist_eps_cagr": 0.0,
+   "hist_eps_note": "Consolidated EPS FY16 5.05 -> FY26 5.00 [SCR] = ~0%/yr over 10 years while revenue grew 925 -> 2,368 (+9.9%/yr) and invested capital roughly 2.6x"
+  },
+  "pe_history": [
+   {
+    "date": "FY17",
+    "pe": 40.9
+   },
+   {
+    "date": "FY18",
+    "pe": 39.9
+   },
+   {
+    "date": "FY19",
+    "pe": 24.6
+   },
+   {
+    "date": "FY20",
+    "pe": 30.1
+   },
+   {
+    "date": "FY21",
+    "pe": 10.9
+   },
+   {
+    "date": "FY22",
+    "pe": 13.4
+   },
+   {
+    "date": "FY23",
+    "pe": 22.5
+   },
+   {
+    "date": "FY24",
+    "pe": 23.2
+   },
+   {
+    "date": "FY25",
+    "pe": 33.4
+   },
+   {
+    "date": "FY26",
+    "pe": 22.5
+   }
+  ],
+  "sector_pes": {
+   "Privi Speciality Chemicals": 37.2,
+   "Galaxy Surfactants": 29.9,
+   "Oriental Aromatics": 170.0
+  },
+  "market_pe": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)"
+  },
+  "notes": [
+   "Price Rs 127.53 = NSE bhavcopy close 23-Nov-2026 (sec_bhavdata_full_24112026.csv, DATE1 23-Nov-2026) = Yahoo v8 SHK.NS close 23-Nov-2026 (two sources). screener.in 25-Nov-2026 Rs 126 / mcap Rs 1,742 cr. Shares 13.842 cr (138,420,801; universe.csv = SHP XBRL 30-Sep-2026).",
+   "Net debt 911 at 30-Sep-2026: borrowings non-current 203.48 + current 769.28 = 972.76 less cash 61.74 + other bank 0.34 [Q2FY27 consolidated XBRL] = 910.7 = company deck 'Net Debt 911' (two sources). Leases (~Rs 190 cr [EST] = screener borrowings 1,163 - 973) excluded; rent sits inside the margin.",
+   "treasury_income_post_tax -45.8 = TTM finance cost 60.9 (13.50 + 15.03 + 15.00 + 17.40, XBRL) x (1 - 0.25), held flat (management: H2 interest Rs 16-17 cr/quarter; debt 'peaked' Sep-2026).",
+   "Base = TTM Q3FY26..Q2FY27 [XBRL = screener]: revenue 583.80 + 649.94 + 662.42 + 636.19 = 2,532.4; operating profit 56.09 + 60.03 + 88.66 + 78.86 = 283.6; D&A 138.4 -> EBIT ex other income 145.2. Reported PAT 94.4 / EPS 6.82 (18.7x) includes exceptional gains of 63.0 (fire-insurance realisations 33.07 in Q3 FY26 and 29.95 in Q1 FY27) and other income 12.1. Core EPS: (EBIT 145.2 x 0.65 - 45.8) / 13.842 = 3.51 -> 36.3x; cross-check (PBT ex exceptional 96.4 less reported tax ex an assumed 25% on the exceptional) = 47.3 / 13.842 = 3.42; screener's 'Stock P/E 32.5' implies ~Rs 53.6 cr (ex-exceptional profit) = second route, ~3.9/share.",
+   "tax_rate 0.35: Indian rate 25.2% but group effective tax 38% FY26, 36% FY25, 51% on TTM core profit because European/US creative-centre losses get no tax shield [AR26; XBRL]; 0.35 assumes partial normalisation.",
+   "FCF 20 [EST]: CFO FY22-26 50/197/107/16/263 (avg 127) less capex ~Rs 150 cr/yr (Vanavate, Vashivali rebuild, Almere) [SCR; calls].",
+   "eps_normalised 6.69 = mean consolidated EPS FY17-26 (7.25, 6.49, 6.12, 2.53, 10.24, 10.73, 4.42, 8.84, 5.29, 5.00) [SCR]; per-share series, so the FY20/FY22 buybacks are already reflected; FY22 includes a negative tax charge (-13%) and FY24-26 include fire-related exceptional items of both signs. 19.1x on it.",
+   "ROIIC (full-cycle window, L38/L42): FY17-19 avg EBIT ex OI 131 on avg IC ~1,040 (equity + screener borrowings) -> ROIC ~8.8% after 30% tax; FY24-26 avg EBIT 181 on avg IC ~2,124 -> ~6.0%; dEBIT +50 x 0.7 / dIC +1,084 = ROIIC ~3% [EST]. TTM ROIC 145.2 x 0.70 / (equity 1,420.7 + net debt 910.7 = 2,331) = 4.4%; with management's Rs 80 cr creative-centre opex added back 6.8%. incremental_roic_5y 0.03; base ROIIC 0.08 assumes the new capacity and centres start to earn.",
+   "Scenarios (5-yr; written before outputs; tails started from the India 1,000-20,000 cr class 21%/11%/15%): blow-up 8% raw; bear 30% = margins stuck (EBITDA ~11%), Europe/US centres keep losing, growth +6%: NOPAT margin 3.5%, ROIIC 4%, exit 14x (FY21-22 trough P/Es 10.9-13.4); base 47% = guidance partly met (revenue +12-13%/yr, EBITDA drifts to ~14% by FY29 vs 15% promised '12-18 months'): +12% -> +8%, NOPAT margin 5.5%, ROIIC 8%, exit 22x (own 10-yr median 23.9x less a discount for sub-CoE returns); bull 15% = 15%+ EBITDA within 18 months, international ramps, debt falls: +14% -> +11%, 7.0%, ROIIC 12%, exit 28x (below Privi 37x).",
+   "Exit P/Es: own FY-end P/Es FY17-26 (reported EPS) 40.9/39.9/24.6/30.1/10.9/13.4/22.5/23.2/33.4/22.5, median 23.9. Peers [SCR 25-Nov-2026]: Privi Speciality 37.2 (aroma chemicals, ROCE 22%), Galaxy Surfactants 29.9 (FMCG-ingredient supplier), Oriental Aromatics 170 (depressed earnings; outlier). No listed Indian pure fragrance-and-flavour compounder.",
+   "Dispersion 0.35 (higher than default: 5-year price range 343.8 -> 48.9 -> 205)."
+  ],
+  "sources": [
+   "research_notes/Deep dives/SHK_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_29522_SHK_2025_2026_A_9351211_01072026182209.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1751494_02112026084816_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/aditya_joshi_keva_co_in_06112026112611_SHKConcallTranscriptIntimationQ2FY27FinalSigned.pdf",
+   "https://www.screener.in/company/SHK/consolidated/",
+   "https://nsearchives.nseindia.in/products/content/sec_bhavdata_full_24112026.csv"
+  ],
+  "_warnings": [],
+  "non_operating_growth": null,
+  "hurdle_cagr": 0.12,
+  "cash_tax_rate": null,
+  "cash_tax_rate_end": null,
+  "_inc_roic_method": "given",
+  "nopat_margin": 0.03726899383983573,
+  "_nopat_margin_method": "base.ebit x (1 - tax) / revenue",
+  "_eps_method": "given"
+ },
+ "snapshot": {
+  "mcap": 1765.27026,
+  "ev": 2676.2702600000002,
+  "pe": 18.7,
+  "ev_ebitda": 9.436778067700988,
+  "p_fcf": 88.263513,
+  "fcf_yield": 0.011329709933480666,
+  "ev_sales": 1.0568118227768126
+ },
+ "base": {
+  "rows": [
+   {
+    "t": 1,
+    "g": 0.12,
+    "revenue": 2836.2880000000005,
+    "margin": 0.039042094455852154,
+    "nopat": 110.73462400000001,
+    "reinv_rate": 1.5,
+    "fcf": -55.367312000000005,
+    "eps": 4.691589597159282
+   },
+   {
+    "t": 2,
+    "g": 0.11555555555555555,
+    "revenue": 3164.036835555556,
+    "margin": 0.040815195071868586,
+    "nopat": 129.1407806577778,
+    "reinv_rate": 1.4444444444444444,
+    "fcf": -57.395902514567915,
+    "eps": 6.021398416396846
+   },
+   {
+    "t": 3,
+    "g": 0.1111111111111111,
+    "revenue": 3515.596483950618,
+    "margin": 0.04258829568788501,
+    "nopat": 149.72326257777783,
+    "reinv_rate": 1.3888888888888888,
+    "fcf": -58.22571322469137,
+    "eps": 7.508442479310859
+   },
+   {
+    "t": 4,
+    "g": 0.10666666666666666,
+    "revenue": 3890.593442238684,
+    "margin": 0.044361396303901436,
+    "nopat": 172.59215754851033,
+    "reinv_rate": 1.3333333333333333,
+    "fcf": -57.53071918283676,
+    "eps": 9.160675413308347
+   },
+   {
+    "t": 5,
+    "g": 0.10222222222222221,
+    "revenue": 4288.298549667527,
+    "margin": 0.04613449691991786,
+    "nopat": 197.83849623132477,
+    "reinv_rate": 1.2777777777777777,
+    "fcf": -54.95513784203464,
+    "eps": 10.984674005631444
+   },
+   {
+    "t": 6,
+    "g": 0.09777777777777778,
+    "revenue": 4707.598852301686,
+    "margin": 0.04790759753593429,
+    "nopat": 225.52975117669536,
+    "reinv_rate": 1.2222222222222223,
+    "fcf": -50.117722483710104,
+    "eps": 12.985313016087169
+   },
+   {
+    "t": 7,
+    "g": 0.09333333333333334,
+    "revenue": 5146.974745183176,
+    "margin": 0.04968069815195072,
+    "nopat": 255.70529871115883,
+    "reinv_rate": 1.1666666666666667,
+    "fcf": -42.617549785193155,
+    "eps": 15.16543730725445
+   },
+   {
+    "t": 8,
+    "g": 0.08888888888888889,
+    "revenue": 5604.4836114216805,
+    "margin": 0.05145379876796714,
+    "nopat": 288.3719719404609,
+    "reinv_rate": 1.1111111111111112,
+    "fcf": -32.041330215606784,
+    "eps": 17.525540557659046
+   },
+   {
+    "t": 9,
+    "g": 0.08444444444444445,
+    "revenue": 6077.751116386178,
+    "margin": 0.053226899383983575,
+    "nopat": 323.49984715278094,
+    "reinv_rate": 1.0555555555555556,
+    "fcf": -17.97221373071006,
+    "eps": 20.063460837647554
+   },
+   {
+    "t": 10,
+    "g": 0.08,
+    "revenue": 6563.971205697073,
+    "margin": 0.055,
+    "nopat": 361.018416313339,
+    "reinv_rate": 1.0,
+    "fcf": 0.0,
+    "eps": 22.774104079608755
+   }
+  ],
+  "pv_fcf": -263.9933400297189,
+  "pv_tv": 583.6647103196815,
+  "tv_share": 1.8258272856598323,
+  "pv_oi": 0.0,
+  "ev": 319.67137028996257,
+  "equity": -591.3286297100374,
+  "value_ps": -42.71988366638039,
+  "cum_dist_ps_5y": 0.0,
+  "value5_ps": -18.396030344572576,
+  "dcf_pe5": -1.6746997075326586,
+  "max_reinv_rate": 1.5
+ },
+ "reverse": {
+  "g_flat_margin": null,
+  "g_base_margin": null,
+  "g_fade_start": null,
+  "m_needed_base_growth": 0.3339192924499511,
+  "implied_coe_base": 0.0733912476348877,
+  "roiic_implied_base": null,
+  "gordon_g_on_fcf": 0.11665513919958453,
+  "path_case": "flat-growth",
+  "path": null
+ },
+ "scenarios": {
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.3,
+    "growth": 0.06,
+    "growth_end": 0.05,
+    "margin_end": 0.035,
+    "roiic": 0.04,
+    "exit_pe": 14.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": -11.473978201562293,
+    "value_ps": -66.76969219000964,
+    "value_vs_price": -1.5235606695680204,
+    "eps5": 5.446109859540667,
+    "eps_cagr5": 0.09183209442667217,
+    "dist_ps_5y": 0.0,
+    "mult5": 0.5978635460955801,
+    "tv_share": -18.50580711707823,
+    "nonop5_ps": 0.0
+   },
+   {
+    "name": "base",
+    "prob": 0.47,
+    "growth": 0.12,
+    "growth_end": 0.08,
+    "margin_end": 0.055,
+    "roiic": 0.08,
+    "exit_pe": 22.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": -1.6746997075326586,
+    "value_ps": -42.71988366638039,
+    "value_vs_price": -1.334979092498866,
+    "eps5": 10.984674005631444,
+    "eps_cagr5": 0.25630767010122035,
+    "dist_ps_5y": 0.0,
+    "mult5": 1.8949488600634499,
+    "tv_share": 1.8258272856598323,
+    "nonop5_ps": 0.0
+   },
+   {
+    "name": "bull",
+    "prob": 0.15,
+    "growth": 0.14,
+    "growth_end": 0.11,
+    "margin_end": 0.07,
+    "roiic": 0.12,
+    "exit_pe": 28.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 3.4554528133230717,
+    "value_ps": -1.5606828577772827,
+    "value_vs_price": -1.012237770389534,
+    "eps5": 15.038528566896485,
+    "eps_cagr5": 0.337764434551159,
+    "dist_ps_5y": 0.0,
+    "mult5": 3.3018019279628446,
+    "tv_share": 1.0460120532626422,
+    "nonop5_ps": 0.0
+   }
+  ],
+  "blowup": {
+   "prob": 0.08,
+   "multiple": 0.25,
+   "note": "Debt-funded working capital (inventory Rs 799 cr + receivables Rs 615 cr at Sep-2026 vs net debt Rs 911 cr), interest cover 2.4x TTM, CRISIL AA- outlook cut to Negative (28-Sep-2026), Europe holding 55% of non-current assets at low returns; a second input-cost shock (Middle East/crude-linked aroma chemicals) or a large European impairment with covenant pressure would put the equity on an -80% path (the stock already fell 343.8 -> 48.9, -86%, Sep-2016 -> 2020 without any revenue decline)"
+  },
+  "pw_value": -37.79275540886826,
+  "pw_vs_price": -1.2963440399033033,
+  "bear_value": -66.76969219000964,
+  "downside_bear": -1.5235606695680204,
+  "p_value_below_price": 0.9999999999999999,
+  "p_ge_3x": 0.13567434033450257,
+  "p_ge_2x": 0.3448896919398821,
+  "p_ge_5x": 0.01899144111200695,
+  "p_le_half": 0.1714644393914858,
+  "p_blowup": 0.08,
+  "ev_mult5": 1.5852553172529222,
+  "ev_cagr5": 0.09652829739369673,
+  "median_mult5": 1.5032148029264727,
+  "hurdle_mult5": 1.7623416832000007,
+  "exit_bet": {
+   "own_median": 23.9,
+   "n_hist": 10,
+   "rows": [
+    {
+     "name": "bear",
+     "prob": 0.3,
+     "exit_pe": 14.0,
+     "dcf_pe5": -11.473978201562293,
+     "own_median": 23.9,
+     "mult_stated": 0.5978635460955801,
+     "mult_dcf": -0.48999094967210144,
+     "mult_own": 1.020638482263169,
+     "stated_vs_dcf": null,
+     "stated_vs_own": 0.5857740585774059
+    },
+    {
+     "name": "base",
+     "prob": 0.47,
+     "exit_pe": 22.0,
+     "dcf_pe5": -1.6746997075326586,
+     "own_median": 23.9,
+     "mult_stated": 1.8949488600634499,
+     "mult_dcf": -0.14424865007898202,
+     "mult_own": 2.0586035343416564,
+     "stated_vs_dcf": null,
+     "stated_vs_own": 0.9205020920502093
+    },
+    {
+     "name": "bull",
+     "prob": 0.15,
+     "exit_pe": 28.0,
+     "dcf_pe5": 3.4554528133230717,
+     "own_median": 23.9,
+     "mult_stated": 3.3018019279628446,
+     "mult_dcf": 0.4074721700362412,
+     "mult_own": 2.818323788511142,
+     "stated_vs_dcf": 8.103134816959836,
+     "stated_vs_own": 1.1715481171548119
+    }
+   ],
+   "ev_stated": 1.5852553172529222,
+   "ev_dcf": -0.1336733249333158,
+   "ev_own": 1.7164837740962005,
+   "hurdle": 1.7623416832000007
+  }
+ },
+ "twin": {
+  "pe0": 19.062780269058294,
+  "eps0": 6.69,
+  "horizon": 5.0,
+  "exit_pes": [
+   9.5,
+   14.3,
+   19.1,
+   23.9,
+   37.2
+  ],
+  "table": [
+   {
+    "target": 2,
+    "cells": [
+     {
+      "exit_pe": 9.5,
+      "eps_cagr": 0.32037875067474575,
+      "rerating_share": -1.0047591302752843
+     },
+     {
+      "exit_pe": 14.3,
+      "eps_cagr": 0.21667907808322195,
+      "rerating_share": -0.4147434018278427
+     },
+     {
+      "exit_pe": 19.1,
+      "eps_cagr": 0.14825031721265014,
+      "rerating_share": 0.0028140894295167074
+     },
+     {
+      "exit_pe": 23.9,
+      "eps_cagr": 0.09790223032647827,
+      "rerating_share": 0.3262520693745163
+     },
+     {
+      "exit_pe": 37.2,
+      "eps_cagr": 0.004927334820594265,
+      "rerating_share": 0.9645440725017994
+     }
+    ]
+   },
+   {
+    "target": 3,
+    "cells": [
+     {
+      "exit_pe": 9.5,
+      "eps_cagr": 0.4319134823960462,
+      "rerating_share": -0.633932430463257
+     },
+     {
+      "exit_pe": 14.3,
+      "eps_cagr": 0.31945411478809493,
+      "rerating_share": -0.26167395231062873
+     },
+     {
+      "exit_pe": 19.1,
+      "eps_cagr": 0.245245055285922,
+      "rerating_share": 0.0017754927502930192
+     },
+     {
+      "exit_pe": 23.9,
+      "eps_cagr": 0.1906439763240595,
+      "rerating_share": 0.20584213773264157
+     },
+     {
+      "exit_pe": 37.2,
+      "eps_cagr": 0.08981532671787251,
+      "rerating_share": 0.6085595539723702
+     }
+    ]
+   },
+   {
+    "target": 5,
+    "cells": [
+     {
+      "exit_pe": 9.5,
+      "eps_cagr": 0.5859391795453135,
+      "rerating_share": -0.43272620391977545
+     },
+     {
+      "exit_pe": 14.3,
+      "eps_cagr": 0.4613829689997597,
+      "rerating_share": -0.1786202607828655
+     },
+     {
+      "exit_pe": 19.1,
+      "eps_cagr": 0.3791915123310432,
+      "rerating_share": 0.0012119623496149737
+     },
+     {
+      "exit_pe": 23.9,
+      "eps_cagr": 0.318717194967842,
+      "rerating_share": 0.1405091183025385
+     },
+     {
+      "exit_pe": 37.2,
+      "eps_cagr": 0.20704277622885447,
+      "rerating_share": 0.41540652125516825
+     }
+    ]
+   }
+  ],
+  "hist_eps_cagr": 0.0,
+  "hist_eps_note": "Consolidated EPS FY16 5.05 -> FY26 5.00 [SCR] = ~0%/yr over 10 years while revenue grew 925 -> 2,368 (+9.9%/yr) and invested capital roughly 2.6x"
+ },
+ "temperature": {
+  "pes": {
+   "trailing (given)": 18.7,
+   "normalised EPS": 19.062780269058294
+  },
+  "n_hist": 10,
+  "own_median": 23.9,
+  "sector_median": 37.2,
+  "sector": {
+   "Privi Speciality Chemicals": 37.2,
+   "Galaxy Surfactants": 29.9,
+   "Oriental Aromatics": 170.0
+  },
+  "rows": [
+   {
+    "basis": "trailing (given)",
+    "pe": 18.7,
+    "vs_own": 0.7824267782426778,
+    "own_band": "COOL",
+    "pctile": 0.2,
+    "vs_sector": 0.5026881720430108,
+    "sector_band": "COLD"
+   },
+   {
+    "basis": "normalised EPS",
+    "pe": 19.062780269058294,
+    "vs_own": 0.797605868998255,
+    "own_band": "COOL",
+    "pctile": 0.2,
+    "vs_sector": 0.5124403298133949,
+    "sector_band": "COLD"
+   }
+  ],
+  "market": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)",
+   "note": "around the long-run average"
+  }
+ },
+ "sensitivity": {
+  "coe_x_growth": {
+   "rows": [
+    [
+     0.105,
+     [
+      0.3571181444145346,
+      -7.216042720410651,
+      -17.43839185825866,
+      -30.878102192769422,
+      -48.206846043102416
+     ]
+    ],
+    [
+     0.115,
+     [
+      -10.975278455068766,
+      -20.220222280269933,
+      -32.34470290789346,
+      -47.94293810262421,
+      -67.71445079865714
+     ]
+    ],
+    [
+     0.125,
+     [
+      -19.22328027451169,
+      -29.479687625576446,
+      -42.71988366638039,
+      -59.54317781034029,
+      -80.65303530920397
+     ]
+    ],
+    [
+     0.135,
+     [
+      -25.47969415487981,
+      -36.338656233049726,
+      -50.21031805002121,
+      -67.68699697919473,
+      -89.46238119969948
+     ]
+    ],
+    [
+     0.145,
+     [
+      -30.37686951830025,
+      -41.57329482362386,
+      -55.7647428168521,
+      -73.52943347439152,
+      -95.5432702186174
+     ]
+    ]
+   ],
+   "cols": [
+    -0.06,
+    -0.03,
+    0.0,
+    0.03,
+    0.06
+   ]
+  },
+  "tg_x_margin": {
+   "rows": [
+    [
+     0.04,
+     [
+      -50.49311660049511,
+      -43.122177270323014,
+      -35.751237940150915,
+      -28.38029860997882,
+      -21.009359279806734
+     ]
+    ],
+    [
+     0.05,
+     [
+      -54.927709335368405,
+      -48.82379650087441,
+      -42.71988366638039,
+      -36.61597083188639,
+      -30.512057997392372
+     ]
+    ],
+    [
+     0.060000000000000005,
+     [
+      -60.92337122071863,
+      -56.53250463918183,
+      -52.14163805764501,
+      -47.750771476108206,
+      -43.359904894571415
+     ]
+    ]
+   ],
+   "cols": [
+    0.035,
+    0.045,
+    0.055,
+    0.065,
+    0.075
+   ]
+  }
+ },
+ "version": "1.3 (2026-11-23; cash-tax input, reinvestment-realism check, exit-multiple bet line; 1.2 non-operating growth; 1.1 bank mode)",
+ "generated": "2026-11-25",
+ "realism": {
+  "history": 0.03,
+  "method": "given",
+  "rows": [
+   {
+    "label": "default ROIIC (input)",
+    "roiic": 0.08,
+    "gap": 0.05,
+    "flag": false
+   },
+   {
+    "label": "scenario bear",
+    "roiic": 0.04,
+    "gap": 0.010000000000000002,
+    "flag": false
+   },
+   {
+    "label": "scenario base",
+    "roiic": 0.08,
+    "gap": 0.05,
+    "flag": false
+   },
+   {
+    "label": "scenario bull",
+    "roiic": 0.12,
+    "gap": 0.09,
+    "flag": true
+   },
+   {
+    "label": "implied by price on the base-case path",
+    "roiic": null,
+    "gap": null,
+    "flag": false
+   }
+  ],
+  "flagged": [
+   "scenario bull"
+  ]
+ }
+}

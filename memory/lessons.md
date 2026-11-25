@@ -343,3 +343,11 @@ mechanics add an undeclared ~2pp margin (EV treats scenario multiples as means w
 left tail is anchored), so a base IRR ≈ cost of equity scores 0 and the pass point is ~14%. All 6 live zeros were large gaps
 (price falls of 14–33% needed) driven by our own base cases below the cost of equity. **Rule:** read size-0 as "not cheap enough
 by our inputs", not "market fair"; only stage-7 scoring answers fairness. Fixes are pre-registered (decision:card-audit-fixes-prereg-2026-11-25), none applied before the Jan–Feb 2027 season.
+
+## L44 (2026-11-25) — Strip exceptional gains before any "cheap" read; "numbers met, dates slip" is not universal (SHK live dive #7)
+S H Kelkar's 18.7x trailing P/E included ₹63 cr of fire-insurance gains in ₹159 cr PBT — core P/E ~33–37x. The v1.4 normalised-EPS
+check missed it because the 10-yr average happened to agree. **Rules:** compute core EPS (ex-exceptionals, ex-other income, after
+interest) before valuation temperature. When ROIIC < cost of equity and net debt is large, DCF value can be below net debt — the
+whole EV above 1x is an exit-multiple bet (L21). L42 again: 2/2 draws in this frame family had group ROIC < CoE. SHK missed both
+margin numbers and dates → L26's pattern is a tendency, not a law. Check whether promoters vote on their own relatives' re-appointment.
+Open: pollution-board scraper (no structured source); chemicals/F&F peer credibility ledger.

@@ -21,7 +21,7 @@ Last updated: 2026-11-24
   (4) prereg split rule pledge vs ICR (L39); ~~(5) live dive #5~~ DONE (UTKARSHBNK).
 - From L41: ~~lender class, cet1_book, bank XBRL, bse_fetch~~ DONE 25-Nov. Still open: prereg test of insight:lender-blowup-signals;
   US lender base-rate class; card input validation (credibility as fraction, L42); extend core-asset threat to US cards.
-- Live dives: next #7 (Chemicals or IT draw), keep ~1–2/week. Watch 6/6 size-0 pattern (strategy_review §4).
+- Live dives: #7 SHK DONE 25-Nov; next #8 (IT or Consumer draw), keep ~1–2/week. Tool asks from #7: core-EPS line in worksheet; plain-words "DCF below net debt"; nse_fetch announcements summary truncates at 15 rows; pollution-board source. Watch 6/6 size-0 pattern (strategy_review §4).
 - Deep-dive protocol v1.4 committed; ">20% of mcap" holdco trigger is an untested rule of thumb (insight:holdco-stake-20pct-trigger).
 
 ## Build plan (after answers) — don't start stock-picking before step 1
