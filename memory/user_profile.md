@@ -39,3 +39,5 @@ Last updated: 2026-11-19
   dollar index, leader announcements, central/state policy, elections, and the correlations between them. Honest answer: only
   fragments so far (RBI/rupee 2025-26, cycle events 2008/2013/2014, Nifty P/E base rates, policy risk at company level L40/L41/L45).
   Proposed a tested macro module mapped to stages 5/6 + asset allocation; awaiting user's go-ahead.
+- 25-Nov-2026: user will paste YouTube transcripts for storage + analysis (store raw in research_notes/YouTube/<title>/transcript.md
+  with URL/channel/date, analysis.md on top, memdb source + analysis records linked). First: GetMoneyRich category rotation.
