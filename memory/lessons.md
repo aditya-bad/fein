@@ -360,3 +360,9 @@ Seasonal balance sheets need average capital (net debt ₹30 cr Sep vs ₹712 cr
 (15.2x vs own 10-yr median 8.0x) can be the binding read. Card can't express *partial* loss of a government input (core-asset trigger
 is yes/no). Cyclical upside tail (model 0.8% ≥3x vs a stock that did 12.7x in 2020–23) is likely too thin → covered by pre-registered fix (3).
 Frame hygiene: industry_map's FMCG includes agri-commodity processors. 8/8 live cards size 0; 3/3 recent draws ROIC < CoE.
+
+## L46 (2026-11-25) — Always name the ticker; same-group companies get confused (Kalpataru)
+User read "Kalpataru 77" as Kalpataru Ltd (KALPATARU, real-estate, listed mid-2025 ~₹397 → ₹240 on 25-Nov-2026, Yahoo).
+Our score 77 was Kalpataru Projects International (KPIL, T&D/EPC: ~₹375 Nov-2021 → ₹1,310 Nov-2026, Yahoo). **Rule:** in every
+message to the user, give company name + NSE ticker. Also: KPIL's past price rise does NOT validate the score (score built in 2026
+on past promises = hindsight); only forward calls test it.
