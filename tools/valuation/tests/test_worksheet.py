@@ -81,7 +81,7 @@ class LiveRegression(unittest.TestCase):
             with open(stem + "_worksheet.md", encoding="utf-8") as f:
                 md_old = f.read()
             md_new = ws.render(res) + "\n"
-            self.assertEqual(md_old, _strip_new(md_new), os.path.basename(stem))
+            self.assertEqual(_strip_new(md_old), _strip_new(md_new), os.path.basename(stem))
             checked += 1
         self.assertGreaterEqual(checked, 4)
 
