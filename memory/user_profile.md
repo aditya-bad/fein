@@ -34,3 +34,8 @@ Last updated: 2026-11-19
 - Hours per week available
 - Current holdings / broker (Zerodha? — Kite MCP possible)
 - Investing vs trading preference (research strongly favours investing; F&O base rates terrible)
+
+- 25-Nov-2026: user asked what we learned about macro — gold, bonds, yields, inflation, rate hikes/repo, wars, news, GDP,
+  dollar index, leader announcements, central/state policy, elections, and the correlations between them. Honest answer: only
+  fragments so far (RBI/rupee 2025-26, cycle events 2008/2013/2014, Nifty P/E base rates, policy risk at company level L40/L41/L45).
+  Proposed a tested macro module mapped to stages 5/6 + asset allocation; awaiting user's go-ahead.
