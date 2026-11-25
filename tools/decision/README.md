@@ -31,6 +31,13 @@ It also prints base-rate CIs and the size-band warning, and applies the market-s
 Bank/NBFC worksheets (`"mode": "bank"`, v1.1) are supported: the stage-5 block then reports reverse P/B, implied CoE,
 residual-income scenarios, P/B temperature and book stress. Example: `examples/FEDERALBNK_card.json` (practice).
 
+## Changelog: card v1.5 (2026-11-25, L41)
+A card whose firm is marked as a lender — `"is_lender": true`, `survival.is_financial: true`, or a bank-mode
+worksheet — uses the market's lender base-rate class (`LENDER_CLASSES`; India: `india_lender_1000_20000cr_5y`,
+`research_notes/Backtests/base_rates_lenders_india.md`) instead of the class named on the card, and says so in the
+probabilities block. `"base_rate_class_lock": true` keeps the card's class (the card prints that it was locked).
+A US lender has no class yet; the card prints a warning. No threshold changed; non-lender cards are unaffected.
+
 ## Changelog: card v1.4 (2026-11-24, L40)
 Two additions from the INDRAMEDCO live dive (a ~54% ROIC that rests on an expired government land lease).
 Neither changes a threshold; the six calibration cards are unaffected unless they set the new input.

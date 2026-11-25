@@ -83,5 +83,21 @@ keys, so `decision_card.py` reads it unchanged.
   (+1/2/3/5% loan loss as % of book, leverage); (f) CoE × long-run ROE grid and justified P/B.
 - Example: `examples/FEDERALBNK.json` (dry run, TEST MATERIAL).
 
+### Bank mode v1.2 (2026-11-25, L41) — all optional; old inputs give identical results (`tests/test_bank.py`)
+- `cet1_book` (per share; CET1 capital from Pillar 3 DF-11 ÷ shares = net worth less DTA, intangibles, other
+  deductions): P/CET1, the ROE required forever on CET1 book, today's ROE and implied CoE on that basis, and a
+  side-by-side table of 5-year multiples with the exit multiple applied to CET1 book (`exit_p_cet1` per scenario, a
+  number or `"rim"`; default = the scenario's exit P/B, which is harsh and labelled so). The deduction gap per share
+  is constant unless `cet1_gap_runoff_years` is set. RIM value is basis-independent (clean surplus); a bound "value
+  if the deductions are worth nothing" is printed. `book_basis: "cet1"` makes the CET1 multiples the primary outputs
+  that the decision card reads.
+- Scenario-only dilution: a `dilution` entry with `"scenarios": ["bear"]`, `"year": k` and `shares` (or `cash_in` +
+  `issue_price`) is applied only in those cases, at the end of year k, per existing share; the book change enters
+  the per-share RIM value as a dirty-surplus term. Entries without `scenarios` stay up-front (v1.1).
+- Non-linear ROE path: `roe_path: {"shape": "j", "trough": -0.04, "trough_year": 2, "recover_by": 6, "power": 0.6}`
+  (power < 1 fast early recovery, > 1 slow start) or an explicit yearly list (later years interpolate to `roe_end`).
+  Terminal ROE is always `roe_end`.
+- Tests: `python3 -m unittest discover -s tools/valuation/tests`.
+
 ## Examples (TEST MATERIAL, no verdict)
 `examples/VMM.json`, `examples/CUMMINSIND.json` and `examples/FIVE.json` take their figures from the three practice deep dives. Their outputs are `examples/*_worksheet.md` and `*_worksheet.json`. `examples/SYNTHETIC.json` is a **fictional** company that only exists to test the code path where every gate clears.

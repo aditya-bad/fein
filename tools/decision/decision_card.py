@@ -33,7 +33,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "..", "valuation"))
 import worksheet as ws  # noqa: E402
 
-CARD_VERSION = "1.4 (2026-11-24; manual core-asset threat trigger + anchoring-lowered-tails warning, L40)"
+CARD_VERSION = "1.5 (2026-11-25; lender base-rate class auto-selected for lenders, L41; 1.4 core-asset threat, L40)"
+# v1.5 (L41): a card whose firm is marked as a lender - card "is_lender": true, survival.is_financial = true, or a
+# bank-mode worksheet - and whose market has a lender class uses that class instead of a non-financial class. Set
+# "base_rate_class_lock": true to keep the class named on the card (the card then says so).
+LENDER_CLASSES = {"india": "india_lender_1000_20000cr_5y"}
 PEAD_AVOID_QUINTILES = (1, 2)          # L19: bottom two SUE quintiles
 # v1.1 (L34): the avoid gate is calibrated for India only (bottom two quintiles: L17, L19, L31, confirmed 3 times).
 # US: no PEAD back-test on file and the SUE proxy cut-points are uncalibrated -> quintile shown, never blocks.
@@ -377,6 +381,31 @@ def _bank_stage5_lines(wd, wres):
     return out
 
 
+def is_lender(card, wd=None, wres=None):
+    """v1.5: the card marks the firm as a lender / financial (any of three inputs)."""
+    return bool(card.get("is_lender") or (card.get("survival") or {}).get("is_financial")
+                or (wres or {}).get("mode") == "bank"
+                or str((wd or {}).get("mode", "")).lower() in ("bank", "nbfc", "lender"))
+
+
+def resolve_base_rate_class(card, wd, wres, rates):
+    """Return (class name, note). Lenders get the market's lender class unless the card locks its own class."""
+    name = card.get("base_rate_class")
+    if not is_lender(card, wd, wres):
+        return name, ""
+    mkt = str((wd or {}).get("market", "india")).lower()
+    lc = LENDER_CLASSES.get(mkt)
+    if not lc or lc not in rates["classes"]:
+        return name, (" **Lender, but no %s lender class on file:** the class above is non-financial and cannot see "
+                      "bank leverage; weight the tails accordingly." % mkt.upper())
+    if name == lc:
+        return name, ""
+    if card.get("base_rate_class_lock") and name:
+        return name, (" **Lender class %s available but the card locks %s** (base_rate_class_lock); say why in the "
+                      "override log." % (lc, name))
+    return lc, (" **Lender class auto-selected (v1.5, L41)** in place of %s." % (name or "no class"))
+
+
 # ----------------------------------------------------------------------------- assemble
 
 def build(card, card_path):
@@ -577,12 +606,11 @@ def build(card, card_path):
         gates.append(("Stage 4 soft flags", "%d open%s" % (n_open, ", variant view written" if vv else ""), False))
 
     # --- probabilities vs base rates
-    cls_name = card.get("base_rate_class")
+    cls_name, cls_note = resolve_base_rate_class(card, wd, wres, rates)
     cls = rates["classes"].get(cls_name) if cls_name else None
-    cls_note = ""
     if cls_name and cls is None and (cls_name + "_deprecated") in rates["classes"]:
         cls = rates["classes"][cls_name + "_deprecated"]
-        cls_note = " **Deprecated class** (%s)" % cls.get("deprecated", "")
+        cls_note += " **Deprecated class** (%s)" % cls.get("deprecated", "")
     if cls_name and cls is None:
         raise ValueError("unknown base_rate_class %r (see tools/decision/base_rates.json)" % cls_name)
 

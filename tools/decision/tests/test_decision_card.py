@@ -283,5 +283,52 @@ class TestBuildIntegration(unittest.TestCase):
         self.assertNotIn(dc.ANCHOR_LOWERED_WARNING, F["probabilities"])
 
 
+class TestLenderClass(unittest.TestCase):
+    """v1.5 (L41): lenders get the India lender base-rate class."""
+    RATES = {"classes": {"india_nonfin_1000_20000cr_5y": {}, "india_lender_1000_20000cr_5y": {}}}
+
+    def test_non_lender_keeps_class(self):
+        n, note = dc.resolve_base_rate_class({"base_rate_class": "india_nonfin_1000_20000cr_5y"}, {"market": "india"},
+                                             {"mode": "pe"}, self.RATES)
+        self.assertEqual(n, "india_nonfin_1000_20000cr_5y")
+        self.assertEqual(note, "")
+
+    def test_each_lender_marker_switches(self):
+        for card, wd, wres in (({"is_lender": True}, {"market": "india"}, {}),
+                               ({"survival": {"is_financial": True}}, {"market": "india"}, {}),
+                               ({}, {"market": "india", "mode": "bank"}, {"mode": "bank"})):
+            card = dict(card, base_rate_class="india_nonfin_1000_20000cr_5y")
+            n, note = dc.resolve_base_rate_class(card, wd, wres, self.RATES)
+            self.assertEqual(n, "india_lender_1000_20000cr_5y")
+            self.assertIn("auto-selected", note)
+
+    def test_lock_keeps_card_class(self):
+        n, note = dc.resolve_base_rate_class({"is_lender": True, "base_rate_class": "india_nonfin_1000_20000cr_5y",
+                                              "base_rate_class_lock": True}, {"market": "india"}, {}, self.RATES)
+        self.assertEqual(n, "india_nonfin_1000_20000cr_5y")
+        self.assertIn("locks", note)
+
+    def test_us_lender_has_no_class(self):
+        n, note = dc.resolve_base_rate_class({"is_lender": True, "base_rate_class": "us_float_500m_10b_5y"},
+                                             {"market": "us"}, {}, self.RATES)
+        self.assertEqual(n, "us_float_500m_10b_5y")
+        self.assertIn("no US lender class", note)
+
+    def test_lender_class_on_file(self):
+        rates = dc._load_json(os.path.join(DEC, "base_rates.json"))
+        c = rates["classes"][dc.LENDER_CLASSES["india"]]
+        for k in ("p_ge_3x", "p_le_half", "p_blowup", "n", "ci95", "size_band", "label", "source", "caveats"):
+            self.assertIn(k, c)
+        self.assertEqual(c["sector"], "lender")
+
+    def test_live_lender_card_uses_lender_class(self):
+        cp = os.path.join(DEC, "live", "UTKARSHBNK_card.json")
+        card = dc._load_json(cp)
+        F, recs, _ = dc.build(card, cp)
+        self.assertIn("Lender class auto-selected", F["probabilities"])
+        rates = dc._load_json(os.path.join(DEC, "base_rates.json"))
+        self.assertIn(rates["classes"][dc.LENDER_CLASSES["india"]]["label"], F["probabilities"])
+
+
 if __name__ == "__main__":
     unittest.main()
