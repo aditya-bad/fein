@@ -75,12 +75,35 @@ MERGERS = {
 WIPED = {"534690": ("2020-11-27", "Lakshmi Vilas Bank: RBI scheme, amalgamated into DBS Bank India, equity written off"),
          "511072": ("2021-09-30", "DHFL: IBC resolution (Piramal), equity extinguished, delisted")}
 
+# screener slugs for codes whose BSE-code page is missing (found by NSE symbol, 25-Nov-2026)
+ALT_SLUG = {"511288": "GRUH", "532498": "SHRIRAMCIT", "539844": "EQUITAS", "523756": "SREINFRA",
+            "500111": "RELCAPITAL", "539874": "UJJIVAN"}
+# DHFL has no page of its own: screener carries its pre-2021 history on Piramal Finance Ltd (bse:544597, cid 799; the
+# DHFL entity absorbed Piramal Capital & Housing in 2021 and was listed again in 2025). Its rows ARE DHFL's outcome
+# (crash to 0.03x, no price at T+5 -> counted as failed, <=0.5x). Labelled here so the panel says so.
+NAME_NOTE = {"bse:544597": "DHFL (screener page now 'Piramal Finance Ltd'; pre-2021 prices are DHFL's)"}
+# single-lender holding companies and NBFC-CICs whose screener label is 'Investment Company' (reviewed by hand)
+KIND_OVERRIDE = {"bse:500111": "nbfc", "bse:539844": "nbfc", "bse:532659": "nbfc"}
+# size at T where screener's market-cap-to-sales is missing or broken: shares (equity capital / FV 10 on the page,
+# plus IPO shares) x price at T. Sources in the md; single-source -> flagged size_ambiguous.
+# price series unusable (screener shows Rs 30,418 for a ~Rs 70 stock and the ratio path is not constant): excluded,
+# counted in the survivorship audit. Syndicate Bank was in band at both T (~Rs 4,900 / ~5,700 cr) and merged into
+# Canara Bank (158 per 1000, Apr-2020).
+DATA_BROKEN = {"bse:532276": "Syndicate Bank: screener price series mis-scaled"}
+SIZE_OVERRIDE = {
+    ("bse:540065", "FY2016"): (11100.0, "RBL Bank: listed 31-Aug-2016; ~37 cr post-IPO shares x Rs 299 (screener)"),
+    ("bse:541770", "FY2018"): (5300.0, "CreditAccess Grameen: listed 23-Aug-2018; ~14.3 cr shares x Rs 368 (screener)"),
+}
+NAME_LENDER = re.compile(r"\bbank\b|financ|fincorp|fincap|finvest|finlease|\bfin\b|housing fin|home fin|homes|credit|"
+                         r"leasing|hire purchase|micro ?fin|loan|gruh", re.I)
+REVIEWED_LENDERS = set()   # keys of ambiguous-name firms confirmed as lenders by hand (see the md)
+NAME_AMBIG = re.compile(r"capital|invest|money", re.I)
 LENDER_IND = re.compile(r"bank|non banking financial|nbfc|housing finance|microfinance|financial institution", re.I)
 NOT_LENDER = re.compile(r"investment company|holding company|stockbroking|asset management|insurance|exchange|rating|"
                         r"distributor|fintech|depositor|other financial services", re.I)
 
 
-def classify(lab, page):
+def classify(lab, page, name=""):
     txt = " / ".join(lab.get(k, "") for k in ("Broad Industry", "Industry"))
     if txt.strip(" /"):
         if NOT_LENDER.search(txt):
@@ -93,6 +116,13 @@ def classify(lab, page):
     if "Financing Profit" in page or ">Deposits<" in page:
         title = page[page.find("<title>") + 7: page.find("</title>")] if "<title>" in page else ""
         return ("bank" if " bank" in title.lower() else "nbfc"), "unlabeled, lender template"
+    # unlabeled (mostly merged / delisted firms): classify by name; ambiguous names are reviewed by hand when in band
+    if re.search(r"\bbank\b", name, re.I):
+        return "bank", "unlabeled, name"
+    if NAME_LENDER.search(name):
+        return ("hfc" if re.search("housing|home|gruh", name, re.I) else "nbfc"), "unlabeled, name"
+    if NAME_AMBIG.search(name):
+        return "ambiguous", "unlabeled, ambiguous name"
     return "not_lender", "unlabeled"
 
 
@@ -131,6 +161,9 @@ def build_frame():
         add(code, nse, name, "explicit")
     for code in list(MERGERS) + list(WIPED):
         add(code, "", code, "explicit")
+    for code, slug in ALT_SLUG.items():
+        add(code, slug, slug, "explicit")
+    add("532659", "IDFC", "IDFC Ltd (holding company of IDFC First Bank)", "explicit")
     out = []
     for r in rows.values():
         r["sources"] = "|".join(sorted(r["sources"]))
@@ -172,6 +205,13 @@ def fetch(phase):
     t0, n = time.time(), 0
     for i, r in enumerate(frame, 1):
         s = st.setdefault(r["key"], {})
+        if phase == "pages" and s.get("page") == "no_page" and r["bse_code"] in ALT_SLUG:
+            s.clear()
+        if phase == "pages" and s.get("industry") == "unlabeled":      # v2 classifier: names for unlabeled pages
+            s["kind"], s["industry"] = classify({}, "", s.get("name") or r["name"])
+        if phase == "pages" and r["key"] in KIND_OVERRIDE and s.get("page") == "ok":
+            s["kind"] = KIND_OVERRIDE[r["key"]]
+            s["industry"] = s["industry"].split(" [")[0] + " [holdco/CIC reviewed as lender]"
         try:
             if phase == "pages" and "page" not in s:
                 slug, page = page_for(r)
@@ -179,7 +219,7 @@ def fetch(phase):
                     s["page"] = "no_page"
                 else:
                     lab = SS.labels(page)
-                    kind, txt = classify(lab, page)
+                    kind, txt = classify(lab, page, SS.company_name(page) or r["name"])
                     s.update(page="ok", slug=slug, kind=kind, industry=txt, name=SS.company_name(page),
                              elig=S2.snapshot_eligibility(page),
                              cid=(re.search(r'data-company-id="(\d+)"', page) or [None, None])[1])
@@ -252,15 +292,29 @@ def panel():
             funnel["duplicate_company"] += 1
             continue
         seen_cid.add(s["cid"])
+        if k in DATA_BROKEN:
+            funnel["lender_data_broken_excluded"] += 1
+            continue
         if s["kind"] == "not_lender":
             funnel["not_lender"] += 1
+            continue
+        if s["kind"] == "ambiguous" and k not in REVIEWED_LENDERS:
+            for sn in K.SNAPS:
+                z = (s.get("size") or {}).get(sn) or {}
+                if z.get("status") == "ok" and LO <= z["mcap"] <= HI:
+                    review.append((s["name"], sn, round(z["mcap"])))
+            funnel["ambiguous_name_not_counted"] += 1
             continue
         funnel["lender"] += 1
         ch = K.jload(os.path.join(K.CACHE, "sc", s["slug"], "chart.json"), {})
         px = S3.price_series(ch)
         code = r["bse_code"]
         for sn, T in K.SNAPS.items():
-            z = (s.get("size") or {}).get(sn) or {"status": "no_annual_at_T" if not s["elig"].get(sn) else "no_chart"}
+            z = dict((s.get("size") or {}).get(sn) or {"status": "no_annual_at_T" if not s["elig"].get(sn) else "no_chart"})
+            ov = SIZE_OVERRIDE.get((k, sn))
+            if ov and s["elig"].get(sn):
+                z.update(status="ok", mcap=ov[0], mcap_lo=0.0, mcap_hi=1e9, override=ov[1])
+                funnel[sn + "|size_override"] += 1
             if z.get("status") != "ok":
                 funnel[sn + "|" + z["status"]] += 1
                 continue
@@ -286,11 +340,12 @@ def panel():
                 o["o_cdel"] = 0
                 o["o_strict"] = int(o["o_liq"] or o["o_wiped"])
                 o["o_fail"] = int(o["o_strict"] or o["o_px"])
-            rows.append(dict(key=k, slug=s["slug"], name=s["name"], kind=s["kind"], industry=s["industry"], snap=sn,
+            rows.append(dict(key=k, slug=s["slug"], name=NAME_NOTE.get(k, s["name"]), kind=s["kind"], industry=s["industry"], snap=sn,
                              mcap=round(z["mcap"], 1), size_ambiguous=int(z["mcap_lo"] < LO or z["mcap_hi"] > HI),
                              sources=srcs, chain=chain or "", **o))
             funnel[sn + "|panel"] += 1
     K.write_csv(os.path.join(OUT, "panel.csv"), rows)
+    funnel["_ambiguous_in_band_review"] = review
     return rows, dict(funnel)
 
 
@@ -319,6 +374,7 @@ def rates(rows):
            "p_le_half": sum(x[1] for x in k) / len(k) if k else None,
            "p_blowup": sum(x[2] for x in f) / len(f) if f else None,
            "p_strict": sum(int(r["o_strict"]) for r in rows) / len(rows) if rows else None,
+           "p_blowup_permanent": sum(1 for x in f if x[2] and (x[3] is None or x[3] <= 0.5)) / len(f) if f else None,
            "median_mult": wmedian([x[3] for x in f if x[3] is not None]),
            "excluded_no_r5_alive": sum(1 for x in f if x[0] is None)}
     return out
@@ -357,10 +413,15 @@ def analyse(draws):
                       for kd in ("bank", "nbfc_hfc")}
     res["by_kind_ci95"] = {kd: bootstrap([r for r in rows if (r["kind"] == "bank") == (kd == "bank")], draws)
                            for kd in ("bank", "nbfc_hfc")}
-    psu = [r for r in rows if "public sector" in r["industry"].lower()]
+    psu_merged = {"bse:" + c for c in ("532121", "532401", "532276", "532480", "532418", "532179", "500315", "533171",
+                                       "501061", "532191", "532200")}
+    psu = [r for r in rows if "public sector" in r["industry"].lower() or r["key"] in psu_merged]
+    res["bank_public_sector_by_snapshot"] = {s: rnd(rates([r for r in psu if r["snap"] == s])) for s in K.SNAPS}
+    res["nbfc_hfc_by_snapshot"] = {s: rnd(rates([r for r in rows if r["kind"] != "bank" and r["snap"] == s])) for s in K.SNAPS}
     res["bank_public_sector"] = rnd(rates(psu))
     res["bank_private_other"] = rnd(rates([r for r in rows if r["kind"] == "bank" and r not in psu]))
     res["live_today_only"] = rnd(rates([r for r in rows if "bse_active" in r["sources"] or "industry_map" in r["sources"]]))
+    res["exclude_size_overrides"] = rnd(rates([r for r in rows if (r["key"], r["snap"]) not in SIZE_OVERRIDE]))
     res["exclude_size_ambiguous"] = rnd(rates([r for r in rows if not int(r["size_ambiguous"])]))
     res["chained_mergers"] = sorted(set((r["name"], r["chain"]) for r in rows if r["chain"]))
     res["failures"] = sorted([(r["name"], r["snap"], r["r5"], r["min_ratio"], "wiped" if r["o_wiped"] else
@@ -371,7 +432,7 @@ def analyse(draws):
     with open(os.path.join(OUT, "results.json"), "w") as fh:
         json.dump(res, fh, indent=1, default=str)
     print(json.dumps({k: res[k] for k in ("funnel", "point", "ci95", "by_snapshot", "by_kind", "bank_public_sector",
-                                          "bank_private_other", "live_today_only", "exclude_size_ambiguous")}, indent=1))
+                                          "bank_private_other", "live_today_only", "exclude_size_overrides", "exclude_size_ambiguous")}, indent=1))
     return res
 
 

@@ -1,6 +1,104 @@
 {
- "_readme": "Reference classes the decision card shows next to every model probability (outside view first: insight:lit-base-rate-neglect-outside-view). Each class says where it came from and how it is biased. null = no honest number on file; the card prints 'n/a' rather than inventing one. v2 (2026-11-23): two survivorship-free 5-year classes computed from the stage-2 back-test panels (method: research_notes/Backtests/base_rates_5y.md). Old classes are kept with a _deprecated suffix; the card resolves an old name to its _deprecated entry and says so. ci95 = 95% bootstrap interval; bounds = range under the alternative missing-data assumption; size_band lets the card warn when a company sits outside the class. No class yet for banks/NBFCs (excluded from both panels) or for India mcap > Rs 20,000 cr / US float > $10B.",
+ "version": "3 (2026-11-25)",
+ "_readme": "Reference classes the decision card shows next to every model probability (outside view first: insight:lit-base-rate-neglect-outside-view). Each class says where it came from and how it is biased. null = no honest number on file; the card prints 'n/a' rather than inventing one. v2 (2026-11-23): two survivorship-free 5-year classes computed from the stage-2 back-test panels (method: research_notes/Backtests/base_rates_5y.md). Old classes are kept with a _deprecated suffix; the card resolves an old name to its _deprecated entry and says so. ci95 = 95% bootstrap interval; bounds = range under the alternative missing-data assumption; size_band lets the card warn when a company sits outside the class. v3 (2026-11-25): India lender class india_lender_1000_20000cr_5y (research_notes/Backtests/base_rates_lenders_india.md); decision_card v1.5 picks it automatically for a firm marked as a lender. No US lender class yet or for India mcap > Rs 20,000 cr / US float > $10B.",
  "classes": {
+  "india_lender_1000_20000cr_5y": {
+   "label": "India lenders (banks, SFBs, NBFCs, HFCs, financial institutions), mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (census of lender candidates incl. merged, delisted and failed lenders; equal weight)",
+   "sector": "lender",
+   "horizon_years": 5,
+   "n": 107,
+   "p_ge_3x": 0.1121,
+   "p_le_half": 0.2523,
+   "p_blowup": 0.271,
+   "p_blowup_permanent": 0.1963,
+   "median_multiple": 1.0354,
+   "p_strict_exit": 0.0187,
+   "ci95": {
+    "p_ge_3x": [
+     0.0513,
+     0.1827
+    ],
+    "p_le_half": [
+     0.17,
+     0.3333
+    ],
+    "p_blowup": [
+     0.1792,
+     0.3652
+    ],
+    "p_blowup_permanent": [
+     0.1193,
+     0.2804
+    ],
+    "median_multiple": [
+     0.8422,
+     1.6209
+    ]
+   },
+   "by_start": {
+    "FY2016": {
+     "p_ge_3x": 0.0385,
+     "p_le_half": 0.4231,
+     "p_blowup": 0.3462,
+     "p_blowup_permanent": 0.3077,
+     "median_multiple": 0.6033,
+     "n": 52
+    },
+    "FY2018": {
+     "p_ge_3x": 0.1818,
+     "p_le_half": 0.0909,
+     "p_blowup": 0.2,
+     "p_blowup_permanent": 0.0909,
+     "median_multiple": 1.7253,
+     "n": 55
+    }
+   },
+   "by_kind": {
+    "banks": {
+     "p_ge_3x": 0.0357,
+     "p_le_half": 0.25,
+     "p_blowup": 0.2143,
+     "p_blowup_permanent": 0.1786,
+     "median_multiple": 1.0242,
+     "n": 56
+    },
+    "nbfc_hfc": {
+     "p_ge_3x": 0.1961,
+     "p_le_half": 0.2549,
+     "p_blowup": 0.3333,
+     "p_blowup_permanent": 0.2157,
+     "median_multiple": 1.0354,
+     "n": 51
+    }
+   },
+   "robustness": {
+    "live_today_only": {
+     "p_ge_3x": 0.1486,
+     "p_le_half": 0.1892,
+     "p_blowup": 0.2027,
+     "p_blowup_permanent": 0.1351,
+     "median_multiple": 1.3981,
+     "n": 74
+    },
+    "exclude_size_overrides": {
+     "p_ge_3x": 0.1048,
+     "p_le_half": 0.2571,
+     "p_blowup": 0.2762,
+     "p_blowup_permanent": 0.2,
+     "median_multiple": 1.0354,
+     "n": 105
+    }
+   },
+   "size_band": {
+    "measure": "mcap",
+    "min": 1000,
+    "max": 20000,
+    "units": "INR cr"
+   },
+   "computed": "2026-11-25",
+   "source": "tools/backtests/base_rates_lenders_india/build.py -> research_notes/Backtests/base_rates_lenders_india_outputs/results.json; method and caveats research_notes/Backtests/base_rates_lenders_india.md",
+   "caveats": "Two start dates only and they disagree sharply (2016 start: P(>=3x) 4%, P(<=0.5x) 42%, blow-up 35% - PSU-bank NPA cycle, IL&FS/DHFL credit freeze and the Mar-2020 crash all inside the window; 2018 start: 18% / 9% / 20%); CIs show sampling error only. Blow-up uses the price rule (close <=0.2x the T close at any point), so the Mar-2020 COVID crash counts even where the stock later recovered: the permanent share (blow-up AND R5 <=0.5x or no R5) is 19.6%. Price only (dividends excluded, ~1-2%/yr). Frame = lender-keyword names on BSE/NSE active, delisted and suspended lists + industry map + explicit cases; lenders with no keyword in their name that have since died are missed. Mergers chained into the acquirer at the target's last price (PSU-bank amalgamations, GRUH, Capital First, Bharat Financial, SBI associates, Shriram City, Equitas). Syndicate Bank excluded (broken price series); YES Bank and Indiabulls Housing were above Rs 20,000 cr at both T so their episodes are NOT in the class; IL&FS group had no listed lender; PMC Bank was not listed. 4 size overrides (RBL 2016, CreditAccess 2018 IPO-month; single-source)."
+  },
   "india_nonfin_1000_20000cr_5y": {
    "label": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted)",
    "horizon_years": 5,
@@ -45,7 +143,8 @@
    },
    "computed": "2026-11-23",
    "source": "research_notes/Backtests/base_rates_5y.md; tools/backtests/base_rates_5y/build.py on research_notes/Backtests/solvency_india_outputs/panel.csv (= hard_filters_india_v2_outputs/panel_v2.csv, same 489 rows); outputs research_notes/Backtests/base_rates_5y_outputs/results.json",
-   "caveats": "n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%."
+   "caveats": "n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "sector": "non-financial"
   },
   "us_float_500m_10b_5y": {
    "label": "US non-financial, non-utility 10-K filers, public float $500M-$10B at T, 5 yrs from 30-Jun-2015/2017/2019 (survivorship-free: EDGAR fates for unpriced firms)",
@@ -111,7 +210,8 @@
    },
    "computed": "2026-11-23",
    "source": "research_notes/Backtests/base_rates_5y.md; tools/backtests/base_rates_5y/build.py on research_notes/Backtests/solvency_us_outputs/panel.csv; outputs research_notes/Backtests/base_rates_5y_outputs/results.json",
-   "caveats": "n=3125 firm-snapshots used of 3,691 in band (1,823 firms; 2,074 priced, 152 unpriced EDGAR failures, 899 unpriced acquisitions counted as neither tail; 566 unpriced alive/stopped-filing/exchange-transfer rows excluded as missing at random). 95% CIs (CIK bootstrap): P(>=3x) 6.0-8.1%, P(<=0.5x) 12.7-15.7%, P(blow-up) 9.6-12.3%. Assumption bounds (acquisitions excluded instead of neutral): P(>=3x) up to 9.8%, P(<=0.5x) up to 19.9%, blow-up up to 15.3%. Three start dates (2015: >=3x 5.4%, <=0.5x 17.3%; 2017: 5.9%, 9.9%; 2019: 9.5%, 14.9%); windows include the 2015-16 energy bust, COVID and 2022. Total return (adjusted close). Float is stale and understates controlled firms' market cap. Blow-up excludes fraud findings and misses firms that fell 80% and were then bought (unpriced)."
+   "caveats": "n=3125 firm-snapshots used of 3,691 in band (1,823 firms; 2,074 priced, 152 unpriced EDGAR failures, 899 unpriced acquisitions counted as neither tail; 566 unpriced alive/stopped-filing/exchange-transfer rows excluded as missing at random). 95% CIs (CIK bootstrap): P(>=3x) 6.0-8.1%, P(<=0.5x) 12.7-15.7%, P(blow-up) 9.6-12.3%. Assumption bounds (acquisitions excluded instead of neutral): P(>=3x) up to 9.8%, P(<=0.5x) up to 19.9%, blow-up up to 15.3%. Three start dates (2015: >=3x 5.4%, <=0.5x 17.3%; 2017: 5.9%, 9.9%; 2019: 9.5%, 14.9%); windows include the 2015-16 energy bust, COVID and 2022. Total return (adjusted close). Float is stale and understates controlled firms' market cap. Blow-up excludes fraud findings and misses firms that fell 80% and were then bought (unpriced).",
+   "sector": "non-financial"
   },
   "india_survivors_2020_25_mcap_ge400_deprecated": {
    "label": "India, random NSE sample, mcap >= Rs 400 cr at T0, 5 yrs from 30-Sep-2020",

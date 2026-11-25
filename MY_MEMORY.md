@@ -1,7 +1,7 @@
 # My Memory — everything we've learned and decided
 
 *Your plain-language copy. Claude updates this at the end of every session.*
-*Last updated: 24 Nov 2026.*
+*Last updated: 25 Nov 2026.*
 
 ---
 
@@ -127,6 +127,13 @@ India, small size by itself has not).
   big beats were only slightly ahead after costs — not reliable. A live tracker starts with the Jan–Feb 2027 results.
 - **Blind historical drills don't work for an AI** (it recognised 19/20 companies). So we test skill with
   dated predictions about the future instead: 42+ open, scored from Jan 2027.
+
+## 5e. What we learned 25 Nov 2026
+- **Indian banks/lenders are a worse bet on average than other companies:** over 5 years about 11% tripled (vs 21%),
+  25% halved (vs 11%) and 27% blew up (vs 15%). No mid-size private bank tripled. The card now uses these numbers for lenders.
+- **High pledge vs weak interest cover:** neither is reliably worse — it depends on the period. **Both together** is clearly the worst.
+- **Pi setup is on hold** (your call); I'll remind you before the Jan–Feb results season.
+- 6 live deep dives so far, all "size 0" — expected for random stocks, but we check in Jan–Feb whether the card is too strict.
 
 ## 5d. Your Raspberry Pi is ready to set up (24 Nov 2026)
 When you have the Pi: follow `deploy/pi/README.md` — run `install.sh`, then `healthcheck.sh`. It schedules all the nightly checks.

@@ -10,7 +10,7 @@ Last updated: 2026-11-24
 - **25-Nov-2026: user deferred the Pi setup** ("will take a bit more time"); proceed with non-Pi work; remind before late-Jan 2027 results season.
 
 ## In flight (25-Nov-2026)
-- Lender base rates + bank.py CET1 book.
+- ~~Lender base rates + bank.py CET1 book~~ DONE 25-Nov (card v1.5, bank.py v1.2).
 - ~~BSE pagination + resolver bank XBRL~~ DONE 25-Nov (3 UTKARSHBNK calls now auto; 59 structured / 38 assisted of 163 open).
 - ~~Pledge-vs-ICR split test~~ DONE 25-Nov: rejected (L39 addendum). Follow-up: pre-register "both flags → 0 new money" on fresh 2026+ events (collect events from Q3 FY27 onward).
 
@@ -19,9 +19,9 @@ Last updated: 2026-11-24
 - Next queue: ~~(1) industry map~~ DONE 24-Nov (1547/1547, BSE+screener; NSE industryInfo 403); ~~(2) AR zip fix~~ DONE;
   ~~(3) card v1.4 core-asset threat + anchoring warning~~ DONE (India-only for now; decide whether US cards apply it);
   (4) prereg split rule pledge vs ICR (L39); ~~(5) live dive #5~~ DONE (UTKARSHBNK).
-- From L41: India lender base-rate class; bank.py `cet1_book` input + J-curve/bear-only dilution; resolver reading banking XBRL
-  tags (InterestEarned, ProfitLossForThePeriod, PercentageOfGrossNpa); bse_fetch HTTP 400 beyond page 1; prereg test of
-  insight:lender-blowup-signals before making it a gate.
+- From L41: ~~lender class, cet1_book, bank XBRL, bse_fetch~~ DONE 25-Nov. Still open: prereg test of insight:lender-blowup-signals;
+  US lender base-rate class; card input validation (credibility as fraction, L42); extend core-asset threat to US cards.
+- Live dives: next #7 (Chemicals or IT draw), keep ~1–2/week. Watch 6/6 size-0 pattern (strategy_review §4).
 - Deep-dive protocol v1.4 committed; ">20% of mcap" holdco trigger is an untested rule of thumb (insight:holdco-stake-20pct-trigger).
 
 ## Build plan (after answers) — don't start stock-picking before step 1

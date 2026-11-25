@@ -330,3 +330,9 @@ government input is often subsidised financing or a dated rule (e.g. solar relax
 Process: take the frame close from the bhavcopy's date column, not the file name; card input validation (credibility as fraction).
 **Pattern to watch:** 6 of 6 live cards = size 0 (EV below the 1.76x hurdle). Either the market is roughly fair on random draws
 (expected) or the hurdle/tails make the card structurally say no. Check at the first scoring season before changing anything.
+
+### L41 follow-up (2026-11-25) — India lender base rates exist now
+`india_lender_1000_20000cr_5y` (n=107 company-starts, survivorship-aware): P(≥3x) 11% vs 21% for non-financials; P(≤0.5x) 25% vs 11%;
+P(blow-up) 27% (permanent 20%) vs 15%; median 1.04x. No private bank tripled. Start years disagree hugely (2016 vs 2018 = the credit
+cycle), so treat as a cycle-average. Card v1.5 auto-selects it for Indian lenders. Never re-issue a dated card when a better base rate
+arrives — add an addendum; scoring must test what we actually said.

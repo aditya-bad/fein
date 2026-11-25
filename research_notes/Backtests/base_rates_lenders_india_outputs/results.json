@@ -1,0 +1,596 @@
+{
+ "generated_by": "tools/backtests/base_rates_lenders_india/build.py",
+ "seed": 20261125,
+ "draws": 2000,
+ "funnel": {
+  "lender": 534,
+  "FY2016|out_of_band": 158,
+  "FY2018|out_of_band": 167,
+  "not_lender": 335,
+  "FY2016|panel": 52,
+  "FY2018|panel": 55,
+  "FY2016|size_unknown": 16,
+  "FY2018|not_trading_at_T": 83,
+  "FY2016|not_trading_at_T": 87,
+  "FY2016|no_annual_at_T": 205,
+  "FY2018|size_unknown": 15,
+  "FY2016|no_price_history": 16,
+  "FY2018|no_price_history": 8,
+  "FY2016|size_override": 1,
+  "FY2018|size_override": 1,
+  "FY2018|no_annual_at_T": 206,
+  "no_page": 101,
+  "ambiguous_name_not_counted": 39,
+  "duplicate_company": 30,
+  "lender_data_broken_excluded": 1,
+  "_ambiguous_in_band_review": []
+ },
+ "point": {
+  "n": 107,
+  "n_tail": 107,
+  "p_ge_3x": 0.1121,
+  "p_le_half": 0.2523,
+  "p_blowup": 0.271,
+  "p_strict": 0.0187,
+  "p_blowup_permanent": 0.1963,
+  "median_mult": 1.0354,
+  "excluded_no_r5_alive": 0
+ },
+ "ci95": {
+  "p_ge_3x": [
+   0.0513,
+   0.1827
+  ],
+  "p_le_half": [
+   0.17,
+   0.3333
+  ],
+  "p_blowup": [
+   0.1792,
+   0.3652
+  ],
+  "p_strict": [
+   0.0,
+   0.0577
+  ],
+  "p_blowup_permanent": [
+   0.1193,
+   0.2804
+  ],
+  "median_mult": [
+   0.8422,
+   1.6209
+  ]
+ },
+ "by_snapshot": {
+  "FY2016": {
+   "n": 52,
+   "n_tail": 52,
+   "p_ge_3x": 0.0385,
+   "p_le_half": 0.4231,
+   "p_blowup": 0.3462,
+   "p_strict": 0.0192,
+   "p_blowup_permanent": 0.3077,
+   "median_mult": 0.6033,
+   "excluded_no_r5_alive": 0
+  },
+  "FY2018": {
+   "n": 55,
+   "n_tail": 55,
+   "p_ge_3x": 0.1818,
+   "p_le_half": 0.0909,
+   "p_blowup": 0.2,
+   "p_strict": 0.0182,
+   "p_blowup_permanent": 0.0909,
+   "median_mult": 1.7253,
+   "excluded_no_r5_alive": 0
+  }
+ },
+ "by_kind": {
+  "bank": {
+   "n": 56,
+   "n_tail": 56,
+   "p_ge_3x": 0.0357,
+   "p_le_half": 0.25,
+   "p_blowup": 0.2143,
+   "p_strict": 0.0357,
+   "p_blowup_permanent": 0.1786,
+   "median_mult": 1.0242,
+   "excluded_no_r5_alive": 0
+  },
+  "nbfc_hfc": {
+   "n": 51,
+   "n_tail": 51,
+   "p_ge_3x": 0.1961,
+   "p_le_half": 0.2549,
+   "p_blowup": 0.3333,
+   "p_strict": 0.0,
+   "p_blowup_permanent": 0.2157,
+   "median_mult": 1.0354,
+   "excluded_no_r5_alive": 0
+  }
+ },
+ "by_kind_ci95": {
+  "bank": {
+   "p_ge_3x": [
+    0.0,
+    0.0909
+   ],
+   "p_le_half": [
+    0.1509,
+    0.3559
+   ],
+   "p_blowup": [
+    0.1,
+    0.3333
+   ],
+   "p_strict": [
+    0.0,
+    0.1111
+   ],
+   "p_blowup_permanent": [
+    0.0784,
+    0.2857
+   ],
+   "median_mult": [
+    0.7291,
+    1.3584
+   ]
+  },
+  "nbfc_hfc": {
+   "p_ge_3x": [
+    0.0816,
+    0.3333
+   ],
+   "p_le_half": [
+    0.1277,
+    0.4038
+   ],
+   "p_blowup": [
+    0.1852,
+    0.4815
+   ],
+   "p_strict": [
+    0.0,
+    0.0
+   ],
+   "p_blowup_permanent": [
+    0.087,
+    0.3621
+   ],
+   "median_mult": [
+    0.8304,
+    2.0236
+   ]
+  }
+ },
+ "bank_public_sector_by_snapshot": {
+  "FY2016": {
+   "n": 19,
+   "n_tail": 19,
+   "p_ge_3x": 0.0,
+   "p_le_half": 0.5789,
+   "p_blowup": 0.3684,
+   "p_strict": 0.0,
+   "p_blowup_permanent": 0.3684,
+   "median_mult": 0.3678,
+   "excluded_no_r5_alive": 0
+  },
+  "FY2018": {
+   "n": 17,
+   "n_tail": 17,
+   "p_ge_3x": 0.1176,
+   "p_le_half": 0.0,
+   "p_blowup": 0.1176,
+   "p_strict": 0.0,
+   "p_blowup_permanent": 0.0,
+   "median_mult": 1.6167,
+   "excluded_no_r5_alive": 0
+  }
+ },
+ "nbfc_hfc_by_snapshot": {
+  "FY2016": {
+   "n": 23,
+   "n_tail": 23,
+   "p_ge_3x": 0.087,
+   "p_le_half": 0.3913,
+   "p_blowup": 0.3913,
+   "p_strict": 0.0,
+   "p_blowup_permanent": 0.3043,
+   "median_mult": 0.8408,
+   "excluded_no_r5_alive": 0
+  },
+  "FY2018": {
+   "n": 28,
+   "n_tail": 28,
+   "p_ge_3x": 0.2857,
+   "p_le_half": 0.1429,
+   "p_blowup": 0.2857,
+   "p_strict": 0.0,
+   "p_blowup_permanent": 0.1429,
+   "median_mult": 1.866,
+   "excluded_no_r5_alive": 0
+  }
+ },
+ "bank_public_sector": {
+  "n": 36,
+  "n_tail": 36,
+  "p_ge_3x": 0.0556,
+  "p_le_half": 0.3056,
+  "p_blowup": 0.25,
+  "p_strict": 0.0,
+  "p_blowup_permanent": 0.1944,
+  "median_mult": 1.1927,
+  "excluded_no_r5_alive": 0
+ },
+ "bank_private_other": {
+  "n": 20,
+  "n_tail": 20,
+  "p_ge_3x": 0.0,
+  "p_le_half": 0.15,
+  "p_blowup": 0.15,
+  "p_strict": 0.1,
+  "p_blowup_permanent": 0.15,
+  "median_mult": 0.7856,
+  "excluded_no_r5_alive": 0
+ },
+ "live_today_only": {
+  "n": 74,
+  "n_tail": 74,
+  "p_ge_3x": 0.1486,
+  "p_le_half": 0.1892,
+  "p_blowup": 0.2027,
+  "p_strict": 0.0,
+  "p_blowup_permanent": 0.1351,
+  "median_mult": 1.3981,
+  "excluded_no_r5_alive": 0
+ },
+ "exclude_size_overrides": {
+  "n": 105,
+  "n_tail": 105,
+  "p_ge_3x": 0.1048,
+  "p_le_half": 0.2571,
+  "p_blowup": 0.2762,
+  "p_strict": 0.019,
+  "p_blowup_permanent": 0.2,
+  "median_mult": 1.0354,
+  "excluded_no_r5_alive": 0
+ },
+ "exclude_size_ambiguous": {
+  "n": 104,
+  "n_tail": 104,
+  "p_ge_3x": 0.1058,
+  "p_le_half": 0.2596,
+  "p_blowup": 0.2788,
+  "p_strict": 0.0192,
+  "p_blowup_permanent": 0.2019,
+  "median_mult": 1.019,
+  "excluded_no_r5_alive": 0
+ },
+ "chained_mergers": [
+  [
+   "Allahabad Bank(Merged)",
+   "chained:INDIANB"
+  ],
+  [
+   "Andhra Bank(Merged)",
+   "chained:UNIONBANK"
+  ],
+  [
+   "Bharat Financial Inclusion Ltd(Merged))",
+   "chained:INDUSINDBK"
+  ],
+  [
+   "Corporation Bank(Merged)",
+   "chained:UNIONBANK"
+  ],
+  [
+   "Dena Bank(Merged)",
+   "chained:BANKBARODA"
+  ],
+  [
+   "Equitas Holdings Ltd (Merged)",
+   "chained:EQUITASBNK"
+  ],
+  [
+   "GRUH Finance Ltd(Merged)",
+   "chained:BANDHANBNK"
+  ],
+  [
+   "Oriental Bank of Commerce(Merged",
+   "chained:PNB"
+  ],
+  [
+   "Shriram City Union Finance Ltd(Merged)",
+   "chained:SHRIRAMFIN"
+  ],
+  [
+   "State Bank of Bikaner and Jaipur(Merged)",
+   "chained:SBIN"
+  ],
+  [
+   "State Bank of Mysore(Merged)",
+   "chained:SBIN"
+  ],
+  [
+   "State Bank of Travancore(Merged)",
+   "chained:SBIN"
+  ],
+  [
+   "United Bank of India(Merged)",
+   "chained:PNB"
+  ],
+  [
+   "Vijaya Bank(Merged)",
+   "chained:BANKBARODA"
+  ]
+ ],
+ "failures": [
+  [
+   "DHFL (screener page now 'Piramal Finance Ltd'; pre-2021 prices are DHFL's)",
+   "FY2016",
+   null,
+   0.0319,
+   "price"
+  ],
+  [
+   "DHFL (screener page now 'Piramal Finance Ltd'; pre-2021 prices are DHFL's)",
+   "FY2018",
+   null,
+   0.0329,
+   "price"
+  ],
+  [
+   "Allahabad Bank(Merged)",
+   "FY2016",
+   0.226,
+   0.0771,
+   "price"
+  ],
+  [
+   "Allahabad Bank(Merged)",
+   "FY2018",
+   1.6149,
+   0.1668,
+   "price"
+  ],
+  [
+   "Andhra Bank(Merged)",
+   "FY2016",
+   0.1801,
+   0.1189,
+   "price"
+  ],
+  [
+   "Bharat Financial Inclusion Ltd(Merged))",
+   "FY2018",
+   0.8759,
+   0.192,
+   "price"
+  ],
+  [
+   "Central Bank of India",
+   "FY2016",
+   0.229,
+   0.1112,
+   "price"
+  ],
+  [
+   "Corporation Bank(Merged)",
+   "FY2016",
+   0.2592,
+   0.1712,
+   "price"
+  ],
+  [
+   "Dena Bank(Merged)",
+   "FY2016",
+   0.2476,
+   0.1191,
+   "price"
+  ],
+  [
+   "GIC Housing Finance Ltd",
+   "FY2016",
+   0.4562,
+   0.1841,
+   "price"
+  ],
+  [
+   "IDFC Ltd(Merged)",
+   "FY2016",
+   0.8304,
+   0.1994,
+   "price"
+  ],
+  [
+   "IFCI Ltd",
+   "FY2016",
+   0.4563,
+   0.1331,
+   "price"
+  ],
+  [
+   "Indian Bank",
+   "FY2018",
+   1.8626,
+   0.1924,
+   "price"
+  ],
+  [
+   "Jammu and Kashmir Bank Ltd",
+   "FY2016",
+   0.4707,
+   0.1429,
+   "price"
+  ],
+  [
+   "Lakshmi Vilas Bank Ltd(Merged)",
+   "FY2016",
+   0.0,
+   0.0533,
+   "wiped"
+  ],
+  [
+   "Lakshmi Vilas Bank Ltd(Merged)",
+   "FY2018",
+   0.0,
+   0.1065,
+   "wiped"
+  ],
+  [
+   "PNB Housing Finance Ltd",
+   "FY2018",
+   0.9452,
+   0.178,
+   "price"
+  ],
+  [
+   "Poonawalla Fincorp Ltd",
+   "FY2016",
+   1.6514,
+   0.1302,
+   "price"
+  ],
+  [
+   "Poonawalla Fincorp Ltd",
+   "FY2018",
+   3.3055,
+   0.116,
+   "price"
+  ],
+  [
+   "Reliance Capital Ltd",
+   "FY2016",
+   0.0446,
+   0.0088,
+   "price"
+  ],
+  [
+   "Reliance Capital Ltd",
+   "FY2018",
+   0.0384,
+   0.0151,
+   "price"
+  ],
+  [
+   "Reliance Home Finance Ltd",
+   "FY2018",
+   0.0376,
+   0.0153,
+   "price"
+  ],
+  [
+   "Repco Home Finance Ltd",
+   "FY2016",
+   0.3888,
+   0.1129,
+   "price"
+  ],
+  [
+   "SREI Infrastructure Finance Ltd",
+   "FY2016",
+   0.1226,
+   0.0547,
+   "price"
+  ],
+  [
+   "SREI Infrastructure Finance Ltd",
+   "FY2018",
+   null,
+   0.0603,
+   "price"
+  ],
+  [
+   "Satin Creditcare Network Ltd",
+   "FY2016",
+   0.1397,
+   0.0853,
+   "price"
+  ],
+  [
+   "Satin Creditcare Network Ltd",
+   "FY2018",
+   0.8624,
+   0.171,
+   "price"
+  ],
+  [
+   "Union Bank of India",
+   "FY2016",
+   0.2519,
+   0.1664,
+   "price"
+  ],
+  [
+   "United Bank of India(Merged)",
+   "FY2016",
+   0.215,
+   0.1512,
+   "price"
+  ]
+ ],
+ "winners_3x": [
+  [
+   "Bank of Maharashtra",
+   "FY2018",
+   4.2928
+  ],
+  [
+   "Can Fin Homes Ltd",
+   "FY2018",
+   3.2189
+  ],
+  [
+   "Capri Global Capital Ltd",
+   "FY2016",
+   8.2005
+  ],
+  [
+   "Capri Global Capital Ltd",
+   "FY2018",
+   8.7965
+  ],
+  [
+   "Cholamandalam Investment & Finance Company Ltd",
+   "FY2018",
+   5.2177
+  ],
+  [
+   "CreditAccess Grameen Ltd",
+   "FY2018",
+   4.4836
+  ],
+  [
+   "IDFC Ltd(Merged)",
+   "FY2018",
+   3.2415
+  ],
+  [
+   "Indian Overseas Bank",
+   "FY2018",
+   3.5687
+  ],
+  [
+   "Muthoot Finance Ltd",
+   "FY2016",
+   4.3149
+  ],
+  [
+   "Muthoot Finance Ltd",
+   "FY2018",
+   3.1036
+  ],
+  [
+   "Poonawalla Fincorp Ltd",
+   "FY2018",
+   3.3055
+  ],
+  [
+   "REC Ltd",
+   "FY2018",
+   3.9139
+  ]
+ ],
+ "excluded_alive_no_r5": []
+}

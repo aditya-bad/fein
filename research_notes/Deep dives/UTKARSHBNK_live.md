@@ -363,3 +363,10 @@ segment GNPA for MSME/CV/housing (promised on the call); CRR rate and PSL achiev
 - CGFMU extension (press, 1 src): https://www.manoramayearbook.in/current-affairs/india/2026/11/12/cabinet-credit-guarantee-fund-for-micro-units.html
 - NSE bhavcopy 23-Nov-2026; SHP XBRL 30-Sep-2026; Yahoo v8 UTKARSHBNK.NS, ^CRSLDX; screener.in UTKARSHBNK, UJJIVANSFB, EQUITASBNK, ESAFSFB, SURYODAY, JSFB, CAPITALSFB, AUBANK (24-Nov-2026)
 - Selection: `research_notes/Deep dives/UTKARSHBNK_selection/` (prereg_selection.md, selection_order.json); scripts in scratchpad `live_dd5/scripts/` (frame.py, draw.py, pead.py, s2check.sh, bankx.py)
+
+---
+## Addendum 2026-11-25 (after the call date — does NOT change the dated calls)
+An India lender base-rate class now exists (`research_notes/Backtests/base_rates_lenders_india.md`): P(≤0.5x) 25%, P(blow-up) 27%,
+P(≥3x) 11%. The card's w=0.3 note ("class is non-financial") is now stale: our raw tails (21%, 15%) sit *below* the lender class.
+Re-anchored at w=0.5 the tails would be 23.1% / 21.1%; size stays 0 (EV ~1.23x vs 1.76x). The original card and calls stay as
+issued so Brier scoring tests what we actually said.

@@ -78,3 +78,4 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
 - 24-Nov-2026 (end): industry map 100% (1,547), AR-zip handling (10 tests), card v1.4 (33 tests). Day's net: protocol v1.4, card v1.3→v1.4, Pi bundle, 2 live dives (21 calls), L39–L41.
 - 25-Nov-2026: user deferred Pi. Split survival-cap test (pledge vs ICR) rejected — single-flag tails regime-dependent; both-flags group consistently worst (L39 addendum). Card unchanged.
 - 25-Nov-2026: BSE fetch window fix; scoreboard bank XBRL path. Live dive #6 HARSHA (Capital Goods draw, no skips; card size 0, EV 1.58x vs 1.76x; 9 calls, 4 auto). L42. Watch: 6/6 live cards size 0.
+- 25-Nov-2026: India lender base rates (P≥3x 11%, P≤0.5x 25%, blow-up 27%) → card v1.5; bank.py v1.2 (CET1 book, scenario dilution, J-curve). UTKARSHBNK addendum (calls unchanged).
