@@ -118,6 +118,7 @@ run() {
     pead-weekly) cd "$FEIN_REPO" && "$PY" tools/backtests/india_pead/live_tracker.py finalize &&
                    "$PY" tools/backtests/india_pead/live_tracker.py score ;;
     scoreboard)  cd "$FEIN_REPO" && tools/scoreboard/run_daily.sh ;;
+    news)        cd "$FEIN_REPO/tools/news" && "$PY" news.py ;;
     git-sync)    git_sync ;;
     logrotate)   rotate_logs ;;
   esac

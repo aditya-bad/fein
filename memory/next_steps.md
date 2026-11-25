@@ -52,7 +52,7 @@ Last updated: 2026-11-24
 - ~~Pre-register: survival cap for any red-flag firm~~ DONE 24-Nov: adopted as size cap (card v1.3, L39). Follow-up: pre-register split rule (pledge stricter than interest cover).
 
 ## Priority queue (set 25-Nov-2026 after user Q&A)
-1. News layer (company news, ratings, SEBI/RBI, gazettes, courts excl. NCLT) — run each session until Pi. Stage 2/4.
+1. ~~News layer~~ BUILT 25-Nov (tools/news/; Google News RSS per company + policy, SEBI, RBI; rating-agency sites not automatable). **Run `python3 tools/news/news.py --since 2d` at the start of each session until the Pi.** Verify flags before using (headlines only). Open checks: UTTAMSUGAR SC ethanol hearing 2-Dec + Haryana/Punjab SAP; NVDA governance headlines (unverified); US-NEE/US-UNH items vs open calls.
 2. ~~Historical-panel test of card fixes~~ DONE 25-Nov (L48): fix 3 passes history, fix 4 fails. After season: apply v1.6 patch (tools/decision/patches/); write v1.6.1 fix-3 patch on a finer grid; prereg blow-up under-prediction test.
 3. Live deep dives ~1–2/week (IT, pharma, consumer, cap goods). Stages 4→7.
 4. Small macro module: monthly snapshot (repo, 10y G-sec, CPI, INR, crude, DXY, gold, FPI flows, Nifty EY vs G-sec);

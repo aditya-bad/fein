@@ -51,23 +51,26 @@ ANTIBOT = re.compile(r"cf-chl|challenge-platform|Just a moment\.\.\.|Attention R
 
 # Material rules, checked on the headline, in priority order (first hit = rule name; all hits listed).
 MATERIAL = [
-    ("court", r"supreme court|high court|\bcourt\b|\bnclt\b|\bnclat\b|tribunal|\bsc\b (?:order|verdict|ruling)"),
+    ("court", r"supreme court|high court|(?<!food )\bcourt\b|\bnclt\b|\bnclat\b|tribunal|\bsc\b (?:order|verdict|ruling)"),
     ("sebi", r"\bsebi\b"), ("rbi", r"\brbi\b|reserve bank"),
-    ("usfda", r"usfda|\bfda\b|warning letter|import alert|form 483|\bcgmp\b"),
+    ("usfda", r"warning letter|import alert|form 483|\b483\b|\boai\b|cgmp|untitled letter|"
+              r"(?:us ?fda|\bfda\b).{0,25}(?:inspection|observation|ban|warns|probe|rejects|complete response)"),
     ("fraud", r"\bfraud|forensic|siphon|money.laundering|\bed\b (?:raid|probe|searches)|whistleblower"),
     ("raid", r"\braids?\b|income.tax (?:search|survey)|\bsearch(?:es)? at\b"),
     ("default", r"\bdefault|insolvency|bankrupt|chapter 11|\bcirp\b|non.payment|missed (?:interest|payment)"),
     ("downgrade", r"downgrad|negative outlook|rating watch|not cooperating|\bcut to\b"),
     ("resignation", r"resign|steps down|quits|sacked|ousted|\bexits?\b as"),
     ("lease_licence", r"\blease\b|licen[cs]e|concession|land allot"),
-    ("tender", r"\btender\b|\bbid\b|\bauction\b"),
-    ("gazette", r"gazette|notification|ordinance|ministry|cabinet approves"),
+    ("tender", r"\btender\b|\bauction\b"),
+    ("gazette", r"gazette|ordinance|cabinet approves|\bnotifies\b"),
     ("plant_shutdown", r"shut ?down|plant closure|halts? (?:production|operations)|suspends? (?:production|operations)|lockout"),
     ("fire", r"\bfire\b|\bblaze\b|explosion|\bblast\b"),
     ("strike", r"\bstrike\b|\bprotest|agitation"),
     ("penalty", r"penalt|\bfine[ds]?\b|show.cause|\bprobe\b|investigation|subpoena|lawsuit|class action"),
 ]
 MATERIAL_RX = [(n, re.compile(p, re.I)) for n, p in MATERIAL]
+# Tagged but NOT material (ranked with ordinary news): routine regulatory approvals.
+INFO_RX = [("usfda_nod", re.compile(r"(?:us ?fda|\bfda\b).{0,40}(?:approv|nod|clearance|go-ahead)|fda approv", re.I))]
 AGENCY_RX = re.compile(r"crisil|\bicra\b|\bcare ?(?:ratings|edge)\b|india ratings|ind-ra|acuit[eé]|brickwork|infomerics", re.I)
 
 
@@ -167,8 +170,11 @@ def prep_watchlist(rows):
         base = re.sub(r"\s+(Ltd|Limited|Inc|Corp|Corporation)\.?$", "", r["name"], flags=re.I)
         # the name without Ltd/Inc is only used when still 2+ words ("Kirby Corporation" must not become "Kirby")
         terms = [r["name"]] + ([base] if " " in base.strip() else []) + split(r.get("aliases"))
-        # India tickers of 5+ letters are distinctive enough to search and match on (NSE codes)
-        if r["market"] == "IN" and len(r["ticker"]) >= 5:
+        # India NSE codes of 8+ letters are distinctive search terms (UTTAMSUGAR), unless the code is itself a
+        # word of the name (PERSISTENT). Shorter codes (HARSHA, SHK) pulled in cricket and politics: add them
+        # as an alias by hand only if they are distinctive.
+        words = {w.lower() for t in [r["name"]] + split(r.get("aliases")) for w in re.findall(r"[A-Za-z0-9]+", t)}
+        if r["market"] == "IN" and len(r["ticker"]) >= 8 and r["ticker"].lower() not in words:
             terms.append(r["ticker"])
         seen, uniq = set(), []
         for t in terms:
@@ -253,6 +259,8 @@ class Run:
         if any(self.con.execute("SELECT 1 FROM seen WHERE key=?", (k,)).fetchone() for k in keys):
             return  # reported on an earlier run
         mat = material_rules(it["title"])
+        info = [n for n, rx in INFO_RX if rx.search(it["title"])]
+        rules = info + list(rules)
         for k in keys:
             self.keyidx[k] = iid
         self.items[iid] = {"id": iid, "_keys": keys, "pub": it["pub"], "tickers": list(tickers), "source": src,
@@ -532,6 +540,18 @@ def selftest():
     run3, _, items3 = run_all(a, os.path.join(tmp, "b"), os.path.join(tmp, "b.sqlite"), blocked, now)
     checks.append(("anti-bot host skipped after first hit", run3.status["google_news"]["fail"] == 3 and len(items3) == 0))
     checks.append(("material regex: 'fire' not in 'firepower'", "fire" not in material_rules("Firepower boost for defence")))
+    checks.append(("FDA approval is not material, warning letter is",
+                   not material_rules("Lupin gets USFDA approval for generic drug")
+                   and material_rules("USFDA issues warning letter to Lupin Pithampur unit")[:1] == ["usfda"]))
+    checks.append(("'food court' is not a court", "court" not in material_rules("Costco brings back a food court favourite")))
+    t = {r["ticker"]: r["terms"] for r in prep_watchlist([
+        {"ticker": "HARSHA", "name": "Harsha Engineers", "aliases": "", "keywords": ""},
+        {"ticker": "PERSISTENT", "name": "Persistent Systems", "aliases": "", "keywords": ""},
+        {"ticker": "US-KEX", "name": "Kirby Corporation", "aliases": "", "keywords": ""},
+        {"ticker": "UTTAMSUGAR", "name": "Uttam Sugar Mills", "aliases": "", "keywords": ""}])}
+    checks.append(("search terms: no bare HARSHA/PERSISTENT/Kirby, UTTAMSUGAR kept",
+                   "HARSHA" not in t["HARSHA"] and "PERSISTENT" not in t["PERSISTENT"] and "Kirby" not in t["US-KEX"]
+                   and "UTTAMSUGAR" in t["UTTAMSUGAR"]))
     for name, ok in checks:
         print(("PASS " if ok else "FAIL ") + name)
     bad = sum(not ok for _, ok in checks)

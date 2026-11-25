@@ -85,7 +85,7 @@ branch="$(git -C "$REPO" rev-parse --abbrev-ref HEAD)"
 [ "$branch" = "$FEIN_BRANCH_DEFAULT" ] || warn "repo is on '$branch'; the weekly pull expects '$FEIN_BRANCH_DEFAULT' (git checkout $FEIN_BRANCH_DEFAULT)"
 case "$DATA/" in "$REPO"/*) die "data folder $DATA is inside the repo; secrets and data must stay outside it." ;; esac
 for f in tools/detectors/collect.py tools/detectors/detect.py tools/detectors/solvency_screen.py \
-         tools/backtests/india_pead/live_tracker.py tools/scoreboard/run_daily.sh; do
+         tools/backtests/india_pead/live_tracker.py tools/scoreboard/run_daily.sh tools/news/news.py; do
   [ -e "$REPO/$f" ] || die "missing $f; is this the right branch?"
 done
 
@@ -108,7 +108,7 @@ else warn "clock is $tz; run: sudo timedatectl set-timezone Asia/Kolkata (cron t
 
 # ------------------------------------------------------------- 3. data folders + env file
 say "Data folder $DATA"
-for d in "$DATA" "$DATA/raw" "$DATA/logs" "$DATA/logs/status" "$DATA/alerts" "$DATA/solvency" "$DATA/secrets"; do
+for d in "$DATA" "$DATA/raw" "$DATA/logs" "$DATA/logs/status" "$DATA/alerts" "$DATA/solvency" "$DATA/news" "$DATA/secrets"; do
   if [ -d "$d" ]; then echo "   exists: $d"; else do_ mkdir -p "$d"; fi
 done
 do_ chmod 700 "$DATA" "$DATA/secrets"
