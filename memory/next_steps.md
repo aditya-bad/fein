@@ -59,7 +59,9 @@ Last updated: 2026-11-24
    sector-sensitivity checklist; prereg test EY–G-sec gap → 3–5y Nifty returns. Stage 5.
 5. Wealth-allocation test (100% equity vs fixed split rebalanced vs valuation bands vs new-money-to-underweight, India, 2 sources). Defence.
 6. Fortnightly/monthly flows (NSDL FPI sector, RBI credit, MF portfolios): prereg "heavy fund selling in small stock → further falls?". Stage 3.
-7. Promise tracker scale-up once Gemini CLI + Pi + Screener arrive. Stage 3.
+7. Consensus: add forward P/E + analyst count to every live dive/card; store dated snapshots; at season end test whether
+   thin-coverage consensus is optimistic vs reported EPS (L47). Stage 5.
+8. Promise tracker scale-up once Gemini CLI + Pi + Screener arrive. Stage 3.
 
 ## Scoring season (from 20-Jan-2027)
 - Follow research_notes/Scoreboard/scoring_season_runbook.md (daily 20-Jan→20-Feb and 15-May→7-Jun).

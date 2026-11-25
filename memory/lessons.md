@@ -366,3 +366,12 @@ User read "Kalpataru 77" as Kalpataru Ltd (KALPATARU, real-estate, listed mid-20
 Our score 77 was Kalpataru Projects International (KPIL, T&D/EPC: ~₹375 Nov-2021 → ₹1,310 Nov-2026, Yahoo). **Rule:** in every
 message to the user, give company name + NSE ticker. Also: KPIL's past price rise does NOT validate the score (score built in 2026
 on past promises = hindsight); only forward calls test it.
+
+## L47 (2026-11-25) — Forward P/E IS freely available (user correction); consensus coverage on small caps is thin
+I told the user forward P/E needs paid data. Wrong: Yahoo/stockanalysis show it. New tool `tools/valuation/consensus.py` (Yahoo
+quoteSummary with session crumb; stockanalysis.com is behind a Cloudflare challenge — not bypassed). Snapshot 25-Nov-2026
+(`research_notes/Consensus/snapshot_2026-11-25.json`): analysts on next FY — RELIANCE 25, AVGO 50, KPIL 11, HARSHA 4, UTKARSHBNK 2,
+SHK/INDRAMEDCO/AUTOAXLES 1, UTTAMSUGAR/SUNFLAG 0. **Rules:** show consensus forward P/E + analyst count beside our scenarios as a
+cross-check; analyst count = coverage (fewer → more room for depth edge); forward EPS is often adjusted/non-GAAP (AVGO 37x trailing
+vs 14.9x forward) so the P/Es aren't like-for-like. SHK: 1 analyst implies ~₹9.9 forward EPS (12.9x) vs our core ₹3.4–3.9 — a dated
+disagreement we can score (our FY27 PAT ≥₹120 cr call at P=0.15). Before claiming data is unavailable, check.
