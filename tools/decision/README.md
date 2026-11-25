@@ -31,6 +31,14 @@ It also prints base-rate CIs and the size-band warning, and applies the market-s
 Bank/NBFC worksheets (`"mode": "bank"`, v1.1) are supported: the stage-5 block then reports reverse P/B, implied CoE,
 residual-income scenarios, P/B temperature and book stress. Example: `examples/FEDERALBNK_card.json` (practice).
 
+## Input validation (2026-11-25, L42) — no mechanics changed (card mechanics frozen by `decision:card-audit-fixes-prereg-2026-11-25`)
+Before building, the card refuses (exit code 2, every bad field listed) any fraction field outside [0, 1]:
+`stage3.credibility.score` / `peer_median`, `survival.pledge_pct_of_promoter`, `tail_anchor.base_weight`,
+`sizing.kelly_fraction` / `adv_pct` / `max_pct_at_cost`, and the worksheet's scenario / base-case / blow-up `prob`.
+A value in (1, 100] is reported as a likely percent ("write 0.31, not 31"). It **warns on stderr** (does not block,
+card text unchanged) when the base-rate class is deprecated or has null tails. Every stored card rebuilds
+byte-identical (`tests/test_decision_card.py::TestInputValidation`).
+
 ## Changelog: card v1.5 (2026-11-25, L41)
 A card whose firm is marked as a lender — `"is_lender": true`, `survival.is_financial: true`, or a bank-mode
 worksheet — uses the market's lender base-rate class (`LENDER_CLASSES`; India: `india_lender_1000_20000cr_5y`,

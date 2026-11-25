@@ -406,6 +406,84 @@ def resolve_base_rate_class(card, wd, wres, rates):
     return lc, (" **Lender class auto-selected (v1.5, L41)** in place of %s." % (name or "no class"))
 
 
+# ----------------------------------------------------------------------------- input validation (L42)
+# Input checks only: they never change a number on a valid card. Fraction fields must be in [0, 1]; a value > 1
+# almost always means a percent was typed (31 for 0.31), so the card refuses to build rather than guess.
+FRACTION_FIELDS = [
+    (("stage3", "credibility", "score"), "promise credibility score"),
+    (("stage3", "credibility", "peer_median"), "peer-median credibility"),
+    (("survival", "pledge_pct_of_promoter"), "promoter pledge (share of the promoter holding)"),
+    (("tail_anchor", "base_weight"), "tail-anchor weight on the base rate"),
+    (("sizing", "kelly_fraction"), "Kelly fraction"),
+    (("sizing", "adv_pct"), "share of average daily value"),
+    (("sizing", "max_pct_at_cost"), "max position at cost"),
+]
+
+
+class CardInputError(ValueError):
+    pass
+
+
+def _fraction_error(where, label, v):
+    hint = (" It looks like a percent: write %s, not %s." % (("%g" % (v / 100.0)), ("%g" % v))) if 1 < v <= 100 else ""
+    return "%s (%s) must be a fraction in [0, 1]; got %r.%s" % (where, label, v, hint)
+
+
+def _check_fraction(errors, where, label, v):
+    if v is None or isinstance(v, bool):
+        return
+    if not isinstance(v, (int, float)):
+        errors.append("%s (%s) must be a number in [0, 1]; got %r." % (where, label, v))
+        return
+    if v < 0 or v > 1 or v != v:
+        errors.append(_fraction_error(where, label, v))
+
+
+def _raw_worksheet(path):
+    with open(path, encoding="utf-8") as f:
+        return json.loads("".join(ln for ln in f if not ln.lstrip().startswith(("#", "//"))))
+
+
+def validate_card(card, raw_ws=None):
+    """Raise CardInputError if any fraction field (credibility, pledge, tail weight, sizing fractions, and the
+    worksheet's scenario / blow-up probabilities) is outside [0, 1]. Lists every bad field at once."""
+    errors = []
+    for keys, label in FRACTION_FIELDS:
+        v = card
+        for k in keys:
+            v = v.get(k) if isinstance(v, dict) else None
+        _check_fraction(errors, ".".join(keys), label, v)
+    if raw_ws:
+        for i, sc in enumerate(raw_ws.get("scenarios") or []):
+            if isinstance(sc, dict):
+                _check_fraction(errors, "worksheet scenarios[%d] (%s).prob" % (i, sc.get("name", "?")),
+                                "scenario probability", sc.get("prob"))
+        bc = raw_ws.get("base_case")
+        if isinstance(bc, dict):
+            _check_fraction(errors, "worksheet base_case.prob", "scenario probability", bc.get("prob"))
+        bl = raw_ws.get("blowup")
+        if isinstance(bl, dict):
+            _check_fraction(errors, "worksheet blowup.prob", "blow-up probability", bl.get("prob"))
+    if errors:
+        raise CardInputError("card input validation failed:\n  - " + "\n  - ".join(errors))
+
+
+def base_rate_warnings(cls_name, cls, rates):
+    """Warnings (never blocks) for a deprecated base-rate class or one with null tails."""
+    out = []
+    if not cls_name or cls is None:
+        return out
+    if cls.get("deprecated") or (cls_name + "_deprecated") in rates["classes"] or cls_name.endswith("_deprecated"):
+        out.append("base-rate class %r is DEPRECATED (%s). Old cards re-run unchanged; new cards should name a "
+                   "current class." % (cls_name, cls.get("deprecated") or "see base_rates.json"))
+    nulls = [k for k in ("p_ge_3x", "p_le_half", "p_blowup") if cls.get(k) is None]
+    if nulls:
+        out.append("base-rate class %r has null %s: those probabilities are not compared with a base rate%s."
+                   % (cls_name, ", ".join(nulls), " and the raw model left tail is used unanchored"
+                      if any(k != "p_ge_3x" for k in nulls) else ""))
+    return out
+
+
 # ----------------------------------------------------------------------------- assemble
 
 def build(card, card_path):
@@ -413,6 +491,7 @@ def build(card, card_path):
     wpath = card["worksheet"]
     if not os.path.isabs(wpath):
         wpath = os.path.join(base_dir, wpath)
+    validate_card(card, _raw_worksheet(wpath))
     wd = ws.load_input(wpath)
     wres = ws.run(wd)
     rates = _load_json(os.path.join(HERE, "base_rates.json"))
@@ -613,6 +692,7 @@ def build(card, card_path):
         cls_note += " **Deprecated class** (%s)" % cls.get("deprecated", "")
     if cls_name and cls is None:
         raise ValueError("unknown base_rate_class %r (see tools/decision/base_rates.json)" % cls_name)
+    F["_input_warnings"] = base_rate_warnings(cls_name, cls, rates)   # stderr only; the card text is unchanged
 
     def br(k):
         return cls.get(k) if cls else None
@@ -915,7 +995,13 @@ def main(argv=None):
     if not a.card:
         ap.error("card input required (or --template)")
     card = _load_json(a.card)
-    fields, records, wres = build(card, a.card)
+    try:
+        fields, records, wres = build(card, a.card)
+    except CardInputError as e:
+        print("ERROR: %s" % e, file=sys.stderr)
+        return 2
+    for w in fields.get("_input_warnings", []):
+        print("WARNING: %s" % w, file=sys.stderr)
     with open(os.path.join(HERE, "decision_card.md"), encoding="utf-8") as f:
         md = fill(f.read(), fields)
     if a.with_worksheet:

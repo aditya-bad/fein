@@ -330,5 +330,135 @@ class TestLenderClass(unittest.TestCase):
         self.assertIn(rates["classes"][dc.LENDER_CLASSES["india"]]["label"], F["probabilities"])
 
 
+class TestInputValidation(unittest.TestCase):
+    """L42: fraction fields must be in [0, 1]; a percent typed by mistake is refused. Never changes a number."""
+
+    def _card(self):
+        card = dc._load_json(SYN_CARD)
+        card["worksheet"] = os.path.normpath(os.path.join(os.path.dirname(SYN_CARD), card["worksheet"]))
+        return card
+
+    def test_valid_card_passes(self):
+        dc.validate_card(self._card(), dc._raw_worksheet(self._card()["worksheet"]))
+
+    def test_percent_credibility_refused(self):
+        card = self._card()
+        card["stage3"]["credibility"]["score"] = 31
+        with self.assertRaises(dc.CardInputError) as cm:
+            dc.validate_card(card)
+        self.assertIn("looks like a percent", str(cm.exception))
+        self.assertIn("write 0.31, not 31", str(cm.exception))
+
+    def test_each_fraction_field_checked(self):
+        for keys, _ in dc.FRACTION_FIELDS:
+            card = self._card()
+            node = card
+            for k in keys[:-1]:
+                node = node.setdefault(k, {})
+            node[keys[-1]] = 1.5
+            with self.assertRaises(dc.CardInputError, msg=".".join(keys)):
+                dc.validate_card(card)
+            node[keys[-1]] = -0.1
+            with self.assertRaises(dc.CardInputError, msg=".".join(keys)):
+                dc.validate_card(card)
+            node[keys[-1]] = 1.0
+            dc.validate_card(card)
+
+    def test_non_number_refused(self):
+        card = self._card()
+        card["survival"] = {"pledge_pct_of_promoter": "8%"}
+        with self.assertRaises(dc.CardInputError):
+            dc.validate_card(card)
+
+    def test_lists_all_errors(self):
+        card = self._card()
+        card["stage3"]["credibility"]["score"] = 43
+        card["stage3"]["credibility"]["peer_median"] = 60
+        with self.assertRaises(dc.CardInputError) as cm:
+            dc.validate_card(card)
+        self.assertIn("score", str(cm.exception))
+        self.assertIn("peer_median", str(cm.exception))
+
+    def test_worksheet_probabilities_checked(self):
+        raw = dc._raw_worksheet(self._card()["worksheet"])
+        raw["scenarios"][0]["prob"] = 30
+        with self.assertRaises(dc.CardInputError) as cm:
+            dc.validate_card(self._card(), raw)
+        self.assertIn("scenarios[0]", str(cm.exception))
+        raw = dc._raw_worksheet(self._card()["worksheet"])
+        raw["blowup"]["prob"] = 2
+        with self.assertRaises(dc.CardInputError):
+            dc.validate_card(self._card(), raw)
+
+    def test_build_refuses_bad_card(self):
+        card = self._card()
+        card["tail_anchor"] = {"base_weight": 50, "evidence": "x"}
+        with self.assertRaises(dc.CardInputError):
+            dc.build(card, SYN_CARD)
+
+    def test_main_exit_code_on_bad_card(self):
+        card = self._card()
+        card["survival"] = {"pledge_pct_of_promoter": 25}
+        with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as f:
+            json.dump(card, f)
+            path = f.name
+        try:
+            import contextlib
+            import io
+            err = io.StringIO()
+            with contextlib.redirect_stderr(err):
+                self.assertEqual(dc.main([path, "-o", os.devnull]), 2)
+            self.assertIn("write 0.25, not 25", err.getvalue())
+        finally:
+            os.unlink(path)
+
+    def test_base_rate_warnings(self):
+        rates = dc._load_json(os.path.join(DEC, "base_rates.json"))
+        cl = rates["classes"]
+        self.assertEqual(dc.base_rate_warnings("india_nonfin_1000_20000cr_5y", cl["india_nonfin_1000_20000cr_5y"], rates), [])
+        w = dc.base_rate_warnings("us_seasoned_5y", cl["us_seasoned_5y_deprecated"], rates)
+        self.assertEqual(len(w), 2)
+        self.assertIn("DEPRECATED", w[0])
+        self.assertIn("null p_ge_3x, p_le_half, p_blowup", w[1])
+        w = dc.base_rate_warnings("india_survivors_2020_25_mcap_ge400",
+                                  cl["india_survivors_2020_25_mcap_ge400_deprecated"], rates)
+        self.assertIn("null p_blowup", w[1])
+
+    def test_deprecated_class_warns_but_builds(self):
+        F, recs, _ = TestBuildIntegration._build(self, lambda c: c.update(
+            {"base_rate_class": "india_survivors_2020_25_mcap_ge400"}))
+        self.assertTrue(any("DEPRECATED" in w for w in F["_input_warnings"]))
+        self.assertGreater(len(recs), 0)
+
+    def test_stored_cards_rebuild_identically(self):
+        """Every stored card input still builds; cards stored by the current card version rebuild byte-identical."""
+        import glob
+        with open(os.path.join(DEC, "decision_card.md"), encoding="utf-8") as f:
+            tmpl = f.read()
+        same = 0
+        paths = sorted(glob.glob(os.path.join(DEC, "live", "*_card.json")) +
+                       glob.glob(os.path.join(DEC, "examples", "*_card.json")))
+        for p in paths:
+            card = dc._load_json(p)
+            F, recs, _ = dc.build(card, p)
+            stem = p[:-len("_card.json")]
+            md_path, calls_path = stem + "_card.md", stem + "_paper_calls.json"
+            if not (os.path.exists(md_path) and os.path.exists(calls_path)):
+                continue
+            with open(md_path, encoding="utf-8") as f:
+                md_old = f.read()
+            if F["card_version"] not in md_old:
+                continue  # stored by an older card version: not a like-for-like regression
+            with open(calls_path, encoding="utf-8") as f:
+                calls_old = json.load(f)
+            new_calls = json.loads(json.dumps(recs, ensure_ascii=False))
+            if F["decision_date"] != calls_old[-1].get("date"):
+                continue
+            self.assertEqual(md_old, dc.fill(tmpl, F) + "\n", p)
+            self.assertEqual(calls_old, new_calls, p)
+            same += 1
+        self.assertGreaterEqual(same, 2)
+
+
 if __name__ == "__main__":
     unittest.main()

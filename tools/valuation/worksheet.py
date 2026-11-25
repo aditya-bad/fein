@@ -54,6 +54,7 @@ TEMP_BANDS = [
     (0.70, "COLD"), (0.90, "COOL"), (1.10, "NORMAL"), (1.50, "WARM"), (2.00, "HOT"), (float("inf"), "VERY HOT"),
 ]
 MIN_HISTORY_POINTS = 5
+DCF_BELOW_NET_DEBT = "DCF value below net debt — EV above 1x is an exit-multiple bet (L21, L44)"
 
 # insight:india-valuation-forward-returns (Nifty trailing P/E -> subsequent 5-yr returns)
 NIFTY_BANDS = [
@@ -78,7 +79,11 @@ TEMPLATE = {
     "treasury_income_post_tax": 0.0,
     "# treasury_income_post_tax": "interest on the net cash already in net_debt; held flat in the EPS path",
     "base": {"fy": "FY26", "revenue": 1000.0, "ebitda": 150.0, "ebit": 120.0, "pat": 90.0, "fcf": 60.0,
-             "eps": None, "eps_normalised": None, "eps_forward": None, "pe_trailing": None, "sbc": 0.0},
+             "eps": None, "eps_normalised": None, "eps_forward": None, "pe_trailing": None, "sbc": 0.0,
+             "core_eps": None, "exceptional_items_cr": None, "other_income_cr": None},
+    "# core_eps": "v1.3.1 optional (L44): core EPS ex exceptional items and ex other income, after interest; or give "
+                  "exceptional_items_cr / other_income_cr (pre-tax, gains positive) and it is derived from PAT at "
+                  "core_adj_tax_rate (default tax_rate). Trailing vs core P/E shown side by side; >25% gap flagged",
     "tax_rate": 0.25,
     "# cash_tax_rate": "v1.3 optional: cash tax rate when it differs from book tax (accelerated/bonus depreciation). "
                        "Or give deferred_tax_share (deferred tax / total tax expense). cash_tax_rate_end = rate in "
@@ -202,6 +207,7 @@ def normalise(d):
         d["_eps_method"] = "given"
     if b["eps"] <= 0:
         warn.append("EPS <= 0: P/E and twin-engine blocks are not meaningful; use eps_normalised")
+    _core_eps(d)
     # base case & scenarios
     bc = d.get("base_case")
     scen = d.get("scenarios") or []
@@ -228,6 +234,40 @@ def normalise(d):
     te.setdefault("horizon", 5)
     d["twin_engine"] = te
     return d
+
+
+CORE_PE_GAP = 0.25   # v1.3.1 (L44): trailing vs core P/E differing by more than this is flagged
+
+
+def _core_eps(d):
+    """v1.3.1 (L44): optional core EPS = EPS ex exceptional items and ex other income, after interest.
+    Give base.core_eps directly, or base.exceptional_items_cr and/or base.other_income_cr (PRE-tax, in the money units;
+    gains positive, losses negative; top-level keys are accepted too). Then
+        core PAT = PAT - (exceptional + other income) x (1 - core_adj_tax_rate)    [default: tax_rate]
+    PAT is already after interest. Display only: valuation temperature shows trailing vs core P/E side by side.
+    Nothing is added to the input when none of these keys is given (old inputs reproduce old outputs)."""
+    b = d["base"]
+    keys = ("core_eps", "exceptional_items_cr", "other_income_cr")
+    for k in keys:
+        if b.get(k) is None and d.get(k) is not None:
+            b[k] = d[k]
+    if all(b.get(k) is None for k in keys):
+        return
+    for k in keys:
+        if k in b:
+            b[k] = _num(b[k], "base." + k)
+    if b.get("core_eps") is not None:
+        d["_core_eps_method"] = "given"
+        return
+    t = _num(d.get("core_adj_tax_rate"), "core_adj_tax_rate")
+    t = d["tax_rate"] if t is None else t
+    pat = b["pat"] if b.get("pat") is not None else b["eps"] * d["shares"]
+    exc = b.get("exceptional_items_cr") or 0.0
+    oi = b.get("other_income_cr") or 0.0
+    core_pat = pat - (exc + oi) * (1 - t)
+    b["core_eps"] = core_pat / d["shares"]
+    d["_core_eps_method"] = ("(PAT %.1f - (exceptional %.1f + other income %.1f) x (1 - tax %.0f%%)) / shares"
+                             % (pat, exc, oi, 100 * t))
 
 
 def _cash_tax(d):
@@ -489,6 +529,11 @@ def scenario_analysis(d):
     out["bear_value"] = worst["value_ps"]
     out["downside_bear"] = worst["value_ps"] / price - 1
     out["p_value_below_price"] = sum(r["prob"] for r in res if r["value_ps"] < price) + bl["prob"]
+    # v1.3.1 (L21, L44): equity DCF <= 0 means the DCF of operations is below net debt; recorded only when it happens
+    below = [r["name"] for r in res if r["value_ps"] <= 0]
+    below5 = [r["name"] for r in res if r["dcf_pe5"] is not None and r["dcf_pe5"] <= 0]
+    if below or below5:
+        out["dcf_below_net_debt"] = {"today": below, "year5": below5}
     # 5-year outcome distribution: lognormal around each scenario's 5-yr multiple, plus a blow-up point mass
     sig = d["dispersion"]
     if all(r["mult5"] for r in res):
@@ -601,12 +646,24 @@ def temperature(d):
         pes["normalised EPS"] = price / b["eps_normalised"]
     if b.get("eps_forward"):
         pes["forward EPS"] = price / b["eps_forward"]
+    core = None
+    if b.get("core_eps") is not None:
+        trailing = list(pes.values())[0]
+        core_pe = price / b["core_eps"] if b["core_eps"] > 0 else None
+        if core_pe:
+            pes["core EPS (ex exceptional, ex other income)"] = core_pe
+        gap = (core_pe / trailing - 1) if (core_pe and trailing) else None
+        core = {"core_eps": b["core_eps"], "method": d.get("_core_eps_method"), "trailing_pe": trailing,
+                "core_pe": core_pe, "gap": gap,
+                "flag": core_pe is None or (gap is not None and abs(gap) > CORE_PE_GAP)}
     hist = [p for p in (d.get("pe_history") or []) if p.get("pe")]
     own_med = _median([p["pe"] for p in hist])
     sector = d.get("sector_pes") or {}
     sec_med = _median(list(sector.values()))
     out = {"pes": pes, "n_hist": len(hist), "own_median": own_med, "sector_median": sec_med,
            "sector": sector, "rows": []}
+    if core is not None:
+        out["core"] = core
     for label, pe in pes.items():
         if not pe:
             continue
@@ -858,6 +915,14 @@ def render(res, heading_level=2):
         L.append("| %s | %s | %s | %s |" % (num(sc["pw_value"], 1), pct(sc["pw_vs_price"], 0),
                                           pct(sc["downside_bear"], 0), pct(sc["p_value_below_price"], 0)))
         L.append("")
+        bnd = sc.get("dcf_below_net_debt")
+        if bnd and bnd["today"]:
+            L.append("> **%s** (%s). The DCF of the operating business (PV of FCF + terminal value + other income + "
+                     "non-operating assets) is less than net debt of %s %s, so equity DCF ≤ 0 and the negative DCF "
+                     "values above are this, not a bug or missing data. Any 5-year multiple above 1x rests on the exit "
+                     "P/E, not on cash flows at this cost of equity."
+                     % (DCF_BELOW_NET_DEBT, ", ".join(bnd["today"]), num(d["net_debt"]), u))
+            L.append("")
         if "p_ge_3x" in sc:
             L.append("5-year price outcomes (each scenario's multiple ± lognormal dispersion σ=%.2f, blow-up as a point mass):"
                      % d["dispersion"])
@@ -898,6 +963,12 @@ def render(res, heading_level=2):
                 L.append("Hurdle %s. The card's gate uses the stated exit; the other two columns show how much of the "
                          "answer is the multiple bet." % mult(eb["hurdle"]))
                 L.append("")
+                bnd = sc.get("dcf_below_net_debt")
+                if bnd and bnd["year5"]:
+                    L.append("> **%s** at year 5 in %s: the DCF-consistent P/E is ≤ 0, so \"Used ÷ DCF\" reads n/a "
+                             "and \"at DCF P/E\" is ≤ 0x. That is the DCF value sitting below net debt, not missing data."
+                             % (DCF_BELOW_NET_DEBT, ", ".join(bnd["year5"])))
+                    L.append("")
             L.append("Base rates for these probabilities live in the decision card (stage 6), not here.")
             L.append("")
 
@@ -947,6 +1018,19 @@ def render(res, heading_level=2):
     if tp.get("market"):
         m = tp["market"]
         L.append("Market: %s P/E %s (%s): %s." % (m["index"], num(m["pe"]), m.get("as_of"), m["note"]))
+    if tp.get("core"):
+        c = tp["core"]
+        L.append("Trailing P/E **%s** vs core P/E **%s** (core EPS %s, ex exceptional items and ex other income, after "
+                 "interest; %s)%s." % (num(c["trailing_pe"]), num(c["core_pe"]) if c["core_pe"] else "n/a (core EPS ≤ 0)",
+                                      num(c["core_eps"], 2), c["method"],
+                                      (": core is %s the trailing P/E" % ("%+.0f%% vs" % (100 * c["gap"])))
+                                      if c["gap"] is not None else ""))
+        if c["flag"]:
+            L.append("")
+            L.append("> **Warning (L44):** trailing and core P/E differ by more than %s. Read the temperature on the "
+                     "core P/E: a \"cheap\" trailing P/E built on exceptional gains or other income is not cheap."
+                     % pct(CORE_PE_GAP, 0))
+            L.append("")
     L.append("Bands (P/E ÷ reference): <0.7 cold, 0.7–0.9 cool, 0.9–1.1 normal, 1.1–1.5 warm, 1.5–2 hot, ≥2 very hot. "
              "≥2x own median preceded 4–6 flat years even with EPS growth (L12, `insight:flag-high-pe-context`).")
     L.append("")

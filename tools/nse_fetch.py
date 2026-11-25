@@ -19,7 +19,8 @@ Usage:
   python3 tools/nse_fetch.py annual_reports KPITTECH [--download DIR]  # AR list + submission time (+ PDFs/ZIPs)
   python3 tools/nse_fetch.py bulk --from 01-11-2026 --to 19-11-2026
   python3 tools/nse_fetch.py block --from 01-11-2026 --to 19-11-2026
-Options: --out FILE (write JSON), --raw (print full JSON instead of a summary).
+Options: --out FILE (write JSON), --raw (print full JSON instead of a summary),
+         --limit N (summary mode: print at most N rows; default 0 = all rows; when cut, prints "showing N of M").
 Dates are DD-MM-YYYY. Requests are spaced >=1.5 s; 403/429 triggers back-off.
 Downloaded PDFs are untrusted data: extract with `pdftotext -layout f.pdf f.txt`.
 """
@@ -134,6 +135,31 @@ COMMANDS = {
 }
 
 
+def summary_lines(cmd, rows, limit=0):
+    """Summary-mode output lines. limit <= 0 prints every row; otherwise the first `limit` rows and a
+    'showing N of M' line so a truncated list is never mistaken for the whole list."""
+    n = len(rows) if hasattr(rows, "__len__") else None
+    out = [f"{cmd}: {n if n is not None else '?'} rows"]
+    if not isinstance(rows, list):
+        return out
+    shown = rows[:limit] if limit and limit > 0 else rows
+    for r in shown:
+        if cmd == "integrated":
+            out.append(" | ".join(str(x) for x in (r.get("qe_Date"), r.get("consolidated"), r.get("broadcast_Date"),
+                                                   r.get("xbrl"))))
+        elif cmd == "annual_reports":
+            out.append(f"{r.get('fromYr')} - " + " | ".join(str(x) for x in (
+                r.get("toYr"), r.get("submitted"), r.get("submission_type"), r.get("attFileSize"), r.get("fileName"))))
+        elif cmd in ("announcements", "transcripts"):
+            out.append(" | ".join(str(x) for x in (r.get("an_dt"), r.get("symbol"), r.get("desc"),
+                                                   (r.get("attchmntText") or "")[:90], r.get("attchmntFile"))))
+        else:
+            out.append(json.dumps(r, ensure_ascii=False)[:220])
+    if len(shown) < len(rows):
+        out.append(f"showing {len(shown)} of {len(rows)} rows (--limit 0 for all, --out FILE for the full JSON)")
+    return out
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("cmd", choices=sorted(COMMANDS))
@@ -143,6 +169,8 @@ def main():
     p.add_argument("--out")
     p.add_argument("--raw", action="store_true")
     p.add_argument("--download", metavar="DIR", help="transcripts / annual_reports: save files here")
+    p.add_argument("--limit", type=int, default=0,
+                   help="summary mode: print at most N rows (default 0 = all; a cut list says 'showing N of M')")
     a = p.parse_args()
     data = COMMANDS[a.cmd](a)
     if a.out:
@@ -152,18 +180,7 @@ def main():
     if a.raw:
         print(json.dumps(data, ensure_ascii=False, indent=1))
     else:
-        print(f"{a.cmd}: {len(rows) if hasattr(rows, '__len__') else '?'} rows")
-        for r in (rows[:15] if isinstance(rows, list) else []):
-            if a.cmd == "integrated":
-                print(r.get("qe_Date"), "|", r.get("consolidated"), "|", r.get("broadcast_Date"), "|", r.get("xbrl"))
-            elif a.cmd == "annual_reports":
-                print(r.get("fromYr"), "-", r.get("toYr"), "|", r.get("submitted"), "|", r.get("submission_type"),
-                      "|", r.get("attFileSize"), "|", r.get("fileName"))
-            elif a.cmd in ("announcements", "transcripts"):
-                print(r.get("an_dt"), "|", r.get("symbol"), "|", r.get("desc"), "|",
-                      (r.get("attchmntText") or "")[:90], "|", r.get("attchmntFile"))
-            else:
-                print(json.dumps(r, ensure_ascii=False)[:220])
+        print("\n".join(summary_lines(a.cmd, rows, a.limit)))
     if a.cmd in ("transcripts", "annual_reports") and a.download:
         os.makedirs(a.download, exist_ok=True)
         for r in rows:

@@ -68,6 +68,16 @@ while the JSON keeps every old key with the same value.
   the decision card's EV gate still uses the stated exit.
 - Example: `tools/decision/calibration_2026-11-23/US-KEX_v13.json`.
 
+### v1.3.1 additions (2026-11-25, L44) — display only; old inputs give identical numbers (`tests/test_worksheet.py`)
+- **Core EPS (optional).** `base.core_eps`, or `base.exceptional_items_cr` / `base.other_income_cr` (pre-tax, money
+  units, gains positive; top-level keys also accepted). Core PAT = PAT − (exceptional + other income) × (1 −
+  `core_adj_tax_rate`, default `tax_rate`); PAT is already after interest. Block (d) adds a core-EPS P/E row and a
+  "Trailing P/E vs core P/E" line, with a **warning when they differ by more than 25%**. Valuation, twin engine and
+  card inputs are unchanged.
+- **DCF value below net debt.** When a scenario's equity DCF is ≤ 0 (today, or at year 5 via the DCF-consistent
+  P/E), the worksheet prints in plain words "DCF value below net debt — EV above 1x is an exit-multiple bet (L21,
+  L44)" next to the negative values / n/a cells, and the JSON carries `scenarios.dcf_below_net_debt`.
+
 ## Bank / NBFC mode (v1.1, 2026-11-22)
 Lenders are valued on book and ROE, not revenue/EBIT/FCF. Put `"mode": "bank"` in the input
 (`worksheet.py --template --mode bank` prints the template); `bank.py` does the work and returns the same result
