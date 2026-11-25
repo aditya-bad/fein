@@ -35,6 +35,7 @@ Every open call's resolve-by date. `check from` = first day the nightly resolver
 | 2027-02-28 | 2027-01-10 | `thesis:paper-call:MPHASIS:q3fy27-dso-below-100-cred` | a | assisted | 0.75 | 0.83 |
 | 2027-02-28 | 2026-11-21 | `thesis:paper-call:NAVINFLUOR:chemours-plant-commissioned-q3fy27` | c | assisted | 0.45 | 0.6 |
 | 2027-02-28 | 2027-01-10 | `thesis:paper-call:POLYCAB:q3fy27-opm-13pct-plus` | a | structured | 0.72 | 0.7 |
+| 2027-02-28 | 2027-01-20 | `thesis:paper-call:SHK:q3fy27-revenue-650cr-plus` | a | structured | 0.55 | 0.54 |
 | 2027-02-28 | 2027-01-01 | `thesis:paper-call:SONACOMS:jv1-denso-closed-by-jan27-cred` | c | assisted | 0.51 | 0.39 |
 | 2027-02-28 | 2027-01-10 | `thesis:paper-call:SONACOMS:q3fy27-opm-23pct-plus` | a | structured | 0.42 | 0.5 |
 | 2027-02-28 | 2027-01-10 | `thesis:paper-call:ULTRACEMCO:q3fy27-op-4500cr-plus` | a | structured | 0.45 | 0.5 |
@@ -60,6 +61,8 @@ Every open call's resolve-by date. `check from` = first day the nightly resolver
 | 2027-03-15 | 2027-02-08 | `thesis:paper-call:US-WTS:fy26-adj-op-margin-20-3pct-plus-cred` | a | assisted | 0.94 | 0.88 |
 | 2027-03-15 | 2027-02-08 | `thesis:paper-call:US-WTS:fy26-organic-growth-11pct-plus-cred` | a | assisted | 0.47 | 0.41 |
 | 2027-03-15 | 2027-02-15 | `thesis:paper-call:US-WTS:fy26-reported-sales-growth-17pct-plus-cred` | a | structured | 0.47 | 0.41 |
+| 2027-03-15 | 2027-01-20 | `thesis:paper-call:UTTAMSUGAR:q3fy27-opm-12pct-plus` | a | structured | 0.45 | 0.6 |
+| 2027-03-15 | 2027-01-20 | `thesis:paper-call:UTTAMSUGAR:q3fy27-revenue-550cr-plus` | a | structured | 0.55 | 0.2 |
 | 2027-03-31 | 2027-03-31 | `thesis:paper-call:HARSHA:romania-restructuring-disclosed-by-mar27` | c | assisted | 0.55 | 0.5 |
 | 2027-03-31 | 2027-03-31 | `thesis:paper-call:INDRAMEDCO:md-appointed-by-mar27` | c | assisted | 0.7 | 0.8 |
 | 2027-03-31 | 2027-01-26 | `thesis:paper-call:US-AOS:fy26-adj-eps-ex-china-3-42-plus-cred` | a | assisted | 0.65 | 0.82 |
@@ -107,6 +110,10 @@ Every open call's resolve-by date. `check from` = first day the nightly resolver
 | 2027-05-31 | 2027-04-15 | `thesis:paper-call:PERSISTENT:fy27-ebit-16pct-plus-cred` | a | assisted | 0.74 | 0.72 |
 | 2027-05-31 | 2027-04-15 | `thesis:paper-call:SANSERA:fy27-opm-above-fy26-cred` | a | structured | 0.71 | 0.72 |
 | 2027-05-31 | 2027-04-15 | `thesis:paper-call:SANSERA:fy27-revenue-growth-17pct-plus-cred` | a | structured | 0.56 | 0.57 |
+| 2027-05-31 | 2027-04-15 | `thesis:paper-call:SHK:fy27-net-profit-120cr-plus` | a | structured | 0.15 | 0.29 |
+| 2027-05-31 | 2027-04-15 | `thesis:paper-call:SHK:fy27-opm-13pct-plus` | a | structured | 0.35 | 0.79 |
+| 2027-05-31 | 2027-04-15 | `thesis:paper-call:SHK:fy27-revenue-2700cr-plus` | a | structured | 0.5 | 0.31 |
+| 2027-05-31 | 2027-04-01 | `thesis:paper-call:SHK:vanavate-commissioned-by-mar27` | c | assisted | 0.3 | 0.5 |
 | 2027-05-31 | 2027-04-15 | `thesis:paper-call:SKIPPER:fy27-ebitda-margin-10pct-plus` | a | structured | 0.7 | - |
 | 2027-05-31 | 2027-04-15 | `thesis:paper-call:SKIPPER:fy27-inflow-7500cr` | a | assisted | 0.35 | - |
 | 2027-05-31 | 2027-04-15 | `thesis:paper-call:SKIPPER:fy27-revenue-13pct-plus` | a | structured | 0.5 | - |
@@ -124,6 +131,10 @@ Every open call's resolve-by date. `check from` = first day the nightly resolver
 | 2027-05-31 | 2027-04-25 | `thesis:paper-call:UTKARSHBNK:fy27-glp-growth-25pct-plus` | a | assisted | 0.05 | 0.5 |
 | 2027-05-31 | 2027-04-25 | `thesis:paper-call:UTKARSHBNK:gnpa-mar27-5pct-or-lower` | a | structured | 0.45 | 0.5 |
 | 2027-05-31 | 2027-04-25 | `thesis:paper-call:UTKARSHBNK:q4fy27-pat-67cr-plus` | a | structured | 0.1 | 0.5 |
+| 2027-05-31 | 2027-04-15 | `thesis:paper-call:UTTAMSUGAR:fy27-net-profit-100cr-plus` | a | structured | 0.25 | 0.42 |
+| 2027-05-31 | 2027-04-15 | `thesis:paper-call:UTTAMSUGAR:fy27-opm-10pct-plus` | a | structured | 0.35 | 0.83 |
+| 2027-05-31 | 2027-04-15 | `thesis:paper-call:UTTAMSUGAR:fy27-revenue-2200cr-plus` | a | structured | 0.45 | 0.67 |
+| 2027-05-31 | 2027-04-01 | `thesis:paper-call:UTTAMSUGAR:udl-160klpd-by-mar27` | c | assisted | 0.35 | 0.4 |
 | 2027-06-05 | 2027-05-20 | `thesis:paper-call:US-DECK:fy27-eps-at-or-above-7-95` | a | structured | 0.52 | 0.4 |
 | 2027-06-15 | 2027-04-15 | `thesis:paper-call:DIXON:vivo-jv-production-starts-q4fy27` | c | assisted | 0.45 | 0.55 |
 | 2027-06-15 | 2027-05-01 | `thesis:paper-call:ENDURANCE:chennai-disc-brake-sop-by-mar27-cred` | c | assisted | 0.33 | 0.47 |
@@ -150,11 +161,13 @@ Every open call's resolve-by date. `check from` = first day the nightly resolver
 | 2027-09-30 | 2027-10-02 | `thesis:paper-call:AUTOAXLES:beats-nifty500-to-sep27` | b | structured | 0.4 | 0.44 |
 | 2027-09-30 | 2027-10-02 | `thesis:paper-call:HARSHA:beats-nifty500-to-sep27` | b | structured | 0.45 | 0.44 |
 | 2027-09-30 | 2027-10-02 | `thesis:paper-call:INDRAMEDCO:beats-nifty500-to-sep27` | b | structured | 0.4 | 0.44 |
+| 2027-09-30 | 2027-10-02 | `thesis:paper-call:SHK:beats-nifty500-to-sep27` | b | structured | 0.42 | 0.44 |
 | 2027-09-30 | 2027-01-10 | `thesis:paper-call:SUNFLAG:bajna-ec-granted-by-sep27` | c | assisted | 0.35 | 0.5 |
 | 2027-09-30 | 2027-10-02 | `thesis:paper-call:SUNFLAG:beats-nifty500-to-sep27` | b | structured | 0.46 | 0.44 |
 | 2027-09-30 | 2026-12-01 | `thesis:paper-call:SUNFLAG:lmel-stake-reduced-by-sep27` | c | assisted | 0.08 | 0.15 |
 | 2027-09-30 | 2027-10-02 | `thesis:paper-call:US-KEX:beats-spy-to-sep27` | b | structured | 0.42 | 0.45 |
 | 2027-09-30 | 2027-10-02 | `thesis:paper-call:UTKARSHBNK:beats-nifty500-to-sep27` | b | structured | 0.4 | 0.44 |
+| 2027-10-15 | 2027-10-02 | `thesis:paper-call:UTTAMSUGAR:beats-nifty500-to-sep27` | b | structured | 0.4 | 0.5 |
 | 2027-11-30 | 2027-11-30 | `thesis:paper-call:INDRAMEDCO:handover-or-nonrenewal-by-nov27` | c | assisted | 0.1 | 0.05 |
 | 2027-11-30 | 2027-11-30 | `thesis:paper-call:INDRAMEDCO:lease-renewal-disclosed-by-nov27` | c | assisted | 0.15 | 0.25 |
 | 2027-11-30 | 2027-11-30 | `thesis:paper-call:UTKARSHBNK:equity-raise-approved-by-nov27` | c | assisted | 0.45 | 0.3 |
@@ -173,22 +186,29 @@ Every open call's resolve-by date. `check from` = first day the nightly resolver
 | 2031-11-23 | 2031-11-24 | `thesis:paper-call:INDRAMEDCO:card-2026-11-24-5y-blowup` | d | human | 0.2 | 0.1537 |
 | 2031-11-23 | 2031-11-24 | `thesis:paper-call:INDRAMEDCO:card-2026-11-24-5y-ge3x` | d | human | 0.0706 | 0.2129 |
 | 2031-11-23 | 2031-11-24 | `thesis:paper-call:INDRAMEDCO:card-2026-11-24-5y-le0p5x` | d | human | 0.258 | 0.1127 |
+| 2031-11-23 | 2031-11-24 | `thesis:paper-call:SHK:card-2026-11-25-5y-blowup` | d | human | 0.08 | 0.1537 |
+| 2031-11-23 | 2031-11-24 | `thesis:paper-call:SHK:card-2026-11-25-5y-ge3x` | d | human | 0.1357 | 0.2129 |
+| 2031-11-23 | 2031-11-24 | `thesis:paper-call:SHK:card-2026-11-25-5y-le0p5x` | d | human | 0.1715 | 0.1127 |
 | 2031-11-23 | 2031-11-24 | `thesis:paper-call:UTKARSHBNK:card-2026-11-24-5y-blowup` | d | human | 0.15 | 0.1537 |
 | 2031-11-23 | 2031-11-24 | `thesis:paper-call:UTKARSHBNK:card-2026-11-24-5y-ge3x` | d | human | 0.0742 | 0.2129 |
 | 2031-11-23 | 2031-11-24 | `thesis:paper-call:UTKARSHBNK:card-2026-11-24-5y-le0p5x` | d | human | 0.2072 | 0.1127 |
+| 2031-11-23 | 2031-11-24 | `thesis:paper-call:UTTAMSUGAR:card-2026-11-25-5y-blowup` | d | human | 0.1 | 0.1537 |
+| 2031-11-23 | 2031-11-24 | `thesis:paper-call:UTTAMSUGAR:card-2026-11-25-5y-ge3x` | d | human | 0.0084 | 0.2129 |
+| 2031-11-23 | 2031-11-24 | `thesis:paper-call:UTTAMSUGAR:card-2026-11-25-5y-le0p5x` | d | human | 0.3788 | 0.1127 |
 
 ## Due per month
 
 | Month | Calls due |
 |---|---|
 | 2027-01 | 6 |
-| 2027-02 | 32 |
-| 2027-03 | 29 |
+| 2027-02 | 33 |
+| 2027-03 | 31 |
 | 2027-04 | 7 |
-| 2027-05 | 46 |
+| 2027-05 | 54 |
 | 2027-06 | 20 |
 | 2027-07 | 2 |
 | 2027-08 | 1 |
-| 2027-09 | 8 |
+| 2027-09 | 9 |
+| 2027-10 | 1 |
 | 2027-11 | 3 |
-| 2031-11 | 18 |
+| 2031-11 | 24 |

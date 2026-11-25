@@ -133,7 +133,9 @@ India, small size by itself has not).
   25% halved (vs 11%) and 27% blew up (vs 15%). No mid-size private bank tripled. The card now uses these numbers for lenders.
 - **High pledge vs weak interest cover:** neither is reliably worse — it depends on the period. **Both together** is clearly the worst.
 - **Pi setup is on hold** (your call); I'll remind you before the Jan–Feb results season.
-- 6 live deep dives so far, all "size 0" — expected for random stocks, but we check in Jan–Feb whether the card is too strict.
+- 8 live deep dives so far (latest: Harsha Engineers, S H Kelkar, Uttam Sugar), all "size 0" — expected for random stocks, but we check in Jan–Feb whether the card is too strict.
+
+- **Ready for scoring:** 191 dated predictions open; 153 resolve Jan–Jul 2027 (81 automatically). First results 31 Jan 2027.
 
 ## 5d. Your Raspberry Pi is ready to set up (24 Nov 2026)
 When you have the Pi: follow `deploy/pi/README.md` — run `install.sh`, then `healthcheck.sh`. It schedules all the nightly checks.
