@@ -76,3 +76,4 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
   GNPA fall driven by write-offs/ARC sales, CET1 book below price; Bihar MFI Act unmentioned in filings) → L41. Card v1.4 (manual
   core-asset threat trigger, anchoring-lowered-tails warning) and industry map / AR-zip fix in progress (agent still running).
 - 24-Nov-2026 (end): industry map 100% (1,547), AR-zip handling (10 tests), card v1.4 (33 tests). Day's net: protocol v1.4, card v1.3→v1.4, Pi bundle, 2 live dives (21 calls), L39–L41.
+- 25-Nov-2026: user deferred Pi. Split survival-cap test (pledge vs ICR) rejected — single-flag tails regime-dependent; both-flags group consistently worst (L39 addendum). Card unchanged.

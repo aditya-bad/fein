@@ -312,3 +312,11 @@ vs reported ₹15.04/share; nobody asked on the call. **Rules:** (1) value lende
 book; (2) always build the GNPA walk (new NPAs, recoveries, upgrades, write-offs, ARC sales) before crediting asset-quality gains;
 (3) generalise L40 to state law — any state >~15% of the book → search that state's gazette; (4) we have no India lender base-rate
 class yet, so lender tails are anchored to the wrong class — build one before trusting lender cards.
+
+### L39 addendum (2026-11-25) — splitting the cap by flag type REJECTED
+Pre-registered split test (`research_notes/Backtests/survival_cap_split_india.md`; note: prereg was written first but committed together
+with results, so the git timestamp doesn't prove order — the stage log does). Pledge-only does NOT cut the upside in the event sample
+(3x-winner RR 1.27 [0.77, 1.88]); single-flag tails swap by regime (pledge bad 2018–21, weak ICR bad 2022–25). Only **both flags**
+is consistently bad: 12m halving 4.2×, 3y failure 9.4×, stable across periods and the survivorship-free panel — yet still 23.5% triple.
+Card unchanged. Judgement rule until tested: when both flags fire, answer the balance-sheet question before even a starter position.
+Next: pre-register "both flags → 0 new money" on fresh 2026+ events.

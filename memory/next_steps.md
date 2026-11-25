@@ -10,7 +10,8 @@ Last updated: 2026-11-24
 - **25-Nov-2026: user deferred the Pi setup** ("will take a bit more time"); proceed with non-Pi work; remind before late-Jan 2027 results season.
 
 ## In flight (25-Nov-2026)
-- Lender base rates + bank.py CET1 book; pre-registered pledge-vs-ICR split test; BSE pagination + resolver banking XBRL fix.
+- Lender base rates + bank.py CET1 book; BSE pagination + resolver banking XBRL fix.
+- ~~Pledge-vs-ICR split test~~ DONE 25-Nov: rejected (L39 addendum). Follow-up: pre-register "both flags → 0 new money" on fresh 2026+ events (collect events from Q3 FY27 onward).
 
 ## Done 24-Nov-2026
 - ~~Pi bundle, live dive #4, survival-cap test~~ DONE 24-Nov (see session_log).
