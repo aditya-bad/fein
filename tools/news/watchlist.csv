@@ -1,0 +1,91 @@
+ticker,name,sector,keywords,aliases,tier
+UTTAMSUGAR,Uttam Sugar Mills,sugar,cane price;SAP;ethanol;distillery,Uttam Sugar,live
+UTKARSHBNK,Utkarsh Small Finance Bank,lender,microfinance;Bihar;Uttar Pradesh;ARC,Utkarsh SFB;Utkarsh CoreInvest,live
+INDRAMEDCO,Indraprastha Medical Corporation,hospital,lease;land;Delhi government;Supreme Court,Indraprastha Medical;Indraprastha Apollo,live
+AUTOAXLES,Automotive Axles,auto,,Automotive Axles Ltd,live
+HARSHA,Harsha Engineers,capital_goods,,Harsha Engineers International,live
+SHK,S H Kelkar and Company,chemicals,,SH Kelkar;S H Kelkar,live
+SUNFLAG,Sunflag Iron and Steel,steel,,Sunflag Iron;Sunflag Steel,live
+US-KEX,Kirby Corporation,us_marine,Jones Act,Kirby Corp,live
+AFCONS,Afcons Infrastructure,infra,,Afcons,paper
+ASIANPAINT,Asian Paints,consumer,,,paper
+AUBANK,AU Small Finance Bank,lender,,AU SFB;AU Bank,paper
+BAJAJCON,Bajaj Consumer Care,fmcg,,,paper
+BAJFINANCE,Bajaj Finance,lender,,,paper
+BEL,Bharat Electronics,defence,,,paper
+BHARTIARTL,Bharti Airtel,telecom,,Airtel,paper
+BSE,BSE Ltd,exchange,,BSE Limited;BSE shares;BSE stock,paper
+COFORGE,Coforge,it,,,paper
+CUMMINSIND,Cummins India,capital_goods,,,paper
+DEEPAKNTR,Deepak Nitrite,chemicals,,,paper
+DIXON,Dixon Technologies,electronics,,Dixon Tech,paper
+EICHERMOT,Eicher Motors,auto,,Royal Enfield,paper
+ENDURANCE,Endurance Technologies,auto,,,paper
+GENUSPOWER,Genus Power Infrastructures,power,,Genus Power,paper
+GODREJPROP,Godrej Properties,realty,,,paper
+HAPPYFORGE,Happy Forgings,auto,,,paper
+HCLTECH,HCLTech,it,,HCL Technologies;HCL Tech,paper
+HDFCAMC,HDFC AMC,amc,,HDFC Asset Management,paper
+HDFCLIFE,HDFC Life,insurance,,HDFC Life Insurance,paper
+HINDALCO,Hindalco Industries,metals,,Hindalco;Novelis,paper
+HINDUNILVR,Hindustan Unilever,fmcg,,HUL,paper
+HONASA,Honasa Consumer,fmcg,,Mamaearth,paper
+ICICIBANK,ICICI Bank,lender,,,paper
+ICICIGI,ICICI Lombard,insurance,,ICICI Lombard General Insurance,paper
+INDOTECH,Indo Tech Transformers,power_equipment,,Indo-Tech Transformers,paper
+INFY,Infosys,it,,,paper
+IOLCP,IOL Chemicals and Pharmaceuticals,pharma,,IOL Chemicals,paper
+KAYNES,Kaynes Technology,electronics,,Kaynes,paper
+KPITTECH,KPIT Technologies,it,,KPIT Tech;KPIT,paper
+LAURUSLABS,Laurus Labs,pharma,,,paper
+LUPIN,Lupin,pharma,,Lupin Ltd,paper
+MARICO,Marico,fmcg,,,paper
+MPHASIS,Mphasis,it,,,paper
+NAVINFLUOR,Navin Fluorine,chemicals,,Navin Fluorine International,paper
+NTPC,NTPC,power,,NTPC Green,paper
+PERSISTENT,Persistent Systems,it,,,paper
+POLYCAB,Polycab India,cables,,Polycab,paper
+SANSERA,Sansera Engineering,auto,,Sansera,paper
+SBICARD,SBI Cards and Payment Services,lender,,SBI Card;SBI Cards,paper
+SKIPPER,Skipper Ltd,power_equipment,,Skipper Limited,paper
+SONACOMS,Sona BLW Precision Forgings,auto,,Sona Comstar;Sona BLW,paper
+TATAPOWER,Tata Power,power,,,paper
+TATASTEEL,Tata Steel,steel,,,paper
+TITAN,Titan Company,consumer,,Tanishq,paper
+TRANSRAILL,Transrail Lighting,power_equipment,,Transrail,paper
+TVSMOTOR,TVS Motor,auto,,TVS Motor Company,paper
+ULTRACEMCO,UltraTech Cement,cement,,UltraTech,paper
+UNIPARTS,Uniparts India,auto,,Uniparts,paper
+US-AAON,AAON,us,,AAON Inc,paper
+US-AAPL,Apple Inc,us,,AAPL,paper
+US-ADBE,Adobe,us,,ADBE,paper
+US-AMD,Advanced Micro Devices,us,,AMD,paper
+US-AOS,A. O. Smith,us,,A.O. Smith,paper
+US-CAT,Caterpillar,us,,Caterpillar Inc,paper
+US-COST,Costco,us,,Costco Wholesale,paper
+US-CRM,Salesforce,us,,,paper
+US-DECK,Deckers Brands,us,,Deckers,paper
+US-FIVE,Five Below,us,,,paper
+US-GE,GE Aerospace,us,,,paper
+US-HIMS,Hims & Hers,us,,Hims and Hers,paper
+US-ISRG,Intuitive Surgical,us,,,paper
+US-JPM,JPMorgan Chase,us,,JPMorgan,paper
+US-KO,Coca-Cola,us,,Coca-Cola Co,paper
+US-LECO,Lincoln Electric,us,,,paper
+US-MPWR,Monolithic Power Systems,us,,Monolithic Power,paper
+US-NEE,NextEra Energy,us,,NextEra;Dominion Virginia,paper
+US-NVDA,Nvidia,us,,NVDA,paper
+US-O,Realty Income,us,,,paper
+US-OPTU,Optimum Communications,us,,Altice USA;CSC Holdings,paper
+US-PAYO,Payoneer,us,,,paper
+US-PG,Procter & Gamble,us,,Procter and Gamble,paper
+US-PLTR,Palantir,us,,,paper
+US-PNC,PNC Financial,us,,PNC Bank,paper
+US-SNOW,Snowflake Inc,us,,Snowflake stock,paper
+US-SSD,Simpson Manufacturing,us,,,paper
+US-TGT,Target Corporation,us,,Target Corp;TGT,paper
+US-ULTA,Ulta Beauty,us,,,paper
+US-UNH,UnitedHealth,us,,UnitedHealth Group,paper
+US-WMT,Walmart,us,,,paper
+US-WTS,Watts Water Technologies,us,,Watts Water,paper
+US-XOM,ExxonMobil,us,,Exxon Mobil;Exxon,paper

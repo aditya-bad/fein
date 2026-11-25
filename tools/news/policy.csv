@@ -1,0 +1,16 @@
+sector,label,query
+sugar,cane SAP/FRP,(sugarcane SAP OR "state advised price" OR "cane FRP" OR "fair and remunerative price") India -Pakistan
+sugar,ethanol tender/OMC,(ethanol tender OMC OR "ethanol procurement price" OR "ethanol allocation") India -Pakistan
+sugar,sugar export/MSP,("sugar export" OR "sugar MSP" OR "minimum selling price of sugar") India -Pakistan
+lender,microfinance rules,microfinance RBI OR "microfinance ordinance" OR "MFI guardrails" OR "microfinance act"
+lender,SFB/NBFC regulation,"small finance bank" RBI OR "NBFC" "risk weight" OR "RBI draft directions"
+power,power tariff,("tariff order" electricity OR CERC tariff OR "power tariff" regulator) India
+power_equipment,transmission tenders,"transmission" tender PowerGrid OR "TBCB" OR "transformer" tender
+pharma,USFDA actions,USFDA "warning letter" OR "import alert" OR "Form 483" India
+pharma,US pharma tariffs,pharma tariff US India generics
+hospital,Delhi hospital land/CGHS,("hospital" "land lease" Delhi) OR "CGHS rates" OR "Indraprastha Apollo" lease
+steel,steel trade duties,steel "safeguard duty" OR "anti-dumping" India steel imports
+auto,auto policy,"PM E-DRIVE" OR "auto component" tariff OR "rare earth magnet" India auto
+it,US visa/outsourcing policy,"H-1B" fee OR "outsourcing tax" OR "HIRE Act" Indian IT
+telecom,telecom tariff/AGR,telecom tariff hike India OR AGR dues
+us_marine,Jones Act,"Jones Act" OR "inland barge" tank barge rates
