@@ -1,4 +1,4 @@
-# Analysis: "Buy low across 7 mutual-fund categories" (GetMoneyRich)
+# Analysis: "I Found the One SIP Rule That Beats 90% of Investors 19 Years of Proof" (GetMoneyRich)
 
 Analysed 25-Nov-2026 by Claude. Transcript: `transcript.md` (same folder). Roadmap fit: wealth-allocation / defence layer
 (not a stock-selection stage); feeds the planned allocation test (stocks/gold/bonds, rebalanced vs tilted). Research, not advice.
@@ -51,3 +51,7 @@ phase"; slow it when that category starts outperforming. "A very effective way t
   include dividends, debt returns, taxes/exit loads.
 
 Edge check: this is a widely published retail idea — no edge in knowing it. Its value for us is *discipline* (defence), not alpha.
+
+## Note on the title (added 25-Nov-2026)
+The title promises "beats 90% of investors" and "19 years of proof". The video contains neither: no backtest, no comparison
+group, no 19-year return series — only four hindsight examples. Treat the title as marketing, not evidence.

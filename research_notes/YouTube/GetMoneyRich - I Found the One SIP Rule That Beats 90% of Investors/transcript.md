@@ -1,5 +1,6 @@
-# Transcript (raw, as pasted by the user on 25-Nov-2026)
+# Transcript: "I Found the One SIP Rule That Beats 90% of Investors 19 Years of Proof" (raw, as pasted by the user on 25-Nov-2026)
 
+- **Title:** I Found the One SIP Rule That Beats 90% of Investors 19 Years of Proof
 - **Channel:** Manish Choudhary | GetMoneyRich
 - **URL:** https://youtu.be/oAiz1lZjoaA
 - **Upload date:** not given by the user (unknown)
