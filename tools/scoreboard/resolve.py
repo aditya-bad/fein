@@ -100,7 +100,8 @@ def india_metric(src, symbol, basis, kind, end, metric, first_reported):
     """-> list of (source_name, value, evidence[]) for the metric, one per source that has the period."""
     out = []
     growth = metric.endswith("_growth_pct")
-    base_field = {"sales_growth_pct": "sales_cr", "op_profit_growth_pct": "op_profit_cr"}.get(metric, metric)
+    base_field = {"sales_growth_pct": "sales_cr", "op_profit_growth_pct": "op_profit_cr"}.get(
+        metric, metric[:-len("_growth_pct")] + "_cr" if growth else metric)   # e.g. nii_growth_pct -> nii_cr
     prior_end = dt.date(end.year - 1, end.month, end.day)
     for name in ("xbrl", "screener"):
         try:

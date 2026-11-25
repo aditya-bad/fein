@@ -108,6 +108,56 @@ def xbrl_period_values(parsed: dict, start: dt.date, end: dt.date) -> dict | Non
     return out
 
 
+# ----------------------------------------------------------------- XBRL (NSE integrated filing, banks)
+# IFBanking taxonomy (Banking Regulation Act format, not Ind AS). Amounts in rupees; ratios as fractions in the
+# period (duration) contexts. Checked on UTKARSHBNK / FEDERALBNK Q2 FY27 filings (IFBanking V2.1, 2026-11-25).
+# NOT tagged in IFBanking V2.1: total CRAR (only CET1Ratio, AdditionalTier1Ratio), gross loan portfolio / AUM
+# (Advances = net advances on the balance sheet), NIM, credit cost: those calls stay assisted (doc_scan).
+BANK_AMT = {"interest_earned_cr": "InterestEarned", "interest_expended_cr": "InterestExpended",
+            "other_income_cr": "OtherIncome", "total_income_cr": "Income",
+            "total_expenditure_cr": "ExpenditureExcludingProvisionsAndContingencies",   # incl. interest expended
+            "ppop_cr": "OperatingProfitBeforeProvisionAndContingencies",
+            "provisions_cr": "ProvisionsOtherThanTaxAndContingencies",
+            "pbt_cr": "ProfitLossFromOrdinaryActivitiesBeforeTax", "tax_cr": "TaxExpense",
+            "net_profit_cr": "ProfitLossForThePeriod"}
+BANK_PCT = {"gnpa_pct": "PercentageOfGrossNpa", "nnpa_pct": "PercentageOfNpa", "cet1_pct": "CET1Ratio",
+            "at1_pct": "AdditionalTier1Ratio", "roa_pct": "ReturnOnAssets"}   # roa_pct: NOT annualised
+BANK_BS = {"advances_cr": "Advances", "deposits_cr": "Deposits"}               # instant at period end
+
+
+def is_bank_xbrl(parsed: dict) -> bool:
+    f = parsed["facts"]
+    return "InterestEarned" in f and "RevenueFromOperations" not in f
+
+
+def bank_period_values(parsed: dict, start: dt.date, end: dt.date) -> dict | None:
+    """Banking-format P&L, asset-quality and capital ratios for exactly [start, end] (+ balance sheet at end).
+    Percentages are returned in % (XBRL fraction x 100). None if the period is not in the filing."""
+    want = (start.isoformat(), end.isoformat())
+    cids = [c for c, se in parsed["contexts"].items() if se == want]
+    inst = [c for c, se in parsed["contexts"].items() if se == (None, end.isoformat())]
+    f = parsed["facts"]
+
+    def g(tag, ids):
+        for c in ids:
+            if c in f.get(tag, {}):
+                return f[tag][c]
+        return None
+    if not cids or g("InterestEarned", cids) is None:
+        return None
+    cr = 1e7
+    out = {k: g(t, cids) / cr for k, t in BANK_AMT.items() if g(t, cids) is not None}
+    out.update({k: 100 * g(t, cids) for k, t in BANK_PCT.items() if g(t, cids) is not None})
+    out.update({k: g(t, inst) / cr for k, t in BANK_BS.items() if g(t, inst) is not None})
+    if "interest_expended_cr" in out:
+        out["nii_cr"] = out["interest_earned_cr"] - out["interest_expended_cr"]
+        if "total_expenditure_cr" in out:
+            out["opex_cr"] = out["total_expenditure_cr"] - out["interest_expended_cr"]
+    out["sales_cr"] = out["interest_earned_cr"]   # screener 'Revenue' for banks = interest earned
+    out["bank_format"] = True
+    return out
+
+
 class Live:
     """Network-backed fetchers. Tests substitute a fake with the same methods."""
 
@@ -135,7 +185,9 @@ class Live:
                   reverse=not first_reported)
         r = rows[0]
         text = C.http_get(r["xbrl"], {"Referer": "https://www.nseindia.in/"}, max_age_h=24 * 3650)
-        vals = xbrl_period_values(parse_nse_xbrl(text), period_start(kind, end), end)
+        parsed = parse_nse_xbrl(text)
+        fn = bank_period_values if is_bank_xbrl(parsed) else xbrl_period_values
+        vals = fn(parsed, period_start(kind, end), end)
         if vals is None:
             return None
         vals.update({"source": r["xbrl"], "date": r.get("broadcast_Date"), "source_name": "NSE integrated-filing XBRL",
@@ -160,9 +212,11 @@ class Live:
         if not row or row.get("sales") is None or row.get("op_profit") is None:
             return None
         url = f"https://www.screener.in/company/{symbol}/" + ("" if basis == "standalone" else "consolidated/")
-        return {"sales_cr": row["sales"], "op_profit_cr": row["op_profit"],
-                "opm_pct": 100 * row["op_profit"] / row["sales"] if row["sales"] else None,
-                "source": url, "date": C.today().isoformat(), "source_name": "screener.in"}
+        out = {"sales_cr": row["sales"], "op_profit_cr": row["op_profit"],
+               "opm_pct": 100 * row["op_profit"] / row["sales"] if row["sales"] else None}
+        if row.get("net_profit") is not None:   # bank pages: Revenue / Financing Profit / Net Profit
+            out["net_profit_cr"] = row["net_profit"]
+        return dict(out, **{"source": url, "date": C.today().isoformat(), "source_name": "screener.in"})
 
     # ---- India: pledge
     def nse_pledge_all(self):

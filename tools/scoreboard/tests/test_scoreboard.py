@@ -413,6 +413,78 @@ class TestXbrl(unittest.TestCase):
         self.assertEqual(SRC.period_start("FY", D(2027, 3, 31)), D(2026, 4, 1))
 
 
+class TestBankXbrl(unittest.TestCase):
+    """IFBanking XBRL (banks): fixture = trimmed real UTKARSHBNK standalone Q2 FY27 filing (03-Nov-2026)."""
+    FIX = os.path.join(HERE, "fixtures", "utkarshbnk_q2fy27_banking_xbrl.xml")
+    Q2 = (D(2026, 7, 1), D(2026, 9, 30))
+
+    def setUp(self):
+        with open(self.FIX, encoding="utf-8") as f:
+            self.text = f.read()
+        self.p = SRC.parse_nse_xbrl(self.text)
+
+    def test_bank_values_from_fixture(self):
+        self.assertTrue(SRC.is_bank_xbrl(self.p))
+        self.assertFalse(SRC.is_bank_xbrl(SRC.parse_nse_xbrl(TestXbrl.X)))
+        self.assertIsNone(SRC.xbrl_period_values(self.p, *self.Q2))          # Ind AS path cannot read banks
+        v = SRC.bank_period_values(self.p, *self.Q2)
+        self.assertAlmostEqual(v["net_profit_cr"], -69.8522)
+        self.assertAlmostEqual(v["interest_earned_cr"], 909.2562)
+        self.assertAlmostEqual(v["nii_cr"], 909.2562 - 473.9499)
+        self.assertAlmostEqual(v["opex_cr"], 917.0367 - 473.9499)
+        self.assertAlmostEqual(v["ppop_cr"], 85.2439)
+        self.assertAlmostEqual(v["gnpa_pct"], 5.96)                          # fraction 0.0596 -> %
+        self.assertAlmostEqual(v["nnpa_pct"], 2.74)
+        self.assertAlmostEqual(v["cet1_pct"], 12.78)
+        self.assertAlmostEqual(v["advances_cr"], 19302.2407)                 # instant context at period end
+        self.assertNotIn("crar_pct", v)                                      # total CRAR is not tagged
+        h1 = SRC.bank_period_values(self.p, D(2026, 4, 1), D(2026, 9, 30))
+        self.assertAlmostEqual(h1["net_profit_cr"], -103.7719)
+        self.assertIsNone(SRC.bank_period_values(self.p, D(2026, 10, 1), D(2026, 12, 31)))   # not filed
+
+    def _live(self, screener=None):
+        text, end = self.text, self.Q2[1]
+
+        class L(SRC.Live):
+            def nse_filings(self, symbol):
+                return [{"consolidated": "Standalone", "xbrl": "u", "qe_Date": "30-SEP-2026",
+                         "type_Sub": "Original", "broadcast_Date": "03-Nov-2026 20:47:11"}]
+
+            def screener_values(self, symbol, basis, kind, e):
+                return dict(screener, source="s", source_name="screener.in", date="d") \
+                    if screener and e == end else None
+        orig = SRC.C.http_get
+        SRC.C.http_get = lambda *a, **k: text
+        self.addCleanup(setattr, SRC.C, "http_get", orig)
+        return L(log=lambda m: None)
+
+    def test_resolver_end_to_end_on_fixture(self):
+        c = call(9, 0.45, 0.4, resolve_by="2026-11-30", symbol="UTKARSHBNK")
+        gn = {"type": "a", "auto": "structured", "kind": "india_fin", "metric": "gnpa_pct", "basis": "standalone",
+              "period": "Q", "end": "2026-09-30", "op": "<=", "threshold": 5.0, "round": 2, "guard": 0.1,
+              "check_from": "2026-11-01"}
+        r = R.evaluate(c, gn, self._live(), D(2026, 11, 20))
+        self.assertEqual(r["state"], "waiting_data")                         # single source before resolve_by
+        r = R.evaluate(c, gn, self._live(), D(2026, 11, 30))
+        self.assertEqual((r["state"], r["outcome"], r["value"]), ("resolved", 0, 5.96))
+        self.assertEqual(r["confidence"], "single-source")
+        np_ = dict(gn, metric="net_profit_cr", op=">", threshold=0, guard=2, round=None)
+        r = R.evaluate(c, np_, self._live({"sales_cr": 909, "op_profit_cr": -70, "net_profit_cr": -70}),
+                       D(2026, 11, 20))
+        self.assertEqual((r["state"], r["outcome"], r["confidence"]), ("resolved", 0, "verified"))
+        self.assertEqual(r["evidence"][0]["source_name"], "NSE integrated-filing XBRL")
+        r = R.evaluate(c, dict(np_, threshold=-69.9, op=">="), self._live({"sales_cr": 909, "op_profit_cr": -70,
+                                                                             "net_profit_cr": -70}), D(2026, 11, 20))
+        self.assertEqual(r["state"], "review")                               # XBRL -69.85 vs screener -70: sides differ
+
+    def test_utkarsh_specs_now_structured(self):
+        sp = C.load_specs()
+        for k in ("q3fy27-net-profit-positive", "q4fy27-pat-67cr-plus", "gnpa-mar27-5pct-or-lower"):
+            self.assertEqual(sp["thesis:paper-call:UTKARSHBNK:" + k]["auto"], "structured", k)
+        for k in ("crar-mar27-16pct-plus", "fy27-glp-growth-25pct-plus"):               # not in IFBanking XBRL
+            self.assertEqual(sp["thesis:paper-call:UTKARSHBNK:" + k]["auto"], "assisted", k)
+
+
 class TestSpecs(unittest.TestCase):
     REQ = {"india_fin": {"metric", "basis", "period", "end", "op", "threshold"},
            "sec_fact": {"metric", "period", "fy_end", "op", "threshold"},
