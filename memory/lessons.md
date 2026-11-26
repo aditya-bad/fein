@@ -422,3 +422,11 @@ group ROIC ~9.9% < CoE, CFO's ESOP-cost guidance missed ~3x in one quarter, Carl
 changed >50% of revenue in 2 yrs, mark own-history, ROIIC windows and PEAD "not comparable"; keep temporary operating costs separate
 from exceptional items (L44 extension); put minorities + dilution in base EPS; score guidance on items excluded from "adjusted" profit.
 Worksheet gap: no bridge for temporary costs. 9/9 live cards size 0.
+
+## L54 (2026-11-26) — A blow-up floor from our own flags fixes the card's under-prediction (adopted for post-season patch)
+Pre-registered test (`research_notes/Decision audits/blowup_model_test.md`; prereg saved 07:30:33 UTC, results 07:31:18 — order
+verified): small penalised logistic on existing flags, leave-one-cohort-out. Beat the class base rate on India non-fin (Brier 0.1357
+vs 0.1409) and US (0.1194 vs 0.1306), lost on lenders (size adds nothing) → adopted by rule. Card form: P(blow-up) = max(anchored,
+model); calibration gap moves from −5/−11/−5pp to ≈+1pp. US ranking is real (ICR<1.5x: 32–39% blew up vs 9–12%); India is mostly a
+level fix (AUC ~0.56–0.60), both-flags 58% vs 15% on only 15 firms. Patch v1.6b (on top of v1.6) ready; apply after Jan–Feb 2027.
+Only makes cards stricter: all 9 live cards stay size 0 (UTKARSHBNK blow-up 18.6% → 35.4%).

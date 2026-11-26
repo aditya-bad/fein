@@ -1,0 +1,154 @@
+diff --git a/tools/decision/decision_card.py b/tools/decision/decision_card.py
+index 09a68b6..9bf46d1 100644
+--- a/tools/decision/decision_card.py
++++ b/tools/decision/decision_card.py
+@@ -33,7 +33,19 @@ HERE = os.path.dirname(os.path.abspath(__file__))
+ sys.path.insert(0, os.path.join(HERE, "..", "valuation"))
+ import worksheet as ws  # noqa: E402
+ 
+-CARD_VERSION = "1.6 (proposed; EV gate = mean of the outcome distribution, scenario-shape warning; 1.5 lender class, L41)"
++CARD_VERSION = "1.6 (proposed; EV gate = mean of the outcome distribution, scenario-shape warning, blow-up model floor; 1.5 lender class, L41)"
++# v1.6 blow-up floor (research_notes/Decision audits/blowup_model_test.md, adopted 2026-11-26 by its pre-registered rule):
++# the P(blow-up) the EV gate and Kelly use = max(anchored P(blow-up), model P(blow-up)), where the model is a small
++# L2-penalised logistic fitted on the class panel (all start cohorts). Unknown flag -> 0 (as in training). Prediction
++# clipped to [0.02, 0.60]. Paper calls keep the raw worksheet probability (Brier scoring stays honest).
++BLOWUP_MODEL = {
++    "india_nonfin_1000_20000cr_5y": {"const": -1.876, "coef": {"B25": 0.460, "S2": 0.387, "BOTH": 0.759, "S15": 0.384},
++                                     "small_cut": None, "units": "INR cr"},
++    "india_lender_1000_20000cr_5y": {"const": -1.205, "coef": {"SMALL": 0.604}, "small_cut": 3479.6, "units": "INR cr"},
++    "us_float_500m_10b_5y": {"const": -2.440, "coef": {"S1": 0.408, "S2": 1.401, "S5": 0.246, "SMALL": 0.755},
++                             "small_cut": 1271.3, "units": "USD M"},
++}
++BLOWUP_MODEL_CLIP = (0.02, 0.60)
+ # v1.6 (decision:card-audit-fixes-prereg-2026-11-25 fixes 1 and 5; apply only after the Jan-Feb 2027 season):
+ #  (1) one convention: a scenario's mult5 is the MEDIAN of its lognormal everywhere (the worksheet tails, Kelly and the
+ #      anchoring already assume this). The EV gate now uses the mean of the same (anchored) outcome distribution that
+@@ -97,7 +109,8 @@ TEMPLATE = {
+                "override_log": [{"date": "", "flag": "", "decision": "", "why": ""}]},
+     "survival": {"pledge_pct_of_promoter": None, "interest_cover": None, "already_owned": False, "as_of": "",
+                  "source": "", "note": "India only; PEAD window -> 0 new money (v1.2), else starter-size cap (v1.3)",
+-                 "core_asset_threat": None},   # v1.4 optional: {"description": "", "source": "", "date": ""}
++                 "core_asset_threat": None,    # v1.4 optional: {"description": "", "source": "", "date": ""}
++                 "s1": None, "s5": None},      # v1.6 blow-up model only: S1 negative net worth, S5 >=2 of S1/S2/S4
+     "tail_anchor": {"base_weight": 0.5, "evidence": None},
+     "base_rate_class": "india_nonfin_1000_20000cr_5y",
+     "sizing": {"tier": "satellite", "kelly_fraction": 0.25, "max_pct_at_cost": None,
+@@ -266,6 +279,28 @@ def _outcomes_tagged(sc, sigma):
+     return out
+ 
+ 
++def blowup_model_p(cls_name, surv, size=None, units=None):
++    """v1.6 blow-up model (blowup_model_test.md). Returns (p, fired flags) or (None, None) when the class has no model.
++    Flags from the card's survival block: B25 = pledge > 25% of promoter holding; S2 = interest cover < 1.5x (not for
++    lenders); BOTH = B25 and S2; S15 (India) = survival.s1 or survival.s5 (negative net worth / >=2 of S1, S2, S4);
++    S1, S5 (US) = survival.s1, survival.s5; SMALL = size below the class's lower-third cut (units must match)."""
++    m = BLOWUP_MODEL.get(cls_name or "")
++    if not m:
++        return None, None
++    surv = surv or {}
++    pl, icr = surv.get("pledge_pct_of_promoter"), surv.get("interest_cover")
++    fin = bool(surv.get("is_financial"))
++    x = {"B25": pl is not None and pl > SURVIVAL_PLEDGE,
++         "S2": (not fin) and icr is not None and icr < SURVIVAL_ICR,
++         "S1": bool(surv.get("s1")), "S5": bool(surv.get("s5")),
++         "SMALL": m["small_cut"] is not None and size is not None and units == m["units"] and size < m["small_cut"]}
++    x["BOTH"] = x["B25"] and x["S2"]
++    x["S15"] = x["S1"] or x["S5"]
++    z = m["const"] + sum(b for k, b in m["coef"].items() if x[k])
++    p = 1 / (1 + math.exp(-z))
++    return min(max(p, BLOWUP_MODEL_CLIP[0]), BLOWUP_MODEL_CLIP[1]), sorted(k for k in m["coef"] if x[k])
++
++
+ def anchor_outcomes(outs, pa, pl):
+     """Reweight a tagged outcome list so that P(blow-up) = pa and P(multiple <= 0.5) = pl.
+     Groups: A = blow-up point; B = other outcomes <= 0.5x; C = outcomes > 0.5x. Each group is scaled in proportion
+@@ -748,6 +783,13 @@ def build(card, card_path):
+     anc = {"p_blowup": anchor_p(sc.get("p_blowup"), br("p_blowup"), aw),
+            "p_le_half": anchor_p(sc.get("p_le_half"), br("p_le_half"), aw)}
+     anchored_on = cls is not None and any(br(k) is not None for k in anc)
++    # v1.6 blow-up model floor (blowup_model_test.md): P(blow-up) used = max(anchored, model)
++    snap = wres.get("snapshot") or {}
++    p_bm, bm_flags = blowup_model_p(cls_name, card.get("survival") or s3.get("survival") or {},
++                                    snap.get("mcap"), wd.get("units"))
++    bm_raised = False
++    if anchored_on and p_bm is not None and br("p_blowup") is not None and p_bm > (anc["p_blowup"] or 0.0) + 1e-12:
++        anc["p_blowup"], bm_raised = p_bm, True
+     if anchored_on:
+         for row, key in ((prow[1], "p_le_half"), (prow[2], "p_blowup")):
+             row.append(pct(anc[key], 1) if br(key) is not None else "n/a (no base rate)")
+@@ -765,6 +807,12 @@ def build(card, card_path):
+                     "default weight is 0.5; a lower weight needs a written evidence note, never below %.2f."
+                     % (aw, 1 - aw, aw_note, ANCHOR_WEIGHT_MIN))
+         ptxt.append("")
++        if p_bm is not None:
++            ptxt.append("**Blow-up model floor (v1.6, blowup_model_test.md):** model P(blow-up) %s (flags fired: %s); "
++                        "the P(blow-up) used is the larger of the anchored value and the model%s."
++                        % (pct(p_bm, 1), ", ".join(bm_flags) or "none",
++                           " → raised to the model" if bm_raised else " (anchored value kept)"))
++            ptxt.append("")
+         if lowered:
+             ptxt.append("> **WARNING: %s** (%s: the class base rate is below our model tail, so anchoring made the card "
+                         "more optimistic, L40). If the model tail rests on company-specific evidence (a lease expiry, a "
+@@ -1006,6 +1054,7 @@ def build(card, card_path):
+                  "ev_mult5_anchored": ev_anc, "ev_mult5_dist_raw": ev_dist_raw,
+                  "ev_convention": "mult5 = scenario median; EV = mean of the outcome distribution (v1.6)",
+                  "scenario_shape_warning": scenario_shape_warning(sc) if sc.get("scenarios") else None, "p_blowup_anchored": anc["p_blowup"] if anchored_on else None,
++                 "p_blowup_model": p_bm, "p_blowup_model_flags": bm_flags,
+                  "p_le_half_anchored": anc["p_le_half"] if anchored_on else None,
+                  "anchor_lowered_tails": lowered,
+                  "rule_size": rule_size, "kelly_f_star": f_star, "open_soft_flags": n_open, "review_date": rd,
+diff --git a/tools/decision/tests/test_decision_card.py b/tools/decision/tests/test_decision_card.py
+index 2c285fb..d4cd574 100644
+--- a/tools/decision/tests/test_decision_card.py
++++ b/tools/decision/tests/test_decision_card.py
+@@ -524,3 +524,50 @@ class TestV16MeanMedianAndShape(unittest.TestCase):
+ 
+ if __name__ == "__main__":
+     unittest.main()
++
++
++class TestBlowupModel(unittest.TestCase):
++    """v1.6 blow-up model floor (research_notes/Decision audits/blowup_model_test.md)."""
++    IN = "india_nonfin_1000_20000cr_5y"
++
++    def test_no_flags_india(self):
++        p, fl = dc.blowup_model_p(self.IN, {"pledge_pct_of_promoter": 0.0, "interest_cover": 5.0})
++        self.assertAlmostEqual(p, 1 / (1 + math.exp(1.876)), places=6)
++        self.assertEqual(fl, [])
++
++    def test_both_flags_india(self):
++        p, fl = dc.blowup_model_p(self.IN, {"pledge_pct_of_promoter": 0.40, "interest_cover": 1.2})
++        z = -1.876 + 0.460 + 0.387 + 0.759
++        self.assertAlmostEqual(p, 1 / (1 + math.exp(-z)), places=6)
++        self.assertEqual(fl, ["B25", "BOTH", "S2"])
++
++    def test_unknown_flags_count_as_clear(self):
++        self.assertEqual(dc.blowup_model_p(self.IN, {})[0], dc.blowup_model_p(self.IN, {"interest_cover": 9})[0])
++
++    def test_lender_ignores_icr_uses_size(self):
++        c = "india_lender_1000_20000cr_5y"
++        big, _ = dc.blowup_model_p(c, {"is_financial": True, "interest_cover": 0.5}, 5000, "INR cr")
++        small, fl = dc.blowup_model_p(c, {"is_financial": True}, 2000, "INR cr")
++        self.assertAlmostEqual(big, 1 / (1 + math.exp(1.205)), places=6)
++        self.assertGreater(small, big)
++        self.assertEqual(fl, ["SMALL"])
++        self.assertEqual(dc.blowup_model_p(c, {}, 2000, "USD M")[0], big)   # units mismatch -> SMALL not fired
++
++    def test_clip_and_unknown_class(self):
++        p, _ = dc.blowup_model_p("us_float_500m_10b_5y", {"s1": 1, "s5": 1, "interest_cover": 0.1}, 600, "USD M")
++        self.assertLessEqual(p, dc.BLOWUP_MODEL_CLIP[1])
++        self.assertEqual(dc.blowup_model_p("india_survivors_2020_25_all_deprecated", {}), (None, None))
++
++    def test_build_floor_never_lowers_and_is_reported(self):
++        card = dc._load_json(SYN_CARD)
++        card = copy.deepcopy(card)
++        card["base_rate_class"] = self.IN
++        card.setdefault("survival", {})
++        card["survival"].update({"pledge_pct_of_promoter": 0.5, "interest_cover": 1.0})
++        F, recs, _ = dc.build(card, SYN_CARD)
++        self.assertIn("Blow-up model floor", F["probabilities"])
++        self.assertIn("B25, BOTH, S2", F["probabilities"])
++        dec = [r for r in recs if (r.get("data") or {}).get("p_blowup_model") is not None]
++        self.assertTrue(dec)
++        d = dec[0]["data"]
++        self.assertGreaterEqual(d["p_blowup_anchored"], d["p_blowup_model"] - 1e-12)
