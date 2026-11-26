@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Pre-turns text fix for transcripts whose speaker names stand alone on a line (no colon), which turns.py
-cannot split (e.g. INTELLECT FY24 calls). For each cached txt with < 6 'Name:' labels, a line is turned into
+cannot split (e.g. INTELLECT FY24 calls). In each cached txt a line is turned into
 'Name:' if it is 1-5 capitalised words, no end punctuation, <= 40 chars, preceded by a blank line and the same
 string stands alone >= 2 times in the file (or is 'Moderator'). The original is kept as <file>.orig.
 Usage: python3 -I normalize_speakers.py <cache>/<SYM>/txt   (then re-run run.py --no-llm)"""
@@ -14,8 +14,6 @@ STOP = {"Thank You", "Thank you", "Thanks", "Okay", "Yes", "No", "Disclaimer", "
 def fix(path):
     src = path + ".orig" if os.path.exists(path + ".orig") else path
     lines = open(src, encoding="utf-8", errors="replace").read().split("\n")
-    if sum(1 for l in lines if LABEL.match(l)) >= 6:
-        return 0
     st = [l.strip() for l in lines]
     cand = Counter(s for i, s in enumerate(st) if s and len(s) <= 40 and NAME.match(s) and s not in STOP
                    and (i == 0 or st[i - 1] == ""))
@@ -24,6 +22,11 @@ def fix(path):
     for i, s in enumerate(st):
         if s in names and (i == 0 or st[i - 1] == ""):
             lines[i] = s + ":"; n += 1
+    # turns.py starts at the first 'Moderator:'; if that comes after other labels (host-led calls), add one before them
+    lab = [i for i, l in enumerate(lines) if LABEL.match(l) and len(l.strip()) <= 42 and l.strip().endswith(":")]
+    mod = next((i for i, l in enumerate(lines) if re.match(r"^\s{0,8}Moderator\s*:", l)), None)
+    if lab and (mod is None or mod > lab[0] + 5) and len(lab) >= 6:
+        lines.insert(lab[0], "Moderator: (inserted by normalize_speakers.py)"); n += 1
     if n:
         if not os.path.exists(path + ".orig"):
             os.rename(path, path + ".orig")

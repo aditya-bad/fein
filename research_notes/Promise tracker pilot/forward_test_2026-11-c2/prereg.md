@@ -89,3 +89,27 @@ Strict y = 1 if delivered, else 0. Groups: **revenue** (revenue_growth, order_in
   No call, threshold or probability is edited after this cohort is saved.
 
 ## Frame and walk log
+(appended 2026-11-26 ~07:45 UTC, after the frame and the Check-A walk; nothing above the heading was edited)
+Prereg text above this heading: sha256 43f232292a888340f9574e868af591d49e2e54fbc8c532421c8b395611ec4563 (saved 07:21 UTC, before the frame).
+Bhavcopy 26-Nov-2026 not yet published at 07:22 UTC (curl exit 22) -> `sec_bhavdata_full_25112026.csv`, DATE1 = 25-Nov-2026 -> **frame close
+= 25-Nov-2026**. Universe 1,547, unpriced 0, in band 806, missing from map 0. Eligible after exclusions: Information Technology 37
+(excluded present: KPITTECH), Consumer Durables 58 (none), Automobile and Auto Components 46 (AUTOAXLES, UNIPARTS). Shuffled orders +
+mcaps: `selection_order.json` (script `draw.py`).
+
+Check A walk (distinct earnings-call transcripts filed 2023-07-01..2026-11-26 / calls on or after 15-Jul-2026; NSE `transcripts` list):
+
+| Sector | # | Symbol | Mcap Rs cr | Calls / recent | Check A |
+|---|---|---|---|---|---|
+| Information Technology | 1 | INTELLECT (Intellect Design Arena) | 8,430 | 14 (+1 investor-day transcript) / 2 | pass (Q4FY26 NSE file is a cover letter; website PDF fetched) |
+| | 2 | RATEGAIN (RateGain Travel Technologies) | 8,055 | 13 / 2 | pass (all NSE earnings-call files are cover letters; 13 website PDFs fetched from investors.rategain.com; Q3FY25 link unreadable, not counted; 4 AGM transcripts on NSE also read) |
+| Consumer Durables | 1 | SFL (Sheela Foam) | 6,423 | 15 / 2 | pass |
+| | 2 | BOSCH-HCIL | 4,662 | 0 / 0 | skip (no transcript or analyst-meet filings) |
+| | 3 | LAOPALA | 1,763 | 0 / 0 | skip (no transcript or analyst-meet filings) |
+| | 4 | GREENLAM (Greenlam Industries) | 5,595 | 14 / 2 | pass (one Aug-2025 filing is an audio-recording letter; the transcript followed 19-Aug-2025) |
+| Automobile and Auto Components | 1 | BANCOINDIA | 9,881 | 0 / 0 | skip (no transcript or analyst-meet filings) |
+| | 2 | SUPRAJIT (Suprajit Engineering) | 6,195 | 14 / 2 | pass |
+| | 3 | LANDMARK (Landmark Cars) | 1,950 | 14 / 2 | pass (one Feb-2025 filing is an audio-recording letter) |
+
+Pipeline note (deviation, mechanical): turns.py could not split 6 calls whose speaker names stand alone on a line without a colon
+(INTELLECT Q1–Q4 FY24 + investor day, SFL Q3FY26) or whose first label precedes "Moderator:" (INTELLECT Q4FY25). `normalize_speakers.py`
+adds the colon / a leading "Moderator:" line to the cached text (originals kept as `.orig`); pipeline code unchanged.

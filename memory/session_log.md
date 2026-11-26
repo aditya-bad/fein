@@ -90,3 +90,5 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
 - 26-Nov-2026: macro snapshot tool (16 fields, monthly Pi job); EY–G-sec gap test 2012–21: no OOS power (L51); asked user for pre-2012 Nifty P/E CSV (List 4).
 - 26-Nov-2026: wealth-allocation test (L52): 70/20/10 yearly passes (−17pp worst fall, +0.8pp/yr), underweight-SIP passes, P/E tilt not adopted.
 - 26-Nov-2026: live dive #9 VIYASH (healthcare draw after 2 PEAD skips; size 0, EV 1.07x; 9 calls; consensus 4 analysts agrees near-term) → L53. 9/9 cards size 0.
+- 26-Nov-2026: deep-dive protocol v1.5 (24 mandatory lines from L39–L53) + sector_sensitivity.md (22 sectors).
+

@@ -1,6 +1,6 @@
 # Deep-dive protocol (sector-agnostic) at "security-guard depth"
 
-**Version 1.4 · 2026-11-23** (v1.3 · 2026-11-22). v1.4 adds the lessons of the first three live dives (`SUNFLAG_live.md`, `US-KEX_live.md`, `AUTOAXLES_live.md`; lessons L33–L38). Built from the Vishal Mega Mart practice run (`VMM_practice.md`, a retailer). Revised after the Cummins India practice run (`CUMMINSIND_practice.md`, a manufacturer and MNC subsidiary), then after the Five Below practice run (`FIVE_practice.md`, the first US filer), then after the Federal Bank end-to-end dry run (`FEDERALBNK_dryrun.md`, the first lender; stages 2→6). Links: `insight:flag-override-template`, `strategy:fisher-scuttlebutt`, `insight:lender-blowup-signals`, `decision:adopt-disqualifiers-v2`, `research_notes/Templates/valuation_and_decision.md`, lessons L9, L10, L12, L13, L18, L19, L21. The changelog is at the bottom.
+**Version 1.5 · 2026-11-26** (v1.4 · 2026-11-23; v1.3 · 2026-11-22). v1.5 folds lessons L39–L53 from live dives #4–#9 (`INDRAMEDCO_live.md`, `UTKARSHBNK_live.md`, `HARSHA_live.md`, `SHK_live.md`, `UTTAMSUGAR_live.md`, `VIYASH_live.md`) and the new tools (`tools/news/`, `tools/valuation/consensus.py`, `tools/macro/`) into mandatory checklist lines, and adds the sector-sensitivity checklist (`sector_sensitivity.md`). v1.4 added the lessons of the first three live dives (`SUNFLAG_live.md`, `US-KEX_live.md`, `AUTOAXLES_live.md`; lessons L33–L38). Built from the Vishal Mega Mart practice run (`VMM_practice.md`, a retailer). Revised after the Cummins India practice run (`CUMMINSIND_practice.md`, a manufacturer and MNC subsidiary), then after the Five Below practice run (`FIVE_practice.md`, the first US filer), then after the Federal Bank end-to-end dry run (`FEDERALBNK_dryrun.md`, the first lender; stages 2→6). Links: `insight:flag-override-template`, `strategy:fisher-scuttlebutt`, `insight:lender-blowup-signals`, `decision:adopt-disqualifiers-v2`, `research_notes/Templates/valuation_and_decision.md`, lessons L9, L10, L12, L13, L18, L19, L21. The changelog is at the bottom.
 
 **Where a deep dive sits in the machine (v1.3; S0 added in v1.4).** Run in this order: **S0 selection** (live dives only) → **S2 checklist** (below) → stage-3 signals (PEAD quintile, credibility vs peers) → layers L1–L7 → **L8 valuation and decision** → paper calls. A deep dive is not finished until L8 has produced a worksheet and a card.
 
@@ -10,24 +10,24 @@ It is **not** collecting trivia. Each deep fact must end in a number that (a) ch
 
 ---
 
-## Deep-dive checklist (one page; v1.4)
-Run top to bottom. Each line names its mandatory output. Details are in the sections below.
+## Deep-dive checklist (one page; v1.5)
+Run top to bottom. Each line names its mandatory output. **Bold = added in v1.5** (lesson in brackets; details in "v1.5 mandatory lines" below). The v1.4 table is superseded (2026-11-26) and kept verbatim at the end of the changelog.
 
 | Step | Do | Mandatory output |
 |---|---|---|
-| S0 Selection (live dives) | Seeded random draw from a written frame; skip rules fixed before the frame is built | Seed(s), frame counts, ordered skip log with reasons; entity exists through the call horizon |
-| Rule zero | Edge question | 3 lines (consensus, key variable, layer) |
-| S2 | Every disqualifier-v2 rule, dated source | pass / fail / unknown table, before L1 |
-| Stage 3 | PEAD quintile + event date; credibility vs peer median (or, no concalls, AR-mode asset table + disclosure flags) | Signal block for the card |
-| L1 Map | Unit by business type; peers. **Flag non-operating stakes and cyclicality here** | Value chain; holdco / cyclical flags |
-| L2 Financials | 10-yr re-derivation; concentration; core PBT. **Cyclicals: normalised EPS and peak-cycle test** | Re-derived tables; trailing vs normalised P/E |
-| L3 Units | Unit P&L, payback two ways | Unit table |
-| L4 Costs | Rank by weight; top-3 in physical terms; materials ratio by quarter (manufacturers) | Cost-driver table with bps sensitivity |
-| L5 Governance | RPT table; parent-take table; **fees/royalties followed to the parent; vote results**; ownership supply | RPT + parent-take + vote-result tables |
-| L6 Scuttlebutt | Hypothesis-led site list | Surprises-vs-model list |
-| L7 Synthesis | Override table incl. "looks good" flags; **holdco discount causes** | Open-flag count; variant view or size 0 |
-| L8 Valuation + decision | Worksheet v1.3 (cash tax, ROIIC realism, exit-bet table, non-op stakes, normalised base) + card v1.2 (survival cap, tail anchoring) | Worksheet, card, paper calls (live: ingested) |
-| Close | Method lessons + open items; memdb seed | "What the method taught"; analysis record (no verdict on method tests) |
+| S0 Selection (live dives) | Seeded random draw from a written frame (sectors from the full `industry_map.csv`); skip rules fixed before the frame is built. **Frame close = the bhavcopy's DATE1 column, not the file name (L42).** **Scheme/merger changed > 50% of revenue in 2 yrs → own history, ROIIC windows and PEAD marked "not comparable" (L53)** | Seed(s), frame counts, ordered skip log; entity exists through the call horizon; **comparability note** |
+| Rule zero | Edge question. **Read the sector's row in `sector_sensitivity.md` and the macro-snapshot fields it names. Consensus forward P/E + analyst count (`consensus.py`, dated) (L47)** | 3 lines + **driver list + consensus line (P/E, n analysts, adjusted or reported EPS)** |
+| S2 | Every disqualifier-v2 rule, dated source. **News check run (`tools/news/news.py --tickers X`) + a search on the key asset; each item verified per L50 (L40, L50)** | pass / fail / unknown table, before L1; **news table (item, primary source, primary verb, status)** |
+| Stage 3 | PEAD quintile + event date; credibility vs peer median (or AR-mode table + flags). **Credibility with < 10 scored past promises = "under-powered" (L49). Red-flag rule: one flag (pledge > 25% or ICR < 1.5x) outside PEAD → starter ≤ 1%, no additions; both flags → answer the balance-sheet question before even a starter (L39 + addendum)** | Signal block; **survival line (flags, which, balance-sheet answer)** |
+| L1 Map | Unit by business type; peers; non-operating stakes; cyclicality. **Every government/licence/lease/subsidy/administered input listed with expiry and counterparty; state-law check for any state > 15% of book or revenue (L40, L41, L42, L45)** | Value chain; holdco / cyclical flags; **government-input table** |
+| L2 Financials | 10-yr re-derivation; concentration; normalised EPS for cyclicals. **Group ROIC + ROIIC vs CoE before any segment margin (L42). Core EPS ex-exceptionals and other income, after interest (L44). Temporary operating costs on their own line (L53). Minorities + dilution in base EPS (L53). Seasonal balance sheets: average capital (L45)** | Re-derived tables; **trailing / core / normalised / diluted-attributable P/E side by side; ROIC-ROIIC line** |
+| L3 Units | Unit P&L. **Capex payback two ways: current-utilisation route and management's asset-turn route (L42)** | Unit table; **payback-gap line** |
+| L4 Costs | Rank by weight; top-3 in physical terms; materials ratio by quarter (manufacturers). **Administered-price calendar (L45)** | Cost-driver table with bps sensitivity; **price calendar (last value, next decision date, in company filings y/n)** |
+| L5 Governance | RPT + parent-take + vote results. **Dissent net of promoter votes; promoter shares held vs voted per item (L40, L42, L45)** | RPT + parent-take + vote tables **with headline and net-of-promoter dissent** |
+| L6 Scuttlebutt | Hypothesis-led site list. **Court, gazette, counterparty and news search for external facts absent from the AR (L40)** | Surprises-vs-model list |
+| L7 Synthesis | Override table incl. "looks good" flags; holdco causes. **Flag "material external fact absent from the AR" (L40)** | Open-flag count; variant view or size 0 |
+| L8 Valuation + decision | Worksheet v1.3.1 (cash tax, ROIIC realism, exit-bet table, non-op stakes, normalised base) + card v1.5 (survival cap, tail anchoring). **Lenders: CET1 book (`cet1_book`), GNPA walk, lender base-rate class (card v1.5) (L41). Consensus cross-check beside the base case (L47). Card fractions as 0–1 (L42). Size 0 = "not cheap enough by our inputs", not "market fair" (L43). Macro snapshot = context only (L51)** | Worksheet, card, paper calls (live: ingested); **consensus-vs-ours line** |
+| Close | Method lessons + open items; memdb seed. **Name + NSE ticker in every user-facing line (L46)** | "What the method taught"; analysis record (no verdict on method tests) |
 
 ## S0 Selection and scoreability for live dives (v1.4; `decision:live-dd-selection-rules`)
 A live dive tests the method, so the subject must be drawn, not chosen (L9, L21).
@@ -42,6 +42,51 @@ A live dive tests the method, so the subject must be drawn, not chosen (L9, L21)
 - **A sampled frame changes what you get.** A "cheapest tercile" frame mostly selects cycle position (L38): expect
   peak-cycle cyclicals and apply the cyclicals rule below.
 - Tool notes: if the NSE pledge API returns empty, read the shareholding-pattern XBRL encumbrance flags.
+
+## v1.5 mandatory lines (L39–L53; each is a checklist line above)
+Each line ends in a number or a dated table row. "n/a" is allowed only with a one-line reason.
+
+**Selection and comparability**
+1. **Frame close from the bhavcopy date column (L42).** The 24-Nov-2026 file held 23-Nov data. The frame close and its date come from `DATE1`, not from the file name.
+2. **Transforming-merger "not comparable" rule (L53).** If a scheme, merger or demerger changed > 50% of revenue in the last 2 years (or the subject is the merged entity), mark the 10-yr own-history P/E band, ROIIC windows and PEAD/SUE **"not comparable"**. Use peer bands and restated pro-forma figures only. VIYASH: SUE +3.23 was the merger, not a surprise.
+
+**Edge, consensus and context**
+3. **Sector sensitivity (v1.5).** Before L1, copy the sector's drivers and must-checks from `sector_sensitivity.md` into the dive. Record the value and date of each macro-snapshot field it names (`research_notes/Macro/snapshot_YYYY-MM.json`). Each driver needs a model line or a bps sensitivity in L4, or "not material" with a reason.
+4. **Consensus forward P/E + analyst count (L47).** Run `python3 tools/valuation/consensus.py SYMBOL.NS --out ...`. Record the forward P/E, forward EPS, the analyst count on the next FY, the date and the number of retries. It can return empty on the first call (VIYASH); retry once before writing "no coverage". Say whether the forward EPS is adjusted. Analyst count is a coverage measure (0–1 = more room for depth). Show consensus next to our base case, and write any gap > 20% as a dated, scoreable disagreement. Consensus is a cross-check, never an input.
+5. **Macro context only (L51).** The earnings-yield − G-sec gap and the Nifty P/E failed out of sample. Cite them as context; they never move a card input.
+
+**S2 and news**
+6. **News check run (L40, L45, L50).** Add the subject to `tools/news/watchlist.csv` (name + ticker + sector + aliases) and run `python3 tools/news/news.py --tickers X --since 30d` (Google News caps a query at ~100 items). Also run a targeted search on the key asset (lease, licence, plant, state law, tender). NCLT, ICRA, CRISIL and CARE are never automated, so check them by hand.
+7. **L50 verification.** A news item becomes an event record or a model input only after a primary source (filing, order, gazette, regulator page) or two reputable outlets confirm it. Record the **primary source's verb** ("waiting period expired", not "probe closed"). Check the date: feeds resurface stale items. Table columns: item | primary source | primary verb | date | status (confirmed / partly / unconfirmed / false-stale).
+
+**Stage 3 and survival**
+8. **Both-flags balance-sheet question (L39, L39 addendum).** One red flag (pledge > 25% of promoter holding or interest cover < 1.5x) outside the PEAD window → starter size ≤ 1%, no additions (card v1.3). Both flags → 12-month halving 4.2×, 3-yr failure 9.4× (stable across periods). Write the balance-sheet answer (debt maturity, refinancing source, covenant headroom, pledge lender and trigger price) **before** even a starter position. This is a judgement rule until the pre-registered "both flags → 0 new money" test runs.
+9. **Credibility power (L49).** Report the number of scored past promises. Fewer than 10 → label the score "under-powered (n = k)": it moves at most ±0.10 from the sector base rate. Score numbers and dates separately (L44: SHK missed both). Score guidance on items the company excludes from "adjusted" profit as its own category (L53: VIYASH's ESOP-cost guide missed ~3×).
+
+**Government inputs and external facts**
+10. **Government / licence / lease inputs (L40, L42).** List every government-granted or government-priced input: land lease, mining lease, licence, spectrum, PPP/concession, subsidised financing, interest subsidy, PLI, policy-dated rules (e.g. solar ALMM relaxations). For each, record the expiry, the obligation given in return and compliance with it, the counterparty's own filings, and whether the AR mentions it. An expired or contested input → `survival.core_asset_threat` on the card (card v1.4), and the stock is valued as an option on renewal.
+11. **External facts absent from the AR (L40, L41, L42, L45).** Search news, court records, gazettes and counterparty filings for the key asset. Any material fact the AR, deck or calls do not mention becomes a disclosure flag and an L7 row (INDRAMEDCO lease expiry, Utkarsh's Bihar MFI Act, HARSHA's subsidy-backed debt, UTTAMSUGAR's ethanol-tender exclusion).
+12. **State-law check above 15% concentration (L41).** For any state above ~15% of the loan book, revenue, capacity or cane/raw-material area, search that state's gazette and assembly records for laws, ordinances and tariff orders on the activity. Record each with its date.
+13. **Administered-price calendar (L45).** For every administered or government-set price (cane SAP/FRP, sugar MSP, export quota, ethanol tender design, power tariff order, DPCO/NLEM ceiling, excise, gas APM, freight), keep a table: last value + date, next decision date, sensitivity (₹ per unit → % of EBITDA), and whether the company's latest filing mentions it. A partial withdrawal of an input goes into the tails with a written note, because the card's core-asset trigger is yes/no.
+
+**Financials, returns and EPS base**
+14. **Group ROIC/ROIIC before segment margins (L42, L44).** Compute group ROIC and full-cycle ROIIC against CoE before quoting any segment margin. In 3 of 3 recent draws, group ROIC was below CoE behind a strong segment. When ROIIC < CoE and net debt is large, the worksheet's "DCF value below net debt" line fires: the whole EV above 1x is an exit-multiple bet.
+15. **Core EPS ex-exceptionals and other income (L44).** Core EPS = (EBIT ex other income × (1 − tax) − post-tax interest) ÷ shares. Use worksheet v1.3.1's `base.exceptional_items_cr` / `other_income_cr` or `core_eps`. Show reported, core and normalised P/E side by side. Exceptional + other income > 25% of PBT = a "good-but-misleading" flag (SHK: 18.7x reported vs ~36x core).
+16. **Temporary operating costs on their own line (L53).** Merger ESOP charges, acquired-intangible amortisation, one-time integration or start-up costs: give each its own line with an end date. Never put them in `exceptional_items_cr` (that double-subtracts and hides a real cost). The worksheet has no bridge for them, so show a bottom-up next-2-year EPS beside it.
+17. **Minorities and dilution in base EPS (L53).** Base EPS = attributable to owners (after NCI) ÷ fully diluted shares (warrants, ESOPs, convertibles, pending QIP/rights). Report basic vs diluted-attributable P/E (VIYASH 43x vs 47.6x).
+18. **Seasonal balance sheets (L45).** Use average capital and average net debt across the year's balance-sheet dates (UTTAMSUGAR: ₹30 cr Sep vs ₹712 cr Mar; ROIC 12.7% vs 7.3%).
+19. **Capex payback two ways (L42).** Route A: incremental revenue at **current** utilisation × margin ÷ capex. Route B: management's asset-turn claim. If they differ by more than 2×, that gap is the finding (HARSHA: ~6×).
+
+**Governance**
+20. **Dissent net of promoter votes (L40, L42, L44, L45).** For each resolution: net dissent = votes against ÷ (votes cast − promoter shares voted). Report it next to the headline percentage (HARSHA 14% headline ≈ 92% of non-promoter votes). Reconcile promoter shares **held** vs **voted** per item: an abstaining co-promoter can reveal a broken JV, and the "promoter interested" field can be wrong. Check whether promoters voted on their own relatives' re-appointment.
+
+**Lenders**
+21. **Lender CET1 book + GNPA walk + lender base rate (L41).** (a) Use Pillar 3 DF-11 CET1 capital ÷ shares as `cet1_book` (bank mode v1.2) beside reported book; report P/CET1 and the deduction gap (DTA, intangibles, capitalised software). (b) GNPA walk: opening + new NPAs − recoveries − upgrades − **write-offs** − **ARC sales** = closing, before crediting any asset-quality gain. (c) The card auto-selects `india_lender_1000_20000cr_5y` (card v1.5). Never re-issue a dated card when the class changes: add an addendum.
+
+**Card hygiene and reporting**
+22. **Card input fractions (L42).** Credibility, pledge share, tail weight, Kelly, ADV share and probabilities are written as 0–1. The card refuses values in (1, 100] and calls them likely percents.
+23. **Read size 0 correctly (L43).** Size 0 = "not cheap enough by our inputs"; the card's pass point is ~14% IRR. Only stage-7 scoring tests whether the market is fair. Do not change card mechanics mid-season (`decision:card-audit-fixes-prereg-2026-11-25`).
+24. **Name + ticker (L46).** Write every company named to the user as name + NSE ticker; same-group companies get confused (Kalpataru Ltd KALPATARU vs Kalpataru Projects KPIL).
 
 ## Rule zero: edge before depth
 Before starting, write 3 lines:
@@ -355,6 +400,12 @@ For every flag, good or bad, fill: flag | context questions | clearing evidence 
 - [ ] **Related parties (v1.4):** fees/royalties to the parent as % of sales and core EBITDA with renewal dates; vote-results table; materials-ratio like-for-like growth if a channel changed
 - [ ] **No-concall companies (v1.4):** AR-mode asset × year table and disclosure flags (no cross-mode credibility comparison)
 - [ ] **L8 (v1.4):** cash-tax and ROIIC-realism inputs set or explicitly n/a; exit-bet table read; card `survival` filled (India); tail anchor `w` with evidence if ≠ 0.5
+- [ ] **v1.5 comparability and context:** bhavcopy DATE1 close; "not comparable" note if a scheme changed > 50% of revenue; sector-sensitivity drivers + dated macro fields; consensus line (forward P/E, n analysts, adjusted?, retries)
+- [ ] **v1.5 S2 news:** news run + key-asset search; L50 verification table (primary source, primary verb, status)
+- [ ] **v1.5 government inputs:** government-input table (expiry, obligation, counterparty filings, in AR y/n); state-law check for any state > 15%; administered-price calendar; "absent from AR" flags in L7
+- [ ] **v1.5 EPS base and returns:** group ROIC/ROIIC vs CoE; reported / core / normalised / diluted-attributable P/E; temporary-cost lines with end dates; average capital for seasonal businesses; payback two ways
+- [ ] **v1.5 governance and signals:** dissent net of promoter votes + held-vs-voted check; red-flag count and the both-flags balance-sheet answer; credibility n (under-powered if < 10)
+- [ ] **v1.5 lenders:** `cet1_book` + P/CET1; GNPA walk incl. write-offs and ARC sales; lender base-rate class shown on the card
 - [ ] **Lenders (v1.3):** NPA walk with write-offs; growth ex special funding windows; per-outlet table; Schedule-16 cost table incl. DICGC and the PSL-shortfall line; funding-concentration table (state, NRI, top-20, bulk, period-end vs average); bad-but-benign / good-but-misleading table
 
 ## Common traps seen so far
@@ -390,6 +441,14 @@ For every flag, good or bad, fill: flag | context questions | clearing evidence 
 - (v1.4) **Our tails are too thin.** Every card's P(blow-up) was 0.07–0.18× the class base rate before anchoring (L36).
 - (v1.4) **Tool notes:** screener's "consolidated" URL can silently show standalone data (quarters marked "(S)"); the NSE pledge API can return 0 rows (use SHP XBRL); `sec_fetch.py frames` per-share units are `USD-per-shares`.
 
+- (v1.5) **Exceptional gains make a stock look cheap.** SHK's 18.7x trailing P/E was ~36x on core earnings; the normalised 10-yr check agreed with the inflated number (L44).
+- (v1.5) **Temporary costs make a stock look expensive.** VIYASH's 43x was mostly merger ESOP + acquired-intangible costs ending Q3 FY27, but 13–17% of PAT goes to minorities and ~9% dilution is pending (L53).
+- (v1.5) **The decisive fact is often outside the AR.** Lease expiry (INDRAMEDCO), state MFI Act (UTKARSHBNK), subsidy-backed debt (HARSHA), ethanol-tender exclusion (UTTAMSUGAR) (L40–L45).
+- (v1.5) **Headline vote percentages hide minority dissent** when promoters hold ~75% (L42).
+- (v1.5) **GNPA falls on write-offs and ARC sales; Tier-1 falls on deductions with no loss** (L41).
+- (v1.5) **Headline verbs overstate** ("probe closed" = HSR waiting-period expiry); feeds resurface month-old items (L50).
+- (v1.5) **Tool notes:** `consensus.py` can return empty on the first call (retry, log retries); `nse_fetch.py announcements` prints 15 rows in summary mode (use `--raw`/`--out`); `bse_fetch.py announcements` returns HTTP 400 for page 2+; XBRL moved contract-manufacturing COGS between lines (FY25→FY26), which breaks a naive materials ratio; NSE Reg-44 voting results are often scanned PDFs; the worksheet's own-history band needs n ≥ 5.
+
 ---
 
 ## Changelog
@@ -424,3 +483,25 @@ For every flag, good or bad, fill: flag | context questions | clearing evidence 
   - Stage 3 for no-concall companies: annual-report mode asset × year table and disclosure flags (L37; promise-tracker pipeline v1.4).
   - L8: worksheet v1.3 inputs (cash tax, ROIIC realism, exit-multiple bet table) and card v1.2 (India survival cap, tail anchoring to base rates; L34–L36).
   - Six deliverable lines; five traps/tool notes. No earlier text removed.
+- **v1.5 · 2026-11-26.** From live dives #4–#9 (INDRAMEDCO, UTKARSHBNK, HARSHA, SHK, UTTAMSUGAR, VIYASH; lessons L39–L53, L39 addendum, L41 follow-up) and the new news, consensus and macro tools:
+  - Rewrote the one-page checklist (v1.4 table marked superseded; all its rows kept) with v1.5 lines marked in bold and the lesson named.
+  - Added **"v1.5 mandatory lines"** (24 lines): bhavcopy DATE1 close; transforming-merger "not comparable" rule; sector sensitivity + macro fields; consensus forward P/E + analyst count; macro as context only; news run + L50 verification; both-flags balance-sheet question and the one-flag starter rule; credibility power (n ≥ 10) and guidance on excluded items; government/licence/lease inputs; external facts absent from the AR; state-law check above 15%; administered-price calendar; group ROIC/ROIIC before segment margins; core EPS; temporary operating costs; minorities + dilution in base EPS; seasonal average capital; capex payback two ways; dissent net of promoter votes; lender CET1 book + GNPA walk + lender base-rate class; card fractions; reading size 0; name + ticker.
+  - New companion file **`sector_sensitivity.md`**: external drivers, macro-snapshot fields and must-checks for the 22 `industry_map.csv` sectors, each driver marked evidence or standard.
+  - Six deliverable lines; seven traps/tool notes. No earlier text removed. L52 (portfolio split) is not a deep-dive rule and is not folded in.
+
+### ~~Deep-dive checklist v1.4~~ (superseded 2026-11-26 by the v1.5 table at the top; kept for history)
+| Step | Do | Mandatory output |
+|---|---|---|
+| S0 Selection (live dives) | Seeded random draw from a written frame; skip rules fixed before the frame is built | Seed(s), frame counts, ordered skip log with reasons; entity exists through the call horizon |
+| Rule zero | Edge question | 3 lines (consensus, key variable, layer) |
+| S2 | Every disqualifier-v2 rule, dated source | pass / fail / unknown table, before L1 |
+| Stage 3 | PEAD quintile + event date; credibility vs peer median (or, no concalls, AR-mode asset table + disclosure flags) | Signal block for the card |
+| L1 Map | Unit by business type; peers. **Flag non-operating stakes and cyclicality here** | Value chain; holdco / cyclical flags |
+| L2 Financials | 10-yr re-derivation; concentration; core PBT. **Cyclicals: normalised EPS and peak-cycle test** | Re-derived tables; trailing vs normalised P/E |
+| L3 Units | Unit P&L, payback two ways | Unit table |
+| L4 Costs | Rank by weight; top-3 in physical terms; materials ratio by quarter (manufacturers) | Cost-driver table with bps sensitivity |
+| L5 Governance | RPT table; parent-take table; **fees/royalties followed to the parent; vote results**; ownership supply | RPT + parent-take + vote-result tables |
+| L6 Scuttlebutt | Hypothesis-led site list | Surprises-vs-model list |
+| L7 Synthesis | Override table incl. "looks good" flags; **holdco discount causes** | Open-flag count; variant view or size 0 |
+| L8 Valuation + decision | Worksheet v1.3 (cash tax, ROIIC realism, exit-bet table, non-op stakes, normalised base) + card v1.2 (survival cap, tail anchoring) | Worksheet, card, paper calls (live: ingested) |
+| Close | Method lessons + open items; memdb seed | "What the method taught"; analysis record (no verdict on method tests) |
