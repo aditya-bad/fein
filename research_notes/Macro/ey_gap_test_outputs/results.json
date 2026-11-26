@@ -1,0 +1,266 @@
+{
+ "3y": {
+  "n_starts": 141,
+  "first": "2012-02",
+  "last": "2023-10",
+  "n_train": 59,
+  "n_test": 82,
+  "independent_windows_approx": 4.9,
+  "mean_fwd": 13.58,
+  "min_fwd": -0.96,
+  "max_fwd": 28.02,
+  "models": {
+   "M0_ey": {
+    "full_coef": [
+     15.778,
+     -0.499
+    ],
+    "nw_t": [
+     2.85,
+     -0.46
+    ],
+    "r2_full": 0.007,
+    "coef_train": [
+     -3.46,
+     3.242
+    ],
+    "coef_test_half": [
+     22.133,
+     -2.027
+    ],
+    "oos_r2": -0.971,
+    "sign_ok_train_half": true,
+    "sign_ok_test_half": false,
+    "nonoverlap": {
+     "offsets": 33,
+     "points_each": 4,
+     "median_first_slope": -0.709,
+     "share_expected_sign": 0.45
+    }
+   },
+   "M0_logpe": {
+    "full_coef": [
+     3.514,
+     3.208
+    ],
+    "nw_t": [
+     0.28,
+     0.76
+    ],
+    "r2_full": 0.016,
+    "coef_train": [
+     61.25,
+     -16.156
+    ],
+    "coef_test_half": [
+     -13.411,
+     8.491
+    ],
+    "oos_r2": -1.285,
+    "sign_ok_train_half": true,
+    "sign_ok_test_half": false,
+    "nonoverlap": {
+     "offsets": 33,
+     "points_each": 4,
+     "median_first_slope": 3.48,
+     "share_expected_sign": 0.45
+    }
+   },
+   "M1_ey_y10": {
+    "full_coef": [
+     23.647,
+     0.798,
+     -1.846
+    ],
+    "nw_t": [
+     2.27,
+     0.75,
+     -1.2
+    ],
+    "r2_full": 0.054,
+    "coef_train": [
+     7.329,
+     4.306,
+     -2.023
+    ],
+    "coef_test_half": [
+     32.205,
+     -1.218,
+     -1.919
+    ],
+    "oos_r2": -0.68,
+    "sign_ok_train_half": true,
+    "sign_ok_test_half": false,
+    "nonoverlap": "not estimable: only 4 non-overlapping points per offset"
+   },
+   "M2_gap": {
+    "full_coef": [
+     17.418,
+     1.301
+    ],
+    "nw_t": [
+     4.34,
+     1.09
+    ],
+    "r2_full": 0.028,
+    "coef_train": [
+     22.101,
+     3.134
+    ],
+    "coef_test_half": [
+     14.806,
+     0.241
+    ],
+    "oos_r2": -0.108,
+    "sign_ok_train_half": true,
+    "sign_ok_test_half": true,
+    "nonoverlap": {
+     "offsets": 33,
+     "points_each": 4,
+     "median_first_slope": 1.361,
+     "share_expected_sign": 0.61
+    }
+   }
+  },
+  "H1_pe_predicts": false,
+  "H2_gap_adds_info": true,
+  "oos_r2_gain_M1_vs_M0": 0.291,
+  "oos_r2_gain_M2_vs_M0": 0.863
+ },
+ "5y": {
+  "n_starts": 117,
+  "first": "2012-02",
+  "last": "2021-10",
+  "n_train": 59,
+  "n_test": 58,
+  "independent_windows_approx": 3.0,
+  "mean_fwd": 13.58,
+  "min_fwd": 1.53,
+  "max_fwd": 23.88,
+  "models": {
+   "M0_ey": {
+    "full_coef": [
+     14.312,
+     -0.168
+    ],
+    "nw_t": [
+     5.73,
+     -0.4
+    ],
+    "r2_full": 0.001,
+    "coef_train": [
+     -3.388,
+     3.139
+    ],
+    "coef_test_half": [
+     9.18,
+     1.513
+    ],
+    "oos_r2": -2.105,
+    "sign_ok_train_half": true,
+    "sign_ok_test_half": true,
+    "nonoverlap": "not estimable: only 2 non-overlapping points per offset"
+   },
+   "M0_logpe": {
+    "full_coef": [
+     9.791,
+     1.203
+    ],
+    "nw_t": [
+     2.2,
+     0.78
+    ],
+    "r2_full": 0.004,
+    "coef_train": [
+     59.275,
+     -15.645
+    ],
+    "coef_test_half": [
+     29.372,
+     -4.416
+    ],
+    "oos_r2": -2.722,
+    "sign_ok_train_half": true,
+    "sign_ok_test_half": true,
+    "nonoverlap": "not estimable: only 2 non-overlapping points per offset"
+   },
+   "M1_ey_y10": {
+    "full_coef": [
+     27.4,
+     2.073,
+     -3.087
+    ],
+    "nw_t": [
+     7.54,
+     2.55,
+     -4.01
+    ],
+    "r2_full": 0.212,
+    "coef_train": [
+     17.946,
+     5.244,
+     -3.999
+    ],
+    "coef_test_half": [
+     16.321,
+     2.169,
+     -1.4
+    ],
+    "oos_r2": -1.075,
+    "sign_ok_train_half": true,
+    "sign_ok_test_half": true,
+    "nonoverlap": "not estimable: only 2 non-overlapping points per offset"
+   },
+   "M2_gap": {
+    "full_coef": [
+     21.323,
+     2.544
+    ],
+    "nw_t": [
+     12.8,
+     3.45
+    ],
+    "r2_full": 0.168,
+    "coef_train": [
+     25.997,
+     4.605
+    ],
+    "coef_test_half": [
+     19.843,
+     1.618
+    ],
+    "oos_r2": -0.416,
+    "sign_ok_train_half": true,
+    "sign_ok_test_half": true,
+    "nonoverlap": "not estimable: only 2 non-overlapping points per offset"
+   }
+  },
+  "H1_pe_predicts": false,
+  "H2_gap_adds_info": true,
+  "oos_r2_gain_M1_vs_M0": 1.03,
+  "oos_r2_gain_M2_vs_M0": 1.689
+ },
+ "descriptive": {
+  "months": 177,
+  "first": "2012-02",
+  "last": "2026-10",
+  "pe_min_max": [
+   15.77,
+   39.65
+  ],
+  "y10_min_max": [
+   5.81452,
+   8.9875
+  ],
+  "gap_min_max": [
+   -4.3,
+   -1.45
+  ],
+  "corr_pe_gap": -0.404
+ },
+ "generated": "2026-11-26",
+ "sources": [
+  "https://archives.nseindia.com/content/indices/ind_close_all_DDMMYYYY.csv",
+  "https://fred.stlouisfed.org/series/INDIRLTLT01STM"
+ ]
+}

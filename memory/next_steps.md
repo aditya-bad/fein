@@ -55,7 +55,8 @@ Last updated: 2026-11-24
 1. ~~News layer~~ BUILT 25-Nov (tools/news/; Google News RSS per company + policy, SEBI, RBI; rating-agency sites not automatable). **Run `python3 tools/news/news.py --since 2d` at the start of each session until the Pi.** Verify flags before using (headlines only). Watch (verified 26-Nov): UTTAMSUGAR 2-Dec SC ethanol hearing, UP SAP 2026-27, 30-Nov stock-limit expiry (price calendar file); NVDA Q3 FY27 10-Q + independent committee findings; US-NEE Virginia SCC outcome.
 2. ~~Historical-panel test of card fixes~~ DONE 25-Nov (L48): fix 3 passes history, fix 4 fails. After season: apply v1.6 patch (tools/decision/patches/); write v1.6.1 fix-3 patch on a finer grid; prereg blow-up under-prediction test.
 3. Live deep dives ~1–2/week (IT, pharma, consumer, cap goods). Stages 4→7.
-4. Small macro module: monthly snapshot (repo, 10y G-sec, CPI, INR, crude, DXY, gold, FPI flows, Nifty EY vs G-sec);
+4. ~~Macro snapshot + EY-gap test~~ DONE 26-Nov (L51); rerun on 1999+ once user uploads niftyindices CSV; resolve repo-hike date + gold source. Remaining macro: sector-sensitivity checklist.
+   (orig) Small macro module: monthly snapshot (repo, 10y G-sec, CPI, INR, crude, DXY, gold, FPI flows, Nifty EY vs G-sec);
    sector-sensitivity checklist; prereg test EY–G-sec gap → 3–5y Nifty returns. Stage 5.
 5. Wealth-allocation test (100% equity vs fixed split rebalanced vs valuation bands vs new-money-to-underweight, India, 2 sources). Defence.
 6. Fortnightly/monthly flows (NSDL FPI sector, RBI credit, MF portfolios): prereg "heavy fund selling in small stock → further falls?". Stage 3.

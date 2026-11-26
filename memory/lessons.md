@@ -397,3 +397,11 @@ false/stale. The most surprising one was TRUE (NVIDIA 8-Ks: board accepted Huang
 so surprise ≠ false; primary filings settle it. "Justice Department closes probe" was really an HSR waiting-period expiry;
 "Polycab NCLAT reserves order" was a month-old story already resolved; the "steel duty relief" plea was from 2025. **Rule:** a news
 item becomes an event record only after a primary source or two reputable outlets; record the verb the primary source uses.
+
+## L51 (2026-11-26) — Valuation-gap timing: no out-of-sample power in 2012–21 data; fix the rule, not the verdict
+Pre-registered test (`research_notes/Macro/ey_gsec_gap_test.md`): with NSE P/E only from Feb-2012 (older history is browser-only),
+neither Nifty P/E nor the earnings-yield − 10-yr G-sec gap beat the historical mean out of sample (all OOS R² negative). The literal
+rule passed the gap (less wrong than P/E) but was overridden: a rule must also require OOS R² > 0 — recorded for future runs. Only
+~3–5 independent windows: this neither confirms nor refutes the P/E ≥ 24.5 base rate (which rests on the 2000/2008 peaks). Gap stays
+as snapshot context, not a card input. Data conflicts to resolve: repo 5.50% (RBI site) vs memdb 5.25% (Jun-2025) — hike undated;
+gold-api $3,568/oz vs Yahoo GC=F ~$4,187 (Sep) vs IBJA ₹122,982/10g — gold source unreliable this month.

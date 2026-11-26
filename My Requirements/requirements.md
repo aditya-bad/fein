@@ -192,3 +192,9 @@ Also tell me how I'll reach the wrapper: over Remote Control on the Pi (simplest
 ## Nice to have
 - [ ] UPS or stable power. SD cards corrupt on power loss, which is another reason to prefer an SSD.
 - [ ] Tailscale (or similar) if you want to reach the Pi from your phone or laptop without exposing it.
+
+## List 4 (added 26-Nov-2026) — small one-off asks
+- [ ] **Nifty P/E history before 2012** (5 minutes, optional): open https://www.niftyindices.com/reports/historical-data →
+  "P/E, P/B & Div. Yield" → Nifty 50 → from 01-Jan-1999 to today → download CSV, and drop it into `My Requirements/uploads/`.
+  The site only serves this to a browser, and I won't work around that. It lets me re-run the valuation-timing test on 25+ years
+  (2000 and 2008 peaks included) instead of 2012–26 only.

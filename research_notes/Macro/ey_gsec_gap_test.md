@@ -69,3 +69,49 @@ beyond P/E alone (positive sign: a wider gap → higher future returns).
 ---
 ## Results
 (Filled in after computation — below this line only.)
+(Computed 2026-11-26 by `tools/macro/ey_gap_test.py`; outputs in `ey_gap_test_outputs/results.json` and `monthly.csv`.)
+
+**Data used:** 177 month-ends 2012-02 → 2026-10 (none missing). Nifty P/E range 15.8–39.7x (the 39.7x peak is the
+Covid earnings trough, early 2021); India 10-yr (FRED monthly avg) 5.81–8.99%; gap (EY − 10-yr) −4.30 to −1.45 pp,
+**always negative** in this sample. corr(P/E, gap) = −0.40, so the gap is not just P/E restated.
+Total return = price + DY/12 (fallback). Mean forward CAGR: 3-yr 13.6% (range −1.0 to 28.0%), 5-yr 13.6% (1.5 to 23.9%).
+
+| Horizon | Model | Full-sample slope(s) | NW t | R² full | Train-half slope | Test-half slope | OOS R² (fit ≤2016-12, test 2017+) |
+|---|---|---|---|---|---|---|---|
+| 3-yr (141 starts, ≈5 indep.) | M0 EY | −0.50 | −0.46 | 0.007 | +3.24 | −2.03 | **−0.97** |
+| | M0 log P/E | +3.21 | +0.76 | 0.016 | −16.2 | +8.5 | −1.29 |
+| | M1 EY + y10 | EY +0.80, y10 −1.85 | 0.75, −1.20 | 0.054 | +4.31, −2.02 | −1.22, −1.92 | **−0.68** |
+| | M2 gap | +1.30 | +1.09 | 0.028 | +3.13 | +0.24 | **−0.11** |
+| 5-yr (117 starts, ≈3 indep.) | M0 EY | −0.17 | −0.40 | 0.001 | +3.14 | +1.51 | **−2.11** |
+| | M0 log P/E | +1.20 | +0.78 | 0.004 | −15.6 | −4.4 | −2.72 |
+| | M1 EY + y10 | EY +2.07, y10 −3.09 | 2.55, −4.01 | 0.212 | +5.24, −4.00 | +2.17, −1.40 | **−1.08** |
+| | M2 gap | +2.54 | +3.45 | 0.168 | +4.61 | +1.62 | **−0.42** |
+
+Non-overlapping check: 3-yr has 4 points per phase offset (33 offsets): EY slope has the expected sign in only 45% of
+offsets, the gap in 61% — i.e. a coin flip. 5-yr has 2 points per offset: not estimable.
+
+### Decision (applying the pre-registered rules literally, then honestly)
+- **H1 (P/E alone predicts): FAILS at both horizons.** NW t of the EY slope is −0.46 (3-yr) and −0.40 (5-yr), wrong
+  sign in the full sample, OOS R² −0.97 / −2.11 (far worse than the training mean).
+- **H2 (gap adds information beyond P/E): the mechanical rule is MET at both horizons** (OOS R² gain M1 − M0 = +0.29
+  at 3-yr, +1.03 at 5-yr; y10 coefficient negative in both halves at both horizons). **But this is a flaw in the rule,
+  not a finding:** every model has a *negative* OOS R². "Less bad than a P/E model that fails" is not information.
+  The rule should have required OOS R²(M1) > 0; we did not write that, and we report the literal pass and override it
+  in substance. **Verdict: no usable predictive information in 2012–2021 starts — neither P/E nor the gap beats the
+  historical average return out of sample.** The gap's in-sample fit at 5-yr (R² 0.17, NW t 3.45) is suggestive at best:
+  ~3 independent windows, Newey-West with lag 59 on 117 points is unreliable, and the 2020 Covid earnings trough plus
+  the 2021 standalone→consolidated P/E switch sit inside the window.
+- **Consequence (pre-stated):** the macro snapshot shows EY − G-sec as context only; the decision card does not use it.
+  The current reading (−2.41 pp on 2026-11-25) is inside the 2012–26 range (−4.3 to −1.45), slightly cheaper than the
+  sample middle — that is description, not a forecast.
+
+### What this does and does not contradict
+- Does not refute `insight:india-valuation-forward-returns` (Freefincal: negative 5-yr returns only from P/E ≥ 24.5):
+  that is a tail claim on 1999+ data; our window has no start with a negative 5-yr return (min +1.5%) and excludes
+  the 2000 and 2008 peaks where P/E did the work. It does show that **within 2012–2021, P/E level told you almost
+  nothing about the 3–5 yr return**, which is a warning against using P/E as a timing dial in normal ranges.
+- Open: rerun 1999–2011 once a niftyindices P/E history is exported manually (browser) and a pre-2011 10-yr series
+  is found (RBI Handbook table). Fix the rule to require OOS R² > 0 for any rerun (amendment dated 2026-11-26,
+  applies only to future runs).
+
+**Confidence: unverified** (short sample, ~3–5 independent windows, one regime). Research, not advice.
