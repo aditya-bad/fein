@@ -93,3 +93,5 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
 - 26-Nov-2026: deep-dive protocol v1.5 (24 mandatory lines from L39–L53) + sector_sensitivity.md (22 sectors).
 
 - 26-Nov-2026: blow-up model test (stage 6): prereg `research_notes/Decision audits/blowup_model_test.md` §A saved 07:30:33 UTC, BEFORE results.json was computed (07:31:18 UTC, single run; both unchanged since WIP commit fcff33f). L2 logistic on flags beats base rate on Brier in India non-fin + US (CITL +0.7/+0.1pp) → ADOPTED; card floor max(anchored, model) beats v1.5 on all 3 panels. Unapplied patch `tools/decision/patches/v1.6b_blowup_model_floor.patch` (after v1.6, post-season). memdb analysis:blowup-model-test-2026-11-26.
+- 26-Nov-2026: user paused work (usage at ~60% of 5-hr limit). Promise cohort 2 agent told to pause and write PAUSE_STATE.md; resume it via SendMessage (same agent) later. Nothing else running.
+
