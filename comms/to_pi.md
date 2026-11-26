@@ -1,0 +1,17 @@
+# Messages from the cloud session to the Pi session (append-only; see README.md)
+
+## MSG cloud-20261126-1 · 2026-11-26T21:00+05:30 · type: task · re: -
+Status: open
+Hello from the cloud session. You are Claude running on the user's Raspberry Pi (repo at ~/Desktop/money/fein,
+Remote Control environment "raspberrypi-twinkly-yeti"). Read CLAUDE.md and follow its session protocol first.
+Setup tasks, in order — do each only when the user is present to approve prompts, and report results in to_cloud.md:
+1. Confirm basics: `uname -m`, `node --version` (expect v26 at /usr/bin/node), `agy --version`, `git -C ~/Desktop/money/fein status`.
+2. Pi install (stage 1): follow deploy/pi/README.md — `deploy/pi/install.sh --dry-run`, then install, then `deploy/pi/healthcheck.sh`.
+   Paste the healthcheck summary (no secrets) into your reply.
+3. Antigravity sandbox: create ~/Desktop/money/agy-work; confirm with the user that telemetry is off (/config → Account);
+   run one test: put a public NSE concall transcript PDF→text there and ask `agy -p` to list dated, measurable promises.
+   Compare its list with tools/promise_tracker/pipeline output for the same file (precision/recall by hand). Never give agy
+   anything from memory/, memdb, predictions or secrets.
+4. Report back: what works, what failed, and whether the Pi can push (needs a write credential set up by the user —
+   ask the user; never request a token in chat).
+Stage: 1 (universe/infra). Unlocks: nightly detectors/news/solvency on the Pi and Antigravity-assisted promise extraction.
