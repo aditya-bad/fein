@@ -74,3 +74,11 @@ transcript API.
   without a scrip code, >1 day silently returns 0 rows. bse_fetch.py now splits windows, pages fully, dedupes NEWSID (`selftest [--live]`).
 - **Bank XBRL (IFBanking taxonomy):** scoreboard reads InterestEarned, ProfitLossForThePeriod, GNPA/NNPA, CET1/AT1, ROA, advances,
   deposits. No total CRAR, loan portfolio, NIM or credit-cost tag → those calls stay assisted. NBFC filings have no GNPA tag.
+
+## 26-Nov-2026: Gemini CLI personal login is dead → use Antigravity CLI (`agy`)
+Google stopped serving Gemini CLI for individual / AI Pro / AI Ultra accounts on 18-Jun-2026 (Code Assist release notes);
+the CLI shows "This client is no longer supported for Gemini Code Assist for individuals". Successor: Antigravity CLI,
+`curl -fsSL https://antigravity.google/cli/install.sh | bash` → `~/.local/bin/agy`; non-interactive `agy -p "..."` (unverified flags,
+from secondary guides). Gemini CLI still works with a paid Gemini API key / Vertex. User's Pi: user `aditya`, Node 26 at /usr/bin
+(nvm default set to system). Reported issue: agy may segfault on CPUs without AES instructions (Pi 4's Cortex-A72 lacks the ARMv8
+crypto extension; Pi 5 has it) — unverified for Pi.
