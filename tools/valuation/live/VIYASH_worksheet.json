@@ -1,0 +1,692 @@
+{
+ "input": {
+  "company": "Viyash Scientific Ltd (formerly SeQuent Scientific; human + animal-health APIs, animal-health formulations (Alivira), US human generics via 60%-owned Appco Pharma)",
+  "ticker": "VIYASH",
+  "market": "india",
+  "practice": false,
+  "currency": "INR",
+  "units": "INR cr",
+  "as_of": "2026-11-25",
+  "price": 228.88,
+  "shares": 48.33,
+  "net_debt": -380.0,
+  "non_operating_value": 0.0,
+  "other_income_recurring_post_tax": 0.0,
+  "treasury_income_post_tax": 0.0,
+  "base": {
+   "fy": "TTM Sep-2026 (Q3 FY26..Q2 FY27), attributable basis (group lines x 0.86 for the 40% minorities in Appco Pharma and the Karizoo group)",
+   "revenue": 3192.9,
+   "ebitda": 604.8,
+   "ebit": 410.3,
+   "pat": 232.6,
+   "fcf": 198.0,
+   "eps": 4.81,
+   "eps_normalised": null,
+   "eps_forward": null,
+   "pe_trailing": 47.6,
+   "sbc": 68.7,
+   "exceptional_items_cr": -35.5,
+   "other_income_cr": 43.0,
+   "core_eps": 4.701013863025036
+  },
+  "tax_rate": 0.28,
+  "roiic": 0.15,
+  "terminal_roic": 0.13,
+  "incremental_roic_5y": 0.15,
+  "years": 10,
+  "coe": 0.125,
+  "terminal_growth": 0.05,
+  "payout_of_fcf": 0.1,
+  "dispersion": 0.4,
+  "base_case": {
+   "name": "base",
+   "growth": 0.14,
+   "growth_end": 0.08,
+   "margin_end": 0.125,
+   "roiic": 0.15,
+   "exit_pe": 24.0,
+   "prob": 0.0
+  },
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.3,
+    "growth": 0.07,
+    "growth_end": 0.05,
+    "margin_end": 0.095,
+    "roiic": 0.09,
+    "exit_pe": 15.0
+   },
+   {
+    "name": "base",
+    "prob": 0.45,
+    "growth": 0.14,
+    "growth_end": 0.08,
+    "margin_end": 0.125,
+    "roiic": 0.15,
+    "exit_pe": 24.0
+   },
+   {
+    "name": "bull",
+    "prob": 0.18,
+    "growth": 0.18,
+    "growth_end": 0.1,
+    "margin_end": 0.14,
+    "roiic": 0.2,
+    "exit_pe": 32.0
+   }
+  ],
+  "blowup": {
+   "prob": 0.07,
+   "multiple": 0.35,
+   "note": "An API + generics platform with 10 USFDA-approved sites: an OAI / warning letter / Import Alert 66-40 at a key Hyderabad/Vizag API site, or a lost US generic (Appco: exclusivity product already eroded, US formulations -11% y/y Q2 FY27), plus Rs 877 cr goodwill (Turkey hyperinflation, USA group Rs 246 cr) and a Carlyle exit (promoter 61.3% -> 49.2% in Q2 FY27; fund entered 2020-21) could put the stock on a -65% path. Raw 7% below the India class 15%: no customer >10% of revenue [AR26], net debt ~0, no pledge, no import alert found on FDA IA 66-40 (26-Nov-2026)."
+  },
+  "twin_engine": {
+   "targets": [
+    2,
+    3,
+    5
+   ],
+   "horizon": 5,
+   "exit_pes": null,
+   "hist_eps_cagr": null,
+   "hist_eps_note": "No meaningful EPS history: the listed entity became Viyash Life Sciences + Symed + SeQuent on 16-Dec-2025 (appointed date 1-Apr-2025, common-control pooling); FY25 restated EPS 0.88 -> FY26 4.09 is a merger/turnaround window, not a growth rate."
+  },
+  "pe_history": [
+   {
+    "date": "FY26",
+    "pe": 44.7
+   }
+  ],
+  "sector_pes": {
+   "Granules India": 32.5,
+   "Neuland Laboratories": 59.9,
+   "Aarti Drugs": 19.5,
+   "Solara Active Pharma": 62.6
+  },
+  "market_pe": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)"
+  },
+  "notes": [
+   "RUN LOG: this file is run 1, the inputs as written before any output (adopted). A run-2 sensitivity added nopat_margin 0.119 (economic margin: ESOP at the 25 cr steady state, no acquired-intangible amortisation) and gave EV 0.85x (base 0.94x) - LOWER, because the worksheet grows EPS from base.eps 4.81 with NOPAT, so a higher starting margin leaves less margin expansion. Neither run lets the ESOP/amortisation roll-off lift EPS as a step in FY28 (bottom-up FY28 EPS ~10.3 diluted vs worksheet base EPS5 ~10.3 in year 5): a worksheet limitation logged as a lesson candidate. Run 2 is reported, not used.",
+   "Price Rs 228.88 = NSE bhavcopy close 25-Nov-2026 (sec_bhavdata_full_25112026.csv, DATE1 25-Nov-2026) = Yahoo v8 VIYASH.NS close 25-Nov-2026 (two sources). screener.in 26-Nov-2026: Rs 229, mcap Rs 10,128 cr.",
+   "Shares 48.33 cr FULLY DILUTED [EST]: 44.16 cr issued (paid-up Rs 88.32 cr / Rs 2 face, Q2 FY27 XBRL; NSE pledge API totIssuedShares 441,627,670 at SHP 30-Sep-2026) + 2.034 cr warrants held by MD Dr Haribabu Bodepudi (issue price Rs 181.94, 25% paid, Rs 277.57 cr due on conversion within 18 months of allotment, AR26) + ~2.14 cr ESOP options [EST: 0.84 cr left of the 1.32 cr outstanding at 31-Mar-2026 (AR26 note) after ~0.48 cr allotted Apr-Nov 2026, plus 1.3 cr granted in Q1 FY27 (CFO, Aug-2026 call)].",
+   "Net debt -380 [EST] = Sep-2026 borrowings 531.03 (52.40 non-current + 478.63 current) - cash 492.54 - other bank 12.34 = 26.1 (XBRL; company deck/call 'Rs 26 cr' = two sources), less warrant money 277.6 and option money ~128 [EST, avg Rs 60 strike] that conversion brings in. Lease liabilities (~Rs 54 cr at Mar-2026) ignored.",
+   "Attributable scaling 0.86: non-controlling interests took 46.25 of 278.84 TTM PAT (16.6%) and 21.90 of 163.94 in H1 FY27 (13.4%) [XBRL]; NCI = 40% of Appco Pharma LLC (USA; Rs 88 cr of FY26 entity profit, AR26 note 49) and 40% of the Karizoo/Vila Vina/Phytotherapic group (Spain/Mexico). Management intends to buy out minorities 'in the second year' after acquisitions (Nov-2026 call) - a future cash use not modelled.",
+   "Base TTM group [XBRL Q3 FY26, Q4 FY26, Q1 FY27, Q2 FY27 consolidated; screener quarterlies agree to the crore]: revenue 858.41 + 919.96 + 946.36 + 987.94 = 3,712.67; other income 13.98 + 15.92 + 8.31 + 11.78 = 49.99; finance 57.49; D&A 58.53 + 60.41 + 61.77 + 45.33 = 226.04; PBT before exceptional 469.66; exceptional -41.26 (Q3 FY26 only); PAT 278.84; owners 232.59; EBITDA = 469.66 + 57.49 + 226.04 - 49.99 = 703.2 (screener OP 703); EBIT ex OI 477.2. x0.86 -> revenue 3,192.9, EBITDA 604.8, EBIT 410.3.",
+   "L44 core EPS: exceptional_items_cr -35.5 and other_income_cr 43.0 are the TTM group items x 0.86 (pre-tax, gains positive). base.pat is the REPORTED owners' PAT (232.6), so the worksheet strips them once - no double subtraction. Net effect small (+7.5 cr pre-tax).",
+   "What the TTM P/E hides (not stripped; real costs, but temporary in size): ESOP cost TTM 79.9 cr (7.9 + 5.3 + 24.6 + 42.1, decks) vs management's steady state ~25 cr/yr (FY27 ~148-149, FY28 ~32, CFO Nov-2026); acquired-intangible amortisation inside D&A ~84 cr TTM (FY26 ~100; Q1 FY27 25, Q2 8.9, Q3 ~4, then nil, per calls) -> together ~139 cr pre-tax (~Rs 2.1/diluted share after tax and minorities). The dilution from the merger ESOP grants is already in the 48.33 cr share count; the base margin path carries only the ~25 cr steady-state ESOP (sbc 68.7 = TTM 79.9 x 0.86 shown for reference).",
+   "NOPAT margin today 410.3 x 0.72 / 3,192.9 = 9.3%; with ESOP at 25 and no amortisation ~11.9%. Scenarios (written before outputs; tails started from the India class 21%/11%/15%): bear 30% = API price competition from China plus US generic erosion, Carlyle exit overhang, growth 7% -> 5%, NOPAT margin 9.5%, ROIIC 9%, exit 15x (Aarti Drugs 19.5x less a discount); base 45% = mid-teens revenue growth (management guides 20%+ FY27 incl. BioForLife; we assume 14% fading to 8%), margin 12.5% as ESOP/amortisation roll off plus modest operating leverage, ROIIC 15%, exit 24x (below the peer median 32.5x as growth fades; FY26 exit 44.7x was on merger-depressed EPS); bull 18% = USD 1 bn by 2032 path (17-18% CAGR), companion-animal launches 2029+, oncology FDF, margin 14%, ROIIC 20%, exit 32x (peer median).",
+   "ROIIC 15% [EST]: the only measurable window, FY25 restated (EBIT ex OI 148, IC ~3,016) -> TTM (477, IC ~3,473), gives ~52% - a merger/turnaround trough-to-recovery window that L38 forbids using. TTM ROIC on Sep-2026 IC (owners' equity 3,164.7 + NCI 228.5 + net debt 26.1 + leases ~54 = 3,473): 477.2 x 0.72 / 3,473 = 9.9% (13.2% ex goodwill 877); with ESOP/amortisation normalised ~12.8%.",
+   "Tax 28%: H1 FY27 effective 28.7% (66.15 / 230.09); Q4 FY26 47% incl. Rs 16 cr regime-change deferred-tax charge.",
+   "FCF 198 [EST] = ~230 group x 0.86: FY26 CFO 323 - capex ~98 = FCF 225 [SCR]; H1 FY27 CFO 182.7 - capex 67.4 = 115 [XBRL]. Capex guide Rs 150-170 cr/yr (Nov-2026 call). BioForLife (EUR 16.976 m ~ Rs 170 cr, closed 1-Oct-2026) is an acquisition outside FCF.",
+   "Exit P/Es: own history is one year (FY26: Mar-2026 close Rs 182.8 / EPS 4.09 = 44.7x) because the listed entity changed; SeQuent's FY17-25 P/Es are a different, smaller animal-health business and are NOT used. Peers [screener 26-Nov-2026, consolidated]: Granules 32.5x, Neuland 59.9x, Aarti Drugs 19.5x, Solara 62.6x (depressed earnings); median of the three earning peers 32.5x.",
+   "Dispersion 0.40: price Rs 126.7 (7-Apr-2025 low) -> 294.2 (3-Jul-2026 high) -> 228.9 [YH]."
+  ],
+  "sources": [
+   "research_notes/Deep dives/VIYASH_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_29856_VIYASH_2025_2026_A_10469798_17072026165453.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1757557_13112026055107_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/SEQUENT2_13112026184257_SE_Intimation_Investor_Presentation.pdf",
+   "https://nsearchives.nseindia.in/corporate/SEQUENT2_17112026182841_SE_Intimation_Earnings_Transcript.pdf",
+   "https://www.screener.in/company/VIYASH/consolidated/",
+   "https://nsearchives.nseindia.in/products/content/sec_bhavdata_full_25112026.csv"
+  ],
+  "_warnings": [],
+  "non_operating_growth": null,
+  "hurdle_cagr": 0.12,
+  "cash_tax_rate": null,
+  "cash_tax_rate_end": null,
+  "_inc_roic_method": "given",
+  "nopat_margin": 0.09252278492906135,
+  "_nopat_margin_method": "base.ebit x (1 - tax) / revenue",
+  "_eps_method": "given",
+  "_core_eps_method": "(PAT 232.6 - (exceptional -35.5 + other income 43.0) x (1 - tax 28%)) / shares"
+ },
+ "snapshot": {
+  "mcap": 11061.7704,
+  "ev": 10681.7704,
+  "pe": 47.6,
+  "ev_ebitda": 17.661657407407407,
+  "p_fcf": 55.86752727272727,
+  "fcf_yield": 0.017899485601328338,
+  "ev_sales": 3.345476024930314
+ },
+ "base": {
+  "rows": [
+   {
+    "t": 1,
+    "g": 0.14,
+    "revenue": 3639.9060000000004,
+    "margin": 0.09577050643615521,
+    "nopat": 348.595641,
+    "reinv_rate": 0.9333333333333335,
+    "fcf": 23.239709399999956,
+    "eps": 5.675877519193273
+   },
+   {
+    "t": 2,
+    "g": 0.13333333333333336,
+    "revenue": 4125.2268,
+    "margin": 0.09901822794324908,
+    "nopat": 408.4726476,
+    "reinv_rate": 0.8888888888888891,
+    "fcf": 45.385849733333266,
+    "eps": 6.650802376838086
+   },
+   {
+    "t": 3,
+    "g": 0.12666666666666668,
+    "revenue": 4647.755528000001,
+    "margin": 0.10226594945034295,
+    "nopat": 475.30713188400006,
+    "reinv_rate": 0.8444444444444446,
+    "fcf": 73.93666495973329,
+    "eps": 7.7390097501897
+   },
+   {
+    "t": 4,
+    "g": 0.12000000000000001,
+    "revenue": 5205.486191360002,
+    "margin": 0.10551367095743681,
+    "nopat": 549.2499571686402,
+    "reinv_rate": 0.8,
+    "fcf": 109.84999143372802,
+    "eps": 8.942956014505508
+   },
+   {
+    "t": 5,
+    "g": 0.11333333333333334,
+    "revenue": 5795.441293047468,
+    "margin": 0.10876139246453068,
+    "nopat": 630.3202649782828,
+    "reinv_rate": 0.7555555555555556,
+    "fcf": 154.0782869946913,
+    "eps": 10.262952834462386
+   },
+   {
+    "t": 6,
+    "g": 0.10666666666666667,
+    "revenue": 6413.621697639198,
+    "margin": 0.11200911397162454,
+    "nopat": 718.384083701753,
+    "reinv_rate": 0.7111111111111111,
+    "fcf": 207.53317973606195,
+    "eps": 11.696818867649116
+   },
+   {
+    "t": 7,
+    "g": 0.1,
+    "revenue": 7054.983867403118,
+    "margin": 0.1152568354787184,
+    "nopat": 813.1351149102936,
+    "reinv_rate": 0.6666666666666667,
+    "fcf": 271.04503830343117,
+    "eps": 13.23956692500918
+   },
+   {
+    "t": 8,
+    "g": 0.09333333333333334,
+    "revenue": 7713.449028360742,
+    "margin": 0.11850455698581228,
+    "nopat": 914.0788599385339,
+    "reinv_rate": 0.6222222222222222,
+    "fcf": 345.3186804212239,
+    "eps": 14.883145517860738
+   },
+   {
+    "t": 9,
+    "g": 0.08666666666666667,
+    "revenue": 8381.947944152007,
+    "margin": 0.12175227849290614,
+    "nopat": 1020.5212604094372,
+    "reinv_rate": 0.5777777777777778,
+    "fcf": 430.88675439509564,
+    "eps": 16.616253901513097
+   },
+   {
+    "t": 10,
+    "g": 0.07999999999999999,
+    "revenue": 9052.503779684168,
+    "margin": 0.125,
+    "nopat": 1131.562972460521,
+    "reinv_rate": 0.5333333333333333,
+    "fcf": 528.0627204815764,
+    "eps": 18.424248847506924
+   }
+  ],
+  "pv_fcf": 930.2173612782302,
+  "pv_tv": 3002.1208706549237,
+  "tv_share": 0.7634442139986184,
+  "pv_oi": 0.0,
+  "ev": 3932.338231933154,
+  "equity": 4312.338231933154,
+  "value_ps": 89.22694458789891,
+  "cum_dist_ps_5y": 0.8410728378263725,
+  "value5_ps": 152.2648426005057,
+  "dcf_pe5": 14.836358020589298,
+  "max_reinv_rate": 0.9333333333333335
+ },
+ "reverse": {
+  "g_flat_margin": null,
+  "g_base_margin": null,
+  "g_fade_start": null,
+  "m_needed_base_growth": 0.35379866409301763,
+  "implied_coe_base": 0.08433482933044432,
+  "roiic_implied_base": null,
+  "gordon_g_on_fcf": 0.1045262223548394,
+  "path_case": "flat-growth",
+  "path": null
+ },
+ "scenarios": {
+  "scenarios": [
+   {
+    "name": "bear",
+    "prob": 0.3,
+    "growth": 0.07,
+    "growth_end": 0.05,
+    "margin_end": 0.095,
+    "roiic": 0.09,
+    "exit_pe": 15.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 12.670577193374019,
+    "value_ps": 52.51049527751967,
+    "value_vs_price": -0.7705763051489004,
+    "eps5": 6.695630399308028,
+    "eps_cagr5": 0.06838868336238169,
+    "dist_ps_5y": 1.0329079910283807,
+    "mult5": 0.4433212337497763,
+    "tv_share": 0.6677603153334565,
+    "nonop5_ps": 0.0
+   },
+   {
+    "name": "base",
+    "prob": 0.45,
+    "growth": 0.14,
+    "growth_end": 0.08,
+    "margin_end": 0.125,
+    "roiic": 0.15,
+    "exit_pe": 24.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 14.836358020589298,
+    "value_ps": 89.22694458789891,
+    "value_vs_price": -0.6101584035831051,
+    "eps5": 10.262952834462386,
+    "eps_cagr5": 0.16365824584057376,
+    "dist_ps_5y": 0.8410728378263725,
+    "mult5": 1.0798319681270694,
+    "tv_share": 0.7634442139986184,
+    "nonop5_ps": 0.0
+   },
+   {
+    "name": "bull",
+    "prob": 0.18,
+    "growth": 0.18,
+    "growth_end": 0.1,
+    "margin_end": 0.14,
+    "roiic": 0.2,
+    "exit_pe": 32.0,
+    "exit_pe_is_dcf": false,
+    "dcf_pe5": 17.151097778008516,
+    "value_ps": 127.21803846688289,
+    "value_vs_price": -0.4441714502495505,
+    "eps5": 12.812997553534908,
+    "eps_cagr5": 0.21646924465729356,
+    "dist_ps_5y": 1.1950542450124022,
+    "mult5": 1.7966225793347144,
+    "tv_share": 0.7602609691643807,
+    "nonop5_ps": 0.0
+   }
+  ],
+  "blowup": {
+   "prob": 0.07,
+   "multiple": 0.35,
+   "note": "An API + generics platform with 10 USFDA-approved sites: an OAI / warning letter / Import Alert 66-40 at a key Hyderabad/Vizag API site, or a lost US generic (Appco: exclusivity product already eroded, US formulations -11% y/y Q2 FY27), plus Rs 877 cr goodwill (Turkey hyperinflation, USA group Rs 246 cr) and a Carlyle exit (promoter 61.3% -> 49.2% in Q2 FY27; fund entered 2020-21) could put the stock on a -65% path. Raw 7% below the India class 15%: no customer >10% of revenue [AR26], net debt ~0, no pledge, no import alert found on FDA IA 66-40 (26-Nov-2026)."
+  },
+  "pw_value": 84.41208057184934,
+  "pw_vs_price": -0.6311950342019864,
+  "bear_value": 52.51049527751967,
+  "downside_bear": -0.7705763051489004,
+  "p_value_below_price": 1.0,
+  "p_ge_3x": 0.020386242496204993,
+  "p_ge_2x": 0.0987553345402352,
+  "p_ge_5x": 0.0009738914949743582,
+  "p_le_half": 0.2677927196299349,
+  "p_blowup": 0.07,
+  "ev_mult5": 0.9668128200623627,
+  "ev_cagr5": -0.006727343410947717,
+  "median_mult5": 0.8787212918183028,
+  "hurdle_mult5": 1.7623416832000007,
+  "exit_bet": {
+   "own_median": null,
+   "n_hist": 1,
+   "rows": [
+    {
+     "name": "bear",
+     "prob": 0.3,
+     "exit_pe": 15.0,
+     "dcf_pe5": 12.670577193374019,
+     "own_median": null,
+     "mult_stated": 0.4433212337497763,
+     "mult_dcf": 0.37517655463021,
+     "mult_own": null,
+     "stated_vs_dcf": 1.1838450428165288,
+     "stated_vs_own": null
+    },
+    {
+     "name": "base",
+     "prob": 0.45,
+     "exit_pe": 24.0,
+     "dcf_pe5": 14.836358020589298,
+     "own_median": null,
+     "mult_stated": 1.0798319681270694,
+     "mult_dcf": 0.668935317364261,
+     "mult_own": null,
+     "stated_vs_dcf": 1.6176476711261463,
+     "stated_vs_own": null
+    },
+    {
+     "name": "bull",
+     "prob": 0.18,
+     "exit_pe": 32.0,
+     "dcf_pe5": 17.151097778008516,
+     "own_median": null,
+     "mult_stated": 1.7966225793347144,
+     "mult_dcf": 0.9653618844594264,
+     "mult_own": null,
+     "stated_vs_dcf": 1.8657697841960323,
+     "stated_vs_own": null
+    }
+   ],
+   "ev_stated": 0.9668128200623627,
+   "ev_dcf": 0.6118389984056771,
+   "ev_own": null,
+   "hurdle": 1.7623416832000007
+  }
+ },
+ "twin": {
+  "pe0": 47.6,
+  "eps0": 4.808403361344538,
+  "horizon": 5.0,
+  "exit_pes": [
+   23.8,
+   35.7,
+   46.2,
+   47.6
+  ],
+  "table": [
+   {
+    "target": 2,
+    "cells": [
+     {
+      "exit_pe": 23.8,
+      "eps_cagr": 0.3195079107728942,
+      "rerating_share": -1.0
+     },
+     {
+      "exit_pe": 35.7,
+      "eps_cagr": 0.21672868378641152,
+      "rerating_share": -0.4150374992788438
+     },
+     {
+      "exit_pe": 46.2,
+      "eps_cagr": 0.15557728012426564,
+      "rerating_share": -0.04306872189188598
+     },
+     {
+      "exit_pe": 47.6,
+      "eps_cagr": 0.1486983549970351,
+      "rerating_share": 0.0
+     }
+    ]
+   },
+   {
+    "target": 3,
+    "cells": [
+     {
+      "exit_pe": 23.8,
+      "eps_cagr": 0.43096908110525556,
+      "rerating_share": -0.6309297535714574
+     },
+     {
+      "exit_pe": 35.7,
+      "eps_cagr": 0.3195079107728942,
+      "rerating_share": -0.26185950714291484
+     },
+     {
+      "exit_pe": 46.2,
+      "eps_cagr": 0.25319093973218143,
+      "rerating_share": -0.027173338089885254
+     },
+     {
+      "exit_pe": 47.6,
+      "eps_cagr": 0.2457309396155174,
+      "rerating_share": 0.0
+     }
+    ]
+   },
+   {
+    "target": 5,
+    "cells": [
+     {
+      "exit_pe": 23.8,
+      "eps_cagr": 0.5848931924611136,
+      "rerating_share": -0.43067655807339306
+     },
+     {
+      "exit_pe": 35.7,
+      "eps_cagr": 0.4614425516219254,
+      "rerating_share": -0.1787469216608008
+     },
+     {
+      "exit_pe": 46.2,
+      "eps_cagr": 0.3879921065110603,
+      "rerating_share": -0.01854868890501765
+     },
+     {
+      "exit_pe": 47.6,
+      "eps_cagr": 0.3797296614612149,
+      "rerating_share": 0.0
+     }
+    ]
+   }
+  ],
+  "hist_eps_cagr": null,
+  "hist_eps_note": "No meaningful EPS history: the listed entity became Viyash Life Sciences + Symed + SeQuent on 16-Dec-2025 (appointed date 1-Apr-2025, common-control pooling); FY25 restated EPS 0.88 -> FY26 4.09 is a merger/turnaround window, not a growth rate."
+ },
+ "temperature": {
+  "pes": {
+   "trailing (given)": 47.6,
+   "core EPS (ex exceptional, ex other income)": 48.68736971830986
+  },
+  "n_hist": 1,
+  "own_median": 44.7,
+  "sector_median": 46.2,
+  "sector": {
+   "Granules India": 32.5,
+   "Neuland Laboratories": 59.9,
+   "Aarti Drugs": 19.5,
+   "Solara Active Pharma": 62.6
+  },
+  "rows": [
+   {
+    "basis": "trailing (given)",
+    "pe": 47.6,
+    "vs_own": null,
+    "own_band": "INSUFFICIENT HISTORY (n=1 < 5)",
+    "vs_sector": 1.0303030303030303,
+    "sector_band": "NORMAL"
+   },
+   {
+    "basis": "core EPS (ex exceptional, ex other income)",
+    "pe": 48.68736971830986,
+    "vs_own": null,
+    "own_band": "INSUFFICIENT HISTORY (n=1 < 5)",
+    "vs_sector": 1.0538391713919883,
+    "sector_band": "NORMAL"
+   }
+  ],
+  "core": {
+   "core_eps": 4.701013863025036,
+   "method": "(PAT 232.6 - (exceptional -35.5 + other income 43.0) x (1 - tax 28%)) / shares",
+   "trailing_pe": 47.6,
+   "core_pe": 48.68736971830986,
+   "gap": 0.022843901645165143,
+   "flag": false
+  },
+  "market": {
+   "index": "Nifty 50",
+   "pe": 20.6,
+   "as_of": "2026-11 (insight:india-valuation-forward-returns)",
+   "note": "around the long-run average"
+  }
+ },
+ "sensitivity": {
+  "coe_x_growth": {
+   "rows": [
+    [
+     0.105,
+     [
+      109.34263026774035,
+      119.51384774711785,
+      131.02454880841978,
+      144.0446279002564,
+      158.75941602168592
+     ]
+    ],
+    [
+     0.115,
+     [
+      92.40863156899754,
+      99.20126072317551,
+      106.71005180033929,
+      115.00342203435929,
+      124.15113491608638
+     ]
+    ],
+    [
+     0.125,
+     [
+      80.04926345503688,
+      84.48997867891454,
+      89.22694458789891,
+      94.26208997269357,
+      99.58973046646727
+     ]
+    ],
+    [
+     0.135,
+     [
+      70.64680485781862,
+      73.38972871736571,
+      76.1372092536249,
+      78.84653894791066,
+      81.46161279553688
+     ]
+    ],
+    [
+     0.145,
+     [
+      63.264864661116306,
+      64.7493612978392,
+      66.03173789651721,
+      67.03897846311149,
+      67.6809434888337
+     ]
+    ]
+   ],
+   "cols": [
+    -0.06,
+    -0.03,
+    0.0,
+    0.03,
+    0.06
+   ]
+  },
+  "tg_x_margin": {
+   "rows": [
+    [
+     0.04,
+     [
+      76.1424894557406,
+      82.16272433661199,
+      88.18295921748336,
+      94.20319409835471,
+      100.22342897922609
+     ]
+    ],
+    [
+     0.05,
+     [
+      77.01943716688967,
+      83.12319087739428,
+      89.22694458789891,
+      95.3306982984035,
+      101.43445200890811
+     ]
+    ],
+    [
+     0.060000000000000005,
+     [
+      78.02286772099292,
+      84.22218624617405,
+      90.42150477135515,
+      96.62082329653629,
+      102.82014182171737
+     ]
+    ]
+   ],
+   "cols": [
+    0.105,
+    0.115,
+    0.125,
+    0.135,
+    0.145
+   ]
+  }
+ },
+ "version": "1.3 (2026-11-23; cash-tax input, reinvestment-realism check, exit-multiple bet line; 1.2 non-operating growth; 1.1 bank mode)",
+ "generated": "2026-11-26",
+ "realism": {
+  "history": 0.15,
+  "method": "given",
+  "rows": [
+   {
+    "label": "default ROIIC (input)",
+    "roiic": 0.15,
+    "gap": 0.0,
+    "flag": false
+   },
+   {
+    "label": "scenario bear",
+    "roiic": 0.09,
+    "gap": -0.06,
+    "flag": true
+   },
+   {
+    "label": "scenario base",
+    "roiic": 0.15,
+    "gap": 0.0,
+    "flag": false
+   },
+   {
+    "label": "scenario bull",
+    "roiic": 0.2,
+    "gap": 0.05000000000000002,
+    "flag": true
+   },
+   {
+    "label": "implied by price on the base-case path",
+    "roiic": null,
+    "gap": null,
+    "flag": false
+   }
+  ],
+  "flagged": [
+   "scenario bear",
+   "scenario bull"
+  ]
+ }
+}

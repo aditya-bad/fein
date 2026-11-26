@@ -1,0 +1,300 @@
+[
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:VIYASH:card-2026-11-26-5y-ge3x",
+  "title": "Paper call: Viyash Scientific Ltd (formerly SeQuent Scientific; human + animal-health APIs, animal-health formulations (Alivira), US human generics via 60%-owned Appco Pharma) 5-year outcome ≥3.0x from 2026-11-25 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.02 (base rate 0.213, class india_nonfin_1000_20000cr_5y) that: YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-25 (entry INR 228.88) to the last close on or before 2031-11-25 is ≥ 3.0. Model: worksheet scenarios bear 30%→0.44x, base 45%→1.08x, bull 18%→1.80x with σ=0.40; reverse DCF base-case IRR 8.4%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.07x anchored (raw 0.97x) vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "VIYASH"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india"
+  ],
+  "date": "2026-11-26",
+  "status": "open",
+  "data": {
+   "probability": 0.0204,
+   "base_rate_probability": 0.2129,
+   "anchored_probability": null,
+   "anchor_weight": null,
+   "base_rate_reasoning": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted). n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "method": "decision-card-v1",
+   "card_version": "1.5",
+   "made_on": "2026-11-26",
+   "resolve_by": "2031-11-25",
+   "entry_date": "2026-11-25",
+   "entry_price": 228.88,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple (adjusted close incl. dividends reinvested, splits/bonuses adjusted) from 2026-11-25 (entry INR 228.88) to the last close on or before 2031-11-25 is ≥ 3.0.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/VIYASH_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_29856_VIYASH_2025_2026_A_10469798_17072026165453.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1757557_13112026055107_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/SEQUENT2_13112026184257_SE_Intimation_Investor_Presentation.pdf",
+   "https://nsearchives.nseindia.in/corporate/SEQUENT2_17112026182841_SE_Intimation_Earnings_Transcript.pdf",
+   "https://www.screener.in/company/VIYASH/consolidated/",
+   "https://nsearchives.nseindia.in/products/content/sec_bhavdata_full_25112026.csv"
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:VIYASH:card-2026-11-26-5y-le0p5x",
+  "title": "Paper call: Viyash Scientific Ltd (formerly SeQuent Scientific; human + animal-health APIs, animal-health formulations (Alivira), US human generics via 60%-owned Appco Pharma) 5-year outcome ≤0.5x from 2026-11-25 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.27 (base rate 0.113, class india_nonfin_1000_20000cr_5y) that: YES if the total-return multiple from 2026-11-25 (entry INR 228.88) to the last close on or before 2031-11-25 is ≤ 0.5, or the stock is delisted/suspended below that level. Model: worksheet scenarios bear 30%→0.44x, base 45%→1.08x, bull 18%→1.80x with σ=0.40; reverse DCF base-case IRR 8.4%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.07x anchored (raw 0.97x) vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "VIYASH"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india"
+  ],
+  "date": "2026-11-26",
+  "status": "open",
+  "data": {
+   "probability": 0.2678,
+   "base_rate_probability": 0.1127,
+   "anchored_probability": 0.1902,
+   "anchor_weight": 0.5,
+   "base_rate_reasoning": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted). n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "method": "decision-card-v1",
+   "card_version": "1.5",
+   "made_on": "2026-11-26",
+   "resolve_by": "2031-11-25",
+   "entry_date": "2026-11-25",
+   "entry_price": 228.88,
+   "currency": "INR",
+   "resolution_rule": "YES if the total-return multiple from 2026-11-25 (entry INR 228.88) to the last close on or before 2031-11-25 is ≤ 0.5, or the stock is delisted/suspended below that level.",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/VIYASH_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_29856_VIYASH_2025_2026_A_10469798_17072026165453.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1757557_13112026055107_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/SEQUENT2_13112026184257_SE_Intimation_Investor_Presentation.pdf",
+   "https://nsearchives.nseindia.in/corporate/SEQUENT2_17112026182841_SE_Intimation_Earnings_Transcript.pdf",
+   "https://www.screener.in/company/VIYASH/consolidated/",
+   "https://nsearchives.nseindia.in/products/content/sec_bhavdata_full_25112026.csv"
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "thesis",
+  "id": "thesis:paper-call:VIYASH:card-2026-11-26-5y-blowup",
+  "title": "Paper call: Viyash Scientific Ltd (formerly SeQuent Scientific; human + animal-health APIs, animal-health formulations (Alivira), US human generics via 60%-owned Appco Pharma) 5-year outcome blow-up from 2026-11-25 (decision card v1)",
+  "body": "Forward test of the decision-card method (NOT a recommendation; not buy/sell). Probability 0.07 (base rate 0.154, class india_nonfin_1000_20000cr_5y) that: YES if between 2026-11-25 and 2031-11-25: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples). Model: worksheet scenarios bear 30%→0.44x, base 45%→1.08x, bull 18%→1.80x with σ=0.40; reverse DCF base-case IRR 8.4%; card rule output: size 0: blocked by Expected value vs hurdle (EV 1.07x anchored (raw 0.97x) vs hurdle 1.76x → below hurdle → size 0). Score with Brier vs the base rate.",
+  "tickers": [
+   "VIYASH"
+  ],
+  "tags": [
+   "paper-call",
+   "method-test",
+   "decision-card",
+   "stage-6",
+   "valuation",
+   "india"
+  ],
+  "date": "2026-11-26",
+  "status": "open",
+  "data": {
+   "probability": 0.07,
+   "base_rate_probability": 0.1537,
+   "anchored_probability": 0.1119,
+   "anchor_weight": 0.5,
+   "base_rate_reasoning": "India non-financial, mcap Rs 1,000-20,000 cr at T, 5 yrs from 30-Sep-2016 and 30-Sep-2018 (survivorship-free, dead firms included, stratum-weighted). n=208 company-snapshots (54 distress-census D, 153 live L at weight 5.63, 1 delisted-other X at 4.26); 95% CIs (company bootstrap within stratum): P(>=3x) 14.1-28.7%, P(<=0.5x) 7.0-16.1%, P(blow-up) 10.2-21.4%. Two start dates only, and they disagree (2016: >=3x 16%, blow-up 21%; 2018: 26%, 10%). Price return only (no dividends, ~1%/yr). Blow-up = close <=0.2x the close at T, liquidation or compulsory delisting (no fraud field). Remaining survivorship leak toward FEWER failures (IBBI firms renamed/merged and 221 IBBI rows without identifiers missing; voluntary/merger delistings X under-covered). A survivors-only sample from the same frame says P(<=0.5x) 7% instead of 11%.",
+   "method": "decision-card-v1",
+   "card_version": "1.5",
+   "made_on": "2026-11-26",
+   "resolve_by": "2031-11-25",
+   "entry_date": "2026-11-25",
+   "entry_price": 228.88,
+   "currency": "INR",
+   "resolution_rule": "YES if between 2026-11-25 and 2031-11-25: Close falls >= 80% below the entry price at any point within the horizon, OR delisting/insolvency/suspension, OR a regulator or auditor finding of fraud or misstatement. No class above can measure this yet (survivor samples).",
+   "resolution_source": "NSE/BSE or exchange adjusted closes (Yahoo adj close / Kite), corporate actions",
+   "practice": false,
+   "outcome": null,
+   "brier": null
+  },
+  "sources": [
+   "research_notes/Deep dives/VIYASH_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_29856_VIYASH_2025_2026_A_10469798_17072026165453.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1757557_13112026055107_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/SEQUENT2_13112026184257_SE_Intimation_Investor_Presentation.pdf",
+   "https://nsearchives.nseindia.in/corporate/SEQUENT2_17112026182841_SE_Intimation_Earnings_Transcript.pdf",
+   "https://www.screener.in/company/VIYASH/consolidated/",
+   "https://nsearchives.nseindia.in/products/content/sec_bhavdata_full_25112026.csv"
+  ],
+  "confidence": "single-source"
+ },
+ {
+  "type": "decision",
+  "id": "decision:card:VIYASH:2026-11-26",
+  "title": "Decision card VIYASH 2026-11-26 (paper)",
+  "body": "Decision card v1 for Viyash Scientific Ltd (formerly SeQuent Scientific; human + animal-health APIs, animal-health formulations (Alivira), US human generics via 60%-owned Appco Pharma). Rule output: size 0: blocked by Expected value vs hurdle (EV 1.07x anchored (raw 0.97x) vs hurdle 1.76x → below hurdle → size 0). Thesis: Method-test thesis: Viyash Scientific is the 16-Dec-2025 common-control merger of Carlyle's two Indian pharma holdings - SeQuent Scientific (animal-health APIs and Alivira formulations in Europe, Turkey, Brazil, India) and Viyash Life Sciences (human APIs/advanced intermediates in Hyderabad/Vizag, ex-Mylan units; Symed Labs) - plus 60%-owned Appco Pharma (US generics). TTM revenue Rs 3,713 cr (Q2 FY27: formulations 57%, APIs 42%; Europe 19%, emerging markets 21%, USA 12%, India 5% of sales), pre-ESOP EBITDA ~21%, 16 plants of which 10 USFDA-approved API sites, no customer above 10% of revenue, net debt Rs 26 cr. Reported earnings are depressed by two temporary lines: a merger ESOP charge (FY27 ~Rs 148 cr vs ~25 cr steady state) and acquired-intangible amortisation (~Rs 100 cr FY26 -> ~38 cr FY27 -> ~0). Group ROIC ~10% (13% ex goodwill) vs a 12.5% cost of equity. Variant view: Market: at Rs 228.88 (mcap Rs 10,108 cr basic; Rs 11,062 cr fully diluted for the MD's 2.03 cr warrants and ~2.1 cr ESOP options) the stock trades at 43x reported TTM EPS (5.34 basic) and 47.6x fully diluted - but 4 analysts (Yahoo, 26-Nov-2026) put FY27 EPS at 7.43 and FY28 at 11.83 (forward P/E 19.4x on FY28), i.e. the market is pricing the ESOP/amortisation roll-off plus ~20% growth. Our read: no claimable mispricing. (1) Our bottom-up FY28 EPS (~11.3 basic / ~10.3 diluted) is close to consensus, so the 'expensive on TTM' look is mostly accounting, not a mistake by the market; (2) but at ~21-22x our FY28 diluted EPS the price already needs mid-teens growth sustained with ROIIC above the 12.5% CoE, and the worksheet base case (14% fading to 8%, margin 12.5%, exit 24x) gives an 8.4% IRR and a 1.08x 5-yr multiple; (3) the CFO's own ESOP guidance missed 3x within one quarter (Aug-2026: Q2-Q4 ~Rs 40 cr total; Nov-2026: Q2 alone 42, Q2-Q4 ~122) - the cost line the 'adjusted PAT' framing removes is the one management forecast worst; (4) Carlyle (promoter) sold ~12% in Q2 FY27 (61.31% -> 49.24% SHP) in year 5-6 of its holding: a supply overhang the MD says will not recur 'in the next 12 months'. Evidence for the other side: two AA- ratings (ICRA Apr-2026; Ind-Ra upgrade from A, Apr-2026), net debt ~0, no USFDA import alert found, clean EIR at the US site, diversified customers, API revival delivered in Q2 as guided. Departure from the outside view: raw P(blow-up) 7% < class 15% (no pledge, AA-, no customer >10%) and raw P(<=0.5x) ~27% > class 11% because the entry multiple is high; default w=0.5. Checked by paper calls thesis:paper-call:VIYASH:*. Open soft flags: 4. P(≥3x) 2% vs base 21%; P(≤0.5x) 27% vs base 11.3%; EV 5-yr multiple 0.97x vs hurdle 1.76x. Review 2027-02-28.",
+  "tickers": [
+   "VIYASH"
+  ],
+  "tags": [
+   "decision-card",
+   "stage-6",
+   "india"
+  ],
+  "date": "2026-11-26",
+  "data": {
+   "gates": [
+    {
+     "gate": "Stage 2 hard filters",
+     "result": "passed (7 rules)",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 3 PEAD avoid flag",
+     "result": "clear",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 3 survival cap",
+     "result": "clear",
+     "blocks": false
+    },
+    {
+     "gate": "Stage 4 soft flags",
+     "result": "4 open, variant view written",
+     "blocks": false
+    },
+    {
+     "gate": "Tail anchoring (v1.4 warning)",
+     "result": "anchoring lowered documented tails — check evidence note: P(≤0.5x)",
+     "blocks": false
+    },
+    {
+     "gate": "Expected value vs hurdle",
+     "result": "EV 1.07x anchored (raw 0.97x) vs hurdle 1.76x → below hurdle → size 0",
+     "blocks": true
+    }
+   ],
+   "size_after_gates": 0.0,
+   "survival_cap": {
+    "status": "clear",
+    "triggered": false,
+    "blocks": false,
+    "mode": null,
+    "cap_size": null,
+    "reasons": [],
+    "already_owned": false
+   },
+   "anchor_weight": 0.5,
+   "ev_mult5_raw": 0.9668128200623627,
+   "ev_mult5_anchored": 1.0749945562366299,
+   "p_blowup_anchored": 0.11185,
+   "p_le_half_anchored": 0.19024635981496746,
+   "anchor_lowered_tails": [
+    "P(≤0.5x)"
+   ],
+   "rule_size": 0.0,
+   "kelly_f_star": 0.0,
+   "open_soft_flags": 4,
+   "review_date": "2027-02-28",
+   "kill_criteria": [
+    {
+     "if": "USFDA warning letter, OAI classification or import alert at any Viyash/Symed/Appco/Alivira site",
+     "measure": "Reg-30 / FDA warning-letter and import-alert pages",
+     "by": "2027-11-30"
+    },
+    {
+     "if": "Promoter holding below 40% at any quarterly SHP before Mar-2028 without a disclosed strategic buyer",
+     "measure": "NSE SHP",
+     "by": "2028-03-31"
+    },
+    {
+     "if": "FY27 consolidated revenue growth below 12% (vs '20%+' guided Nov-2026)",
+     "measure": "Q4 FY27 consolidated XBRL",
+     "by": "2027-05-31"
+    },
+    {
+     "if": "FY28 ESOP charge above Rs 60 cr (guided ~32)",
+     "measure": "FY28 decks / AR",
+     "by": "2028-05-31"
+    },
+    {
+     "if": "Goodwill impairment above Rs 100 cr",
+     "measure": "FY27/FY28 results",
+     "by": "2028-05-31"
+    }
+   ],
+   "override_log": [
+    {
+     "date": "2026-11-26",
+     "flag": "Survival cap core-asset threat (v1.4)",
+     "decision": "not set",
+     "why": "L40 checked for government-granted inputs: no lease/licence concession identified; USFDA site approvals are regulatory permissions across 10 sites (no single-site dependence disclosed), and no import alert / warning letter was found (FDA Import Alert 66-40 page searched 26-Nov-2026 for Viyash/SeQuent/Symed/Appco/Alivira/Vindhya/Vandana: none). Weighed in the blow-up note."
+    },
+    {
+     "date": "2026-11-26",
+     "flag": "Both-flags balance-sheet question (L39 addendum)",
+     "decision": "not triggered",
+     "why": "Promoter pledge 0% and TTM ICR 8.3x: neither flag fires."
+    },
+    {
+     "date": "2026-11-26",
+     "flag": "L44 core EPS",
+     "decision": "done",
+     "why": "Exceptional (-41.3, Q3 FY26) and other income (50.0) stripped once from reported owners' PAT (worksheet inputs; no double subtraction): core P/E 48.7x vs 47.6x - small. The bigger hidden items are not exceptionals but temporary operating costs (merger ESOP, acquired-intangible amortisation) - reported, not stripped."
+    },
+    {
+     "date": "2026-11-26",
+     "flag": "Credibility",
+     "decision": "not scored",
+     "why": "n=4 resolved promises (3 met, 1 missed) < 5 (L49)."
+    }
+   ],
+   "paper_calls": [
+    "thesis:paper-call:VIYASH:card-2026-11-26-5y-ge3x",
+    "thesis:paper-call:VIYASH:card-2026-11-26-5y-le0p5x",
+    "thesis:paper-call:VIYASH:card-2026-11-26-5y-blowup"
+   ],
+   "practice": false
+  },
+  "sources": [
+   "research_notes/Deep dives/VIYASH_live.md",
+   "https://nsearchives.nseindia.in/annual_reports/AR_29856_VIYASH_2025_2026_A_10469798_17072026165453.pdf",
+   "https://nsearchives.nseindia.in/corporate/xbrl/INTEGRATED_FILING_INDAS_1757557_13112026055107_WEB.xml",
+   "https://nsearchives.nseindia.in/corporate/SEQUENT2_13112026184257_SE_Intimation_Investor_Presentation.pdf",
+   "https://nsearchives.nseindia.in/corporate/SEQUENT2_17112026182841_SE_Intimation_Earnings_Transcript.pdf",
+   "https://www.screener.in/company/VIYASH/consolidated/",
+   "https://nsearchives.nseindia.in/products/content/sec_bhavdata_full_25112026.csv"
+  ],
+  "confidence": "single-source",
+  "links": [
+   {
+    "to": "thesis:paper-call:VIYASH:card-2026-11-26-5y-ge3x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:VIYASH:card-2026-11-26-5y-le0p5x",
+    "rel": "about"
+   },
+   {
+    "to": "thesis:paper-call:VIYASH:card-2026-11-26-5y-blowup",
+    "rel": "about"
+   }
+  ]
+ }
+]
