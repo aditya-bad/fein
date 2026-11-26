@@ -154,3 +154,10 @@ The Monday `git-sync` job then commits only those paths, rebases on GitHub and p
 | "another run holds the lock" / "skipped" | The previous run is still going (normal on heavy result days). |
 | Disk warning | Old raw files: `find ~/fein-data/raw -mindepth 1 -maxdepth 1 -type d -mtime +365 -exec rm -rf {} +` (optional; keeps one year). |
 | Start over | `deploy/pi/uninstall.sh` then `deploy/pi/install.sh`. `--purge` also deletes `~/fein-data` (asks first). |
+
+## Sharing daily outputs through GitHub (added 26-Nov-2026)
+`detect`, `news` and `solvency` now copy their finished, secret-free outputs from `~/fein-data` into the repo folder
+`research_notes/Live/{alerts,news,solvency}/` (whitelisted dated `.md`/`.csv` files from the last 15 days only;
+`secrets/`, raw downloads, databases and logs are never copied). With `FEIN_GIT_PUSH=1` in `~/fein-data/fein.env`
+and a write-capable credential for this one repo, the `news` job (22:30 IST) pushes them every night, so the
+cloud Claude session sees the same alerts. `FEIN_PUSH_PATHS` now defaults to the PEAD live folder + `research_notes/Live`.

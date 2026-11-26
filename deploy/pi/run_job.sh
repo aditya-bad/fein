@@ -53,7 +53,7 @@ git_sync() {
   fi
   if [ "${FEIN_GIT_PUSH:-0}" = "1" ]; then
     # Opt-in only (see deploy/pi/README.md): commit the Pi-owned output folders, rebase onto the remote, push.
-    local paths="${FEIN_PUSH_PATHS:-research_notes/Backtests/india_pead_live}"
+    local paths="${FEIN_PUSH_PATHS:-research_notes/Backtests/india_pead_live research_notes/Live}"
     # shellcheck disable=SC2086
     git add -- $paths 2>/dev/null
     if ! git diff --cached --quiet; then
@@ -97,6 +97,23 @@ git_sync() {
   return "$rc"
 }
 
+# Copy ONLY finished, secret-free outputs from $FEIN_DATA into the repo (research_notes/Live/), so an opt-in
+# push can share them. Whitelisted file patterns only; secrets/, raw/, *.sqlite and logs are never touched.
+publish_outputs() {
+  local dest="$FEIN_REPO/research_notes/Live" n=0 f
+  mkdir -p "$dest/alerts" "$dest/news" "$dest/solvency"
+  for f in "$FEIN_DATA"/alerts/20??-??-??.md "$FEIN_DATA"/alerts/20??-??-??.csv; do
+    [ -f "$f" ] && find "$f" -mtime -15 | grep -q . && cp -p "$f" "$dest/alerts/" && n=$((n+1))
+  done
+  for f in "$FEIN_DATA"/news/20??-??-??.md; do
+    [ -f "$f" ] && find "$f" -mtime -15 | grep -q . && cp -p "$f" "$dest/news/" && n=$((n+1))
+  done
+  for f in "$FEIN_DATA"/solvency/solvency_20??-??-??.md; do
+    [ -f "$f" ] && find "$f" -mtime -15 | grep -q . && cp -p "$f" "$dest/solvency/" && n=$((n+1))
+  done
+  echo "published $n output file(s) to research_notes/Live/"
+}
+
 rotate_logs() {
   local conf="$FEIN_DATA/logrotate.conf"
   if command -v logrotate >/dev/null && [ -f "$conf" ]; then
@@ -112,13 +129,14 @@ rotate_logs() {
 run() {
   case "$JOB" in
     collect)     cd "$FEIN_REPO/tools/detectors" && "$PY" collect.py ;;
-    detect)      cd "$FEIN_REPO/tools/detectors" && "$PY" detect.py ;;
-    solvency)    cd "$FEIN_REPO/tools/detectors" && "$PY" solvency_screen.py ;;
+    detect)      cd "$FEIN_REPO/tools/detectors" && "$PY" detect.py && publish_outputs ;;
+    solvency)    cd "$FEIN_REPO/tools/detectors" && "$PY" solvency_screen.py && publish_outputs ;;
     pead-update) cd "$FEIN_REPO" && "$PY" tools/backtests/india_pead/live_tracker.py update ;;
     pead-weekly) cd "$FEIN_REPO" && "$PY" tools/backtests/india_pead/live_tracker.py finalize &&
                    "$PY" tools/backtests/india_pead/live_tracker.py score ;;
     scoreboard)  cd "$FEIN_REPO" && tools/scoreboard/run_daily.sh ;;
-    news)        cd "$FEIN_REPO/tools/news" && "$PY" news.py ;;
+    news)        cd "$FEIN_REPO/tools/news" && "$PY" news.py && publish_outputs &&
+                   { [ "${FEIN_GIT_PUSH:-0}" = "1" ] && git_sync || true; } ;;  # daily push when opted in
     macro)       cd "$FEIN_REPO" && "$PY" tools/macro/snapshot.py --out-dir "$FEIN_DATA/macro" ;;
     git-sync)    git_sync ;;
     logrotate)   rotate_logs ;;
