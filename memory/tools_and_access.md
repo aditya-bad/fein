@@ -82,3 +82,8 @@ the CLI shows "This client is no longer supported for Gemini Code Assist for ind
 from secondary guides). Gemini CLI still works with a paid Gemini API key / Vertex. User's Pi: user `aditya`, Node 26 at /usr/bin
 (nvm default set to system). Reported issue: agy may segfault on CPUs without AES instructions (Pi 4's Cortex-A72 lacks the ARMv8
 crypto extension; Pi 5 has it) — unverified for Pi.
+- Antigravity data use (checked 26-Nov-2026, secondary sources): on personal Google accounts, interactions may be used to improve
+  Google products/ML and may be human-reviewed; opt-out = Settings > Account > General > Enable Telemetry (unclear if it fully stops
+  training); deletion via antigravity-support@google.com. Workspace/Cloud access reportedly not collected. **Rule:** send Antigravity
+  only public documents (filings, transcripts, ARs, news) + generic extraction instructions. Never: secrets, Kite/broker data,
+  personal info, our memdb/credibility scores/predictions (that is our edge). Paid Gemini API = alternative with stricter data terms (verify).
