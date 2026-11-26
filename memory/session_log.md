@@ -86,3 +86,4 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
 - 25-Nov-2026: card-fix historical test (L48): σ too narrow; fix 3 passes, fix 4 fails on lender Brier; v1.6 patch ready. Promise-tracker forward test running (prereg committed).
 - 25-Nov-2026: promise forward test cohort 1 — 12 cos (Capital Goods, Chemicals, Healthcare), 38 calls with P_cred vs P_base (L49: under-powered). Total open calls 229. News layer being built.
 - 25-Nov-2026: news layer built + first live run (3,852 items, 116 company-named material headlines; flags unverified, listed in research_notes/News/first_run_2026-11-25.md). Pi job added (22:30 IST).
+- 26-Nov-2026: news flags verified (22: 6 confirmed, 10 partly, 4 unconfirmed, 2 false/stale; NVIDIA CEO resignation+reinstatement confirmed by 8-Ks) → L50; UTTAMSUGAR price calendar started; addenda on UTTAMSUGAR/UTKARSHBNK dives (calls unchanged); sec_fetch doc fix.

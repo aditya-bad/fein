@@ -373,6 +373,9 @@ def cmd_doc(a):
     data = get(archive_url(cik, a.accession, name), binary=True)
     if a.text:
         data = html_to_text(data.decode("utf-8", "replace")).encode()
+    if not a.out:  # --file/--text without --out: print to stdout instead of crashing
+        sys.stdout.write(data.decode("utf-8", "replace"))
+        return
     with open(a.out, "wb") as fh:
         fh.write(data)
     print(f"saved {name} -> {a.out} ({len(data):,} bytes)")

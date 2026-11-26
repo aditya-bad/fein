@@ -370,3 +370,12 @@ An India lender base-rate class now exists (`research_notes/Backtests/base_rates
 P(≥3x) 11%. The card's w=0.3 note ("class is non-financial") is now stale: our raw tails (21%, 15%) sit *below* the lender class.
 Re-anchored at w=0.5 the tails would be 23.1% / 21.1%; size stays 0 (EV ~1.23x vs 1.76x). The original card and calls stay as
 issued so Brier scoring tests what we actually said.
+
+## News addendum 2026-11-26 (facts only; the dated calls are unchanged)
+Source: `research_notes/News/verification_2026-11-26.md` (#14–#15).
+- RBI press release 23-Nov-2026 (prid 64032): the Governor met MDs/CEOs of select NBFCs, HFCs and **MFIs**, with Sa-Dhan, MFIN and FIDC.
+  Themes: responsible and sustainable credit growth, customers first, grievance redressal, fair recovery practices, CKYCR, cybersecurity.
+  It does **not** mention "microfinance stress", gold loans or "reckless growth" (those were headline framing). SFBs were not part of this meeting.
+  No new directive. The sector headlines ("SFBs reduce microfin portfolio", "state-specific income caps") were not verified.
+- Utkarsh's analyst/investor meet on 26-Nov-2026 is confirmed (NSE filing 20-Nov-2026). Check for any presentation filed afterwards.
+- Paper calls (Q3 FY27 profit > 0; Q4 FY27 PAT ≥ ₹67 cr; Nifty-relative) keep their original probabilities and dates.

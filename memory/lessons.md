@@ -390,3 +390,10 @@ promises per company (36 total), so P_cred moves ≤ ±0.10 from the sector base
 verdict will most likely be INCONCLUSIVE. Pooled with the 22-Nov cohort (38 calls) it is ~76 calls. **Rules:** next cohorts need
 ≥10 scored past promises per company (read ≥12 calls, full pipeline, not tier-A shortcuts) — the bottleneck is reading volume
 (Gemini CLI + Pi). Again: margins met 8/10, revenue/orders 6/15, dates 1/6 (L18/L26 pattern holds).
+
+## L50 (2026-11-26) — Verify news before using it: headline verbs overstate, feeds resurface stale items
+News verification (`research_notes/News/verification_2026-11-26.md`): of 22 flags, 6 confirmed, 10 partly, 4 unconfirmed, 2
+false/stale. The most surprising one was TRUE (NVIDIA 8-Ks: board accepted Huang's resignation 11-Nov-2026, reinstated 22-Nov) —
+so surprise ≠ false; primary filings settle it. "Justice Department closes probe" was really an HSR waiting-period expiry;
+"Polycab NCLAT reserves order" was a month-old story already resolved; the "steel duty relief" plea was from 2025. **Rule:** a news
+item becomes an event record only after a primary source or two reputable outlets; record the verb the primary source uses.

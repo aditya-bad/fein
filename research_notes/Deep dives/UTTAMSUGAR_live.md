@@ -294,3 +294,13 @@ PAT ≥100 needs H2 ≥ ₹94 cr vs ₹85 cr in H2 FY26.
 - ESY 2026-27 tender: https://www.autocarindia.com/industry-amp/government-bars-sugar-based-ethanol-in-2026-27-tender-report-441078 ; https://thefederal.com/category/business/india-sets-zero-sugar-diversion-ethanol-2026-27-259885 ; https://freepressjournal.in/business/india-halts-sugar-diversion-for-ethanol-in-2026-27-invites-bids-for-11-billion-litres-amid-rising-prices ; https://agrospectrumindia.com/index.php/news/112/35044/isma-welcomes-govts-calibrated-approach-on-sugar-and-ethanol-cautions-against-continued-preference-to-dedicated-ethanol-plants.html
 - SAP 2026-27 pending: https://www.cmv360.com/news/up-sugarcane-crushing-season-2026-27-begins-at-9-mills-ahead-of-diwali ; https://commodity-board.com/uttar-pradesh-sap-debate-puts-sugarcane-margins-in-the-spotlight
 - Sugar price spike / stock limits: https://pib.gov.in/FactsheetDetails.aspx?Id=150971 ; ISMA MSP ask: https://agrospectrumindia.com/index.php/news/8/33951/isma-welcomes-rs-10-qtl-hike-in-sugarcane-frp-for-2026-27-calls-for-timely-alignment-of-sugar-msp-and-ethanol-prices.html
+
+## News addendum 2026-11-26 (facts only; the dated calls are unchanged)
+Source: `research_notes/News/verification_2026-11-26.md` (#8–#13). Full table: `UTTAMSUGAR_price_calendar.md`.
+- **SC ethanol allocation:** an interim order bars OMCs from additional allocation for Q2 of ESY 2025-26; next hearing **2-Dec-2026**
+  (ChiniMandi 20-Nov-2026; single trade source; order not read).
+- **UP SAP 2026-27: still not announced** as of 26-Nov-2026 (no notification found). Uttarakhand 2026-27 also not found.
+- Neighbouring benchmarks (no Uttam plants there): Haryana ₹430 for 2026-27 / ₹450 for 2027-28 (29-Oct-2026, NewsOnAIR); Punjab ₹431
+  (The Tribune 25-Nov-2026, single source). Haryana farmers demand ₹600. No confirmed supply halt.
+- Release quotas are now fortnightly: 13 LMT for the 2nd half of Nov-2026 (DFPD about 13-Nov). The "sugar prices fall 20%" headline is **unconfirmed**.
+- Paper calls `fy27-revenue-2200cr-plus`, `q3fy27-opm-12pct-plus` and `beats-nifty500-to-sep27` keep their original probabilities and dates.

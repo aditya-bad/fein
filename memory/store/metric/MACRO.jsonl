@@ -1,0 +1,16 @@
+{"as_of": "2026-11-25", "field": "rbi_repo_rate", "period": "2026-11", "source": "https://www.rbi.org.in/", "ticker": "MACRO", "unit": "%", "value": 5.5}
+{"as_of": "2026-11-25", "field": "india_10y_gsec", "period": "2026-11", "source": "https://www.rbi.org.in/", "ticker": "MACRO", "unit": "%", "value": 7.1641}
+{"as_of": "2026-11-25", "field": "usd_inr", "period": "2026-11", "source": "https://www.rbi.org.in/", "ticker": "MACRO", "unit": "INR per USD", "value": 92.4895}
+{"as_of": "2026-11-24", "field": "brent_usd", "period": "2026-11", "source": "https://fred.stlouisfed.org/series/DCOILBRENTEU", "ticker": "MACRO", "unit": "USD/bbl", "value": 91.8}
+{"as_of": "2026-11-25", "field": "dxy", "period": "2026-11", "source": "https://api.frankfurter.dev/v1/latest?base=USD&symbols=INR,EUR,JPY,GBP,CAD,SEK,CHF", "ticker": "MACRO", "unit": "index", "value": 104.04}
+{"as_of": "2026-11-26", "field": "gold_usd_oz", "period": "2026-11", "source": "https://api.gold-api.com/price/XAU", "ticker": "MACRO", "unit": "USD/troy oz", "value": 3567.7}
+{"as_of": "2026-11-26", "field": "gold_inr_10g", "period": "2026-11", "source": "https://api.gold-api.com/price/XAU", "ticker": "MACRO", "unit": "INR per 10 g", "value": 106089.0}
+{"as_of": "2026-11-25", "field": "nifty50_close", "period": "2026-11", "source": "https://archives.nseindia.com/content/indices/ind_close_all_25112026.csv", "ticker": "MACRO", "unit": "index", "value": 25819.25}
+{"as_of": "2026-11-25", "field": "nifty50_pe", "period": "2026-11", "source": "https://archives.nseindia.com/content/indices/ind_close_all_25112026.csv", "ticker": "MACRO", "unit": "x", "value": 21.03}
+{"as_of": "2026-11-25", "field": "nifty50_pb", "period": "2026-11", "source": "https://archives.nseindia.com/content/indices/ind_close_all_25112026.csv", "ticker": "MACRO", "unit": "x", "value": 3.17}
+{"as_of": "2026-11-25", "field": "nifty50_div_yield", "period": "2026-11", "source": "https://archives.nseindia.com/content/indices/ind_close_all_25112026.csv", "ticker": "MACRO", "unit": "%", "value": 1.32}
+{"as_of": "2026-11-25", "field": "nifty50_earnings_yield", "period": "2026-11", "source": "https://archives.nseindia.com/content/indices/ind_close_all_25112026.csv", "ticker": "MACRO", "unit": "%", "value": 4.755}
+{"as_of": "2026-11-25", "field": "nifty_ey_minus_gsec10", "period": "2026-11", "source": "https://archives.nseindia.com/content/indices/ind_close_all_25112026.csv", "ticker": "MACRO", "unit": "pp", "value": -2.409}
+{"as_of": "2026-11-25", "field": "us_10y", "period": "2026-11", "source": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026&page&_format=csv", "ticker": "MACRO", "unit": "%", "value": 4.85}
+{"as_of": "2026-11-13", "field": "fpi_net_equity_month", "period": "2026-11", "source": "https://www.multibagg.ai/market-pulse/articles/fpi-indian-equity-buying-november-cmwi79lp200op2rpblhzyy2c3", "ticker": "MACRO", "unit": "INR crore (2-13 Nov, partial)", "value": 84291.0}
+{"as_of": "2026-10-31", "field": "india_cpi_yoy", "period": "2026-11", "source": "https://www.mospi.gov.in/uploads/latestreleasesfiles/1794480048335-Press%20Release%20of%20CPI%20for%20October%202026%20.pdf", "ticker": "MACRO", "unit": "%", "value": 6.09}

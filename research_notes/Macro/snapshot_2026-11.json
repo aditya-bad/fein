@@ -1,0 +1,179 @@
+{
+ "month": "2026-11",
+ "generated": "2026-11-26",
+ "fields": {
+  "rbi_repo_rate": {
+   "value": 5.5,
+   "unit": "%",
+   "as_of": "2026-11-25",
+   "source": "https://www.rbi.org.in/",
+   "kind": "auto",
+   "note": "RBI home page 'Current Rates' box; date is the page's rates date"
+  },
+  "india_10y_gsec": {
+   "value": 7.1641,
+   "unit": "%",
+   "as_of": "2026-11-25",
+   "source": "https://www.rbi.org.in/",
+   "kind": "auto",
+   "note": "6.94% GS 2036 (security nearest 10-yr maturity on RBI's list)",
+   "second": {
+    "value": 7.38,
+    "as_of": "2026-10-01",
+    "source": "https://fred.stlouisfed.org/series/INDIRLTLT01STM",
+    "note": "OECD MEI via FRED, monthly average"
+   }
+  },
+  "usd_inr": {
+   "value": 92.4895,
+   "unit": "INR per USD",
+   "as_of": "2026-11-25",
+   "source": "https://www.rbi.org.in/",
+   "kind": "auto",
+   "note": "FBIL reference rate",
+   "second": [
+    {
+     "value": 92.67,
+     "as_of": "2026-11-20",
+     "source": "https://fred.stlouisfed.org/series/DEXINUS",
+     "note": "Fed H.10 noon NY"
+    },
+    {
+     "value": 92.24,
+     "as_of": "2026-11-25",
+     "source": "https://api.frankfurter.dev/v1/latest?base=USD&symbols=INR,EUR,JPY,GBP,CAD,SEK,CHF",
+     "note": "ECB reference via Frankfurter"
+    }
+   ]
+  },
+  "brent_usd": {
+   "value": 91.8,
+   "unit": "USD/bbl",
+   "as_of": "2026-11-24",
+   "source": "https://fred.stlouisfed.org/series/DCOILBRENTEU",
+   "kind": "auto",
+   "note": "EIA Europe Brent spot via FRED"
+  },
+  "dxy": {
+   "value": 104.04,
+   "unit": "index",
+   "as_of": "2026-11-25",
+   "source": "https://api.frankfurter.dev/v1/latest?base=USD&symbols=INR,EUR,JPY,GBP,CAD,SEK,CHF",
+   "kind": "auto",
+   "note": "computed: ICE DXY formula on ECB reference rates (approximation, not ICE's print)",
+   "second": {
+    "value": 123.5978,
+    "as_of": "2026-11-20",
+    "source": "https://fred.stlouisfed.org/series/DTWEXBGS",
+    "note": "Fed broad trade-weighted dollar (Jan-2006=100): a different index, direction check only"
+   }
+  },
+  "gold_usd_oz": {
+   "value": 3567.7,
+   "unit": "USD/troy oz",
+   "as_of": "2026-11-26",
+   "source": "https://api.gold-api.com/price/XAU",
+   "kind": "auto",
+   "note": "spot, gold-api.com"
+  },
+  "gold_inr_10g": {
+   "value": 106089,
+   "unit": "INR per 10 g",
+   "as_of": "2026-11-26",
+   "source": "https://api.gold-api.com/price/XAU",
+   "kind": "auto",
+   "note": "computed: USD spot x USD/INR / 31.1035 x 10 (no duty)",
+   "second": {
+    "value": 122982.0,
+    "as_of": "2026-11-25",
+    "source": "https://ibjarates.com/",
+    "note": "IBJA 999 AM rate: domestic, includes import duty, excludes GST"
+   }
+  },
+  "nifty50_close": {
+   "value": 25819.25,
+   "unit": "index",
+   "as_of": "2026-11-25",
+   "source": "https://archives.nseindia.com/content/indices/ind_close_all_25112026.csv",
+   "kind": "auto",
+   "note": "NSE daily index file"
+  },
+  "nifty50_pe": {
+   "value": 21.03,
+   "unit": "x",
+   "as_of": "2026-11-25",
+   "source": "https://archives.nseindia.com/content/indices/ind_close_all_25112026.csv",
+   "kind": "auto",
+   "note": "trailing P/E, consolidated earnings basis since 31-Mar-2021"
+  },
+  "nifty50_pb": {
+   "value": 3.17,
+   "unit": "x",
+   "as_of": "2026-11-25",
+   "source": "https://archives.nseindia.com/content/indices/ind_close_all_25112026.csv",
+   "kind": "auto"
+  },
+  "nifty50_div_yield": {
+   "value": 1.32,
+   "unit": "%",
+   "as_of": "2026-11-25",
+   "source": "https://archives.nseindia.com/content/indices/ind_close_all_25112026.csv",
+   "kind": "auto"
+  },
+  "nifty50_earnings_yield": {
+   "value": 4.755,
+   "unit": "%",
+   "as_of": "2026-11-25",
+   "source": "https://archives.nseindia.com/content/indices/ind_close_all_25112026.csv",
+   "kind": "auto",
+   "note": "100 / trailing P/E"
+  },
+  "nifty_ey_minus_gsec10": {
+   "value": -2.409,
+   "unit": "pp",
+   "as_of": "2026-11-25",
+   "source": "https://archives.nseindia.com/content/indices/ind_close_all_25112026.csv",
+   "kind": "auto",
+   "note": "earnings yield minus India 10-yr G-sec; see research_notes/Macro/ey_gsec_gap_test.md"
+  },
+  "us_10y": {
+   "value": 4.85,
+   "unit": "%",
+   "as_of": "2026-11-25",
+   "source": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026&page&_format=csv",
+   "kind": "auto",
+   "note": "US Treasury par yield curve",
+   "second": {
+    "value": 4.91,
+    "as_of": "2026-11-24",
+    "source": "https://fred.stlouisfed.org/series/DGS10"
+   }
+  },
+  "fpi_net_equity_month": {
+   "value": 84291,
+   "unit": "INR crore (2-13 Nov, partial)",
+   "as_of": "2026-11-13",
+   "source": "https://www.multibagg.ai/market-pulse/articles/fpi-indian-equity-buying-november-cmwi79lp200op2rpblhzyy2c3",
+   "note": "UNVERIFIED and conflicting: another report says Rs 76,189 cr for 3-13 Nov. Direction (net buying after Sep -35,861 and Oct -34,843 cr outflows) agrees. NSDL not reachable by script.",
+   "second": {
+    "value": 76189,
+    "as_of": "2026-11-13",
+    "source": "https://www.newsbytesapp.com/news/business/fpis-invest-over-76-000cr-in-indian-equities-in-november/story"
+   },
+   "kind": "manual"
+  },
+  "india_cpi_yoy": {
+   "value": 6.09,
+   "unit": "%",
+   "as_of": "2026-10-31",
+   "source": "https://www.mospi.gov.in/uploads/latestreleasesfiles/1794480048335-Press%20Release%20of%20CPI%20for%20October%202026%20.pdf",
+   "note": "October 2026, provisional, CPI combined (2024 base); Sept 5.54%; food 8.94%; above RBI 6% upper band. Next release 14-Dec-2026. MoSPI API without login only serves the 2012 base (to Dec-2025).",
+   "second": {
+    "value": 6.09,
+    "as_of": "2026-11-12",
+    "source": "https://theprint.in/economy/indias-october-retail-inflation-breaches-rbis-6-ceiling-odds-of-december-repo-rate-hike-rise/3097181/"
+   },
+   "kind": "manual"
+  }
+ }
+}
