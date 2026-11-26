@@ -413,3 +413,12 @@ costs): 100% equity 10.1%/yr, worst fall −55%, 70 months peak-to-peak; 70/20/1
 NOT beat a fixed split at its own average weight → **rule: any timing rule must beat a fixed split at its average weight.**
 Caveats: gold's 13.2%/yr includes 3.7%/yr rupee fall and a 72% jump in 2025; with gold capped at 7%/yr the split costs 0.4pp/yr but
 still cuts the worst fall 16pp; the benefit is mostly 2008; equity still won 2/3 of 5-yr windows. Insurance, not extra return.
+
+## L53 (2026-11-26) — After a transforming merger, own history and earnings-surprise comparisons are meaningless (VIYASH live dive #9)
+Viyash Scientific (VIYASH, ex-SeQuent) absorbed two sister companies in Dec-2025 at book value; its +3.23 SUE was mostly the merger,
+and its 43x trailing P/E is mostly temporary ESOP + acquired-intangible costs (~₹139 cr pre-tax) ending Q3 FY27. Consensus (4 analysts)
+and our bottom-up agree on near-term EPS; the gap is what screens miss: ~9% dilution (MD warrants + ESOPs), minorities 13–17% of PAT,
+group ROIC ~9.9% < CoE, CFO's ESOP-cost guidance missed ~3x in one quarter, Carlyle cut stake 61.3% → 49.2%. **Rules:** if a scheme
+changed >50% of revenue in 2 yrs, mark own-history, ROIIC windows and PEAD "not comparable"; keep temporary operating costs separate
+from exceptional items (L44 extension); put minorities + dilution in base EPS; score guidance on items excluded from "adjusted" profit.
+Worksheet gap: no bridge for temporary costs. 9/9 live cards size 0.

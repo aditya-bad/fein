@@ -1,0 +1,874 @@
+{
+ "file": "25112026",
+ "frame_close": [
+  "25-Nov-2026"
+ ],
+ "universe": 1547,
+ "unpriced": 0,
+ "in_band": 806,
+ "in_band_missing_map": 0,
+ "excluded_present": {
+  "Information Technology": [
+   "KPITTECH"
+  ],
+  "Consumer Durables": [],
+  "Automobile and Auto Components": [
+   "AUTOAXLES",
+   "UNIPARTS"
+  ]
+ },
+ "order": {
+  "Information Technology": [
+   [
+    "INTELLECT",
+    8430.2,
+    "IT - Software",
+    "Computers - Software & Consulting"
+   ],
+   [
+    "RATEGAIN",
+    8055.0,
+    "IT - Software",
+    "Computers - Software & Consulting"
+   ],
+   [
+    "AURUM",
+    2045.9,
+    "IT - Services",
+    "IT Enabled Services"
+   ],
+   [
+    "CYIENT",
+    12064.6,
+    "IT - Services",
+    "IT Enabled Services"
+   ],
+   [
+    "DATAMATICS",
+    4012.0,
+    "IT - Services",
+    "IT Enabled Services"
+   ],
+   [
+    "AURIONPRO",
+    3026.0,
+    "IT - Software",
+    "Computers - Software & Consulting"
+   ],
+   [
+    "63MOONS",
+    4025.6,
+    "IT - Software",
+    "Computers - Software & Consulting"
+   ],
+   [
+    "ZAGGLE",
+    2004.7,
+    "IT - Services",
+    "IT Enabled Services"
+   ],
+   [
+    "BCG",
+    1715.7,
+    "IT - Services",
+    "IT Enabled Services"
+   ],
+   [
+    "EMUDHRA",
+    2949.9,
+    "IT - Services",
+    "IT Enabled Services"
+   ],
+   [
+    "IZMO",
+    1069.1,
+    "IT - Services",
+    "IT Enabled Services"
+   ],
+   [
+    "ACCELYA",
+    1461.6,
+    "IT - Software",
+    "Computers - Software & Consulting"
+   ],
+   [
+    "NUCLEUS",
+    1578.9,
+    "IT - Software",
+    "Software Products"
+   ],
+   [
+    "NINSYS",
+    1813.2,
+    "IT - Software",
+    "Computers - Software & Consulting"
+   ],
+   [
+    "HAPPSTMNDS",
+    4341.3,
+    "IT - Software",
+    "Computers - Software & Consulting"
+   ],
+   [
+    "SONATSOFTW",
+    6372.8,
+    "IT - Software",
+    "Computers - Software & Consulting"
+   ],
+   [
+    "E2E",
+    9317.2,
+    "IT - Services",
+    "IT Enabled Services"
+   ],
+   [
+    "NELCO",
+    1699.3,
+    "IT - Hardware",
+    "Computers Hardware & Equipments"
+   ],
+   [
+    "RSYSTEMS",
+    2789.3,
+    "IT - Services",
+    "IT Enabled Services"
+   ],
+   [
+    "DSSL",
+    1279.3,
+    "IT - Services",
+    "IT Enabled Services"
+   ],
+   [
+    "NEWGEN",
+    5851.3,
+    "IT - Software",
+    "Computers - Software & Consulting"
+   ],
+   [
+    "INFOBEAN",
+    1490.2,
+    "IT - Software",
+    "Computers - Software & Consulting"
+   ],
+   [
+    "SILVERTUC",
+    1575.7,
+    "IT - Software",
+    "Computers - Software & Consulting"
+   ],
+   [
+    "MAPMYINDIA",
+    4472.0,
+    "IT - Software",
+    "Software Products"
+   ],
+   [
+    "SAKSOFT",
+    1498.8,
+    "IT - Software",
+    "Computers - Software & Consulting"
+   ],
+   [
+    "TANLA",
+    8613.5,
+    "IT - Software",
+    "Software Products"
+   ],
+   [
+    "ZENSARTECH",
+    12099.1,
+    "IT - Software",
+    "Computers - Software & Consulting"
+   ],
+   [
+    "RAMCOSYS",
+    2036.7,
+    "IT - Software",
+    "Software Products"
+   ],
+   [
+    "BBOX",
+    15225.6,
+    "IT - Services",
+    "IT Enabled Services"
+   ],
+   [
+    "EXPLEOSOL",
+    1143.8,
+    "IT - Services",
+    "IT Enabled Services"
+   ],
+   [
+    "MASTEK",
+    4474.5,
+    "IT - Software",
+    "Computers - Software & Consulting"
+   ],
+   [
+    "PANACHE",
+    1312.0,
+    "IT - Services",
+    "IT Enabled Services"
+   ],
+   [
+    "SUBEXLTD",
+    1048.7,
+    "IT - Software",
+    "Software Products"
+   ],
+   [
+    "LATENTVIEW",
+    3946.7,
+    "IT - Software",
+    "Computers - Software & Consulting"
+   ],
+   [
+    "BSOFT",
+    8369.0,
+    "IT - Software",
+    "Computers - Software & Consulting"
+   ],
+   [
+    "DLINKINDIA",
+    1430.9,
+    "IT - Hardware",
+    "Computers Hardware & Equipments"
+   ],
+   [
+    "SASKEN",
+    2802.7,
+    "IT - Services",
+    "IT Enabled Services"
+   ]
+  ],
+  "Consumer Durables": [
+   [
+    "SFL",
+    6423.1,
+    "Consumer Durables",
+    "Furniture, Home Furnishing"
+   ],
+   [
+    "BOSCH-HCIL",
+    4662.0,
+    "Consumer Durables",
+    "Household Appliances"
+   ],
+   [
+    "LAOPALA",
+    1762.7,
+    "Consumer Durables",
+    "Glass - Consumer"
+   ],
+   [
+    "GREENLAM",
+    5595.1,
+    "Consumer Durables",
+    "Plywood Boards/ Laminates"
+   ],
+   [
+    "MAYURUNIQ",
+    2855.9,
+    "Consumer Durables",
+    "Leather And Leather Products"
+   ],
+   [
+    "BIL",
+    1317.7,
+    "Consumer Durables",
+    "Leather And Leather Products"
+   ],
+   [
+    "STYLAMIND",
+    5500.8,
+    "Consumer Durables",
+    "Plywood Boards/ Laminates"
+   ],
+   [
+    "CARYSIL",
+    2575.2,
+    "Consumer Durables",
+    "Household Appliances"
+   ],
+   [
+    "PGEL",
+    16678.3,
+    "Consumer Durables",
+    "Consumer Electronics"
+   ],
+   [
+    "IKIO",
+    1436.3,
+    "Consumer Durables",
+    "Consumer Electronics"
+   ],
+   [
+    "RESPONIND",
+    3676.3,
+    "Consumer Durables",
+    "Furniture, Home Furnishing"
+   ],
+   [
+    "WHIRLPOOL",
+    10036.7,
+    "Consumer Durables",
+    "Household Appliances"
+   ],
+   [
+    "BAJAJELEC",
+    3171.2,
+    "Consumer Durables",
+    "Household Appliances"
+   ],
+   [
+    "ORIENTELEC",
+    4201.6,
+    "Consumer Durables",
+    "Household Appliances"
+   ],
+   [
+    "TBZ",
+    3428.0,
+    "Consumer Durables",
+    "Gems, Jewellery And Watches"
+   ],
+   [
+    "VAIBHAVGBL",
+    2617.1,
+    "Consumer Durables",
+    "Gems, Jewellery And Watches"
+   ],
+   [
+    "JSWDULUX",
+    1241.2,
+    "Consumer Durables",
+    "Paints"
+   ],
+   [
+    "SOMANYCERA",
+    2272.4,
+    "Consumer Durables",
+    "Ceramics"
+   ],
+   [
+    "SHAILY",
+    13363.5,
+    "Consumer Durables",
+    "Plastic Products - Consumer"
+   ],
+   [
+    "TTKPRESTIG",
+    7197.3,
+    "Consumer Durables",
+    "Household Appliances"
+   ],
+   [
+    "CROMPTON",
+    14133.6,
+    "Consumer Durables",
+    "Household Appliances"
+   ],
+   [
+    "MOTISONS",
+    1458.3,
+    "Consumer Durables",
+    "Gems, Jewellery And Watches"
+   ],
+   [
+    "ETHOSLTD",
+    7370.1,
+    "Consumer Durables",
+    "Gems, Jewellery And Watches"
+   ],
+   [
+    "RELAXO",
+    6729.0,
+    "Consumer Durables",
+    "Footwear"
+   ],
+   [
+    "THANGAMAYL",
+    11942.8,
+    "Consumer Durables",
+    "Gems, Jewellery And Watches"
+   ],
+   [
+    "CAMPUS",
+    5913.9,
+    "Consumer Durables",
+    "Footwear"
+   ],
+   [
+    "ASIANTILES",
+    1209.3,
+    "Consumer Durables",
+    "Ceramics"
+   ],
+   [
+    "BUTTERFLY",
+    1001.7,
+    "Consumer Durables",
+    "Household Appliances"
+   ],
+   [
+    "CERA",
+    6624.5,
+    "Consumer Durables",
+    "Sanitary Ware"
+   ],
+   [
+    "WEL",
+    1167.9,
+    "Consumer Durables",
+    "Household Appliances"
+   ],
+   [
+    "BATAINDIA",
+    8116.5,
+    "Consumer Durables",
+    "Footwear"
+   ],
+   [
+    "GREENPANEL",
+    1844.8,
+    "Consumer Durables",
+    "Plywood Boards/ Laminates"
+   ],
+   [
+    "SENCO",
+    5144.5,
+    "Consumer Durables",
+    "Gems, Jewellery And Watches"
+   ],
+   [
+    "REDTAPE",
+    5657.4,
+    "Consumer Durables",
+    "Footwear"
+   ],
+   [
+    "POKARNA",
+    2018.5,
+    "Consumer Durables",
+    "Granites & Marbles"
+   ],
+   [
+    "GOLDIAM",
+    3206.9,
+    "Consumer Durables",
+    "Gems, Jewellery And Watches"
+   ],
+   [
+    "SIRCA",
+    2279.9,
+    "Consumer Durables",
+    "Paints"
+   ],
+   [
+    "IFBIND",
+    4520.2,
+    "Consumer Durables",
+    "Household Appliances"
+   ],
+   [
+    "PCJEWELLER",
+    13829.0,
+    "Consumer Durables",
+    "Gems, Jewellery And Watches"
+   ],
+   [
+    "BOROLTD",
+    3787.4,
+    "Consumer Durables",
+    "Houseware"
+   ],
+   [
+    "VGUARD",
+    12906.0,
+    "Consumer Durables",
+    "Household Appliances"
+   ],
+   [
+    "INDIGOPNTS",
+    4701.2,
+    "Consumer Durables",
+    "Paints"
+   ],
+   [
+    "KDDL",
+    5573.4,
+    "Consumer Durables",
+    "Gems, Jewellery And Watches"
+   ],
+   [
+    "VIPIND",
+    3458.9,
+    "Consumer Durables",
+    "Plastic Products - Consumer"
+   ],
+   [
+    "SYMPHONY",
+    3614.8,
+    "Consumer Durables",
+    "Household Appliances"
+   ],
+   [
+    "KANSAINER",
+    16375.4,
+    "Consumer Durables",
+    "Paints"
+   ],
+   [
+    "LGHL",
+    1462.5,
+    "Consumer Durables",
+    "Gems, Jewellery And Watches"
+   ],
+   [
+    "KAJARIACER",
+    19211.6,
+    "Consumer Durables",
+    "Ceramics"
+   ],
+   [
+    "STOVEKRAFT",
+    2464.8,
+    "Consumer Durables",
+    "Household Appliances"
+   ],
+   [
+    "NILKAMAL",
+    2900.6,
+    "Consumer Durables",
+    "Plastic Products - Consumer"
+   ],
+   [
+    "NITCO",
+    1970.9,
+    "Consumer Durables",
+    "Ceramics"
+   ],
+   [
+    "HINDWAREAP",
+    1308.5,
+    "Consumer Durables",
+    "Sanitary Ware"
+   ],
+   [
+    "CENTURYPLY",
+    14662.3,
+    "Consumer Durables",
+    "Plywood Boards/ Laminates"
+   ],
+   [
+    "RGL",
+    1476.4,
+    "Consumer Durables",
+    "Gems, Jewellery And Watches"
+   ],
+   [
+    "SAFARI",
+    7535.2,
+    "Consumer Durables",
+    "Plastic Products - Consumer"
+   ],
+   [
+    "DPABHUSHAN",
+    4057.9,
+    "Consumer Durables",
+    "Gems, Jewellery And Watches"
+   ],
+   [
+    "CELLO",
+    8355.0,
+    "Consumer Durables",
+    "Houseware"
+   ],
+   [
+    "SKYGOLD",
+    12425.5,
+    "Consumer Durables",
+    "Gems, Jewellery And Watches"
+   ]
+  ],
+  "Automobile and Auto Components": [
+   [
+    "BANCOINDIA",
+    9880.5,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "SUPRAJIT",
+    6195.0,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "LANDMARK",
+    1949.6,
+    "Automobiles",
+    "Auto -Dealer"
+   ],
+   [
+    "MMFL",
+    2911.9,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "RAJRATAN",
+    2046.5,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "CIEINDIA",
+    14066.7,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "SANDHAR",
+    3006.5,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "JBMA",
+    11106.0,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "RKFORGE",
+    13561.5,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "JKTYRE",
+    10567.6,
+    "Auto Components",
+    "Tyres & Rubber Products"
+   ],
+   [
+    "DIVGIITTS",
+    2320.3,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "CEATLTD",
+    14317.6,
+    "Auto Components",
+    "Tyres & Rubber Products"
+   ],
+   [
+    "LUMAXTECH",
+    16265.1,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "IGARASHI",
+    1044.0,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "SSWL",
+    7772.0,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "SHRIPISTON",
+    19715.4,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "TVSSRICHAK",
+    3470.8,
+    "Auto Components",
+    "Tyres & Rubber Products"
+   ],
+   [
+    "OLECTRA",
+    8016.0,
+    "Automobiles",
+    "Passenger Cars & Utility Vehicles"
+   ],
+   [
+    "RICOAUTO",
+    1256.4,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "GNA",
+    2247.4,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "MENONBE",
+    1621.5,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "SJS",
+    6714.6,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "WHEELS",
+    5034.8,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "MINDACORP",
+    17163.8,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "FMGOETZE",
+    2339.9,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "RML",
+    3100.1,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "IMPAL",
+    1279.0,
+    "Auto Components",
+    "Trading - Auto Components"
+   ],
+   [
+    "ASKAUTOLTD",
+    12554.5,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "LGBBROSLTD",
+    4953.5,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "FIEMIND",
+    5460.8,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "PRICOLLTD",
+    7510.9,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "JTEKTINDIA",
+    3397.3,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "TALBROAUTO",
+    2411.7,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "ALICON",
+    1656.9,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "LUMAXIND",
+    5090.6,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "JAMNAAUTO",
+    5435.9,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "INDNIPPON",
+    2556.7,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "SHARDAMOTR",
+    5729.6,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "SKFINDIA",
+    7192.0,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "NDRAUTO",
+    1740.0,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "NRBBEARING",
+    4082.4,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "VARROC",
+    12152.9,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "JAYBARMARU",
+    1386.6,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "ARE&M",
+    13484.4,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "ROLEXRINGS",
+    5229.3,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ],
+   [
+    "SUNCLAY",
+    2264.8,
+    "Auto Components",
+    "Auto Components & Equipments"
+   ]
+  ]
+ }
+}
