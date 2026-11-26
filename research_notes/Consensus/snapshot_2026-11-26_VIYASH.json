@@ -1,0 +1,86 @@
+[
+ {
+  "symbol": "VIYASH.BO",
+  "as_of": "2026-11-26",
+  "source": "Yahoo quoteSummary (unofficial)",
+  "price_prev_close": 228.85,
+  "currency": "INR",
+  "trailing_pe": 43.035713,
+  "forward_pe": 19.361523,
+  "forward_eps": 11.825,
+  "trailing_eps": 5.32,
+  "analysts_next_fy": 4,
+  "trend": {
+   "0q": {
+    "end": null,
+    "eps_avg": null,
+    "eps_low": null,
+    "eps_high": null,
+    "analysts": null
+   },
+   "+1q": {
+    "end": null,
+    "eps_avg": null,
+    "eps_low": null,
+    "eps_high": null,
+    "analysts": null
+   },
+   "0y": {
+    "end": "2027-03-31",
+    "eps_avg": 7.425,
+    "eps_low": 6.5,
+    "eps_high": 9.2,
+    "analysts": 4
+   },
+   "+1y": {
+    "end": "2028-03-31",
+    "eps_avg": 11.825,
+    "eps_low": 10.2,
+    "eps_high": 14.1,
+    "analysts": 4
+   }
+  }
+ },
+ {
+  "symbol": "VIYASH.NS",
+  "as_of": "2026-11-26",
+  "source": "Yahoo quoteSummary (unofficial)",
+  "price_prev_close": 228.88,
+  "currency": "INR",
+  "trailing_pe": 44.208496,
+  "forward_pe": 19.365751,
+  "forward_eps": 11.825,
+  "trailing_eps": 5.18,
+  "analysts_next_fy": 4,
+  "trend": {
+   "0q": {
+    "end": null,
+    "eps_avg": null,
+    "eps_low": null,
+    "eps_high": null,
+    "analysts": null
+   },
+   "+1q": {
+    "end": null,
+    "eps_avg": null,
+    "eps_low": null,
+    "eps_high": null,
+    "analysts": null
+   },
+   "0y": {
+    "end": "2027-03-31",
+    "eps_avg": 7.425,
+    "eps_low": 6.5,
+    "eps_high": 9.2,
+    "analysts": 4
+   },
+   "+1y": {
+    "end": "2028-03-31",
+    "eps_avg": 11.825,
+    "eps_low": 10.2,
+    "eps_high": 14.1,
+    "analysts": 4
+   }
+  }
+ }
+]
