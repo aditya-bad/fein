@@ -1,0 +1,13 @@
+{
+ "_readme": "Hand-entered fields with no machine-readable public source. Keyed by snapshot month (YYYY-MM). Each entry: value, unit, as_of, source, optional second/note. Used only when the automatic fetch gives nothing.",
+ "2026-11": {
+  "india_cpi_yoy": {"value": 6.09, "unit": "%", "as_of": "2026-10-31",
+    "source": "https://www.mospi.gov.in/uploads/latestreleasesfiles/1794480048335-Press%20Release%20of%20CPI%20for%20October%202026%20.pdf",
+    "note": "October 2026, provisional, CPI combined (2024 base); Sept 5.54%; food 8.94%; above RBI 6% upper band. Next release 14-Dec-2026. MoSPI API without login only serves the 2012 base (to Dec-2025).",
+    "second": {"value": 6.09, "as_of": "2026-11-12", "source": "https://theprint.in/economy/indias-october-retail-inflation-breaches-rbis-6-ceiling-odds-of-december-repo-rate-hike-rise/3097181/"}},
+  "fpi_net_equity_month": {"value": 84291, "unit": "INR crore (2-13 Nov, partial)", "as_of": "2026-11-13",
+    "source": "https://www.multibagg.ai/market-pulse/articles/fpi-indian-equity-buying-november-cmwi79lp200op2rpblhzyy2c3",
+    "note": "UNVERIFIED and conflicting: another report says Rs 76,189 cr for 3-13 Nov. Direction (net buying after Sep -35,861 and Oct -34,843 cr outflows) agrees. NSDL not reachable by script.",
+    "second": {"value": 76189, "as_of": "2026-11-13", "source": "https://www.newsbytesapp.com/news/business/fpis-invest-over-76-000cr-in-indian-equities-in-november/story"}}
+ }
+}

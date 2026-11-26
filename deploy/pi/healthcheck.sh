@@ -147,6 +147,7 @@ D="$FEIN_REPO/tools/detectors"
 st "solvency_screen --selftest (offline)" "$D" "$PY" solvency_screen.py --selftest
 st "scoreboard unit tests (offline)" "$FEIN_REPO" "$PY" -m unittest discover -s tools/scoreboard/tests
 st "news --selftest (offline)" "$FEIN_REPO/tools/news" "$PY" news.py --selftest
+st "macro snapshot --selftest (offline)" "$FEIN_REPO" "$PY" tools/macro/snapshot.py --selftest
 if [ "$QUICK" = 0 ]; then
   st "collect --selftest (live NSE/BSE)" "$D" "$PY" collect.py --selftest
   st "detect --selftest (live + offline rules)" "$D" "$PY" detect.py --selftest

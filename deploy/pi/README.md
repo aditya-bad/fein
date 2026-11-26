@@ -23,6 +23,7 @@ This is research tooling, not SEBI-registered advice.
 | `pead-weekly` | Sat 21:30 | `live_tracker.py finalize`, then `score` | `india_pead_live/scorecard.md` |
 | `scoreboard` | daily 22:00 | `tools/scoreboard/run_daily.sh` | `tools/scoreboard/state/`, seeds in `memdb/seeds/` |
 | `news` | daily 22:30 | `tools/news/news.py` (about 6 min, ~110 polite requests) | `~/fein-data/news/YYYY-MM-DD.md` and `.csv` |
+| `macro` | monthly, 2nd at 08:15 | `tools/macro/snapshot.py` (~40 s, ~15 requests) | `~/fein-data/macro/snapshot_YYYY-MM.md` and `.json` |
 | `solvency` | Sun 06:00 | `tools/detectors/solvency_screen.py` (about 2.5 h) | `~/fein-data/solvency/` |
 | `logrotate` | Sun 05:30 | rotates `~/fein-data/logs/*.log` (8 weeks kept) | |
 | `git-sync` | Mon 07:00 | `git pull --ff-only` of the branch. **Never pushes** unless you opt in (below). | |

@@ -12,6 +12,7 @@ FEIN_JOBS=(
   "news|*-*-* 22:30:00 Asia/Kolkata|30 22 * * *|50|45min|news: tools/news/news.py -> FEIN_DATA/news/YYYY-MM-DD.md/.csv"
   "solvency|Sun *-*-* 06:00:00 Asia/Kolkata|0 6 * * 0|194|5h|detectors: weekly solvency screen (screener.in)"
   "git-sync|Mon *-*-* 07:00:00 Asia/Kolkata|0 7 * * 1|194|20min|git pull --ff-only of the branch (push only if opted in)"
+  "macro|*-*-02 08:15:00 Asia/Kolkata|15 8 2 * *|768|20min|macro: tools/macro/snapshot.py -> FEIN_DATA/macro/snapshot_YYYY-MM.md/.json"
   "logrotate|Sun *-*-* 05:30:00 Asia/Kolkata|30 5 * * 0|194|15min|rotate FEIN_DATA logs, prune old scoreboard run logs"
 )
 FEIN_BRANCH_DEFAULT="claude/focused-brahmagupta-g3hraq"

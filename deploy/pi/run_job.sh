@@ -119,6 +119,7 @@ run() {
                    "$PY" tools/backtests/india_pead/live_tracker.py score ;;
     scoreboard)  cd "$FEIN_REPO" && tools/scoreboard/run_daily.sh ;;
     news)        cd "$FEIN_REPO/tools/news" && "$PY" news.py ;;
+    macro)       cd "$FEIN_REPO" && "$PY" tools/macro/snapshot.py --out-dir "$FEIN_DATA/macro" ;;
     git-sync)    git_sync ;;
     logrotate)   rotate_logs ;;
   esac
