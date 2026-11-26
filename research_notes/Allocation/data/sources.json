@@ -1,0 +1,73 @@
+{
+ "yahoo_sensex.json": {
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EBSESN?period1=900000000&period2=1795000000&interval=1d",
+  "http": "200",
+  "as_of": "2026-11-26"
+ },
+ "yahoo_nifty.json": {
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ENSEI?period1=900000000&period2=1795000000&interval=1d",
+  "http": "200",
+  "as_of": "2026-11-26"
+ },
+ "yahoo_gold_usd.json": {
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=900000000&period2=1795000000&interval=1d",
+  "http": "200",
+  "as_of": "2026-11-26"
+ },
+ "yahoo_usdinr.json": {
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/INR%3DX?period1=900000000&period2=1795000000&interval=1d",
+  "http": "200",
+  "as_of": "2026-11-26"
+ },
+ "yahoo_goldbees.json": {
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GOLDBEES.NS?period1=900000000&period2=1795000000&interval=1d",
+  "http": "200",
+  "as_of": "2026-11-26"
+ },
+ "fred_EXINUS.csv": {
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=EXINUS",
+  "http": "200",
+  "as_of": "2026-11-26"
+ },
+ "fred_INDIRLTLT01STM.csv": {
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=INDIRLTLT01STM",
+  "http": "200",
+  "as_of": "2026-11-26"
+ },
+ "fred_INDIR3TIB01STM.csv": {
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=INDIR3TIB01STM",
+  "http": "200",
+  "as_of": "2026-11-26"
+ },
+ "mf_100822_uti_nifty50_index.json": {
+  "url": "https://api.mfapi.in/mf/100822",
+  "http": "200",
+  "as_of": "2026-11-26"
+ },
+ "mf_101281_hdfc_sensex_index.json": {
+  "url": "https://api.mfapi.in/mf/101281",
+  "http": "200",
+  "as_of": "2026-11-26"
+ },
+ "mf_101002_sbi_10y_cm_gilt.json": {
+  "url": "https://api.mfapi.in/mf/101002",
+  "http": "200",
+  "as_of": "2026-11-26"
+ },
+ "mf_100851_nippon_liquid.json": {
+  "url": "https://api.mfapi.in/mf/100851",
+  "http": "200",
+  "as_of": "2026-11-26"
+ },
+ "mf_105085_gold_bees.json": {
+  "url": "https://api.mfapi.in/mf/105085",
+  "http": "200",
+  "as_of": "2026-11-26"
+ },
+ "wb_gold_usd_monthly_avg.csv": {
+  "url": "https://thedocs.worldbank.org/en/doc/5d903e848db1d1b83e0ec8f744e55570-0350012021/related/CMO-Historical-Data-Monthly.xlsx",
+  "http": "200",
+  "as_of": "2026-11-26",
+  "note": "gold column extracted"
+ }
+}

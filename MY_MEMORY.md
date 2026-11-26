@@ -137,6 +137,16 @@ India, small size by itself has not).
 
 - **Ready for scoring:** 191 dated predictions open; 153 resolve Jan–Jul 2027 (81 automatically). First results 31 Jan 2027.
 
+## 5f. Gold, bonds and your wealth plan (tested 26 Nov 2026, 2006–2026, after fees and taxes)
+| ₹10 lakh in Apr-2006 | Became | Worst fall | Time to get back to the old peak |
+|---|---|---|---|
+| 100% Nifty | ₹71.8 lakh (10.1%/yr) | −55% (−₹9.6 lakh) | ~6 years |
+| 70% stocks / 20% gold / 10% bonds, reset every January | ₹83.3 lakh (10.9%/yr) | −38% | ~2 years |
+- Adding gold and bonds cut the worst crash a lot and didn't cost return over these 20 years — but gold was unusually strong
+  (rupee falling, 2025 jump). Even assuming gold earns only 7%/yr, the split costs ~0.4%/yr and still softens crashes.
+- For SIPs: putting each month's money into whatever is below its target (never selling) did slightly better and paid no tax.
+- "Timing" by market valuation did NOT beat simply holding a fixed split. Insurance, not extra return. Research, not advice.
+
 ## 5d. Your Raspberry Pi is ready to set up (24 Nov 2026)
 When you have the Pi: follow `deploy/pi/README.md` — run `install.sh`, then `healthcheck.sh`. It schedules all the nightly checks.
 Nothing on the Pi accepts incoming connections, passwords stay only on the Pi, and it never pushes to GitHub unless you turn that on.

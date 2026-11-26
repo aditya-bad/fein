@@ -405,3 +405,11 @@ rule passed the gap (less wrong than P/E) but was overridden: a rule must also r
 ~3–5 independent windows: this neither confirms nor refutes the P/E ≥ 24.5 base rate (which rests on the 2000/2008 peaks). Gap stays
 as snapshot context, not a card input. Data conflicts to resolve: repo 5.50% (RBI site) vs memdb 5.25% (Jun-2025) — hike undated;
 gold-api $3,568/oz vs Yahoo GC=F ~$4,187 (Sep) vs IBJA ₹122,982/10g — gold source unreliable this month.
+
+## L52 (2026-11-26) — A fixed 70/20/10 split, rebalanced yearly, is crash insurance that cost nothing in 2006–26; timing tilts don't beat it
+Pre-registered India test (`research_notes/Allocation/allocation_test_india.md`, Apr-2006→Oct-2026, fund NAVs after fees, taxes and
+costs): 100% equity 10.1%/yr, worst fall −55%, 70 months peak-to-peak; 70/20/10 equity/gold/bonds reset each January 10.9%/yr,
+−38%, 21 months. New-money-to-underweight SIP (no selling, no tax) beat the yearly-reset SIP (11.3% vs 11.1% XIRR). P/E tilt did
+NOT beat a fixed split at its own average weight → **rule: any timing rule must beat a fixed split at its average weight.**
+Caveats: gold's 13.2%/yr includes 3.7%/yr rupee fall and a 72% jump in 2025; with gold capped at 7%/yr the split costs 0.4pp/yr but
+still cuts the worst fall 16pp; the benefit is mostly 2008; equity still won 2/3 of 5-yr windows. Insurance, not extra return.

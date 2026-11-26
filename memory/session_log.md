@@ -88,3 +88,4 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
 - 25-Nov-2026: news layer built + first live run (3,852 items, 116 company-named material headlines; flags unverified, listed in research_notes/News/first_run_2026-11-25.md). Pi job added (22:30 IST).
 - 26-Nov-2026: news flags verified (22: 6 confirmed, 10 partly, 4 unconfirmed, 2 false/stale; NVIDIA CEO resignation+reinstatement confirmed by 8-Ks) → L50; UTTAMSUGAR price calendar started; addenda on UTTAMSUGAR/UTKARSHBNK dives (calls unchanged); sec_fetch doc fix.
 - 26-Nov-2026: macro snapshot tool (16 fields, monthly Pi job); EY–G-sec gap test 2012–21: no OOS power (L51); asked user for pre-2012 Nifty P/E CSV (List 4).
+- 26-Nov-2026: wealth-allocation test (L52): 70/20/10 yearly passes (−17pp worst fall, +0.8pp/yr), underweight-SIP passes, P/E tilt not adopted.

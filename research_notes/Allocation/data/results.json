@@ -1,0 +1,442 @@
+{
+ "window": [
+  "2006-04",
+  "2026-10"
+ ],
+ "n_months": 246,
+ "missing_months": [],
+ "strategies": {
+  "1_equity_100": {
+   "cagr": 0.10090392199734377,
+   "end_value": 7175680.406448609,
+   "vol": 0.20346732708564066,
+   "max_dd": -0.5524901238632158,
+   "dd_peak": "2007-12",
+   "dd_trough": "2008-11",
+   "dd_rupees_peak": 1745071.9902337443,
+   "dd_rupees_trough": 780936.9501992742,
+   "dd_rupees": 964135.04003447,
+   "recovered": "2013-10",
+   "months_peak_to_recovery": 70,
+   "months_trough_to_recovery": 59,
+   "longest_underwater_months": 69,
+   "worst_5y_cagr": -0.013929258606416584,
+   "best_5y_cagr": 0.23282666559591836,
+   "n_5y_windows": 187,
+   "pct_5y_beat_equity": 0.0,
+   "taxes_paid": 0,
+   "turnover": 0
+  },
+  "6_5050_eq_gold_yearly": {
+   "cagr": 0.12007594841453595,
+   "end_value": 10222877.78597336,
+   "vol": 0.1289646046302569,
+   "max_dd": -0.269651604937896,
+   "dd_peak": "2007-12",
+   "dd_trough": "2008-10",
+   "dd_rupees_peak": 1409538.1242133114,
+   "dd_rupees_trough": 1029453.9067980406,
+   "dd_rupees": 380084.21741527074,
+   "recovered": "2009-05",
+   "months_peak_to_recovery": 17,
+   "months_trough_to_recovery": 7,
+   "longest_underwater_months": 18,
+   "worst_5y_cagr": 0.04035587512121763,
+   "best_5y_cagr": 0.21103238041718142,
+   "n_5y_windows": 187,
+   "pct_5y_beat_equity": 0.39037433155080214,
+   "taxes_paid": 492855,
+   "turnover": 4414429
+  },
+  "2_702010_yearly": {
+   "cagr": 0.10893921444580279,
+   "end_value": 8329303.69280256,
+   "vol": 0.14366536811914027,
+   "max_dd": -0.38212373007378175,
+   "dd_peak": "2007-12",
+   "dd_trough": "2008-10",
+   "dd_rupees_peak": 1543310.374069419,
+   "dd_rupees_trough": 953574.8572684492,
+   "dd_rupees": 589735.5168009698,
+   "recovered": "2009-09",
+   "months_peak_to_recovery": 21,
+   "months_trough_to_recovery": 11,
+   "longest_underwater_months": 20,
+   "worst_5y_cagr": 0.03983770196893888,
+   "best_5y_cagr": 0.1982212585010843,
+   "n_5y_windows": 187,
+   "pct_5y_beat_equity": 0.3315508021390374,
+   "taxes_paid": 308485,
+   "turnover": 2965096
+  },
+  "3_702010_bands5": {
+   "cagr": 0.10815335587253427,
+   "end_value": 8209132.259691411,
+   "vol": 0.145460975728484,
+   "max_dd": -0.3888833605902813,
+   "dd_peak": "2007-12",
+   "dd_trough": "2008-10",
+   "dd_rupees_peak": 1544392.167810154,
+   "dd_rupees_trough": 943803.7515228316,
+   "dd_rupees": 600588.4162873223,
+   "recovered": "2009-11",
+   "months_peak_to_recovery": 23,
+   "months_trough_to_recovery": 13,
+   "longest_underwater_months": 22,
+   "worst_5y_cagr": 0.03713906718229265,
+   "best_5y_cagr": 0.20447659142717467,
+   "n_5y_windows": 187,
+   "pct_5y_beat_equity": 0.3582887700534759,
+   "taxes_paid": 282844,
+   "turnover": 2745428
+  }
+ },
+ "tilt_window": {
+  "window": [
+   "2014-01",
+   "2026-10"
+  ],
+  "equity_weight_by_january": {
+   "2014-01": 0.7,
+   "2015-01": 0.6,
+   "2016-01": 0.7,
+   "2017-01": 0.6,
+   "2018-01": 0.6,
+   "2019-01": 0.6,
+   "2020-01": 0.6,
+   "2021-01": 0.6,
+   "2022-01": 0.7,
+   "2023-01": 0.8,
+   "2024-01": 0.7,
+   "2025-01": 0.8,
+   "2026-01": 0.7
+  },
+  "4_pe_tilt": {
+   "cagr": 0.11328434898820516,
+   "end_value": 3928509.621685794,
+   "vol": 0.1035003292520494,
+   "max_dd": -0.1507037543971107,
+   "dd_peak": "2020-01",
+   "dd_trough": "2020-03",
+   "dd_rupees_peak": 1917662.8091861587,
+   "dd_rupees_trough": 1628663.8241740945,
+   "dd_rupees": 288998.9850120642,
+   "recovered": "2020-07",
+   "months_peak_to_recovery": 6,
+   "months_trough_to_recovery": 4,
+   "longest_underwater_months": 16,
+   "worst_5y_cagr": 0.0498337740917012,
+   "best_5y_cagr": 0.18004611586925634,
+   "n_5y_windows": 94,
+   "pct_5y_beat_equity": 0.2553191489361702,
+   "taxes_paid": 145110,
+   "turnover": 2215488
+  },
+  "1_equity_100": {
+   "cagr": 0.11922137833771718,
+   "end_value": 4204157.35359857,
+   "vol": 0.15784159783195925,
+   "max_dd": -0.29365187662039327,
+   "dd_peak": "2019-12",
+   "dd_trough": "2020-03",
+   "dd_rupees_peak": 2100510.1370007102,
+   "dd_rupees_trough": 1483691.3934102922,
+   "dd_rupees": 616818.743590418,
+   "recovered": "2020-11",
+   "months_peak_to_recovery": 11,
+   "months_trough_to_recovery": 8,
+   "longest_underwater_months": 17,
+   "worst_5y_cagr": 0.011559439380624648,
+   "best_5y_cagr": 0.23282666559591836,
+   "n_5y_windows": 94,
+   "pct_5y_beat_equity": 0.0
+  },
+  "2_702010_yearly": {
+   "cagr": 0.11835771412568019,
+   "end_value": 4162980.7835285696,
+   "vol": 0.11044192020770464,
+   "max_dd": -0.18576649345099672,
+   "dd_peak": "2019-12",
+   "dd_trough": "2020-03",
+   "dd_rupees_peak": 1921525.248061946,
+   "dd_rupees_trough": 1564570.2406519216,
+   "dd_rupees": 356955.0074100243,
+   "recovered": "2020-07",
+   "months_peak_to_recovery": 7,
+   "months_trough_to_recovery": 4,
+   "longest_underwater_months": 16,
+   "worst_5y_cagr": 0.040647214960630285,
+   "best_5y_cagr": 0.19870258816435427,
+   "n_5y_windows": 94,
+   "pct_5y_beat_equity": 0.2872340425531915,
+   "taxes_paid": 116257,
+   "turnover": 1154055
+  }
+ },
+ "post_hoc_sensitivity": {
+  "gold_cut_to_7pct_cagr": {
+   "1_equity_100": {
+    "cagr": 0.1009,
+    "max_dd": -0.5525,
+    "longest_underwater_months": 69,
+    "worst_5y_cagr": -0.0139,
+    "pct_5y_beat_equity": 0.0
+   },
+   "2_702010_yearly": {
+    "cagr": 0.0971,
+    "max_dd": -0.3911,
+    "longest_underwater_months": 22,
+    "worst_5y_cagr": 0.0286,
+    "pct_5y_beat_equity": 0.2513
+   },
+   "6_5050_eq_gold_yearly": {
+    "cagr": 0.0902,
+    "max_dd": -0.2932,
+    "longest_underwater_months": 18,
+    "worst_5y_cagr": 0.0134,
+    "pct_5y_beat_equity": 0.2513
+   }
+  },
+  "equity_sensex_price_plus_dy": {
+   "1_equity_100": {
+    "cagr": 0.1082,
+    "max_dd": -0.555,
+    "longest_underwater_months": 33,
+    "worst_5y_cagr": -0.0006,
+    "pct_5y_beat_equity": 0.0
+   },
+   "2_702010_yearly": {
+    "cagr": 0.1146,
+    "max_dd": -0.3635,
+    "longest_underwater_months": 20,
+    "worst_5y_cagr": 0.0483,
+    "pct_5y_beat_equity": 0.2941
+   },
+   "6_5050_eq_gold_yearly": {
+    "cagr": 0.1244,
+    "max_dd": -0.2583,
+    "longest_underwater_months": 17,
+    "worst_5y_cagr": 0.0423,
+    "pct_5y_beat_equity": 0.3369
+   }
+  },
+  "start_2009_04_after_crash": {
+   "1_equity_100": {
+    "cagr": 0.1205,
+    "max_dd": -0.2937,
+    "longest_underwater_months": 33,
+    "worst_5y_cagr": 0.0116,
+    "pct_5y_beat_equity": 0.0
+   },
+   "2_702010_yearly": {
+    "cagr": 0.1188,
+    "max_dd": -0.186,
+    "longest_underwater_months": 20,
+    "worst_5y_cagr": 0.04,
+    "pct_5y_beat_equity": 0.2119
+   },
+   "6_5050_eq_gold_yearly": {
+    "cagr": 0.1252,
+    "max_dd": -0.1557,
+    "longest_underwater_months": 18,
+    "worst_5y_cagr": 0.0411,
+    "pct_5y_beat_equity": 0.3179
+   }
+  },
+  "tilt_control_fixed_avg_equity": {
+   "equity_weight": 0.669,
+   "cagr": 0.1182,
+   "max_dd": -0.1745,
+   "worst_5y_cagr": 0.0434
+  }
+ },
+ "sip": {
+  "equity": {
+   "xirr": 0.10527993764544885,
+   "invested": 2470000,
+   "end_value": 8176293.115160422,
+   "max_fall_pct": -0.3222090526816044,
+   "max_fall_rupees": 1309082.0627733655,
+   "taxes_paid": 0,
+   "final_weights": {
+    "equity": 1.0,
+    "gold": 0.0,
+    "bond": 0.0
+   }
+  },
+  "split_jan": {
+   "xirr": 0.11060978932722632,
+   "invested": 2470000,
+   "end_value": 8730195.003678843,
+   "max_fall_pct": -0.17821749709881596,
+   "max_fall_rupees": 927706.5445246771,
+   "taxes_paid": 247031,
+   "final_weights": {
+    "equity": 0.704,
+    "gold": 0.186,
+    "bond": 0.11
+   }
+  },
+  "underweight": {
+   "xirr": 0.11295523650528805,
+   "invested": 2470000,
+   "end_value": 8986660.52021061,
+   "max_fall_pct": -0.1807458962516887,
+   "max_fall_rupees": 1193406.8236339483,
+   "taxes_paid": 0,
+   "final_weights": {
+    "equity": 0.6,
+    "gold": 0.311,
+    "bond": 0.089
+   }
+  }
+ },
+ "checks": {
+  "equity_uti_nifty_fund_cagr": 0.10090392199734377,
+  "equity_hdfc_sensex_fund_cagr": 0.09401895689947648,
+  "equity_sensex_price_plus_dy_cagr": 0.10817114856663368,
+  "equity_sensex_price_only_cagr": 0.09378819243253234,
+  "equity_nifty_price_plus_dy_2012_02": 0.11877966476716972,
+  "equity_uti_fund_2012_02": 0.11269510775295233,
+  "gold_inr_yahoo_cagr": 0.1318906199436105,
+  "gold_wb_window": [
+   "2006-04",
+   "2024-12"
+  ],
+  "gold_inr_wb_x_fred_cagr": 0.11946570365695419,
+  "gold_inr_yahoo_same_wb_window": 0.11587416288820362,
+  "gold_usd_yahoo_cagr": 0.09117406712226916,
+  "usdinr_cagr": 0.037314443266345476,
+  "goldbees_window": [
+   "2009-01",
+   "2026-10"
+  ],
+  "goldbees_cagr": 0.12609218847746462,
+  "gold_inr_yahoo_same_window": 0.12592871675025719,
+  "bond_sbi_cm_gilt_fund_cagr": 0.07715713652108613,
+  "bond_yield_approx_2011_12": 0.08130764654619282,
+  "bond_sbi_fund_2011_12": 0.07989821244191164,
+  "cash_liquid_fund_cagr": 0.07035818394333493,
+  "cash_tbill_accrued_2011_12": 0.06566812858690185,
+  "cash_liquid_fund_2011_12": 0.06946320507747727,
+  "gold_level_diff_pct_median": 0.015053883094594656,
+  "end_levels": {
+   "gold_usd_yahoo": 3898.89990234375,
+   "gold_usd_wb_avg": null,
+   "usdinr_yahoo": 95.15239715576172,
+   "usdinr_fred_avg": 95.5167,
+   "gold_inr_10g_yahoo": 119275.94923355099
+  },
+  "annual_returns": {
+   "2007": {
+    "equity": 0.5358387119709909,
+    "gold": 0.1712806759545309,
+    "bond": 0.1047973565865965
+   },
+   "2008": {
+    "equity": -0.5196365375910457,
+    "gold": 0.2961815461921926,
+    "bond": 0.16928623285078714
+   },
+   "2009": {
+    "equity": 0.7379546294164574,
+    "gold": 0.19653878670737046,
+    "bond": -0.03170223040633413
+   },
+   "2010": {
+    "equity": 0.17725344497740325,
+    "gold": 0.25310706520577075,
+    "bond": 0.05175182361742103
+   },
+   "2011": {
+    "equity": -0.24830166954519284,
+    "gold": 0.30320453519761736,
+    "bond": 0.08360168829138659
+   },
+   "2012": {
+    "equity": 0.2831640290474633,
+    "gold": 0.10499089565289821,
+    "bond": 0.09192417553882115
+   },
+   "2013": {
+    "equity": 0.06862564230562618,
+    "gold": -0.19026042059258608,
+    "bond": 0.0874796318315938
+   },
+   "2014": {
+    "equity": 0.31765548162045665,
+    "gold": 0.010502306207919698,
+    "bond": 0.12624020993463847
+   },
+   "2015": {
+    "equity": -0.03346178300996139,
+    "gold": -0.06091931664257022,
+    "bond": 0.09082835023929636
+   },
+   "2016": {
+    "equity": 0.04004640750493893,
+    "gold": 0.10872073590237763,
+    "bond": 0.1281648959840722
+   },
+   "2017": {
+    "equity": 0.2967711392055692,
+    "gold": 0.07118574961375468,
+    "bond": 0.06235244617937874
+   },
+   "2018": {
+    "equity": 0.04256341204936098,
+    "gold": 0.06808630043202157,
+    "bond": 0.09901591911724261
+   },
+   "2019": {
+    "equity": 0.13246919321088124,
+    "gold": 0.21229260488387758,
+    "bond": 0.11891218226727962
+   },
+   "2020": {
+    "equity": 0.15499566225965578,
+    "gold": 0.27906983412688025,
+    "bond": 0.11627917379586439
+   },
+   "2021": {
+    "equity": 0.2520046303221066,
+    "gold": -0.017975664549750192,
+    "bond": 0.023989468917678725
+   },
+   "2022": {
+    "equity": 0.05332100557778996,
+    "gold": 0.1114476171398,
+    "bond": 0.013297669385814448
+   },
+   "2023": {
+    "equity": 0.20886177385060845,
+    "gold": 0.12718582771042142,
+    "bond": 0.07493487659863707
+   },
+   "2024": {
+    "equity": 0.09641067340751808,
+    "gold": 0.3287081825024898,
+    "bond": 0.09143853888037601
+   },
+   "2025": {
+    "equity": 0.1156844348728201,
+    "gold": 0.7200468734242562,
+    "bond": 0.06703425119739292
+   }
+  },
+  "monthly_corr": {
+   "eq_gold": -0.07833083006982591,
+   "eq_bond": 0.07900080370111967,
+   "gold_bond": 0.031245944316343425
+  }
+ },
+ "costs": {
+  "gold_cost_pa": 0.005,
+  "trade_cost": 0.001,
+  "eq_ltcg": "10% to 2024-06, 12.5% after, no exemption",
+  "gold_bond_tax": 0.2,
+  "equity_series": "UTI Nifty 50 Index Fund regular-plan NAV (net of expense)",
+  "bond_series": "SBI 10-yr Constant Maturity Gilt Fund regular-plan NAV (net of expense)",
+  "gold_series": "Yahoo GC=F x Yahoo INR=X month-end, minus 0.5%/yr"
+ }
+}

@@ -58,7 +58,8 @@ Last updated: 2026-11-24
 4. ~~Macro snapshot + EY-gap test~~ DONE 26-Nov (L51); rerun on 1999+ once user uploads niftyindices CSV; resolve repo-hike date + gold source. Remaining macro: sector-sensitivity checklist.
    (orig) Small macro module: monthly snapshot (repo, 10y G-sec, CPI, INR, crude, DXY, gold, FPI flows, Nifty EY vs G-sec);
    sector-sensitivity checklist; prereg test EY–G-sec gap → 3–5y Nifty returns. Stage 5.
-5. Wealth-allocation test (100% equity vs fixed split rebalanced vs valuation bands vs new-money-to-underweight, India, 2 sources). Defence.
+5. ~~Wealth-allocation test~~ DONE 26-Nov (L52). Open: pre-2006 rerun needs bond history; true debt taxation (slab post-Apr-2023).
+   (orig) Wealth-allocation test (100% equity vs fixed split rebalanced vs valuation bands vs new-money-to-underweight, India, 2 sources). Defence.
 6. Fortnightly/monthly flows (NSDL FPI sector, RBI credit, MF portfolios): prereg "heavy fund selling in small stock → further falls?". Stage 3.
 7. Consensus: add forward P/E + analyst count to every live dive/card; store dated snapshots; at season end test whether
    thin-coverage consensus is optimistic vs reported EPS (L47). Stage 5.
