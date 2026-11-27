@@ -15,6 +15,8 @@ Status: open | done | blocked | cancelled   (only the RECEIVER changes status, b
 <body: what, why, which stage of the 7-stage roadmap, expected output files, deadline if any>
 ```
 
+Helper: `python3 tools/comms/comms.py inbox|post|ack --me cloud|pi` (refuses messages that look like secrets).
+
 ## Rules (both sessions)
 1. **Session start:** `git pull`, read the other side's file from your last-read id (`comms/state_<me>.json`), act on open items.
 2. **Session end / after each task:** append replies or new messages, update your `state_<me>.json`, commit, `git pull --rebase`, push.
