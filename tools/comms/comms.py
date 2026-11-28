@@ -88,14 +88,16 @@ def sync(msg):
     if subprocess.run(["git", "-C", ROOT, "diff", "--cached", "--quiet"]).returncode:
         _git("commit", "-q", "-m", msg + "\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>")
     for i in range(4):
-        r = subprocess.run(["git", "-C", ROOT, "pull", "-q", "--rebase", "--autostash", "origin", BRANCH], capture_output=True, text=True)
+        # fetch into the tracking ref (not FETCH_HEAD, which the watcher may be writing), then rebase onto it
+        subprocess.run(["git", "-C", ROOT, "fetch", "-q", "--no-write-fetch-head", "origin", f"+refs/heads/{BRANCH}:refs/remotes/origin/{BRANCH}"], capture_output=True, text=True)
+        r = subprocess.run(["git", "-C", ROOT, "rebase", "-q", "--autostash", f"origin/{BRANCH}"], capture_output=True, text=True)
         p = subprocess.run(["git", "-C", ROOT, "push", "-q", "origin", f"HEAD:{BRANCH}"], capture_output=True, text=True)
         if p.returncode == 0: print("synced"); return
         time.sleep(2 ** (i + 1))
     sys.exit("push failed after retries: " + p.stderr.strip())
 
 def remote_status(mid):
-    _git("fetch", "-q", "origin", BRANCH)
+    _git("fetch", "-q", "--no-write-fetch-head", "origin", f"+refs/heads/{BRANCH}:refs/remotes/origin/{BRANCH}")
     names = _git("ls-tree", "--name-only", f"origin/{BRANCH}", "comms/msgs/").split()
     names = {os.path.basename(n) for n in names}
     st = "posted" if mid + ".md" in names else "missing"

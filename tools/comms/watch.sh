@@ -10,7 +10,7 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"; BR="${FEIN_BRANCH:-c
 declare -A seen
 warned=0
 while true; do
-  if git -C "$ROOT" fetch -q origin "$BR" 2>/dev/null; then
+  if git -C "$ROOT" fetch -q --no-write-fetch-head origin "+refs/heads/$BR:refs/remotes/origin/$BR" 2>/dev/null; then
     [ "$warned" = 1 ] && { echo "OK fetch back"; warned=0; }
     names="$(git -C "$ROOT" ls-tree --name-only "origin/$BR" comms/msgs/ 2>/dev/null | xargs -n1 basename 2>/dev/null)"
     for f in $(printf '%s\n' "$names" | grep -E '\.md$' | grep -vE '\.(ack|done)\.md$'); do
