@@ -1,3 +1,5 @@
+> **Superseded 2026-11-28** by the full pre-registered study `research_notes/Gold/gold_study_2026-11/gold_study.md` (two-sourced data, base rates, analog-derived probabilities; new -v2 calls). Kept unchanged below for the record.
+
 # Gold: where it stands and how bad it can get (28-Nov-2026)
 
 Stage fit: wealth-allocation defence layer (L52) + stage 5 (valuation context) + stage 7 (dated, scored calls below).

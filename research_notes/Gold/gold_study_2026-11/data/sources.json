@@ -1,0 +1,113 @@
+{
+ "wb_cmo_monthly.xlsx": {
+  "url": "https://thedocs.worldbank.org/en/doc/5d903e848db1d1b83e0ec8f744e55570-0350012021/related/CMO-Historical-Data-Monthly.xlsx",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "fred_GOLDPMGBD228NLBM.csv": {
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GOLDPMGBD228NLBM",
+  "http": "404",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "yahoo_gcf_1d.json": {
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=0&period2=1900000000&interval=1d",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "yahoo_gcf_1mo.json": {
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=0&period2=1900000000&interval=1mo",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "goldapi_xau.json": {
+  "url": "https://api.gold-api.com/price/XAU",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "fred_EXINUS.csv": {
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=EXINUS",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "fred_DEXINUS.csv": {
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXINUS",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "yahoo_inr_1d.json": {
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/INR%3DX?period1=0&period2=1900000000&interval=1d",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "fred_DFII10.csv": {
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "fred_FII10.csv": {
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=FII10",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "fred_GS10.csv": {
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GS10",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "fred_DGS10.csv": {
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "fred_CPIAUCSL.csv": {
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "fred_FEDFUNDS.csv": {
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=FEDFUNDS",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "fred_DFEDTARU.csv": {
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "fred_DTWEXBGS.csv": {
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "yahoo_dxy_1d.json": {
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=0&period2=1900000000&interval=1d",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "yahoo_tnx_1d.json": {
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=0&period2=1900000000&interval=1d",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "ibja_home.html": {
+  "url": "https://ibjarates.com/",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z"
+ },
+ "wb_gold_usd_monthly_avg.csv": {
+  "url": "https://thedocs.worldbank.org/en/doc/5d903e848db1d1b83e0ec8f744e55570-0350012021/related/CMO-Historical-Data-Monthly.xlsx",
+  "http": "200",
+  "as_of": "2026-11-28T09:31Z",
+  "note": "gold column extracted"
+ },
+ "datahub_gold_monthly.csv": {
+  "url": "https://raw.githubusercontent.com/datasets/gold-prices/main/data/monthly.csv",
+  "http": "200",
+  "as_of": "2026-11-28T09:33Z"
+ },
+ "treasury_real_yield_2026.csv": {
+  "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_real_yield_curve&field_tdr_date_value=2026&page&_format=csv",
+  "http": "200",
+  "as_of": "2026-11-28T09:34Z"
+ }
+}

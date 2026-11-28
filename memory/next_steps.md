@@ -66,6 +66,10 @@ Last updated: 2026-11-24
 8. Promise forward test cohort 1 DONE 25-Nov (12 cos, 38 calls; under-powered, L49). Cohort 2: ≥10 past promises/company; pool with cohorts at season end.
 9. Promise tracker scale-up once Gemini CLI + Pi + Screener arrive. Stage 3.
 
+## Gold
+- Monthly rerun: tools/gold (README). Watch: 9-Dec Fed, US 10-yr real yield (2%/3% thresholds), India duty rollback risk.
+- Compare Antigravity's blind gold answer (research_notes/Antigravity/gold-2026-11-28/) vs our study once the user copies it in.
+
 ## Scoring season (from 20-Jan-2027)
 - Follow research_notes/Scoreboard/scoring_season_runbook.md (daily 20-Jan→20-Feb and 15-May→7-Jun).
 - Before season: run historical-panel calibration test for card fixes (3)/(4) per amended decision:card-audit-fixes-prereg-2026-11-25.

@@ -147,6 +147,16 @@ India, small size by itself has not).
 - For SIPs: putting each month's money into whatever is below its target (never selling) did slightly better and paid no tax.
 - "Timing" by market valuation did NOT beat simply holding a fixed split. Insurance, not extra return. Research, not advice.
 
+## 5g. Gold — full study (28 Nov 2026)
+- Gold is ~$3,640, about −32% from its Jan-2026 record (best close $5,318). Since 1968, big gold falls averaged ~−39% and took
+  ~3.5 years (median) to recover — 1980's took 26 years.
+- What drives it: **real interest rates** (US 10-yr ~2.8% now). When they're above 2%, gold has gone nowhere over the next year
+  about half the time. Recoveries started when real rates fell.
+- Next 12 months (from history, not opinion): ~9% chance of a strong rebound (>+25%), ~52% roughly flat-to-up, ~34% another
+  5–25% fall, ~5% a crash. "Fund houses buying below $3,500–3,600" — couldn't find any named fund saying it.
+- In India the 15% import duty adds to the price; if the government cuts it to 6%, Indian gold falls ~8% overnight.
+- Our rule: keep gold at a fixed share (e.g., 20%), top it up only at the January rebalance or with new money — no lump-sum bets.
+
 ## 5d. Your Raspberry Pi is ready to set up (24 Nov 2026)
 When you have the Pi: follow `deploy/pi/README.md` — run `install.sh`, then `healthcheck.sh`. It schedules all the nightly checks.
 Nothing on the Pi accepts incoming connections, passwords stay only on the Pi, and it never pushes to GitHub unless you turn that on.

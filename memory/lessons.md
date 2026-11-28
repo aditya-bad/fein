@@ -430,3 +430,12 @@ vs 0.1409) and US (0.1194 vs 0.1306), lost on lenders (size adds nothing) → ad
 model); calibration gap moves from −5/−11/−5pp to ≈+1pp. US ranking is real (ICR<1.5x: 32–39% blew up vs 9–12%); India is mostly a
 level fix (AUC ~0.56–0.60), both-flags 58% vs 15% on only 15 firms. Patch v1.6b (on top of v1.6) ready; apply after Jan–Feb 2027.
 Only makes cards stricter: all 9 live cards stay size 0 (UTKARSHBNK blow-up 18.6% → 35.4%).
+
+## L55 (2026-11-28) — Gold: our quick take was too optimistic about a rebound; real yields, not the Fed label, drive gold
+Full pre-registered study (`research_notes/Gold/gold_study_2026-11/`): since 1968, 5 completed gold falls ≥20% (median −39%,
+median 43 months to regain; 1980 took 26 years). Real yields rose in 5 of 6 falls and every recovery began with real yields
+falling; with real yield ≥2% (now ~2.8%), next-12m gold median +0.5%, negative 47% of the time. Fed "hiking/cutting" label alone
+carries no signal. Rupee usually cushions (+7.5pp median) but not now (rupee strengthened). India duty 15% since 13-May-2026 explains
+the domestic premium; a rollback to 6% would cut Indian prices ~8% overnight. No named fund house found saying "accumulate below
+$3,500–3,600" — it's technical commentary; bank targets were all cut after the fall. Our 28-Nov calls overstated a quick rebound
+(P(≥$4,000 by Jun-27) 0.35 → study 0.14); v2 calls filed beside the originals, both scored. Opposite error to L36.
