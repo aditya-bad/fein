@@ -97,3 +97,5 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
 
 - 26-Nov-2026: user asked for a cloud↔Pi pipeline → comms/ mailbox + CLAUDE.md rule; first task posted to Pi. Pi still being configured by user.
 
+- 28-Nov-2026: comms v2 (one file per message, .ack/.done, watch.sh under Monitor on the Pi, comms.py wait on cloud); CLAUDE.md updated; first task migrated (cloud-20261128-1257-1).
+
