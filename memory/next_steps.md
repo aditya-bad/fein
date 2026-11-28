@@ -67,7 +67,7 @@ Last updated: 2026-11-24
 9. Promise tracker scale-up once Gemini CLI + Pi + Screener arrive. Stage 3.
 
 ## Gold
-- Monthly rerun: tools/gold (README). Watch: 9-Dec Fed, US 10-yr real yield (2%/3% thresholds), India duty rollback risk.
+- Monthly rerun: tools/gold (README) + crowding checklist (insight:gold-crowding-checklist-2026-11; backtest it on 2013–15/2022). Watch: 9-Dec Fed, US 10-yr real yield (2%/3% thresholds), India duty rollback risk.
 - Compare Antigravity's blind gold answer (research_notes/Antigravity/gold-2026-11-28/) vs our study once the user copies it in.
 
 ## Scoring season (from 20-Jan-2027)

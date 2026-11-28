@@ -263,3 +263,16 @@ Sources (as of 28-Nov-2026):
   BNN Bloomberg (BofA); Goodreturns, IIFL, Khaleej Times, Telangana Today, Motilal Oswal, NewsBytes (duty); FXEmpire,
   Edgen, FXStreet, Investing.com (buy-zone claims); CBS, Nasdaq, Nation Thailand (record); TradeArabia, Engineering News
   (ETF tonnes); Finimize (Fed odds).
+
+## Addendum 28-Nov-2026 — "Catch the train before it gets crowded": is gold uncrowded yet? (judgment + checklist)
+Crowding gauges today (sources: our study, Antigravity's verified items, L56):
+| Gauge | Bottom-like (uncrowded) reading | Today | Uncrowded? |
+|---|---|---|---|
+| Global gold ETF holdings vs peak | down ≥10% from peak (2013: ~−30%) | 4,247 t vs 4,275 t record (Oct) — ~−1% | ❌ still crowded |
+| India dealer price vs official | discount (buyers gone) | premium up to $19/oz, rising | ❌ |
+| Bank/consensus targets vs price | cut to or below price | $4,150–5,000, 15–40% above price | ❌ |
+| Hedge funds (CFTC managed money) | net short / washed out | cutting longs, adding shorts | ⏳ moving |
+| US 10-yr real yield | turned down ≥0.5pp from its peak | ~2.8% and still rising | ❌ (the catalyst: every past recovery began here) |
+**Verdict: 0 of 5 clearly uncrowded, 1 moving.** The fall is a crowded trade unwinding, not an empty train. Revisit monthly;
+when ≥3 of 5 flip, the "early train" window is open. Checklist is a rule of thumb — test it on 2013–15 and 2022 before trusting it.
+Gold is insurance for us (no informational edge in gold); the edge-seeking "early train" belongs to stocks, where depth matters.
