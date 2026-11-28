@@ -109,8 +109,9 @@ for f in "$LOGS"/*.log; do
 done
 sbl="$(ls -1t "$FEIN_REPO"/tools/scoreboard/state/run_*.log 2>/dev/null | head -1)"
 if [ -n "$sbl" ]; then
-  e="$(grep -c ' failed$' "$sbl")"
-  [ "$e" = 0 ] && ok "scoreboard $(basename "$sbl"): no step failed" || fail "scoreboard $(basename "$sbl"): $e step(s) failed"
+  # only the latest run in the day's log counts (a manual re-run after a fix must clear the FAIL)
+  e="$(awk '/run_daily start/{n=0} / failed$/{n++} END{print n+0}' "$sbl")"
+  [ "$e" = 0 ] && ok "scoreboard $(basename "$sbl"): no step failed (latest run)" || fail "scoreboard $(basename "$sbl"): $e step(s) failed in the latest run"
 fi
 la="$(ls -1t "$FEIN_DATA"/alerts/*.md 2>/dev/null | head -1)"
 [ -n "$la" ] && ok "latest alerts: $(basename "$la")" || warn "no alerts file yet (first one after collect+detect)"
