@@ -492,7 +492,8 @@ class TestSpecs(unittest.TestCase):
            "price_relative": {"symbol", "bench", "start", "end", "base_px", "bench_px"},
            "sec_8k_item": {"ciks", "items", "from", "deadline"},
            "yahoo_dividend": {"symbol", "min_amount", "from", "deadline"},
-           "doc_scan": {"source", "phrases"}}
+           "doc_scan": {"source", "phrases"},
+           "price_level": {"symbol", "mode", "op", "level", "start", "end"}}
 
     def test_specs_well_formed(self):
         import re
@@ -509,3 +510,33 @@ class TestSpecs(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestPriceLevel(unittest.TestCase):
+    """Absolute price-level calls (gold GC=F): close_on and touch modes, with a stubbed Yahoo source."""
+    class Src:
+        def __init__(self, bars): self.bars = bars
+        def yahoo(self, sym, start, end, events="split"):
+            return {"bars": [b for b in self.bars if b[0] <= end], "url": "stub", "splits": []}
+
+    def _ev(self, spec, bars, today):
+        import datetime as _dt
+        return R.eval_price_level({"id": "x", "resolve_by": "2028-12-31"}, spec, self.Src(bars), today)
+
+    def test_touch_yes_early_and_no_after_end(self):
+        import datetime as _dt
+        D = _dt.date
+        spec = {"symbol": "GC=F", "mode": "touch", "op": "<=", "level": 3200, "start": "2026-11-28", "end": "2027-06-30"}
+        bars = [(D(2026, 12, 1), 3500.0), (D(2027, 1, 5), 3190.0)]
+        r = self._ev(spec, bars, D(2027, 1, 6)); self.assertEqual((r["state"], r["outcome"]), ("resolved", 1))
+        bars2 = [(D(2026, 12, 1), 3500.0), (D(2027, 6, 30), 3600.0), (D(2027, 7, 1), 3610.0)]
+        r2 = self._ev(spec, bars2, D(2027, 7, 3)); self.assertEqual((r2["state"], r2["outcome"]), ("resolved", 0))
+        self.assertEqual(self._ev(spec, bars2[:1], D(2027, 1, 1))["state"], "not_due")
+
+    def test_close_on(self):
+        import datetime as _dt
+        D = _dt.date
+        spec = {"symbol": "GC=F", "mode": "close_on", "op": ">=", "level": 4000, "start": "2026-11-28", "end": "2027-06-30"}
+        bars = [(D(2027, 6, 29), 3990.0), (D(2027, 6, 30), 4010.0), (D(2027, 7, 1), 4020.0)]
+        r = self._ev(spec, bars, D(2027, 7, 2)); self.assertEqual((r["state"], r["outcome"]), ("resolved", 1))
+        self.assertEqual(self._ev(spec, bars, D(2027, 6, 1))["state"], "not_due")

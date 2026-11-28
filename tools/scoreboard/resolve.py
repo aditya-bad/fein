@@ -302,6 +302,41 @@ def eval_price_relative(call, spec, src, today):
 
 
 # ----------------------------------------------------------------- type c: structured events
+def eval_price_level(call, spec, src, today):
+    """Absolute price-level calls on a Yahoo symbol (e.g. GC=F gold).
+    mode "close_on": the last close on/before `end` is `op` `level` (resolves after `end` once a later bar exists).
+    mode "touch":    any daily close in [start, end] is `op` `level` -> YES as soon as it happens; NO after `end`."""
+    start, end = C.d(spec["start"]), C.d(spec["end"])
+    op, level, mode = spec["op"], float(spec["level"]), spec["mode"]
+    hit = (lambda c: c >= level) if op == ">=" else (lambda c: c <= level) if op == "<=" else \
+          (lambda c: c > level) if op == ">" else (lambda c: c < level)
+    upto = min(today, end + dt.timedelta(days=6))
+    y = src.yahoo(spec["symbol"], start, upto, events="split")
+    bars = [(t, c) for t, c in y["bars"] if start <= t]
+    if mode == "touch":
+        inwin = [(t, c) for t, c in bars if t <= end]
+        first = next(((t, c) for t, c in inwin if hit(c)), None)
+        if first:
+            return result("resolved", f"{spec['symbol']} closed {first[1]:.2f} on {first[0]} ({op} {level})", 1, first[1],
+                          evidence=[ev(first[1], y["url"], first[0].isoformat(), f"{spec['symbol']} close", "Yahoo v8")])
+        if today <= end:
+            return result("not_due", f"not touched yet; window ends {end}")
+        if not inwin or (end - inwin[-1][0]).days > 6:
+            return missing(call, today, f"Yahoo series for {spec['symbol']} incomplete up to {end}")
+        return result("resolved", f"no close {op} {level} between {start} and {end}", 0, min(c for _, c in inwin) if op in ("<=", "<") else max(c for _, c in inwin))
+    if today <= end:
+        return result("not_due", f"window ends {end}")
+    e = [(t, c) for t, c in bars if t <= end]
+    after = [t for t, _ in bars if t > end]
+    if not e or (end - e[-1][0]).days > 6:
+        return missing(call, today, f"no {spec['symbol']} close near {end}")
+    if not after and today < end + dt.timedelta(days=4):
+        return result("waiting_data", f"waiting for a bar after {end}")
+    t1, c1 = e[-1]
+    return result("resolved", f"{spec['symbol']} close {c1:.2f} on {t1} vs {op} {level}", int(hit(c1)), c1,
+                  evidence=[ev(c1, y["url"], t1.isoformat(), f"{spec['symbol']} close {t1}", "Yahoo v8")])
+
+
 def eval_sec_8k_item(call, spec, src, today):
     frm, dl = C.d(spec["from"]), C.d(spec["deadline"])
     hits, late = [], []
@@ -444,7 +479,8 @@ def eval_doc_scan(call, spec, src, today):
 
 EVAL = {"india_fin": eval_india_fin, "nse_pledge": eval_nse_pledge, "sec_fact": eval_sec_fact,
         "price_relative": eval_price_relative, "sec_8k_item": eval_sec_8k_item,
-        "yahoo_dividend": eval_yahoo_dividend, "doc_scan": eval_doc_scan}
+        "yahoo_dividend": eval_yahoo_dividend, "doc_scan": eval_doc_scan,
+        "price_level": eval_price_level}
 
 
 def evaluate(call, spec, src, today, offline=False):
