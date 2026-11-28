@@ -1,23 +1,33 @@
-# Resolver status (2026-11-22)
+# Resolver status (2026-11-28)
 
-Counts: not_due 68, waiting_data 9
+Counts: not_due 234, review 3, waiting_data 9
 
 | Call | Type | State | Check from | Resolve by | Reason |
 |---|---|---|---|---|---|
+| `VIYASH:card-2026-11-26-5y-blowup` | ?/- | review | - | 2031-11-25 | NO SPEC: add one to tools/scoreboard/specs.json (type c) |
+| `VIYASH:card-2026-11-26-5y-ge3x` | ?/- | review | - | 2031-11-25 | NO SPEC: add one to tools/scoreboard/specs.json (type a) |
+| `VIYASH:card-2026-11-26-5y-le0p5x` | ?/- | review | - | 2031-11-25 | NO SPEC: add one to tools/scoreboard/specs.json (type a) |
 | `BHARTIARTL:prepaid-tariff-hike-by-jun27` | d/human | waiting_data | 2026-11-21 | 2027-06-30 | judgment call: 0 docs scanned since 2026-11-21, no match yet |
 | `NAVINFLUOR:chemours-plant-commissioned-q3fy27` | c/assisted | waiting_data | 2026-11-21 | 2027-02-28 | assisted (human confirms): 0 docs scanned since 2026-11-21, no match yet |
-| `PERSISTENT:nagarro-deal-closes-by-mar27` | c/assisted | waiting_data | 2026-11-21 | 2027-04-15 | assisted (human confirms): 0 docs scanned since 2026-11-21, no match yet |
+| `PERSISTENT:nagarro-deal-closes-by-mar27` | c/assisted | waiting_data | 2026-11-21 | 2027-04-15 | assisted (human confirms): 2 docs scanned since 2026-11-21, no match yet |
 | `SKIPPER:450kt-commissioned-by-q4-start` | c/assisted | waiting_data | 2026-11-21 | 2027-03-15 | assisted (human confirms): 0 docs scanned since 2026-11-21, no match yet |
-| `TATASTEEL:nl-binding-decarb-agreement-by-mar27` | c/assisted | waiting_data | 2026-11-21 | 2027-04-15 | assisted (human confirms): 0 docs scanned since 2026-11-21, no match yet |
+| `TATASTEEL:nl-binding-decarb-agreement-by-mar27` | c/assisted | waiting_data | 2026-11-21 | 2027-04-15 | assisted (human confirms): 5 docs scanned since 2026-11-21, no match yet |
 | `US-AAPL:buyback-authorization-100bn-may27` | c/assisted | waiting_data | 2026-11-21 | 2027-05-31 | assisted (human confirms): 0 docs scanned since 2026-11-21, no match yet |
 | `US-CAT:dividend-raise-7pct-by-jun27` | c/structured | waiting_data | 2026-11-21 | 2027-06-30 | latest dividend seen None; need >= 1.745 |
 | `US-NEE:virginia-scc-approves-dominion-merger-by-mar27` | c/assisted | waiting_data | 2026-11-21 | 2027-04-15 | assisted (human confirms): 0 docs scanned since 2026-11-21, no match yet |
 | `US-OPTU:chapter11-filing-by-jun27` | c/structured | waiting_data | 2026-11-21 | 2027-06-30 | no 8-K Item 1.03 yet (window to 2027-06-30) |
+| `GOLD:gold-new-record-by-2028-12-31` | b/structured | not_due | 2026-11-30 | 2028-12-31 | check from 2026-11-30 (resolve by 2028-12-31) |
+| `GOLD:gold-touch-3070-or-less-by-2027-12-31` | b/structured | not_due | 2026-11-30 | 2027-12-31 | check from 2026-11-30 (resolve by 2027-12-31) |
+| `GOLD:gold-touch-3200-or-less-by-2027-06-30` | b/structured | not_due | 2026-11-30 | 2027-06-30 | check from 2026-11-30 (resolve by 2027-06-30) |
+| `GOLD:gold-touch-3200-or-less-by-2027-06-30-v2` | b/structured | not_due | 2026-11-30 | 2027-06-30 | check from 2026-11-30 (resolve by 2027-06-30) |
+| `SUNFLAG:lmel-stake-reduced-by-sep27` | c/assisted | not_due | 2026-12-01 | 2027-09-30 | check from 2026-12-01 (resolve by 2027-09-30) |
 | `US-UNH:2027-initial-eps-guide-22-50` | c/assisted | not_due | 2026-12-01 | 2027-01-31 | check from 2026-12-01 (resolve by 2027-01-31) |
+| `SONACOMS:jv1-denso-closed-by-jan27-cred` | c/assisted | not_due | 2027-01-01 | 2027-02-28 | check from 2027-01-01 (resolve by 2027-02-28) |
 | `US-ISRG:fy2026-procedure-growth-14-5-plus` | a/assisted | not_due | 2027-01-08 | 2027-01-31 | check from 2027-01-08 (resolve by 2027-01-31) |
 | `AFCONS:q3fy27-revenue-yoy-nonnegative` | a/structured | not_due | 2027-01-10 | 2027-02-28 | check from 2027-01-10 (resolve by 2027-02-28) |
 | `ASIANPAINT:q3fy27-standalone-opm-20pct-plus` | a/structured | not_due | 2027-01-10 | 2027-02-28 | check from 2027-01-10 (resolve by 2027-02-28) |
 | `BSE:q3fy27-revenue-record-above-1566cr` | a/structured | not_due | 2027-01-10 | 2027-02-28 | check from 2027-01-10 (resolve by 2027-02-28) |
+| `COFORGE:q3fy27-eight-large-deals-cred` | a/assisted | not_due | 2027-01-10 | 2027-02-28 | check from 2027-01-10 (resolve by 2027-02-28) |
 | `CUMMINSIND:q3fy27-opm-17pct-plus` | a/structured | not_due | 2027-01-10 | 2027-02-28 | check from 2027-01-10 (resolve by 2027-02-28) |
 | `DEEPAKNTR:q3fy27-op-500cr-plus` | a/structured | not_due | 2027-01-10 | 2027-02-28 | check from 2027-01-10 (resolve by 2027-02-28) |
 | `EICHERMOT:q3fy27-opm-24pct-plus` | a/structured | not_due | 2027-01-10 | 2027-02-28 | check from 2027-01-10 (resolve by 2027-02-28) |
@@ -28,52 +38,172 @@ Counts: not_due 68, waiting_data 9
 | `INFY:q3fy27-guidance-midpoint-raised` | c/assisted | not_due | 2027-01-10 | 2027-01-31 | check from 2027-01-10 (resolve by 2027-01-31) |
 | `KAYNES:q3fy27-revenue-1050cr-plus` | a/structured | not_due | 2027-01-10 | 2027-02-28 | check from 2027-01-10 (resolve by 2027-02-28) |
 | `LAURUSLABS:q3fy27-opm-30pct-plus` | a/structured | not_due | 2027-01-10 | 2027-02-28 | check from 2027-01-10 (resolve by 2027-02-28) |
+| `MPHASIS:q3fy27-dso-below-100-cred` | a/assisted | not_due | 2027-01-10 | 2027-02-28 | check from 2027-01-10 (resolve by 2027-02-28) |
 | `POLYCAB:q3fy27-opm-13pct-plus` | a/structured | not_due | 2027-01-10 | 2027-02-28 | check from 2027-01-10 (resolve by 2027-02-28) |
 | `SBICARD:q3fy27-gnpa-at-or-below-1-90` | a/assisted | not_due | 2027-01-10 | 2027-02-15 | check from 2027-01-10 (resolve by 2027-02-15) |
 | `SONACOMS:q3fy27-opm-23pct-plus` | a/structured | not_due | 2027-01-10 | 2027-02-28 | check from 2027-01-10 (resolve by 2027-02-28) |
+| `SUNFLAG:bajna-ec-granted-by-sep27` | c/assisted | not_due | 2027-01-10 | 2027-09-30 | check from 2027-01-10 (resolve by 2027-09-30) |
 | `ULTRACEMCO:q3fy27-op-4500cr-plus` | a/structured | not_due | 2027-01-10 | 2027-02-28 | check from 2027-01-10 (resolve by 2027-02-28) |
 | `UNIPARTS:q3fy27-rev-in-line-q1` | a/structured | not_due | 2027-01-10 | 2027-02-28 | check from 2027-01-10 (resolve by 2027-02-28) |
 | `US-JPM:initial-fy27-nii-guide-110bn-plus` | c/assisted | not_due | 2027-01-12 | 2027-01-31 | check from 2027-01-12 (resolve by 2027-01-31) |
 | `LUPIN:q3fy27-ebitda-margin-24pct-plus` | a/assisted | not_due | 2027-01-15 | 2027-02-28 | check from 2027-01-15 (resolve by 2027-02-28) |
+| `ORCHPHARMA:cefiderocol-plant-commissioned-by-dec26-pft` | c/assisted | not_due | 2027-01-15 | 2027-03-15 | check from 2027-01-15 (resolve by 2027-03-15) |
 | `UNIPARTS:fire-rebuild-by-dec-2026` | c/assisted | not_due | 2027-01-15 | 2027-02-28 | check from 2027-01-15 (resolve by 2027-02-28) |
+| `US-AOS:china-sale-closes-by-jun27-cred` | c/assisted | not_due | 2027-01-15 | 2027-07-31 | check from 2027-01-15 (resolve by 2027-07-31) |
 | `US-GE:fy2026-adj-eps-above-8-10` | a/assisted | not_due | 2027-01-15 | 2027-02-15 | check from 2027-01-15 (resolve by 2027-02-15) |
 | `US-PG:q2fy27-organic-sales-3pct-plus` | a/assisted | not_due | 2027-01-15 | 2027-01-31 | check from 2027-01-15 (resolve by 2027-01-31) |
+| `AUTOAXLES:q3fy27-revenue-675cr-plus` | a/structured | not_due | 2027-01-20 | 2027-02-28 | check from 2027-01-20 (resolve by 2027-02-28) |
+| `HARSHA:q3fy27-revenue-450cr-plus` | a/structured | not_due | 2027-01-20 | 2027-02-28 | check from 2027-01-20 (resolve by 2027-02-28) |
+| `INDRAMEDCO:q3fy27-revenue-400cr-plus` | a/structured | not_due | 2027-01-20 | 2027-02-28 | check from 2027-01-20 (resolve by 2027-02-28) |
+| `JASH:q3fy27-129cr-orders-finalised-pft` | c/assisted | not_due | 2027-01-20 | 2027-03-15 | check from 2027-01-20 (resolve by 2027-03-15) |
+| `SHK:q3fy27-revenue-650cr-plus` | a/structured | not_due | 2027-01-20 | 2027-02-28 | check from 2027-01-20 (resolve by 2027-02-28) |
+| `TATVA:hybrid-battery-commercial-supply-by-dec26-pft` | c/assisted | not_due | 2027-01-20 | 2027-03-15 | check from 2027-01-20 (resolve by 2027-03-15) |
+| `TATVA:two-pharma-products-commercial-by-dec26-pft` | c/assisted | not_due | 2027-01-20 | 2027-03-15 | check from 2027-01-20 (resolve by 2027-03-15) |
 | `US-PNC:q4-2026-nii-4250m-plus` | a/structured | not_due | 2027-01-20 | 2027-01-31 | check from 2027-01-20 (resolve by 2027-01-31) |
+| `UTTAMSUGAR:q3fy27-opm-12pct-plus` | a/structured | not_due | 2027-01-20 | 2027-03-15 | check from 2027-01-20 (resolve by 2027-03-15) |
+| `UTTAMSUGAR:q3fy27-revenue-550cr-plus` | a/structured | not_due | 2027-01-20 | 2027-03-15 | check from 2027-01-20 (resolve by 2027-03-15) |
 | `US-AMD:q4-2026-revenue-above-top-of-guide` | a/structured | not_due | 2027-01-25 | 2027-02-20 | check from 2027-01-25 (resolve by 2027-02-20) |
 | `US-XOM:q4-2026-adj-eps-above-q3` | a/assisted | not_due | 2027-01-25 | 2027-02-15 | check from 2027-01-25 (resolve by 2027-02-15) |
+| `UTKARSHBNK:q3fy27-net-profit-positive` | a/structured | not_due | 2027-01-25 | 2027-02-28 | check from 2027-01-25 (resolve by 2027-02-28) |
+| `US-AOS:fy26-adj-eps-ex-china-3-42-plus-cred` | a/assisted | not_due | 2027-01-26 | 2027-03-31 | check from 2027-01-26 (resolve by 2027-03-31) |
+| `ENDURANCE:tata-4w-driveshaft-sop-q3fy27-cred` | c/assisted | not_due | 2027-02-01 | 2027-02-28 | check from 2027-02-01 (resolve by 2027-02-28) |
+| `SANSERA:defence-facility-operational-by-mar27-cred` | c/assisted | not_due | 2027-02-01 | 2027-06-15 | check from 2027-02-01 (resolve by 2027-06-15) |
+| `US-KEX:fy2026-capex-220-260mn` | a/structured | not_due | 2027-02-01 | 2027-03-31 | check from 2027-02-01 (resolve by 2027-03-31) |
+| `US-KEX:fy2026-eps-7-28-plus` | a/structured | not_due | 2027-02-01 | 2027-03-31 | check from 2027-02-01 (resolve by 2027-03-31) |
+| `US-KEX:fy2026-op-margin-14pct-plus` | a/structured | not_due | 2027-02-01 | 2027-03-31 | check from 2027-02-01 (resolve by 2027-03-31) |
+| `US-KEX:fy2026-revenue-growth-9pct-plus` | a/structured | not_due | 2027-02-01 | 2027-03-31 | check from 2027-02-01 (resolve by 2027-03-31) |
 | `US-MPWR:material-weakness-remediated-fy26-10k` | c/assisted | not_due | 2027-02-01 | 2027-03-15 | check from 2027-02-01 (resolve by 2027-03-15) |
 | `US-PAYO:material-weakness-remediated-fy26-10k` | c/assisted | not_due | 2027-02-01 | 2027-03-31 | check from 2027-02-01 (resolve by 2027-03-31) |
 | `US-KO:initial-2027-organic-revenue-guide-6pct-plus` | c/assisted | not_due | 2027-02-05 | 2027-02-28 | check from 2027-02-05 (resolve by 2027-02-28) |
+| `US-WTS:fy26-adj-op-margin-20-3pct-plus-cred` | a/assisted | not_due | 2027-02-08 | 2027-03-15 | check from 2027-02-08 (resolve by 2027-03-15) |
+| `US-WTS:fy26-organic-growth-11pct-plus-cred` | a/assisted | not_due | 2027-02-08 | 2027-03-15 | check from 2027-02-08 (resolve by 2027-03-15) |
+| `US-AOS:fy26-sales-growth-ex-china-3-5pct-plus-cred` | a/structured | not_due | 2027-02-10 | 2027-03-31 | check from 2027-02-10 (resolve by 2027-03-31) |
+| `US-LECO:fy26-adj-op-margin-above-17-6-cred` | a/assisted | not_due | 2027-02-10 | 2027-03-15 | check from 2027-02-10 (resolve by 2027-03-15) |
 | `US-O:initial-2027-affo-guide-midpoint-4-59-plus` | c/assisted | not_due | 2027-02-10 | 2027-03-15 | check from 2027-02-10 (resolve by 2027-03-15) |
 | `US-AAON:fy2026-sales-growth-72pct-plus` | a/structured | not_due | 2027-02-15 | 2027-03-15 | check from 2027-02-15 (resolve by 2027-03-15) |
 | `US-HIMS:q4-2026-adj-ebitda-80m-plus` | a/assisted | not_due | 2027-02-15 | 2027-03-10 | check from 2027-02-15 (resolve by 2027-03-10) |
+| `US-KEX:jones-act-waiver-extended-past-feb27` | c/assisted | not_due | 2027-02-15 | 2027-03-15 | check from 2027-02-15 (resolve by 2027-03-15) |
+| `US-SSD:fy26-capex-80-90mn-cred` | a/structured | not_due | 2027-02-15 | 2027-03-15 | check from 2027-02-15 (resolve by 2027-03-15) |
+| `US-SSD:fy26-op-margin-20pct-plus-cred` | a/structured | not_due | 2027-02-15 | 2027-03-15 | check from 2027-02-15 (resolve by 2027-03-15) |
 | `US-WMT:fy27-adj-eps-at-or-above-2-89` | a/assisted | not_due | 2027-02-15 | 2027-03-01 | check from 2027-02-15 (resolve by 2027-03-01) |
+| `US-WTS:fy26-reported-sales-growth-17pct-plus-cred` | a/structured | not_due | 2027-02-15 | 2027-03-15 | check from 2027-02-15 (resolve by 2027-03-15) |
+| `VIYASH:q3fy27-opm-17p5pct-plus` | a/structured | not_due | 2027-02-16 | 2027-03-15 | check from 2027-02-16 (resolve by 2027-03-15) |
+| `VIYASH:q3fy27-revenue-1050cr-plus` | a/structured | not_due | 2027-02-16 | 2027-03-15 | check from 2027-02-16 (resolve by 2027-03-15) |
+| `US-LECO:fy26-capex-140-150mn-cred` | a/structured | not_due | 2027-02-20 | 2027-03-15 | check from 2027-02-20 (resolve by 2027-03-15) |
+| `US-LECO:fy26-sales-growth-11pct-plus-cred` | a/structured | not_due | 2027-02-20 | 2027-03-15 | check from 2027-02-20 (resolve by 2027-03-15) |
 | `US-NVDA:q4fy27-revenue-above-top-of-guide` | a/structured | not_due | 2027-02-20 | 2027-03-10 | check from 2027-02-20 (resolve by 2027-03-10) |
 | `US-CRM:initial-fy28-revenue-guide-10pct-plus` | c/assisted | not_due | 2027-02-25 | 2027-03-15 | check from 2027-02-25 (resolve by 2027-03-15) |
 | `US-TGT:q4-2026-comps-3pct-plus` | a/assisted | not_due | 2027-02-25 | 2027-03-15 | check from 2027-02-25 (resolve by 2027-03-15) |
+| `SONACOMS:jv2-closed-by-jun27-cred` | c/assisted | not_due | 2027-03-01 | 2027-07-31 | check from 2027-03-01 (resolve by 2027-07-31) |
 | `US-FIVE:fy2026-comps-11pct-plus` | a/assisted | not_due | 2027-03-10 | 2027-03-31 | check from 2027-03-10 (resolve by 2027-03-31) |
 | `US-ULTA:fy2026-eps-at-or-above-29` | a/structured | not_due | 2027-03-10 | 2027-03-31 | check from 2027-03-10 (resolve by 2027-03-31) |
+| `HARSHA:romania-restructuring-disclosed-by-mar27` | c/assisted | not_due | 2027-03-31 | 2027-03-31 | check from 2027-03-31 (resolve by 2027-03-31) |
+| `INDRAMEDCO:md-appointed-by-mar27` | c/assisted | not_due | 2027-03-31 | 2027-03-31 | check from 2027-03-31 (resolve by 2027-03-31) |
 | `BEL:fy27-order-inflow-25000cr-plus` | a/assisted | not_due | 2027-04-01 | 2027-05-31 | check from 2027-04-01 (resolve by 2027-05-31) |
 | `INDOTECH:promoter-pledge-reduced-by-mar27` | a/structured | not_due | 2027-04-01 | 2027-04-30 | check from 2027-04-01 (resolve by 2027-04-30) |
+| `SHK:vanavate-commissioned-by-mar27` | c/assisted | not_due | 2027-04-01 | 2027-05-31 | check from 2027-04-01 (resolve by 2027-05-31) |
+| `UTTAMSUGAR:udl-160klpd-by-mar27` | c/assisted | not_due | 2027-04-01 | 2027-05-31 | check from 2027-04-01 (resolve by 2027-05-31) |
+| `VIYASH:promoter-45pct-plus-mar27` | a/structured | not_due | 2027-04-01 | 2027-05-31 | check from 2027-04-01 (resolve by 2027-05-31) |
 | `TVSMOTOR:q4fy27-volume-growth-15pct-plus` | a/assisted | not_due | 2027-04-02 | 2027-04-15 | check from 2027-04-02 (resolve by 2027-04-15) |
 | `GODREJPROP:fy27-bookings-40000cr-plus` | a/assisted | not_due | 2027-04-03 | 2027-04-30 | check from 2027-04-03 (resolve by 2027-04-30) |
 | `BAJFINANCE:fy27-aum-growth-26pct-plus` | a/assisted | not_due | 2027-04-05 | 2027-05-15 | check from 2027-04-05 (resolve by 2027-05-15) |
 | `HCLTECH:fy27-cc-growth-above-midpoint` | a/assisted | not_due | 2027-04-10 | 2027-04-30 | check from 2027-04-10 (resolve by 2027-04-30) |
 | `HDFCLIFE:fy27-vnb-growth-12pct-plus` | a/assisted | not_due | 2027-04-10 | 2027-05-15 | check from 2027-04-10 (resolve by 2027-05-15) |
+| `ANUP:fy27-ebitda-114cr-plus-pft` | a/structured | not_due | 2027-04-15 | 2027-06-15 | check from 2027-04-15 (resolve by 2027-06-15) |
+| `ANUP:fy27-revenue-798cr-plus-pft` | a/structured | not_due | 2027-04-15 | 2027-06-15 | check from 2027-04-15 (resolve by 2027-06-15) |
+| `AUTOAXLES:fy27-net-profit-220cr-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `AUTOAXLES:fy27-opm-12pct-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `AUTOAXLES:fy27-revenue-2500cr-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
 | `BAJAJCON:fy27-revenue-growth-17pct-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `COFORGE:fy27-ebit-16pct-plus-cred` | a/assisted | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `COFORGE:fy27-ebitda-20-5pct-plus-cred` | a/assisted | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
 | `DIXON:vivo-jv-production-starts-q4fy27` | c/assisted | not_due | 2027-04-15 | 2027-06-15 | check from 2027-04-15 (resolve by 2027-06-15) |
+| `HAPPYFORGE:fy27-opm-30pct-plus-cred` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `HAPPYFORGE:fy27-revenue-growth-17pct-plus-cred` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `HAPPYFORGE:orders-500cr-by-mar27-cred` | a/assisted | not_due | 2027-04-15 | 2027-06-15 | check from 2027-04-15 (resolve by 2027-06-15) |
+| `HARSHA:fy27-net-profit-180cr-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `HARSHA:fy27-opm-16pct-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `HARSHA:fy27-revenue-1822cr-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
 | `ICICIBANK:q4fy27-nim-above-q3fy27` | a/assisted | not_due | 2027-04-15 | 2027-05-15 | check from 2027-04-15 (resolve by 2027-05-15) |
+| `INDRAMEDCO:fy27-net-profit-210cr-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `INDRAMEDCO:fy27-opm-18pct-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
 | `IOLCP:fy27-opm-14pct-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `JASH:fy27-pat-100cr-plus-pft` | a/structured | not_due | 2027-04-15 | 2027-06-15 | check from 2027-04-15 (resolve by 2027-06-15) |
+| `JASH:fy27-revenue-831cr-plus-pft` | a/structured | not_due | 2027-04-15 | 2027-06-15 | check from 2027-04-15 (resolve by 2027-06-15) |
+| `KIRLOSBROS:fy27-standalone-revenue-growth-9p5pct-plus-pft` | a/structured | not_due | 2027-04-15 | 2027-06-15 | check from 2027-04-15 (resolve by 2027-06-15) |
+| `KPITTECH:fy27-ebitda-20-5pct-plus-cred` | a/assisted | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `KPITTECH:h2fy27-revenue-above-h1-cred` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `KPITTECH:q4fy27-cc-qoq-growth-positive-cred` | a/assisted | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
 | `MARICO:fy27-ebitda-growth-24pct-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `MPHASIS:fy27-cc-growth-10pct-plus-cred` | a/assisted | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `MPHASIS:fy27-ebit-in-band-cred` | a/assisted | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `NEOGEN:fy27-revenue-1100cr-plus-pft` | a/structured | not_due | 2027-04-15 | 2027-06-15 | check from 2027-04-15 (resolve by 2027-06-15) |
+| `NEOGEN:fy27-standalone-opm-16p2pct-plus-pft` | a/structured | not_due | 2027-04-15 | 2027-06-15 | check from 2027-04-15 (resolve by 2027-06-15) |
+| `NEOGEN:fy27-standalone-revenue-1000cr-plus-pft` | a/structured | not_due | 2027-04-15 | 2027-06-15 | check from 2027-04-15 (resolve by 2027-06-15) |
+| `PERSISTENT:fy27-ebit-16pct-plus-cred` | a/assisted | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `PERSISTENT:q4fy27-organic-revenue-500mn-cred` | a/assisted | not_due | 2027-04-15 | 2027-06-30 | check from 2027-04-15 (resolve by 2027-06-30) |
+| `SANSERA:fy27-opm-above-fy26-cred` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `SANSERA:fy27-revenue-growth-17pct-plus-cred` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `SANSERA:nichidai-jv-production-by-mar27-cred` | c/assisted | not_due | 2027-04-15 | 2027-06-15 | check from 2027-04-15 (resolve by 2027-06-15) |
+| `SHILPAMED:aflibercept-india-launch-by-mar27-pft` | c/assisted | not_due | 2027-04-15 | 2027-06-14 | check from 2027-04-15 (resolve by 2027-06-14) |
+| `SHILPAMED:nor-udca-global-phase2-start-by-mar27-pft` | c/assisted | not_due | 2027-04-15 | 2027-06-14 | check from 2027-04-15 (resolve by 2027-06-14) |
+| `SHILPAMED:peptide-block-commissioned-by-mar27-pft` | c/assisted | not_due | 2027-04-15 | 2027-06-14 | check from 2027-04-15 (resolve by 2027-06-14) |
+| `SHILPAMED:two-biosimilars-human-studies-by-mar27-pft` | c/assisted | not_due | 2027-04-15 | 2027-06-14 | check from 2027-04-15 (resolve by 2027-06-14) |
+| `SHILPAMED:two-nbe-phase1-by-mar27-pft` | c/assisted | not_due | 2027-04-15 | 2027-06-14 | check from 2027-04-15 (resolve by 2027-06-14) |
+| `SHK:fy27-net-profit-120cr-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `SHK:fy27-opm-13pct-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `SHK:fy27-revenue-2700cr-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
 | `SKIPPER:fy27-ebitda-margin-10pct-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
 | `SKIPPER:fy27-inflow-7500cr` | a/assisted | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
 | `SKIPPER:fy27-revenue-13pct-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `SONACOMS:fy27-opm-23pct-plus-cred` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `SUNFLAG:fy27-net-profit-240cr-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `SUNFLAG:fy27-opm-11pct-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `SUNFLAG:fy27-revenue-4300cr-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `SYNGENE:fy27-revenue-decline-3p5pct-or-better-pft` | a/structured | not_due | 2027-04-15 | 2027-06-15 | check from 2027-04-15 (resolve by 2027-06-15) |
+| `TATVA:fy27-revenue-growth-23p75pct-plus-pft` | a/structured | not_due | 2027-04-15 | 2027-06-15 | check from 2027-04-15 (resolve by 2027-06-15) |
 | `TRANSRAILL:fy27-order-intake-10000cr` | a/assisted | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `UNIPARTS:fy27-opm-above-20pct-cred` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
 | `UNIPARTS:fy27-rev-growth-20pct-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `UNIPARTS:fy27-revenue-growth-24pct-cred` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `UTTAMSUGAR:fy27-net-profit-100cr-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `UTTAMSUGAR:fy27-opm-10pct-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `UTTAMSUGAR:fy27-revenue-2200cr-plus` | a/structured | not_due | 2027-04-15 | 2027-05-31 | check from 2027-04-15 (resolve by 2027-05-31) |
+| `YASHO:fy27-opm-20pct-plus-pft` | a/structured | not_due | 2027-04-15 | 2027-06-15 | check from 2027-04-15 (resolve by 2027-06-15) |
 | `AUBANK:fy27-credit-cost-within-90bps` | d/human | not_due | 2027-04-20 | 2027-05-15 | check from 2027-04-20 (resolve by 2027-05-15) |
+| `SYNGENE:fy27-ebitda-margin-ex-fx-23p7pct-plus-pft` | a/assisted | not_due | 2027-04-25 | 2027-06-30 | check from 2027-04-25 (resolve by 2027-06-30) |
+| `UTKARSHBNK:crar-mar27-16pct-plus` | a/assisted | not_due | 2027-04-25 | 2027-05-31 | check from 2027-04-25 (resolve by 2027-05-31) |
+| `UTKARSHBNK:fy27-glp-growth-25pct-plus` | a/assisted | not_due | 2027-04-25 | 2027-05-31 | check from 2027-04-25 (resolve by 2027-05-31) |
+| `UTKARSHBNK:gnpa-mar27-5pct-or-lower` | a/structured | not_due | 2027-04-25 | 2027-05-31 | check from 2027-04-25 (resolve by 2027-05-31) |
+| `UTKARSHBNK:q4fy27-pat-67cr-plus` | a/structured | not_due | 2027-04-25 | 2027-05-31 | check from 2027-04-25 (resolve by 2027-05-31) |
+| `ANUP:fy27-mabel-revenue-62cr-plus-pft` | a/assisted | not_due | 2027-05-01 | 2027-06-30 | check from 2027-05-01 (resolve by 2027-06-30) |
+| `ANUP:opening-order-book-apr27-760cr-plus-pft` | a/assisted | not_due | 2027-05-01 | 2027-06-30 | check from 2027-05-01 (resolve by 2027-06-30) |
+| `ENDURANCE:chennai-disc-brake-sop-by-mar27-cred` | c/assisted | not_due | 2027-05-01 | 2027-06-15 | check from 2027-05-01 (resolve by 2027-06-15) |
+| `ENDURANCE:fifth-forging-press-sop-by-mar27-cred` | c/assisted | not_due | 2027-05-01 | 2027-06-15 | check from 2027-05-01 (resolve by 2027-06-15) |
+| `ENDURANCE:fy27-driveshaft-revenue-100cr-cred` | a/assisted | not_due | 2027-05-01 | 2027-06-30 | check from 2027-05-01 (resolve by 2027-06-30) |
+| `GALAXYSURF:fy27-ebitda-per-mt-22800-plus-pft` | a/assisted | not_due | 2027-05-01 | 2027-06-30 | check from 2027-05-01 (resolve by 2027-06-30) |
+| `GALAXYSURF:fy27-volume-growth-5p5pct-plus-pft` | a/assisted | not_due | 2027-05-01 | 2027-06-30 | check from 2027-05-01 (resolve by 2027-06-30) |
+| `JASH:fy27-rodney-hunt-usd33mn-plus-pft` | a/assisted | not_due | 2027-05-01 | 2027-06-30 | check from 2027-05-01 (resolve by 2027-06-30) |
+| `KRSNAA:fy27-cash-based-revenue-380cr-plus-pft` | a/assisted | not_due | 2027-05-01 | 2027-06-30 | check from 2027-05-01 (resolve by 2027-06-30) |
+| `KRSNAA:fy27-rajasthan-revenue-95cr-plus-pft` | a/assisted | not_due | 2027-05-01 | 2027-06-30 | check from 2027-05-01 (resolve by 2027-06-30) |
+| `KRSNAA:receivable-days-120-or-less-mar27-pft` | a/assisted | not_due | 2027-05-01 | 2027-06-30 | check from 2027-05-01 (resolve by 2027-06-30) |
+| `KRSNAA:retail-ebitda-positive-q4fy27-pft` | c/assisted | not_due | 2027-05-01 | 2027-06-30 | check from 2027-05-01 (resolve by 2027-06-30) |
+| `NEOGEN:fy27-battery-revenue-285cr-plus-pft` | a/assisted | not_due | 2027-05-01 | 2027-06-30 | check from 2027-05-01 (resolve by 2027-06-30) |
+| `NEOGEN:fy27-working-capital-180-days-or-less-pft` | a/assisted | not_due | 2027-05-01 | 2027-06-30 | check from 2027-05-01 (resolve by 2027-06-30) |
 | `NTPC:fy27-re-addition-4-8gw` | d/human | not_due | 2027-05-01 | 2027-05-31 | check from 2027-05-01 (resolve by 2027-05-31) |
+| `ORCHPHARMA:fy27-ebitda-margin-11p7pct-plus-pft` | a/assisted | not_due | 2027-05-01 | 2027-06-30 | check from 2027-05-01 (resolve by 2027-06-30) |
+| `RISHABH:fy27-alucast-adj-ebitda-breakeven-pft` | a/assisted | not_due | 2027-05-01 | 2027-06-30 | check from 2027-05-01 (resolve by 2027-06-30) |
+| `RISHABH:fy27-eei-adj-ebitda-133cr-plus-pft` | a/assisted | not_due | 2027-05-01 | 2027-06-30 | check from 2027-05-01 (resolve by 2027-06-30) |
+| `RISHABH:fy27-eei-revenue-growth-19pct-plus-pft` | a/assisted | not_due | 2027-05-01 | 2027-06-30 | check from 2027-05-01 (resolve by 2027-06-30) |
 | `TATAPOWER:fy27-capacity-addition-2-5gw` | d/human | not_due | 2027-05-01 | 2027-05-31 | check from 2027-05-01 (resolve by 2027-05-31) |
+| `YASHO:fy27-capex-237cr-plus-pft` | a/assisted | not_due | 2027-05-01 | 2027-06-30 | check from 2027-05-01 (resolve by 2027-06-30) |
+| `YASHO:fy27-utilisation-69p7pct-plus-pft` | a/assisted | not_due | 2027-05-01 | 2027-06-30 | check from 2027-05-01 (resolve by 2027-06-30) |
 | `US-DECK:fy27-eps-at-or-above-7-95` | a/structured | not_due | 2027-05-20 | 2027-06-05 | check from 2027-05-20 (resolve by 2027-06-05) |
+| `VIYASH:fy27-net-profit-375cr-plus` | a/structured | not_due | 2027-05-20 | 2027-06-30 | check from 2027-05-20 (resolve by 2027-06-30) |
+| `VIYASH:fy27-revenue-4100cr-plus` | a/structured | not_due | 2027-05-20 | 2027-06-30 | check from 2027-05-20 (resolve by 2027-06-30) |
+| `GOLD:gold-close-4000-plus-2027-06-30` | b/structured | not_due | 2027-06-30 | 2027-06-30 | check from 2027-06-30 (resolve by 2027-06-30) |
+| `GOLD:gold-close-4000-plus-2027-06-30-v2` | b/structured | not_due | 2027-06-30 | 2027-06-30 | check from 2027-06-30 (resolve by 2027-06-30) |
+| `UTKARSHBNK:reverse-merger-effective-by-jun27` | c/assisted | not_due | 2027-06-30 | 2027-06-30 | check from 2027-06-30 (resolve by 2027-06-30) |
 | `GENUSPOWER:cold-valuation-beats-nifty-to-jun27` | b/structured | not_due | 2027-07-02 | 2027-06-30 | check from 2027-07-02 (resolve by 2027-06-30) |
 | `HINDALCO:peak-cycle-cheap-vs-nifty-to-jun27` | b/structured | not_due | 2027-07-02 | 2027-06-30 | check from 2027-07-02 (resolve by 2027-06-30) |
 | `TITAN:cooler-valuation-beats-nifty-to-jun27` | b/structured | not_due | 2027-07-02 | 2027-06-30 | check from 2027-07-02 (resolve by 2027-06-30) |
@@ -81,3 +211,42 @@ Counts: not_due 68, waiting_data 9
 | `US-COST:hot-valuation-beats-spy-to-jun27` | b/structured | not_due | 2027-07-02 | 2027-06-30 | check from 2027-07-02 (resolve by 2027-06-30) |
 | `US-PLTR:hot-valuation-beats-spy-to-jun27` | b/structured | not_due | 2027-07-02 | 2027-06-30 | check from 2027-07-02 (resolve by 2027-06-30) |
 | `US-SNOW:hot-valuation-beats-spy-to-jun27` | b/structured | not_due | 2027-07-02 | 2027-06-30 | check from 2027-07-02 (resolve by 2027-06-30) |
+| `AUTOAXLES:fy27-technical-fee-le-4p75pct` | c/assisted | not_due | 2027-07-10 | 2027-08-31 | check from 2027-07-10 (resolve by 2027-08-31) |
+| `AUTOAXLES:beats-nifty500-to-sep27` | b/structured | not_due | 2027-10-02 | 2027-09-30 | check from 2027-10-02 (resolve by 2027-09-30) |
+| `HARSHA:beats-nifty500-to-sep27` | b/structured | not_due | 2027-10-02 | 2027-09-30 | check from 2027-10-02 (resolve by 2027-09-30) |
+| `INDRAMEDCO:beats-nifty500-to-sep27` | b/structured | not_due | 2027-10-02 | 2027-09-30 | check from 2027-10-02 (resolve by 2027-09-30) |
+| `SHK:beats-nifty500-to-sep27` | b/structured | not_due | 2027-10-02 | 2027-09-30 | check from 2027-10-02 (resolve by 2027-09-30) |
+| `SUNFLAG:beats-nifty500-to-sep27` | b/structured | not_due | 2027-10-02 | 2027-09-30 | check from 2027-10-02 (resolve by 2027-09-30) |
+| `US-KEX:beats-spy-to-sep27` | b/structured | not_due | 2027-10-02 | 2027-09-30 | check from 2027-10-02 (resolve by 2027-09-30) |
+| `UTKARSHBNK:beats-nifty500-to-sep27` | b/structured | not_due | 2027-10-02 | 2027-09-30 | check from 2027-10-02 (resolve by 2027-09-30) |
+| `UTTAMSUGAR:beats-nifty500-to-sep27` | b/structured | not_due | 2027-10-02 | 2027-10-15 | check from 2027-10-02 (resolve by 2027-10-15) |
+| `VIYASH:beats-nifty500-to-sep27` | b/structured | not_due | 2027-10-02 | 2027-10-15 | check from 2027-10-02 (resolve by 2027-10-15) |
+| `INDRAMEDCO:handover-or-nonrenewal-by-nov27` | c/assisted | not_due | 2027-11-30 | 2027-11-30 | check from 2027-11-30 (resolve by 2027-11-30) |
+| `INDRAMEDCO:lease-renewal-disclosed-by-nov27` | c/assisted | not_due | 2027-11-30 | 2027-11-30 | check from 2027-11-30 (resolve by 2027-11-30) |
+| `UTKARSHBNK:equity-raise-approved-by-nov27` | c/assisted | not_due | 2027-11-30 | 2027-11-30 | check from 2027-11-30 (resolve by 2027-11-30) |
+| `GOLD:gold-close-4500-plus-2027-12-31` | b/structured | not_due | 2027-12-31 | 2027-12-31 | check from 2027-12-31 (resolve by 2027-12-31) |
+| `GOLD:gold-close-4500-plus-2027-12-31-v2` | b/structured | not_due | 2027-12-31 | 2027-12-31 | check from 2027-12-31 (resolve by 2027-12-31) |
+| `SUNFLAG:card-2026-11-23-5y-blowup` | d/human | not_due | 2031-11-21 | 2031-11-20 | check from 2031-11-21 (resolve by 2031-11-20) |
+| `SUNFLAG:card-2026-11-23-5y-ge3x` | d/human | not_due | 2031-11-21 | 2031-11-20 | check from 2031-11-21 (resolve by 2031-11-20) |
+| `SUNFLAG:card-2026-11-23-5y-le0p5x` | d/human | not_due | 2031-11-21 | 2031-11-20 | check from 2031-11-21 (resolve by 2031-11-20) |
+| `US-KEX:card-2026-11-23-5y-blowup` | d/human | not_due | 2031-11-21 | 2031-11-20 | check from 2031-11-21 (resolve by 2031-11-20) |
+| `US-KEX:card-2026-11-23-5y-ge3x` | d/human | not_due | 2031-11-21 | 2031-11-20 | check from 2031-11-21 (resolve by 2031-11-20) |
+| `US-KEX:card-2026-11-23-5y-le0p5x` | d/human | not_due | 2031-11-21 | 2031-11-20 | check from 2031-11-21 (resolve by 2031-11-20) |
+| `AUTOAXLES:card-2026-11-23-5y-blowup` | d/human | not_due | 2031-11-24 | 2031-11-23 | check from 2031-11-24 (resolve by 2031-11-23) |
+| `AUTOAXLES:card-2026-11-23-5y-ge3x` | d/human | not_due | 2031-11-24 | 2031-11-23 | check from 2031-11-24 (resolve by 2031-11-23) |
+| `AUTOAXLES:card-2026-11-23-5y-le0p5x` | d/human | not_due | 2031-11-24 | 2031-11-23 | check from 2031-11-24 (resolve by 2031-11-23) |
+| `HARSHA:card-2026-11-25-5y-blowup` | d/human | not_due | 2031-11-24 | 2031-11-23 | check from 2031-11-24 (resolve by 2031-11-23) |
+| `HARSHA:card-2026-11-25-5y-ge3x` | d/human | not_due | 2031-11-24 | 2031-11-23 | check from 2031-11-24 (resolve by 2031-11-23) |
+| `HARSHA:card-2026-11-25-5y-le0p5x` | d/human | not_due | 2031-11-24 | 2031-11-23 | check from 2031-11-24 (resolve by 2031-11-23) |
+| `INDRAMEDCO:card-2026-11-24-5y-blowup` | d/human | not_due | 2031-11-24 | 2031-11-23 | check from 2031-11-24 (resolve by 2031-11-23) |
+| `INDRAMEDCO:card-2026-11-24-5y-ge3x` | d/human | not_due | 2031-11-24 | 2031-11-23 | check from 2031-11-24 (resolve by 2031-11-23) |
+| `INDRAMEDCO:card-2026-11-24-5y-le0p5x` | d/human | not_due | 2031-11-24 | 2031-11-23 | check from 2031-11-24 (resolve by 2031-11-23) |
+| `SHK:card-2026-11-25-5y-blowup` | d/human | not_due | 2031-11-24 | 2031-11-23 | check from 2031-11-24 (resolve by 2031-11-23) |
+| `SHK:card-2026-11-25-5y-ge3x` | d/human | not_due | 2031-11-24 | 2031-11-23 | check from 2031-11-24 (resolve by 2031-11-23) |
+| `SHK:card-2026-11-25-5y-le0p5x` | d/human | not_due | 2031-11-24 | 2031-11-23 | check from 2031-11-24 (resolve by 2031-11-23) |
+| `UTKARSHBNK:card-2026-11-24-5y-blowup` | d/human | not_due | 2031-11-24 | 2031-11-23 | check from 2031-11-24 (resolve by 2031-11-23) |
+| `UTKARSHBNK:card-2026-11-24-5y-ge3x` | d/human | not_due | 2031-11-24 | 2031-11-23 | check from 2031-11-24 (resolve by 2031-11-23) |
+| `UTKARSHBNK:card-2026-11-24-5y-le0p5x` | d/human | not_due | 2031-11-24 | 2031-11-23 | check from 2031-11-24 (resolve by 2031-11-23) |
+| `UTTAMSUGAR:card-2026-11-25-5y-blowup` | d/human | not_due | 2031-11-24 | 2031-11-23 | check from 2031-11-24 (resolve by 2031-11-23) |
+| `UTTAMSUGAR:card-2026-11-25-5y-ge3x` | d/human | not_due | 2031-11-24 | 2031-11-23 | check from 2031-11-24 (resolve by 2031-11-23) |
+| `UTTAMSUGAR:card-2026-11-25-5y-le0p5x` | d/human | not_due | 2031-11-24 | 2031-11-23 | check from 2031-11-24 (resolve by 2031-11-23) |
