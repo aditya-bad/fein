@@ -43,3 +43,5 @@ Last updated: 2026-11-19
   with URL/channel/date, analysis.md on top, memdb source + analysis records linked). First: GetMoneyRich category rotation.
 - 28-Nov-2026: user wants gold (and similar macro/wealth topics) researched to the SAME standard as stock research (pre-registered,
   two-source, stored for reuse) — not quick takes. Antigravity is being given the same gold task blind, to compare quality.
+- 28-Nov-2026: user uses VNC to access the Pi → keep VNC (5900); secure it to the home LAN only. SSH decision pending.
+
