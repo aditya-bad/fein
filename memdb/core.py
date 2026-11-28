@@ -122,7 +122,7 @@ def _index_record(con: sqlite3.Connection, r: dict) -> None:
             to, _, rel = l.rpartition(":") if l.count(":") >= 2 else (l, "", "related")
             links.append((rid, to or l, rel or "related"))
         else:
-            links.append((rid, l["to"], l.get("rel", "related")))
+            links.append((rid, l.get("to") or l.get("target") or l.get("id"), l.get("rel", "related")))
     con.executemany("INSERT INTO links VALUES(?,?,?)", links)
     data_txt = " ".join(f"{k} {v}" for k, v in (r.get("data") or {}).items())
     con.execute("INSERT INTO fts(rowid, id, title, tags, tickers, body) VALUES(?,?,?,?,?,?)",
@@ -228,6 +228,9 @@ def put(con, rec: dict, merge: bool = True, commit: bool = True) -> dict:
         raise ValueError(f"type must be one of {sorted(TYPES)}")
     rid = rec.get("id") or f"{rec['type']}:{slug(rec.get('title', ''))}"
     rec["id"] = rid
+    # normalise dict links that use "target"/"id" instead of "to" (seed-file variants)
+    rec["links"] = [({**l, "to": l.get("to") or l.get("target") or l.get("id")} if isinstance(l, dict) else l)
+                    for l in (rec.get("links") or [])]
     old = get(con, rid)
     if old and merge:
         old_links = [{"to": d, "rel": r} for d, r in con.execute(
