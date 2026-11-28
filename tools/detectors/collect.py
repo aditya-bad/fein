@@ -262,6 +262,10 @@ def fetch_pledges(con, snap_day):
     refresh_symbols(con)
     data, _ = C.nse_api("corporate-pledgedata", index="equities")
     save_raw(snap_day, "nse_pledge_snapshot", data)
+    if not (data.get("data") or []):
+        log.warning("pledges: NSE pledge feed returned 0 rows (feed empty or endpoint changed) - no snapshot stored today; "
+                    "pledge alerts are BLIND until it returns. Check https://www.nseindia.com/companies-listing/corporate-filings-pledged-data")
+        return 0
     best = {}
     for r in data.get("data") or []:  # several rows per company possible: keep latest SHP quarter
         k = r.get("comName")
