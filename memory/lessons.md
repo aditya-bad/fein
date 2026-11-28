@@ -447,3 +447,11 @@ method missed. But every source was an expiring Google redirect link, history ca
 its probabilities were narrative. **Rule:** use Antigravity for breadth (news/driver sweeps, gap-filling) and as a scored second
 opinion; we verify every number; require real URLs, saved source text and primary data in future prompts. Open conflict it surfaced:
 India gold duty in the Feb-2026 Budget (5% per Antigravity vs 6% per our sources) — check CBIC notifications.
+
+## L57 (2026-11-28) — Antigravity needs documents handed to it; the Pi fetches, agy reads
+Gold-duty task: in headless sandbox mode agy had only web search (no page reader, no shell), so it could not open primary
+documents; it gave no URLs and said so (honest), and its 2024 dates/rates matched the primary notifications exactly. The Pi
+Claude verified the timeline from primary texts: 6% from 24-Jul-2024 (30/2024 + 32/2024-Customs), Budget 2025-26 and 2026-27 made
+NO gold rate change (02/2026 only adds a sunset proviso), 15% from 13-May-2026 (15/2026 + 16/2026-Customs, text not yet retrieved).
+So our study was right; agy's earlier "5% in Feb-2026" was wrong. **Rule:** the Pi Claude downloads public sources into agy-work
+first, then agy extracts/summarises from those files; never rely on agy's own web search for facts.
