@@ -96,12 +96,15 @@ def normalise(rec: dict) -> dict:
     batch = next((t for t in tags if re.fullmatch(r"batch\d+", t)), "pilot")
     title = re.sub(r"^Paper call:\s*", "", rec.get("title") or "")
     base = x.get("base_rate_probability")
+    prob = x.get("probability", x.get("p"))   # 'p' = short form used by gold/macro calls (28-Nov-2026)
+    if isinstance(prob, bool) or not isinstance(prob, (int, float, str)):
+        raise NotBinaryCall(f"{rec['id']}: no single probability (multi-outcome scenario set or missing)")
     return {
         "id": rec["id"], "ticker": tick, "symbol": sym, "market": market,
         "method": METHOD_MAP.get(x.get("method") or "", x.get("method") or "unknown"),
-        "probability": float(x["probability"]),
+        "probability": float(prob),
         "base_rate_probability": float(base) if base is not None else None,
-        "made_on": x.get("made_on") or rec.get("date"), "resolve_by": x.get("resolve_by"),
+        "made_on": x.get("made_on") or x.get("made") or rec.get("date"), "resolve_by": x.get("resolve_by"),
         "resolution_rule": x.get("resolution_rule") or ("(no written rule; from title) " + title),
         "resolution_source": x.get("resolution_source") or "",
         "sector": sector, "batch": batch, "title": title, "status": rec.get("status") or "open",
@@ -109,8 +112,22 @@ def normalise(rec: dict) -> dict:
     }
 
 
+class NotBinaryCall(ValueError):
+    """A paper-call record the binary scoreboard cannot score (e.g. a multi-outcome scenario set)."""
+
+
 def load_calls(include_closed=True) -> list[dict]:
-    return [normalise(r) for r in load_call_records(include_closed)]
+    """Normalised binary calls. Records with no single probability are skipped with a warning
+    (one bad record must not stop scoring for every other call)."""
+    out, skipped = [], []
+    for r in load_call_records(include_closed):
+        try:
+            out.append(normalise(r))
+        except NotBinaryCall as e:
+            skipped.append(str(e))
+    for msg in skipped:
+        print(f"WARNING skipped call {msg}", file=sys.stderr)
+    return out
 
 
 def load_specs(path=SPECS_FILE) -> dict:
