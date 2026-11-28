@@ -15,3 +15,5 @@ Setup tasks, in order — do each only when the user is present to approve promp
 4. Report back: what works, what failed, and whether the Pi can push (needs a write credential set up by the user —
    ask the user; never request a token in chat).
 Stage: 1 (universe/infra). Unlocks: nightly detectors/news/solvency on the Pi and Antigravity-assisted promise extraction.
+
+> ~~This file is superseded (28-Nov-2026)~~ — the mailbox now lives in `comms/msgs/` (one file per message, with .ack/.done files). Kept for history.
