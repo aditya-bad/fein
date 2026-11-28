@@ -45,3 +45,5 @@ Last updated: 2026-11-19
   two-source, stored for reuse) — not quick takes. Antigravity is being given the same gold task blind, to compare quality.
 - 28-Nov-2026: user uses VNC to access the Pi → keep VNC (5900); secure it to the home LAN only. SSH decision pending.
 
+- 28-Nov-2026: user wants Antigravity used WELL and routinely — as a second worker (bulk reading) and for new perspectives
+  (independent second opinions), via the Pi (Pi fetches docs, agy reads; L57). Then continue the next-in-line items.
