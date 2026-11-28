@@ -1,0 +1,283 @@
+{
+ "prereg": "research_notes/Backtests/lender_blowup_signals.md \u00a7A",
+ "n": 107,
+ "events": 29,
+ "coverage": {
+  "GROW": 1.0,
+  "WEAKPROF": 1.0,
+  "THINCAP": 1.0,
+  "WHOLESALE": 0.822,
+  "HIGHYIELD": 1.0,
+  "COSTUP": 1.0,
+  "CAPFALL": 1.0
+ },
+ "univariate": {
+  "GROW": {
+   "n_on": 18,
+   "rate_on": 0.222,
+   "rate_off": 0.281,
+   "perm_on": 0.111,
+   "by_cohort": {
+    "FY2016": [
+     6,
+     1
+    ],
+    "FY2018": [
+     12,
+     3
+    ]
+   }
+  },
+  "WEAKPROF": {
+   "n_on": 39,
+   "rate_on": 0.308,
+   "rate_off": 0.25,
+   "perm_on": 0.256,
+   "by_cohort": {
+    "FY2016": [
+     21,
+     9
+    ],
+    "FY2018": [
+     18,
+     3
+    ]
+   }
+  },
+  "THINCAP": {
+   "n_on": 48,
+   "rate_on": 0.354,
+   "rate_off": 0.203,
+   "perm_on": 0.312,
+   "by_cohort": {
+    "FY2016": [
+     26,
+     12
+    ],
+    "FY2018": [
+     22,
+     5
+    ]
+   }
+  },
+  "WHOLESALE": {
+   "n_on": 47,
+   "rate_on": 0.34,
+   "rate_off": 0.217,
+   "perm_on": 0.234,
+   "by_cohort": {
+    "FY2016": [
+     21,
+     8
+    ],
+    "FY2018": [
+     26,
+     8
+    ]
+   }
+  },
+  "HIGHYIELD": {
+   "n_on": 24,
+   "rate_on": 0.208,
+   "rate_off": 0.289,
+   "perm_on": 0.042,
+   "by_cohort": {
+    "FY2016": [
+     11,
+     2
+    ],
+    "FY2018": [
+     13,
+     3
+    ]
+   }
+  },
+  "COSTUP": {
+   "n_on": 48,
+   "rate_on": 0.292,
+   "rate_off": 0.254,
+   "perm_on": 0.229,
+   "by_cohort": {
+    "FY2016": [
+     18,
+     8
+    ],
+    "FY2018": [
+     30,
+     6
+    ]
+   }
+  },
+  "CAPFALL": {
+   "n_on": 31,
+   "rate_on": 0.323,
+   "rate_off": 0.25,
+   "perm_on": 0.194,
+   "by_cohort": {
+    "FY2016": [
+     12,
+     5
+    ],
+    "FY2018": [
+     19,
+     5
+    ]
+   }
+  },
+  "COUNT2": {
+   "n_on": 54,
+   "rate_on": 0.352,
+   "rate_off": 0.189,
+   "perm_on": 0.296,
+   "by_cohort": {
+    "FY2016": [
+     27,
+     12
+    ],
+    "FY2018": [
+     27,
+     7
+    ]
+   }
+  }
+ },
+ "loco": {
+  "FY2016": {
+   "n": 52,
+   "events": 18,
+   "realised": 0.3462,
+   "coef": {
+    "const": -2.141,
+    "GROW": 0.079,
+    "WEAKPROF": 0.103,
+    "THINCAP": 0.405,
+    "WHOLESALE": 1.009
+   },
+   "M1": {
+    "brier": 0.2417,
+    "log": -0.6937,
+    "mean_pred": 0.1948,
+    "citl": -0.1514,
+    "auc": 0.612
+   },
+   "B": {
+    "brier": 0.2477,
+    "log": -0.703,
+    "mean_pred": 0.2,
+    "citl": -0.1462,
+    "auc": null
+   },
+   "M2": {
+    "brier": 0.2382,
+    "log": -0.6789,
+    "mean_pred": 0.2033,
+    "citl": -0.1429,
+    "auc": 0.613
+   }
+  },
+  "FY2018": {
+   "n": 55,
+   "events": 11,
+   "realised": 0.2,
+   "coef": {
+    "const": -1.474,
+    "GROW": -0.43,
+    "WEAKPROF": 0.466,
+    "THINCAP": 0.769,
+    "WHOLESALE": 0.684
+   },
+   "M1": {
+    "brier": 0.1734,
+    "log": -0.5273,
+    "mean_pred": 0.3239,
+    "citl": 0.1239,
+    "auc": 0.594
+   },
+   "B": {
+    "brier": 0.1814,
+    "log": -0.5521,
+    "mean_pred": 0.3462,
+    "citl": 0.1462,
+    "auc": null
+   },
+   "M2": {
+    "brier": 0.1783,
+    "log": -0.5405,
+    "mean_pred": 0.3404,
+    "citl": 0.1404,
+    "auc": 0.591
+   }
+  }
+ },
+ "pooled": {
+  "M1": {
+   "brier": 0.2066,
+   "log": -0.6081,
+   "citl": -0.0099,
+   "auc_pooled": 0.528
+  },
+  "B": {
+   "brier": 0.2136,
+   "log": -0.6254,
+   "citl": 0.0041
+  },
+  "M2": {
+   "brier": 0.2074,
+   "log": -0.6078,
+   "citl": 0.0027
+  }
+ },
+ "mean_within_cohort_auc_M1": 0.603,
+ "reliability_tertiles_M1": [
+  [
+   0.143,
+   0.286,
+   35
+  ],
+  [
+   0.245,
+   0.2,
+   35
+  ],
+  [
+   0.388,
+   0.324,
+   37
+  ]
+ ],
+ "boot_brier_diff_M1_minus_B_ci95": [
+  -0.0344,
+  0.0218,
+  2000
+ ],
+ "full_fit": {
+  "const": -1.998,
+  "GROW": -0.276,
+  "WEAKPROF": 0.454,
+  "THINCAP": 0.781,
+  "WHOLESALE": 1.074
+ },
+ "secondary_permanent": {
+  "M1": 0.1816,
+  "B": 0.193,
+  "within_auc": {
+   "FY2016": 0.692,
+   "FY2018": 0.766
+  },
+  "cohort_brier": {
+   "FY2016": [
+    0.2492,
+    0.26
+   ],
+   "FY2018": [
+    0.1177,
+    0.1296
+   ]
+  }
+ },
+ "verdict": {
+  "brier_beats_B_both_cohorts": true,
+  "mean_within_auc_ge_065": false,
+  "adopted": false
+ }
+}

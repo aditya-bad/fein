@@ -455,3 +455,11 @@ Claude verified the timeline from primary texts: 6% from 24-Jul-2024 (30/2024 + 
 NO gold rate change (02/2026 only adds a sunset proviso), 15% from 13-May-2026 (15/2026 + 16/2026-Customs, text not yet retrieved).
 So our study was right; agy's earlier "5% in Feb-2026" was wrong. **Rule:** the Pi Claude downloads public sources into agy-work
 first, then agy extracts/summarises from those files; never rely on agy's own web search for facts.
+
+## L58 (2026-11-28) — Lender blow-up proxies from public pages: not adopted; thin capital + wholesale funding are the stable signs
+Pre-registered test (`research_notes/Backtests/lender_blowup_signals.md`; prereg 13:21:46 UTC, results 13:23 UTC): four public-page
+proxies (fast growth, weak ROA, thin capital, wholesale funding) beat the 27% lender base rate on Brier in both cohorts but within noise,
+and ranked poorly (AUC 0.60 < 0.65 bar) → not adopted; lender cards keep the class-rate floor. Stable: THINCAP (35% vs 20%) and
+WHOLESALE (34% vs 22%); fast growth and high yield pointed the WRONG way in 2016–23 (growers were winners). Post-hoc: on *permanent*
+blow-ups the model ranks well (AUC 0.69/0.77) → next prereg on fresh cohorts. The real signals (GNPA, credit cost, CET1, ALM, CP share)
+need annual-report/Pillar-3 PDFs — a job for the Pi (Indian IP) + Antigravity reading, not screener.

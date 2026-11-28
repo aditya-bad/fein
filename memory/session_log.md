@@ -122,3 +122,4 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
 - 28-Nov-2026 ~18:55 IST (Pi): user approved nightly auto-push (FEIN_GIT_PUSH=1, 4 Pi-owned paths); first push 21382ee OK. SEBI fixed after user DNS change (25+25 rows). Gold duty check (agy + primary docs): Feb-2026 kept 6% (02/2026 sunset only), Jul-2024 15->6% verified; May-2026 15% not yet verified from notification text. agy without a page reader gives no URLs (L56 follow-up). research_notes/Antigravity/duty-2026-11/.
 - 28-Nov-2026: two-way loop working: SEBI DNS fixed (verified by Pi); user approved nightly auto-push (FEIN_GIT_PUSH=1); agy duty task → our study right (L57); next agy job: promise extraction on 9 transcripts (INTELLECT/GREENLAM/SUPRAJIT) for scoring vs pipeline.
 
+- 28-Nov-2026: lender blow-up signals test not adopted (L58). Cohort 2 promise batch resumed; agy running 9-transcript promise test; agy second-opinion (HARSHA/SHK) queued.
