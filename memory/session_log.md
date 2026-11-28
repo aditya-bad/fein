@@ -102,3 +102,5 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
 - 28-Nov-2026: gold quick note (5 calls) → full pre-registered gold study (L55), 3 v2 calls; tools/gold/. Antigravity running the same task blind on the Pi for comparison.
 - 28-Nov-2026: Antigravity blind gold study compared with ours (L56); its 12m probabilities recorded as a scored forecast.
 
+- 28-Nov-2026: user set up SSH deploy key (write) for the Pi; remote origin=git@github-fein:aditya-bad/fein.git; commits as fein-pi. No Pi push seen yet; task cloud-20261128-1257-1 still unacked (no Pi session started yet).
+

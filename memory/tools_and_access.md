@@ -89,4 +89,4 @@ crypto extension; Pi 5 has it) — unverified for Pi.
   personal info, our memdb/credibility scores/predictions (that is our edge). Paid Gemini API = alternative with stricter data terms (verify).
 - 26-Nov-2026 Pi facts: repo at ~/Desktop/money/fein (Remote Control serves ~/Desktop/money as env "raspberrypi-twinkly-yeti");
   the cloud session CANNOT see the Pi (list_computer_folders empty) → Pi work happens in a session started in that environment.
-  Pi jobs now publish alerts/news/solvency into research_notes/Live/ and push nightly when FEIN_GIT_PUSH=1 (needs a write credential).
+  Pi jobs now publish alerts/news/solvency into research_notes/Live/ and push nightly when FEIN_GIT_PUSH=1 (needs a write credential). **28-Nov-2026: SSH deploy key with write access set up (Host github-fein).**
