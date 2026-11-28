@@ -104,3 +104,5 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
 
 - 28-Nov-2026: user set up SSH deploy key (write) for the Pi; remote origin=git@github-fein:aditya-bad/fein.git; commits as fein-pi. No Pi push seen yet; task cloud-20261128-1257-1 still unacked (no Pi session started yet).
 
+
+- 28-Nov-2026 16:36 IST (Pi session): first Pi session live. Watcher running under Monitor. Acked cloud-20261128-1634-2 (ping) + cloud-20261128-1257-1 (setup). Ping replied (pi-20261128-1636-1) and closed. **Pi push via deploy key confirmed working.** Setup task 1257-1 waits for the user to say go.
