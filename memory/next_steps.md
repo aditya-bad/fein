@@ -4,6 +4,7 @@ Last updated: 2026-11-24
 
 ## Waiting on the user
 - ~~Q1–4 (work, city, horizon/capital, hours)~~ superseded 20-Nov-2026: user said capital/job don't matter; proceed without.
+- 28-Nov-2026: Pi INSTALLED (systemd timers, /home/aditya/Desktop/money/fein, user aditya). NSE pledge feed empty — fix pending (cloud).
 - Infra (user will provide later, see `My Requirements/requirements.md` List 2): Raspberry Pi + Remote Control,
   own read-only Kite MCP wrapper, Screener.in credentials (stored on Pi only).
 

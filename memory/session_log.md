@@ -108,3 +108,5 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
 - 28-Nov-2026 16:36 IST (Pi session): first Pi session live. Watcher running under Monitor. Acked cloud-20261128-1634-2 (ping) + cloud-20261128-1257-1 (setup). Ping replied (pi-20261128-1636-1) and closed. **Pi push via deploy key confirmed working.** Setup task 1257-1 waits for the user to say go.
 - 28-Nov-2026: comms pipeline VERIFIED both ways: ping cloud-20261128-1634-2 acked + answered by the Pi in ~2 min (aarch64, agy 1.5.19, node 26.13.1, push via deploy key works). Setup task cloud-20261128-1257-1 acked, waiting for user go-ahead.
 
+
+- 28-Nov-2026 17:05 IST (Pi): user approved Pi install. Dry run clean, real install OK (10/10 systemd timers, linger on, push switches all 0). Healthcheck: 1 FAIL — NSE corporate-pledgedata returns empty (INDOTECH and unfiltered, both domains), so detect selftest crashes and the nightly pledge feed would be empty. Reported to cloud (pi-20261128-1705-2) with fix asks; re-test Monday. Open: SSH :22 and VNC :5900 listening (user choice). Steps 3-4 (Antigravity) wait on the user confirming telemetry off.
