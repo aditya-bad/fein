@@ -1,0 +1,120 @@
+[
+ {
+  "id": "thesis:paper-call:GOLD:gold-close-4000-plus-2027-06-30",
+  "type": "thesis",
+  "title": "COMEX gold front-month (Yahoo GC=F) closes at or above $4,000 on 30-Jun-2027",
+  "tags": [
+   "paper-call",
+   "gold",
+   "macro",
+   "allocation"
+  ],
+  "body": "COMEX gold front-month (Yahoo GC=F) closes at or above $4,000 on 30-Jun-2027. Made 28-Nov-2026 at $3,640 (27-Nov close). Resolve from Yahoo GC=F daily closes. See research_notes/Gold/gold_state_2026-11-28.md.",
+  "data": {
+   "p": 0.35,
+   "resolve_by": "2027-06-30",
+   "made": "2026-11-28",
+   "price_at_call": 3639.6,
+   "resolution": "assisted"
+  },
+  "confidence": "unverified"
+ },
+ {
+  "id": "thesis:paper-call:GOLD:gold-touch-3200-or-less-by-2027-06-30",
+  "type": "thesis",
+  "title": "Any GC=F daily close at or below $3,200 between 28-Nov-2026 and 30-Jun-2027",
+  "tags": [
+   "paper-call",
+   "gold",
+   "macro",
+   "allocation"
+  ],
+  "body": "Any GC=F daily close at or below $3,200 between 28-Nov-2026 and 30-Jun-2027. Made 28-Nov-2026 at $3,640 (27-Nov close). Resolve from Yahoo GC=F daily closes. See research_notes/Gold/gold_state_2026-11-28.md.",
+  "data": {
+   "p": 0.35,
+   "resolve_by": "2027-06-30",
+   "made": "2026-11-28",
+   "price_at_call": 3639.6,
+   "resolution": "assisted"
+  },
+  "confidence": "unverified"
+ },
+ {
+  "id": "thesis:paper-call:GOLD:gold-touch-3070-or-less-by-2027-12-31",
+  "type": "thesis",
+  "title": "Any GC=F daily close at or below $3,070 (\u221245% from the Jan-2026 record) by 31-Dec-2027",
+  "tags": [
+   "paper-call",
+   "gold",
+   "macro",
+   "allocation"
+  ],
+  "body": "Any GC=F daily close at or below $3,070 (\u221245% from the Jan-2026 record) by 31-Dec-2027. Made 28-Nov-2026 at $3,640 (27-Nov close). Resolve from Yahoo GC=F daily closes. See research_notes/Gold/gold_state_2026-11-28.md.",
+  "data": {
+   "p": 0.25,
+   "resolve_by": "2027-12-31",
+   "made": "2026-11-28",
+   "price_at_call": 3639.6,
+   "resolution": "assisted"
+  },
+  "confidence": "unverified"
+ },
+ {
+  "id": "thesis:paper-call:GOLD:gold-close-4500-plus-2027-12-31",
+  "type": "thesis",
+  "title": "GC=F closes at or above $4,500 on 31-Dec-2027",
+  "tags": [
+   "paper-call",
+   "gold",
+   "macro",
+   "allocation"
+  ],
+  "body": "GC=F closes at or above $4,500 on 31-Dec-2027. Made 28-Nov-2026 at $3,640 (27-Nov close). Resolve from Yahoo GC=F daily closes. See research_notes/Gold/gold_state_2026-11-28.md.",
+  "data": {
+   "p": 0.3,
+   "resolve_by": "2027-12-31",
+   "made": "2026-11-28",
+   "price_at_call": 3639.6,
+   "resolution": "assisted"
+  },
+  "confidence": "unverified"
+ },
+ {
+  "id": "thesis:paper-call:GOLD:gold-new-record-by-2028-12-31",
+  "type": "thesis",
+  "title": "Any GC=F daily close above $5,318 by 31-Dec-2028",
+  "tags": [
+   "paper-call",
+   "gold",
+   "macro",
+   "allocation"
+  ],
+  "body": "Any GC=F daily close above $5,318 by 31-Dec-2028. Made 28-Nov-2026 at $3,640 (27-Nov close). Resolve from Yahoo GC=F daily closes. See research_notes/Gold/gold_state_2026-11-28.md.",
+  "data": {
+   "p": 0.2,
+   "resolve_by": "2028-12-31",
+   "made": "2026-11-28",
+   "price_at_call": 3639.6,
+   "resolution": "assisted"
+  },
+  "confidence": "unverified"
+ },
+ {
+  "id": "analysis:gold-state-2026-11-28",
+  "type": "analysis",
+  "title": "Gold Nov-2026: \u221236% from Jan record; run-up (2.9x/26m) matches 2008\u201311 (2.8x \u2192 \u221245%, 9-yr recovery); plan \u221216% bad case, \u221240% tail; rebalance, don't call bottoms",
+  "tags": [
+   "gold",
+   "macro",
+   "allocation"
+  ],
+  "body": "See research_notes/Gold/gold_state_2026-11-28.md",
+  "confidence": "single-source",
+  "links": [
+   {
+    "target": "analysis:allocation-test-india-2006-2026",
+    "rel": "applies"
+   }
+  ]
+ }
+]
