@@ -38,3 +38,8 @@ If usage is tight, finish fewer companies cleanly. INTELLECT and GREENLAM are th
 The pipeline cache lives in /root/pt_cache_c2/ (111 MB, outside the repo; lost if the container is reclaimed).
 The expensive part — model extraction outputs (*.jsonl), md and logs — is backed up here as `extraction_cache.tgz`.
 To restore: `mkdir -p /root/pt_cache_c2 && tar xzf extraction_cache.tgz -C /root/pt_cache_c2`. PDFs/text are re-fetchable.
+
+## Paused again (lead, 28-Nov-2026)
+Second run stopped at the weekly usage limit while doing the LANDMARK resolver with SFL extracting in parallel. User asked to
+pause everything for Pi setup. Cache re-backed-up into extraction_cache.tgz (now includes llm/*.raw.txt). Resume from the
+table above; check run logs in /root/pt_cache_c2/<SYM>*.log (or restore the tgz) to see which steps finished.
