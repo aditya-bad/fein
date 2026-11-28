@@ -204,3 +204,6 @@ Nothing on the Pi accepts incoming connections, passwords stay only on the Pi, a
 | Report 2: What separated the real winners | `reports/What separated real market winners.md` |
 | Report 3: 13-stock pipeline | `reports/Multibagger idea pipeline.html` · https://claude.ai/artifact/VbL4pGdvUHLEnS4oKskvX3 |
 | Raw research with sources | `research_notes/` |
+
+## Standing approval for the Pi (28-Nov-2026, until you say otherwise)
+Tasks from the cloud session that stay inside FEIN work (running/checking FEIN jobs and tools, fixing repo code and pushing to our branch, Antigravity on public documents in agy-work, fetching public NSE/BSE/news data) run without asking you. Claude still asks you first for: sudo, system/network/firewall changes, installing/removing software, passwords or keys, any broker action, deleting data outside the repo, force-pushes or other branches, and anything unusual.
