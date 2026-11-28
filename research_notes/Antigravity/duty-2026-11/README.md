@@ -10,12 +10,12 @@ Task cloud-20261128-1819-7 (B). Stage 1/5 input (gold allocation, macro). Resear
 | Budget 2025-26 | none for the rate (new tariff lines for >=99.5% gold, from 1-May-2025) | 1-Feb-2025 | – | **6%** unchanged | – | primary: 2025-26 memo |
 | Consolidation | 45/2025-Customs replaces 50/2017 (gold = S.No. 192-196) | 24-Oct-2025 | 1-Nov-2025 | 6% (per agy) | – | secondary only (agy); 02/2026 confirms 45/2025 and its S.Nos exist |
 | Budget 2026-27 | **02/2026-Customs** only adds a sunset proviso (31-Mar-2027) to S.No. 192-195 | 1-Feb-2026 | – | **6% unchanged, NOT cut to 5%** | – | primary: 02/2026 text + 2026-27 memo (sunset table only; no gold rate in speech or memo) |
-| Mid-year hike | 15/2026-Customs (BCD 10%) + 16/2026-Customs (AIDC 5% / 4.35%), per agy | 12-May-2026 | **13-May-2026** | 10% + 5% = **15%** | 14.35% | **NOT verified from primary text** (CBIC/eGazette not readable here). Supported by agy search summaries and by the market: IBJA 999 on 25-Nov-2026 was ~16% above spot x INR (research_notes/Macro/snapshot_2026-11.md), which fits 15%, not 6% |
+| Mid-year hike | 15/2026-Customs (BCD 10%) + 16/2026-Customs (AIDC 5% / 4.35%), per agy | 12-May-2026 | **13-May-2026** | 10% + 5% = **15%** | 14.35% | **Text of 15/2026 seen in two independent SECONDARY reproductions** (worldtradescanner, taxguru; they match word for word: G.S.R. 358(E), 12-May-2026, TABLE I S.No. 192-197 of 45/2025 '5%' -> '10%', in force 13-May-2026). AIDC 1% -> 5% (16/2026) seen only in a news report (LiveLaw: 'overall effective levy to 15%', Nos. 15-18/2026). Market check: IBJA 999 ~16% above spot x INR in Nov-2026. The Gazette PDF itself was not found (egazette 273940.pdf = 22/2026, unrelated) |
 
 Note: "15/2026-Customs (N.T.)" dated 1-Feb-2026 (baggage regulations) is a different series from the tariff notification 15/2026-Customs, so it does not contradict agy.
 
 ## Who was right
-- **Our study was right:** the Feb-2026 Budget kept 6%, and 15% applies from 13-May-2026 (May notification text still to be opened).
+- **Our study was right:** the Feb-2026 Budget kept 6% (primary), and 15% applies from 13-May-2026 (BCD text via two matching secondary reproductions; AIDC via news; Gazette PDF still not seen).
 - **Antigravity's earlier gold study was wrong** ("Feb Budget cut it to 5%"). In this run agy itself reports the 5% claim as an unsupported secondary claim (iifl/coinswitch) and sides with 6%.
 
 ## How Antigravity behaved
