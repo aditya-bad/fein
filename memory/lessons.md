@@ -439,3 +439,11 @@ carries no signal. Rupee usually cushions (+7.5pp median) but not now (rupee str
 the domestic premium; a rollback to 6% would cut Indian prices ~8% overnight. No named fund house found saying "accumulate below
 $3,500–3,600" — it's technical commentary; bank targets were all cut after the fall. Our 28-Nov calls overstated a quick rebound
 (P(≥$4,000 by Jun-27) 0.35 → study 0.14); v2 calls filed beside the originals, both scored. Opposite error to L36.
+
+## L56 (2026-11-28) — Antigravity is a good first-pass researcher, not a final authority
+Blind gold test: its spot-checked numbers matched ours; it found more current drivers and priced gold *landed in India* (duty +
+rupee), which we had missed (Indian buyer ≈ −25% from the Jan peak, not −31%); it caught the ~$3,425 intraday low our closes-only
+method missed. But every source was an expiring Google redirect link, history came from aggregators, nothing was reproducible, and
+its probabilities were narrative. **Rule:** use Antigravity for breadth (news/driver sweeps, gap-filling) and as a scored second
+opinion; we verify every number; require real URLs, saved source text and primary data in future prompts. Open conflict it surfaced:
+India gold duty in the Feb-2026 Budget (5% per Antigravity vs 6% per our sources) — check CBIC notifications.

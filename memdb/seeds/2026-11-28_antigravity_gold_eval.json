@@ -1,0 +1,48 @@
+[
+ {
+  "id": "analysis:antigravity-eval-gold-2026-11-28",
+  "type": "analysis",
+  "title": "Antigravity (Gemini 4 Neon) blind gold study vs ours: accurate on spot checks, broader on current drivers and India landed price; weak on auditable sources (redirect URLs), primary data and derived probabilities",
+  "tags": [
+   "antigravity",
+   "gold",
+   "tool-eval"
+  ],
+  "body": "See research_notes/Antigravity/gold-2026-11-28/comparison.md. Use as first-pass researcher + scored second opinion, never final.",
+  "confidence": "verified",
+  "links": [
+   {
+    "to": "analysis:gold-study-2026-11",
+    "rel": "compares"
+   }
+  ]
+ },
+ {
+  "id": "thesis:forecast:ANTIGRAVITY:gold-12m-scenarios-2026-11-28",
+  "type": "thesis",
+  "title": "Antigravity gold 12m scenario probabilities from $3,654.58 (27-Nov-2026): >+25% 15%, base 45%, \u22125..\u221225% 28%, <\u221225% 12%",
+  "tags": [
+   "paper-call",
+   "gold",
+   "antigravity",
+   "model-comparison"
+  ],
+  "body": "Recorded to score Antigravity vs our study (best 9/base 52/bad 34/worst 5). Resolve 27-Nov-2027 on spot close; bucket edges approximate (Antigravity's buckets were point targets).",
+  "data": {
+   "made": "2026-11-28",
+   "resolve_by": "2027-11-30",
+   "p_best": 0.15,
+   "p_base": 0.45,
+   "p_bad": 0.28,
+   "p_worst": 0.12,
+   "ours": {
+    "best": 0.09,
+    "base": 0.52,
+    "bad": 0.34,
+    "worst": 0.05
+   },
+   "price_at_call": 3654.58
+  },
+  "confidence": "unverified"
+ }
+]
