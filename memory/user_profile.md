@@ -41,3 +41,5 @@ Last updated: 2026-11-19
   Proposed a tested macro module mapped to stages 5/6 + asset allocation; awaiting user's go-ahead.
 - 25-Nov-2026: user will paste YouTube transcripts for storage + analysis (store raw in research_notes/YouTube/<title>/transcript.md
   with URL/channel/date, analysis.md on top, memdb source + analysis records linked). First: GetMoneyRich category rotation.
+- 28-Nov-2026: user wants gold (and similar macro/wealth topics) researched to the SAME standard as stock research (pre-registered,
+  two-source, stored for reuse) — not quick takes. Antigravity is being given the same gold task blind, to compare quality.
