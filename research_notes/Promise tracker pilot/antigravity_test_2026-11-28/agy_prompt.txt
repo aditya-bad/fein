@@ -1,0 +1,4 @@
+Read the file SKIPPER_Q2FY27_concall.txt in this folder. It is the public transcript of Skipper Ltd's earnings call held on 30-Oct-2026.
+List every forward-looking promise or target that MANAGEMENT made that is dated and measurable (a number, range or concrete milestone, plus a deadline or period). Skip analyst questions, generic hopes and history.
+Output one JSON object per line (JSON Lines), nothing else, with keys: speaker, quote (exact words from the transcript, max 40 words), metric, target, deadline, specificity (precise|range|vague).
+Do not modify any files. Do not access the internet.
