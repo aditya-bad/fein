@@ -116,3 +116,5 @@ Hit usage limit again; resumed 20-Nov after reset. Tracker scripts saved in tool
 
 
 - 28-Nov-2026 18:10 IST (Pi): user gave a standing approval for in-scope cloud tasks (CLAUDE.md, decisions_log). Nightly-job dry run via systemctl: all 8 ran; scoreboard was failing silently (gold/macro records use p/made; scenario sets) -> fixed sb_common + run_daily exit code + healthcheck latest-run (+4 tests). SEBI news fails: router DNS cannot resolve sebi.gov.in (user decides). Healthcheck OK, 3 warns. Reported pi-20261128-1807-5. Open: Monday pledge re-check (cloud-20261128-1730-4).
+- 28-Nov-2026: Pi ran all 8 nightly jobs; it found+fixed a silent scoreboard failure (cloud gold/macro records used p/made). Cloud added price_level resolver + 8 gold specs; job outputs owned by the Pi; SEBI DNS + SSH/VNC left to user.
+
